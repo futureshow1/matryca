@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Local Mess — 60-sekundowy explainer (A01) | Matryca</title>
+<style>
+  @font-face {
+    font-family: 'Source Serif 4';
+    font-style: normal;
+    font-weight: 300 900;
+    font-display: swap;
+    src: url('./fonts/source-serif-4-latin-wght-normal.woff2') format('woff2-variations');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('./fonts/inter-latin-wght-normal.woff2') format('woff2-variations');
+  }
+  @font-face {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2');
+  }
+  :root {
+    --bg: #FAFAF7;
+    --bg-card: #FFFFFF;
+    --text: #1A1C20;
+    --text-2: #5C5E64;
+    --text-3: #8E9096;
+    --accent: #A32D2D;
+    --accent-bg: #FCEBEB;
+    --border: rgba(0,0,0,0.08);
+    --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'Inter', -apple-system, system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .header__kicker {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0;
+  }
+
+  .header__title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    margin: 4px 0 0;
+  }
+
+  .header__controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+
+  .btn {
+    font-family: var(--mono);
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 0.5px solid var(--border);
+    background: var(--bg-card);
+    cursor: pointer;
+    color: var(--text);
+  }
+
+  .btn--primary {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+
+  .btn:hover { border-color: var(--accent); }
+
+  .stage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .scene {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    opacity: 0;
+  }
+
+  .scene--active {
+    animation: fadeIn 600ms ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  .scene__kicker {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--text-3);
+    text-transform: uppercase;
+    margin: 0 0 12px;
+  }
+
+  .scene__headline {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4.5vw, 46px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    text-align: center;
+    margin: 0;
+    max-width: 780px;
+  }
+
+  .scene__sub {
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--text-2);
+    margin: 14px 0 0;
+    max-width: 580px;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .scene__accent { color: var(--accent); }
+  .scene__mono { font-family: var(--mono); font-size: 0.85em; }
+  .scene__strike { text-decoration: line-through; text-decoration-thickness: 1px; opacity: 0.7; }
+
+  /* Scene timings — total 60s */
+  .scene { animation-duration: 0ms; }
+  .scene.s1 { animation: show 7s ease both; animation-delay: 0s; }
+  .scene.s2 { animation: show 6s ease both; animation-delay: 7s; }
+  .scene.s3 { animation: show 6s ease both; animation-delay: 13s; }
+  .scene.s4 { animation: show 10s ease both; animation-delay: 19s; }
+  .scene.s5 { animation: show 8s ease both; animation-delay: 29s; }
+  .scene.s6 { animation: show 8s ease both; animation-delay: 37s; }
+  .scene.s7 { animation: show 8s ease both; animation-delay: 45s; }
+  .scene.s8 { animation: show 7s ease both; animation-delay: 53s; }
+
+  @keyframes show {
+    0%   { opacity: 0; transform: translateY(8px); }
+    8%   { opacity: 1; transform: none; }
+    92%  { opacity: 1; transform: none; }
+    100% { opacity: 0; transform: translateY(-4px); }
+  }
+
+  /* Diagram — scene 3 */
+  .diagram {
+    width: 100%;
+    max-width: 720px;
+    margin-top: 24px;
+  }
+
+  .phone {
+    stroke: var(--text);
+    stroke-width: 1;
+    fill: none;
+  }
+  .phone--body { stroke-width: 1.2; }
+
+  .packet {
+    fill: var(--accent);
+  }
+  .packet--fade {
+    animation: packetMove 2s ease-in-out infinite;
+  }
+  @keyframes packetMove {
+    0%   { opacity: 0; transform: translateX(-60px); }
+    20%  { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { opacity: 0; transform: translateX(60px); }
+  }
+
+  .arrow {
+    stroke: var(--accent);
+    stroke-width: 1.5;
+    fill: none;
+  }
+
+  .label-mono {
+    font-family: var(--mono);
+    font-size: 11px;
+    fill: var(--text-2);
+  }
+  .label-mono--accent { fill: var(--accent); }
+
+  /* Timeline — scene 5 */
+  .timeline {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 32px;
+    width: 100%;
+    max-width: 720px;
+    position: relative;
+    padding: 0 24px;
+  }
+
+  .timeline__axis {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+    position: relative;
+  }
+
+  .timeline__node {
+    position: absolute;
+    top: -6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    transform: translateX(-50%);
+  }
+  .timeline__node span {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-2);
+    white-space: nowrap;
+  }
+
+  /* Discovery scene — zegar + data */
+  .clock {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .clock__time {
+    font-family: var(--serif);
+    font-size: 72px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .clock__label {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-2);
+    max-width: 240px;
+    line-height: 1.5;
+  }
+
+  /* Progress + HUD */
+  .hud {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-3);
+  }
+  .hud__bar {
+    flex: 1;
+    height: 2px;
+    background: var(--border);
+    border-radius: 1px;
+    overflow: hidden;
+    position: relative;
+  }
+  .hud__fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 0;
+    background: var(--accent);
+    animation: progress 60s linear forwards;
+  }
+  @keyframes progress {
+    from { width: 0; }
+    to   { width: 100%; }
+  }
+
+  .hud__time {
+    min-width: 56px;
+    text-align: right;
+  }
+
+  .footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 0.5px solid var(--border);
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+  }
+
+  .footer a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .footer a:hover { text-decoration: underline; }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .scene,
+    .hud__fill,
+    .packet--fade {
+      animation: none !important;
+    }
+    .scene { opacity: 1; position: static; margin-bottom: 40px; }
+    .stage { aspect-ratio: auto; padding: 20px; }
+  }
+
+  /* Paused state */
+  .stage--paused .scene,
+  .stage--paused .hud__fill,
+  .stage--paused .packet--fade {
+    animation-play-state: paused !important;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="header">
+    <div>
+      <p class="header__kicker">Explainer · karta A01 · 60 sekund</p>
+      <h1 class="header__title">Local Mess — jak Meta i Yandex śledziły cię w trybie incognito</h1>
+    </div>
+    <div class="header__controls">
+      <button class="btn" id="replay">↻ Od nowa</button>
+      <button class="btn btn--primary" id="pause">Pauza</button>
+    </div>
+  </header>
+
+  <div class="stage" id="stage">
+    <!-- Scene 1: Hook -->
+    <div class="scene s1">
+      <p class="scene__kicker">01 / 08</p>
+      <p class="scene__headline">Otwierasz przeglądarkę w&nbsp;<span class="scene__accent">trybie incognito</span>.</p>
+      <p class="scene__sub">Wyłączasz cookies. Włączasz VPN. Czyścisz historię. Jesteś ostrożny.</p>
+    </div>
+
+    <!-- Scene 2: Beat -->
+    <div class="scene s2">
+      <p class="scene__kicker">02 / 08</p>
+      <p class="scene__headline">To&nbsp;<span class="scene__strike">powinno</span> wystarczyć.</p>
+    </div>
+
+    <!-- Scene 3: Reveal -->
+    <div class="scene s3">
+      <p class="scene__kicker">03 / 08</p>
+      <p class="scene__headline">W&nbsp;2017 Yandex wpadł na&nbsp;pomysł.</p>
+      <p class="scene__sub">W 2024 Meta pomysł adoptowała.</p>
+    </div>
+
+    <!-- Scene 4: Mechanism diagram -->
+    <div class="scene s4">
+      <p class="scene__kicker">04 / 08 · mechanizm</p>
+      <p class="scene__headline" style="font-size: clamp(22px, 3.3vw, 32px)">
+        Aplikacja Facebook nasłuchuje na&nbsp;<span class="scene__mono scene__accent">127.0.0.1</span> — w&nbsp;tle.
+      </p>
+      <svg class="diagram" viewBox="0 0 720 180" xmlns="http://www.w3.org/2000/svg">
+        <!-- Browser (incognito) -->
+        <g transform="translate(40, 40)">
+          <rect class="phone" width="200" height="100" rx="6" />
+          <text x="100" y="40" class="label-mono" text-anchor="middle" style="font-size:12px">przeglądarka</text>
+          <text x="100" y="58" class="label-mono label-mono--accent" text-anchor="middle">tryb incognito</text>
+          <text x="100" y="78" class="label-mono" text-anchor="middle" style="font-size:10px">strona z Meta Pixel</text>
+        </g>
+
+        <!-- Arrow with moving packets -->
+        <path class="arrow" d="M 250 90 L 470 90" marker-end="url(#ah)" />
+        <defs>
+          <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L6,4 L0,8 z" fill="#A32D2D" />
+          </marker>
+        </defs>
+        <text x="360" y="78" class="label-mono label-mono--accent" text-anchor="middle">ID sesji → localhost</text>
+        <circle class="packet packet--fade" cx="260" cy="90" r="4" />
+        <circle class="packet packet--fade" cx="260" cy="90" r="4" style="animation-delay: .7s" />
+        <circle class="packet packet--fade" cx="260" cy="90" r="4" style="animation-delay: 1.4s" />
+
+        <!-- Facebook app (invisible, always-on) -->
+        <g transform="translate(480, 40)">
+          <rect class="phone phone--body" width="200" height="100" rx="6" style="stroke-dasharray: 4 3" />
+          <text x="100" y="40" class="label-mono" text-anchor="middle" style="font-size:12px">aplikacja Facebook</text>
+          <text x="100" y="58" class="label-mono label-mono--accent" text-anchor="middle">zalogowany użytkownik</text>
+          <text x="100" y="78" class="label-mono" text-anchor="middle" style="font-size:10px">port 12387–12403</text>
+        </g>
+      </svg>
+      <p class="scene__sub" style="margin-top:12px">
+        Twoja anonimowa sesja zostaje sparowana z twoim kontem — <em>bez&nbsp;sieci zewnętrznej</em>.
+      </p>
+    </div>
+
+    <!-- Scene 5: Scale + timeline -->
+    <div class="scene s5">
+      <p class="scene__kicker">05 / 08 · skala</p>
+      <p class="scene__headline">Osiem lat. Miliardy telefonów.</p>
+      <div class="timeline">
+        <div class="timeline__axis">
+          <div class="timeline__node" style="left: 0%"><span>2017<br><em style="font-style:normal;color:var(--text-3)">Yandex zaczyna</em></span></div>
+          <div class="timeline__node" style="left: 85%"><span>IX 2024<br><em style="font-style:normal;color:var(--text-3)">Meta dołącza</em></span></div>
+          <div class="timeline__node" style="left: 100%"><span style="transform: translateX(-85%)">VI 2025<br><em style="font-style:normal;color:var(--accent)">koniec</em></span></div>
+        </div>
+      </div>
+      <p class="scene__sub" style="margin-top:48px">
+        Meta Pixel na 5,8 mln stron internetowych. Yandex Metrica na 3 mln.
+        Każdy, kto miał tę aplikację zainstalowaną na Androidzie.
+      </p>
+    </div>
+
+    <!-- Scene 6: Discovery -->
+    <div class="scene s6">
+      <p class="scene__kicker">06 / 08 · odkrycie</p>
+      <p class="scene__headline" style="font-size: clamp(24px, 3.6vw, 36px)">
+        3&nbsp;czerwca 2025 — zespół akademicki publikuje raport.
+      </p>
+      <p class="scene__sub">
+        <span class="scene__mono">IMDEA Networks</span> · <span class="scene__mono">Radboud University</span> ·
+        <span class="scene__mono">KU Leuven</span>
+        <br>Równolegle artykuł Dana Goodina w&nbsp;<em>Ars Technica</em>.
+      </p>
+    </div>
+
+    <!-- Scene 7: Reaction -->
+    <div class="scene s7">
+      <p class="scene__kicker">07 / 08 · reakcja</p>
+      <div class="clock">
+        <div class="clock__time">07:45</div>
+        <div class="clock__label">
+          Tego samego dnia rano Meta wyłączyła śledzenie.<br>
+          Po ośmiu latach — trzy godziny po publikacji.
+        </div>
+      </div>
+      <p class="scene__sub" style="margin-top:24px">
+        Google nazwał praktykę „rażącym naruszeniem zasad bezpieczeństwa".<br>
+        W USA — pozew zbiorowy. W UE — postępowania regulatorów.
+      </p>
+    </div>
+
+    <!-- Scene 8: Close -->
+    <div class="scene s8">
+      <p class="scene__kicker">08 / 08</p>
+      <p class="scene__headline"><span class="scene__accent">Local Mess</span></p>
+      <p class="scene__sub">
+        Sandboxing przeglądarki — ominięty.<br>
+        Tryb incognito — ominięty.<br>
+        <span class="scene__mono">Karta A01 w Matrycy → pełna dokumentacja, źródła, chronologia.</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="hud">
+    <span>00:00</span>
+    <div class="hud__bar"><div class="hud__fill" id="hudFill"></div></div>
+    <span class="hud__time" id="hudTime">01:00</span>
+  </div>
+
+  <footer class="footer">
+    <span>Explainer A01 · Local Mess · 60s · SVG + CSS, zero JS w odtwarzaniu, bez trackerów</span>
+    <span>
+      <a href="/matryca/sprawy/a01-local-mess/">Przejdź do karty →</a>
+    </span>
+  </footer>
+</div>
+
+<script>
+  // Tylko sterowanie pauzą / replay — animacje robi CSS
+  const stage = document.getElementById('stage');
+  const pauseBtn = document.getElementById('pause');
+  const replayBtn = document.getElementById('replay');
+  const hudTime = document.getElementById('hudTime');
+
+  let paused = false;
+  let startTime = Date.now();
+
+  pauseBtn.addEventListener('click', () => {
+    paused = !paused;
+    stage.classList.toggle('stage--paused', paused);
+    pauseBtn.textContent = paused ? 'Wznów' : 'Pauza';
+  });
+
+  replayBtn.addEventListener('click', () => {
+    // Restart by re-inserting the stage
+    const clone = stage.cloneNode(true);
+    stage.parentNode.replaceChild(clone, stage);
+    startTime = Date.now();
+    // Re-bind controls to the new stage
+    setTimeout(() => location.reload(), 50);
+  });
+
+  // Update time readout every 500ms (still no persistent storage, no tracking)
+  setInterval(() => {
+    if (paused) return;
+    const elapsed = Math.floor((Date.now() - startTime) / 1000);
+    const remaining = Math.max(0, 60 - elapsed);
+    const mm = String(Math.floor(remaining / 60)).padStart(2, '0');
+    const ss = String(remaining % 60).padStart(2, '0');
+    hudTime.textContent = `${mm}:${ss}`;
+  }, 500);
+</script>
+</body>
+</html>
