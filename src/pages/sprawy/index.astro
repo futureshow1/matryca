@@ -1,0 +1,58 @@
+---
+import { getCollection } from 'astro:content';
+import Page from '../../layouts/Page.astro';
+import CasesGrid from '../../components/grid/CasesGrid';
+
+const allCases = await getCollection('cases');
+const casesData = allCases.map((c) => ({
+  id: c.data.id,
+  slug: c.data.slug,
+  group: c.data.group,
+  title: c.data.title,
+  subtitle: c.data.subtitle,
+  companies: c.data.companies,
+  year_revealed: c.data.year_revealed,
+  status: c.data.status,
+  fines: c.data.fines,
+  jurisdictions: c.data.jurisdictions,
+  priority: c.data.priority,
+  categories: c.data.categories,
+  tags: c.data.tags,
+})).sort((a, b) => a.id.localeCompare(b.id));
+---
+
+<Page title="Wszystkie sprawy" description="33 udokumentowane skandale Big Tech — filtruj według firmy, roku, kary, kategorii.">
+  <section class="sprawy-page">
+    <div class="container">
+      <header class="sprawy-page__header">
+        <h1>Wszystkie sprawy</h1>
+        <p class="sprawy-page__subtitle">
+          33 udokumentowane przypadki naruszenia prywatności, bezpieczeństwa i etyki w Big Tech.
+        </p>
+      </header>
+
+      <CasesGrid cases={casesData} client:load />
+    </div>
+  </section>
+</Page>
+
+<style lang="scss">
+  .sprawy-page {
+    padding-block: var(--space-8);
+  }
+
+  .sprawy-page__header {
+    margin-bottom: var(--space-8);
+
+    h1 {
+      font-size: var(--text-h1);
+      margin-bottom: var(--space-3);
+    }
+  }
+
+  .sprawy-page__subtitle {
+    font-size: 17px;
+    color: var(--text-secondary);
+    max-width: 600px;
+  }
+</style>

@@ -1,0 +1,85 @@
+---
+import Page from '../layouts/Page.astro';
+---
+
+<Page title="Metodologia" description="Jak dokumentujemy skandale Big Tech — źródła, weryfikacja, struktura kart.">
+  <article class="editorial">
+    <div class="container">
+      <h1>Metodologia</h1>
+
+      <div class="prose">
+        <h2>Struktura każdej karty</h2>
+        <p>Każda z 33 kart jest ustrukturyzowana w 14 sekcji:</p>
+        <ol>
+          <li><strong>Metadane</strong> — kraj, lata, kara, podstawa prawna</li>
+          <li><strong>TL;DR</strong> — streszczenie 500–800 słów</li>
+          <li><strong>Oś czasu</strong> — chronologia kluczowych zdarzeń</li>
+          <li><strong>Mechanizm</strong> — jak technicznie to działało</li>
+          <li><strong>Odkrycie</strong> — kto i jak to ujawnił</li>
+          <li><strong>Osoby kluczowe</strong> — dramatis personae</li>
+          <li><strong>Reakcja firmy</strong> — publiczne stanowisko</li>
+          <li><strong>Postępowanie prawne</strong> — jurysdykcje, podstawa prawna</li>
+          <li><strong>Kary i ugody</strong> — tabelaryczne zestawienie</li>
+          <li><strong>Precedensy i implikacje</strong> — wpływ na prawo i praktykę</li>
+          <li><strong>Pozwy zbiorowe</strong> — class actions i ugody cywilne</li>
+          <li><strong>Wnioski dla obywateli</strong> — co to dla mnie znaczy, jak się chronić</li>
+          <li><strong>Ciekawostki</strong> — kontekst, anegdoty, polski wymiar</li>
+          <li><strong>Źródła</strong> — linki i cytaty do dokumentów pierwotnych</li>
+        </ol>
+
+        <h2>Kryteria włączenia do bazy</h2>
+        <p>Sprawa jest włączona do bazy jeśli spełnia co najmniej jedno z kryteriów:</p>
+        <ul>
+          <li>Udokumentowana kara finansowa nałożona przez regulator</li>
+          <li>Formalne postępowanie regulacyjne lub sądowe</li>
+          <li>Ujawnienie przez wiarygodne medium lub sygnalistę, potwierdzone przez wiele źródeł</li>
+          <li>Istotny precedens prawny lub regulacyjny</li>
+        </ul>
+
+        <h2>Weryfikacja danych</h2>
+        <p>
+          Wszystkie kwoty kar i daty są weryfikowane w co najmniej dwóch niezależnych źródłach.
+          Pierwszeństwo mają dokumenty oficjalne (decyzje regulatora, dokumenty sądowe)
+          przed relacjami medialnymi.
+        </p>
+
+        <h2>Aktualizacje</h2>
+        <p>
+          Baza jest aktualizowana gdy:
+        </p>
+        <ul>
+          <li>Pojawiają się nowe ujawnienia lub dokumenty</li>
+          <li>Zapadają nowe wyroki lub decyzje regulatorów</li>
+          <li>Zmieniają się kluczowe fakty (np. kara jest zaskarżona lub obniżona)</li>
+        </ul>
+        <p>
+          Data ostatniej aktualizacji każdej karty jest widoczna w panelu metadanych.
+        </p>
+
+        <h2>Polska perspektywa</h2>
+        <p>
+          Portal powstał dla polskiego odbiorcy. Każda karta, gdzie to możliwe, zawiera sekcję
+          "Polski wymiar" opisującą wpływ sprawy na polskich użytkowników, regulatorów (UODO)
+          i organizacje (Panoptykon Foundation).
+        </p>
+
+        <h2>Czego baza nie robi</h2>
+        <ul>
+          <li>Nie przewiduje wyników postępowań sądowych</li>
+          <li>Nie ocenia winy w sensie prawnym — opisuje fakty i dokumenty</li>
+          <li>Nie aktualizuje się w czasie rzeczywistym — to baza referencyjną, nie newsfeed</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</Page>
+
+<style lang="scss">
+  .editorial {
+    padding-block: var(--space-8);
+
+    h1 {
+      margin-bottom: var(--space-8);
+    }
+  }
+</style>

@@ -1,17 +1,555 @@
 ---
+import { getCollection } from 'astro:content';
+import Page from '../layouts/Page.astro';
+import CaseCard from '../components/case/CaseCard.astro';
 
+const allCases = await getCollection('cases');
+
+// Stats — kary narzucone przez państwo (regulatorzy + stanowi AG) liczone osobno od pozwów zbiorowych
+const govCategories = ['regulatory_fine', 'state_attorney_general'] as const;
+type FineCategory = typeof govCategories[number];
+const isGovFine = (cat: string | undefined): cat is FineCategory =>
+  govCategories.includes(cat as FineCategory);
+
+const totalFinesEUR = allCases.reduce((sum, c) => {
+  return sum + c.data.fines
+    .filter((f) => f.currency === 'EUR' && isGovFine(f.category))
+    .reduce((s, f) => s + f.amount, 0);
+}, 0);
+const totalFinesUSD = allCases.reduce((sum, c) => {
+  return sum + c.data.fines
+    .filter((f) => f.currency === 'USD' && isGovFine(f.category))
+    .reduce((s, f) => s + f.amount, 0);
+}, 0);
+const totalClassActionUSD = allCases.reduce((sum, c) => {
+  return sum + c.data.fines
+    .filter((f) => f.currency === 'USD' && f.category === 'class_action_settlement')
+    .reduce((s, f) => s + f.amount, 0);
+}, 0);
+
+const companySet = new Set<string>();
+allCases.forEach((c) => c.data.companies.forEach((co) => companySet.add(co)));
+
+function formatBillions(n: number): string {
+  if (n >= 1_000_000_000) return `${(n / 1_000_000_000).toFixed(1)} mld`;
+  if (n >= 1_000_000) return `${Math.round(n / 1_000_000)} mln`;
+  return n.toString();
+}
+
+// TOP cases — priority=TOP, sortowane wg roku (najnowsze pierwsze)
+const topCases = allCases
+  .filter((c) => c.data.priority === 'TOP')
+  .sort((a, b) => b.data.year_revealed - a.data.year_revealed)
+  .slice(0, 6);
+
+// Ostatnio zaktualizowane — 3 karty (narracja portalu żyje)
+const recentCases = [...allCases]
+  .sort((a, b) => b.data.last_updated.localeCompare(a.data.last_updated))
+  .slice(0, 3);
+
+const doors = [
+  {
+    id: '01',
+    key: 'Co',
+    description: 'Siatka 33 spraw z filtrami — wyszukaj według firmy, roku, kary, kategorii.',
+    href: '/sprawy/',
+    tags: ['33 sprawy', 'filtry', 'wyszukiwarka'],
+    available: true,
+  },
+  {
+    id: '02',
+    key: 'Kiedy',
+    description: 'Oś czasu 2010–2026: chronologia 33 spraw na jednym obrazku, rok po roku.',
+    href: '/os-czasu/',
+    tags: ['2010–2026', 'chronologia'],
+    available: true,
+  },
+  {
+    id: '03',
+    key: 'Gdzie',
+    description: 'Mapa regulatorów, sądów i transferów danych. Gdzie decydowano o twoich danych.',
+    href: '/mapa/',
+    tags: ['mapa', 'regulatorzy', 'geodane'],
+    available: true,
+  },
+  {
+    id: '04',
+    key: 'Dlaczego',
+    description: 'Graf powiązań: precedensy, sygnaliści, firmy, podstawy prawne — jako sieć.',
+    href: '/graf/',
+    tags: ['graf', 'powiązania', 'precedensy'],
+    available: false,
+  },
+  {
+    id: '05',
+    key: 'Kto odkrył?',
+    description: 'Sygnaliści, dziennikarze, badacze i aktywiści, którzy rozłożyli te sprawy.',
+    href: '/sygnalisci/',
+    tags: ['sygnaliści', 'dziennikarze'],
+    available: true,
+  },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Page
+  title="Matryca"
+  description="33 udokumentowane skandale Big Tech. Prywatność, bezpieczeństwo, prawa obywateli — baza referencyjna dla dziennikarzy, prawników, akademików."
+>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__body">
+        <h1 class="hero__title">33 skandale.<br />Jeden rejestr.</h1>
+        <p class="hero__subtitle">
+          Od Cambridge Analytica po Clearview AI — udokumentowane sprawy, w których
+          wielkie firmy technologiczne obchodziły prawo i płaciły za to mniej, niż na tym zarobiły.
+        </p>
+        <div class="hero__actions">
+          <a href="/sprawy/" class="btn btn--primary">Przeglądaj sprawy</a>
+          <a href="/teksty/od-autorow/" class="link">Dlaczego robimy tę bazę</a>
+        </div>
+      </div>
+
+      <aside class="hero__aside" aria-label="Kluczowe liczby">
+        <div class="hero__fact">
+          <p class="hero__fact-value">1,2 mld €</p>
+          <p class="hero__fact-label">Rekordowa kara RODO</p>
+          <p class="hero__fact-desc">Meta Ireland, 2023. Za transfer danych europejskich do USA.</p>
+        </div>
+        <div class="hero__fact">
+          <p class="hero__fact-value">0,7%</p>
+          <p class="hero__fact-label">Jej udział w przychodach</p>
+          <p class="hero__fact-desc">Rekordowa kara stanowiła ułamek rocznej sprzedaży Mety. Akcje wzrosły.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Five Doors -->
+  <section class="doors">
+    <div class="container">
+      <div class="doors__header">
+        <p class="doors__intro meta">Architektura portalu</p>
+        <p class="doors__lede">
+          Ten sam zbiór 33 spraw — pięć sposobów wejścia w dane. Siatka, oś czasu,
+          mapa i galeria sygnalistów działają dziś; graf powiązań — w przygotowaniu.
+        </p>
+      </div>
+
+      <div class="doors__grid">
+        {doors.map((door) => (
+          <div class={`door${!door.available ? ' door--soon' : ''}`}>
+            {door.available ? (
+              <a href={door.href} class="door__inner">
+                <span class="door__num meta">{door.id}</span>
+                <strong class="door__key">{door.key}</strong>
+                <p class="door__desc">{door.description}</p>
+                <div class="door__footer">
+                  <span class="door__status door__status--live">Dostępne →</span>
+                </div>
+              </a>
+            ) : (
+              <div class="door__inner door__inner--disabled">
+                <span class="door__num meta">{door.id}</span>
+                <strong class="door__key">{door.key}</strong>
+                <p class="door__desc">{door.description}</p>
+                <div class="door__footer">
+                  <span class="door__status">W przygotowaniu</span>
+                </div>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stats__item">
+          <span class="stats__label meta">Spraw w bazie</span>
+          <span class="stats__value">{allCases.length}</span>
+          <span class="stats__desc">5 grup tematycznych</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__label meta">Kary regulacyjne</span>
+          <span class="stats__value">~{formatBillions(totalFinesEUR)} €</span>
+          <span class="stats__desc">regulatorzy UE, Azja, Australia</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__label meta">Kary w USA</span>
+          <span class="stats__value">~{formatBillions(totalFinesUSD)} $</span>
+          <span class="stats__desc">FTC, SEC, AG stanów</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__label meta">Ugody cywilne</span>
+          <span class="stats__value">~{formatBillions(totalClassActionUSD)} $</span>
+          <span class="stats__desc">pozwy zbiorowe i akcjonariuszy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured TOP cases -->
+  <section class="featured">
+    <div class="container">
+      <div class="featured__header">
+        <div>
+          <p class="meta featured__kicker">Wybrane z 33</p>
+          <h2 class="featured__title">Sprawy kluczowe</h2>
+          <p class="featured__lede">
+            Kary miliardowe, sygnaliści, precedensy konstytucyjne — sprawy,
+            od których redakcja sugeruje zacząć lekturę bazy.
+          </p>
+        </div>
+        <a href="/sprawy/" class="link featured__all">Wszystkie 33 sprawy →</a>
+      </div>
+
+      <div class="featured__grid">
+        {topCases.map((c) => (
+          <CaseCard
+            id={c.data.id}
+            slug={c.data.slug}
+            group={c.data.group}
+            title={c.data.title}
+            subtitle={c.data.subtitle}
+            companies={c.data.companies}
+            year_revealed={c.data.year_revealed}
+            status={c.data.status}
+            fines={c.data.fines}
+            jurisdictions={c.data.jurisdictions}
+            tags={c.data.tags}
+            priority={c.data.priority}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent updates — small band -->
+  <section class="recent">
+    <div class="container">
+      <div class="recent__header">
+        <span class="meta" style="color: var(--text-tertiary)">Ostatnio zaktualizowane</span>
+        <a href="/sprawy/" class="link">Wszystkie sprawy →</a>
+      </div>
+      <div class="recent__grid">
+        {recentCases.map((c) => (
+          <CaseCard
+            id={c.data.id}
+            slug={c.data.slug}
+            group={c.data.group}
+            title={c.data.title}
+            subtitle={c.data.subtitle}
+            companies={c.data.companies}
+            year_revealed={c.data.year_revealed}
+            status={c.data.status}
+            fines={c.data.fines}
+            jurisdictions={c.data.jurisdictions}
+            tags={c.data.tags}
+            priority={c.data.priority}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</Page>
+
+<style lang="scss">
+  // Hero
+  .hero {
+    padding-block: var(--space-16) var(--space-12);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    align-items: start;
+
+    @media (min-width: 900px) {
+      grid-template-columns: minmax(0, 1.4fr) minmax(260px, 1fr);
+      gap: var(--space-10);
+    }
+  }
+
+  .hero__body {
+    max-width: 640px;
+  }
+
+  .hero__title {
+    font-family: var(--font-serif);
+    font-size: clamp(36px, 6vw, 52px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+    margin-bottom: var(--space-5);
+  }
+
+  .hero__subtitle {
+    font-size: 17px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-6);
+  }
+
+  .hero__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+    flex-wrap: wrap;
+  }
+
+  .hero__aside {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    padding-left: var(--space-6);
+    border-left: 1px solid var(--border);
+
+    @media (max-width: 899px) {
+      padding-left: var(--space-4);
+      margin-top: var(--space-4);
+    }
+  }
+
+  .hero__fact {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .hero__fact-value {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+    margin: 0;
+  }
+
+  .hero__fact-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .hero__fact-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  // Doors
+  .doors {
+    padding-block: var(--space-12);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .doors__header {
+    max-width: 640px;
+    margin-bottom: var(--space-6);
+  }
+
+  .doors__intro {
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-2);
+  }
+
+  .doors__lede {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .doors__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: var(--gap-3);
+  }
+
+  .door__inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+    padding: var(--gap-6);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--bg-card);
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    transition: border-color var(--transition-fast);
+
+    &:not(.door__inner--disabled):hover {
+      border-color: var(--accent);
+    }
+
+    &--disabled {
+      cursor: default;
+    }
+  }
+
+  .door__num {
+    color: var(--text-tertiary);
+    font-size: 10px;
+  }
+
+  .door__key {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  .door--soon .door__key {
+    color: var(--text-secondary);
+  }
+
+  .door__desc {
+    font-size: var(--text-small);
+    color: var(--text-secondary);
+    line-height: 1.5;
+    flex: 1;
+    margin: 0;
+  }
+
+  .door__footer {
+    margin-top: var(--gap-3);
+    padding-top: var(--gap-2);
+    border-top: 0.5px solid var(--border);
+  }
+
+  .door__status {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--text-tertiary);
+
+    &--live {
+      color: var(--accent);
+    }
+  }
+
+  // Stats
+  .stats {
+    background: var(--bg-secondary);
+    padding-block: var(--space-12);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .stats__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--gap-6);
+  }
+
+  .stats__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-1);
+  }
+
+  .stats__label {
+    font-size: 10px;
+    color: var(--text-tertiary);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .stats__value {
+    font-family: var(--font-serif);
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .stats__desc {
+    font-size: var(--text-small);
+    color: var(--text-secondary);
+  }
+
+  // Recent
+  // Featured TOP cases
+  .featured {
+    padding-block: var(--space-12);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .featured__header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-6);
+    align-items: end;
+    margin-bottom: var(--space-6);
+
+    @media (max-width: 760px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .featured__kicker {
+    color: var(--accent);
+    margin-bottom: var(--space-2);
+  }
+
+  .featured__title {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 var(--space-2);
+  }
+
+  .featured__lede {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 640px;
+  }
+
+  .featured__all {
+    justify-self: end;
+
+    @media (max-width: 760px) {
+      justify-self: start;
+    }
+  }
+
+  .featured__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--gap-3);
+  }
+
+  // Recent updates band
+  .recent {
+    padding-block: var(--space-10);
+  }
+
+  .recent__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-5);
+  }
+
+  .recent__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--gap-3);
+  }
+</style>

@@ -1,0 +1,77 @@
+---
+import Page from '../layouts/Page.astro';
+---
+
+<Page title="O projekcie" description="Matryca — cel, metodologia i wartości portalu referencyjnego o skandalach Big Tech.">
+  <article class="editorial">
+    <div class="container">
+      <h1>O projekcie</h1>
+
+      <div class="prose">
+        <p>
+          <strong>Matryca</strong> to portal referencyjny zawierający 33 udokumentowane przypadki naruszeń prywatności,
+          bezpieczeństwa i etyki przez największe firmy technologiczne — Meta, Google, Apple, Microsoft, Amazon, Uber,
+          TikTok, X (dawny Twitter), Clearview AI i Zoom.
+        </p>
+
+        <h2>Cel</h2>
+        <p>
+          Portal ma trzy równorzędne cele:
+        </p>
+        <ul>
+          <li><strong>Referencja</strong> — cytowalność dla dziennikarzy i prawników. Trwałe URL, pełne źródła, eksport.</li>
+          <li><strong>Edukacja</strong> — przystępne wprowadzenie do tematu dla szerszej publiczności.</li>
+          <li><strong>Prowokacja intelektualna</strong> — pokazanie wzorców, które są niewidoczne przy czytaniu pojedynczych historii.</li>
+        </ul>
+
+        <h2>Dla kogo</h2>
+        <ul>
+          <li><strong>Dziennikarze</strong> — gotowa baza źródeł i faktów z linkami do dokumentów pierwotnych.</li>
+          <li><strong>Prawnicy i mediatorzy</strong> — zestawienia kar, jurysdykcji, podstaw prawnych.</li>
+          <li><strong>Nauczyciele i wykładowcy</strong> — materiał edukacyjny o prywatności, etyce technologii.</li>
+          <li><strong>Rodzice</strong> — sekcje dotyczące bezpieczeństwa dzieci online.</li>
+          <li><strong>Studenci</strong> prawa, politologii, dziennikarstwa, nauk technicznych.</li>
+          <li><strong>Obywatele</strong> — każda karta zawiera sekcję "Wnioski dla obywateli" z konkretnymi krokami ochrony.</li>
+        </ul>
+
+        <h2>Metodologia</h2>
+        <p>
+          Każda karta bazuje wyłącznie na:
+        </p>
+        <ul>
+          <li>Oficjalnych dokumentach regulatorów (DPC, FTC, CNIL, ICO, European Commission)</li>
+          <li>Orzecznictwie sądowym (TSUE, sądy krajowe, SCOTUS)</li>
+          <li>Śledztwach dziennikarskich (NYT, Forbes, Guardian, Bloomberg, The Intercept)</li>
+          <li>Badaniach akademickich i raportach organizacji praw obywatelskich (EFF, noyb, Panoptykon)</li>
+          <li>Zeznaniach przed Kongresem USA i Parlamentem Europejskim</li>
+        </ul>
+        <p>
+          Wszystkie kary i daty są weryfikowane w co najmniej dwóch niezależnych źródłach.
+        </p>
+
+        <h2>Prywatność portalu</h2>
+        <p>
+          Projekt, który dokumentuje naruszenia prywatności, sam nie może naruszać prywatności swoich czytelników.
+          Portal Matryca nie zbiera żadnych danych o użytkownikach, nie używa cookies analitycznych,
+          nie ładuje zewnętrznych zasobów śledzących.
+        </p>
+
+        <h2>Licencja</h2>
+        <p>
+          Treść bazy jest materiałem edukacyjnym do swobodnego wykorzystania.
+          Przy cytowaniu prosimy o wskazanie źródła: <em>Matryca — baza wiedzy o skandalach Big Tech, 2026</em>.
+        </p>
+      </div>
+    </div>
+  </article>
+</Page>
+
+<style lang="scss">
+  .editorial {
+    padding-block: var(--space-8);
+
+    h1 {
+      margin-bottom: var(--space-8);
+    }
+  }
+</style>
