@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Page from '../../layouts/Page.astro';
 import { TAG_LABELS, TAG_DESCRIPTIONS } from '../../utils/tags';
+import { url } from '../../utils/url';
 
 const allCases = await getCollection('cases');
 
@@ -42,7 +43,7 @@ const sortedTags = Object.entries(tagCounts)
       <ul class="tags-index__list">
         {sortedTags.map((t) => (
           <li class="tags-index__item">
-            <a href={`/tagi/${t.id}/`} class="tags-index__link">
+            <a href={url(`/tagi/${t.id}/`)} class="tags-index__link">
               <div class="tags-index__head">
                 <span class="tags-index__label">{t.label}</span>
                 <span class="tags-index__count meta">{t.count}</span>

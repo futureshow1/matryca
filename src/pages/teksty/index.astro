@@ -1,5 +1,6 @@
 ---
 import Page from '../../layouts/Page.astro';
+import { url } from '../../utils/url';
 
 const texts = [
   {
@@ -46,7 +47,7 @@ const texts = [
       <ol class="texts-list">
         {texts.map((t, i) => (
           <li class="texts-list__item">
-            <a href={`/teksty/${t.slug}/`} class="texts-list__link">
+            <a href={url(`/teksty/${t.slug}/`)} class="texts-list__link">
               <span class="texts-list__index">{String(i + 1).padStart(2, '0')}</span>
               <div class="texts-list__body">
                 <p class="texts-list__kicker">{t.kicker}</p>

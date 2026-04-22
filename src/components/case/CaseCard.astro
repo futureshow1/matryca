@@ -2,6 +2,7 @@
 import Badge from '../ui/Badge.astro';
 import StatusPill from '../ui/StatusPill.astro';
 import { formatAmount, getTopFine } from '../../utils/format';
+import { url } from '../../utils/url';
 
 interface Fine {
   amount: number;
@@ -76,7 +77,7 @@ const TAG_LABELS: Record<string, string> = {
 ---
 
 <a
-  href={`/sprawy/${slug}/`}
+  href={url(`/sprawy/${slug}/`)}
   class={`case-card${featured ? ' case-card--featured' : ''}${priority === 'TOP' ? ' case-card--top' : ''}`}
 >
   <div class="case-card__header">

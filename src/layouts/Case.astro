@@ -4,6 +4,7 @@ import CaseMeta from '../components/case/CaseMeta.astro';
 import CaseKeyFacts from '../components/case/CaseKeyFacts.astro';
 import Badge from '../components/ui/Badge.astro';
 import RelatedCases from '../components/case/RelatedCases.astro';
+import { url } from '../utils/url';
 
 interface Fine {
   amount: number;
@@ -41,7 +42,6 @@ interface Props {
 const {
   id,
   group,
-  group_label,
   title,
   subtitle,
   status,
@@ -67,7 +67,7 @@ const {
     <div class="container">
       <header class="case-page__header">
         <div class="case-page__breadcrumb">
-          <a href="/sprawy/">Wszystkie sprawy</a>
+          <a href={url('/sprawy/')}>Wszystkie sprawy</a>
           <span aria-hidden="true">/</span>
           <Badge group={group} size="sm" />
         </div>

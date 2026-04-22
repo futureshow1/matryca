@@ -1,11 +1,11 @@
 ---
 import Page from '../layouts/Page.astro';
 import { getCollection } from 'astro:content';
-import { REGULATORS, findRegulator } from '../data/regulators';
+import { REGULATORS } from '../data/regulators';
 import { geoNaturalEarth1, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
-// @ts-expect-error JSON import
 import worldTopo from 'world-atlas/countries-110m.json';
+import { url } from '../utils/url';
 
 // Build-time: wygeneruj SVG świata
 const width = 900;
@@ -170,7 +170,7 @@ function radius(count: number): number {
                     <ul>
                       {p.cases.map((c) => (
                         <li>
-                          <a href={`/sprawy/${c.slug}/`}>
+                          <a href={url(`/sprawy/${c.slug}/`)}>
                             <span class="meta">{c.id}</span> — {c.title}
                           </a>
                         </li>

@@ -2,6 +2,7 @@
 import Page from '../layouts/Page.astro';
 import { getCollection } from 'astro:content';
 import { GROUP_LABELS } from '../utils/format';
+import { url } from '../utils/url';
 
 const allCases = await getCollection('cases');
 
@@ -48,7 +49,7 @@ const laneYOf = (group: 'A' | 'B' | 'C' | 'D' | 'E') =>
 
 // For x-collisions within same year, slight jitter
 const yearGroupPos: Record<string, number> = {};
-function getPosition(year: number, group: string, id: string) {
+function getPosition(year: number, group: string) {
   const key = `${year}-${group}`;
   yearGroupPos[key] = (yearGroupPos[key] ?? 0) + 1;
   return yearGroupPos[key] - 1; // 0, 1, 2
@@ -135,10 +136,10 @@ function getPosition(year: number, group: string, id: string) {
 
           {/* Cases */}
           {cases.map((c) => {
-            const pos = getPosition(c.data.year_revealed, c.data.group, c.data.id);
+            const pos = getPosition(c.data.year_revealed, c.data.group);
             const cy = laneYOf(c.data.group) + (pos - 0.5) * 16;
             return (
-              <a href={`/sprawy/${c.data.slug}/`}>
+              <a href={url(`/sprawy/${c.data.slug}/`)}>
                 <g class="os__case">
                   <circle
                     cx={xOf(c.data.year_revealed)}
@@ -175,7 +176,7 @@ function getPosition(year: number, group: string, id: string) {
             <ul class="os__year-list">
               {byYear[year].map((c) => (
                 <li class="os__year-item">
-                  <a href={`/sprawy/${c.data.slug}/`} class="os__year-link">
+                  <a href={url(`/sprawy/${c.data.slug}/`)} class="os__year-link">
                     <span
                       class="os__year-dot"
                       style={{ background: GROUP_COLORS[c.data.group] }}

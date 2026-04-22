@@ -1,5 +1,6 @@
 ---
 import Page from './Page.astro';
+import { url } from '../utils/url';
 
 interface Props {
   kicker: string;
@@ -20,7 +21,7 @@ const { kicker, title, lede, byline, readingTime, description, prev, next } = As
     <div class="container text__container">
       <header class="text__header">
         <nav class="text__breadcrumb" aria-label="Breadcrumb">
-          <a href="/teksty/">Teksty</a>
+          <a href={url('/teksty/')}>Teksty</a>
           <span aria-hidden="true">/</span>
           <span>{kicker}</span>
         </nav>
@@ -42,13 +43,13 @@ const { kicker, title, lede, byline, readingTime, description, prev, next } = As
 
       <nav class="text__pager" aria-label="Kolejne teksty">
         {prev && (
-          <a href={prev.href} class="text__pager-link text__pager-link--prev">
+          <a href={url(prev.href)} class="text__pager-link text__pager-link--prev">
             <span class="text__pager-dir">← Poprzedni</span>
             <span class="text__pager-label">{prev.label}</span>
           </a>
         )}
         {next && (
-          <a href={next.href} class="text__pager-link text__pager-link--next">
+          <a href={url(next.href)} class="text__pager-link text__pager-link--next">
             <span class="text__pager-dir">Następny →</span>
             <span class="text__pager-label">{next.label}</span>
           </a>

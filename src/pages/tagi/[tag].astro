@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Page from '../../layouts/Page.astro';
 import CaseCard from '../../components/case/CaseCard.astro';
 import { TAG_LABELS, TAG_DESCRIPTIONS } from '../../utils/tags';
+import { url } from '../../utils/url';
 
 export async function getStaticPaths() {
   const allCases = await getCollection('cases');
@@ -32,7 +33,7 @@ const description = TAG_DESCRIPTIONS[tag];
   <section class="tag-page">
     <div class="container">
       <nav class="tag-page__crumb" aria-label="Breadcrumb">
-        <a href="/tagi/">Tagi</a>
+        <a href={url('/tagi/')}>Tagi</a>
         <span aria-hidden="true">/</span>
         <span>{label}</span>
       </nav>

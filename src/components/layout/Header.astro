@@ -1,4 +1,5 @@
 ---
+import { url } from '../../utils/url';
 const navLinks = [
   { href: '/sprawy/', label: 'Sprawy' },
   { href: '/sygnalisci/', label: 'Kto odkrył?' },
@@ -12,7 +13,7 @@ const currentPath = Astro.url.pathname;
 
 <header class="header">
   <div class="container header__inner">
-    <a href="/" class="header__logo" aria-label="Matryca — strona główna">
+    <a href={url('/')} class="header__logo" aria-label="Matryca — strona główna">
       <span class="header__logo-bar" aria-hidden="true"></span>
       <span class="header__logo-name">Matryca</span>
       <span class="header__logo-sub">/ baza wiedzy</span>
@@ -20,16 +21,20 @@ const currentPath = Astro.url.pathname;
 
     <nav class="header__nav" aria-label="Nawigacja główna">
       <ul class="header__nav-list">
-        {navLinks.map((link) => (
-          <li>
-            <a
-              href={link.href}
-              class={`header__nav-link${currentPath.startsWith(link.href) ? ' header__nav-link--active' : ''}`}
-            >
-              {link.label}
-            </a>
-          </li>
-        ))}
+        {navLinks.map((link) => {
+          const resolved = url(link.href);
+          const isActive = currentPath === resolved || currentPath.startsWith(resolved);
+          return (
+            <li>
+              <a
+                href={resolved}
+                class={`header__nav-link${isActive ? ' header__nav-link--active' : ''}`}
+              >
+                {link.label}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </nav>
 

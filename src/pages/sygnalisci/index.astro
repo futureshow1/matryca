@@ -1,6 +1,7 @@
 ---
 import Page from '../../layouts/Page.astro';
 import { PEOPLE, ROLE_LABELS } from '../../data/people';
+import { url } from '../../utils/url';
 
 const grouped = {
   sygnalista: PEOPLE.filter((p) => p.role === 'sygnalista'),
@@ -35,7 +36,7 @@ const grouped = {
           <ul class="people__grid">
             {list.map((p) => (
               <li>
-                <a href={`/sygnalisci/${p.slug}/`} class="person-card">
+                <a href={url(`/sygnalisci/${p.slug}/`)} class="person-card">
                   <div class="person-card__portrait" aria-hidden="true">{p.portrait_initials}</div>
                   <div class="person-card__body">
                     <p class="person-card__name">{p.name}</p>

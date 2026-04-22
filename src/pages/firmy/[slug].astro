@@ -4,6 +4,7 @@ import Page from '../../layouts/Page.astro';
 import CaseCard from '../../components/case/CaseCard.astro';
 import { COMPANIES, companyToSlug } from '../../utils/companies';
 import { formatBillions } from '../../utils/format';
+import { url } from '../../utils/url';
 
 export async function getStaticPaths() {
   const allCases = await getCollection('cases');
@@ -39,7 +40,7 @@ const { info, cases, finesEUR, finesUSD } = Astro.props;
   <section class="firm-page">
     <div class="container">
       <nav class="firm-page__crumb" aria-label="Breadcrumb">
-        <a href="/firmy/">Firmy</a>
+        <a href={url('/firmy/')}>Firmy</a>
         <span aria-hidden="true">/</span>
         <span>{info.label}</span>
       </nav>

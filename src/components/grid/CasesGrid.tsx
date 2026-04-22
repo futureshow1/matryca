@@ -1,5 +1,9 @@
 import { useState, useMemo } from 'react';
 
+// Astro base URL — injected by Vite at build time (may/may not end with '/')
+const BASE_URL = import.meta.env.BASE_URL.replace(/\/$/, '');
+const makeUrl = (path: string) => `${BASE_URL}${path.startsWith('/') ? path : `/${path}`}`;
+
 interface Fine {
   amount: number;
   currency: string;
@@ -385,7 +389,7 @@ export default function CasesGrid({ cases }: Props) {
           return (
             <a
               key={c.id}
-              href={`/sprawy/${c.slug}/`}
+              href={makeUrl(`/sprawy/${c.slug}/`)}
               style={{
                 display: 'flex',
                 flexDirection: 'column',

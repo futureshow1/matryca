@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Badge from '../ui/Badge.astro';
+import { url } from '../../utils/url';
 
 interface Props {
   ids: string[];
@@ -27,7 +28,7 @@ const relatedCases = ids
     <ul class="related__list">
       {relatedCases.map((c) => (
         <li class="related__item">
-          <a href={`/sprawy/${c.data.slug}/`} class="related__link">
+          <a href={url(`/sprawy/${c.data.slug}/`)} class="related__link">
             <div class="related__head">
               <Badge group={c.data.group} size="sm" />
               <span class="related__id meta">{c.data.id}</span>

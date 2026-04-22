@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Page from '../layouts/Page.astro';
 import CaseCard from '../components/case/CaseCard.astro';
+import { url } from '../utils/url';
 
 const allCases = await getCollection('cases');
 
@@ -105,8 +106,8 @@ const doors = [
           wielkie firmy technologiczne obchodziły prawo i płaciły za to mniej, niż na tym zarobiły.
         </p>
         <div class="hero__actions">
-          <a href="/sprawy/" class="btn btn--primary">Przeglądaj sprawy</a>
-          <a href="/teksty/od-autorow/" class="link">Dlaczego robimy tę bazę</a>
+          <a href={url('/sprawy/')} class="btn btn--primary">Przeglądaj sprawy</a>
+          <a href={url('/teksty/od-autorow/')} class="link">Dlaczego robimy tę bazę</a>
         </div>
       </div>
 
@@ -140,7 +141,7 @@ const doors = [
         {doors.map((door) => (
           <div class={`door${!door.available ? ' door--soon' : ''}`}>
             {door.available ? (
-              <a href={door.href} class="door__inner">
+              <a href={url(door.href)} class="door__inner">
                 <span class="door__num meta">{door.id}</span>
                 <strong class="door__key">{door.key}</strong>
                 <p class="door__desc">{door.description}</p>
@@ -204,7 +205,7 @@ const doors = [
             od których redakcja sugeruje zacząć lekturę bazy.
           </p>
         </div>
-        <a href="/sprawy/" class="link featured__all">Wszystkie 33 sprawy →</a>
+        <a href={url('/sprawy/')} class="link featured__all">Wszystkie 33 sprawy →</a>
       </div>
 
       <div class="featured__grid">
@@ -233,7 +234,7 @@ const doors = [
     <div class="container">
       <div class="recent__header">
         <span class="meta" style="color: var(--text-tertiary)">Ostatnio zaktualizowane</span>
-        <a href="/sprawy/" class="link">Wszystkie sprawy →</a>
+        <a href={url('/sprawy/')} class="link">Wszystkie sprawy →</a>
       </div>
       <div class="recent__grid">
         {recentCases.map((c) => (

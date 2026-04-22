@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Page from '../../layouts/Page.astro';
 import Badge from '../../components/ui/Badge.astro';
 import { PEOPLE, ROLE_LABELS } from '../../data/people';
+import { url } from '../../utils/url';
 
 export async function getStaticPaths() {
   const allCases = await getCollection('cases');
@@ -28,7 +29,7 @@ const bioParagraphs = person.bio_long.split(/\n\n+/).map((p) => p.trim()).filter
   <article class="person-page">
     <div class="container">
       <nav class="person-page__crumb" aria-label="Breadcrumb">
-        <a href="/sygnalisci/">Kto odkrył?</a>
+        <a href={url('/sygnalisci/')}>Kto odkrył?</a>
         <span aria-hidden="true">/</span>
         <span>{person.name}</span>
       </nav>
@@ -55,7 +56,7 @@ const bioParagraphs = person.bio_long.split(/\n\n+/).map((p) => p.trim()).filter
           <ul class="person-page__cases-list">
             {relatedCases.map((c) => (
               <li>
-                <a href={`/sprawy/${c.data.slug}/`} class="person-page__case-link">
+                <a href={url(`/sprawy/${c.data.slug}/`)} class="person-page__case-link">
                   <div class="person-page__case-head">
                     <Badge group={c.data.group} size="sm" />
                     <span class="meta">{c.data.id}</span>

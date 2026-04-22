@@ -4,6 +4,7 @@ import Page from '../../layouts/Page.astro';
 import Badge from '../../components/ui/Badge.astro';
 import { COMPANIES, companyToSlug } from '../../utils/companies';
 import { formatBillions } from '../../utils/format';
+import { url } from '../../utils/url';
 
 const allCases = await getCollection('cases');
 
@@ -53,7 +54,7 @@ const companies = Object.values(COMPANIES)
       <ul class="firms-index__list">
         {companies.map((c) => (
           <li class="firms-index__item">
-            <a href={`/firmy/${c.slug}/`} class="firms-index__link">
+            <a href={url(`/firmy/${c.slug}/`)} class="firms-index__link">
               <div class="firms-index__head">
                 <Badge group={c.group} size="sm" />
                 <span class="firms-index__label">{c.label}</span>
