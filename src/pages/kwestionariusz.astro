@@ -1,0 +1,61 @@
+---
+import Page from '../layouts/Page.astro';
+import Quiz from '../components/quiz/Quiz';
+---
+
+<Page
+  title="Kwestionariusz — ile Big Tech wie o tobie"
+  description="15 pytań o twoje nawyki cyfrowe. Każda odpowiedź pokazuje, co konkretna praktyka Big Tech oznacza dla ciebie — i co możesz z tym zrobić."
+>
+  <section class="kwestionariusz">
+    <div class="container">
+      <header class="kwestionariusz__header">
+        <p class="meta" style="color: var(--text-tertiary)">Kwestionariusz diagnostyczny</p>
+        <h1>Ile Big Tech wie o tobie</h1>
+        <p class="kwestionariusz__lede">
+          Piętnaście pytań o codzienne nawyki. Po każdej odpowiedzi „tak" — wyjaśnienie,
+          co konkretna praktyka oznacza dla twoich danych, i do której sprawy w bazie się odnosi.
+          Na końcu: lista konkretnych działań uszeregowana od najłatwiejszych do najtrudniejszych.
+        </p>
+        <p class="kwestionariusz__note">
+          Kwestionariusz jest w pełni lokalny. Twoje odpowiedzi nie są nigdzie wysyłane
+          — portal Matryca nie zbiera danych o użytkownikach.
+        </p>
+      </header>
+
+      <Quiz client:load />
+    </div>
+  </section>
+</Page>
+
+<style lang="scss">
+  .kwestionariusz {
+    padding-block: var(--space-8) var(--space-10);
+  }
+
+  .kwestionariusz__header {
+    max-width: 720px;
+    margin-bottom: var(--space-8);
+  }
+
+  .kwestionariusz__header h1 {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    line-height: 1.15;
+    margin-block: var(--space-2) var(--space-4);
+  }
+
+  .kwestionariusz__lede {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-3);
+  }
+
+  .kwestionariusz__note {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin: 0;
+  }
+</style>
