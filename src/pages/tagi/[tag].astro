@@ -1,0 +1,119 @@
+---
+import { getCollection } from 'astro:content';
+import Page from '../../layouts/Page.astro';
+import CaseCard from '../../components/case/CaseCard.astro';
+import { TAG_LABELS, TAG_DESCRIPTIONS } from '../../utils/tags';
+
+export async function getStaticPaths() {
+  const allCases = await getCollection('cases');
+  const tagSet = new Set<string>();
+  allCases.forEach((c) => (c.data.tags ?? []).forEach((t) => tagSet.add(t)));
+
+  return Array.from(tagSet).map((tag) => {
+    const cases = allCases
+      .filter((c) => (c.data.tags ?? []).includes(tag))
+      .sort((a, b) => b.data.year_revealed - a.data.year_revealed);
+    return {
+      params: { tag },
+      props: { tag, cases },
+    };
+  });
+}
+
+const { tag, cases } = Astro.props;
+const label = TAG_LABELS[tag] ?? tag;
+const description = TAG_DESCRIPTIONS[tag];
+---
+
+<Page
+  title={`${label} — tag`}
+  description={description ?? `Sprawy oznaczone tagiem ${label}.`}
+>
+  <section class="tag-page">
+    <div class="container">
+      <nav class="tag-page__crumb" aria-label="Breadcrumb">
+        <a href="/tagi/">Tagi</a>
+        <span aria-hidden="true">/</span>
+        <span>{label}</span>
+      </nav>
+
+      <header class="tag-page__header">
+        <p class="meta" style="color: var(--text-tertiary)">Tag</p>
+        <h1 class="tag-page__title">{label}</h1>
+        {description && <p class="tag-page__lede">{description}</p>}
+        <p class="tag-page__count meta">
+          {cases.length} {cases.length === 1 ? 'sprawa' : cases.length < 5 ? 'sprawy' : 'spraw'}
+        </p>
+      </header>
+
+      <div class="tag-page__grid">
+        {cases.map((c) => (
+          <CaseCard
+            id={c.data.id}
+            slug={c.data.slug}
+            group={c.data.group}
+            title={c.data.title}
+            subtitle={c.data.subtitle}
+            companies={c.data.companies}
+            year_revealed={c.data.year_revealed}
+            status={c.data.status}
+            fines={c.data.fines}
+            jurisdictions={c.data.jurisdictions}
+            tags={c.data.tags}
+            priority={c.data.priority}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</Page>
+
+<style lang="scss">
+  .tag-page {
+    padding-block: var(--space-8) var(--space-10);
+  }
+
+  .tag-page__crumb {
+    display: flex;
+    gap: var(--gap-2);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-6);
+
+    a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      &:hover { color: var(--accent); }
+    }
+  }
+
+  .tag-page__header {
+    max-width: 720px;
+    margin-bottom: var(--space-8);
+  }
+
+  .tag-page__title {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    line-height: 1.15;
+    margin-block: var(--space-2) var(--space-3);
+  }
+
+  .tag-page__lede {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-3);
+  }
+
+  .tag-page__count {
+    color: var(--accent);
+  }
+
+  .tag-page__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--gap-3);
+  }
+</style>

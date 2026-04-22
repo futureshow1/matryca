@@ -1,0 +1,180 @@
+---
+import { getCollection } from 'astro:content';
+import Page from '../../layouts/Page.astro';
+import Badge from '../../components/ui/Badge.astro';
+import { COMPANIES, companyToSlug } from '../../utils/companies';
+import { formatBillions } from '../../utils/format';
+
+const allCases = await getCollection('cases');
+
+// Count cases and fines per company
+const companyStats: Record<string, { caseCount: number; finesEUR: number; finesUSD: number }> = {};
+
+allCases.forEach((c) => {
+  const slugs = new Set<string>();
+  (c.data.companies || []).forEach((name) => {
+    const s = companyToSlug(name);
+    if (s) slugs.add(s);
+  });
+  slugs.forEach((s) => {
+    if (!companyStats[s]) companyStats[s] = { caseCount: 0, finesEUR: 0, finesUSD: 0 };
+    companyStats[s].caseCount += 1;
+    c.data.fines.forEach((f) => {
+      if (f.currency === 'EUR') companyStats[s].finesEUR += f.amount;
+      if (f.currency === 'USD') companyStats[s].finesUSD += f.amount;
+    });
+  });
+});
+
+const companies = Object.values(COMPANIES)
+  .map((c) => ({
+    ...c,
+    stats: companyStats[c.slug] ?? { caseCount: 0, finesEUR: 0, finesUSD: 0 },
+  }))
+  .filter((c) => c.stats.caseCount > 0)
+  .sort((a, b) => b.stats.caseCount - a.stats.caseCount);
+---
+
+<Page
+  title="Firmy"
+  description="Indeks firm — 12 największych platform technologicznych dokumentowanych w bazie Matrycy."
+>
+  <section class="firms-index">
+    <div class="container">
+      <header class="firms-index__header">
+        <p class="meta" style="color: var(--text-tertiary)">Indeks</p>
+        <h1>Firmy</h1>
+        <p class="firms-index__lede">
+          12 podmiotów dokumentowanych w bazie — liczba spraw, zsumowane kary regulacyjne
+          i cywilne. Kliknij nazwę firmy, żeby zobaczyć wszystkie powiązane sprawy.
+        </p>
+      </header>
+
+      <ul class="firms-index__list">
+        {companies.map((c) => (
+          <li class="firms-index__item">
+            <a href={`/firmy/${c.slug}/`} class="firms-index__link">
+              <div class="firms-index__head">
+                <Badge group={c.group} size="sm" />
+                <span class="firms-index__label">{c.label}</span>
+                <span class="firms-index__count meta">
+                  {c.stats.caseCount} {c.stats.caseCount === 1 ? 'sprawa' : c.stats.caseCount < 5 ? 'sprawy' : 'spraw'}
+                </span>
+              </div>
+              <p class="firms-index__desc">{c.description}</p>
+              <div class="firms-index__fines">
+                {c.stats.finesEUR > 0 && (
+                  <span class="firms-index__fine meta">
+                    {formatBillions(c.stats.finesEUR)} €
+                  </span>
+                )}
+                {c.stats.finesUSD > 0 && (
+                  <span class="firms-index__fine meta">
+                    {formatBillions(c.stats.finesUSD)} $
+                  </span>
+                )}
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Page>
+
+<style lang="scss">
+  .firms-index {
+    padding-block: var(--space-8) var(--space-10);
+  }
+
+  .firms-index__header {
+    max-width: 720px;
+    margin-bottom: var(--space-8);
+  }
+
+  .firms-index__header h1 {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    line-height: 1.15;
+    margin-block: var(--space-2) var(--space-4);
+  }
+
+  .firms-index__lede {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  .firms-index__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--gap-3);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .firms-index__item {
+    margin: 0;
+  }
+
+  .firms-index__link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-3);
+    padding: var(--gap-6);
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    transition: border-color var(--transition-fast);
+
+    &:hover {
+      border-color: var(--accent);
+      .firms-index__label { color: var(--accent); }
+    }
+  }
+
+  .firms-index__head {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-2);
+  }
+
+  .firms-index__label {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-right: auto;
+    transition: color var(--transition-fast);
+  }
+
+  .firms-index__count {
+    font-size: 11px;
+    color: var(--accent);
+  }
+
+  .firms-index__desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+    flex: 1;
+  }
+
+  .firms-index__fines {
+    display: flex;
+    gap: var(--gap-3);
+    padding-top: var(--gap-2);
+    border-top: 0.5px solid var(--border);
+  }
+
+  .firms-index__fine {
+    font-size: 12px;
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+</style>
