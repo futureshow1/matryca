@@ -1,0 +1,235 @@
+---
+import { getCollection } from 'astro:content';
+import Page from '../../layouts/Page.astro';
+import Badge from '../../components/ui/Badge.astro';
+import { PEOPLE, ROLE_LABELS } from '../../data/people';
+
+export async function getStaticPaths() {
+  const allCases = await getCollection('cases');
+  return PEOPLE.map((person) => {
+    const relatedCases = person.caseIds
+      .map((id) => allCases.find((c) => c.data.id === id))
+      .filter((c): c is NonNullable<typeof c> => Boolean(c));
+    return {
+      params: { slug: person.slug },
+      props: { person, relatedCases },
+    };
+  });
+}
+
+const { person, relatedCases } = Astro.props;
+const bioParagraphs = person.bio_long.split(/\n\n+/).map((p) => p.trim()).filter(Boolean);
+---
+
+<Page
+  title={`${person.name} — ${ROLE_LABELS[person.role]}`}
+  description={person.bio_short}
+>
+  <article class="person-page">
+    <div class="container">
+      <nav class="person-page__crumb" aria-label="Breadcrumb">
+        <a href="/sygnalisci/">Kto odkrył?</a>
+        <span aria-hidden="true">/</span>
+        <span>{person.name}</span>
+      </nav>
+
+      <header class="person-page__header">
+        <div class="person-page__portrait" aria-hidden="true">{person.portrait_initials}</div>
+        <div class="person-page__info">
+          <p class="meta person-page__role">{ROLE_LABELS[person.role]}</p>
+          <h1 class="person-page__name">{person.name}</h1>
+          {person.affiliation && <p class="person-page__affil">{person.affiliation}</p>}
+          <p class="person-page__years meta">{person.years}</p>
+        </div>
+      </header>
+
+      <div class="person-page__body">
+        {bioParagraphs.map((p) => <p>{p}</p>)}
+      </div>
+
+      {relatedCases.length > 0 && (
+        <section class="person-page__cases">
+          <h2 class="person-page__cases-title">
+            Sprawy, w których odegrała rolę
+          </h2>
+          <ul class="person-page__cases-list">
+            {relatedCases.map((c) => (
+              <li>
+                <a href={`/sprawy/${c.data.slug}/`} class="person-page__case-link">
+                  <div class="person-page__case-head">
+                    <Badge group={c.data.group} size="sm" />
+                    <span class="meta">{c.data.id}</span>
+                    <span class="meta person-page__case-year">{c.data.year_revealed}</span>
+                  </div>
+                  <p class="person-page__case-name">{c.data.title}</p>
+                  {c.data.subtitle && <p class="person-page__case-sub">{c.data.subtitle}</p>}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+    </div>
+  </article>
+</Page>
+
+<style lang="scss">
+  .person-page {
+    padding-block: var(--space-8) var(--space-10);
+  }
+
+  .person-page__crumb {
+    display: flex;
+    gap: var(--gap-2);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-6);
+
+    a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      &:hover { color: var(--accent); }
+    }
+  }
+
+  .person-page__header {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: var(--space-5);
+    align-items: center;
+    margin-bottom: var(--space-8);
+    padding-bottom: var(--space-6);
+    border-bottom: 0.5px solid var(--border);
+
+    @media (max-width: 560px) {
+      grid-template-columns: 80px 1fr;
+    }
+  }
+
+  .person-page__portrait {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    border: 0.5px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--text-primary);
+
+    @media (max-width: 560px) {
+      width: 80px;
+      height: 80px;
+      font-size: 28px;
+    }
+  }
+
+  .person-page__info { min-width: 0; }
+
+  .person-page__role {
+    color: var(--accent);
+    margin-bottom: var(--space-1);
+  }
+
+  .person-page__name {
+    font-family: var(--font-serif);
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-block: 0 var(--space-1);
+  }
+
+  .person-page__affil {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  .person-page__years {
+    color: var(--text-tertiary);
+    margin-top: var(--space-1);
+  }
+
+  .person-page__body {
+    max-width: 720px;
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--text-primary);
+    margin-bottom: var(--space-10);
+
+    p { margin-bottom: 1em; }
+  }
+
+  .person-page__cases {
+    padding-top: var(--space-6);
+    border-top: 0.5px solid var(--border);
+  }
+
+  .person-page__cases-title {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    margin-bottom: var(--space-4);
+  }
+
+  .person-page__cases-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--gap-3);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    > li { margin: 0; }
+  }
+
+  .person-page__case-link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+    padding: var(--gap-5);
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    transition: border-color var(--transition-fast);
+
+    &:hover {
+      border-color: var(--accent);
+      .person-page__case-name { color: var(--accent); }
+    }
+  }
+
+  .person-page__case-head {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-2);
+    font-size: 11px;
+    color: var(--text-tertiary);
+  }
+
+  .person-page__case-year {
+    margin-left: auto;
+  }
+
+  .person-page__case-name {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    color: var(--text-primary);
+    transition: color var(--transition-fast);
+  }
+
+  .person-page__case-sub {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+    margin: 0;
+  }
+</style>

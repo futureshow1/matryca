@@ -1,0 +1,366 @@
+---
+import Page from '../layouts/Page.astro';
+import { getCollection } from 'astro:content';
+import { REGULATORS, findRegulator } from '../data/regulators';
+import { geoNaturalEarth1, geoPath } from 'd3-geo';
+import { feature } from 'topojson-client';
+// @ts-expect-error JSON import
+import worldTopo from 'world-atlas/countries-110m.json';
+
+// Build-time: wygeneruj SVG świata
+const width = 900;
+const height = 450;
+const projection = geoNaturalEarth1()
+  .scale(155)
+  .translate([width / 2, height / 2 + 20]);
+const pathGen = geoPath(projection);
+
+// @ts-expect-error — topojson-client typing
+const countries = feature(worldTopo, worldTopo.objects.countries) as GeoJSON.FeatureCollection;
+const countryPaths = countries.features
+  .map((f) => pathGen(f))
+  .filter((d): d is string => Boolean(d));
+
+// Dla każdego regulatora: oblicz pozycję + policz sprawy
+const allCases = await getCollection('cases');
+
+interface RegulatorPin {
+  slug: string;
+  short: string;
+  country: string;
+  city: string;
+  region: string;
+  description?: string;
+  x: number;
+  y: number;
+  caseCount: number;
+  cases: Array<{ id: string; title: string; slug: string }>;
+}
+
+const pins: RegulatorPin[] = REGULATORS.map((r) => {
+  const [x, y] = projection([r.lng, r.lat]) ?? [0, 0];
+  const matchingCases: Array<{ id: string; title: string; slug: string }> = [];
+  allCases.forEach((c) => {
+    const authorities = c.data.fines.map((f) => f.authority ?? '');
+    if (c.data.lead_regulator) authorities.push(c.data.lead_regulator);
+    const matches = authorities.some((a) => r.authorityPatterns.some((p) => a.includes(p) || p.includes(a)));
+    if (matches) {
+      matchingCases.push({ id: c.data.id, title: c.data.title, slug: c.data.slug });
+    }
+  });
+  return {
+    slug: r.slug,
+    short: r.short,
+    country: r.country,
+    city: r.city,
+    region: r.region,
+    description: r.description,
+    x,
+    y,
+    caseCount: matchingCases.length,
+    cases: matchingCases,
+  };
+}).filter((p) => p.caseCount > 0);
+
+// Sort pins: by caseCount desc for rendering order (biggest on top)
+pins.sort((a, b) => a.caseCount - b.caseCount);
+
+// Group pins by region for below-map table
+const byRegion: Record<string, RegulatorPin[]> = {};
+pins.forEach((p) => {
+  if (!byRegion[p.region]) byRegion[p.region] = [];
+  byRegion[p.region].push(p);
+});
+Object.keys(byRegion).forEach((r) => byRegion[r].sort((a, b) => b.caseCount - a.caseCount));
+
+const regionOrder = ['Europa', 'Ameryka Pn.', 'Azja', 'Oceania', 'Ameryka Pd.'];
+
+// Radius scaling for pin size
+const maxCount = Math.max(...pins.map((p) => p.caseCount));
+function radius(count: number): number {
+  return Math.max(4, Math.sqrt(count / maxCount) * 14);
+}
+---
+
+<Page
+  title="Gdzie — regulatorzy i sądy"
+  description="Mapa geograficzna regulatorów i sądów, w których zapadały decyzje w 33 sprawach bazy Matrycy."
+>
+  <section class="mapa">
+    <div class="container">
+      <header class="mapa__header">
+        <p class="meta" style="color: var(--text-tertiary)">Drzwi 03 — wersja v1</p>
+        <h1>Gdzie decydowano o twoich danych</h1>
+        <p class="mapa__lede">
+          Regulatorzy i sądy, w których zapadały decyzje w 33 sprawach bazy. Rozmiar punktu
+          skaluje się z liczbą spraw — widać od razu, że europejskie egzekwowanie prawa
+          o danych jest geograficznie skoncentrowane w Dublinie, a amerykańskie — w Waszyngtonie.
+        </p>
+      </header>
+
+      <figure class="mapa__figure">
+        <svg
+          viewBox={`0 0 ${width} ${height}`}
+          class="mapa__svg"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-label="Mapa świata z regulatorami"
+          role="img"
+        >
+          <defs>
+            <filter id="pin-glow">
+              <feMorphology in="SourceGraphic" operator="dilate" radius="2" result="outer"/>
+              <feFlood flood-color="var(--bg-primary)" result="flood"/>
+              <feComposite in="flood" in2="outer" operator="in" result="ring"/>
+              <feMerge>
+                <feMergeNode in="ring"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+
+          {countryPaths.map((d) => (
+            <path d={d} class="mapa__country" />
+          ))}
+
+          {pins.map((p) => (
+            <g class="mapa__pin-group">
+              <circle
+                cx={p.x}
+                cy={p.y}
+                r={radius(p.caseCount)}
+                class="mapa__pin"
+              />
+              <text
+                x={p.x}
+                y={p.y - radius(p.caseCount) - 4}
+                class="mapa__pin-label"
+                text-anchor="middle"
+              >
+                {p.short} · {p.caseCount}
+              </text>
+            </g>
+          ))}
+        </svg>
+        <figcaption class="meta mapa__caption">
+          Dane: {pins.length} regulatorów, {allCases.length} spraw w bazie.
+          Projekcja: Natural Earth 1. Mapa generowana przy budowie portalu (statyczna, bez JS w runtime).
+        </figcaption>
+      </figure>
+
+      <div class="mapa__list">
+        <h2 class="mapa__list-title">Regulatorzy wg regionu</h2>
+        {regionOrder.filter(r => byRegion[r]).map((region) => (
+          <section class="mapa__region">
+            <h3 class="mapa__region-title">
+              {region} <span class="meta mapa__region-count">{byRegion[region].reduce((s, p) => s + p.caseCount, 0)} spraw</span>
+            </h3>
+            <ul class="mapa__reg-list">
+              {byRegion[region].map((p) => (
+                <li class="mapa__reg-item">
+                  <div class="mapa__reg-head">
+                    <span class="mapa__reg-name">{p.short}</span>
+                    <span class="meta mapa__reg-count">
+                      {p.caseCount} {p.caseCount === 1 ? 'sprawa' : p.caseCount < 5 ? 'sprawy' : 'spraw'}
+                    </span>
+                  </div>
+                  <p class="meta mapa__reg-loc">{p.city}, {p.country}</p>
+                  {p.description && <p class="mapa__reg-desc">{p.description}</p>}
+                  <details class="mapa__reg-cases">
+                    <summary class="meta">Sprawy</summary>
+                    <ul>
+                      {p.cases.map((c) => (
+                        <li>
+                          <a href={`/sprawy/${c.slug}/`}>
+                            <span class="meta">{c.id}</span> — {c.title}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+    </div>
+  </section>
+</Page>
+
+<style lang="scss">
+  .mapa {
+    padding-block: var(--space-8) var(--space-10);
+  }
+
+  .mapa__header {
+    max-width: 720px;
+    margin-bottom: var(--space-8);
+  }
+
+  .mapa__header h1 {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    line-height: 1.15;
+    margin-block: var(--space-2) var(--space-4);
+  }
+
+  .mapa__lede {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  .mapa__figure {
+    margin: 0 0 var(--space-10);
+  }
+
+  .mapa__svg {
+    width: 100%;
+    height: auto;
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    display: block;
+  }
+
+  :global(.mapa__country) {
+    fill: var(--bg-secondary);
+    stroke: var(--border);
+    stroke-width: 0.3;
+  }
+
+  :global(.mapa__pin) {
+    fill: var(--accent);
+    fill-opacity: 0.65;
+    stroke: var(--bg-primary);
+    stroke-width: 1.5;
+    transition: fill-opacity 150ms ease-out;
+  }
+
+  :global(.mapa__pin-group:hover .mapa__pin) {
+    fill-opacity: 1;
+  }
+
+  :global(.mapa__pin-label) {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    fill: var(--text-primary);
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+    pointer-events: none;
+  }
+
+  :global(.mapa__pin-group:hover .mapa__pin-label) {
+    opacity: 1;
+  }
+
+  .mapa__caption {
+    color: var(--text-tertiary);
+    font-size: 11px;
+    margin-top: var(--space-2);
+  }
+
+  .mapa__list-title {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    margin-block: var(--space-8) var(--space-6);
+  }
+
+  .mapa__region {
+    margin-bottom: var(--space-6);
+  }
+
+  .mapa__region-title {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: var(--space-3);
+    padding-bottom: var(--space-1);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .mapa__region-count {
+    color: var(--accent);
+    font-size: 12px;
+    margin-left: var(--space-2);
+  }
+
+  .mapa__reg-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--gap-3);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mapa__reg-item {
+    padding: var(--gap-5);
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    margin: 0;
+  }
+
+  .mapa__reg-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--gap-2);
+    margin-bottom: 4px;
+  }
+
+  .mapa__reg-name {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .mapa__reg-count {
+    color: var(--accent);
+    font-size: 11px;
+  }
+
+  .mapa__reg-loc {
+    color: var(--text-tertiary);
+    font-size: 11px;
+    margin: 0 0 var(--space-2);
+  }
+
+  .mapa__reg-desc {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0 0 var(--space-2);
+  }
+
+  .mapa__reg-cases {
+    font-size: 12px;
+
+    summary {
+      cursor: pointer;
+      color: var(--text-secondary);
+      padding: 4px 0;
+
+      &:hover { color: var(--accent); }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: var(--space-2) 0 0;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    a {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 13px;
+
+      &:hover { color: var(--accent); }
+    }
+  }
+</style>

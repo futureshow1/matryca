@@ -1,0 +1,395 @@
+---
+import Page from '../layouts/Page.astro';
+import { getCollection } from 'astro:content';
+import { GROUP_LABELS } from '../utils/format';
+
+const allCases = await getCollection('cases');
+
+// Sort by year_revealed asc
+const cases = [...allCases].sort(
+  (a, b) => a.data.year_revealed - b.data.year_revealed
+);
+
+// Year range
+const minYear = Math.min(...cases.map((c) => c.data.year_revealed));
+const maxYear = Math.max(...cases.map((c) => c.data.year_revealed));
+
+// Group cases by year
+const byYear: Record<number, typeof cases> = {};
+cases.forEach((c) => {
+  const y = c.data.year_revealed;
+  if (!byYear[y]) byYear[y] = [];
+  byYear[y].push(c);
+});
+const years = Array.from({ length: maxYear - minYear + 1 }, (_, i) => minYear + i);
+
+// Group colors
+const GROUP_COLORS: Record<string, string> = {
+  A: '#4f46e5',
+  B: '#0d9488',
+  C: '#475569',
+  D: '#d97706',
+  E: 'var(--accent)',
+};
+
+// Layout constants
+const width = 1100;
+const padding = { top: 80, right: 40, bottom: 60, left: 60 };
+const lanes = 5; // one per group
+const laneHeight = 70;
+const height = padding.top + lanes * laneHeight + padding.bottom;
+
+const xOf = (year: number) =>
+  padding.left + ((year - minYear) / (maxYear - minYear)) * (width - padding.left - padding.right);
+
+const GROUP_ORDER: Array<'A' | 'B' | 'C' | 'D' | 'E'> = ['A', 'B', 'C', 'D', 'E'];
+const laneYOf = (group: 'A' | 'B' | 'C' | 'D' | 'E') =>
+  padding.top + GROUP_ORDER.indexOf(group) * laneHeight + laneHeight / 2;
+
+// For x-collisions within same year, slight jitter
+const yearGroupPos: Record<string, number> = {};
+function getPosition(year: number, group: string, id: string) {
+  const key = `${year}-${group}`;
+  yearGroupPos[key] = (yearGroupPos[key] ?? 0) + 1;
+  return yearGroupPos[key] - 1; // 0, 1, 2
+}
+---
+
+<Page
+  title="Oś czasu — 2010–2026"
+  description="Chronologia 33 spraw bazy Matrycy, od Google Street View Wi-Spy (2010) po najnowsze decyzje."
+>
+  <section class="os">
+    <div class="container">
+      <header class="os__header">
+        <p class="meta" style="color: var(--text-tertiary)">Drzwi 02 — wersja v0</p>
+        <h1>Oś czasu 2010–2026</h1>
+        <p class="os__lede">
+          Kiedy te sprawy zostały ujawnione? Każda kropka to jedna sprawa. Lata widoczne
+          na osi, grupy (A–E) na piętrach. Kliknij, żeby przejść do karty.
+        </p>
+        <p class="os__note">
+          Wersja v0: statyczna oś bez scrollytellingu narracyjnego (ten — narracja łącząca
+          zdarzenia — planowany w Fazie 2).
+        </p>
+      </header>
+
+      <div class="os__legend">
+        {GROUP_ORDER.map((g) => (
+          <span class="os__legend-item">
+            <span class="os__legend-dot" style={{ background: GROUP_COLORS[g] }}></span>
+            <span class="os__legend-label">{g} — {GROUP_LABELS[g]}</span>
+          </span>
+        ))}
+      </div>
+
+      <figure class="os__figure">
+        <svg
+          viewBox={`0 0 ${width} ${height}`}
+          class="os__svg"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-label="Oś czasu spraw"
+          role="img"
+        >
+          {/* Year axis labels */}
+          {years.filter((_, i) => i % 2 === 0).map((year) => (
+            <g>
+              <line
+                x1={xOf(year)}
+                y1={padding.top - 10}
+                x2={xOf(year)}
+                y2={height - padding.bottom + 5}
+                class="os__grid-line"
+              />
+              <text
+                x={xOf(year)}
+                y={padding.top - 20}
+                class="os__year-label"
+                text-anchor="middle"
+              >
+                {year}
+              </text>
+            </g>
+          ))}
+
+          {/* Lane labels */}
+          {GROUP_ORDER.map((g) => (
+            <g>
+              <line
+                x1={padding.left}
+                y1={laneYOf(g)}
+                x2={width - padding.right}
+                y2={laneYOf(g)}
+                class="os__lane-line"
+              />
+              <text
+                x={padding.left - 10}
+                y={laneYOf(g) + 4}
+                class="os__lane-label"
+                text-anchor="end"
+              >
+                {g}
+              </text>
+            </g>
+          ))}
+
+          {/* Cases */}
+          {cases.map((c) => {
+            const pos = getPosition(c.data.year_revealed, c.data.group, c.data.id);
+            const cy = laneYOf(c.data.group) + (pos - 0.5) * 16;
+            return (
+              <a href={`/sprawy/${c.data.slug}/`}>
+                <g class="os__case">
+                  <circle
+                    cx={xOf(c.data.year_revealed)}
+                    cy={cy}
+                    r={c.data.priority === 'TOP' ? 7 : 5}
+                    fill={GROUP_COLORS[c.data.group]}
+                    class="os__case-dot"
+                  />
+                  <text
+                    x={xOf(c.data.year_revealed)}
+                    y={cy - (c.data.priority === 'TOP' ? 10 : 8)}
+                    class="os__case-label"
+                    text-anchor="middle"
+                  >
+                    {c.data.id}
+                  </text>
+                </g>
+              </a>
+            );
+          })}
+        </svg>
+        <figcaption class="meta os__caption">
+          {cases.length} spraw · {maxYear - minYear + 1} lat · kropka = sprawa, kolor = grupa, większe kropki = priorytet TOP.
+        </figcaption>
+      </figure>
+
+      <div class="os__list">
+        <h2 class="os__list-title">Rok po roku</h2>
+        {years.filter(y => byYear[y]).reverse().map((year) => (
+          <section class="os__year-block">
+            <h3 class="os__year-heading">
+              {year} <span class="meta os__year-count">{byYear[year].length} {byYear[year].length === 1 ? 'sprawa' : byYear[year].length < 5 ? 'sprawy' : 'spraw'}</span>
+            </h3>
+            <ul class="os__year-list">
+              {byYear[year].map((c) => (
+                <li class="os__year-item">
+                  <a href={`/sprawy/${c.data.slug}/`} class="os__year-link">
+                    <span
+                      class="os__year-dot"
+                      style={{ background: GROUP_COLORS[c.data.group] }}
+                      aria-hidden="true"
+                    ></span>
+                    <span class="meta os__year-id">{c.data.id}</span>
+                    <span class="os__year-title">{c.data.title}</span>
+                    {c.data.subtitle && <span class="os__year-sub">— {c.data.subtitle}</span>}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+    </div>
+  </section>
+</Page>
+
+<style lang="scss">
+  .os {
+    padding-block: var(--space-8) var(--space-10);
+  }
+
+  .os__header {
+    max-width: 720px;
+    margin-bottom: var(--space-6);
+  }
+
+  .os__header h1 {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    line-height: 1.15;
+    margin-block: var(--space-2) var(--space-4);
+  }
+
+  .os__lede {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-2);
+  }
+
+  .os__note {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin: 0;
+  }
+
+  .os__legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+
+  .os__legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+
+  .os__legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .os__figure {
+    margin: 0 0 var(--space-10);
+    overflow-x: auto;
+  }
+
+  .os__svg {
+    width: 100%;
+    min-width: 700px;
+    height: auto;
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    display: block;
+  }
+
+  :global(.os__grid-line) {
+    stroke: var(--border);
+    stroke-width: 0.3;
+  }
+
+  :global(.os__lane-line) {
+    stroke: var(--border);
+    stroke-width: 0.3;
+    stroke-dasharray: 2 2;
+  }
+
+  :global(.os__year-label) {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    fill: var(--text-tertiary);
+  }
+
+  :global(.os__lane-label) {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    fill: var(--text-tertiary);
+  }
+
+  :global(.os__case-dot) {
+    cursor: pointer;
+    transition: r 150ms ease-out;
+  }
+
+  :global(.os__case-label) {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    fill: var(--text-tertiary);
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+    pointer-events: none;
+  }
+
+  :global(.os__case:hover .os__case-label) {
+    opacity: 1;
+  }
+
+  :global(.os__case:hover .os__case-dot) {
+    stroke: var(--text-primary);
+    stroke-width: 1.5;
+  }
+
+  .os__caption {
+    color: var(--text-tertiary);
+    font-size: 11px;
+    margin-top: var(--space-2);
+  }
+
+  .os__list-title {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    margin-block: var(--space-8) var(--space-6);
+  }
+
+  .os__year-block {
+    margin-bottom: var(--space-5);
+  }
+
+  .os__year-heading {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: var(--space-2);
+    padding-bottom: 4px;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .os__year-count {
+    color: var(--accent);
+    font-size: 12px;
+    margin-left: var(--space-2);
+  }
+
+  .os__year-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .os__year-item {
+    margin-bottom: 4px;
+  }
+
+  .os__year-link {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    padding: 6px 8px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: inherit;
+    transition: background-color var(--transition-fast);
+
+    &:hover {
+      background: var(--bg-secondary);
+      .os__year-title { color: var(--accent); }
+    }
+  }
+
+  .os__year-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .os__year-id {
+    color: var(--text-tertiary);
+    font-size: 11px;
+    min-width: 32px;
+  }
+
+  .os__year-title {
+    font-family: var(--font-serif);
+    font-size: 15px;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+  }
+
+  .os__year-sub {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+</style>

@@ -1,0 +1,184 @@
+---
+import Page from '../../layouts/Page.astro';
+import { PEOPLE, ROLE_LABELS } from '../../data/people';
+
+const grouped = {
+  sygnalista: PEOPLE.filter((p) => p.role === 'sygnalista'),
+  dziennikarz: PEOPLE.filter((p) => p.role === 'dziennikarz'),
+  badacz: PEOPLE.filter((p) => p.role === 'badacz'),
+  aktywista: PEOPLE.filter((p) => p.role === 'aktywista'),
+};
+---
+
+<Page
+  title="Kto odkrył?"
+  description="Sygnaliści, dziennikarze, badacze i aktywiści, którzy ujawnili sprawy dokumentowane w bazie Matrycy."
+>
+  <section class="people">
+    <div class="container">
+      <header class="people__header">
+        <p class="meta" style="color: var(--text-tertiary)">Drzwi 05</p>
+        <h1 class="people__title">Kto odkrył?</h1>
+        <p class="people__lede">
+          Każda z 33 spraw nie wzięła się z powietrza — ktoś ją ujawnił. Sygnalista z firmy,
+          dziennikarka z zewnątrz, badacz akademicki, regulator, który nie odpuścił.
+          Tu są dramatis personae bazy Matrycy — {PEOPLE.length} postaci, bez których
+          nie byłoby tej dokumentacji.
+        </p>
+      </header>
+
+      {Object.entries(grouped).map(([role, list]) => list.length > 0 && (
+        <section class="people__group">
+          <h2 class="people__group-title">
+            {ROLE_LABELS[role as keyof typeof ROLE_LABELS]} <span class="people__count meta">{list.length}</span>
+          </h2>
+          <ul class="people__grid">
+            {list.map((p) => (
+              <li>
+                <a href={`/sygnalisci/${p.slug}/`} class="person-card">
+                  <div class="person-card__portrait" aria-hidden="true">{p.portrait_initials}</div>
+                  <div class="person-card__body">
+                    <p class="person-card__name">{p.name}</p>
+                    {p.affiliation && <p class="person-card__affil meta">{p.affiliation}</p>}
+                    <p class="person-card__bio">{p.bio_short}</p>
+                    <p class="person-card__cases meta">
+                      {p.caseIds.length} {p.caseIds.length === 1 ? 'sprawa' : p.caseIds.length < 5 ? 'sprawy' : 'spraw'}
+                    </p>
+                  </div>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </section>
+</Page>
+
+<style lang="scss">
+  .people {
+    padding-block: var(--space-8) var(--space-10);
+  }
+
+  .people__header {
+    max-width: 720px;
+    margin-bottom: var(--space-10);
+  }
+
+  .people__title {
+    font-family: var(--font-serif);
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-block: var(--space-2) var(--space-4);
+  }
+
+  .people__lede {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  .people__group {
+    margin-bottom: var(--space-10);
+  }
+
+  .people__group-title {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-2);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .people__count {
+    color: var(--text-tertiary);
+    font-size: 13px;
+    margin-left: var(--space-2);
+  }
+
+  .people__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--gap-4);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .people__grid > li {
+    margin: 0;
+  }
+
+  .person-card {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: var(--space-4);
+    padding: var(--gap-5);
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    transition: border-color var(--transition-fast);
+
+    &:hover {
+      border-color: var(--accent);
+      .person-card__name { color: var(--accent); }
+    }
+  }
+
+  .person-card__portrait {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    border: 0.5px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+  }
+
+  .person-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .person-card__name {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+    color: var(--text-primary);
+    transition: color var(--transition-fast);
+  }
+
+  .person-card__affil {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin: 0;
+  }
+
+  .person-card__bio {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 4px 0 0;
+  }
+
+  .person-card__cases {
+    font-size: 11px;
+    color: var(--accent);
+    margin-top: auto;
+    padding-top: 6px;
+  }
+</style>
