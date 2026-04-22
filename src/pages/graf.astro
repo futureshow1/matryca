@@ -1,0 +1,184 @@
+---
+import Page from '../layouts/Page.astro';
+import { getCollection } from 'astro:content';
+import RelationGraph from '../components/graph/RelationGraph';
+import { PEOPLE } from '../data/people';
+import { COMPANIES, companyToSlug } from '../utils/companies';
+import { TAG_LABELS } from '../utils/tags';
+
+const allCases = await getCollection('cases');
+
+// Build nodes & edges for the graph
+interface GraphNode {
+  id: string;
+  label: string;
+  type: 'case' | 'company' | 'person' | 'tag';
+  group?: string;
+  href?: string;
+}
+interface GraphEdge {
+  source: string;
+  target: string;
+  kind: 'case-case' | 'company-case' | 'person-case' | 'tag-case';
+}
+
+const nodes: GraphNode[] = [];
+const edges: GraphEdge[] = [];
+const addedIds = new Set<string>();
+
+function addNode(n: GraphNode) {
+  if (!addedIds.has(n.id)) {
+    nodes.push(n);
+    addedIds.add(n.id);
+  }
+}
+
+// Cases (33)
+allCases.forEach((c) => {
+  addNode({
+    id: `case:${c.data.id}`,
+    label: c.data.title,
+    type: 'case',
+    group: c.data.group,
+    href: `/sprawy/${c.data.slug}/`,
+  });
+});
+
+// Companies — tylko te, które mają dedykowaną stronę
+Object.values(COMPANIES).forEach((co) => {
+  addNode({
+    id: `company:${co.slug}`,
+    label: co.label,
+    type: 'company',
+    href: `/firmy/${co.slug}/`,
+  });
+});
+
+// People
+PEOPLE.forEach((p) => {
+  addNode({
+    id: `person:${p.slug}`,
+    label: p.name,
+    type: 'person',
+    href: `/sygnalisci/${p.slug}/`,
+  });
+});
+
+// Tags — only those with at least 3 cases, żeby graf nie był przeciążony
+const tagCounts: Record<string, number> = {};
+allCases.forEach((c) => (c.data.tags ?? []).forEach((t) => {
+  tagCounts[t] = (tagCounts[t] ?? 0) + 1;
+}));
+const relevantTags = Object.entries(tagCounts).filter(([, n]) => n >= 3).map(([t]) => t);
+relevantTags.forEach((t) => {
+  addNode({
+    id: `tag:${t}`,
+    label: TAG_LABELS[t] ?? t,
+    type: 'tag',
+    href: `/tagi/${t}/`,
+  });
+});
+
+// Edges
+allCases.forEach((c) => {
+  const caseId = `case:${c.data.id}`;
+
+  // case ↔ case (related_cases)
+  (c.data.related_cases ?? []).forEach((rid) => {
+    if (addedIds.has(`case:${rid}`)) {
+      // Deduplikujemy nieskierowane pary
+      const [a, b] = [caseId, `case:${rid}`].sort();
+      edges.push({ source: a, target: b, kind: 'case-case' });
+    }
+  });
+
+  // company → case
+  (c.data.companies ?? []).forEach((name) => {
+    const s = companyToSlug(name);
+    if (s && addedIds.has(`company:${s}`)) {
+      edges.push({ source: `company:${s}`, target: caseId, kind: 'company-case' });
+    }
+  });
+
+  // tag → case (tylko dla relewantnych tagów)
+  (c.data.tags ?? []).forEach((t) => {
+    if (relevantTags.includes(t)) {
+      edges.push({ source: `tag:${t}`, target: caseId, kind: 'tag-case' });
+    }
+  });
+});
+
+// person → case (przez PEOPLE.caseIds)
+PEOPLE.forEach((p) => {
+  p.caseIds.forEach((cid) => {
+    if (addedIds.has(`case:${cid}`)) {
+      edges.push({ source: `person:${p.slug}`, target: `case:${cid}`, kind: 'person-case' });
+    }
+  });
+});
+
+// Deduplikuj case-case (po konkatenacji source+target)
+const seen = new Set<string>();
+const deduped = edges.filter((e) => {
+  const key = `${e.source}→${e.target}→${e.kind}`;
+  if (seen.has(key)) return false;
+  seen.add(key);
+  return true;
+});
+---
+
+<Page
+  title="Graf powiązań — dlaczego"
+  description="Sieć relacji między 33 sprawami, 12 firmami, 12 postaciami i kluczowymi tagami. Interaktywny graf powiązań."
+>
+  <section class="graf">
+    <div class="container">
+      <header class="graf__header">
+        <p class="meta" style="color: var(--text-tertiary)">Drzwi 04 — wersja v1</p>
+        <h1>Graf powiązań</h1>
+        <p class="graf__lede">
+          Sprawy nie wiszą w próżni. Dzielą firmy, sygnalistów, mechanizmy, precedensy.
+          Ten graf pokazuje sieć relacji między wszystkimi elementami bazy:
+          33 sprawami, 12 firmami, 12 sygnalistami/dziennikarzami i kluczowymi tagami.
+        </p>
+        <p class="graf__note">
+          Kliknij węzeł, żeby zobaczyć jego sąsiedztwo. Filtruj typy, szukaj po nazwie.
+          Przejdź do karty podmiotu klikając linkiem w panelu z prawej.
+        </p>
+      </header>
+
+      <RelationGraph nodes={nodes} edges={deduped} client:load />
+    </div>
+  </section>
+</Page>
+
+<style lang="scss">
+  .graf {
+    padding-block: var(--space-8) var(--space-10);
+  }
+
+  .graf__header {
+    max-width: 720px;
+    margin-bottom: var(--space-6);
+  }
+
+  .graf__header h1 {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    line-height: 1.15;
+    margin-block: var(--space-2) var(--space-4);
+  }
+
+  .graf__lede {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-3);
+  }
+
+  .graf__note {
+    font-size: 13px;
+    color: var(--text-tertiary);
+    margin: 0;
+  }
+</style>
