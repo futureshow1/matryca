@@ -1,0 +1,4322 @@
+[
+  {
+    "caseId": "A01",
+    "caseTitle": "Local Mess",
+    "citation": "Dan Goodin, \"Meta and Yandex are de-anonymizing Android users' web browsing identifiers\", *Ars Technica*, 3 czerwca 2025.",
+    "url": "https://arstechnica.com/security/2025/06/meta-and-yandex-are-de-anonymizing-android-users-web-browsing-identifiers/",
+    "publisher": "Ars Technica",
+    "domain": "arstechnica.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A01",
+    "caseTitle": "Local Mess",
+    "citation": "localmess.github.io — \"Covert Web-to-App Tracking via Localhost on Android\", zespół badawczy IMDEA/Radboud/KU Leuven, 3–5 czerwca 2025.",
+    "url": "https://localmess.github.io/",
+    "publisher": null,
+    "domain": "localmess.github.io",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A01",
+    "caseTitle": "Local Mess",
+    "citation": "Thomas Claburn, \"Meta Pixel halts Android localhost tracking after disclosure\", *The Register*, 3 czerwca 2025.",
+    "url": "https://www.theregister.com/2025/06/03/meta_pauses_android_tracking_tech/",
+    "publisher": "The Register",
+    "domain": "theregister.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A01",
+    "caseTitle": "Local Mess",
+    "citation": "Richi Jennings, \"Meta's Secret Spyware: 'Local Mess' Hack Tracks You Across the Web\", *Security Boulevard*, 4 czerwca 2025.",
+    "url": "https://securityboulevard.com/2025/06/meta-local-mess-richixbw/",
+    "publisher": "Security Boulevard",
+    "domain": "securityboulevard.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A01",
+    "caseTitle": "Local Mess",
+    "citation": "\"Privacy abuse involving Meta and Yandex discovered\", *TechXplore* (Radboud University press release), 3 czerwca 2025.",
+    "url": "https://techxplore.com/news/2025-06-privacy-abuse-involving-meta-yandex.html",
+    "publisher": "TechXplore",
+    "domain": "techxplore.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A01",
+    "caseTitle": "Local Mess",
+    "citation": "\"Class Action Lawsuit Claims Meta, Yandex Track Android Users' Data Without Consent\", *ClassAction.org*, 19 czerwca 2025.",
+    "url": "https://www.classaction.org/news/class-action-lawsuit-claims-meta-yandex-track-android-users-data-without-consent",
+    "publisher": "ClassAction.org",
+    "domain": "classaction.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A01",
+    "caseTitle": "Local Mess",
+    "citation": "\"Meta and Yandex Accused of Using Android Loophole for Surreptitious User Tracking\", *CPO Magazine*, 17 czerwca 2025.",
+    "url": "https://www.cpomagazine.com/data-privacy/meta-and-yandex-accused-of-using-android-loophole-for-surreptitious-user-tracking/",
+    "publisher": "CPO Magazine",
+    "domain": "cpomagazine.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A01",
+    "caseTitle": "Local Mess",
+    "citation": "\"Meta's Stealth Tracking: Another EU Wake-Up Call\", *Wire Blog*, 18 czerwca 2025.",
+    "url": "https://wire.com/en/blog/metas-stealth-tracking-another-eu-wake-up-call",
+    "publisher": "Wire Blog",
+    "domain": "wire.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A01",
+    "caseTitle": "Local Mess",
+    "citation": "John Gruber, \"Meta and Yandex's 'Local Mess' Exploit Seemingly Only Works on Android\", *Daring Fireball*, 4 czerwca 2025.",
+    "url": "https://daringfireball.net/linked/2025/06/04/meta-and-yandexs-local-mess-exploit-seemingly-only-works-on-android",
+    "publisher": "Daring Fireball",
+    "domain": "daringfireball.net",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A01",
+    "caseTitle": "Local Mess",
+    "citation": "\"Meta halts covert Android tracking following research disclosure\", *PPC Land*, 7 czerwca 2025.",
+    "url": "https://ppc.land/meta-halts-covert-android-tracking-following-research-disclosure/",
+    "publisher": "PPC Land",
+    "domain": "ppc.land",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A01",
+    "caseTitle": "Local Mess",
+    "citation": "Captain Compliance, \"Meta and Yandex's Android Tracking Scandal: Unveiling the Privacy Breach\", 7 czerwca 2025.",
+    "url": "https://captaincompliance.com/education/meta-and-yandexs-android-tracking-scandal-unveiling-the-privacy-breach/",
+    "publisher": null,
+    "domain": "captaincompliance.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A01",
+    "caseTitle": "Local Mess",
+    "citation": "Jorge García Herrero, komentarz dla *We speak IoT*, \"Localhost Tracking: Meta and Yandex allegedly spied on Android users covertly\", 13 czerwca 2025.",
+    "url": "https://www.wespeakiot.com/localhost-tracking-meta-and-yandex/",
+    "publisher": null,
+    "domain": "wespeakiot.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A01",
+    "caseTitle": "Local Mess",
+    "citation": "Benedict Collins, \"Meta halts phone and browser tracking tools after researchers expose user snooping\", *TechRadar*, 4 czerwca 2025.",
+    "url": "https://www.techradar.com/pro/security/meta-halts-phone-and-browser-tracking-tools-after-researchers-expose-user-tracking",
+    "publisher": "TechRadar",
+    "domain": "techradar.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A01",
+    "caseTitle": "Local Mess",
+    "citation": "Business & Human Rights Resource Centre, \"Meta & Yandex allegedly abuse Android protocols for user de-anonymization raising privacy concerns\", czerwiec 2025.",
+    "url": "https://www.business-humanrights.org/en/latest-news/meta-yandex-allegedly-abuse-android-protocols-for-user-de-anonymization-raising-privacy-concerns/",
+    "publisher": null,
+    "domain": "business-humanrights.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A01",
+    "caseTitle": "Local Mess",
+    "citation": "Akshay Aryan, \"Facebook's Hidden Android Tracking: A New Loophole Exposed\", *Medium*, 25 lipca 2025.",
+    "url": "https://medium.com/@infinityTime/facebooks-hidden-android-tracking-a-new-loophole-exposed-a4d548bd5656",
+    "publisher": "Medium",
+    "domain": "medium.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A02",
+    "caseTitle": "Cambridge Analytica",
+    "citation": "Carole Cadwalladr, Emma Graham-Harrison, \"Revealed: 50 million Facebook profiles harvested for Cambridge Analytica in major data breach\", *The Observer/The Guardian*, 17 marca 2018.",
+    "url": "https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election",
+    "publisher": "The Observer/The Guardian",
+    "domain": "theguardian.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A02",
+    "caseTitle": "Cambridge Analytica",
+    "citation": "Matthew Rosenberg, Nicholas Confessore, Carole Cadwalladr, \"How Trump Consultants Exploited the Facebook Data of Millions\", *The New York Times*, 17 marca 2018.",
+    "url": "https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html",
+    "publisher": "The New York Times",
+    "domain": "nytimes.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A02",
+    "caseTitle": "Cambridge Analytica",
+    "citation": "Harry Davies, \"Ted Cruz using firm that harvested data on millions of unwitting Facebook users\", *The Guardian*, 11 grudnia 2015.",
+    "url": "https://www.theguardian.com/us-news/2015/dec/11/senator-ted-cruz-president-campaign-facebook-user-data",
+    "publisher": "The Guardian",
+    "domain": "theguardian.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A02",
+    "caseTitle": "Cambridge Analytica",
+    "citation": "Channel 4 News, \"Exposed: Undercover secrets of Trump's data firm\", 19–20 marca 2018.",
+    "url": "https://www.channel4.com/news/exposed-undercover-secrets-of-donald-trump-data-firm-cambridge-analytica",
+    "publisher": null,
+    "domain": "channel4.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A02",
+    "caseTitle": "Cambridge Analytica",
+    "citation": "Federal Trade Commission, \"FTC Imposes $5 Billion Penalty and Sweeping New Privacy Restrictions on Facebook\", 24 lipca 2019.",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2019/07/ftc-imposes-5-billion-penalty-sweeping-new-privacy-restrictions-facebook",
+    "publisher": null,
+    "domain": "ftc.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A02",
+    "caseTitle": "Cambridge Analytica",
+    "citation": "FTC, \"Cambridge Analytica Kogan-Nix Complaint\", dokument administracyjny, grudzień 2019.",
+    "url": "https://www.ftc.gov/system/files/documents/cases/182_3106_kogan-nix_complaint.pdf",
+    "publisher": null,
+    "domain": "ftc.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A02",
+    "caseTitle": "Cambridge Analytica",
+    "citation": "ICO UK, \"Investigation into the use of data analytics in political campaigns\", raport dla Parlamentu, październik 2020.",
+    "url": "https://ico.org.uk/media/action-weve-taken/2618383/20201002_ico-o-ed-l-rtl-0181_to-julian-knight-mp.pdf",
+    "publisher": null,
+    "domain": "ico.org.uk",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A02",
+    "caseTitle": "Cambridge Analytica",
+    "citation": "Christopher Wylie, *Mindf*ck: Cambridge Analytica and the Plot to Break America*, Random House, 2019.",
+    "url": null,
+    "publisher": "Mindf",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A02",
+    "caseTitle": "Cambridge Analytica",
+    "citation": "Wikipedia (English), \"Facebook–Cambridge Analytica data scandal\", stan na marzec 2026.",
+    "url": "https://en.wikipedia.org/wiki/Facebook%E2%80%93Cambridge_Analytica_data_scandal",
+    "publisher": null,
+    "domain": "en.wikipedia.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A02",
+    "caseTitle": "Cambridge Analytica",
+    "citation": "Wikipedia (English), \"Cambridge Analytica\".",
+    "url": "https://en.wikipedia.org/wiki/Cambridge_Analytica",
+    "publisher": null,
+    "domain": "en.wikipedia.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A02",
+    "caseTitle": "Cambridge Analytica",
+    "citation": "Wikipedia (English), \"Aleksandr Kogan (scientist)\".",
+    "url": "https://en.wikipedia.org/wiki/Aleksandr_Kogan_(scientist",
+    "publisher": null,
+    "domain": "en.wikipedia.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A02",
+    "caseTitle": "Cambridge Analytica",
+    "citation": "Ziad Ramley, \"Cambridge Analytica: A timeline of events\", *Medium*, 21 marca 2018.",
+    "url": "https://medium.com/@ziadramley/cambridge-analytica-a-timeline-of-events-326ab3ef01a9",
+    "publisher": "Medium",
+    "domain": "medium.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A02",
+    "caseTitle": "Cambridge Analytica",
+    "citation": "Jackson School of International Studies, University of Washington, \"Facebook and Data Privacy in the Age of Cambridge Analytica\", analiza akademicka.",
+    "url": "https://jsis.washington.edu/news/facebook-data-privacy-age-cambridge-analytica/",
+    "publisher": null,
+    "domain": "jsis.washington.edu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A02",
+    "caseTitle": "Cambridge Analytica",
+    "citation": "SourceWatch, \"Cambridge Analytica\", hasło encyklopedyczne.",
+    "url": "https://www.sourcewatch.org/index.php/Cambridge_Analytica",
+    "publisher": null,
+    "domain": "sourcewatch.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A02",
+    "caseTitle": "Cambridge Analytica",
+    "citation": "TEXTIFIRE Medium, \"A Special Relationship & the Birth of Cambridge Analytica\", 8 maja 2019.",
+    "url": "https://medium.com/textifire/a-special-relationship-the-birth-of-cambridge-analytica-97633129cb06",
+    "publisher": null,
+    "domain": "medium.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A03",
+    "caseTitle": "Onavo i Facebook Research VPN (Project Atlas)",
+    "citation": "Josh Constine, \"Facebook pays teens to install VPN that spies on them\", *TechCrunch*, 29 stycznia 2019.",
+    "url": "https://techcrunch.com/2019/01/29/facebook-project-atlas/",
+    "publisher": "TechCrunch",
+    "domain": "techcrunch.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A03",
+    "caseTitle": "Onavo i Facebook Research VPN (Project Atlas)",
+    "citation": "Josh Constine, \"Apple bans Facebook's Research app that paid users for data\", *TechCrunch*, 30 stycznia 2019.",
+    "url": "https://techcrunch.com/2019/01/30/apple-bans-facebook-vpn/",
+    "publisher": "TechCrunch",
+    "domain": "techcrunch.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A03",
+    "caseTitle": "Onavo i Facebook Research VPN (Project Atlas)",
+    "citation": "Josh Constine, \"Mess with the Cook: Apple reactivates Facebook's employee apps after punishment for Research spying\", *TechCrunch*, 31 stycznia 2019.",
+    "url": "https://techcrunch.com/2019/01/31/mess-with-the-cook/",
+    "publisher": "TechCrunch",
+    "domain": "techcrunch.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A03",
+    "caseTitle": "Onavo i Facebook Research VPN (Project Atlas)",
+    "citation": "Josh Constine, \"Facebook will shut down its spyware VPN app Onavo\", *TechCrunch*, 21 lutego 2019.",
+    "url": "https://techcrunch.com/2019/02/21/facebook-removes-onavo/",
+    "publisher": "TechCrunch",
+    "domain": "techcrunch.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A03",
+    "caseTitle": "Onavo i Facebook Research VPN (Project Atlas)",
+    "citation": "Ryan Mac, Charlie Warzel, \"Mark Zuckerberg's Onavo Gives Facebook An Insight Into What People Do On Their Phones\", *BuzzFeed News*, 2018.",
+    "url": "https://www.buzzfeednews.com/article/ryanmac/facebook-onavo-insights",
+    "publisher": "BuzzFeed News",
+    "domain": "buzzfeednews.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A03",
+    "caseTitle": "Onavo i Facebook Research VPN (Project Atlas)",
+    "citation": "John Gruber, \"TechCrunch: Facebook Pays Teenagers to Install VPN That Spies on Them\", *Daring Fireball*, 29 stycznia 2019.",
+    "url": "https://daringfireball.net/linked/2019/01/29/facebook-teens-vpn",
+    "publisher": "Daring Fireball",
+    "domain": "daringfireball.net",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A03",
+    "caseTitle": "Onavo i Facebook Research VPN (Project Atlas)",
+    "citation": "Engadget, \"Facebook secretly pays users for complete access to their data\", 29 stycznia 2019.",
+    "url": "https://www.engadget.com/2019-01-29-facebook-project-atlas.html",
+    "publisher": null,
+    "domain": "engadget.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A03",
+    "caseTitle": "Onavo i Facebook Research VPN (Project Atlas)",
+    "citation": "Cory Doctorow, \"Project Atlas: Facebook has been secretly paying iPhone users\", *Boing Boing*, 30 stycznia 2019.",
+    "url": "https://boingboing.net/2019/01/29/atlas-snuck.html",
+    "publisher": "Boing Boing",
+    "domain": "boingboing.net",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A03",
+    "caseTitle": "Onavo i Facebook Research VPN (Project Atlas)",
+    "citation": "ACCC, \"Meta's Onavo Protect misled consumers\", komunikat prasowy, 2023.",
+    "url": "https://www.accc.gov.au/media-release/court-orders-meta-companies-to-pay-20-million-in-penalties-for-conduct-liable-to-mislead-consumers-about-use-of-their-data",
+    "publisher": null,
+    "domain": "accc.gov.au",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A03",
+    "caseTitle": "Onavo i Facebook Research VPN (Project Atlas)",
+    "citation": "Will Strafach, komentarze dla TechCrunch i własny blog, styczeń 2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A04",
+    "caseTitle": "Wyciek 533 milionów numerów Facebooka (z 2,67 mln Polaków)",
+    "citation": "Alon Gal, tweet na @UnderTheBreach, 3 kwietnia 2021.  (archiwum: Wayback Machine).",
+    "url": "https://twitter.com/UnderTheBreach/status/1378314145784557569",
+    "publisher": null,
+    "domain": "twitter.com",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A04",
+    "caseTitle": "Wyciek 533 milionów numerów Facebooka (z 2,67 mln Polaków)",
+    "citation": "Aaron Holmes, \"533 million Facebook users' phone numbers and personal data have been leaked online\", *Business Insider*, 3 kwietnia 2021.",
+    "url": "https://www.businessinsider.com/stolen-data-of-533-million-facebook-users-leaked-online-2021-4",
+    "publisher": "Business Insider",
+    "domain": "businessinsider.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A04",
+    "caseTitle": "Wyciek 533 milionów numerów Facebooka (z 2,67 mln Polaków)",
+    "citation": "niebezpiecznik.pl, \"[AKTUALIZACJA #3] Dane 533 milionów użytkowników Facebooka wyciekły\", 3–6 kwietnia 2021.",
+    "url": "https://niebezpiecznik.pl/post/facebook-wyciek-dane-533-milionow-uzytkownikow/",
+    "publisher": null,
+    "domain": "niebezpiecznik.pl",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A04",
+    "caseTitle": "Wyciek 533 milionów numerów Facebooka (z 2,67 mln Polaków)",
+    "citation": "press.pl, \"Wyciekły dane 2,6 mln polskich użytkowników Facebooka\", 7 kwietnia 2021.",
+    "url": "https://www.press.pl/tresc/65483,wyciekly-dane-2_6-mln-polskich-uzytkownikow-facebooka",
+    "publisher": null,
+    "domain": "press.pl",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A04",
+    "caseTitle": "Wyciek 533 milionów numerów Facebooka (z 2,67 mln Polaków)",
+    "citation": "money.pl, \"Wyciek danych z Facebooka. UODO ostrzega\", 7 kwietnia 2021.",
+    "url": "https://www.money.pl/gospodarka/wyciek-danych-z-facebooka-uodo-ostrzega-6626549045603008a.html",
+    "publisher": null,
+    "domain": "money.pl",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A04",
+    "caseTitle": "Wyciek 533 milionów numerów Facebooka (z 2,67 mln Polaków)",
+    "citation": "focus.pl, \"Wyciek danych 500 mln użytkowników Facebooka. W Polsce ucierpieli ci z zawodem 'Szlachta nie pracuje'\", 2021.",
+    "url": "https://www.focus.pl/artykul/sprawdz-czy-twoje-dane-z-facebooka-zostaly-skradzione",
+    "publisher": null,
+    "domain": "focus.pl",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A04",
+    "caseTitle": "Wyciek 533 milionów numerów Facebooka (z 2,67 mln Polaków)",
+    "citation": "spidersweb.pl, \"Wielki wyciek danych z Facebooka. Sprawdź, czy nie wyciekł twój numer telefonu\", 4 kwietnia 2021.",
+    "url": "https://spidersweb.pl/2021/04/facebook-wyciek-numer-telefonu-jak-sprawdzic.html",
+    "publisher": null,
+    "domain": "spidersweb.pl",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A04",
+    "caseTitle": "Wyciek 533 milionów numerów Facebooka (z 2,67 mln Polaków)",
+    "citation": "Irlandzki Data Protection Commission, \"Data Protection Commission announces decision in Facebook 'data-scraping' inquiry\", komunikat prasowy, 28 listopada 2022.",
+    "url": "https://dataprotection.ie/en/news-media/press-releases/data-protection-commission-announces-decision-facebook-data-scraping-inquiry",
+    "publisher": null,
+    "domain": "dataprotection.ie",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A04",
+    "caseTitle": "Wyciek 533 milionów numerów Facebooka (z 2,67 mln Polaków)",
+    "citation": "The Hacker News, \"Irish Regulator Fines Facebook $277 Million for Leak of Half a Billion Users' Data\", 29 listopada 2022.",
+    "url": "https://thehackernews.com/2022/11/irish-regulator-fines-facebook-277.html",
+    "publisher": null,
+    "domain": "thehackernews.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A04",
+    "caseTitle": "Wyciek 533 milionów numerów Facebooka (z 2,67 mln Polaków)",
+    "citation": "Security Affairs, \"Irish data protection commission fines Meta over 2021 data-scraping leak\", 29 listopada 2022.",
+    "url": "https://securityaffairs.com/139063/laws-and-regulations/irish-dpc-fines-meta-data-scraping.html",
+    "publisher": null,
+    "domain": "securityaffairs.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A04",
+    "caseTitle": "Wyciek 533 milionów numerów Facebooka (z 2,67 mln Polaków)",
+    "citation": "TSUE, wyrok C-340/21 z 14 grudnia 2023 (Natsionalna agentsia za prihodite).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A04",
+    "caseTitle": "Wyciek 533 milionów numerów Facebooka (z 2,67 mln Polaków)",
+    "citation": "Wikipedia (English), \"Alon Gal\", stan na 2026.",
+    "url": "https://en.wikipedia.org/wiki/Alon_Gal",
+    "publisher": null,
+    "domain": "en.wikipedia.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A04",
+    "caseTitle": "Wyciek 533 milionów numerów Facebooka (z 2,67 mln Polaków)",
+    "citation": "Socialpress.pl, \"Facebook user data leak – how to check if it affected us?\", 2021.",
+    "url": "https://socialpress.pl/en/2021/04/wyciek-danych-uzytkownikow-facebooka-jak-sprawdzic-czy-nas-dotyczyl/",
+    "publisher": null,
+    "domain": "socialpress.pl",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A04",
+    "caseTitle": "Wyciek 533 milionów numerów Facebooka (z 2,67 mln Polaków)",
+    "citation": "Have I Been Pwned, dedykowana strona Facebook breach 533M.",
+    "url": "https://haveibeenpwned.com/",
+    "publisher": null,
+    "domain": "haveibeenpwned.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A04",
+    "caseTitle": "Wyciek 533 milionów numerów Facebooka (z 2,67 mln Polaków)",
+    "citation": "UODO, ostrzeżenie dla obywateli (kwiecień 2021, archiwum).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A05",
+    "caseTitle": "Facebook Files",
+    "citation": "Jeff Horwitz, \"Facebook Knows Instagram Is Toxic for Teen Girls, Company Documents Show\", *Wall Street Journal*, 14 września 2021.",
+    "url": "https://www.wsj.com/articles/facebook-knows-instagram-is-toxic-for-teen-girls-company-documents-show-11631620739",
+    "publisher": "Wall Street Journal",
+    "domain": "wsj.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A05",
+    "caseTitle": "Facebook Files",
+    "citation": "Jeff Horwitz et al., \"The Facebook Files\" — seria artykułów, *WSJ*, wrzesień–październik 2021.",
+    "url": "https://www.wsj.com/articles/the-facebook-files-11631713039",
+    "publisher": "WSJ",
+    "domain": "wsj.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A05",
+    "caseTitle": "Facebook Files",
+    "citation": "Scott Pelley, wywiad z Frances Haugen, *60 Minutes* / CBS News, 3 października 2021.",
+    "url": "https://www.cbsnews.com/news/facebook-whistleblower-frances-haugen-misinformation-public-60-minutes-2021-10-03/",
+    "publisher": "60 Minutes",
+    "domain": "cbsnews.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A05",
+    "caseTitle": "Facebook Files",
+    "citation": "Frances Haugen, zeznania przed Senate Commerce Subcommittee on Consumer Protection, 5 października 2021. Transkrypt: https://www.commerce.senate.gov/2021/10/protecting-kids-online-testimony-from-a-facebook-whistleblower.",
+    "url": "https://www.commerce.senate.gov/2021/10/protecting-kids-online-testimony-from-a-facebook-whistleblower",
+    "publisher": null,
+    "domain": "commerce.senate.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A05",
+    "caseTitle": "Facebook Files",
+    "citation": "Frances Haugen, zeznania przed Parlamentem Europejskim, 8 listopada 2021.",
+    "url": "https://www.europarl.europa.eu/news/en/press-room/20211103IPR16206",
+    "publisher": null,
+    "domain": "europarl.europa.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A05",
+    "caseTitle": "Facebook Files",
+    "citation": "\"Facebook Papers\" — konsorcjum 17 redakcji, publikacja 25 października 2021. Materiały: *New York Times*, *Washington Post*, *The Atlantic*, *Associated Press*, *Bloomberg*, *CNN*, *NBC*, *Politico*, *Le Monde*, *Süddeutsche Zeitung*, *Gazeta Wyborcza*, *Rzeczpospolita*, inne.",
+    "url": null,
+    "publisher": "Washington Post",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A05",
+    "caseTitle": "Facebook Files",
+    "citation": "Frances Haugen, \"The Power of One: How I Found the Strength to Tell the Truth and Why I Blew the Whistle on Facebook\", Little, Brown, 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A05",
+    "caseTitle": "Facebook Files",
+    "citation": "Jeff Horwitz, \"Broken Code: Inside Facebook and the Fight to Expose Its Harmful Secrets\", Doubleday, 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A05",
+    "caseTitle": "Facebook Files",
+    "citation": "Regulation (EU) 2022/2065 (Digital Services Act), Dziennik Urzędowy UE L 277/1, 27 października 2022.",
+    "url": "https://eur-lex.europa.eu/eli/reg/2022/2065/oj",
+    "publisher": null,
+    "domain": "eur-lex.europa.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A05",
+    "caseTitle": "Facebook Files",
+    "citation": "State of New Mexico v. Meta Platforms Inc. — wyrok marzec 2026; materiały Office of Attorney General New Mexico.",
+    "url": "https://www.nmag.gov/",
+    "publisher": null,
+    "domain": "nmag.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A05",
+    "caseTitle": "Facebook Files",
+    "citation": "Oversight Board Decision 2021-014-FB-UA (XCheck), 26 stycznia 2022.",
+    "url": "https://oversightboard.com/decision/FB-4VCDW7CI/",
+    "publisher": null,
+    "domain": "oversightboard.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A05",
+    "caseTitle": "Facebook Files",
+    "citation": "Molly Russell Inquest, His Majesty's Coroner for North London, wrzesień–październik 2022 — wyrok koronera w sprawie samobójstwa 14-letniej Molly Russell.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A05",
+    "caseTitle": "Facebook Files",
+    "citation": "Biuro Senatora Richard Blumenthala, dokumentacja \"Protecting Kids Online\".",
+    "url": "https://www.blumenthal.senate.gov/",
+    "publisher": null,
+    "domain": "blumenthal.senate.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A05",
+    "caseTitle": "Facebook Files",
+    "citation": "Beyond the Screen (think tank Haugen).",
+    "url": "https://www.beyondthescreen.org",
+    "publisher": null,
+    "domain": "beyondthescreen.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A05",
+    "caseTitle": "Facebook Files",
+    "citation": "Whistleblower Aid, nota prasowa ws. Haugen, 3 października 2021.",
+    "url": "https://whistlebloweraid.org",
+    "publisher": null,
+    "domain": "whistlebloweraid.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A06",
+    "caseTitle": "Emotional Contagion",
+    "citation": "Kramer, A.D.I., Guillory, J.E., Hancock, J.T., \"Experimental evidence of massive-scale emotional contagion through social networks\", *Proceedings of the National Academy of Sciences*, vol. 111, nr 24, 17 czerwca 2014, s. 8788–8790. DOI: 10.1073/pnas.1320040111.",
+    "url": "https://www.pnas.org/doi/10.1073/pnas.1320040111",
+    "publisher": "Proceedings of the National Academy of Sciences",
+    "domain": "pnas.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A06",
+    "caseTitle": "Emotional Contagion",
+    "citation": "Robinson Meyer, \"Everything We Know About Facebook's Secret Mood Manipulation Experiment\", *The Atlantic*, 28 czerwca 2014.",
+    "url": "https://www.theatlantic.com/technology/archive/2014/06/everything-we-know-about-facebooks-secret-mood-manipulation-experiment/373648/",
+    "publisher": "The Atlantic",
+    "domain": "theatlantic.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A06",
+    "caseTitle": "Emotional Contagion",
+    "citation": "Adam Kramer, publiczne przeprosiny, Facebook, 29 czerwca 2014.",
+    "url": "https://www.facebook.com/akramer/posts/10152987150867796",
+    "publisher": null,
+    "domain": "facebook.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A06",
+    "caseTitle": "Emotional Contagion",
+    "citation": "Kashmir Hill, \"Facebook Manipulated 689,003 Users' Emotions For Science\", *Forbes*, 28 czerwca 2014.",
+    "url": "https://www.forbes.com/sites/kashmirhill/2014/06/28/facebook-manipulated-689003-users-emotions-for-science/",
+    "publisher": "Forbes",
+    "domain": "forbes.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A06",
+    "caseTitle": "Emotional Contagion",
+    "citation": "PNAS \"Editorial Expression of Concern: Experimental evidence of massive-scale emotional contagion through social networks\", 3 lipca 2014.",
+    "url": "https://www.pnas.org/doi/10.1073/pnas.1412469111",
+    "publisher": null,
+    "domain": "pnas.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A06",
+    "caseTitle": "Emotional Contagion",
+    "citation": "James Grimmelmann, \"Illusion of Change\" (blog), 28 czerwca 2014 i późniejsze wpisy.",
+    "url": "https://laboratorium.net/",
+    "publisher": null,
+    "domain": "laboratorium.net",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A06",
+    "caseTitle": "Emotional Contagion",
+    "citation": "\"When is academic research ethical research?\", *Nature*, vol. 510, 26 czerwca 2014, s. 337.",
+    "url": "https://www.nature.com/articles/510337a",
+    "publisher": "Nature",
+    "domain": "nature.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A06",
+    "caseTitle": "Emotional Contagion",
+    "citation": "UK Information Commissioner's Office, oświadczenie ws. Facebook emotional contagion study, 3 lipca 2014 (archiwum prasowe).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A06",
+    "caseTitle": "Emotional Contagion",
+    "citation": "Federal Register, \"Federal Policy for the Protection of Human Subjects — Final Rule\", 19 stycznia 2017 (revised Common Rule).",
+    "url": "https://www.federalregister.gov/documents/2017/01/19/2017-01058/federal-policy-for-the-protection-of-human-subjects",
+    "publisher": null,
+    "domain": "federalregister.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A06",
+    "caseTitle": "Emotional Contagion",
+    "citation": "Michelle Meyer, \"Two Cheers for Corporate Experimentation: The A/B Illusion and the Virtues of Data-Driven Innovation\", *Colorado Technology Law Journal*, 2015.",
+    "url": null,
+    "publisher": "Colorado Technology Law Journal",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A06",
+    "caseTitle": "Emotional Contagion",
+    "citation": "Clay Johnson, analiza na Twitter, 28–29 czerwca 2014 (archiwum).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A06",
+    "caseTitle": "Emotional Contagion",
+    "citation": "Vindu Goel, \"Facebook Tinkers With Users' Emotions in News Feed Experiment, Stirring Outcry\", *The New York Times*, 29 czerwca 2014.",
+    "url": "https://www.nytimes.com/2014/06/30/technology/facebook-tinkers-with-users-emotions-in-news-feed-experiment-stirring-outcry.html",
+    "publisher": "The New York Times",
+    "domain": "nytimes.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A06",
+    "caseTitle": "Emotional Contagion",
+    "citation": "Sheryl Sandberg, wywiad dla *India Today*, 2 lipca 2014.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A07",
+    "caseTitle": "Meta 1,2 mld € DPC",
+    "citation": "Data Protection Commission Ireland, \"Data Protection Commission announces conclusion of inquiry into Meta Ireland\", 22 maja 2023.",
+    "url": "https://www.dataprotection.ie/en/news-media/press-releases/Data-Protection-Commission-announces-conclusion-of-inquiry-into-Meta-Ireland",
+    "publisher": null,
+    "domain": "dataprotection.ie",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A07",
+    "caseTitle": "Meta 1,2 mld € DPC",
+    "citation": "TSUE, wyrok w sprawie C-311/18 Data Protection Commissioner v. Facebook Ireland and Maximillian Schrems (\"Schrems II\"), 16 lipca 2020.",
+    "url": "https://curia.europa.eu/juris/document/document.jsf?docid=228677&doclang=EN",
+    "publisher": null,
+    "domain": "curia.europa.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A07",
+    "caseTitle": "Meta 1,2 mld € DPC",
+    "citation": "European Data Protection Board, \"Binding Decision 1/2023 on the dispute submitted by the Irish SA regarding Meta Platforms Ireland Limited and its Facebook service\", 13 kwietnia 2023.",
+    "url": "https://edpb.europa.eu/our-work-tools/our-documents/binding-decision-board-art-65/binding-decision-12023-dispute-submitted_en",
+    "publisher": null,
+    "domain": "edpb.europa.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A07",
+    "caseTitle": "Meta 1,2 mld € DPC",
+    "citation": "Mark Scott, \"Meta fined record €1.2B over EU-US data flows\", *POLITICO Europe*, 22 maja 2023.",
+    "url": "https://www.politico.eu/article/meta-facebook-fined-record-1-2-billion-euros-over-eu-us-data-flows/",
+    "publisher": "POLITICO Europe",
+    "domain": "politico.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A07",
+    "caseTitle": "Meta 1,2 mld € DPC",
+    "citation": "Komunikaty Mety na meta.com, 22 maja 2023 i 10 lipca 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A07",
+    "caseTitle": "Meta 1,2 mld € DPC",
+    "citation": "Komisja Europejska, \"Adequacy decision for the EU-US Data Privacy Framework\", 10 lipca 2023.",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_en",
+    "publisher": null,
+    "domain": "commission.europa.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A07",
+    "caseTitle": "Meta 1,2 mld € DPC",
+    "citation": "NOYB, \"Schrems: 1.2 Billion Euro Fine Against Meta in EU-US Data Transfer Case\", 22 maja 2023.",
+    "url": "https://noyb.eu/en/schrems-12-billion-euro-fine-against-meta-eu-us-data-transfer-case",
+    "publisher": null,
+    "domain": "noyb.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A07",
+    "caseTitle": "Meta 1,2 mld € DPC",
+    "citation": "TSUE, wyrok w sprawie C-362/14 Schrems v. Data Protection Commissioner (\"Schrems I\"), 6 października 2015.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A07",
+    "caseTitle": "Meta 1,2 mld € DPC",
+    "citation": "Executive Order 14086 of October 7, 2022, \"Enhancing Safeguards for United States Signals Intelligence Activities\", Federal Register.",
+    "url": "https://www.federalregister.gov/documents/2022/10/14/2022-22531/enhancing-safeguards-for-united-states-signals-intelligence-activities",
+    "publisher": null,
+    "domain": "federalregister.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A07",
+    "caseTitle": "Meta 1,2 mld € DPC",
+    "citation": "TSUE, wyrok w sprawie C-340/21 VB v. Natsionalna agentsia za prihodite (odszkodowanie za szkodę niematerialną z RODO), 14 grudnia 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A07",
+    "caseTitle": "Meta 1,2 mld € DPC",
+    "citation": "European Parliament, LIBE Committee hearings on EU-US Data Privacy Framework, 2023–2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A07",
+    "caseTitle": "Meta 1,2 mld € DPC",
+    "citation": "\"The Future of Data Flows in a Post-Schrems II World\" — raport Max Planck Institute 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A08",
+    "caseTitle": "New Mexico v. Meta",
+    "citation": "New Mexico Department of Justice, \"Attorney General Torrez Files Lawsuit Against Meta Platforms\", 5 grudnia 2023.",
+    "url": "https://www.nmdoj.gov/press_release/ag-torrez-lawsuit-meta-platforms/",
+    "publisher": null,
+    "domain": "nmdoj.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A08",
+    "caseTitle": "New Mexico v. Meta",
+    "citation": "State of New Mexico v. Meta Platforms, Inc., First Judicial District Court, Santa Fe, wyrok 24 marca 2026 — dokumenty sądowe.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A08",
+    "caseTitle": "New Mexico v. Meta",
+    "citation": "Jessica Bursztynsky, \"New Mexico jury says Meta harms children's mental health, must pay $375 million\", *NPR*, 24 marca 2026.",
+    "url": "https://www.npr.org/",
+    "publisher": "NPR",
+    "domain": "npr.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A08",
+    "caseTitle": "New Mexico v. Meta",
+    "citation": "Salvador Rodriguez, \"Meta must pay $375 million in landmark child safety trial in New Mexico\", *CNBC*, 24 marca 2026.",
+    "url": "https://www.cnbc.com/",
+    "publisher": "CNBC",
+    "domain": "cnbc.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A08",
+    "caseTitle": "New Mexico v. Meta",
+    "citation": "Source New Mexico, \"Santa Fe jury awards New Mexico $375M in Meta trial\", marzec 2026.",
+    "url": "https://sourcenm.com/",
+    "publisher": null,
+    "domain": "sourcenm.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A08",
+    "caseTitle": "New Mexico v. Meta",
+    "citation": "Courtroom View Network — nagrania kluczowych momentów procesu (płatne archiwum).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A08",
+    "caseTitle": "New Mexico v. Meta",
+    "citation": "*The New York Times*, Kashmir Hill, \"A Landmark Case Against Meta. What It Means for Big Tech and Children\", 25 marca 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A08",
+    "caseTitle": "New Mexico v. Meta",
+    "citation": "*The Wall Street Journal*, \"Meta Loses $375 Million Trial Over Teen Safety\", 24 marca 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A08",
+    "caseTitle": "New Mexico v. Meta",
+    "citation": "Jonathan Haidt, \"The Anxious Generation: How the Great Rewiring of Childhood Is Causing an Epidemic of Mental Illness\", Penguin Press, 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A08",
+    "caseTitle": "New Mexico v. Meta",
+    "citation": "Hany Farid, zeznania eksperckie ws. detekcji CSAM, marzec 2026 (transkrypt sądowy).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A08",
+    "caseTitle": "New Mexico v. Meta",
+    "citation": "Raúl Torrez, wystąpienie po wyroku, 24 marca 2026.",
+    "url": "https://www.nmdoj.gov/",
+    "publisher": null,
+    "domain": "nmdoj.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A08",
+    "caseTitle": "New Mexico v. Meta",
+    "citation": "Zuckerberg Deposition, marzec 2026 (transkrypt dostępny w dokumentach sądowych).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A08",
+    "caseTitle": "New Mexico v. Meta",
+    "citation": "41 State AGs v. Meta, MDL No. 3047, N.D. Cal. — dokumentacja PACER.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A08",
+    "caseTitle": "New Mexico v. Meta",
+    "citation": "Doe v. Snap, Inc., 5th Cir. 2024 — orzeczenie istotne dla Section 230.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A09",
+    "caseTitle": "Kara 390 mln € DPC",
+    "citation": "Data Protection Commission Ireland, \"Irish Data Protection Commission announces conclusion of two inquiries into Meta Ireland\", 4 stycznia 2023.",
+    "url": "https://www.dataprotection.ie/en/news-media/press-releases/irish-data-protection-commission-announces-conclusion-two-inquiries-meta-ireland",
+    "publisher": null,
+    "domain": "dataprotection.ie",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A09",
+    "caseTitle": "Kara 390 mln € DPC",
+    "citation": "European Data Protection Board, \"Binding Decision 3/2022 on the dispute submitted by the Irish SA on Meta Platforms Ireland Limited and its Facebook service\", 5 grudnia 2022.",
+    "url": "https://edpb.europa.eu/our-work-tools/our-documents/binding-decision-board-art-65/binding-decision-32022-dispute_en",
+    "publisher": null,
+    "domain": "edpb.europa.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A09",
+    "caseTitle": "Kara 390 mln € DPC",
+    "citation": "European Data Protection Board, \"Binding Decision 4/2022 on the dispute submitted by the Irish SA on Meta Platforms Ireland Limited and its Instagram service\", 5 grudnia 2022.",
+    "url": "https://edpb.europa.eu/our-work-tools/our-documents/binding-decision-board-art-65/binding-decision-42022-dispute_en",
+    "publisher": null,
+    "domain": "edpb.europa.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A09",
+    "caseTitle": "Kara 390 mln € DPC",
+    "citation": "NOYB, \"DPC fines Meta only €390 million — EDPB is forcing revision\", 4 stycznia 2023.",
+    "url": "https://noyb.eu/en/dpc-fines-meta-only-eu-390-million-edpb-forcing-revision",
+    "publisher": null,
+    "domain": "noyb.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A09",
+    "caseTitle": "Kara 390 mln € DPC",
+    "citation": "Natasha Lomas, \"Meta dodged a €4BN privacy fine over unlawful ads, argues GDPR complainant\", *TechCrunch*, 19 stycznia 2023.",
+    "url": "https://techcrunch.com/2023/01/19/meta-ads-noyb-epdb-gdpr-complaint/",
+    "publisher": "TechCrunch",
+    "domain": "techcrunch.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A09",
+    "caseTitle": "Kara 390 mln € DPC",
+    "citation": "Hunton Andrews Kurth, \"Meta Fined €390 Million by Irish DPC for Alleged Breaches of GDPR, Including in Behavioral Advertising Context\", 20 stycznia 2023.",
+    "url": "https://www.hunton.com/privacy-and-information-security-law/meta-fined-e390-million-by-irish-dpc-for-alleged-breaches-of-gdpr-including-in-behavioral-advertising-context",
+    "publisher": null,
+    "domain": "hunton.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A09",
+    "caseTitle": "Kara 390 mln € DPC",
+    "citation": "Stibbe, \"Meta Ireland fined €390 million for unlawful legal basis\", 26 stycznia 2023.",
+    "url": "https://www.stibbe.com/publications-and-insights/meta-ireland-fined-eu390-million-for-unlawful-legal-basis",
+    "publisher": null,
+    "domain": "stibbe.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A09",
+    "caseTitle": "Kara 390 mln € DPC",
+    "citation": "McCann FitzGerald, \"Data Protection Commission fines Meta €395.5 million over GDPR infringements in Terms of Use\", 27 stycznia 2023.",
+    "url": "https://www.mccannfitzgerald.com/knowledge/data-privacy-and-cyber-risk/data-protection-commission-fines-meta-over-gdpr-infringements",
+    "publisher": null,
+    "domain": "mccannfitzgerald.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A09",
+    "caseTitle": "Kara 390 mln € DPC",
+    "citation": "TSUE, wyrok w sprawie C-252/21 Meta Platforms Inc. i in. v. Bundeskartellamt, 4 lipca 2023.",
+    "url": "https://curia.europa.eu/juris/document/document.jsf?docid=275125&doclang=EN",
+    "publisher": null,
+    "domain": "curia.europa.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A09",
+    "caseTitle": "Kara 390 mln € DPC",
+    "citation": "European Data Protection Board, \"Opinion 08/2024 on Valid Consent in the Context of Consent or Pay Models implemented by Large Online Platforms\", 17 kwietnia 2024.",
+    "url": "https://edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-082024-valid-consent-context-consent-or_en",
+    "publisher": null,
+    "domain": "edpb.europa.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A09",
+    "caseTitle": "Kara 390 mln € DPC",
+    "citation": "European Data Protection Board, \"Urgent Binding Decision 01/2023 on the request of the Norwegian SA concerning Meta Platforms Ireland Limited\", 27 października 2023.",
+    "url": "https://edpb.europa.eu/our-work-tools/our-documents/binding-decision-board-art-66/urgent-binding-decision-012023-request_en",
+    "publisher": null,
+    "domain": "edpb.europa.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A09",
+    "caseTitle": "Kara 390 mln € DPC",
+    "citation": "Datatilsynet (Norwegia), \"Vedtak om forbud mot adferdsbasert markedsføring\" (decyzja zakazu reklamy behawioralnej), 14 lipca 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A09",
+    "caseTitle": "Kara 390 mln € DPC",
+    "citation": "NOYB, pierwotna skarga przeciwko Facebook, 25 maja 2018 — dokument dostępny na stronie NOYB.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A09",
+    "caseTitle": "Kara 390 mln € DPC",
+    "citation": "Wyrick Robbins Privacy Blog, \"Less Is More, Too Much Is Not Enough: What the Irish DPC's €390 Million Fine Against Meta Could Mean for Your Privacy Notice\", 19 stycznia 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A09",
+    "caseTitle": "Kara 390 mln € DPC",
+    "citation": "Data Privacy Manager, \"DPC fines META €390 million for violation of the GDPR\", 18 stycznia 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A10",
+    "caseTitle": "Kara DMA 200 mln € Komisji Europejskiej",
+    "citation": "European Commission, \"Commission decisions under the Digital Markets Act — Apple and Meta\", IP/25/1085, 22 kwietnia 2025.",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1085",
+    "publisher": null,
+    "domain": "ec.europa.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A10",
+    "caseTitle": "Kara DMA 200 mln € Komisji Europejskiej",
+    "citation": "European Commission, \"Digital Markets Act: Commission fines Meta €200 million\", oficjalny komunikat, 22 kwietnia 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A10",
+    "caseTitle": "Kara DMA 200 mln € Komisji Europejskiej",
+    "citation": "European Data Protection Board, \"Opinion 08/2024 on Valid Consent in the Context of Consent or Pay Models implemented by Large Online Platforms\", 17 kwietnia 2024.",
+    "url": "https://edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-082024-valid-consent-context-consent-or_en",
+    "publisher": null,
+    "domain": "edpb.europa.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A10",
+    "caseTitle": "Kara DMA 200 mln € Komisji Europejskiej",
+    "citation": "Joel Kaplan, \"Our Position on the European Commission's DMA Decision\", Meta Newsroom, 23 kwietnia 2025.",
+    "url": "https://about.fb.com/news/",
+    "publisher": null,
+    "domain": "about.fb.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A10",
+    "caseTitle": "Kara DMA 200 mln € Komisji Europejskiej",
+    "citation": "Taylor Wessing, \"DMA in Action: European Commission imposes €200 million fine on Meta for violation of data combination rules\", 24 kwietnia 2025.",
+    "url": "https://www.taylorwessing.com/en/insights-and-events/insights/2025/04/meta-fined-200-million-euro-by-eu-under-digital-markets-act",
+    "publisher": null,
+    "domain": "taylorwessing.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A10",
+    "caseTitle": "Kara DMA 200 mln € Komisji Europejskiej",
+    "citation": "Bird & Bird, \"First-ever DMA Non-Compliance Fines – Another Step in Big Tech Scrutiny\", maj 2025.",
+    "url": "https://www.twobirds.com/en/insights/2025/belgium/first-ever-dma-non-compliance-fines",
+    "publisher": null,
+    "domain": "twobirds.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A10",
+    "caseTitle": "Kara DMA 200 mln € Komisji Europejskiej",
+    "citation": "Hunton Andrews Kurth, \"European Commission Fines Apple and Meta for Non-compliance with the DMA\", 25 kwietnia 2025.",
+    "url": "https://www.hunton.com/privacy-and-information-security-law/european-commission-fines-apple-and-meta-for-non-compliance-with-the-dma",
+    "publisher": null,
+    "domain": "hunton.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A10",
+    "caseTitle": "Kara DMA 200 mln € Komisji Europejskiej",
+    "citation": "TechPolicy.Press, \"Understanding the Apple and Meta Non-Compliance Decisions Under the Digital Markets Act\", 6 maja 2025.",
+    "url": "https://www.techpolicy.press/understanding-the-apple-and-meta-noncompliance-decisions-under-the-digital-markets-act/",
+    "publisher": null,
+    "domain": "techpolicy.press",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A10",
+    "caseTitle": "Kara DMA 200 mln € Komisji Europejskiej",
+    "citation": "Alba Ribera Martínez, \"The DMA's Teeth: Meta and Apple Fined by the European Commission\", *Kluwer Competition Law Blog*, 28 kwietnia 2025.",
+    "url": "https://legalblogs.wolterskluwer.com/competition-blog/the-dmas-teeth-meta-and-apple-fined-by-the-european-commission/",
+    "publisher": "Kluwer Competition Law Blog",
+    "domain": "legalblogs.wolterskluwer.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A10",
+    "caseTitle": "Kara DMA 200 mln € Komisji Europejskiej",
+    "citation": "PwC Legal, \"Enforcement of the DMA – European Commission imposes first fines under the DMA on Apple and Meta\", 20 maja 2025.",
+    "url": "https://legal.pwc.de/en/news/articles/enforcement-of-the-dma",
+    "publisher": null,
+    "domain": "legal.pwc.de",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A10",
+    "caseTitle": "Kara DMA 200 mln € Komisji Europejskiej",
+    "citation": "\"Meta's ad business faces uncertainty in E.U. after €200 million fine\", *The Current*, 1 maja 2025.",
+    "url": "https://www.thecurrent.com/data-privacy-meta-ad-business-uncertainty-eu-200-million-fine",
+    "publisher": "The Current",
+    "domain": "thecurrent.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A10",
+    "caseTitle": "Kara DMA 200 mln € Komisji Europejskiej",
+    "citation": "Regulation (EU) 2022/1925 (Digital Markets Act), Dziennik Urzędowy UE L 265/1, 12 października 2022.",
+    "url": "https://eur-lex.europa.eu/eli/reg/2022/1925/oj",
+    "publisher": null,
+    "domain": "eur-lex.europa.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A10",
+    "caseTitle": "Kara DMA 200 mln € Komisji Europejskiej",
+    "citation": "TSUE, wyrok w sprawie C-252/21 Meta Platforms et al. v. Bundeskartellamt, 4 lipca 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A10",
+    "caseTitle": "Kara DMA 200 mln € Komisji Europejskiej",
+    "citation": "NOYB, \"Facebook/Meta: Pay or Okay is Illegal\", seria komunikatów 2023–2025.",
+    "url": "https://noyb.eu/en/",
+    "publisher": null,
+    "domain": "noyb.eu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "A10",
+    "caseTitle": "Kara DMA 200 mln € Komisji Europejskiej",
+    "citation": "BEUC, \"BEUC calls on European Commission to confirm Meta's 'pay or consent' violates Digital Markets Act\", lipiec 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "A10",
+    "caseTitle": "Kara DMA 200 mln € Komisji Europejskiej",
+    "citation": "Oberlandesgericht Köln, sprawa Verbraucherzentrale NRW v. Meta, wyrok lipiec 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B01",
+    "caseTitle": "Google Street View Wi-Spy",
+    "citation": "Alan Eustace, \"Wi-Fi data collection: An update\", Google Official Blog, 14 maja 2010.",
+    "url": "https://googleblog.blogspot.com/2010/05/wifi-data-collection-update.html",
+    "publisher": null,
+    "domain": "googleblog.blogspot.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B01",
+    "caseTitle": "Google Street View Wi-Spy",
+    "citation": "Kevin J. O'Brien, \"Google Admits It Collected Data, But Minimizes Effect\", *The New York Times*, 15 maja 2010.",
+    "url": null,
+    "publisher": "The New York Times",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B01",
+    "caseTitle": "Google Street View Wi-Spy",
+    "citation": "Kevin Poulsen, \"Google Street View Cars Grabbed Locations of Cellphones, Wi-Fi\", *Wired*, 17 maja 2010.",
+    "url": "https://www.wired.com/2010/05/googlewifi/",
+    "publisher": "Wired",
+    "domain": "wired.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B01",
+    "caseTitle": "Google Street View Wi-Spy",
+    "citation": "Federal Communications Commission, \"In the Matter of Google Inc.: Notice of Apparent Liability for Forfeiture\", DA 12-592, 13 kwietnia 2012.",
+    "url": "https://docs.fcc.gov/public/attachments/DA-12-592A1.pdf",
+    "publisher": null,
+    "domain": "docs.fcc.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B01",
+    "caseTitle": "Google Street View Wi-Spy",
+    "citation": "Federal Trade Commission, \"Closing letter: Google Inc.\", 27 października 2010.",
+    "url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/closing-letters/google-inc-closing-letter",
+    "publisher": null,
+    "domain": "ftc.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B01",
+    "caseTitle": "Google Street View Wi-Spy",
+    "citation": "Hamburger Beauftragte für Datenschutz, liczne komunikaty 2010–2013.",
+    "url": "https://datenschutz-hamburg.de",
+    "publisher": null,
+    "domain": "datenschutz-hamburg.de",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B01",
+    "caseTitle": "Google Street View Wi-Spy",
+    "citation": "*Joffe v. Google, Inc.*, 729 F.3d 1262 (9th Cir. 2013).",
+    "url": "https://caselaw.findlaw.com/court/us-9th-circuit/1643949.html",
+    "publisher": null,
+    "domain": "caselaw.findlaw.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B01",
+    "caseTitle": "Google Street View Wi-Spy",
+    "citation": "UK Information Commissioner's Office, \"Findings on Google Street View cars\", listopad 2010; listopad 2014 (follow-up).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B01",
+    "caseTitle": "Google Street View Wi-Spy",
+    "citation": "CNIL, komunikat prasowy 21 marca 2011.",
+    "url": "https://www.cnil.fr/",
+    "publisher": null,
+    "domain": "cnil.fr",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B01",
+    "caseTitle": "Google Street View Wi-Spy",
+    "citation": "AEPD (Agencia Española de Protección de Datos), komunikat 2011.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B01",
+    "caseTitle": "Google Street View Wi-Spy",
+    "citation": "Korea Communications Commission, raport z 2011 dotyczący wyników przeszukania biur Google.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B01",
+    "caseTitle": "Google Street View Wi-Spy",
+    "citation": "Benjamin Joffe et al. v. Google Inc., Class Action Complaint, N.D. Cal. 2010 — dokumenty sądowe przez PACER.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B01",
+    "caseTitle": "Google Street View Wi-Spy",
+    "citation": "Adam Tanner, \"What Google's Wi-Spy Scandal Reveals\", *Forbes*, maj 2010.",
+    "url": null,
+    "publisher": "Forbes",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B01",
+    "caseTitle": "Google Street View Wi-Spy",
+    "citation": "Declan McCullagh, \"Google's Wi-Fi data collection: What you need to know\", *CNET*, maj 2010.",
+    "url": null,
+    "publisher": "CNET",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B01",
+    "caseTitle": "Google Street View Wi-Spy",
+    "citation": "Peter Schaar, oficjalne oświadczenia niemieckiego federalnego Komisarza Ochrony Danych, 2010–2011.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B02",
+    "caseTitle": "Google Safari Workaround",
+    "citation": "Julia Angwin, Jennifer Valentino-DeVries, \"Google's iPhone Tracking\", *The Wall Street Journal*, 17 lutego 2012.",
+    "url": "https://www.wsj.com/articles/SB10001424052970204880404577225380456599176",
+    "publisher": "The Wall Street Journal",
+    "domain": "wsj.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B02",
+    "caseTitle": "Google Safari Workaround",
+    "citation": "Jonathan Mayer, \"Web Policy: Safari Trackers\", Stanford Center for Internet and Society, 17 lutego 2012.",
+    "url": "https://cyberlaw.stanford.edu/blog/2012/02/safari-trackers",
+    "publisher": null,
+    "domain": "cyberlaw.stanford.edu",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B02",
+    "caseTitle": "Google Safari Workaround",
+    "citation": "Federal Trade Commission, \"Google Will Pay $22.5 Million to Settle FTC Charges it Misrepresented Privacy Assurances to Users of Apple's Safari Internet Browser\", 9 sierpnia 2012.",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2012/08/google-will-pay-225-million-settle-ftc-charges-it-misrepresented-privacy-assurances-users-apples",
+    "publisher": null,
+    "domain": "ftc.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B02",
+    "caseTitle": "Google Safari Workaround",
+    "citation": "National Association of Attorneys General, \"37 States and D.C. Reach $17 Million Settlement with Google Over Cookie Policies on Apple Safari Browser\", 18 listopada 2013.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B02",
+    "caseTitle": "Google Safari Workaround",
+    "citation": "*Lloyd v Google LLC* [2021] UKSC 50 — wyrok Sądu Najwyższego UK.",
+    "url": "https://www.supremecourt.uk/cases/docs/uksc-2019-0213-judgment.pdf",
+    "publisher": null,
+    "domain": "supremecourt.uk",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B02",
+    "caseTitle": "Google Safari Workaround",
+    "citation": "*Vidal-Hall v Google Inc* [2015] EWCA Civ 311 — Court of Appeal UK.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B02",
+    "caseTitle": "Google Safari Workaround",
+    "citation": "Jennifer Valentino-DeVries, Jeremy Singer-Vine, \"They Know What You're Shopping For\", *WSJ*, 7 grudnia 2012 (seria \"What They Know\").",
+    "url": null,
+    "publisher": "WSJ",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B02",
+    "caseTitle": "Google Safari Workaround",
+    "citation": "Apple Safari release notes, ITP documentation (webkit.org, 2017–2024).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B02",
+    "caseTitle": "Google Safari Workaround",
+    "citation": "Kate Brennan, \"The legacy of Lloyd v Google: what happens to representative actions now?\", *Journal of Data Protection & Privacy*, 2022.",
+    "url": null,
+    "publisher": "Journal of Data Protection & Privacy",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B02",
+    "caseTitle": "Google Safari Workaround",
+    "citation": "Ashkan Soltani, zeznania przed Kongresem 2013, 2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B02",
+    "caseTitle": "Google Safari Workaround",
+    "citation": "Jonathan Mayer et al., \"Signals of Interest: Identifying Privacy-Sensitive Browsing Behavior\", Stanford CS, 2012.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B02",
+    "caseTitle": "Google Safari Workaround",
+    "citation": "*Fashion ID GmbH & Co. KG v Verbraucherzentrale NRW e.V.*, C-40/17, TSUE, 29 lipca 2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B02",
+    "caseTitle": "Google Safari Workaround",
+    "citation": "Meta Platforms, Q4 2021 Earnings Call (luty 2022) — ogłoszenie wpływu ATT na przychody.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B02",
+    "caseTitle": "Google Safari Workaround",
+    "citation": "California Privacy Protection Agency — przemówienia Ashkana Soltaniego 2022–2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B02",
+    "caseTitle": "Google Safari Workaround",
+    "citation": "The Markup (markup.org) — długoterminowa analiza Safari Workaround i następnych technik, 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B03",
+    "caseTitle": "Google+ API bugs",
+    "citation": "Douglas MacMillan, Robert McMillan, \"Google Exposed User Data, Feared Repercussions of Disclosing to Public\", *The Wall Street Journal*, 8 października 2018.",
+    "url": "https://www.wsj.com/articles/google-exposed-user-data-feared-repercussions-of-disclosing-to-public-1539017194",
+    "publisher": "The Wall Street Journal",
+    "domain": "wsj.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B03",
+    "caseTitle": "Google+ API bugs",
+    "citation": "Ben Smith, \"Project Strobe: Protecting your data, improving our third-party APIs, and sunsetting consumer Google+\", Google Blog, 8 października 2018.",
+    "url": "https://blog.google/technology/safety-security/project-strobe/",
+    "publisher": null,
+    "domain": "blog.google",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B03",
+    "caseTitle": "Google+ API bugs",
+    "citation": "Google blog, \"Expediting changes to Google+\", 10 grudnia 2018 — ogłoszenie drugiego bugu i przyspieszenie zamknięcia.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B03",
+    "caseTitle": "Google+ API bugs",
+    "citation": "*Matal et al. v. Google LLC*, N.D. Cal., Case No. 5:18-cv-06164 — dokumenty PACER.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B03",
+    "caseTitle": "Google+ API bugs",
+    "citation": "SEC Cybersecurity Disclosure Rules, 26 lipca 2023.",
+    "url": "https://www.sec.gov/news/press-release/2023-139",
+    "publisher": null,
+    "domain": "sec.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B03",
+    "caseTitle": "Google+ API bugs",
+    "citation": "Sundar Pichai, zeznanie przed House Judiciary Committee, 11 grudnia 2018. Transkrypt: https://judiciary.house.gov/calendar/eventsingle.aspx?EventID=1713.",
+    "url": "https://judiciary.house.gov/calendar/eventsingle.aspx?EventID=1713",
+    "publisher": null,
+    "domain": "judiciary.house.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B03",
+    "caseTitle": "Google+ API bugs",
+    "citation": "Google Takeout archive — dokumentacja procesu eksportu danych G+.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B03",
+    "caseTitle": "Google+ API bugs",
+    "citation": "*In re Yahoo! Inc. Securities Litigation*, N.D. Cal., MDL No. 2752 — precedens.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B03",
+    "caseTitle": "Google+ API bugs",
+    "citation": "Kaplan Fox & Kilsheimer LLP, materiały prasowe o ugodzie 7,5 mln USD.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B03",
+    "caseTitle": "Google+ API bugs",
+    "citation": "IAPP, \"Google+ data exposure: Lessons for cybersecurity disclosure\", październik 2018.",
+    "url": "https://iapp.org",
+    "publisher": null,
+    "domain": "iapp.org",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B04",
+    "caseTitle": "Google Location History",
+    "citation": "Ryan Nakashima, \"AP Exclusive: Google tracks your movements, like it or not\", *Associated Press*, 13 sierpnia 2018.",
+    "url": "https://apnews.com/article/north-america-science-technology-business-ap-top-news-828aefab64d4411bac257a07c1af0ecb",
+    "publisher": "Associated Press",
+    "domain": "apnews.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B04",
+    "caseTitle": "Google Location History",
+    "citation": "Douglas C. Schmidt, \"Google Data Collection\", Digital Content Next / Vanderbilt University, 15 sierpnia 2018.",
+    "url": "https://digitalcontentnext.org/wp-content/uploads/2018/08/DCN-Google-Data-Collection-Paper.pdf",
+    "publisher": null,
+    "domain": "digitalcontentnext.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B04",
+    "caseTitle": "Google Location History",
+    "citation": "*State of Arizona v. Google LLC*, Maricopa County Superior Court, Case No. CV 2020-006219 (dokumenty sądowe).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B04",
+    "caseTitle": "Google Location History",
+    "citation": "National Association of Attorneys General, komunikat prasowy \"40 States Reach $391.5 Million Settlement with Google Over Location Tracking Practices\", 14 listopada 2022.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B04",
+    "caseTitle": "Google Location History",
+    "citation": "*Carpenter v. United States*, 585 U.S. 296 (2018) — wyrok SCOTUS.",
+    "url": "https://www.supremecourt.gov/opinions/17pdf/16-402_h315.pdf",
+    "publisher": null,
+    "domain": "supremecourt.gov",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B04",
+    "caseTitle": "Google Location History",
+    "citation": "Australian Competition & Consumer Commission, \"ACCC v Google LLC & Anor\", decyzja 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B04",
+    "caseTitle": "Google Location History",
+    "citation": "Personal Information Protection Commission (Korea), decyzja 2023 o karze 80 mld KRW.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B04",
+    "caseTitle": "Google Location History",
+    "citation": "*Patacsil et al. v. Google LLC*, N.D. Cal., dokumenty PACER.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B04",
+    "caseTitle": "Google Location History",
+    "citation": "*Matera v. Google Inc.*, N.D. Cal., powiązany pozew.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B04",
+    "caseTitle": "Google Location History",
+    "citation": "European Data Protection Board, \"Guidelines 03/2022 on deceptive design patterns in social media platform interfaces\", 2022.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B04",
+    "caseTitle": "Google Location History",
+    "citation": "Brian Fung, \"Google keeps a detailed record of your location, even when you tell it not to\", *The Washington Post*, sierpień 2018.",
+    "url": null,
+    "publisher": "The Washington Post",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B04",
+    "caseTitle": "Google Location History",
+    "citation": "Jonathan Mayer et al., Princeton University CITP — weryfikacja eksperymentu AP.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B04",
+    "caseTitle": "Google Location History",
+    "citation": "Google blog, \"Your personal data is protected on Google. Here's how\", 2023 — ogłoszenie reform Location History.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B04",
+    "caseTitle": "Google Location History",
+    "citation": "Ustawa RODO art. 6, 7, 13; EDPB Guidelines on Consent under Regulation 2016/679.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B04",
+    "caseTitle": "Google Location History",
+    "citation": "CEO Sundar Pichai, zeznania przed Kongresem 2018, 2020 — kwestie lokalizacji.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B05",
+    "caseTitle": "Brown v. Google",
+    "citation": "*Chasom Brown et al. v. Google LLC*, 4:20-cv-03664-YGR, N.D. California. Dokumenty przez PACER.",
+    "url": "https://pacer.uscourts.gov",
+    "publisher": null,
+    "domain": "pacer.uscourts.gov",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B05",
+    "caseTitle": "Brown v. Google",
+    "citation": "Final settlement agreement, April 1, 2024 (publicly filed).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B05",
+    "caseTitle": "Brown v. Google",
+    "citation": "Boies Schiller Flexner LLP, komunikaty prasowe 2020–2024.",
+    "url": "https://www.bsfllp.com",
+    "publisher": null,
+    "domain": "bsfllp.com",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B05",
+    "caseTitle": "Brown v. Google",
+    "citation": "Reuters, \"Google to destroy browsing data to settle Chrome privacy lawsuit\", 1 kwietnia 2024.",
+    "url": "https://www.reuters.com/technology/google-destroy-browsing-data-settle-chrome-privacy-lawsuit-2024-04-01/",
+    "publisher": null,
+    "domain": "reuters.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B05",
+    "caseTitle": "Brown v. Google",
+    "citation": "Bloomberg, \"Google's 'Incognito Mode' Inspires Lawsuits and Ire\", 2022 — pierwsze ujawnienie e-maila Twohill.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B05",
+    "caseTitle": "Brown v. Google",
+    "citation": "*Peña v. Google LLC*, N.D. Cal. — wcześniejsza, podobna sprawa.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B05",
+    "caseTitle": "Brown v. Google",
+    "citation": "California Invasion of Privacy Act, Cal. Penal Code § 631–632.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B05",
+    "caseTitle": "Brown v. Google",
+    "citation": "Jonathan Mayer et al., prace Stanford/Princeton o fingerprintingu.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B05",
+    "caseTitle": "Brown v. Google",
+    "citation": "EDPB Guidelines 03/2022 on dark patterns.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B05",
+    "caseTitle": "Brown v. Google",
+    "citation": "Sundar Pichai, zeznania w *United States v. Google* (DOJ antitrust), październik 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B05",
+    "caseTitle": "Brown v. Google",
+    "citation": "NOYB, open complaint vs. Google o tracking, 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B05",
+    "caseTitle": "Brown v. Google",
+    "citation": "Judge Yvonne Gonzalez Rogers, orders and rulings w *Brown v. Google* (dostępne przez PACER).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B05",
+    "caseTitle": "Brown v. Google",
+    "citation": "The Register, \"Google to destroy billions of records in data privacy settlement\", 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B05",
+    "caseTitle": "Brown v. Google",
+    "citation": "*Calhoun v. Google LLC* — pokrewna sprawa.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B05",
+    "caseTitle": "Brown v. Google",
+    "citation": "Serge Egelman, zeznanie biegłego, UC Berkeley.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B06",
+    "caseTitle": "Project Dragonfly",
+    "citation": "Ryan Gallagher, \"Google Plans to Launch Censored Search Engine in China, Leaked Documents Reveal\", *The Intercept*, 1 sierpnia 2018.",
+    "url": "https://theintercept.com/2018/08/01/google-china-search-engine-censorship/",
+    "publisher": "The Intercept",
+    "domain": "theintercept.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B06",
+    "caseTitle": "Project Dragonfly",
+    "citation": "Ryan Gallagher, seria ponad 20 artykułów w *The Intercept* (2018–2019) dokumentujących Dragonfly.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B06",
+    "caseTitle": "Project Dragonfly",
+    "citation": "List otwarty pracowników Google, *The New York Times*, 16 sierpnia 2018.",
+    "url": "https://www.nytimes.com/2018/08/16/technology/google-employees-protest-search-censored-china.html",
+    "publisher": "The New York Times",
+    "domain": "nytimes.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B06",
+    "caseTitle": "Project Dragonfly",
+    "citation": "Jack Poulson, blog Tech Inquiry i wystąpienia publiczne.",
+    "url": "https://techinquiry.org",
+    "publisher": null,
+    "domain": "techinquiry.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B06",
+    "caseTitle": "Project Dragonfly",
+    "citation": "Sundar Pichai, zeznania przed House Judiciary Committee, 11 grudnia 2018.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B06",
+    "caseTitle": "Project Dragonfly",
+    "citation": "Karan Bhatia, zeznania przed Senate Judiciary Committee, 17 lipca 2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B06",
+    "caseTitle": "Project Dragonfly",
+    "citation": "Amnesty International, \"Google: Drop Dragonfly now\", 2018.",
+    "url": "https://www.amnesty.org/en/latest/news/2018/08/google-drop-dragonfly-china-search-engine/",
+    "publisher": null,
+    "domain": "amnesty.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "B06",
+    "caseTitle": "Project Dragonfly",
+    "citation": "Human Rights Watch, oświadczenia 2018–2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B06",
+    "caseTitle": "Project Dragonfly",
+    "citation": "UN Guiding Principles on Business and Human Rights, 2011.",
+    "url": "https://www.ohchr.org/sites/default/files/documents/publications/guidingprinciplesbusinesshr_en.pdf",
+    "publisher": null,
+    "domain": "ohchr.org",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B06",
+    "caseTitle": "Project Dragonfly",
+    "citation": "OECD Guidelines for Multinational Enterprises, edycja 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B06",
+    "caseTitle": "Project Dragonfly",
+    "citation": "Scahill, Jeremy; Greenwald, Glenn; Poitras, Laura — założyciele *The Intercept*.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B06",
+    "caseTitle": "Project Dragonfly",
+    "citation": "Meredith Whittaker, wystąpienia publiczne i działalność Signal Foundation.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B06",
+    "caseTitle": "Project Dragonfly",
+    "citation": "Kate Crawford, *Atlas of AI* (Yale University Press, 2021).",
+    "url": null,
+    "publisher": "Atlas of AI",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B06",
+    "caseTitle": "Project Dragonfly",
+    "citation": "Edward Snowden, tweet @Snowden z 2 sierpnia 2018.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "B06",
+    "caseTitle": "Project Dragonfly",
+    "citation": "Business & Human Rights Resource Centre, dokumentacja sprawy Dragonfly.",
+    "url": "https://www.business-humanrights.org",
+    "publisher": null,
+    "domain": "business-humanrights.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C01",
+    "caseTitle": "Apple Batterygate",
+    "citation": "primate1980, post na r/iphone, 10 grudnia 2017.  (archiwum).",
+    "url": "https://www.reddit.com/r/iphone/",
+    "publisher": null,
+    "domain": "reddit.com",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C01",
+    "caseTitle": "Apple Batterygate",
+    "citation": "John Poole, \"iPhone Performance and Battery Age\", Primate Labs Blog, 18 grudnia 2017.",
+    "url": "https://www.primatelabs.com/geekbench/blog/iphone-performance-battery-age",
+    "publisher": null,
+    "domain": "primatelabs.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C01",
+    "caseTitle": "Apple Batterygate",
+    "citation": "Apple, \"A Message to Our Customers about iPhone Batteries and Performance\", 28 grudnia 2017.",
+    "url": "https://www.apple.com/newsroom/2017/12/a-message-to-our-customers-about-iphone-batteries-and-performance/",
+    "publisher": null,
+    "domain": "apple.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C01",
+    "caseTitle": "Apple Batterygate",
+    "citation": "*In re Apple Inc. Device Performance Litigation*, N.D. Cal., MDL No. 2827 (dokumenty PACER).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C01",
+    "caseTitle": "Apple Batterygate",
+    "citation": "Autorità Garante della Concorrenza e del Mercato (AGCM), decyzja 25 października 2018 — kara 10 mln EUR.",
+    "url": "https://www.agcm.it/",
+    "publisher": null,
+    "domain": "agcm.it",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C01",
+    "caseTitle": "Apple Batterygate",
+    "citation": "Direction générale de la concurrence, de la consommation et de la répression des fraudes (DGCCRF), decyzja 7 lutego 2020.",
+    "url": "https://www.economie.gouv.fr/dgccrf",
+    "publisher": null,
+    "domain": "economie.gouv.fr",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C01",
+    "caseTitle": "Apple Batterygate",
+    "citation": "National Association of Attorneys General, \"33-State AG Settlement with Apple\", listopad 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C01",
+    "caseTitle": "Apple Batterygate",
+    "citation": "Autoridade Nacional (Portugalia), decyzja 2023 — 25 mln EUR.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C01",
+    "caseTitle": "Apple Batterygate",
+    "citation": "Loi n° 2020-105 du 10 février 2020 relative à la lutte contre le gaspillage et à l'économie circulaire, Art. L441-2 Code de la consommation.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C01",
+    "caseTitle": "Apple Batterygate",
+    "citation": "EU Directive 2024/1799 on common rules promoting the repair of goods (\"Right to Repair Directive\").",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C01",
+    "caseTitle": "Apple Batterygate",
+    "citation": "iFixit, materiały techniczne o wymianie baterii iPhone 6s, 7.",
+    "url": "https://www.ifixit.com/",
+    "publisher": null,
+    "domain": "ifixit.com",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C01",
+    "caseTitle": "Apple Batterygate",
+    "citation": "Kyle Wiens, wystąpienia publiczne Right to Repair Coalition.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C01",
+    "caseTitle": "Apple Batterygate",
+    "citation": "Apple Support, \"iPhone Battery and Performance\", dokument techniczny.",
+    "url": "https://support.apple.com/en-us/HT208387",
+    "publisher": null,
+    "domain": "support.apple.com",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C01",
+    "caseTitle": "Apple Batterygate",
+    "citation": "Competition Appeal Tribunal UK, *Morgan v. Apple Inc.*, decyzja 2022 umożliwiająca class action.",
+    "url": null,
+    "publisher": "Morgan v. Apple Inc.",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C01",
+    "caseTitle": "Apple Batterygate",
+    "citation": "Fairphone, raporty środowiskowe 2020–2024.",
+    "url": "https://www.fairphone.com",
+    "publisher": null,
+    "domain": "fairphone.com",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C02",
+    "caseTitle": "Apple Siri Grading",
+    "citation": "Alex Hern, \"Apple contractors 'regularly hear confidential details' on Siri recordings\", *The Guardian*, 26 lipca 2019.",
+    "url": "https://www.theguardian.com/technology/2019/jul/26/apple-contractors-regularly-hear-confidential-details-on-siri-recordings",
+    "publisher": "The Guardian",
+    "domain": "theguardian.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C02",
+    "caseTitle": "Apple Siri Grading",
+    "citation": "Apple Newsroom, \"Improving Siri's privacy protections\", 28 sierpnia 2019.",
+    "url": "https://www.apple.com/newsroom/2019/08/improving-sirisi-privacy-protections/",
+    "publisher": null,
+    "domain": "apple.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C02",
+    "caseTitle": "Apple Siri Grading",
+    "citation": "Thomas Le Bonniec, \"Open letter to European data protection authorities\", 20 maja 2020. Publikacja: *Politico Europe*, *The Guardian*.",
+    "url": null,
+    "publisher": "The Guardian",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C02",
+    "caseTitle": "Apple Siri Grading",
+    "citation": "*Lopez et al. v. Apple Inc.*, N.D. Cal. — dokumenty PACER.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C02",
+    "caseTitle": "Apple Siri Grading",
+    "citation": "Matt Day et al., \"Amazon Workers Are Listening to What You Tell Alexa\", *Bloomberg*, 10 kwietnia 2019 — paralelna sprawa.",
+    "url": null,
+    "publisher": "Bloomberg",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C02",
+    "caseTitle": "Apple Siri Grading",
+    "citation": "VRT NWS (Belgia), ujawnienie Google Assistant, lipiec 2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C02",
+    "caseTitle": "Apple Siri Grading",
+    "citation": "*Motherboard* (Joseph Cox), ujawnienie Microsoft Cortana / Skype Translator, sierpień 2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C02",
+    "caseTitle": "Apple Siri Grading",
+    "citation": "NOYB, materiały o słabej egzekucji RODO przeciwko Apple, 2020–2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C02",
+    "caseTitle": "Apple Siri Grading",
+    "citation": "EU Whistleblower Directive 2019/1937.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C02",
+    "caseTitle": "Apple Siri Grading",
+    "citation": "Personal Information Protection Commission (Korea), analogiczne postępowania.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C02",
+    "caseTitle": "Apple Siri Grading",
+    "citation": "CNIL (Francja), wyniki dochodzenia bez kary, 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C02",
+    "caseTitle": "Apple Siri Grading",
+    "citation": "EDPB, Guidelines on processing personal data by voice assistants, 2021.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C02",
+    "caseTitle": "Apple Siri Grading",
+    "citation": "Kodeks Etyki Adwokackiej, uchwała NRA 19 listopada 2022 — przepisy dot. nowych technologii.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C02",
+    "caseTitle": "Apple Siri Grading",
+    "citation": "Geoffrey A. Fowler, \"Alexa has been eavesdropping on you this whole time\", *The Washington Post*, 2019.",
+    "url": null,
+    "publisher": "The Washington Post",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C02",
+    "caseTitle": "Apple Siri Grading",
+    "citation": "Apple Support: \"Ask Siri, Dictation & Privacy\".",
+    "url": "https://support.apple.com/en-us/HT210657",
+    "publisher": null,
+    "domain": "support.apple.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C03",
+    "caseTitle": "Apple CSAM",
+    "citation": "Apple, \"Expanded Protections for Children\", 5 sierpnia 2021 (archiwalne).",
+    "url": "https://web.archive.org/web/20210805230950/https://www.apple.com/child-safety/",
+    "publisher": null,
+    "domain": "web.archive.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C03",
+    "caseTitle": "Apple CSAM",
+    "citation": "Apple, oświadczenie o porzuceniu CSAM Detection, 7 grudnia 2022, cytowane w *Wired* (Lily Hay Newman).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C03",
+    "caseTitle": "Apple CSAM",
+    "citation": "EFF, \"Apple's Plan to 'Think Different' About Encryption Opens a Backdoor to Your Private Life\", 5 sierpnia 2021.",
+    "url": "https://www.eff.org/deeplinks/2021/08/apples-plan-think-different-about-encryption-opens-backdoor-your-private-life",
+    "publisher": null,
+    "domain": "eff.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C03",
+    "caseTitle": "Apple CSAM",
+    "citation": "Matthew Green et al., \"Bugs in our Pockets: The Risks of Client-Side Scanning\", arXiv:2110.07450, październik 2021.",
+    "url": "https://arxiv.org/abs/2110.07450",
+    "publisher": null,
+    "domain": "arxiv.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C03",
+    "caseTitle": "Apple CSAM",
+    "citation": "Joanna Stern, wywiad z Craig Federighi, *WSJ*, 13 sierpnia 2021.",
+    "url": null,
+    "publisher": "WSJ",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C03",
+    "caseTitle": "Apple CSAM",
+    "citation": "*Jane Doe v. Apple Inc.*, N.D. California, pozew z 8 grudnia 2024. Dokumenty PACER.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C03",
+    "caseTitle": "Apple CSAM",
+    "citation": "Malcolm Owen, \"Apple sued over 2022 dropping of CSAM detection features\", *AppleInsider*, 8 grudnia 2024.",
+    "url": "https://appleinsider.com/articles/24/12/08/apple-sued-over-2022-dropping-of-csam-detection-features",
+    "publisher": "AppleInsider",
+    "domain": "appleinsider.com",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C03",
+    "caseTitle": "Apple CSAM",
+    "citation": "National Center for Missing & Exploited Children (NCMEC), CyberTipline Reports, 2021, 2022, 2023, 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C03",
+    "caseTitle": "Apple CSAM",
+    "citation": "Open letter to Apple, 19 sierpnia 2021, 90+ organizations.  (archiwalne).",
+    "url": "https://appleprivacyletter.com",
+    "publisher": null,
+    "domain": "appleprivacyletter.com",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C03",
+    "caseTitle": "Apple CSAM",
+    "citation": "Erik Neuenschwander, list do Heat Initiative, sierpień 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C03",
+    "caseTitle": "Apple CSAM",
+    "citation": "Alex Stamos, Twitter/X, sierpień 2021.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C03",
+    "caseTitle": "Apple CSAM",
+    "citation": "Edward Snowden, Twitter, sierpień 2021.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C03",
+    "caseTitle": "Apple CSAM",
+    "citation": "UK Online Safety Act 2023 — Section 121, 122 (client-side scanning provisions).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C03",
+    "caseTitle": "Apple CSAM",
+    "citation": "EU Commission, Proposal for Regulation to prevent and combat child sexual abuse (CSAM Regulation), COM/2022/209, maj 2022.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C03",
+    "caseTitle": "Apple CSAM",
+    "citation": "*Bugs in our Pockets* co-authors: Hal Abelson, Ross Anderson, Steven M. Bellovin, Josh Benaloh, Matt Blaze, Jon Callas, Whit Diffie, Susan Landau, Peter G. Neumann, Ronald L. Rivest, Jeffrey I. Schiller, Bruce Schneier, Vanessa Teague, Carmela Troncoso.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C04",
+    "caseTitle": "Microsoft Recall",
+    "citation": "Microsoft Build 2024 keynote, 20 maja 2024. Satya Nadella, Yusuf Mehdi.",
+    "url": "https://build.microsoft.com/en-US/sessions",
+    "publisher": null,
+    "domain": "build.microsoft.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C04",
+    "caseTitle": "Microsoft Recall",
+    "citation": "Kevin Beaumont, \"Stealing everything you've ever typed or viewed on your own Windows PC is now possible with two lines of code — inside the Copilot+ Recall disaster\", DoublePulsar, 22 maja 2024.",
+    "url": "https://doublepulsar.com/",
+    "publisher": null,
+    "domain": "doublepulsar.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C04",
+    "caseTitle": "Microsoft Recall",
+    "citation": "Kevin Beaumont, \"Microsoft Recall on Copilot+ PC: testing the security and privacy implications\", DoublePulsar, kwiecień 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C04",
+    "caseTitle": "Microsoft Recall",
+    "citation": "Alexander Hagenah, \"TotalRecall\", GitHub, 7 czerwca 2024.",
+    "url": "https://github.com/xaitax/TotalRecall",
+    "publisher": null,
+    "domain": "github.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C04",
+    "caseTitle": "Microsoft Recall",
+    "citation": "Pavan Davuluri, \"Update on the Recall (preview) feature for Copilot+ PCs\", Windows Experience Blog, 13 czerwca 2024.",
+    "url": "https://blogs.windows.com",
+    "publisher": null,
+    "domain": "blogs.windows.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C04",
+    "caseTitle": "Microsoft Recall",
+    "citation": "UK Information Commissioner's Office, \"Enquiries into Microsoft Recall\", maj 2024 — komunikat prasowy.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C04",
+    "caseTitle": "Microsoft Recall",
+    "citation": "Signal Foundation, \"Signal Desktop on Windows 11 now includes Screen Security\", 3 czerwca 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C04",
+    "caseTitle": "Microsoft Recall",
+    "citation": "Windows Recall — Wikipedia.",
+    "url": "https://en.wikipedia.org/wiki/Windows_Recall",
+    "publisher": null,
+    "domain": "en.wikipedia.org",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C04",
+    "caseTitle": "Microsoft Recall",
+    "citation": "Nihad A. Hassan, \"Privacy and security risks surrounding Microsoft Recall\", TechTarget, 4 listopada 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C04",
+    "caseTitle": "Microsoft Recall",
+    "citation": "Alexander Hagenah, \"TotalRecall Reloaded\", GitHub, 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C04",
+    "caseTitle": "Microsoft Recall",
+    "citation": "TechRadar, \"Microsoft's Recall tool is back and still has major security concerns\", 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C04",
+    "caseTitle": "Microsoft Recall",
+    "citation": "Microsoft blog, \"Privacy and control for Recall\", 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C04",
+    "caseTitle": "Microsoft Recall",
+    "citation": "EU AI Act (Regulation (EU) 2024/1689), szczególnie art. 6 (high-risk AI systems).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C04",
+    "caseTitle": "Microsoft Recall",
+    "citation": "Kodeks Pracy (PL), art. 22² (monitoring).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C04",
+    "caseTitle": "Microsoft Recall",
+    "citation": "EDPB, \"Guidelines 05/2020 on consent under Regulation 2016/679\" (kontekst privacy by design).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C05",
+    "caseTitle": "LinkedIn AI Training",
+    "citation": "Samantha Cole, \"LinkedIn Is Training AI on Users Without Having Updated Its Terms\", *404 Media*, 18 września 2024.",
+    "url": "https://www.404media.co/linkedin-is-training-ai-on-users-without-having-updated-its-terms/",
+    "publisher": "404 Media",
+    "domain": "404media.co",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C05",
+    "caseTitle": "LinkedIn AI Training",
+    "citation": "Amanda Silberling, Zack Whittaker, \"LinkedIn scraped user data for training before updating its terms of service\", *TechCrunch*, 18 września 2024.",
+    "url": "https://techcrunch.com/2024/09/18/linkedin-scraped-user-data-for-training-before-updating-its-terms-of-service/",
+    "publisher": "TechCrunch",
+    "domain": "techcrunch.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C05",
+    "caseTitle": "LinkedIn AI Training",
+    "citation": "Data Protection Commission Ireland, \"DPC statement on LinkedIn AI Training\", 7 listopada 2025.",
+    "url": "https://www.dataprotection.ie/en/news-media/latest-news/dpc-statement-linkedin-ai-training",
+    "publisher": null,
+    "domain": "dataprotection.ie",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "C05",
+    "caseTitle": "LinkedIn AI Training",
+    "citation": "Data Protection Commission Ireland, decyzja w sprawie LinkedIn — kara 310 mln EUR, 24 października 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C05",
+    "caseTitle": "LinkedIn AI Training",
+    "citation": "Blake Lawit, \"Sharing our AI commitments\", LinkedIn Official Blog, wrzesień 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C05",
+    "caseTitle": "LinkedIn AI Training",
+    "citation": "European Data Protection Board, \"Opinion 28/2024 on certain data protection aspects related to the processing of personal data in the context of AI models\", grudzień 2024.",
+    "url": "https://www.edpb.europa.eu",
+    "publisher": null,
+    "domain": "edpb.europa.eu",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C05",
+    "caseTitle": "LinkedIn AI Training",
+    "citation": "CNIL, wytyczne opt-out dla LinkedIn AI training, październik 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C05",
+    "caseTitle": "LinkedIn AI Training",
+    "citation": "Autoriteit Persoonsgegevens (Dutch DPA), publiczne ostrzeżenie o LinkedIn AI training, październik 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C05",
+    "caseTitle": "LinkedIn AI Training",
+    "citation": "Irish Legal News, \"LinkedIn changes AI plan after DPC intervention\", 10 listopada 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C05",
+    "caseTitle": "LinkedIn AI Training",
+    "citation": "MLex, \"LinkedIn revises EU AI training plans after Irish regulator's risk flagging\", 7 listopada 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C05",
+    "caseTitle": "LinkedIn AI Training",
+    "citation": "IAPP, \"Irish DPC details legitimate interest prong of its LinkedIn enforcement action\", listopad 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C05",
+    "caseTitle": "LinkedIn AI Training",
+    "citation": "Pinsent Masons (Andreas Carney), \"LinkedIn changes gen-AI training plans after data watchdog intervenes\", grudzień 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C05",
+    "caseTitle": "LinkedIn AI Training",
+    "citation": "Open Rights Group, call to ICO, wrzesień 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C05",
+    "caseTitle": "LinkedIn AI Training",
+    "citation": "noyb, statement on LinkedIn AI training, wrzesień 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "C05",
+    "caseTitle": "LinkedIn AI Training",
+    "citation": "EU AI Act (Regulation (EU) 2024/1689).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D01",
+    "caseTitle": "Amazon Ring",
+    "citation": "Federal Trade Commission, \"FTC Says Ring Employees Illegally Surveilled Customers, Failed to Stop Hackers from Taking Control of Users' Cameras\", 31 maja 2023.",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2023/05/ftc-says-ring-employees-illegally-surveilled-customers-failed-stop-hackers-taking-control-users",
+    "publisher": null,
+    "domain": "ftc.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "D01",
+    "caseTitle": "Amazon Ring",
+    "citation": "Sam Biddle, \"For Owners of Amazon's Ring Security Cameras, Strangers May Have Been Watching Too\", *The Intercept*, 10 stycznia 2019.",
+    "url": "https://theintercept.com/2019/01/10/amazon-ring-security-camera/",
+    "publisher": "The Intercept",
+    "domain": "theintercept.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "D01",
+    "caseTitle": "Amazon Ring",
+    "citation": "United States of America v. Ring LLC, Case No. 1:23-cv-01407 (D.D.C.), FTC Complaint, 31 maja 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D01",
+    "caseTitle": "Amazon Ring",
+    "citation": "FTC, \"FTC Sends Refunds to Ring Customers Stemming from 2023 Settlement\", kwiecień 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D01",
+    "caseTitle": "Amazon Ring",
+    "citation": "Kashmir Hill, \"The Ring Doorbell and the Rise of Mass Surveillance\", *New York Times*, 2020.",
+    "url": null,
+    "publisher": "New York Times",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D01",
+    "caseTitle": "Amazon Ring",
+    "citation": "Caroline Haskins, liczne artykuły dla *Motherboard/Vice* 2019–2020 o Ring i policji.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D01",
+    "caseTitle": "Amazon Ring",
+    "citation": "EFF, \"Catalog of Police Partnerships with Ring\", liczne raporty 2019–2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D01",
+    "caseTitle": "Amazon Ring",
+    "citation": "CNN Business, \"Amazon to pay more than $30 million to settle FTC privacy complaints over Alexa and Ring\", 31 maja 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D01",
+    "caseTitle": "Amazon Ring",
+    "citation": "NPR, \"Amazon to pay over $30 million to settle claims Ring, Alexa invaded user privacy\", 1 czerwca 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D01",
+    "caseTitle": "Amazon Ring",
+    "citation": "CBS News, \"Amazon's Ring gave employees 'unfettered' access to customer videos, FTC alleges\", maj 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D01",
+    "caseTitle": "Amazon Ring",
+    "citation": "Ashley LeMay interview, *Good Morning America*, grudzień 2019.",
+    "url": null,
+    "publisher": "Good Morning America",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D01",
+    "caseTitle": "Amazon Ring",
+    "citation": "Fight for the Future, kampania \"End Surveillance Camera Networks\", 2020–2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D01",
+    "caseTitle": "Amazon Ring",
+    "citation": "NIST, \"Smart Home Privacy: User Perception vs Reality\", 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D01",
+    "caseTitle": "Amazon Ring",
+    "citation": "Amazon, communique o reformach Ring, 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D01",
+    "caseTitle": "Amazon Ring",
+    "citation": "Jamie Siminoff, publiczne wystąpienia, powroty w *Shark Tank* 2019, 2022.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D02",
+    "caseTitle": "Amazon Alexa",
+    "citation": "Matt Day, Giles Turner, Natalia Drozdiak, \"Amazon Workers Are Listening to What You Tell Alexa\", *Bloomberg*, 10 kwietnia 2019.",
+    "url": "https://www.bloomberg.com/news/articles/2019-04-10/is-anyone-listening-to-you-on-alexa-a-global-team-reviews-audio",
+    "publisher": "Bloomberg",
+    "domain": "bloomberg.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "D02",
+    "caseTitle": "Amazon Alexa",
+    "citation": "Alex Hern, \"Apple contractors 'regularly hear confidential details' on Siri recordings\", *The Guardian*, 26 lipca 2019.",
+    "url": null,
+    "publisher": "The Guardian",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D02",
+    "caseTitle": "Amazon Alexa",
+    "citation": "Federal Trade Commission, \"FTC and DOJ Charge Amazon with Violating Children's Privacy Law by Keeping Kids' Alexa Voice Recordings Forever and Undermining Parents' Deletion Requests\", 31 maja 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D02",
+    "caseTitle": "Amazon Alexa",
+    "citation": "*In re Amazon Alexa Privacy Litigation*, W.D. Wash., Case No. 2:19-cv-00910.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D02",
+    "caseTitle": "Amazon Alexa",
+    "citation": "Amazon blog post, Rohit Prasad, \"Alexa and Privacy\", kwiecień 2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D02",
+    "caseTitle": "Amazon Alexa",
+    "citation": "Thomas le Bonniec, zeznanie do CNIL, 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D02",
+    "caseTitle": "Amazon Alexa",
+    "citation": "Hamburg DPA (Johannes Caspar), decyzja ws. Alexa, sierpień 2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D02",
+    "caseTitle": "Amazon Alexa",
+    "citation": "European Data Protection Board, \"Guidelines 02/2021 on Virtual Voice Assistants\", 2021.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D02",
+    "caseTitle": "Amazon Alexa",
+    "citation": "Illinois Biometric Information Privacy Act (740 ILCS 14).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D02",
+    "caseTitle": "Amazon Alexa",
+    "citation": "Keller Rohrback L.L.P., komunikaty prasowe o ugodzie, październik 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D02",
+    "caseTitle": "Amazon Alexa",
+    "citation": "Joseph Cox, Sam Biddle, \"Facebook Contractors Transcribe Audio from Messenger\", *Motherboard/Vice*, 13 sierpnia 2019.",
+    "url": null,
+    "publisher": "Motherboard/Vice",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D02",
+    "caseTitle": "Amazon Alexa",
+    "citation": "Tim Cook, oświadczenie o Siri, 2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D02",
+    "caseTitle": "Amazon Alexa",
+    "citation": "Bruce Schneier, \"Alexa and the Privacy Paradox\", blog, 2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D02",
+    "caseTitle": "Amazon Alexa",
+    "citation": "CNBC, NPR, CNN Business — szeroka koordynowana relacja z 31 maja 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D02",
+    "caseTitle": "Amazon Alexa",
+    "citation": "Natalia Drozdiak, follow-up artykuły w *Bloomberg* 2019–2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D03",
+    "caseTitle": "Amazon Alexa & COPPA",
+    "citation": "Federal Trade Commission / Department of Justice, \"FTC and DOJ Charge Amazon with Violating Children's Privacy Law by Keeping Kids' Alexa Voice Recordings Forever and Undermining Parents' Deletion Requests\", 31 maja 2023.",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2023/05/ftc-doj-charge-amazon-violating-childrens-privacy-law-keeping-kids-alexa-voice-recordings-forever",
+    "publisher": null,
+    "domain": "ftc.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "D03",
+    "caseTitle": "Amazon Alexa & COPPA",
+    "citation": "Center for Digital Democracy et al., \"Complaint and Request for Investigation of Amazon's Alexa for Unlawfully Collecting, Using, and Sharing Children's Personal Information Without Parental Consent\", 9 maja 2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D03",
+    "caseTitle": "Amazon Alexa & COPPA",
+    "citation": "United States v. Amazon.com, Inc., Case No. 2:23-cv-00811 (W.D. Wash.), FTC Complaint, 31 maja 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D03",
+    "caseTitle": "Amazon Alexa & COPPA",
+    "citation": "Common Sense Media, \"Smart Speakers and Kids\", 2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D03",
+    "caseTitle": "Amazon Alexa & COPPA",
+    "citation": "Mozilla Foundation, \"Privacy Not Included — Amazon Echo Dot Kids\", 2019–2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D03",
+    "caseTitle": "Amazon Alexa & COPPA",
+    "citation": "COPPA — Children's Online Privacy Protection Act, 15 USC § 6501–6506.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D03",
+    "caseTitle": "Amazon Alexa & COPPA",
+    "citation": "COPPA Rule — 16 CFR Part 312.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D03",
+    "caseTitle": "Amazon Alexa & COPPA",
+    "citation": "FTC, \"YouTube / Google settlement for $170 million for COPPA violations\", 2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D03",
+    "caseTitle": "Amazon Alexa & COPPA",
+    "citation": "FTC, \"Epic Games settlement for $520 million\", 2022.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D03",
+    "caseTitle": "Amazon Alexa & COPPA",
+    "citation": "FTC, \"Microsoft Xbox Live settlement for $20 million\", 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D03",
+    "caseTitle": "Amazon Alexa & COPPA",
+    "citation": "Samuel Levine, oświadczenia publiczne, 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D03",
+    "caseTitle": "Amazon Alexa & COPPA",
+    "citation": "Andy Jassy, reakcja Amazon, 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D03",
+    "caseTitle": "Amazon Alexa & COPPA",
+    "citation": "UK ICO, \"Age-Appropriate Design Code\", 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D03",
+    "caseTitle": "Amazon Alexa & COPPA",
+    "citation": "EDPB, wytyczne dot. dzieci, 2020–2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D03",
+    "caseTitle": "Amazon Alexa & COPPA",
+    "citation": "NPR, CNN, NYT, WaPo — koordynowane relacje 31 maja 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D04",
+    "caseTitle": "Uber God View",
+    "citation": "Ben Smith, \"Uber Executive Suggests Digging Up Dirt On Journalists\", *BuzzFeed News*, 17 listopada 2014.",
+    "url": "https://www.buzzfeed.com/bensmith/uber-executive-suggests-digging-up-dirt-on-journalists",
+    "publisher": "BuzzFeed News",
+    "domain": "buzzfeed.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "D04",
+    "caseTitle": "Uber God View",
+    "citation": "Johana Bhuiyan, Charlie Warzel, \"'God View': Uber Investigates Its Top New York Executive For Privacy Violations\", *BuzzFeed News*, 18 listopada 2014.",
+    "url": "https://www.buzzfeed.com/johanabhuiyan/uber-is-investigating-its-top-new-york-executive-for-privacy",
+    "publisher": "BuzzFeed News",
+    "domain": "buzzfeed.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "D04",
+    "caseTitle": "Uber God View",
+    "citation": "New York State Attorney General, \"A.G. Schneiderman Announces Settlement with Uber to Enhance Rider Privacy\", 6 stycznia 2016.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D04",
+    "caseTitle": "Uber God View",
+    "citation": "Federal Trade Commission, \"Uber Settles FTC Allegations that It Made Deceptive Privacy and Data Security Claims\", 15 sierpnia 2017.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D04",
+    "caseTitle": "Uber God View",
+    "citation": "FTC, \"In the Matter of Uber Technologies Inc.\", File No. 152-3054, 12 kwietnia 2018.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D04",
+    "caseTitle": "Uber God View",
+    "citation": "50 states multi-state settlement with Uber, wrzesień 2018 — 148 mln USD.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D04",
+    "caseTitle": "Uber God View",
+    "citation": "Eric Holder, \"Holder Report on Uber's Workplace Culture\", czerwiec 2017.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D04",
+    "caseTitle": "Uber God View",
+    "citation": "Mike Isaac, *Super Pumped: The Battle for Uber*, W.W. Norton, 2019.",
+    "url": null,
+    "publisher": "Super Pumped: The Battle for Uber",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D04",
+    "caseTitle": "Uber God View",
+    "citation": "Sarah Lacy, *A Uterus Is A Feature, Not A Bug*, HarperBusiness, 2017.",
+    "url": null,
+    "publisher": "A Uterus Is A Feature, Not A Bug",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D04",
+    "caseTitle": "Uber God View",
+    "citation": "Kara Swisher, liczne artykuły *Recode*, 2014–2017.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D04",
+    "caseTitle": "Uber God View",
+    "citation": "Peter Sims, blog post o Chicago incident, 2014.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D04",
+    "caseTitle": "Uber God View",
+    "citation": "Travis Kalanick publiczne oświadczenia, Twitter, 2014.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D04",
+    "caseTitle": "Uber God View",
+    "citation": "Emil Michael, oświadczenie po skandalu, listopad 2014.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D04",
+    "caseTitle": "Uber God View",
+    "citation": "EPIC (Electronic Privacy Information Center), komentarze do FTC settlement.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D04",
+    "caseTitle": "Uber God View",
+    "citation": "Dara Khosrowshahi, listy do pracowników Uber, 2017–2018.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D05",
+    "caseTitle": "Uber Greyball",
+    "citation": "Mike Isaac, \"How Uber Deceives the Authorities Worldwide\", *The New York Times*, 3 marca 2017.",
+    "url": "https://www.nytimes.com/2017/03/03/technology/uber-greyball-program-evade-authorities.html",
+    "publisher": "The New York Times",
+    "domain": "nytimes.com",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "D05",
+    "caseTitle": "Uber Greyball",
+    "citation": "Joe Sullivan, Uber blog post, 8 marca 2017 — ogłoszenie ograniczenia Greyball.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D05",
+    "caseTitle": "Uber Greyball",
+    "citation": "Department of Justice, federal criminal inquiry into Greyball, 2017–2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D05",
+    "caseTitle": "Uber Greyball",
+    "citation": "FTC, \"In the Matter of Uber Technologies Inc.\", File No. 152-3054, kwiecień 2018 consent decree.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D05",
+    "caseTitle": "Uber Greyball",
+    "citation": "50 states multi-state settlement with Uber, wrzesień 2018.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D05",
+    "caseTitle": "Uber Greyball",
+    "citation": "EPIC (Electronic Privacy Information Center), komentarze do FTC, 2018.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D05",
+    "caseTitle": "Uber Greyball",
+    "citation": "Mike Isaac, *Super Pumped: The Battle for Uber*, W.W. Norton, 2019.",
+    "url": null,
+    "publisher": "Super Pumped: The Battle for Uber",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D05",
+    "caseTitle": "Uber Greyball",
+    "citation": "Uber Files (2022) — *The Guardian*, ICIJ.",
+    "url": "https://www.theguardian.com/news/series/uber-files",
+    "publisher": null,
+    "domain": "theguardian.com",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D05",
+    "caseTitle": "Uber Greyball",
+    "citation": "Erich Zwettler (Portland BOT) — zeznania przed komisją miasta Portland, 2017.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D05",
+    "caseTitle": "Uber Greyball",
+    "citation": "EFF, analiza algorithmic discrimination, 2017–2018.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D05",
+    "caseTitle": "Uber Greyball",
+    "citation": "Dara Khosrowshahi, listy i komunikaty do pracowników, 2017+.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D05",
+    "caseTitle": "Uber Greyball",
+    "citation": "Eric Holder, \"Holder Report on Uber's Workplace Culture\", czerwiec 2017.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D05",
+    "caseTitle": "Uber Greyball",
+    "citation": "Tony West, Chief Legal Officer Uber, wystąpienia publiczne.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D05",
+    "caseTitle": "Uber Greyball",
+    "citation": "Senator Markey, **Algorithmic Accountability Act**, projekty 2019, 2022, 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D05",
+    "caseTitle": "Uber Greyball",
+    "citation": "Reporters Without Borders, raporty o nadzorze korporacyjnym wobec dziennikarzy, 2017+.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D06",
+    "caseTitle": "Uber 2016 breach",
+    "citation": "United States v. Joseph Sullivan, Case No. 3:20-cr-00337 (N.D. Cal.), akta sądowe.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D06",
+    "caseTitle": "Uber 2016 breach",
+    "citation": "Department of Justice, \"Former Chief Security Officer Of Uber Sentenced To Three Years' Probation For Covering Up Data Breach Involving Millions Of Uber User Records\", 4 maja 2023.",
+    "url": "https://www.justice.gov/usao-ndca/pr/former-chief-security-officer-uber-sentenced-three-years-probation-covering-data",
+    "publisher": null,
+    "domain": "justice.gov",
+    "dateAccessed": "2026-04-17"
+  },
+  {
+    "caseId": "D06",
+    "caseTitle": "Uber 2016 breach",
+    "citation": "United States v. Sullivan, 9th Circuit Court of Appeals, opinion by Senior Judge Mary McKeown, 13 marca 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D06",
+    "caseTitle": "Uber 2016 breach",
+    "citation": "Dara Khosrowshahi, \"2016 Data Security Incident\", Uber blog, 21 listopada 2017.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D06",
+    "caseTitle": "Uber 2016 breach",
+    "citation": "Bloomberg, \"Uber Paid Hackers to Delete Stolen Data on 57 Million People\", Eric Newcomer, 21 listopada 2017.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D06",
+    "caseTitle": "Uber 2016 breach",
+    "citation": "Federal Trade Commission, \"In the Matter of Uber Technologies Inc.\", File No. 152-3054, kwiecień 2018.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D06",
+    "caseTitle": "Uber 2016 breach",
+    "citation": "50 states multi-state settlement, wrzesień 2018.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D06",
+    "caseTitle": "Uber 2016 breach",
+    "citation": "*Darknet Diaries* podcast episode 138, Jack Rhysider.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D06",
+    "caseTitle": "Uber 2016 breach",
+    "citation": "Mike Isaac, *Super Pumped: The Battle for Uber*, W.W. Norton, 2019.",
+    "url": null,
+    "publisher": "Super Pumped: The Battle for Uber",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D06",
+    "caseTitle": "Uber 2016 breach",
+    "citation": "Matthew Baker, Baker Botts, \"Ninth Circuit Upholds Conviction of Former Uber Security Chief Joseph Sullivan\", marzec 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D06",
+    "caseTitle": "Uber 2016 breach",
+    "citation": "Norton Rose Fulbright, analiza sprawy Sullivan, 2022.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D06",
+    "caseTitle": "Uber 2016 breach",
+    "citation": "Arnold & Porter, \"Ex-Uber CSO Joseph Sullivan Sentenced to Probation\", maj 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D06",
+    "caseTitle": "Uber 2016 breach",
+    "citation": "Courthouse News Service, \"Ninth Circuit upholds conviction of ex-Uber security chief in data breach cover-up\", 13 marca 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D06",
+    "caseTitle": "Uber 2016 breach",
+    "citation": "SEC Cybersecurity Disclosure Rules, 26 lipca 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "D06",
+    "caseTitle": "Uber 2016 breach",
+    "citation": "HackerOne, publiczne oświadczenia o reformach bug bounty, 2018–2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E01",
+    "caseTitle": "TikTok / ByteDance",
+    "citation": "Emily Baker-White, Alexandra S. Levine, \"TikTok Parent ByteDance Spied On Forbes Journalists\", *Forbes*, 22 grudnia 2022.",
+    "url": "https://www.forbes.com/sites/emilybaker-white/2022/12/22/tiktok-tracks-forbes-journalists-bytedance/",
+    "publisher": "Forbes",
+    "domain": "forbes.com",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E01",
+    "caseTitle": "TikTok / ByteDance",
+    "citation": "Drew Harwell, Taylor Lorenz, \"TikTok admits its workers accessed journalists' data; 4 fired\", *Washington Post*, 22 grudnia 2022.",
+    "url": null,
+    "publisher": "Washington Post",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E01",
+    "caseTitle": "TikTok / ByteDance",
+    "citation": "Memo GC Erich Anderson, ByteDance, listopad/grudzień 2022 (ujawnione *Forbes*).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E01",
+    "caseTitle": "TikTok / ByteDance",
+    "citation": "Emily Baker-White, \"TikTok Data on American Users Repeatedly Accessed From China\", *BuzzFeed News*, 17 czerwca 2022.",
+    "url": null,
+    "publisher": "BuzzFeed News",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E01",
+    "caseTitle": "TikTok / ByteDance",
+    "citation": "*United States v. ByteDance*, federalna subpoena, Eastern District of Virginia, marzec 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E01",
+    "caseTitle": "TikTok / ByteDance",
+    "citation": "FBI Director Christopher Wray, zeznanie przed Kongresem, listopad 2022.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E01",
+    "caseTitle": "TikTok / ByteDance",
+    "citation": "Shou Chew, zeznanie przed House Energy and Commerce Committee, 23 marca 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E01",
+    "caseTitle": "TikTok / ByteDance",
+    "citation": "Protecting Americans from Foreign Adversary Controlled Applications Act (PAFACA), 24 kwietnia 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E01",
+    "caseTitle": "TikTok / ByteDance",
+    "citation": "*TikTok, Inc. v. Garland*, 604 U.S. 56 (2025) — SCOTUS.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E01",
+    "caseTitle": "TikTok / ByteDance",
+    "citation": "Joshua Hawley, whistleblower disclosures, marzec 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E01",
+    "caseTitle": "TikTok / ByteDance",
+    "citation": "House Select Committee on the CCP, raporty 2023–2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E01",
+    "caseTitle": "TikTok / ByteDance",
+    "citation": "Sen. Marco Rubio, publiczne oświadczenia 2022–2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E01",
+    "caseTitle": "TikTok / ByteDance",
+    "citation": "Sen. Ed Markey, oświadczenie o USDS Joint Venture, styczeń 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E01",
+    "caseTitle": "TikTok / ByteDance",
+    "citation": "TikTok USDS Joint Venture dokumenty, 22 stycznia 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E01",
+    "caseTitle": "TikTok / ByteDance",
+    "citation": "Milton Mueller, \"Yes, it's a Ban\", Internet Governance Project, marzec 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E02",
+    "caseTitle": "TikTok — dane dzieci",
+    "citation": "Data Protection Commission Ireland, \"DPC announces €345 million fine of TikTok\", 15 września 2023.",
+    "url": "https://www.dataprotection.ie/en/news-media/press-releases/DPC-announces-345-million-euro-fine-of-TikTok",
+    "publisher": null,
+    "domain": "dataprotection.ie",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E02",
+    "caseTitle": "TikTok — dane dzieci",
+    "citation": "European Data Protection Board, \"Following EDPB decision, TikTok ordered to eliminate unfair design practices concerning children\", 15 września 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E02",
+    "caseTitle": "TikTok — dane dzieci",
+    "citation": "UK Information Commissioner's Office, \"ICO fines TikTok £12.7 million for misusing children's data\", 4 kwietnia 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E02",
+    "caseTitle": "TikTok — dane dzieci",
+    "citation": "*TikTok Technology Limited v. Data Protection Commission*, Irish High Court, October 2023 — judicial review proceedings.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E02",
+    "caseTitle": "TikTok — dane dzieci",
+    "citation": "BDO, \"TikTok Receives Significant GDPR Fine for Mishandling Children's Data\", luty 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E02",
+    "caseTitle": "TikTok — dane dzieci",
+    "citation": "Baker Botts, \"TikTok's €345 Million Fine for GDPR Violations on Child Data Protection\", listopad 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E02",
+    "caseTitle": "TikTok — dane dzieci",
+    "citation": "McCann FitzGerald, \"Data Protection Commission fines TikTok €345 million\", wrzesień 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E02",
+    "caseTitle": "TikTok — dane dzieci",
+    "citation": "IAPP, \"Ireland's DPC issues 345M euro TikTok children's privacy fine\", 15 września 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E02",
+    "caseTitle": "TikTok — dane dzieci",
+    "citation": "Hunton, \"Irish Regulator Fines TikTok 345 Million Euros\", wrzesień 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E02",
+    "caseTitle": "TikTok — dane dzieci",
+    "citation": "Anu Talus, EDPB Chair, oświadczenia publiczne 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E02",
+    "caseTitle": "TikTok — dane dzieci",
+    "citation": "Burges Salmon, \"TikTok fined €345 million by Irish Data Protection Commission\", 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E02",
+    "caseTitle": "TikTok — dane dzieci",
+    "citation": "UK Age Appropriate Design Code (Children's Code), 2 września 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E02",
+    "caseTitle": "TikTok — dane dzieci",
+    "citation": "5Rights Foundation, raporty o ochronie dzieci online, 2019–2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E02",
+    "caseTitle": "TikTok — dane dzieci",
+    "citation": "EDPB Binding Decision 02/2023, sierpień 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E02",
+    "caseTitle": "TikTok — dane dzieci",
+    "citation": "Irish Times, \"TikTok can pursue challenge to €345m fine\", 23 października 2023.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E03",
+    "caseTitle": "TikTok — transfery do Chin",
+    "citation": "Data Protection Commission Ireland, \"Irish Data Protection Commission fines TikTok €530 million and orders corrective measures following Inquiry into transfers of EEA User Data to China\", 2 maja 2025.",
+    "url": "https://www.dataprotection.ie/en/news-media/latest-news/irish-data-protection-commission-fines-tiktok-eu530-million-and-orders-corrective-measures-following",
+    "publisher": null,
+    "domain": "dataprotection.ie",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E03",
+    "caseTitle": "TikTok — transfery do Chin",
+    "citation": "European Data Protection Board, statement on 530 mln TikTok fine, maj 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E03",
+    "caseTitle": "TikTok — transfery do Chin",
+    "citation": "Protecting Americans from Foreign Adversary Controlled Applications Act (PAFACA), Pub. L. No. 118-50, 24 kwietnia 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E03",
+    "caseTitle": "TikTok — transfery do Chin",
+    "citation": "*TikTok, Inc. v. Garland*, 604 U.S. 56 (2025).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E03",
+    "caseTitle": "TikTok — transfery do Chin",
+    "citation": "*TikTok v. Garland*, D.C. Circuit, 6 grudnia 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E03",
+    "caseTitle": "TikTok — transfery do Chin",
+    "citation": "Graham Doyle, DPC Deputy Commissioner, public statements, 2 maja 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E03",
+    "caseTitle": "TikTok — transfery do Chin",
+    "citation": "*Data Protection Commission v. Facebook Ireland Ltd (Schrems II)*, C-311/18, TSUE, 16 lipca 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E03",
+    "caseTitle": "TikTok — transfery do Chin",
+    "citation": "Holland & Knight, \"U.S. Supreme Court Upholds TikTok Sale-or-Ban Law\", styczeń 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E03",
+    "caseTitle": "TikTok — transfery do Chin",
+    "citation": "Milton Mueller, \"Yes, it's a Ban\", Internet Governance Project, marzec 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E03",
+    "caseTitle": "TikTok — transfery do Chin",
+    "citation": "Tech Policy Press, \"US Power Play Over TikTok Did Nothing to Protect Americans\", 30 stycznia 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E03",
+    "caseTitle": "TikTok — transfery do Chin",
+    "citation": "Sen. Ed Markey, public statement on USDS Joint Venture, styczeń 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E03",
+    "caseTitle": "TikTok — transfery do Chin",
+    "citation": "House Select Committee on the Chinese Communist Party, raporty 2024–2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E03",
+    "caseTitle": "TikTok — transfery do Chin",
+    "citation": "TikTok USDS Joint Venture agreement dokumenty, 22 stycznia 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E03",
+    "caseTitle": "TikTok — transfery do Chin",
+    "citation": "CNBC, Euronews, Reuters, The Hacker News — szeroka relacja 2 maja 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E03",
+    "caseTitle": "TikTok — transfery do Chin",
+    "citation": "FTC ostrzeżenie, sierpień 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E04",
+    "caseTitle": "X / Grok",
+    "citation": "European Commission, decyzja DSA ws. X, grudzień 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E04",
+    "caseTitle": "X / Grok",
+    "citation": "European Commission, \"Commission opens formal proceedings against X under DSA (Grok)\", 26 stycznia 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E04",
+    "caseTitle": "X / Grok",
+    "citation": "*The Verge*, artykuły o Grok Imagine, sierpień 2025 – styczeń 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E04",
+    "caseTitle": "X / Grok",
+    "citation": "CBS News, test Grok Imagine, 26 stycznia 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E04",
+    "caseTitle": "X / Grok",
+    "citation": "*The New York Times*, \"Taylor Swift deepfake pornography controversy\", styczeń 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E04",
+    "caseTitle": "X / Grok",
+    "citation": "Henna Virkkunen, EU Komisarz, public statements, styczeń 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E04",
+    "caseTitle": "X / Grok",
+    "citation": "Thomas Regnier, EU Commission spokesperson, styczeń 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E04",
+    "caseTitle": "X / Grok",
+    "citation": "UK Ofcom, public statement on Grok, styczeń 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E04",
+    "caseTitle": "X / Grok",
+    "citation": "Paris Prosecutor's Office, announcement of investigation, styczeń 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E04",
+    "caseTitle": "X / Grok",
+    "citation": "DPC Ireland, \"Ireland Opens EU Privacy Investigation into X's Grok AI Over Nonconsensual Deepfake Images\", 26 stycznia 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E04",
+    "caseTitle": "X / Grok",
+    "citation": "DEFIANCE Act (proposed), Durbin, Graham, Klobuchar, Hawley, 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E04",
+    "caseTitle": "X / Grok",
+    "citation": "Home Security Heroes, \"2023 State of Deepfakes\" report.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E04",
+    "caseTitle": "X / Grok",
+    "citation": "StopNCII.org, platform policies.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E04",
+    "caseTitle": "X / Grok",
+    "citation": "FTC, \"Warning on Foreign Regulations and Censorship\", sierpień 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E04",
+    "caseTitle": "X / Grok",
+    "citation": "Malaysian Communications and Multimedia Commission, statement on Grok ban/unban, luty 2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E05",
+    "caseTitle": "Clearview AI",
+    "citation": "Kashmir Hill, \"The Secretive Company That Might End Privacy as We Know It\", *The New York Times*, 18 stycznia 2020.",
+    "url": "https://www.nytimes.com/2020/01/18/technology/clearview-privacy-facial-recognition.html",
+    "publisher": "The New York Times",
+    "domain": "nytimes.com",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E05",
+    "caseTitle": "Clearview AI",
+    "citation": "Kashmir Hill, *Your Face Belongs to Us*, Random House, 2023.",
+    "url": null,
+    "publisher": "Your Face Belongs to Us",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E05",
+    "caseTitle": "Clearview AI",
+    "citation": "Commission Nationale de l'Informatique et des Libertés (CNIL), decyzja wobec Clearview, październik 2022.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E05",
+    "caseTitle": "Clearview AI",
+    "citation": "Garante per la Protezione dei Dati Personali (Włochy), decyzja luty 2022.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E05",
+    "caseTitle": "Clearview AI",
+    "citation": "Hellenic Data Protection Authority (HDPA, Grecja), decyzja lipiec 2022.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E05",
+    "caseTitle": "Clearview AI",
+    "citation": "Autoriteit Persoonsgegevens (Dutch DPA), decyzja wrzesień 2024.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E05",
+    "caseTitle": "Clearview AI",
+    "citation": "UK Information Commissioner's Office (ICO), decyzja maj 2022; Upper Tribunal październik 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E05",
+    "caseTitle": "Clearview AI",
+    "citation": "noyb, \"Criminal complaint against facial recognition company Clearview AI\", październik 2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E05",
+    "caseTitle": "Clearview AI",
+    "citation": "Office of the Privacy Commissioner of Canada, raport o Clearview, 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E05",
+    "caseTitle": "Clearview AI",
+    "citation": "ACLU v. Clearview AI, Illinois BIPA settlement, 2022.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E05",
+    "caseTitle": "Clearview AI",
+    "citation": "National Institute of Standards and Technology (NIST), \"Face Recognition Vendor Test Part 3: Demographic Effects\", 2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E05",
+    "caseTitle": "Clearview AI",
+    "citation": "Buolamwini, Gebru, \"Gender Shades\", MIT Media Lab, 2018.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E05",
+    "caseTitle": "Clearview AI",
+    "citation": "Privacy International, liczne raporty 2020–2025.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E05",
+    "caseTitle": "Clearview AI",
+    "citation": "Clearview AI corporate statements, 2020–2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E05",
+    "caseTitle": "Clearview AI",
+    "citation": "US government contracts — ICE, CBP agreements, 2025–2026.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E06",
+    "caseTitle": "Zoom",
+    "citation": "Federal Trade Commission, \"FTC Requires Zoom to Enhance its Security Practices as Part of Settlement\", 9 listopada 2020.",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2020/11/ftc-requires-zoom-enhance-its-security-practices-part-settlement",
+    "publisher": null,
+    "domain": "ftc.gov",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E06",
+    "caseTitle": "Zoom",
+    "citation": "Micah Lee, Yael Grauer, \"Zoom Meetings Aren't End-to-End Encrypted, Despite Misleading Marketing\", *The Intercept*, 30 marca 2020.",
+    "url": "https://theintercept.com/2020/03/31/zoom-meeting-encryption/",
+    "publisher": "The Intercept",
+    "domain": "theintercept.com",
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E06",
+    "caseTitle": "Zoom",
+    "citation": "Bill Marczak, John Scott-Railton, \"Move Fast and Roll Your Own Crypto: A Quick Look at the Confidentiality of Zoom Meetings\", Citizen Lab University of Toronto, 3 kwietnia 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E06",
+    "caseTitle": "Zoom",
+    "citation": "Eric Yuan, \"A Message to Our Users\", Zoom Blog, 1 kwietnia 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E06",
+    "caseTitle": "Zoom",
+    "citation": "Kate O'Flaherty, *Time Magazine*, \"Chinese Operatives Used Zoom to Target Foreign Activists\", kwiecień 2020.",
+    "url": null,
+    "publisher": "Time Magazine",
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E06",
+    "caseTitle": "Zoom",
+    "citation": "Jonathan Leitschuh, \"Zoom Zero Day: 4+ Million Webcams & Maybe an RCE?\", Medium, 9 lipca 2019.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E06",
+    "caseTitle": "Zoom",
+    "citation": "Letitia James, New York Attorney General, settlement press release, maj 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E06",
+    "caseTitle": "Zoom",
+    "citation": "Rohit Chopra, dissent statement, FTC settlement, 9 listopada 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E06",
+    "caseTitle": "Zoom",
+    "citation": "Rebecca Kelly Slaughter, dissent statement, FTC settlement, 9 listopada 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E06",
+    "caseTitle": "Zoom",
+    "citation": "*In re Zoom Video Communications Inc. Privacy Litigation*, N.D. Cal., settlement 2021 (85 mln USD).",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E06",
+    "caseTitle": "Zoom",
+    "citation": "Bitdefender, \"Zoom Settles with FTC over Allegations of Deceptive Security Practices\", listopad 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E06",
+    "caseTitle": "Zoom",
+    "citation": "Social Media Today, \"Zoom Announces Settlement with the FTC Over False Encryption Claims\", listopad 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E06",
+    "caseTitle": "Zoom",
+    "citation": "IT Pro, \"Zoom settles with the FTC over 'deceptive' encryption claims\", 10 listopada 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E06",
+    "caseTitle": "Zoom",
+    "citation": "Stanford Virtual Human Interaction Lab (Jeremy Bailenson), \"Nonverbal Overload: A Theoretical Argument for the Causes of Zoom Fatigue\", Technology, Mind, and Behavior, 2021.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  },
+  {
+    "caseId": "E06",
+    "caseTitle": "Zoom",
+    "citation": "FBI Boston Field Office, public warning on \"Zoom-bombing\", 2 kwietnia 2020.",
+    "url": null,
+    "publisher": null,
+    "domain": null,
+    "dateAccessed": null
+  }
+]

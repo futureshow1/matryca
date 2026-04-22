@@ -1,0 +1,454 @@
+---
+import Page from '../layouts/Page.astro';
+import sourcesJson from '../data/sources.generated.json';
+import { getCollection } from 'astro:content';
+import { url } from '../utils/url';
+
+const allCases = await getCollection('cases');
+const slugById = new Map<string, string>();
+allCases.forEach((c) => slugById.set(c.data.id, c.data.slug));
+
+interface Source {
+  caseId: string;
+  caseTitle: string;
+  citation: string;
+  url: string | null;
+  publisher: string | null;
+  domain: string | null;
+  dateAccessed: string | null;
+}
+
+const sources = sourcesJson as Source[];
+
+// Group by domain (canonical identifier)
+interface DomainGroup {
+  domain: string;
+  displayName: string;
+  sources: Source[];
+  caseIds: Set<string>;
+}
+
+const byDomain = new Map<string, DomainGroup>();
+for (const s of sources) {
+  if (!s.domain) continue;
+  if (!byDomain.has(s.domain)) {
+    byDomain.set(s.domain, {
+      domain: s.domain,
+      displayName: s.publisher ?? s.domain,
+      sources: [],
+      caseIds: new Set(),
+    });
+  }
+  const g = byDomain.get(s.domain)!;
+  g.sources.push(s);
+  g.caseIds.add(s.caseId);
+}
+
+// Sortuj grupy wg liczby spraw (dla wiarygodności), potem liczby cytowań
+const domainGroups = Array.from(byDomain.values()).sort((a, b) => {
+  const diff = b.caseIds.size - a.caseIds.size;
+  if (diff !== 0) return diff;
+  return b.sources.length - a.sources.length;
+});
+
+// Top 12 publishers do hero section
+const topDomains = domainGroups.slice(0, 12);
+
+// Liczby łączne
+const totalSources = sources.length;
+const totalWithUrl = sources.filter((s) => s.url).length;
+const uniqueDomains = byDomain.size;
+
+// Klasyfikacja domen (dla segmentacji)
+function classifyDomain(domain: string): 'regulator' | 'journalism' | 'academic' | 'ngo' | 'wiki' | 'other' {
+  const d = domain.toLowerCase();
+  // Regulators / government
+  if (/\.(gov|ftc|gov\.)|ec\.europa|europa\.eu|dataprotection|noyb|ico\.org|cnil\.fr|edpb|aepd|pipc|agcm/.test(d))
+    return 'regulator';
+  if (/wikipedia\.org|sourcewatch/.test(d))
+    return 'wiki';
+  if (/\.(edu|ac\.|university)|pnas|nature|arxiv|papers\./.test(d))
+    return 'academic';
+  if (/eff\.org|panoptykon|noyb|amnesty|hrw\.org|article19/.test(d))
+    return 'ngo';
+  if (/nytimes|theguardian|wsj|ft\.com|bloomberg|reuters|washingtonpost|propublica|theintercept|forbes|techcrunch|wired|apnews|bbc|politico|oko\.press|medium\.com/.test(d))
+    return 'journalism';
+  return 'other';
+}
+
+const SEGMENT_LABELS = {
+  regulator: 'Regulatorzy i dokumenty oficjalne',
+  journalism: 'Dziennikarstwo śledcze',
+  academic: 'Źródła akademickie',
+  ngo: 'Organizacje pozarządowe',
+  wiki: 'Wikipedia i encyklopedie',
+  other: 'Pozostałe',
+} as const;
+
+// Group domain groups by segment
+type Segment = keyof typeof SEGMENT_LABELS;
+const segmentOrder: Segment[] = ['regulator', 'journalism', 'academic', 'ngo', 'wiki', 'other'];
+const bySegment: Record<Segment, DomainGroup[]> = {
+  regulator: [],
+  journalism: [],
+  academic: [],
+  ngo: [],
+  wiki: [],
+  other: [],
+};
+domainGroups.forEach((g) => {
+  bySegment[classifyDomain(g.domain)].push(g);
+});
+
+function formatCount(n: number, singular: string, few: string, many: string): string {
+  if (n === 1) return `${n} ${singular}`;
+  if (n >= 2 && n <= 4) return `${n} ${few}`;
+  return `${n} ${many}`;
+}
+---
+
+<Page
+  title="Źródła — bibliografia"
+  description="480 udokumentowanych źródeł z 33 kart bazy Matrycy: regulatorzy, dziennikarstwo śledcze, badania akademickie, NGO."
+>
+  <section class="zrodla">
+    <div class="container">
+      <header class="zrodla__header">
+        <p class="meta" style="color: var(--text-tertiary)">Bibliografia</p>
+        <h1>Źródła</h1>
+        <p class="zrodla__lede">
+          Każde zdanie w tej bazie ma podstawę. Ta strona indeksuje wszystkie
+          {totalSources} cytowanych źródeł z 33 kart — dokumenty regulatorów, orzeczenia
+          sądowe, śledztwa dziennikarskie, badania akademickie, raporty organizacji praw
+          obywatelskich i pozwy zbiorowe.
+        </p>
+
+        <div class="zrodla__stats">
+          <div class="zrodla__stat">
+            <span class="zrodla__stat-value">{totalSources}</span>
+            <span class="zrodla__stat-label meta">cytowań łącznie</span>
+          </div>
+          <div class="zrodla__stat">
+            <span class="zrodla__stat-value">{totalWithUrl}</span>
+            <span class="zrodla__stat-label meta">z aktywnym URL</span>
+          </div>
+          <div class="zrodla__stat">
+            <span class="zrodla__stat-value">{uniqueDomains}</span>
+            <span class="zrodla__stat-label meta">unikalnych publikatorów</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="zrodla__top">
+        <h2 class="zrodla__section-title">Najczęściej cytowane publikatory</h2>
+        <ul class="zrodla__top-list">
+          {topDomains.map((g) => (
+            <li class="zrodla__top-item">
+              <a href={`#d-${g.domain.replace(/[^a-z0-9]/g, '-')}`} class="zrodla__top-link">
+                <span class="zrodla__top-name">{g.displayName}</span>
+                <span class="zrodla__top-meta meta">
+                  {formatCount(g.sources.length, 'cytowanie', 'cytowania', 'cytowań')} · {g.caseIds.size} {g.caseIds.size === 1 ? 'sprawa' : g.caseIds.size < 5 ? 'sprawy' : 'spraw'}
+                </span>
+                <span class="zrodla__top-domain meta">{g.domain}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {segmentOrder.map((seg) => bySegment[seg].length > 0 && (
+        <section class="zrodla__segment">
+          <h2 class="zrodla__section-title">
+            {SEGMENT_LABELS[seg]}
+            <span class="zrodla__segment-count meta">
+              {bySegment[seg].reduce((s, g) => s + g.sources.length, 0)} cytowań
+            </span>
+          </h2>
+          <div class="zrodla__publishers">
+            {bySegment[seg].map((g) => (
+              <details class="zrodla__publisher" id={`d-${g.domain.replace(/[^a-z0-9]/g, '-')}`}>
+                <summary>
+                  <span class="zrodla__pub-name">{g.displayName}</span>
+                  <span class="zrodla__pub-count meta">
+                    {g.sources.length} {g.sources.length === 1 ? 'cytowanie' : g.sources.length < 5 ? 'cytowania' : 'cytowań'}
+                  </span>
+                </summary>
+                <div class="zrodla__pub-domain meta">{g.domain}</div>
+                <ul class="zrodla__citations">
+                  {g.sources.slice(0, 20).map((s) => (
+                    <li class="zrodla__citation">
+                      <p class="zrodla__citation-text">{s.citation}</p>
+                      <p class="meta zrodla__citation-meta">
+                        <a href={url(`/sprawy/${slugById.get(s.caseId) ?? s.caseId.toLowerCase()}/`)} class="zrodla__case-ref">{s.caseId}</a>
+                        <span>—</span>
+                        <span>{s.caseTitle}</span>
+                        {s.url && (
+                          <>
+                            <span>·</span>
+                            <a href={s.url} target="_blank" rel="noopener" class="zrodla__url">
+                              źródło ↗
+                            </a>
+                          </>
+                        )}
+                      </p>
+                    </li>
+                  ))}
+                  {g.sources.length > 20 && (
+                    <li class="meta zrodla__more">
+                      + {g.sources.length - 20} dalszych cytowań w kartach
+                    </li>
+                  )}
+                </ul>
+              </details>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <footer class="zrodla__footer">
+        <p class="meta">
+          Bibliografia generowana automatycznie z sekcji „Źródła" 33 kart.
+          Skrypt: <code>scripts/extract-sources.py</code>. Last build: {new Date().toISOString().slice(0, 10)}.
+        </p>
+      </footer>
+    </div>
+  </section>
+</Page>
+
+<style lang="scss">
+  .zrodla {
+    padding-block: var(--space-8) var(--space-10);
+  }
+
+  .zrodla__header {
+    max-width: 720px;
+    margin-bottom: var(--space-10);
+  }
+
+  .zrodla__header h1 {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    line-height: 1.15;
+    margin-block: var(--space-2) var(--space-4);
+  }
+
+  .zrodla__lede {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-6);
+  }
+
+  .zrodla__stats {
+    display: flex;
+    gap: var(--space-6);
+    flex-wrap: wrap;
+    padding-top: var(--space-4);
+    border-top: 0.5px solid var(--border);
+  }
+
+  .zrodla__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .zrodla__stat-value {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  .zrodla__stat-label {
+    font-size: 11px;
+    color: var(--text-tertiary);
+  }
+
+  .zrodla__section-title {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 500;
+    margin-block: var(--space-8) var(--space-4);
+    padding-bottom: var(--space-2);
+    border-bottom: 0.5px solid var(--border);
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+  }
+
+  .zrodla__segment-count {
+    color: var(--accent);
+    font-size: 12px;
+  }
+
+  // Top publishers
+  .zrodla__top {
+    margin-bottom: var(--space-8);
+  }
+
+  .zrodla__top-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--gap-3);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .zrodla__top-link {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: var(--gap-5);
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--transition-fast);
+
+    &:hover {
+      border-color: var(--accent);
+      .zrodla__top-name { color: var(--accent); }
+    }
+  }
+
+  .zrodla__top-name {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+  }
+
+  .zrodla__top-meta {
+    font-size: 11px;
+    color: var(--accent);
+  }
+
+  .zrodla__top-domain {
+    font-size: 10px;
+    color: var(--text-tertiary);
+  }
+
+  // Publishers
+  .zrodla__publishers {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+    margin-bottom: var(--space-8);
+  }
+
+  .zrodla__publisher {
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    overflow: hidden;
+
+    summary {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: var(--space-3);
+      padding: var(--gap-4) var(--gap-5);
+      cursor: pointer;
+      list-style: none;
+
+      &::-webkit-details-marker { display: none; }
+    }
+
+    &[open] {
+      border-color: var(--accent);
+      summary { border-bottom: 0.5px solid var(--border); }
+    }
+  }
+
+  .zrodla__pub-name {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .zrodla__pub-count {
+    font-size: 11px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .zrodla__pub-domain {
+    padding: 0 var(--gap-5);
+    padding-top: var(--gap-3);
+    color: var(--text-tertiary);
+    font-size: 11px;
+  }
+
+  .zrodla__citations {
+    list-style: none;
+    padding: var(--gap-3) var(--gap-5) var(--gap-5);
+    margin: 0;
+  }
+
+  .zrodla__citation {
+    padding: var(--gap-3) 0;
+    border-bottom: 0.5px solid var(--border);
+
+    &:last-child { border-bottom: none; }
+  }
+
+  .zrodla__citation-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    margin: 0 0 4px;
+  }
+
+  .zrodla__citation-meta {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin: 0;
+  }
+
+  .zrodla__case-ref {
+    color: var(--accent);
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+  }
+
+  .zrodla__url {
+    color: var(--text-secondary);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+  }
+
+  .zrodla__more {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    font-style: italic;
+    padding-top: var(--gap-2);
+  }
+
+  .zrodla__footer {
+    margin-top: var(--space-10);
+    padding-top: var(--space-6);
+    border-top: 0.5px solid var(--border);
+    color: var(--text-tertiary);
+    font-size: 12px;
+
+    code {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      background: var(--bg-secondary);
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+  }
+</style>
