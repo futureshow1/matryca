@@ -50,6 +50,10 @@ geo_coords: []
 priority: TOP
 card_complete: true
 word_count: 3009
+explainer:
+  src: /animations/e02-tiktok-dzieci.html
+  duration: '60s'
+  title: TikTok — dane dzieci · DPC 345 mln € + ICO 12,7 mln £
 subtitle: Kary za dane dzieci — DPC 345 mln €, ICO 12,7 mln £
 years_active:
 - 2020

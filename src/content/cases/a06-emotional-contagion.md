@@ -38,6 +38,10 @@ geo_coords: []
 priority: STANDARD
 card_complete: true
 word_count: 3366
+explainer:
+  src: /animations/a06-emotional-contagion.html
+  duration: '60s'
+  title: Emotional Contagion — eksperyment na 689 000 osób bez zgody
 subtitle: Facebook manipulował emocjami 689 000 osób
 years_active:
 - 2012

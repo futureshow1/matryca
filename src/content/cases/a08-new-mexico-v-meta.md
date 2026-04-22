@@ -41,6 +41,10 @@ geo_coords: []
 priority: TOP
 card_complete: true
 word_count: 3709
+explainer:
+  src: /animations/a08-new-mexico-v-meta.html
+  duration: '60s'
+  title: New Mexico v. Meta — pierwszy wyrok ławy przeciwko Big Tech
 subtitle: Pierwszy wyrok ławy przysięgłych przeciwko Big Tech o szkody dla dzieci
 years_active:
 - 2019

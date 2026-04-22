@@ -47,6 +47,10 @@ word_count: 3376
 years_active:
 - 2018
 - 2021
+explainer:
+  src: /animations/a04-wyciek-533-milionow-numerow-facebooka-z-2-67-mln-polakow.html
+  duration: '60s'
+  title: Wyciek 533 mln numerów Facebooka — w tym 2,67 mln Polaków
 ---
 
 # A04 — Wyciek 533 milionów numerów Facebooka (z 2,67 mln Polaków)

@@ -42,6 +42,10 @@ geo_coords: []
 priority: STANDARD
 card_complete: true
 word_count: 3458
+explainer:
+  src: /animations/a03-onavo-i-facebook-research-vpn-project-atlas.html
+  duration: '60s'
+  title: Onavo / Project Atlas — Facebook płacił za szpiegowanie
 subtitle: płacenie nastolatkom za szpiegowanie
 years_active:
 - 2013

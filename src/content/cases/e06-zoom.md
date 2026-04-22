@@ -43,6 +43,10 @@ geo_coords: []
 priority: STANDARD
 card_complete: true
 word_count: 3937
+explainer:
+  src: /animations/e06-zoom.html
+  duration: '60s'
+  title: Zoom — "end-to-end encryption" które nie było
 subtitle: Fałszywe "end-to-end encryption" i serwery w Chinach
 years_active:
 - 2016

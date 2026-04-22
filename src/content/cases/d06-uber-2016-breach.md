@@ -47,6 +47,10 @@ geo_coords: []
 priority: TOP
 card_complete: true
 word_count: 3190
+explainer:
+  src: /animations/d06-uber-2016-breach.html
+  duration: '60s'
+  title: Uber 2016 — pierwszy CISO skazany karnie
 subtitle: Joe Sullivan ukrył wyciek 57 mln rekordów — pierwszy na świecie skazany CISO
 years_active:
 - 2016

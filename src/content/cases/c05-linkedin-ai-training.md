@@ -43,6 +43,10 @@ geo_coords: []
 priority: TOP
 card_complete: true
 word_count: 3782
+explainer:
+  src: /animations/c05-linkedin-ai-training.html
+  duration: '60s'
+  title: LinkedIn AI Training — trening na profilach bez opt-in
 subtitle: Trenowanie na profilach pracowników bez opt-in
 years_active:
 - 2003

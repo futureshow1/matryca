@@ -36,6 +36,10 @@ geo_coords: []
 priority: STANDARD
 card_complete: true
 word_count: 2528
+explainer:
+  src: /animations/d05-uber-greyball.html
+  duration: '60s'
+  title: Greyball — Uber blokował regulatorów
 subtitle: Narzędzie do unikania regulatorów w zakazanych miastach
 years_active:
 - 2014

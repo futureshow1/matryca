@@ -73,6 +73,10 @@ geo_coords: []
 priority: TOP
 card_complete: true
 word_count: 3949
+explainer:
+  src: /animations/c01-apple-batterygate.html
+  duration: '60s'
+  title: Batterygate — planned obsolescence potwierdzona
 subtitle: Celowe spowalnianie starszych iPhone'ów
 years_active:
 - 2017

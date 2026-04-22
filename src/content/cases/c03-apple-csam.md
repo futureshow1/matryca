@@ -37,6 +37,10 @@ geo_coords: []
 priority: STANDARD
 card_complete: true
 word_count: 3418
+explainer:
+  src: /animations/c03-apple-csam.html
+  duration: '60s'
+  title: CSAM Detection — plan lokalnego skanowania iPhonów
 subtitle: Niewdrożony skaner zdjęć jako konflikt prywatności z ochroną dzieci
 ---
 

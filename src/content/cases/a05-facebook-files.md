@@ -48,6 +48,10 @@ geo_coords: []
 priority: TOP
 card_complete: true
 word_count: 3796
+explainer:
+  src: /animations/a05-facebook-files.html
+  duration: '60s'
+  title: Facebook Files — największy przeciek dokumentów Mety
 subtitle: Frances Haugen i największy wyciek dokumentów Meta
 years_active:
 - 2018

@@ -79,6 +79,10 @@ geo_coords: []
 priority: TOP
 card_complete: true
 word_count: 4182
+explainer:
+  src: /animations/a02-cambridge-analytica.html
+  duration: '60s'
+  title: Cambridge Analytica — 87 milionów profili i wybory 2016
 subtitle: 87 milionów profili Facebooka i wybory 2016
 years_active:
 - 2014

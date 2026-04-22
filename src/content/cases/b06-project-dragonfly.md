@@ -44,6 +44,10 @@ geo_coords: []
 priority: STANDARD
 card_complete: true
 word_count: 3826
+explainer:
+  src: /animations/b06-project-dragonfly.html
+  duration: '60s'
+  title: Project Dragonfly — Google budował ocenzurowaną wyszukiwarkę dla Chin
 subtitle: Ocenzurowana wyszukiwarka Google dla Chin
 years_active:
 - 2017

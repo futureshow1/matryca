@@ -51,6 +51,10 @@ geo_coords: []
 priority: TOP
 card_complete: true
 word_count: 2729
+explainer:
+  src: /animations/e04-x-grok.html
+  duration: '60s'
+  title: Grok Imagine — deepfake bez filtrów
 subtitle: Deepfake'i niekonsensualne i śledztwo DSA
 years_active:
 - 2022

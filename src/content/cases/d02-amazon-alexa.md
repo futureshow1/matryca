@@ -55,6 +55,10 @@ geo_coords: []
 priority: TOP
 card_complete: true
 word_count: 2717
+explainer:
+  src: /animations/d02-amazon-alexa.html
+  duration: '60s'
+  title: Amazon Alexa — tysiące pracowników słuchało twojej kuchni
 subtitle: Ludzkie odsłuchiwanie nagrań z kuchni, sypialni i rozmów prywatnych
 years_active:
 - 2014

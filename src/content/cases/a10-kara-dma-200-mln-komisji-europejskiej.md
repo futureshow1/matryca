@@ -38,6 +38,10 @@ geo_coords: []
 priority: TOP
 card_complete: true
 word_count: 4197
+explainer:
+  src: /animations/a10-kara-dma-200-mln-komisji-europejskiej.html
+  duration: '60s'
+  title: DMA 200 mln € — pierwsza kara za "consent or pay"
 subtitle: '"consent or pay" nie spełnia DMA'
 years_active:
 - 2024

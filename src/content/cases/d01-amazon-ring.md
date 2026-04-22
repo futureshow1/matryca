@@ -47,6 +47,10 @@ geo_coords: []
 priority: STANDARD
 card_complete: true
 word_count: 2955
+explainer:
+  src: /animations/d01-amazon-ring.html
+  duration: '60s'
+  title: Amazon Ring — kamery, policja, hakerzy
 subtitle: Pracownicy podglądali klientów, hakerzy grozili dzieciom
 years_active:
 - 2016

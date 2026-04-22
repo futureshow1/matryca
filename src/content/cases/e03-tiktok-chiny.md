@@ -43,6 +43,10 @@ geo_coords: []
 priority: TOP
 card_complete: true
 word_count: 3224
+explainer:
+  src: /animations/e03-tiktok-chiny.html
+  duration: '60s'
+  title: TikTok — transfery do Chin · 530 mln € DPC + PAFACA USA
 subtitle: 530 mln EUR za transfery do Chin + PAFACA ban w USA
 years_active:
 - 2020

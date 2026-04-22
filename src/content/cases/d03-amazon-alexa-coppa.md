@@ -39,6 +39,10 @@ geo_coords: []
 priority: STANDARD
 card_complete: true
 word_count: 2419
+explainer:
+  src: /animations/d03-amazon-alexa-coppa.html
+  duration: '60s'
+  title: Alexa & COPPA — dzieci miały prawa. Amazon musiał to wdrożyć.
 subtitle: Dane dzieci zachowywane "na zawsze" mimo żądań rodziców
 years_active:
 - 2018

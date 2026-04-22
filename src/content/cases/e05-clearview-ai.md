@@ -73,6 +73,10 @@ geo_coords: []
 priority: STANDARD
 card_complete: true
 word_count: 3441
+explainer:
+  src: /animations/e05-clearview-ai.html
+  duration: '60s'
+  title: Clearview AI — 30 miliardów twarzy
 subtitle: 30 miliardów zeskrapowanych zdjęć twarzy
 years_active:
 - 2017

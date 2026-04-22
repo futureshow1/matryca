@@ -36,6 +36,10 @@ geo_coords: []
 priority: STANDARD
 card_complete: true
 word_count: 3208
+explainer:
+  src: /animations/c04-microsoft-recall.html
+  duration: '60s'
+  title: Windows Recall — screenshoty co 5 sekund w plain text
 subtitle: AI-powered screenshots wszystkiego, co robisz na komputerze
 years_active:
 - 2024

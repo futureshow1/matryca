@@ -83,6 +83,10 @@ geo_coords: []
 priority: TOP
 card_complete: true
 word_count: 3559
+explainer:
+  src: /animations/b04-google-location-history.html
+  duration: '60s'
+  title: Location History — śledzenie mimo wyłączenia
 subtitle: Śledzenie mimo wyłączenia ustawienia
 years_active:
 - 2014

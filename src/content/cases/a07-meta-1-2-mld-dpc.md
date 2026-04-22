@@ -41,6 +41,10 @@ geo_coords: []
 priority: TOP
 card_complete: true
 word_count: 3327
+explainer:
+  src: /animations/a07-meta-1-2-mld-dpc.html
+  duration: '60s'
+  title: Meta 1,2 mld € — rekordowa kara RODO
 subtitle: Rekordowa kara RODO za transfery danych do USA
 years_active:
 - 2020

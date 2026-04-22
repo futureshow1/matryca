@@ -52,6 +52,10 @@ geo_coords: []
 priority: TOP
 card_complete: true
 word_count: 2513
+explainer:
+  src: /animations/d04-uber-god-view.html
+  duration: '60s'
+  title: God View — Uber śledził dziennikarzy dla zabawy
 subtitle: Wewnętrzne narzędzie do śledzenia dziennikarzy i klientów
 years_active:
 - 2013

@@ -41,6 +41,10 @@ geo_coords: []
 priority: STANDARD
 card_complete: true
 word_count: 2961
+explainer:
+  src: /animations/e01-tiktok-bytedance.html
+  duration: '60s'
+  title: ByteDance — śledzenie dziennikarzy FT i Forbes
 subtitle: Inwigilacja dziennikarzy przez chińskich i amerykańskich pracowników
 years_active:
 - 2022

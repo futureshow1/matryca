@@ -88,6 +88,10 @@ geo_coords: []
 priority: STANDARD
 card_complete: true
 word_count: 3664
+explainer:
+  src: /animations/b01-google-street-view-wi-spy.html
+  duration: '60s'
+  title: Street View Wi-Spy — samochody Google nasłuchujące Wi-Fi
 subtitle: Samochody Google zbierały prywatne dane z sieci Wi-Fi
 years_active:
 - 2007

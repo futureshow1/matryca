@@ -53,6 +53,10 @@ geo_coords: []
 priority: TOP
 card_complete: true
 word_count: 4183
+explainer:
+  src: /animations/a09-kara-390-mln-dpc.html
+  duration: '60s'
+  title: Meta 390 mln € — koniec "performance of contract" dla reklam
 subtitle: Koniec "performance of contract" dla reklam behawioralnych Meta
 years_active:
 - 2018

@@ -42,6 +42,10 @@ geo_coords: []
 priority: TOP
 card_complete: true
 word_count: 3492
+explainer:
+  src: /animations/b05-brown-v-google.html
+  duration: '60s'
+  title: Brown v. Google — incognito, które nie było incognito
 subtitle: Tryb Incognito nie jest prywatny
 years_active:
 - 2016

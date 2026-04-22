@@ -57,6 +57,10 @@ geo_coords: []
 priority: STANDARD
 card_complete: true
 word_count: 3650
+explainer:
+  src: /animations/b02-google-safari-workaround.html
+  duration: '60s'
+  title: Safari Workaround — jak Google obszedł blokadę Apple
 subtitle: Omijanie domyślnej prywatności iPhone'ów
 years_active:
 - 2011

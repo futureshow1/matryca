@@ -9,6 +9,7 @@
 - Format 16:9, statyczne SVG + CSS, zero zewnętrznych skryptów
 
 **Struktura każdej sceny:**
+
 | # | Faza | Czas | Funkcja |
 |---|---|---|---|
 | 1 | Setup | 0–7s | Ramka emocjonalna / punkt wejścia widza |

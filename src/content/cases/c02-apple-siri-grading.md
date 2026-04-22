@@ -47,6 +47,10 @@ geo_coords: []
 priority: STANDARD
 card_complete: true
 word_count: 3593
+explainer:
+  src: /animations/c02-apple-siri-grading.html
+  duration: '60s'
+  title: Siri Grading — kontraktorzy słuchali rozmów o seksie, narkotykach, terapii
 subtitle: Kontraktorzy odsłuchiwali intymne rozmowy
 years_active:
 - 2011

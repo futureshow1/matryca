@@ -43,6 +43,10 @@ geo_coords: []
 priority: STANDARD
 card_complete: true
 word_count: 2947
+explainer:
+  src: /animations/b03-google-api-bugs.html
+  duration: '60s'
+  title: Google+ API Bugs — Google wiedział 6 miesięcy. Milczał.
 subtitle: Ukrywanie wycieku i zamknięcie platformy
 years_active:
 - 2015
