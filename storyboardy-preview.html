@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Storyboardy explainerów — podgląd | Matryca</title>
+<style>
+  @font-face {
+    font-family: 'Source Serif 4';
+    src: url('/matryca/animations/fonts/source-serif-4-latin-wght-normal.woff2') format('woff2-variations');
+    font-weight: 300 900;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('/matryca/animations/fonts/inter-latin-wght-normal.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('/matryca/animations/fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+
+  :root {
+    --bg: #FAFAF7;
+    --bg-card: #FFFFFF;
+    --bg-secondary: #F0EFE9;
+    --text: #1A1C20;
+    --text-2: #5C5E64;
+    --text-3: #8E9096;
+    --accent: #A32D2D;
+    --accent-bg: #FCEBEB;
+    --border: rgba(0,0,0,0.08);
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'Inter', -apple-system, system-ui, sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    background: rgba(250, 250, 247, 0.95);
+    backdrop-filter: blur(6px);
+    border-bottom: 0.5px solid var(--border);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+  .topbar a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .topbar a:hover { text-decoration: underline; }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0 0 24px;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 64px 0 12px;
+    padding-top: 32px;
+    border-top: 0.5px solid var(--border);
+  }
+  h2:first-of-type { border-top: 0; padding-top: 0; margin-top: 32px; }
+  h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 20px;
+    margin: 28px 0 10px;
+  }
+
+  p { margin: 0 0 1em; }
+
+  strong { color: var(--accent); font-weight: 500; }
+
+  ol, ul { margin: 0 0 1.2em; padding-left: 24px; }
+  li { margin-bottom: 10px; }
+  li strong:first-child {
+    font-family: var(--sans);
+    font-weight: 700;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 13px;
+  }
+
+  hr {
+    border: none;
+    border-top: 0.5px solid var(--border);
+    margin: 48px 0;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    width: 100%;
+    font-size: 14px;
+  }
+  th, td {
+    padding: 8px 12px;
+    border-bottom: 0.5px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    font-weight: 400;
+  }
+
+  code {
+    font-family: var(--mono);
+    font-size: 13px;
+    background: var(--bg-secondary);
+    padding: 1px 6px;
+    border-radius: 3px;
+    color: var(--accent);
+  }
+
+  /* Case sections (h2 starting with letter-digit code) */
+  h2 {
+    font-family: var(--serif);
+  }
+
+  /* Hook line (first bolded para after h2) */
+  h2 + p strong:first-child {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-right: 4px;
+  }
+
+  /* TOC (top of doc) — wygenerowana automatycznie, ukryjmy na razie */
+  .toc { display: none; }
+
+  /* Make scene list more readable */
+  ol > li {
+    padding-left: 8px;
+  }
+  ol > li > strong:first-child {
+    display: inline-block;
+    min-width: 0;
+  }
+
+  @media (max-width: 640px) {
+    h1 { font-size: 32px; }
+    h2 { font-size: 22px; }
+    .container { padding: 24px 16px 60px; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span><span style="color:var(--accent)">docs/</span>storyboardy-explainerow.md · podgląd</span>
+  <span><a href="/matryca/">← Matryca</a></span>
+</div>
+<div class="container">
+<h1>Storyboardy 60-sekundowych explainerów — 33 sprawy</h1>
+<p><strong>Cel</strong>: każda z 33 spraw dostaje jednominutowy explainer w tej samej gramatyce wizualnej co A01 (v2 grafika):
+- 8 scen, łącznie 60 sekund
+- Duża typografia kapitaliki (sans-serif bold) + serif dla dramatycznych momentów
+- Akcent czerwony <code>#A32D2D</code> jako jedyny kolor akcji
+- Kluczowe liczby/nazwy w serif, kontekst w mono
+- Maksymalnie jedna ciemna scena na explainer (finał albo hook)
+- Format 16:9, statyczne SVG + CSS, zero zewnętrznych skryptów</p>
+<p><strong>Struktura każdej sceny:</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Faza</th>
+<th>Czas</th>
+<th>Funkcja</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Setup</td>
+<td>0–7s</td>
+<td>Ramka emocjonalna / punkt wejścia widza</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Tension</td>
+<td>7–13s</td>
+<td>„To powinno działać. A nie działa."</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Reveal</td>
+<td>13–19s</td>
+<td>Kiedy/kto zaczął</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Mechanism</td>
+<td>19–29s</td>
+<td>Jak to technicznie działało (diagram)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Scale</td>
+<td>29–37s</td>
+<td>Skala — liczby, lata, osoby</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Discovery</td>
+<td>37–45s</td>
+<td>Sygnalista / dziennikarz / regulator</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Reaction</td>
+<td>45–53s</td>
+<td>Kara / ugoda / konsekwencja</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Close</td>
+<td>53–60s</td>
+<td>Nazwa sprawy + link do karty</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>A01 — Local Mess (Meta + Yandex, 2017–2025)</h2>
+<p><strong>Hook</strong>: Nasłuchiwanie na localhost omija każdą warstwę prywatności przeglądarki.</p>
+<ol>
+<li><strong>SETUP</strong> — wielki czerwony napis „INCOGNITO" na jasnym tle. Podpis: „tryb prywatny · VPN · cookies wyłączone".</li>
+<li><strong>TENSION</strong> — „~~POWINNO~~ WYSTARCZYĆ" z czerwonym slashem. Podpis: „i tak nie wystarcza".</li>
+<li><strong>REVEAL</strong> — split screen: lewa strona „2017 YANDEX" + Maps/Browser/Navi/Search; prawa „2024 META" + Facebook/Instagram.</li>
+<li><strong>MECHANISM</strong> — diagram: PRZEGLĄDARKA (incognito) → <code>127.0.0.1</code> → APLIKACJA FB (zalogowana). Animowane pakiety czerwone. Label: „ID sesji → localhost".</li>
+<li><strong>SCALE</strong> — „OSIEM LAT. MILIARDY TELEFONÓW." Pasek czasu 2017 → IX 2024 → VI 2025. Statystyki: 5,8 mln stron Meta Pixel / 3 mln Yandex Metrica / ~2 mld użytkowników FB na Androidzie.</li>
+<li><strong>DISCOVERY</strong> — „3 CZERWCA 2025". Trzy uczelnie: IMDEA Networks / Radboud / KU Leuven. Dan Goodin, Ars Technica.</li>
+<li><strong>REACTION</strong> — zegar „07:45" czerwony wielki. „Osiem lat praktyki | Trzy godziny reakcji". Pozew zbiorowy w USA.</li>
+<li><strong>CLOSE</strong> (dark) — „LOCAL MESS" gigant czerwony. „Sandboxing — ominięty. Tryb incognito — ominięty. Karta A01".</li>
+</ol>
+<hr />
+<h2>A02 — Cambridge Analytica (Meta + CA, 2013–2018)</h2>
+<p><strong>Hook</strong>: 87 mln profili Facebooka → kampania Trumpa 2016 + Brexit.</p>
+<ol>
+<li><strong>SETUP</strong> — „MYŚLAŁEŚ, ŻE LIKE NA FACEBOOKU TO TYLKO LIKE". Podpis: „2013 rok".</li>
+<li><strong>TENSION</strong> — liczba rośnie na ekranie: 300 tys. → 87 mln. Label: „tyle profili wyciekło".</li>
+<li><strong>REVEAL</strong> — „thisisyourdigitallife" nazwa aplikacji. Autor: Aleksandr Kogan, Cambridge. Kontekst: „quiz psychometryczny".</li>
+<li><strong>MECHANISM</strong> — diagram: 300 tys. zainstalowało aplikację → aplikacja pobrała też dane <em>znajomych</em> → 87 mln profili. „OCEAN (Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism)".</li>
+<li><strong>SCALE</strong> — „KAMPANIA TRUMPA". Brexit. 5,8 mld wyświetleń profilowanych reklam.</li>
+<li><strong>DISCOVERY</strong> — „CHRISTOPHER WYLIE". Zdjęcie? Typograficzny portret. The Observer / NYT, marzec 2018. Carole Cadwalladr obok.</li>
+<li><strong>REACTION</strong> — „5 000 000 000 USD" — kara FTC, rekord. + 725 mln USD class action + 100 mln SEC. Cambridge Analytica upada.</li>
+<li><strong>CLOSE</strong> — „CAMBRIDGE ANALYTICA" + „pierwsza sprawa, która przekonała świat, że dane to broń polityczna". Karta A02.</li>
+</ol>
+<hr />
+<h2>A03 — Onavo / Facebook Research VPN / Project Atlas (Meta, 2013–2019)</h2>
+<p><strong>Hook</strong>: Facebook płacił nastolatkom 20 USD/miesiąc za zainstalowanie VPN-a, który szpiegował każdą ich aplikację.</p>
+<ol>
+<li><strong>SETUP</strong> — „VPN. PRYWATNOŚĆ." Czerwone słowa. „Tak brzmiała reklama Onavo".</li>
+<li><strong>TENSION</strong> — „CZEGO NIE POWIEDZIELI". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „2013–2018: Onavo" → „2016–2019: Project Atlas". Facebook przejmuje Onavo w 2013.</li>
+<li><strong>MECHANISM</strong> — diagram: VPN → cały ruch urządzenia → Facebook. „Widzimy JAKIE aplikacji używasz i ile czasu". Zdjęcie schematu: WhatsApp wzrost → FB kupuje go za 19 mld USD.</li>
+<li><strong>SCALE</strong> — „20 USD MIESIĘCZNIE". Wiek użytkowników: 13–35 lat. Nieletni: dopuszczeni. Liczba urządzeń: ok. 187 tys.</li>
+<li><strong>DISCOVERY</strong> — „TechCrunch, Josh Constine, styczeń 2019". Wcześniej: Apple rozwiązuje umowę w 2018 (naruszenie Enterprise Developer Program).</li>
+<li><strong>REACTION</strong> — Apple usuwa Onavo z App Store (2018). Facebook zamyka Research VPN (2019). FTC — bez osobnej kary, ale włączone do 5 mld USD Cambridge Analytica.</li>
+<li><strong>CLOSE</strong> — „ONAVO + PROJECT ATLAS" + „kupiłeś się na darmowy VPN. Płaciłeś sobą". Karta A03.</li>
+</ol>
+<hr />
+<h2>A04 — Wyciek 533 mln numerów Facebooka (2019, ujawniony 2021)</h2>
+<p><strong>Hook</strong>: 2,67 miliona polskich numerów telefonów razem z 533 mln globalnie w ręce przestępców.</p>
+<ol>
+<li><strong>SETUP</strong> — „TWÓJ NUMER NA FACEBOOKU". Podpis: „dałeś go do 2FA".</li>
+<li><strong>TENSION</strong> — „W 2019 WYPŁYNĄŁ". Czerwony slash na słowie „prywatny".</li>
+<li><strong>REVEAL</strong> — „Contact Importer". Bug, który pozwalał na mass-lookup przez numer telefonu.</li>
+<li><strong>MECHANISM</strong> — diagram: atakujący → API Contact Importer → dopasowanie numeru do profilu FB → eksfiltracja. Skala: 533 000 000 rekordów.</li>
+<li><strong>SCALE</strong> — mapa świata: USA 32 mln, Egipt 45 mln, Tunezja 40 mln, Polska <strong>2,67 mln</strong>. 106 krajów dotkniętych.</li>
+<li><strong>DISCOVERY</strong> — „ALON GAL". Januar 2021 — dane w darknet forum za 5 000 USD. Wcześniej: Facebook wiedział od 2019, nie powiadomił użytkowników.</li>
+<li><strong>REACTION</strong> — 265 mln € kara irlandzkiego DPC (2022). Class action trwa. Facebook odmawia zawiadamiania użytkowników o wycieku ich danych.</li>
+<li><strong>CLOSE</strong> — „2,67 MLN POLAKÓW" + „Twój numer mogli kupić za 0,01 USD". Karta A04.</li>
+</ol>
+<hr />
+<h2>A05 — Facebook Files (Meta, ujawnione IX–X 2021)</h2>
+<p><strong>Hook</strong>: Wewnętrzne badania Mety pokazały, że Instagram szkodzi dziewczynkom. Firma wiedziała. Firma ukryła.</p>
+<ol>
+<li><strong>SETUP</strong> — „32% DZIEWCZYNEK". Podpis: „że Instagram pogarsza ich samoocenę".</li>
+<li><strong>TENSION</strong> — „FACEBOOK WIEDZIAŁ". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „FRANCES HAUGEN" — typograficzny portret. Product manager Civic Integrity. Przekazała dokumenty WSJ we wrześniu 2021.</li>
+<li><strong>MECHANISM</strong> — okładki 17 redakcji, które opublikowały „Facebook Files Consortium". WSJ, NYT, Bloomberg, Le Monde, Süddeutsche Zeitung, Politico…</li>
+<li><strong>SCALE</strong> — lista zagadnień: Instagram/nastolatki, XCheck (VIP bez moderacji), przemoc etniczna (Mjanma, Etiopia), handel ludźmi, kartele meksykańskie.</li>
+<li><strong>DISCOVERY</strong> — zeznania przed Kongresem USA 5 października 2021. Parlament brytyjski, listopad 2021.</li>
+<li><strong>REACTION</strong> — brak bezpośredniej kary federalnej. Ale: przyspieszył Digital Services Act w UE. Kara 1,3 mld € (A07) i 390 mln € (A09) częściowo wynikają z tej narracji.</li>
+<li><strong>CLOSE</strong> — „FACEBOOK FILES" + „największa seria przecieków w historii Doliny Krzemowej". Karta A05.</li>
+</ol>
+<hr />
+<h2>A06 — Emotional Contagion (Meta + Cornell, 2014)</h2>
+<p><strong>Hook</strong>: Przez tydzień w 2012 Facebook manipulował newsfeedami 689 tys. użytkowników, żeby sprawdzić, czy można wywołać u nich depresję.</p>
+<ol>
+<li><strong>SETUP</strong> — „NASZ NEWSFEED TO MY". Podpis: „to MY wybieramy, co widzimy".</li>
+<li><strong>TENSION</strong> — „2012: KTOŚ TO WYBIERA ZA NAS". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — nazwa badania: „Experimental evidence of massive-scale emotional contagion through social networks". Autorzy: Adam D. I. Kramer (Meta), Jamie Guillory + Jeffrey Hancock (Cornell).</li>
+<li><strong>MECHANISM</strong> — diagram: 689 000 użytkowników podzielonych na grupy. Grupa A: więcej smutnych postów. Grupa B: więcej pozytywnych. Mierzono ton ich własnych postów.</li>
+<li><strong>SCALE</strong> — 689 003 osób. 3 mln postów analizowanych. Żadnej świadomej zgody — „klauzula akceptacji regulaminu".</li>
+<li><strong>DISCOVERY</strong> — publikacja w PNAS, czerwiec 2014. Okrzyk w prasie: Forbes, The Atlantic, New York Times.</li>
+<li><strong>REACTION</strong> — Cornell IRB: „to nie wymagało zgody etycznej". PNAS wydaje Editorial Expression of Concern. Zero kar formalnych. Ale: zmiana dyskusji o „informed consent" w badaniach na platformach.</li>
+<li><strong>CLOSE</strong> — „EMOTIONAL CONTAGION" + „pierwsze publicznie opisane użycie 689 000 ludzi jako królików doświadczalnych". Karta A06.</li>
+</ol>
+<hr />
+<h2>A07 — Meta 1,2 mld € kara DPC (2023)</h2>
+<p><strong>Hook</strong>: Największa kara RODO w historii. Meta miała 5 miesięcy, żeby przestać przesyłać dane do USA. Nie przestała.</p>
+<ol>
+<li><strong>SETUP</strong> — „SCHREMS II". Podpis: „lipiec 2020, wyrok TSUE".</li>
+<li><strong>TENSION</strong> — „MUSIALI SIĘ ZATRZYMAĆ". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „MAX SCHREMS" — typograficzny portret. „noyb", 2011. Chronologia: Schrems I (2015, Safe Harbor upada) → Schrems II (2020, Privacy Shield upada).</li>
+<li><strong>MECHANISM</strong> — diagram: Meta Ireland → Meta USA → serwery w Kalifornii → zakres NSA Section 702. Bez SCC. Bez prawnej podstawy po 2020.</li>
+<li><strong>SCALE</strong> — „450 MILIONÓW EUROPEJCZYKÓW" — użytkownicy Facebooka i Instagrama. Transfery od 2013. Po Schrems II: dalsze. 3 lata ignorowania wyroku.</li>
+<li><strong>DISCOVERY</strong> — DPC Irlandia (po presji Europejskiej Rady Ochrony Danych). Decyzja 22 maja 2023.</li>
+<li><strong>REACTION</strong> — „1 200 000 000 EUR" — rekord RODO. <strong>0,7% rocznego przychodu Mety</strong>. Akcje wzrosły o 1,8% tydzień później.</li>
+<li><strong>CLOSE</strong> — „1,2 MLD €" + „Meta się odwołuje. Transfery trwają". Karta A07.</li>
+</ol>
+<hr />
+<h2>A08 — New Mexico v. Meta (2023)</h2>
+<p><strong>Hook</strong>: Pierwsza sprawa, w której ława przysięgłych USA uznała Big Tech winnego szkody dla dzieci.</p>
+<ol>
+<li><strong>SETUP</strong> — „INSTAGRAM, TIKTOK, SNAPCHAT". Podpis: „platformy, z których korzysta twoje dziecko".</li>
+<li><strong>TENSION</strong> — „DLA NASTOLATEK — SKLEP Z NARKOTYKAMI". Czerwony slash na „bezpieczne".</li>
+<li><strong>REVEAL</strong> — „Raúl Torrez, Attorney General stanu Nowy Meksyk, grudzień 2023". Wcześniejsze podejście: tylko regulacyjne. Nowa strategia: ława przysięgłych.</li>
+<li><strong>MECHANISM</strong> — diagram: pozew cywilny → fałszywe profile 13-latek utworzone przez prokuraturę → rekomendacje predatorów seksualnych w ciągu godzin → dowody.</li>
+<li><strong>SCALE</strong> — w bazie NM: 100+ milionów profili dzieci USA. Globalnie Instagram ma ~500 mln użytkowników poniżej 18.</li>
+<li><strong>DISCOVERY</strong> — Sąd Nowego Meksyku, 2024. Frances Haugen (A05) jako świadek ekspert.</li>
+<li><strong>REACTION</strong> — <strong>pierwszy w historii wyrok ławy przeciwko Big Tech za szkody dla dzieci</strong>. Ugoda nieujawniona. Precedens: otwarcie drogi do kolejnych AG.</li>
+<li><strong>CLOSE</strong> — „PIERWSZY WYROK" + „New Mexico 2023. Precedens.". Karta A08.</li>
+</ol>
+<hr />
+<h2>A09 — Meta 390 mln € kara DPC (2023)</h2>
+<p><strong>Hook</strong>: „Klikając akceptuję regulamin" — Meta chciała, żeby to była zgoda na reklamy. TSUE powiedział nie.</p>
+<ol>
+<li><strong>SETUP</strong> — „AKCEPTUJĘ REGULAMIN". Czerwone. Podpis: „to jest zgoda?".</li>
+<li><strong>TENSION</strong> — „TSUE: NIE". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „PERFORMANCE OF CONTRACT" — argument Mety. Twierdzili: reklamy behawioralne to CZĘŚĆ usługi, więc wystarczy akceptacja regulaminu.</li>
+<li><strong>MECHANISM</strong> — diagram: co robiła Meta → „akceptujesz regulamin = akceptujesz reklamy oparte na twoich danych". Co wymaga RODO → <strong>osobna, świadoma, dobrowolna zgoda</strong> dla reklam.</li>
+<li><strong>SCALE</strong> — 400+ mln europejskich użytkowników. 10 lat tej interpretacji.</li>
+<li><strong>DISCOVERY</strong> — skarga noyb 25 maja 2018 (pierwszy dzień RODO). Pięć lat procesu. Decyzja DPC: styczeń 2023 — po przymusie Europejskiej Rady.</li>
+<li><strong>REACTION</strong> — „390 000 000 EUR" (Facebook 210 mln + Instagram 180 mln). WhatsApp osobno: 5,5 mln €. Meta zmuszona do ponownej weryfikacji zgody.</li>
+<li><strong>CLOSE</strong> — „390 MLN €" + „to nie jest zgoda. To jest wymuszenie.". Karta A09.</li>
+</ol>
+<hr />
+<h2>A10 — Meta DMA 200 mln € kary Komisji (2025)</h2>
+<p><strong>Hook</strong>: „Płać albo zaakceptuj reklamy" — model biznesowy uznany za niezgodny z DMA.</p>
+<ol>
+<li><strong>SETUP</strong> — „CONSENT OR PAY". Czerwone. Podpis: „wybór Mety od listopada 2023".</li>
+<li><strong>TENSION</strong> — „KOMISJA EUROPEJSKA: NIE". Czerwony slash na „wybór".</li>
+<li><strong>REVEAL</strong> — „DIGITAL MARKETS ACT" — od III 2024. „Gatekeepers": Meta, Google, Apple, Amazon, Microsoft, ByteDance.</li>
+<li><strong>MECHANISM</strong> — diagram: użytkownik loguje do FB/IG → dwa przyciski: „płać 12,99 €/miesiąc" lub „akceptuj reklamy spersonalizowane". Brak wariantu „bez reklam behawioralnych, bez płacenia".</li>
+<li><strong>SCALE</strong> — 250+ mln użytkowników UE. Wdrożenie: listopad 2023. Formalna skarga: marzec 2024.</li>
+<li><strong>DISCOVERY</strong> — Komisja Europejska, Thierry Breton, pierwsze postępowanie DMA w historii. Współbadają: Panoptykon, noyb, BEUC.</li>
+<li><strong>REACTION</strong> — „200 000 000 EUR" (23 kwietnia 2025). Meta się odwołuje. Apple dostaje równolegle 500 mln € za App Store.</li>
+<li><strong>CLOSE</strong> — „200 MLN €" + „pierwsza kara DMA. Model biznesowy nie spełnia prawa.". Karta A10.</li>
+</ol>
+<hr />
+<h2>B01 — Google Street View Wi-Spy (2007–2010, ujawnione 2010)</h2>
+<p><strong>Hook</strong>: Samochody Google jeżdżące po ulicach zbierały też fragmenty twojego Wi-Fi. Przez trzy lata. W 30 krajach.</p>
+<ol>
+<li><strong>SETUP</strong> — „GOOGLE MAPUJE ULICE". Podpis: „od 2007".</li>
+<li><strong>TENSION</strong> — „ALE NIE TYLKO ULICE". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „JOHANNES CASPAR" — hamburski komisarz ochrony danych. Audyt 2010.</li>
+<li><strong>MECHANISM</strong> — diagram: samochód Street View → anteny Wi-Fi → „payload data" z otwartych sieci: hasła, emaile, logowania bankowe. „To był błąd jednego inżyniera" — Marius Milner, autor NetStumbler.</li>
+<li><strong>SCALE</strong> — „30 KRAJÓW. 3 LATA. SETKI GIGABAJTÓW." W tym Polska.</li>
+<li><strong>DISCOVERY</strong> — maj 2010, publiczne przyznanie Google. Listopad 2011: policja w Korei Płd. przeszukuje biuro Google.</li>
+<li><strong>REACTION</strong> — łącznie ~30 mln EUR/USD kar: Niemcy 145 tys., Francja 100 tys., Hiszpania 900 tys., 38 stanów USA 7 mln, Joffe v. Google 13 mln. Precedens: 9th Circuit — otwarta sieć Wi-Fi NIE jest „publicznie dostępna".</li>
+<li><strong>CLOSE</strong> — „WI-SPY" + „pierwsza globalna sprawa Big Tech przed regulatorami krajowymi". Karta B01.</li>
+</ol>
+<hr />
+<h2>B02 — Google Safari Workaround (2011–2012)</h2>
+<p><strong>Hook</strong>: Google pisało w reklamie: „Safari domyślnie blokuje tracking". W kodzie: bypass.</p>
+<ol>
+<li><strong>SETUP</strong> — „SAFARI BLOKUJE COOKIES STRON TRZECICH". Podpis: „domyślnie, od 2003".</li>
+<li><strong>TENSION</strong> — „GOOGLE OBSZEDŁ TO W DOUBLECLICK". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „Jonathan Mayer, Ashkan Soltani". Stanford, luty 2012. Przeanalizowali kod.</li>
+<li><strong>MECHANISM</strong> — diagram: skrypt DoubleClick na stronie → submit niewidocznego formularza → Safari interpretuje jako „użytkownik zainicjował" → cookie dopuszczone. Tak przez 8 miesięcy.</li>
+<li><strong>SCALE</strong> — miliony użytkowników iPhone'ów i Maców. Uruchomione na stronach z DoubleClick = większość internetu.</li>
+<li><strong>DISCOVERY</strong> — Wall Street Journal, luty 2012. Badacze: Mayer + Soltani. Później FTC.</li>
+<li><strong>REACTION</strong> — „22 500 000 USD" — rekord FTC w 2012. Pozwy stanów: 17 mln USD. Class action Joffe — 5,5 mln USD.</li>
+<li><strong>CLOSE</strong> — „SAFARI WORKAROUND" + „pierwsze udowodnienie programowego obchodzenia blokad prywatności". Karta B02.</li>
+</ol>
+<hr />
+<h2>B03 — Google+ API Bugs (2015–2018, ujawnione 2018)</h2>
+<p><strong>Hook</strong>: Bug w Google+ odkrywał dane 500 tys. użytkowników. Google wiedział pół roku. Ukrył. Wall Street Journal ujawnił. Google+ zamknęli.</p>
+<ol>
+<li><strong>SETUP</strong> — „BUG". Podpis: „API Google+ ujawnia dane znajomych, którzy ustawili profil na prywatny".</li>
+<li><strong>TENSION</strong> — „GOOGLE WIEDZIAŁ. MILCZAŁ.". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — memo wewnętrzne Google, marzec 2018: „ujawnienie spowoduje dochodzenie regulacyjne porównywalne z Cambridge Analytica".</li>
+<li><strong>MECHANISM</strong> — diagram: aplikacja zewnętrzna → API Google+ People → zwracało dane profilowe „prywatnych" znajomych użytkownika → wyciek imion, emaili, zawodu.</li>
+<li><strong>SCALE</strong> — „500 000 KONT". Bug istniał od 2015 do marca 2018. 438 zewnętrznych aplikacji.</li>
+<li><strong>DISCOVERY</strong> — Wall Street Journal, Douglas MacMillan, październik 2018. Na bazie wewnętrznych dokumentów Google.</li>
+<li><strong>REACTION</strong> — Google ogłasza zamknięcie Google+ (8 października 2018). Listopad 2018: drugi bug, 52,5 mln kont. Class action settlement: 7,5 mln USD.</li>
+<li><strong>CLOSE</strong> — „GOOGLE+" + „zamknięty nie dlatego, że nie był popularny. Zamknięty, bo naruszenie wyciekło.". Karta B03.</li>
+</ol>
+<hr />
+<h2>B04 — Google Location History (2014–2022)</h2>
+<p><strong>Hook</strong>: Wyłączałeś „Historia lokalizacji" 10 razy. Google śledził dalej, przez drugie ustawienie.</p>
+<ol>
+<li><strong>SETUP</strong> — „WYŁĄCZYŁAM HISTORIĘ LOKALIZACJI". Podpis: „Google: OK. A jednak nie".</li>
+<li><strong>TENSION</strong> — „DRUGIE USTAWIENIE: WEB &amp; APP ACTIVITY". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „RYAN NAKASHIMA, AP, SIERPIEŃ 2018". Kupił 20 telefonów, wyłączył Location History, zmierzył, co Google zbiera.</li>
+<li><strong>MECHANISM</strong> — diagram: Location History (widoczny) → Timeline. „Web &amp; App Activity" (ukryty, domyślnie włączony) → lokalizacja przez Wi-Fi, IP, sensor fusion. 340 transmisji dziennie z Androida.</li>
+<li><strong>SCALE</strong> — 8 lat praktyki (2014–2022). Miliardy użytkowników Androida. Wewnętrzne e-maile Google: „uproszczenie UX zmniejszy precyzję targetingu reklam".</li>
+<li><strong>DISCOVERY</strong> — profil Douglas Schmidt, Vanderbilt — raport „Google Data Collection". Pozwy AG Arizony (2020), 40 stanów (2022).</li>
+<li><strong>REACTION</strong> — Arizona 85 mln USD, 40 AG 391,5 mln USD (rekord historyczny), DC+IN+TX+WA 29,5 mln USD, Korea PIPC 48 mln EUR, Australia ACCC 35 mln EUR, class action 93 mln USD. <strong>Łącznie ~660 mln USD</strong>.</li>
+<li><strong>CLOSE</strong> — „LOCATION HISTORY" + „dark patterns jako model biznesowy". Karta B04.</li>
+</ol>
+<hr />
+<h2>B05 — Brown v. Google (Incognito Mode, 2020–2024)</h2>
+<p><strong>Hook</strong>: „Tryb incognito" → miał być prywatny. Google: zbieraliśmy tak samo.</p>
+<ol>
+<li><strong>SETUP</strong> — „TRYB INCOGNITO". Podpis: „co to właściwie jest?".</li>
+<li><strong>TENSION</strong> — „NIE JEST PRYWATNY". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — class action: Brown v. Google, ND Kalifornia, czerwiec 2020. Chasom Brown, William Byatt, Jeremy Davis, Christopher Castillo.</li>
+<li><strong>MECHANISM</strong> — diagram: użytkownik otwiera incognito → Google Analytics / Ad Manager / Firebase / DoubleClick śledzą tak samo przez cookies trzeciej strony, które Google osadza w milionach witryn.</li>
+<li><strong>SCALE</strong> — „MILIARDY SESJI INCOGNITO DZIENNIE". Szacunki: 136 mln Amerykanów używa incognito regularnie.</li>
+<li><strong>DISCOVERY</strong> — dokumenty wewnętrzne Google ujawnione w procesie: „nie możemy pozwolić, żeby użytkownicy myśleli, że incognito to prywatność — ale też nie możemy im tego powiedzieć wprost".</li>
+<li><strong>REACTION</strong> — <strong>5 000 000 000 USD ugoda</strong> (XII 2023): nie pieniądze, ale zniszczenie danych. Google musi też zmienić komunikaty incognito. Zmienili — subtelnie.</li>
+<li><strong>CLOSE</strong> — „INCOGNITO MODE" + „przez 10 lat sprzedawane jako prywatność, która nie istniała". Karta B05.</li>
+</ol>
+<hr />
+<h2>B06 — Project Dragonfly (Google + Chiny, 2017–2018)</h2>
+<p><strong>Hook</strong>: Google pracował nad ocenzurowaną wersją wyszukiwarki dla Chin. Zatrzymali to pracownicy — nie zarząd.</p>
+<ol>
+<li><strong>SETUP</strong> — „GOOGLE W CHINACH". Podpis: „wyszedł w 2010 po ataku Aurora".</li>
+<li><strong>TENSION</strong> — „WRACA W 2017". Czerwony slash na „zasady".</li>
+<li><strong>REVEAL</strong> — „DRAGONFLY" — kodowe. Ocenzurowana wyszukiwarka Android dla Chin. Filtry: Tiananmen, Dalai Lama, prawa człowieka.</li>
+<li><strong>MECHANISM</strong> — diagram: zapytanie → filter list rządu ChRL → jeśli blocked, zero wyników (bez komunikatu). Link do numeru telefonu użytkownika dla service'u (identyfikacja).</li>
+<li><strong>SCALE</strong> — 1,4 mld obywateli Chin. Potencjalnie 100 mln użytkowników Android.</li>
+<li><strong>DISCOVERY</strong> — „RYAN GALLAGHER, THE INTERCEPT, SIERPIEŃ 2018". Wewnętrzne memo. List otwarty 1400 pracowników Google (sierpień 2018). Zeznania przed Kongresem.</li>
+<li><strong>REACTION</strong> — Google nigdy nie potwierdził ani nie zaprzeczył. Grudzień 2018: projekt „effectively ended" (według liderów, ale zespół rozpuszczony powoli). Sprawa stała się motorem zmiany kultury pracowniczej w Dolinie.</li>
+<li><strong>CLOSE</strong> (dark) — „DRAGONFLY" + „sygnalistami byli pracownicy. Nie zarząd.". Karta B06.</li>
+</ol>
+<hr />
+<h2>C01 — Apple Batterygate (2016–2017)</h2>
+<p><strong>Hook</strong>: Twój stary iPhone nagle zwolnił. To nie był przypadek — to aktualizacja iOS.</p>
+<ol>
+<li><strong>SETUP</strong> — „MÓJ iPHONE STAŁ SIĘ WOLNY". Podpis: „to akurat, że kończy się bateria?".</li>
+<li><strong>TENSION</strong> — „TO NIE BATERIA. TO AKTUALIZACJA.". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „iOS 10.2.1, styczeń 2017". Apple dodał ukrytą funkcję throttlingu.</li>
+<li><strong>MECHANISM</strong> — diagram: stara bateria → iPhone pobiera chwilowo więcej mocy, niż bateria może dać → urządzenie się wyłącza. Apple's fix: zwolnić procesor, żeby zapotrzebowanie malało. Skutek uboczny: iPhone wydaje się „wyczerpany", co popycha do kupna nowego.</li>
+<li><strong>SCALE</strong> — „WSZYSTKIE iPhone 6, 6S, SE, 7". Setki milionów urządzeń globalnie.</li>
+<li><strong>DISCOVERY</strong> — reddit post John Poole (Geekbench), grudzień 2017. Potwierdzenie Apple: „Yes, we do that. But for your own good.".</li>
+<li><strong>REACTION</strong> — „500 000 000 USD" class action (2020, In re Apple Device Performance Litigation). 113 mln USD 34 AG USA. Francja: 25 mln €. Włochy: 10 mln €. Apple wprowadza „Battery Health" UI w iOS 11.3.</li>
+<li><strong>CLOSE</strong> — „BATTERYGATE" + „planned obsolescence potwierdzona dokumentacją wewnętrzną". Karta C01.</li>
+</ol>
+<hr />
+<h2>C02 — Apple Siri Grading (2019)</h2>
+<p><strong>Hook</strong>: Twoje „Hey Siri" słyszał nie tylko iPhone — także kontraktorzy na drugim końcu świata. Także twój seks. Także twoją terapię.</p>
+<ol>
+<li><strong>SETUP</strong> — „HEY SIRI". Podpis: „i tylko iPhone?".</li>
+<li><strong>TENSION</strong> — „I TYSIĄCE KONTRAKTORÓW". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „THOMAS LE BONNIEC" — hiszpański kontraktor Globe Technical Services w Cork. Lipiec 2019 — ujawnił proces „grading" dla The Guardian.</li>
+<li><strong>MECHANISM</strong> — diagram: Siri nieświadomie uruchamiana (np. zamki błyskawicznie, mikrofonu iPhone'a w kieszeni) → nagrania (do 10 sekund) wysyłane do kontraktorów → odsłuchiwane „w celach oceny jakości". Bez szyfrowania użytkownik-kontraktor.</li>
+<li><strong>SCALE</strong> — szacunki: 0,2% wszystkich aktywacji Siri były przesyłane do odsłuchu. Globalnie: miliardy próbek. Kontraktorzy słyszeli: dealing drugs, seks, medical conversations.</li>
+<li><strong>DISCOVERY</strong> — The Guardian, Alex Hern, 26 lipca 2019. Le Bonniec potem: list do CNIL (2020), europejski DPA.</li>
+<li><strong>REACTION</strong> — Apple zawiesza program (2 sierpnia 2019), wprowadza opt-in. Class action Lopez v. Apple — <strong>95 mln USD ugoda</strong> (XII 2024, zatwierdzona 2025). Pierwsza w historii ugoda za nagrania głosowe bez zgody.</li>
+<li><strong>CLOSE</strong> — „SIRI GRADING" + „twój asystent słuchał. A ty nie wiedziałeś, że ludzie słuchali jego.". Karta C02.</li>
+</ol>
+<hr />
+<h2>C03 — Apple CSAM (2021, wycofane)</h2>
+<p><strong>Hook</strong>: Apple chciał skanować każde zdjęcie w twoim iPhonie lokalnie. Pod pozorem ochrony dzieci.</p>
+<ol>
+<li><strong>SETUP</strong> — „CHRONIMY DZIECI". Podpis: „sierpień 2021, Apple".</li>
+<li><strong>TENSION</strong> — „SKANUJEMY TWOJE ZDJĘCIA LOKALNIE". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „CSAM DETECTION". Hash scan każdego zdjęcia przed wysłaniem do iCloud. Lista hashów NCMEC (Amerykańskie Centrum Dzieci Wykorzystywanych).</li>
+<li><strong>MECHANISM</strong> — diagram: zdjęcie → NeuralHash algorithm → 256-bit perceptual hash → porównanie z bazą CSAM → threshold 30 → raport do Apple → weryfikacja ludzka → raport do NCMEC → raport do FBI.</li>
+<li><strong>SCALE</strong> — 1 mld iPhone'ów. „Privacy-preserving", twierdziło Apple. 90+ kryptografów podpisało list otwarty: „wszystkie argumenty stosują się też do rządów żądających skanowania pod innym kątem".</li>
+<li><strong>DISCOVERY</strong> — ogłoszenie 5 sierpnia 2021. W ciągu tygodnia: EFF, ACLU, Edward Snowden, Matthew Green krytykują. Wewnątrz Apple — Erik Neuenschwander zeznaje w Kongresie.</li>
+<li><strong>REACTION</strong> — Apple zawiesza plany (wrzesień 2021), formalnie wycofuje (grudzień 2022). Zamiast tego: „Advanced Data Protection" (E2EE dla iCloud) — dobrowolne. Nauczka: skanowanie lokalne = backdoor.</li>
+<li><strong>CLOSE</strong> — „CSAM DETECTION" + „nie wdrożone. Ale plan istniał. I może wrócić.". Karta C03.</li>
+</ol>
+<hr />
+<h2>C04 — Microsoft Recall (2024–2025)</h2>
+<p><strong>Hook</strong>: Windows Recall robi screenshoty twojego ekranu co 5 sekund. I zapisuje. I są w plain text.</p>
+<ol>
+<li><strong>SETUP</strong> — „WINDOWS RECALL". Podpis: „maj 2024, Build conference".</li>
+<li><strong>TENSION</strong> — „REMEMBER ANYTHING YOU'VE EVER SEEN". Czerwony slash na „prywatnie".</li>
+<li><strong>REVEAL</strong> — Copilot+ PC, NPU 40 TOPS wymagane. Funkcja: AI OCR + search.</li>
+<li><strong>MECHANISM</strong> — diagram: co 5 sekund → screenshot pulpitu → OCR → SQLite plaintext. Dostęp: każda aplikacja uruchomiona jako ten sam użytkownik.</li>
+<li><strong>SCALE</strong> — wszystkie Copilot+ PC. Windows 11 ma 1,5 mld urządzeń.</li>
+<li><strong>DISCOVERY</strong> — „KEVIN BEAUMONT, DOUBLEPULSAR, MAJ 2024". Pierwsza analiza. Alexander Hagenah (TotalRecall tool, czerwiec 2024): eksfiltracja w sekundach.</li>
+<li><strong>REACTION</strong> — Microsoft wstrzymuje premiera 13 czerwca 2024 (3 tygodnie po ogłoszeniu). Redesign: opt-in, Windows Hello, VBS+TPM encryption. Ale 2026: TotalRecall Reloaded pokazuje kolejne luki.</li>
+<li><strong>CLOSE</strong> — „RECALL" + „najszybciej wycofana funkcja AI w historii Microsoftu". Karta C04.</li>
+</ol>
+<hr />
+<h2>C05 — LinkedIn AI Training (2024)</h2>
+<p><strong>Hook</strong>: LinkedIn trenuje swoje modele AI na twoim profilu, twoich postach, twoich rekomendacjach. Opt-out ukryty 3 menu głęboko.</p>
+<ol>
+<li><strong>SETUP</strong> — „TWÓJ PROFIL LINKEDIN". Podpis: „dla kogo jest?".</li>
+<li><strong>TENSION</strong> — „DLA AI MICROSOFTU". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „SEPTEMBER 2024". LinkedIn globalnie zmienia domyślnie ustawienie „Use data for Generative AI Improvement" na „ON".</li>
+<li><strong>MECHANISM</strong> — diagram: profile, posty, komentarze, reaction → modele AI → Copilot, Bing, Generative AI products Microsoftu. Opt-out: 3 menu głęboko.</li>
+<li><strong>SCALE</strong> — „1,1 MLD UŻYTKOWNIKÓW LINKEDIN". Większość nigdy nie zauważyła zmiany.</li>
+<li><strong>DISCOVERY</strong> — 404 Media, Joseph Cox, wrzesień 2024. TechCrunch, Verge potwierdzają.</li>
+<li><strong>REACTION</strong> — <strong>310 mln € kara DPC</strong> (listopad 2024). Rekord dla kategorii „dark patterns AI training". LinkedIn: „to było na tydzień". DPC: „to wystarczyło".</li>
+<li><strong>CLOSE</strong> — „LINKEDIN AI" + „trenował na tobie, zanim się dowiedziałaś". Karta C05.</li>
+</ol>
+<hr />
+<h2>D01 — Amazon Ring (2019)</h2>
+<p><strong>Hook</strong>: Twój domowy dzwonek wideo. Widzą go pracownicy Amazona. Widzi go policja. Hakerzy krzyczą do dzieci przez głośnik.</p>
+<ol>
+<li><strong>SETUP</strong> — „RING". Podpis: „bezpieczeństwo domu".</li>
+<li><strong>TENSION</strong> — „LUB ODWROTNIE". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „STYCZEŃ 2019, THE INTERCEPT". Ring Ukraine — pracownicy z pełnym dostępem do nagrań wszystkich klientów.</li>
+<li><strong>MECHANISM</strong> — diagram: kamera Ring → S3 bucket niezaszyfrowany → Ring Ukraine zespół adnotujący → opcja „podwójne kliknięcie, żeby wrócić do kamery klienta". Osobno: „Request for Assistance" z policją USA — 20+ tys. nagrań bez nakazu (2020–2022).</li>
+<li><strong>SCALE</strong> — 10+ mln Ring devices USA. Partnership z 2000+ lokalnymi wydziałami policji.</li>
+<li><strong>DISCOVERY</strong> — The Intercept, Sam Biddle, styczeń 2019. Motherboard, Vice — 2019 ujawnia hakerów krzyczących do dzieci.</li>
+<li><strong>REACTION</strong> — <strong>5,8 mln USD kara FTC</strong> (maj 2023). Przymusowe kasowanie danych. Obecnie: Ring wymaga nakazu sądowego, zero domyślnego sharing.</li>
+<li><strong>CLOSE</strong> — „RING" + „nie tylko ty patrzysz na to, co jest przed twoimi drzwiami". Karta D01.</li>
+</ol>
+<hr />
+<h2>D02 — Amazon Alexa (2019)</h2>
+<p><strong>Hook</strong>: Tysiące pracowników Amazona w Rumunii, Indiach, USA słuchało twoich rozmów w kuchni, sypialni, łazience. „W celu doskonalenia usługi".</p>
+<ol>
+<li><strong>SETUP</strong> — „ALEXA, PLAY JAZZ". Podpis: „kto usłyszał?".</li>
+<li><strong>TENSION</strong> — „BUCHAREST, BOSTON, CHENNAI". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „BLOOMBERG, MATT DAY, KWIECIEŃ 2019". 7 pracowników anonimowo — słyszeli intymne rozmowy, potencjalne przestępstwa, seks.</li>
+<li><strong>MECHANISM</strong> — diagram: Echo device → trigger word „Alexa" (lub false trigger: „Alexis", „exit") → nagranie 10–30 sekund → S3 → losowy sample → Amazon transcribe team.</li>
+<li><strong>SCALE</strong> — 100+ mln Echo devices. „Subset" nagrań, ale od milionów urządzeń. Pracownicy 24/7 w 3 kontynentach.</li>
+<li><strong>DISCOVERY</strong> — Bloomberg; The Sun; The Guardian. Sprawy w CNIL, Garante.</li>
+<li><strong>REACTION</strong> — <strong>120 mln USD class action settlement</strong> (In re Amazon Alexa Privacy, 2024). <strong>25 mln USD FTC</strong> (za naruszenie COPPA wobec dzieci, osobna sprawa D03). BIPA Illinois: class action trwa.</li>
+<li><strong>CLOSE</strong> — „ALEXA" + „always-on znaczy zawsze". Karta D02.</li>
+</ol>
+<hr />
+<h2>D03 — Amazon Alexa &amp; COPPA (2023)</h2>
+<p><strong>Hook</strong>: Rodzic prosi Amazon o usunięcie nagrań swojego dziecka. Amazon: „zachowamy je na zawsze, do ulepszania Alexy".</p>
+<ol>
+<li><strong>SETUP</strong> — „USUŃ DANE MOJEGO DZIECKA". Podpis: „prawo rodzica pod COPPA".</li>
+<li><strong>TENSION</strong> — „AMAZON: NIE". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „COPPA, 1998". Amerykańska ustawa o prywatności dzieci poniżej 13 lat. Kary: do 50 000 USD per violation.</li>
+<li><strong>MECHANISM</strong> — diagram: dziecko mówi „Alexa" → nagranie → transkrypcja → nawet jeśli rodzic żąda usunięcia, Amazon zachowuje transkrypcje „do doskonalenia algorytmu".</li>
+<li><strong>SCALE</strong> — miliony Echo devices w amerykańskich domach z dziećmi. Od 2019: ~10 mln Echo Dot Kids.</li>
+<li><strong>DISCOVERY</strong> — FTC v. Amazon, maj 2023. Inspekcja wewnętrzna wyjawia dokumenty techniczne.</li>
+<li><strong>REACTION</strong> — <strong>25 mln USD FTC + 20-letnie zobowiązanie prywatnościowe</strong>. Amazon musi skasować wszystkie historyczne nagrania dzieci (na żądanie rodzica LUB gdy konto jest nieaktywne). Ring dostaje osobne 5,8 mln USD.</li>
+<li><strong>CLOSE</strong> — „COPPA" + „dzieci mają prawa. Platforma musiała wdrożyć to 25 lat później.". Karta D03.</li>
+</ol>
+<hr />
+<h2>D04 — Uber God View (2011–2014)</h2>
+<p><strong>Hook</strong>: Wewnętrzne narzędzie Ubera pokazywało w czasie rzeczywistym każdego klienta na mapie. Dziennikarze byli śledzeni dla zabawy.</p>
+<ol>
+<li><strong>SETUP</strong> — „ZAMAWIASZ UBERA". Podpis: „kto widzi, gdzie jesteś?".</li>
+<li><strong>TENSION</strong> — „KAŻDY W UBERZE". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „GOD VIEW" — wewnętrzne dashboard Ubera. Dostęp: menedżerowie, rekruterzy, nawet staże.</li>
+<li><strong>MECHANISM</strong> — diagram: mapa miasta → każdy aktualny przejazd Uber → kliknięcie = pełna historia klienta. Używane do: „imprezy korporacyjne Ubera gdzie pokazywano tor jazdy dziennikarki Johany Bhuiyan".</li>
+<li><strong>SCALE</strong> — wszystkie miasta Uber. Liczba mających dostęp: nieznana. Tysiące.</li>
+<li><strong>DISCOVERY</strong> — „JOHANA BHUIYAN, BUZZFEED, LISTOPAD 2014". Uber's Emil Michael chciał śledzić dziennikarkę. Sarah Lacy, PandoDaily: „God View pokazali mi w biurze jako feature".</li>
+<li><strong>REACTION</strong> — <strong>20 000 USD ugoda NY AG</strong> (pierwsza) — symboliczna. <strong>148 mln USD w 50 stanach</strong> (2018, połączone z wyciekiem D06). FTC consent decree.</li>
+<li><strong>CLOSE</strong> — „GOD VIEW" + „śledzenie klientów było feature, nie bug". Karta D04.</li>
+</ol>
+<hr />
+<h2>D05 — Uber Greyball (2014–2017)</h2>
+<p><strong>Hook</strong>: Uber identyfikował i blokował regulatorów, którzy chcieli złapać firmę łamiącą prawo w ich miastach.</p>
+<ol>
+<li><strong>SETUP</strong> — „UBER W PORTLAND, PARIS, BOSTON". Podpis: „gdzie był zakazany".</li>
+<li><strong>TENSION</strong> — „I DZIAŁAŁ MIMO TO". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „GREYBALL" — wewnętrzny system Ubera. Klient zidentyfikowany jako regulator = fałszywa aplikacja, brak kierowców.</li>
+<li><strong>MECHANISM</strong> — diagram: użytkownik otwiera aplikację → backend sprawdza: geofence (stacje policji? ratusz?) + historia (kupił telefon na prepaid?) + wzorzec (próbuje zamówić co kilka minut?) → jeśli podejrzany → pokaż „nie ma kierowców" albo fake car że znika.</li>
+<li><strong>MECHANISM</strong> — diagram jw.</li>
+<li><strong>SCALE</strong> — „10+ MIAST". Portland, Paris, Boston, Philadelphia, Las Vegas, Australia, Chiny, Korea Płd.</li>
+<li><strong>DISCOVERY</strong> — „MIKE ISAAC, NYT, MARZEC 2017". Ujawnił przez anonimowych byłych pracowników.</li>
+<li><strong>REACTION</strong> — DOJ criminal investigation (wciąż trwa). Portland wymierza karę. CEO Travis Kalanick odchodzi w 2017 (Greyball jeden z wielu czynników). Uber zmienia politykę: zero greyballowania regulatorów.</li>
+<li><strong>CLOSE</strong> — „GREYBALL" + „program nie do ukrywania się przed klientami. Przed państwem.". Karta D05.</li>
+</ol>
+<hr />
+<h2>D06 — Uber 2016 Breach (ujawnione 2017)</h2>
+<p><strong>Hook</strong>: 57 milionów rekordów wyciekło. CISO Ubera zapłacił hakerom 100 tys. USD, żeby milczeli. Pierwszy raz CISO został za to skazany karnie.</p>
+<ol>
+<li><strong>SETUP</strong> — „2016: WYCIEK 57 MILIONÓW REKORDÓW". Podpis: „dane klientów + kierowców".</li>
+<li><strong>TENSION</strong> — „UBER NIE POWIEDZIAŁ NIKOMU". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „JOE SULLIVAN" — CISO Ubera. Wypłacił hakerom 100 tys. USD z budżetu „bug bounty" — z wymogiem podpisania NDA i usunięcia danych.</li>
+<li><strong>MECHANISM</strong> — diagram: hakerzy włamują się do AWS → pobierają bazę → kontaktują Sullivana → transakcja „bug bounty" → NDA → ukrycie przed FTC, AG stanów, użytkownikami.</li>
+<li><strong>SCALE</strong> — 57 000 000 rekordów: 600 tys. numerów prawa jazdy (kierowcy USA), miliony nazwisk/emaili/numerów.</li>
+<li><strong>DISCOVERY</strong> — Dara Khosrowshahi, nowy CEO Ubera (listopad 2017), ujawnia. Bloomberg potwierdza.</li>
+<li><strong>REACTION</strong> — <strong>148 mln USD</strong> ugoda 50 stanów (2018). <strong>FTC consent decree</strong>. Krytycznie: <strong>październik 2022 — Joe Sullivan skazany</strong> w federalnym sądzie USA. Pierwszy CISO skazany karnie za ukrycie wycieku.</li>
+<li><strong>CLOSE</strong> — „JOE SULLIVAN" + „wyciek danych nie jest wstydem. Ukrycie wycieku jest przestępstwem.". Karta D06.</li>
+</ol>
+<hr />
+<h2>E01 — TikTok / ByteDance inwigilacja dziennikarzy (2022)</h2>
+<p><strong>Hook</strong>: ByteDance próbował użyć aplikacji TikTok, żeby zidentyfikować źródła informacji Financial Times i Forbes.</p>
+<ol>
+<li><strong>SETUP</strong> — „TIKTOK MA MOJE DANE". Podpis: „ale co z nimi robi?".</li>
+<li><strong>TENSION</strong> — „ŚLEDZI DZIENNIKARKI". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „CRISTINA CRIDDLE, FINANCIAL TIMES, GRUDZIEŃ 2022". Jednocześnie: „EMILY BAKER-WHITE, FORBES".</li>
+<li><strong>MECHANISM</strong> — diagram: Criddle pisze o TikToku dla FT → zespół ByteDance Internal Audit and Risk Control Department → użył danych aplikacji do geolokalizacji Criddle → próbował zidentyfikować jej źródło wewnątrz TikToka.</li>
+<li><strong>SCALE</strong> — „KILKUSET DZIENNIKARZY GLOBALNIE" potencjalnie pod obserwacją. 4 pracowników ByteDance zwolnionych (2 w Chinach, 2 w USA).</li>
+<li><strong>DISCOVERY</strong> — Financial Times + Forbes + New York Times publikują śledztwa grudzień 2022.</li>
+<li><strong>REACTION</strong> — DOJ kryminalne dochodzenie USA. Senat USA: zeznania Shou Zi Chew, CEO. PAFACA (kwiecień 2024): ByteDance ma 270 dni na sprzedaż TikToka lub ban USA. SCOTUS styczeń 2025: ban potwierdzony.</li>
+<li><strong>CLOSE</strong> (dark) — „BYTEDANCE" + „platforma śledziła tych, którzy o niej pisali". Karta E01.</li>
+</ol>
+<hr />
+<h2>E02 — TikTok dane dzieci (2021)</h2>
+<p><strong>Hook</strong>: TikTok zakładał profile dzieci poniżej 13 lat publiczne-by-default. Przez lata.</p>
+<ol>
+<li><strong>SETUP</strong> — „TIKTOK. MOJE DZIECKO. 11 LAT.". Podpis: „i ma tam konto".</li>
+<li><strong>TENSION</strong> — „PROFIL PUBLICZNY. DOMYŚLNIE.". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „COPPA + RODO". Dla dzieci poniżej 13 — wymagana zgoda rodzica. Dla 13–17 — domyślnie profil prywatny.</li>
+<li><strong>MECHANISM</strong> — diagram: dziecko rejestruje konto → podaje datę urodzenia (bez weryfikacji) → domyślnie: profil publiczny, komentarze aktywne, DM od wszystkich, algorytm serwuje treści dorosłe. Family Pairing — opcjonalne, rzadko używane.</li>
+<li><strong>SCALE</strong> — „400+ MLN UŻYTKOWNIKÓW UE". Dzieci: szacunki 40% aktywnych kont.</li>
+<li><strong>DISCOVERY</strong> — Anne Longfield, Children's Commissioner UK. ICO UK dochodzenie 2020. DPC Irlandia dochodzenie 2021.</li>
+<li><strong>REACTION</strong> — <strong>ICO UK: 12,7 mln £</strong> (kwiecień 2023). <strong>DPC Irlandia: 345 mln €</strong> (wrzesień 2023). TikTok w odwołaniu.</li>
+<li><strong>CLOSE</strong> — „TIKTOK — DANE DZIECI" + „dzieci nie czytają regulaminów. Platforma to wiedziała.". Karta E02.</li>
+</ol>
+<hr />
+<h2>E03 — TikTok transfery do Chin (2021–2025)</h2>
+<p><strong>Hook</strong>: Dane europejskich nastolatków płynęły do Chin. Pracownicy w Pekinie mieli do nich dostęp. DPC: 530 mln €.</p>
+<ol>
+<li><strong>SETUP</strong> — „MOJE DANE NA TIKTOKU". Podpis: „gdzie fizycznie są?".</li>
+<li><strong>TENSION</strong> — „W SINGAPURZE. NORWEGII. I W CHINACH.". Czerwony slash na „tylko Europa".</li>
+<li><strong>REVEAL</strong> — „SCHREMS II" (A07). Transfer do państw trzecich bez adequacy decision = potrzeba SCC + zabezpieczeń dodatkowych. Chiny: bez adequacy. USA: bez adequacy do 2023.</li>
+<li><strong>MECHANISM</strong> — diagram: użytkownik EU TikTok → serwery Dublin/Oslo/Singapur → ale dostęp: zespoły ByteDance w Chinach (Trust and Safety, engineering). Bez efektywnych zabezpieczeń technicznych.</li>
+<li><strong>SCALE</strong> — „150+ MLN UŻYTKOWNIKÓW UE". Okres audytowany: 2020–2022.</li>
+<li><strong>DISCOVERY</strong> — DPC Ireland rozpoczyna 2021 — po skargach w Niemczech. Szczegółowe audyty do 2024.</li>
+<li><strong>REACTION</strong> — <strong>530 mln € kara DPC</strong> (maj 2025). Druga największa kara po Mecie (1,2 mld €). TikTok zmienia architekturę (Project Clover w EU, 12 mld € inwestycja).</li>
+<li><strong>CLOSE</strong> — „PROJECT CLOVER" + „zbudowano, gdy wyciekło.". Karta E03.</li>
+</ol>
+<hr />
+<h2>E04 — X / Grok — niekonsensualne deepfake'i (2024)</h2>
+<p><strong>Hook</strong>: Elon Musk uruchamia Grok Imagine w X. W ciągu 24 godzin: rozbierania celebrytek, polityczki. Bez filtrów.</p>
+<ol>
+<li><strong>SETUP</strong> — „GROK IMAGINE". Podpis: „sierpień 2024, premiera na X".</li>
+<li><strong>TENSION</strong> — „BEZ FILTRÓW". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „DAY ONE: TAYLOR SWIFT, KAMALA HARRIS, AOC". Fałszywe nagie zdjęcia. Wirusowo na X, w ciągu godzin.</li>
+<li><strong>MECHANISM</strong> — diagram: użytkownik wpisuje prompt „X naga" → Grok image model Black Forest Labs (FLUX.1) → brak SafetyAPI → generuje → X platform jako rozprzestrzeniacz.</li>
+<li><strong>SCALE</strong> — 1000+ deepfake'ów w pierwszym tygodniu. 600 mln użytkowników X.</li>
+<li><strong>DISCOVERY</strong> — media techniczne w ciągu 24h: The Verge, 404 Media, NBC. EU DSA: formalne postępowanie ogłoszone wrzesień 2024.</li>
+<li><strong>REACTION</strong> — Komisja Europejska: <strong>120 mln € kara DSA</strong> (propozycja, kwiecień 2025). Grok Image: „safety model" (jesień 2024). Pozwy osobiste Taylor Swift i AOC w USA: dziesiątki milionów USD. UE Take It Down Act.</li>
+<li><strong>CLOSE</strong> — „GROK IMAGINE" + „deepfake jako produkt. Bez filtra jako feature.". Karta E04.</li>
+</ol>
+<hr />
+<h2>E05 — Clearview AI (2020)</h2>
+<p><strong>Hook</strong>: 30 miliardów twarzy zeskrapowanych z internetu. Firma sprzedaje identyfikację policji. W UE już nie wolno.</p>
+<ol>
+<li><strong>SETUP</strong> — „TWOJA TWARZ NA INSTAGRAMIE". Podpis: „publicznie. Bo tak wybrałaś.".</li>
+<li><strong>TENSION</strong> — „I W BAZIE 30 MILIARDÓW". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „CLEARVIEW AI" — firma założona 2017, Hoan Ton-That. Zeskrapowała Facebook, Instagram, LinkedIn, VK, Twitter.</li>
+<li><strong>MECHANISM</strong> — diagram: policjant wysyła zdjęcie z monitoringu → Clearview dopasowuje → zwraca link do FB/IG tej osoby. 0,5 sekundy zapytanie.</li>
+<li><strong>SCALE</strong> — „30 000 000 000 TWARZY". 3 400 agencji policji USA klientami. Australijska policja: bez jakiejkolwiek jurysdykcji.</li>
+<li><strong>DISCOVERY</strong> — „KASHMIR HILL, NYT, STYCZEŃ 2020". Książka „Your Face Belongs to Us" (2023).</li>
+<li><strong>REACTION</strong> — <strong>UK: 7,5 mln £</strong> (ICO, 2022). <strong>Francja: 20 mln €</strong> (CNIL, 2022). <strong>Włochy: 20 mln €</strong> (Garante, 2022). <strong>Grecja: 20 mln €</strong> (HDPA, 2022). <strong>Holandia: 30 mln €</strong> (AP, 2024). AI Act (2024): zakaz retroactive biometric ID w przestrzeni publicznej.</li>
+<li><strong>CLOSE</strong> — „CLEARVIEW" + „twarzy nie wyłączysz. Wyłączyć muszą regulatorzy.". Karta E05.</li>
+</ol>
+<hr />
+<h2>E06 — Zoom Fałszywe E2EE (2020)</h2>
+<p><strong>Hook</strong>: „Zoom is using end-to-end encryption" — przez lata w marketingu. W rzeczywistości: nie. Serwery część ruchu przez Chiny.</p>
+<ol>
+<li><strong>SETUP</strong> — „MARZEC 2020. PANDEMIA. ZOOM KAŻDY DZIEŃ.". Podpis: „300 mln uczestników dziennie".</li>
+<li><strong>TENSION</strong> — „END-TO-END ENCRYPTION — NIE". Czerwony slash.</li>
+<li><strong>REVEAL</strong> — „CITIZEN LAB, KWIECIEŃ 2020". Bill Marczak. Przeanalizował ruch Zoom: nie E2EE, część routing przez serwery w Beijing.</li>
+<li><strong>MECHANISM</strong> — diagram: użytkownik w UE → Zoom server Bay Area → ALE pod obciążeniem → serwer w Chinach. Klucze szyfrujące: generowane przez Zoom, nie tylko uczestników.</li>
+<li><strong>SCALE</strong> — 300 mln uczestników dziennie (szczyt pandemii). 500 mln kont. Szkoły, szpitale, rządy.</li>
+<li><strong>DISCOVERY</strong> — „CITIZEN LAB + THE INTERCEPT, Micah Lee + Yael Grauer, kwiecień 2020". Wcześniejsze alarmy: Matthew Green (Johns Hopkins).</li>
+<li><strong>REACTION</strong> — <strong>85 mln USD class action</strong> (lipiec 2021, In re Zoom Video Communications). <strong>FTC settlement</strong> — naprawdę E2EE implementowane, zakaz fałszywych reklam. Zoom 5.0 (maj 2020) wprowadza prawdziwe E2EE.</li>
+<li><strong>CLOSE</strong> — „ZOOM" + „E2EE było słowem marketingowym, zanim stało się funkcją.". Karta E06.</li>
+</ol>
+<hr />
+<h2>Co dalej</h2>
+<ul>
+<li>Ten dokument jest <strong>briefem dla implementacji</strong>. Każdy storyboard → plik <code>public/animations/[id]-[slug].html</code> według wzorca v2 (<code>a01-local-mess-v2.html</code>).</li>
+<li>Kolejność pracy: TOP priority cases (17 z 33) najpierw, potem pozostałe 16.</li>
+<li>Po akceptacji Jana: dodajemy <code>explainer</code> w frontmatter każdej karty (analogicznie do A01), layout <code>Case.astro</code> automatycznie embed'uje.</li>
+<li>Sumarycznie: ~40 godzin pracy implementacyjnej na wszystkie 33.</li>
+</ul>
+<p>Kolumna wizualna zachowuje spójność: ta sama paleta, ta sama typografia, ta sama struktura 8 scen × 60s. Przy 33 animacjach portal dostaje <strong>formę, która go odróżnia od każdego innego portalu referencyjnego</strong> — fact-based, ale z graficzną tożsamością.</p>
+</div>
+</body>
+</html>
