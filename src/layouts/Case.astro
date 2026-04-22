@@ -2,6 +2,7 @@
 import Page from './Page.astro';
 import CaseMeta from '../components/case/CaseMeta.astro';
 import CaseKeyFacts from '../components/case/CaseKeyFacts.astro';
+import CaseExplainer from '../components/case/CaseExplainer.astro';
 import Badge from '../components/ui/Badge.astro';
 import RelatedCases from '../components/case/RelatedCases.astro';
 import { url } from '../utils/url';
@@ -36,6 +37,7 @@ interface Props {
   last_updated: string;
   related_cases: string[];
   whistleblowers?: string[];
+  explainer?: { src: string; duration?: string; title?: string };
   seo_description?: string;
 }
 
@@ -58,6 +60,7 @@ const {
   last_updated,
   related_cases,
   whistleblowers,
+  explainer,
   seo_description,
 } = Astro.props;
 ---
@@ -84,6 +87,14 @@ const {
         affected_users={affected_users}
         affected_users_description={affected_users_description}
       />
+
+      {explainer && (
+        <CaseExplainer
+          src={explainer.src}
+          duration={explainer.duration}
+          title={explainer.title}
+        />
+      )}
 
       <div class="case-page__layout">
         <div class="case-page__content prose">

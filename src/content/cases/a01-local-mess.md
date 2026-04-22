@@ -41,6 +41,10 @@ geo_coords: []
 priority: STANDARD
 card_complete: true
 word_count: 3749
+explainer:
+  src: /animations/a01-local-mess-v2.html
+  duration: '60s'
+  title: Jak Meta i Yandex śledziły cię w trybie incognito
 subtitle: Meta i Yandex śledzili przeglądarki Androida przez localhost
 years_active:
 - 2017

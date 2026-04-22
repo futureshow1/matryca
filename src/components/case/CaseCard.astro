@@ -24,6 +24,7 @@ interface Props {
   jurisdictions?: string[];
   tags?: string[];
   priority?: string;
+  hasExplainer?: boolean;
   featured?: boolean;
 }
 
@@ -40,6 +41,7 @@ const {
   jurisdictions = [],
   tags = [],
   priority,
+  hasExplainer = false,
   featured = false,
 } = Astro.props;
 
@@ -83,6 +85,9 @@ const TAG_LABELS: Record<string, string> = {
   <div class="case-card__header">
     <Badge group={group} size="sm" />
     <span class="case-card__id meta">{id}</span>
+    {hasExplainer && (
+      <span class="case-card__explainer meta" title="Ma 60-sekundowy explainer">▶ 60s</span>
+    )}
     <span class="case-card__year meta">{year_revealed}</span>
   </div>
 
@@ -155,6 +160,14 @@ const TAG_LABELS: Record<string, string> = {
     font-size: 11px;
     color: var(--text-tertiary);
     margin-right: auto;
+  }
+
+  .case-card__explainer {
+    font-size: 10px;
+    color: var(--accent);
+    background: var(--accent-bg);
+    padding: 1px 6px;
+    border-radius: var(--radius-sm);
   }
 
   .case-card__year {

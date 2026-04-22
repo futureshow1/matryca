@@ -30,16 +30,17 @@ const pageTitle = title === 'Matryca' ? title : `${title} — Matryca`;
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href={url('/favicon.svg')} />
 
-    <!-- Dark mode: read preference before paint to avoid flash -->
+    <!-- Theme: default LIGHT, dark tylko po świadomym toggle.
+         (Opcja C: portal editorialny startuje jasno dla wszystkich;
+          `prefers-color-scheme: dark` nie jest automatycznie honorowane.
+          Parametr ?theme= zachowany dla strony porównawczej.) -->
     <script is:inline>
       (function () {
+        const urlTheme = new URLSearchParams(location.search).get('theme');
         const stored = localStorage.getItem('matryca-theme');
-        const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches
-          ? 'dark'
-          : 'light';
         document.documentElement.setAttribute(
           'data-theme',
-          stored || preferred
+          urlTheme || stored || 'light'
         );
       })();
     </script>

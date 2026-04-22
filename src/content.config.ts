@@ -116,6 +116,15 @@ const caseCollection = defineCollection({
     card_complete: z.boolean().default(true),
     word_count: z.number().optional(),
 
+    // Explainer (60s animation in public/animations/)
+    explainer: z
+      .object({
+        src: z.string(), // ścieżka względna od rootu, np. /animations/a01-local-mess.html
+        duration: z.string().default('60s'),
+        title: z.string().optional(),
+      })
+      .optional(),
+
     // SEO
     seo_description: z.string().max(160).optional(),
     seo_keywords: z.array(z.string()).default([]),

@@ -87,6 +87,7 @@ const { info, cases, finesEUR, finesUSD } = Astro.props;
             jurisdictions={c.data.jurisdictions}
             tags={c.data.tags}
             priority={c.data.priority}
+            hasExplainer={!!c.data.explainer}
           />
         ))}
       </div>
