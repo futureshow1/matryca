@@ -1,0 +1,397 @@
+<!DOCTYPE html><html lang="pl"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Matryca — baza 33 udokumentowanych skandali Big Tech. Prywatność, bezpieczeństwo, prawa obywateli."><link rel="canonical" href="https://futureshow1.github.io/matryca/sprawy/b03-google-api-bugs/"><title>Google+ API bugs — Matryca</title><!-- No external font CDN — fonts loaded locally via SCSS --><!-- Favicon --><link rel="icon" type="image/svg+xml" href="/matryca/favicon.svg"><!-- Dark mode: read preference before paint to avoid flash --><script>
+      (function () {
+        const stored = localStorage.getItem('matryca-theme');
+        const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light';
+        document.documentElement.setAttribute(
+          'data-theme',
+          stored || preferred
+        );
+      })();
+    </script><!-- Open Graph --><meta property="og:title" content="Google+ API bugs — Matryca"><meta property="og:description" content="Matryca — baza 33 udokumentowanych skandali Big Tech. Prywatność, bezpieczeństwo, prawa obywateli."><meta property="og:url" content="https://futureshow1.github.io/matryca/sprawy/b03-google-api-bugs/"><meta property="og:type" content="website"><style>.status-pill[data-astro-cid-y4qxltpk]{display:inline-block;font-family:var(--font-mono);font-size:10px;letter-spacing:.03em;padding:2px 7px;border-radius:var(--radius-sm);border:.5px solid currentColor;white-space:nowrap}.status-pill--active-investigation[data-astro-cid-y4qxltpk],.status-pill--ongoing-litigation[data-astro-cid-y4qxltpk],.status-pill--criminal-proceedings[data-astro-cid-y4qxltpk]{color:#b45309;background:#b453090f}[data-astro-cid-y4qxltpk][data-theme=dark] .status-pill--active-investigation[data-astro-cid-y4qxltpk],[data-astro-cid-y4qxltpk][data-theme=dark] .status-pill--ongoing-litigation[data-astro-cid-y4qxltpk],[data-astro-cid-y4qxltpk][data-theme=dark] .status-pill--criminal-proceedings[data-astro-cid-y4qxltpk]{color:#fbbf24;background:#fbbf2414}.status-pill--settled[data-astro-cid-y4qxltpk],.status-pill--concluded[data-astro-cid-y4qxltpk]{color:var(--text-secondary);background:transparent}.status-pill--regulatory-monitoring[data-astro-cid-y4qxltpk]{color:var(--accent);background:var(--accent-bg)}.status-pill--withdrawn[data-astro-cid-y4qxltpk]{color:var(--text-tertiary);background:transparent}
+</style>
+<link rel="stylesheet" href="/matryca/_astro/Page.qMFm9wfS.css">
+<link rel="stylesheet" href="/matryca/_astro/_slug_@_@astro.QsmKg_0O.css">
+<style>.badge[data-astro-cid-35zd7xm4]{display:inline-flex;align-items:center;gap:var(--gap-1);border-radius:var(--radius-sm);font-family:var(--font-mono);white-space:nowrap}.badge--md[data-astro-cid-35zd7xm4]{font-size:11px;padding:2px 7px}.badge--sm[data-astro-cid-35zd7xm4]{font-size:10px;padding:1px 5px}.badge__id[data-astro-cid-35zd7xm4]{font-weight:500}.badge__label[data-astro-cid-35zd7xm4]{opacity:.75}.badge--group-a[data-astro-cid-35zd7xm4]{background:#6366f114;color:#4f46e5}[data-astro-cid-35zd7xm4][data-theme=dark] .badge--group-a[data-astro-cid-35zd7xm4]{background:#6366f126;color:#a5b4fc}.badge--group-b[data-astro-cid-35zd7xm4]{background:#10a37f14;color:#0d9488}[data-astro-cid-35zd7xm4][data-theme=dark] .badge--group-b[data-astro-cid-35zd7xm4]{background:#10a37f26;color:#5eead4}.badge--group-c[data-astro-cid-35zd7xm4]{background:#64748b1a;color:#475569}[data-astro-cid-35zd7xm4][data-theme=dark] .badge--group-c[data-astro-cid-35zd7xm4]{background:#94a3b81f;color:#94a3b8}.badge--group-d[data-astro-cid-35zd7xm4]{background:#f59e0b14;color:#d97706}[data-astro-cid-35zd7xm4][data-theme=dark] .badge--group-d[data-astro-cid-35zd7xm4]{background:#f59e0b1f;color:#fbbf24}.badge--group-e[data-astro-cid-35zd7xm4]{background:#a32d2d14;color:var(--accent)}[data-astro-cid-35zd7xm4][data-theme=dark] .badge--group-e[data-astro-cid-35zd7xm4]{background:#a32d2d26;color:#f09595}
+</style></head> <body>  <header class="header" data-astro-cid-qlfjksao> <div class="container header__inner" data-astro-cid-qlfjksao> <a href="/matryca/" class="header__logo" aria-label="Matryca — strona główna" data-astro-cid-qlfjksao> <span class="header__logo-bar" aria-hidden="true" data-astro-cid-qlfjksao></span> <span class="header__logo-name" data-astro-cid-qlfjksao>Matryca</span> <span class="header__logo-sub" data-astro-cid-qlfjksao>/ baza wiedzy</span> </a> <nav class="header__nav" aria-label="Nawigacja główna" data-astro-cid-qlfjksao> <ul class="header__nav-list" data-astro-cid-qlfjksao> <li data-astro-cid-qlfjksao> <a href="/matryca/sprawy/" class="header__nav-link header__nav-link--active" data-astro-cid-qlfjksao> Sprawy </a> </li><li data-astro-cid-qlfjksao> <a href="/matryca/sygnalisci/" class="header__nav-link" data-astro-cid-qlfjksao> Kto odkrył? </a> </li><li data-astro-cid-qlfjksao> <a href="/matryca/firmy/" class="header__nav-link" data-astro-cid-qlfjksao> Firmy </a> </li><li data-astro-cid-qlfjksao> <a href="/matryca/tagi/" class="header__nav-link" data-astro-cid-qlfjksao> Tagi </a> </li><li data-astro-cid-qlfjksao> <a href="/matryca/teksty/" class="header__nav-link" data-astro-cid-qlfjksao> Teksty </a> </li> </ul> </nav> <div class="header__actions" data-astro-cid-qlfjksao> <button class="header__theme-toggle" id="theme-toggle" aria-label="Zmień motyw" title="Jasny / ciemny motyw" data-astro-cid-qlfjksao> <span class="header__theme-icon" aria-hidden="true" id="theme-icon" data-astro-cid-qlfjksao>☀</span> </button> </div> </div> </header> <script type="module">const m=document.getElementById("theme-toggle"),n=document.getElementById("theme-icon");function c(){const t=document.documentElement.getAttribute("data-theme");n&&(n.textContent=t==="dark"?"☽":"☀")}c();m?.addEventListener("click",()=>{const e=document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",e),localStorage.setItem("matryca-theme",e),c()});</script> <main>  <article class="case-page" data-astro-cid-rs7fdjny> <div class="container" data-astro-cid-rs7fdjny> <header class="case-page__header" data-astro-cid-rs7fdjny> <div class="case-page__breadcrumb" data-astro-cid-rs7fdjny> <a href="/matryca/sprawy/" data-astro-cid-rs7fdjny>Wszystkie sprawy</a> <span aria-hidden="true" data-astro-cid-rs7fdjny>/</span> <span class="badge badge--group-b badge--sm" data-astro-cid-35zd7xm4> <span class="badge__id" data-astro-cid-35zd7xm4>B</span> <span class="badge__label" data-astro-cid-35zd7xm4>Google</span> </span> </div> <h1 class="case-page__title" data-astro-cid-rs7fdjny>Google+ API bugs</h1> <p class="case-page__subtitle" data-astro-cid-rs7fdjny>Ukrywanie wycieku i zamknięcie platformy</p> </header> <aside class="keyfacts" aria-label="Kluczowe fakty" data-astro-cid-7a425fug> <div class="keyfacts__item" data-astro-cid-7a425fug> <span class="keyfacts__label meta" data-astro-cid-7a425fug>Najwyższa kara</span> <span class="keyfacts__value" data-astro-cid-7a425fug> 8 mln USD </span> <span class="keyfacts__desc" data-astro-cid-7a425fug>*Matal v. Google* class action</span> </div>   <div class="keyfacts__item" data-astro-cid-7a425fug> <span class="keyfacts__label meta" data-astro-cid-7a425fug>Lata praktyki</span> <span class="keyfacts__value" data-astro-cid-7a425fug>2015–2018</span> <span class="keyfacts__desc" data-astro-cid-7a425fug>okres, który obejmuje dokumentacja</span> </div> <div class="keyfacts__item" data-astro-cid-7a425fug> <span class="keyfacts__label meta" data-astro-cid-7a425fug>Jurysdykcje</span> <span class="keyfacts__value" data-astro-cid-7a425fug>2</span> <span class="keyfacts__desc" data-astro-cid-7a425fug>US, global</span> </div> <div class="keyfacts__item" data-astro-cid-7a425fug> <span class="keyfacts__label meta" data-astro-cid-7a425fug>Status</span> <span class="keyfacts__value keyfacts__value--small" data-astro-cid-7a425fug>Ugoda</span> </div> </aside> <div class="case-page__layout" data-astro-cid-rs7fdjny> <div class="case-page__content prose" data-astro-cid-rs7fdjny>  <h1 id="b03--google-api-bugs-ukrywanie-wycieku-i-zamknięcie-platformy">B03 — Google+ API bugs: Ukrywanie wycieku i zamknięcie platformy</h1>
+<blockquote>
+<p><strong>Kategoria:</strong> Wyciek danych / ukrywanie incydentu / SEC / korporacyjne samobójstwo produktu
+<strong>Firma/firmy:</strong> Google (Alphabet)
+<strong>Lata:</strong> 2015–2018 (pierwszy bug), październik 2018 (ujawnienie), kwiecień 2019 (zamknięcie Google+)
+<strong>Status:</strong> Zakończone — Google+ consumer zamknięty, ugoda 7,5 mln USD
+<strong>ID karty:</strong> B03</p>
+</blockquote>
+<hr>
+<h2 id="metadane">Metadane</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Pole</th><th>Wartość</th></tr></thead><tbody><tr><td>Kraj/region</td><td>Globalnie; ogniska postępowań: USA, Irlandia</td></tr><tr><td>Rok ujawnienia</td><td>8 października 2018 (<em>Wall Street Journal</em>)</td></tr><tr><td>Lata trwania praktyki</td><td>2015–2018 (pierwszy bug); drugi bug: listopad 2018 (6 dni)</td></tr><tr><td>Łączna kara</td><td>7 500 000 USD (ugoda class action)</td></tr><tr><td>Waluta</td><td>USD</td></tr><tr><td>Podstawa prawna</td><td>US Securities Exchange Act (SOX), state consumer protection, pre-RODO (dla UE)</td></tr><tr><td>Sygnalista/odkrywca</td><td><em>WSJ</em> (Douglas MacMillan, Robert McMillan); wyciek wewnętrznego memo Google</td></tr><tr><td>Liczba poszkodowanych</td><td><strong>500 000</strong> (pierwszy bug) + <strong>52,5 mln</strong> (drugi bug) — łącznie ~53 mln użytkowników</td></tr><tr><td>Status (na dziś)</td><td>Zakończone; Google+ consumer zamknięty 2.04.2019; Google Currents zamknięte 2023</td></tr></tbody></table>
+<hr>
+<h2 id="tldr">TL;DR</h2>
+<p><strong>8 października 2018</strong> <em>Wall Street Journal</em> (Douglas MacMillan, Robert McMillan) ujawnił, że <strong>Google wiedział o lukach w API Google+</strong> od <strong>marca 2018</strong> — ale <strong>celowo ukrył informację przed użytkownikami i regulatorami</strong>. Pierwszy bug wystawił dane <strong>~500 000 użytkowników</strong> na dostęp deweloperów aplikacji trzecich (niepubliczne dane profilu: płeć, wiek, email, zawód, miejsce pracy) <strong>od 2015 roku</strong>. Google wykrył błąd w marcu 2018 w ramach <strong>audytu Project Strobe</strong> — wewnętrznej rewizji API po skandalu Cambridge Analytica. Załatał lukę, ale <strong>nie poinformował nikogo</strong>.</p>
+<p>W wewnętrznym memo Google z marca 2018 (zdobytym przez <em>WSJ</em>) zespół prawny argumentował za <strong>niepublikowaniem</strong>: <em>“spowoduje to reputacyjne szkody większe niż korzyści”</em> i — najbardziej obciążająco — <em><strong>“nie chcemy porównań z Cambridge Analytica”</strong></em>. To zdanie stało się symbolem. Tego samego dnia, w którym ukazał się artykuł <em>WSJ</em>, Google ogłosił <strong>zamknięcie konsumenckiej wersji Google+</strong> w ciągu 10 miesięcy. Miesiąc później, w listopadzie 2018, Google wykrył <strong>drugi, większy bug</strong> — dotykający <strong>52,5 mln użytkowników przez 6 dni</strong> — i tym razem <strong>ujawnił natychmiast</strong>, przyspieszając zamknięcie Google+ do <strong>2 kwietnia 2019</strong> (rok wcześniej niż planowano).</p>
+<p>Pozew zbiorowy <em>Matal v. Google</em> (N.D. Cal.) zakończył się w 2020 ugodą <strong>7,5 mln USD</strong>. SEC wszczęła i zamknęła bez zarzutów (SOX nie został uznany za naruszony). Irlandzki DPC uznał, że bug “nie stanowi wystarczającego ryzyka szkody” by wymagać powiadomienia RODO (<strong>pre-Schrems II era</strong> — słabsza egzekucja). Dla praktyki Big Tech sprawa zostawiła jeden kluczowy ślad: <strong>wewnętrzne dokumenty “nie chcemy porównań z Cambridge Analytica” stały się dowodem sądowym</strong> w wielu późniejszych sprawach. To była lekcja: <strong>ukrywanie wycieków kosztuje więcej niż ich ujawnienie</strong>.</p>
+<p>Google+ był produktem, który <strong>nigdy nie wystartował</strong> — w dokumentach sądowych Google przyznał, że <strong>90% sesji Google+ trwało poniżej 5 sekund</strong> (użytkownicy przechodzili przez G+ nieświadomie z Gmaila). Sprawa stała się modelem “preemptive shutdown” — jeśli produkt ma lukę i nikt go nie używa, łatwiej zamknąć niż naprawić.</p>
+<hr>
+<h2 id="oś-czasu">Oś czasu</h2>
+<ul>
+<li><strong>28 czerwca 2011</strong> — Google uruchamia <strong>Google+</strong> jako konkurencja dla Facebooka. Użytkowników zmuszano do korzystania z G+ przez integrację z Gmailem, YouTube, Google Search.</li>
+<li><strong>2012–2014</strong> — G+ szybko osiąga setki milionów zarejestrowanych kont, ale <strong>aktywność jest niska</strong>. Krytycy nazywają go “miasto duchów”.</li>
+<li><strong>2014</strong> — Google <strong>rezygnuje z integracji G+ z YouTube</strong> (odwrócenie strategii Very Peenya — wiceprezesa społecznościowego, który odszedł).</li>
+<li><strong>2015</strong> — pierwszy bug API Google+ People zaczyna być aktywny. Deweloperzy aplikacji pobierają niepubliczne dane profilu użytkowników.</li>
+<li><strong>Marzec 2018</strong> — w ramach <strong>audytu Project Strobe</strong> (uruchomionego po Cambridge Analytica) Google odkrywa bug. Zespół inżynierski załata go. Zespół prawny debatuje nad ujawnieniem. Wewnętrzne memo: nie ujawniać.</li>
+<li><strong>Marzec–październik 2018</strong> — Google <strong>siedzi na informacji 7 miesięcy</strong>.</li>
+<li><strong>8 października 2018</strong> — <em>WSJ</em> publikuje: “Google Exposed User Data, Feared Repercussions of Disclosing to Public”. Tego samego dnia Google ogłasza <strong>zamknięcie Google+ consumer w 10 miesięcy</strong>.</li>
+<li><strong>Listopad 2018</strong> — Google wykrywa <strong>drugi bug</strong> w nowej wersji API. Tym razem <strong>ujawnia natychmiast</strong>. Dane 52,5 mln użytkowników były wystawione przez 6 dni.</li>
+<li><strong>11 grudnia 2018</strong> — Sundar Pichai zeznaje przed <strong>House Judiciary Committee</strong>. Nie jest szczegółowo pytany o Google+ (fokus był na Chinach i Project Dragonfly — sprawa B06).</li>
+<li><strong>10 grudnia 2018</strong> — Google ogłasza <strong>przyspieszenie zamknięcia G+</strong> do 2 kwietnia 2019.</li>
+<li><strong>2 kwietnia 2019</strong> — Google+ consumer <strong>formalnie zamknięty</strong>. Użytkownicy mogą pobrać swoje dane przez Google Takeout.</li>
+<li><strong>2019–2020</strong> — klasowy pozew <em>Matal v. Google</em> (N.D. Cal.).</li>
+<li><strong>27 lipca 2020</strong> — ugoda <strong>7,5 mln USD</strong> (ok. 5–12 USD za użytkownika, który zgłosił roszczenie).</li>
+<li><strong>2 lipca 2023</strong> — Google zamyka również <strong>Currents</strong> (następca G+ dla G Suite/Workspace). Żadna korporacyjna sieć społecznościowa Google nie przetrwała.</li>
+</ul>
+<hr>
+<h2 id="mechanizm">Mechanizm</h2>
+<h3 id="pierwszy-bug-2015--marzec-2018">Pierwszy bug (2015 – marzec 2018)</h3>
+<p><strong>Luka w Google+ People API.</strong> API było używane przez deweloperów aplikacji trzecich do integracji z Google+ (np. importowanie listy znajomych, automatyczne udostępnianie postów). Bug powodował, że aplikacje otrzymywały <strong>niepubliczne dane profilu</strong> użytkowników — nawet tych, którzy <strong>nie dali uprawnień</strong> aplikacji lub <strong>ustawili widoczność “private”</strong>.</p>
+<p>Wyciekające dane:</p>
+<ul>
+<li>Imię, nazwisko</li>
+<li>Adres e-mail (!)</li>
+<li>Płeć</li>
+<li>Data urodzenia / wiek</li>
+<li>Zawód</li>
+<li>Miejsce pracy</li>
+<li>Zdjęcie profilowe</li>
+</ul>
+<p><strong>NIE wyciekły</strong>: hasła, dane finansowe, numery telefonów, treści postów, wiadomości.</p>
+<p><strong>Skala ekspozycji</strong>: <strong>500 000 unikalnych profili</strong>. Google nie mógł ustalić, czy dane zostały faktycznie <strong>pobrane</strong> przez aplikacje — logi zawierały tylko dane z ostatnich <strong>14 dni</strong> przed wykryciem (według wewnętrznej polityki retencji Google). Efektywnie: nie wiadomo, ilu użytkowników było dotkniętych przez <strong>3 lata</strong>.</p>
+<h3 id="drugi-bug-listopad-2018-6-dni">Drugi bug (listopad 2018, 6 dni)</h3>
+<p>Po pierwszym skandalu Google przyspieszył migrację na <strong>nową wersję API</strong>. W tej nowej wersji pojawił się <strong>inny bug</strong>: aplikacje mogły pobrać dane <strong>niepubliczne</strong> z profili użytkowników przez <strong>Project Photos API</strong>. Google wykrył i załatał w <strong>6 dni</strong>. Dotknięci: <strong>52,5 mln użytkowników</strong>.</p>
+<h3 id="dlaczego-to-było-poważne-mimo-małego-zestawu-danych">Dlaczego to było poważne mimo “małego” zestawu danych</h3>
+<ul>
+<li><strong>Spear phishing</strong> — adres e-mail + zawód + miejsce pracy = <strong>idealny materiał do spersonalizowanego phishingu</strong>.</li>
+<li><strong>Osoby korzystające z Google dla pracy</strong> — biznes, rządy, NGO-sy — były szczególnie narażone.</li>
+<li><strong>Zaufanie systemowe</strong> — Google pozycjonował się jako “platform you can trust”. Ukrywanie wycieku podkopało tę narrację.</li>
+<li><strong>Ryzyko SOX</strong> — Google jako spółka publiczna ma obowiązek ujawniać “material events” w raportach finansowych. Nie ujawnienie wycieku wpływającego na decyzje inwestorów <strong>może być naruszeniem Sarbanes-Oxley Act</strong>. SEC wszczęła nieformalne dochodzenie, ostatecznie umorzyła bez zarzutów (argumentacja: 500 000 użytkowników to “nie material event” dla firmy o kapitalizacji ~800 mld USD).</li>
+</ul>
+<hr>
+<h2 id="odkrycie">Odkrycie</h2>
+<h3 id="jak-doszło-do-ujawnienia">Jak doszło do ujawnienia</h3>
+<p>Ujawnienie nastąpiło dzięki <strong>wewnętrznemu przeciekowi</strong> — nieznany pracownik lub były pracownik Google przekazał <em>WSJ</em> kopię <strong>wewnętrznego memo zespołu prawnego Google z marca 2018</strong>. W memo opisano:</p>
+<ol>
+<li>Wykrycie bugu przez Project Strobe</li>
+<li>Ocenę techniczną skali problemu</li>
+<li><strong>Debatę o ujawnieniu</strong>: argumenty za i przeciw</li>
+<li><strong>Decyzję o nieujawnieniu</strong> z trzema głównymi argumentami:
+<ul>
+<li>“Brak dowodów, że dane wyciekły do bad actors”</li>
+<li>“Google+ i tak umiera — koszty ujawnienia > korzyści”</li>
+<li><em><strong>“Nie chcemy porównań z Cambridge Analytica”</strong></em></li>
+</ul>
+</li>
+</ol>
+<p>Ostatni argument — <strong>ujawniający stan umysłu zespołu prawnego Google</strong> — stał się głównym elementem artykułu <em>WSJ</em> i późniejszych pozwów.</p>
+<p><em>WSJ</em> weryfikowało ustalenia przez kilka tygodni, konsultując z zewnętrznymi ekspertami bezpieczeństwa. Google odmówił komentarza aż do publikacji.</p>
+<h3 id="pierwsze-publikacje">Pierwsze publikacje</h3>
+<ul>
+<li><strong>8 października 2018</strong> — Douglas MacMillan, Robert McMillan, “Google Exposed User Data, Feared Repercussions of Disclosing to Public”, <em>The Wall Street Journal</em></li>
+<li><strong>8 października 2018</strong> — Google blog post: Ben Smith, VP Engineering, “Project Strobe: Protecting your data, improving our third-party APIs, and sunsetting consumer Google+”</li>
+<li><strong>9 października 2018</strong> — liczne kontynuacje w <em>NYT</em>, <em>WaPo</em>, <em>The Verge</em>, <em>Ars Technica</em></li>
+</ul>
+<hr>
+<h2 id="osoby-kluczowe">Osoby kluczowe</h2>
+<h3 id="dziennikarze-śledczy">Dziennikarze śledczy</h3>
+<ul>
+<li><strong>Douglas MacMillan</strong> (<em>WSJ</em>) — dziennikarz tech, specjalizuje się w Silicon Valley i corporate governance. Po <em>WSJ</em> dołączył do <em>Washington Post</em>.</li>
+<li><strong>Robert McMillan</strong> (<em>WSJ</em>) — dziennikarz cyberbezpieczeństwa. Współautor wielu kluczowych ujawnień tech.</li>
+</ul>
+<h3 id="google">Google</h3>
+<ul>
+<li><strong>Sundar Pichai</strong> — CEO Google/Alphabet. Zeznawał przed Kongresem 11 grudnia 2018, ale nie był szczegółowo pytany o G+.</li>
+<li><strong>Ben Smith</strong> — VP Engineering, autor blog postu ogłaszającego zamknięcie G+ i Project Strobe.</li>
+<li><strong>Kent Walker</strong> — Chief Legal Officer Google; domniemany autor lub akceptujący memo z marca 2018.</li>
+</ul>
+<h3 id="regulatorzy">Regulatorzy</h3>
+<ul>
+<li><strong>SEC</strong> — nieformalne dochodzenie, umorzone.</li>
+<li><strong>FTC</strong> — nie wszczęła postępowania.</li>
+<li><strong>DPC Irlandia</strong> — uznał, że brak wystarczającego ryzyka szkody dla RODO notification.</li>
+<li><strong>UK ICO</strong> — informacyjnie zaangażowany.</li>
+</ul>
+<h3 id="prawnicy">Prawnicy</h3>
+<ul>
+<li><strong>Matal</strong> — powód wiodący w class action <em>Matal v. Google</em> (N.D. Cal.).</li>
+<li><strong>Kaplan Fox &#x26; Kilsheimer LLP</strong> — kancelaria reprezentująca klasę.</li>
+</ul>
+<hr>
+<h2 id="reakcja-firmy">Reakcja firmy</h2>
+<h3 id="google-1">Google</h3>
+<p><strong>Etap 1: ukrywanie (marzec–październik 2018).</strong> 7 miesięcy ciszy.</p>
+<p><strong>Etap 2: wymuszona reakcja (8 października 2018).</strong> Tego samego dnia co publikacja <em>WSJ</em> Google publikuje blog Project Strobe z <strong>trzema rzeczami naraz</strong>:</p>
+<ol>
+<li>Przyznanie się do pierwszego bugu</li>
+<li>Ogłoszenie zmian w API (wyłączenie części dostępu aplikacji trzecich do Gmaila, Kalendarza)</li>
+<li><strong>Zamknięcie Google+ consumer</strong> w ciągu 10 miesięcy</li>
+</ol>
+<p>Oficjalna narracja: <em>“We want to keep our focus on our enterprise efforts [for G+], where we see strong momentum.”</em> Rynkowa interpretacja: <strong>“zamykamy zanim nas zamkną”</strong>.</p>
+<p><strong>Etap 3: drugi bug i przyspieszenie (listopad–grudzień 2018).</strong> Gdy pojawia się drugi bug (52,5 mln użytkowników), Google <strong>natychmiast ujawnia</strong> — lekcja z pierwszego. Przyspieszenie zamknięcia G+ z sierpnia 2019 do kwietnia 2019.</p>
+<p><strong>Pytania bez odpowiedzi:</strong></p>
+<ul>
+<li>Dlaczego zespół prawny <strong>pisemnie</strong> napisał “nie chcemy porównań z Cambridge Analytica”, zamiast omówić to ustnie? Wiele kancelarii korporacyjnych od 2018 wprowadziło zasadę <strong>“don’t write what you wouldn’t want to see in the New York Times”</strong>.</li>
+<li>Ilu innych produktów Google miało podobne wycieki ukryte pod Project Strobe?</li>
+<li>Co faktycznie wyciekło przez 3 lata pierwszego bugu (2015–2018)?</li>
+</ul>
+<hr>
+<h2 id="postępowanie-prawne">Postępowanie prawne</h2>
+<h3 id="jurysdykcje">Jurysdykcje</h3>
+<ol>
+<li><strong>USA federalne</strong> — SEC (umorzone), FTC (nie wszczęła)</li>
+<li><strong>USA klasa</strong> — <em>Matal v. Google</em>, N.D. Cal.</li>
+<li><strong>UE</strong> — DPC Irlandia, UK ICO (bez kar)</li>
+</ol>
+<h3 id="podstawa-prawna">Podstawa prawna</h3>
+<ul>
+<li><strong>Sarbanes-Oxley Act 2002</strong> (SOX) — obowiązek ujawnienia material events przez spółkę publiczną</li>
+<li><strong>SEC Rule 10b-5</strong> — misleading investors</li>
+<li><strong>State consumer protection laws</strong> — podstawa class action</li>
+<li><strong>UK DPA 1998</strong> — pre-RODO, trudniej wyegzekwować</li>
+<li><strong>RODO art. 33</strong> — obowiązek 72h notification (gdyby sprawa była post-25.05.2018 w pełni)</li>
+</ul>
+<h3 id="kluczowe-etapy">Kluczowe etapy</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Data</th><th>Etap</th></tr></thead><tbody><tr><td>8 października 2018</td><td>Ujawnienie, ogłoszenie zamknięcia G+</td></tr><tr><td>2018–2019</td><td>Dochodzenia regulacyjne</td></tr><tr><td>2 kwietnia 2019</td><td>Zamknięcie G+ consumer</td></tr><tr><td>27 lipca 2020</td><td>Ugoda class action 7,5 mln USD</td></tr></tbody></table>
+<h3 id="orzecznictwo-powiązane">Orzecznictwo powiązane</h3>
+<ul>
+<li><strong>In re Yahoo! Inc. Securities Litigation</strong> (N.D. Cal. 2018) — podobna sprawa ukrycia wycieku przez Yahoo (500 mln kont 2014, ujawnione 2016); ugoda 80 mln USD.</li>
+<li><strong>Sprawa Cambridge Analytica</strong> — bezpośrednio porównywana przez wewnętrzne memo Google.</li>
+<li><strong>Brown v. Google</strong> (B05) — precedens dla tracking w Chrome Incognito.</li>
+</ul>
+<hr>
+<h2 id="kary-i-ugody">Kary i ugody</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Data</th><th>Organ</th><th>Kwota</th><th>Jurysdykcja</th><th>Podstawa</th></tr></thead><tbody><tr><td>27 lipca 2020</td><td><em>Matal v. Google</em> class action</td><td>7 500 000 USD</td><td>USA (N.D. Cal.)</td><td>State consumer protection</td></tr></tbody></table>
+<p><strong>Łącznie: 7,5 mln USD</strong> — ok. 15 centów na wyciekły profil (średnio). Pokazuje, że <strong>cywilne pozwy klasowe USA słabo kompensują prywatność</strong>.</p>
+<hr>
+<h2 id="precedensy-i-implikacje">Precedensy i implikacje</h2>
+<h3 id="dla-prawa-ue">Dla prawa UE</h3>
+<ul>
+<li><strong>Sprawa Google+ jest klasycznym przykładem naruszenia art. 33 RODO</strong> — obowiązku 72-godzinnego zgłoszenia wycieku do organu nadzorczego. Ale wyciek był w 2015–2018, a RODO weszło w życie 25 maja 2018. Pierwszy bug był ujawniony po tej dacie — ale <strong>DPC Irlandia uznał</strong>, że ze względu na <strong>wcześniejszy charakter</strong> wycieku RODO nie ma zastosowania.</li>
+<li><strong>Impuls do ścisłej interpretacji art. 33</strong> przez późniejsze DPA: brak ujawnienia = automatyczne postępowanie.</li>
+</ul>
+<h3 id="dla-prawa-usa">Dla prawa USA</h3>
+<ul>
+<li><strong>SEC nauczyła się</strong> — po Yahoo i Google+ SEC w 2018–2020 wzmocnił reguły dot. cybersecurity disclosure.</li>
+<li><strong>SOX compliance dla big tech</strong> — bezpośredni impuls do <strong>SEC Cybersecurity Disclosure Rules</strong> (2023): spółki publiczne muszą w 4 dni zgłaszać “material cybersecurity incidents”.</li>
+</ul>
+<h3 id="dla-praktyki-big-tech">Dla praktyki Big Tech</h3>
+<ul>
+<li><strong>“Don’t write what you wouldn’t want to see in the NYT”</strong> — kancelarie korporacyjne wprowadziły jako zasadę po sprawie Google+.</li>
+<li><strong>“Preemptive shutdown” jako strategia</strong> — jeśli produkt ma lukę i nikt go nie używa, zamknięcie jest tańsze od zgłaszania naruszeń. Meta robił to później z licznymi aplikacjami (Hobbi, Neighborhoods, Rooms, Slingshot, etc.).</li>
+<li><strong>Project Strobe jako wzór</strong> — wewnętrzne audyty API po Cambridge Analytica stały się standardem; Apple, Microsoft, Meta wszystkie przeprowadziły analogiczne audyty.</li>
+</ul>
+<hr>
+<h2 id="pozwy-zbiorowe">Pozwy zbiorowe</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Sprawa</th><th>Sąd</th><th>Stan</th><th>Wartość</th><th>Poszkodowani</th></tr></thead><tbody><tr><td><em>Matal v. Google</em></td><td>N.D. Cal.</td><td>Ugoda 2020</td><td>7 500 000 USD</td><td>~500 000 + 52,5 mln użytkowników G+</td></tr></tbody></table>
+<p>Zgłoszenia roszczeń: ok. 1 mln osób złożyło formularz claim. Wypłata per person: <strong>5–12 USD</strong>.</p>
+<hr>
+<h2 id="wnioski-dla-obywateli">Wnioski dla obywateli</h2>
+<h3 id="co-to-dla-mnie-znaczy">Co to dla mnie znaczy?</h3>
+<p>Jeśli kiedykolwiek miałeś konto Google+ (a jeśli masz konto Google od 2011, prawdopodobnie tak) — twoje dane profilowe <strong>mogły wyciekać przez 3 lata</strong> bez twojej wiedzy. Google ukrył fakt wycieku przez 7 miesięcy. Nie dlatego, że ocenił, iż nie ma ryzyka — ale dlatego, że ocenił, iż <strong>PR będzie gorszy niż sama luka</strong>. To pokazuje, jak Big Tech podejmuje decyzje: <strong>korporacyjnie, nie prawnie/etycznie</strong>.</p>
+<h3 id="jak-się-chronić-ogólnie">Jak się chronić (ogólnie)?</h3>
+<ol>
+<li><strong>Zamykane platformy = pobierz swoje dane</strong>. Każde 6-12 miesięcy odwiedź <strong>takeout.google.com</strong> i pobierz kopię. Jeśli Google jutro zamknie Gmail (teoretycznie możliwe), twoje dane archiwalne będą dostępne tylko jeśli je pobrałeś.</li>
+<li><strong>Sprawdź, co Google o tobie wie</strong>: <strong>myactivity.google.com</strong> — przejrzyj historię aktywności. Możesz usuwać wybrane wpisy lub ustawić auto-delete co 3/18/36 miesięcy.</li>
+<li><strong>Minimizuj dane profilowe</strong>: w ustawieniach konta Google usuń informacje, których nie musi mieć (zawód, miejsce pracy, data urodzenia — jeśli nie jest wymagana).</li>
+<li><strong>Używaj aliasów Gmail</strong> (<code>twoje.imie+alias@gmail.com</code>) — pozwala filtrować, skąd przychodzi phishing.</li>
+<li><strong>Po phishingu opartym na wycieku</strong> — używaj <strong>menedżera haseł</strong> (Bitwarden, 1Password) z <strong>unikalnymi hasłami</strong> per serwis. Wyciek e-maila + zawód nie pomoże napastnikowi, jeśli hasła są unikalne.</li>
+</ol>
+<h3 id="jakie-mam-prawa">Jakie mam prawa?</h3>
+<p><strong>W UE (RODO):</strong></p>
+<ul>
+<li><strong>Art. 33</strong> — administrator ma <strong>72 godziny</strong> na zgłoszenie wycieku do organu nadzorczego.</li>
+<li><strong>Art. 34</strong> — jeśli wyciek stwarza wysokie ryzyko dla osób, administrator musi <strong>bezzwłocznie poinformować użytkowników</strong>.</li>
+<li><strong>Art. 82</strong> — prawo do odszkodowania.</li>
+</ul>
+<p><strong>W USA:</strong></p>
+<ul>
+<li><strong>SEC Cybersecurity Disclosure Rules (2023)</strong> — spółki publiczne muszą w 4 dni zgłaszać material incidents.</li>
+<li>Stanowe ustawy notification (Kalifornia, Nowy Jork, itp.) — zróżnicowane terminy.</li>
+</ul>
+<h3 id="gdzie-się-zgłosić">Gdzie się zgłosić?</h3>
+<ul>
+<li><strong>Polska</strong>: UODO — zgłoszenia naruszeń</li>
+<li><strong>UE</strong>: krajowy DPA</li>
+<li><strong>USA</strong>: FTC — identitytheft.gov; SEC dla kwestii giełdowych</li>
+</ul>
+<h3 id="uwaga-dla-mediatorów-prawników-administratorów-danych">Uwaga dla mediatorów, prawników, administratorów danych</h3>
+<p>Sprawa Google+ pokazuje, że <strong>ukrywanie wycieków jest droższe</strong> niż ich ujawnienie:</p>
+<ul>
+<li><strong>7 miesięcy ukrywania</strong> → 7,5 mln USD ugoda + zamknięcie produktu</li>
+<li><strong>6 dni szybkiego ujawnienia</strong> (drugi bug) → brak dodatkowej kary</li>
+<li><strong>Wewnętrzne memo z niefortunnymi sformułowaniami</strong> → dowód sądowy</li>
+</ul>
+<p>Jeśli jesteś administratorem danych (kancelaria prawna, fundacja, firma):</p>
+<ul>
+<li><strong>Plan reagowania na incydenty</strong> to obowiązek — nie tylko z art. 32 RODO, ale z <strong>dobrej praktyki korporacyjnej</strong>.</li>
+<li><strong>Zawsze zakładaj, że wewnętrzne memo może wyciec</strong> — pisz tak, jakby miało być opublikowane.</li>
+<li><strong>72 godziny to bardzo mało</strong> — musisz mieć wypracowany przepływ: inżynier wykrywa → inspektor ochrony danych → zarząd → zgłoszenie UODO.</li>
+</ul>
+<hr>
+<h2 id="ciekawostki">Ciekawostki</h2>
+<ul>
+<li><em><strong>“Nie chcemy porównań z Cambridge Analytica”</strong></em> — to zdanie z wewnętrznego memo Google stało się <strong>symbolem korporacyjnego PR-kalkulowania etyki</strong>. Używane w setkach artykułów, wykładów akademickich, prezentacji regulatorskich jako <strong>ostrzeżenie</strong>: jeśli to napiszesz, wyjdzie.</li>
+<li><strong>Google+ był już zombie</strong> — w dokumentach sądowych Google przyznał, że <strong>90% sesji Google+ trwało poniżej 5 sekund</strong>. Ludzie przechodzili przez G+ nieświadomie z Gmaila (kiedy Google zmusił do utworzenia profilu G+). “500 000 użytkowników” to w rzeczywistości 500 000 kont, z których prawdopodobnie <strong>aktywnych było &#x3C;10 000</strong>.</li>
+<li><strong>Porównanie z Facebookiem</strong>: wyciek 52,5 mln użytkowników Google+ = <strong>1/10</strong> wycieku 533 mln Facebooka (A04). Google — ugoda 7,5 mln USD. Facebook — kara DPC 265 mln EUR. Różnica: Facebook działał <strong>pod RODO</strong>, Google+ bug był <strong>przed RODO</strong> (formalnie).</li>
+<li><strong>Ironia kongresowa</strong>: Sundar Pichai 11 grudnia 2018 zeznawał przed House Judiciary Committee. Priorytet kongresmenów: <strong>Chiny i Project Dragonfly</strong> (sprawa B06), <strong>stronniczość wyszukiwania</strong>. Google+ był pomijany. Pichai wyszedł <strong>praktycznie bez uszczerbku</strong>.</li>
+<li><strong>Project Strobe jako “audyt post-CA”</strong> — Google nigdy nie ujawnił pełnych wyników audytu. Wiadomo, że znaleziono “kilka wycieków”, ale upublicznione zostały tylko te z G+. Być może pozostałe zostały naprawione po cichu.</li>
+<li><strong>Google Currents (następca G+ dla biznesu)</strong> — zamknięty 2 lipca 2023. Żadna korporacyjna sieć społecznościowa Google nie przetrwała. Zastąpiony przez <strong>Google Spaces</strong> w Google Chat.</li>
+<li><strong>Google+ jako pierwszy “preemptive shutdown”</strong> w historii Big Tech. Meta po tym wzorze zamyka aplikacje, które mają problemy (Hobbi, Rooms, Slingshot, Neighborhoods). Amazon też (Spark, Chime Pro).</li>
+<li><strong>Yahoo precedent</strong> — przed Google+, Yahoo w 2016 ujawniło wyciek 500 mln kont z 2014 (dwuletnie ukrywanie). Ugoda SEC 35 mln USD, pozew zbiorowy 80 mln USD. Google+ miał <strong>te same grzechy korporacyjne</strong>, ale <strong>mniejszą skalę</strong> — i wcześniejszy produkt.</li>
+<li><strong>SEC zapamiętał</strong> — w 2023 SEC opublikował <strong>“Cybersecurity Disclosure Rules”</strong> wymagające 4-dniowego ujawnienia material cybersecurity incidents przez spółki publiczne. Google+ i Yahoo były wzorami.</li>
+<li><strong>Polska — Google+ był popularny</strong> (wg jakichkolwiek standardów Google+) wśród niektórych zespołów IT i blogerów tech. Bug dotknął również polskich użytkowników (szacunkowo kilkadziesiąt tysięcy). UODO nie wszczął postępowania (sprawa była pod DPC Irlandia, a DPC uznał, że brak wystarczającego ryzyka).</li>
+</ul>
+<hr>
+<h2 id="źródła">Źródła</h2>
+<ol>
+<li>
+<p>Douglas MacMillan, Robert McMillan, “Google Exposed User Data, Feared Repercussions of Disclosing to Public”, <em>The Wall Street Journal</em>, 8 października 2018. URL: <a href="https://www.wsj.com/articles/google-exposed-user-data-feared-repercussions-of-disclosing-to-public-1539017194">https://www.wsj.com/articles/google-exposed-user-data-feared-repercussions-of-disclosing-to-public-1539017194</a> (dostęp: 2026-04-17)</p>
+</li>
+<li>
+<p>Ben Smith, “Project Strobe: Protecting your data, improving our third-party APIs, and sunsetting consumer Google+”, Google Blog, 8 października 2018. URL: <a href="https://blog.google/technology/safety-security/project-strobe/">https://blog.google/technology/safety-security/project-strobe/</a> (dostęp: 2026-04-17)</p>
+</li>
+<li>
+<p>Google blog, “Expediting changes to Google+”, 10 grudnia 2018 — ogłoszenie drugiego bugu i przyspieszenie zamknięcia.</p>
+</li>
+<li>
+<p><em>Matal et al. v. Google LLC</em>, N.D. Cal., Case No. 5:18-cv-06164 — dokumenty PACER.</p>
+</li>
+<li>
+<p>SEC Cybersecurity Disclosure Rules, 26 lipca 2023. URL: <a href="https://www.sec.gov/news/press-release/2023-139">https://www.sec.gov/news/press-release/2023-139</a> (dostęp: 2026-04-17)</p>
+</li>
+<li>
+<p>Sundar Pichai, zeznanie przed House Judiciary Committee, 11 grudnia 2018. Transkrypt: <a href="https://judiciary.house.gov/calendar/eventsingle.aspx?EventID=1713">https://judiciary.house.gov/calendar/eventsingle.aspx?EventID=1713</a> (dostęp: 2026-04-17)</p>
+</li>
+<li>
+<p>Google Takeout archive — dokumentacja procesu eksportu danych G+.</p>
+</li>
+<li>
+<p><em>In re Yahoo! Inc. Securities Litigation</em>, N.D. Cal., MDL No. 2752 — precedens.</p>
+</li>
+<li>
+<p>Kaplan Fox &#x26; Kilsheimer LLP, materiały prasowe o ugodzie 7,5 mln USD.</p>
+</li>
+<li>
+<p>IAPP, “Google+ data exposure: Lessons for cybersecurity disclosure”, październik 2018. URL: <a href="https://iapp.org">https://iapp.org</a></p>
+</li>
+</ol>
+<hr>
+<p><em>Ostatnia aktualizacja: 2026-04-17</em>
+<em>Karta w bazie: B03_google_plus.md</em></p>  </div> <div class="case-page__sidebar" data-astro-cid-rs7fdjny> <aside class="case-meta" aria-label="Metadane sprawy" data-astro-cid-pa3uutdt> <div class="case-meta__block" data-astro-cid-pa3uutdt> <span class="case-meta__label" data-astro-cid-pa3uutdt>Status</span> <span class="status-pill status-pill--settled" data-astro-cid-y4qxltpk> Ugoda </span> </div> <div class="case-meta__block" data-astro-cid-pa3uutdt> <span class="case-meta__label" data-astro-cid-pa3uutdt>ID sprawy</span> <span class="case-meta__value meta" data-astro-cid-pa3uutdt>B03</span> </div> <div class="case-meta__block" data-astro-cid-pa3uutdt> <span class="case-meta__label" data-astro-cid-pa3uutdt>Podmiot</span> <span class="case-meta__value" data-astro-cid-pa3uutdt>Google</span> </div> <div class="case-meta__block" data-astro-cid-pa3uutdt> <span class="case-meta__label" data-astro-cid-pa3uutdt>Rok ujawnienia</span> <span class="case-meta__value meta" data-astro-cid-pa3uutdt>2018</span> </div> <div class="case-meta__block" data-astro-cid-pa3uutdt> <span class="case-meta__label" data-astro-cid-pa3uutdt>Lata praktyki</span> <span class="case-meta__value meta" data-astro-cid-pa3uutdt>2015–2018</span> </div> <div class="case-meta__block" data-astro-cid-pa3uutdt> <span class="case-meta__label" data-astro-cid-pa3uutdt>Jurysdykcje</span> <span class="case-meta__value" data-astro-cid-pa3uutdt>US, global</span> </div>   <div class="case-meta__block" data-astro-cid-pa3uutdt> <span class="case-meta__label" data-astro-cid-pa3uutdt>Kary łącznie</span> <div class="case-meta__fines" data-astro-cid-pa3uutdt> <span class="case-meta__value meta" data-astro-cid-pa3uutdt>7 500 000 USD</span> </div> </div> <div class="case-meta__block" data-astro-cid-pa3uutdt> <span class="case-meta__label" data-astro-cid-pa3uutdt>Zestawienie kar</span> <table class="case-meta__fine-table" data-astro-cid-pa3uutdt> <tr data-astro-cid-pa3uutdt> <td class="meta" data-astro-cid-pa3uutdt>7 500 000 USD</td> <td data-astro-cid-pa3uutdt>*Matal v. Google* class action</td> <td class="meta" data-astro-cid-pa3uutdt>2020-07</td> </tr> </table> </div> <div class="case-meta__block" data-astro-cid-pa3uutdt> <span class="case-meta__label" data-astro-cid-pa3uutdt>Podstawa prawna</span> <ul class="case-meta__list" data-astro-cid-pa3uutdt> <li data-astro-cid-pa3uutdt>US Securities Exchange Act</li><li data-astro-cid-pa3uutdt>state consumer protection</li><li data-astro-cid-pa3uutdt>pre-RODO</li> </ul> </div> <div class="case-meta__block" data-astro-cid-pa3uutdt> <span class="case-meta__label" data-astro-cid-pa3uutdt>Kategorie</span> <div class="case-meta__tags" data-astro-cid-pa3uutdt> <span class="case-meta__tag" data-astro-cid-pa3uutdt>Prywatność</span> </div> </div> <div class="case-meta__block case-meta__block--updated" data-astro-cid-pa3uutdt> <span class="case-meta__label" data-astro-cid-pa3uutdt>Ostatnia aktualizacja</span> <span class="case-meta__value meta" data-astro-cid-pa3uutdt>2026-04-17</span> </div> </aside> </div> </div> <section class="related" aria-labelledby="related-heading" data-astro-cid-sxj3akyn><div class="related__header" data-astro-cid-sxj3akyn><h2 id="related-heading" class="related__title" data-astro-cid-sxj3akyn>Powiązane sprawy</h2><p class="related__lede" data-astro-cid-sxj3akyn>
+Sprawy dzielące firmę, mechanizm, precedens prawny lub jurysdykcję.
+</p></div><ul class="related__list" data-astro-cid-sxj3akyn><li class="related__item" data-astro-cid-sxj3akyn><a href="/matryca/sprawy/b04-google-location-history/" class="related__link" data-astro-cid-sxj3akyn><div class="related__head" data-astro-cid-sxj3akyn><span class="badge badge--group-b badge--sm" data-astro-cid-35zd7xm4> <span class="badge__id" data-astro-cid-35zd7xm4>B</span> <span class="badge__label" data-astro-cid-35zd7xm4>Google</span> </span><span class="related__id meta" data-astro-cid-sxj3akyn>B04</span><span class="related__year meta" data-astro-cid-sxj3akyn>2018</span></div><p class="related__name" data-astro-cid-sxj3akyn>Google Location History</p><p class="related__sub" data-astro-cid-sxj3akyn>Śledzenie mimo wyłączenia ustawienia</p><p class="related__meta meta" data-astro-cid-sxj3akyn>Google</p></a></li><li class="related__item" data-astro-cid-sxj3akyn><a href="/matryca/sprawy/b02-google-safari-workaround/" class="related__link" data-astro-cid-sxj3akyn><div class="related__head" data-astro-cid-sxj3akyn><span class="badge badge--group-b badge--sm" data-astro-cid-35zd7xm4> <span class="badge__id" data-astro-cid-35zd7xm4>B</span> <span class="badge__label" data-astro-cid-35zd7xm4>Google</span> </span><span class="related__id meta" data-astro-cid-sxj3akyn>B02</span><span class="related__year meta" data-astro-cid-sxj3akyn>2012</span></div><p class="related__name" data-astro-cid-sxj3akyn>Google Safari Workaround</p><p class="related__sub" data-astro-cid-sxj3akyn>Omijanie domyślnej prywatności iPhone&#39;ów</p><p class="related__meta meta" data-astro-cid-sxj3akyn>Google</p></a></li><li class="related__item" data-astro-cid-sxj3akyn><a href="/matryca/sprawy/b01-google-street-view-wi-spy/" class="related__link" data-astro-cid-sxj3akyn><div class="related__head" data-astro-cid-sxj3akyn><span class="badge badge--group-b badge--sm" data-astro-cid-35zd7xm4> <span class="badge__id" data-astro-cid-35zd7xm4>B</span> <span class="badge__label" data-astro-cid-35zd7xm4>Google</span> </span><span class="related__id meta" data-astro-cid-sxj3akyn>B01</span><span class="related__year meta" data-astro-cid-sxj3akyn>2010</span></div><p class="related__name" data-astro-cid-sxj3akyn>Google Street View Wi-Spy</p><p class="related__sub" data-astro-cid-sxj3akyn>Samochody Google zbierały prywatne dane z sieci Wi-Fi</p><p class="related__meta meta" data-astro-cid-sxj3akyn>Google</p></a></li><li class="related__item" data-astro-cid-sxj3akyn><a href="/matryca/sprawy/b06-project-dragonfly/" class="related__link" data-astro-cid-sxj3akyn><div class="related__head" data-astro-cid-sxj3akyn><span class="badge badge--group-b badge--sm" data-astro-cid-35zd7xm4> <span class="badge__id" data-astro-cid-35zd7xm4>B</span> <span class="badge__label" data-astro-cid-35zd7xm4>Google</span> </span><span class="related__id meta" data-astro-cid-sxj3akyn>B06</span><span class="related__year meta" data-astro-cid-sxj3akyn>2018</span></div><p class="related__name" data-astro-cid-sxj3akyn>Project Dragonfly</p><p class="related__sub" data-astro-cid-sxj3akyn>Ocenzurowana wyszukiwarka Google dla Chin</p><p class="related__meta meta" data-astro-cid-sxj3akyn>Google</p></a></li><li class="related__item" data-astro-cid-sxj3akyn><a href="/matryca/sprawy/d02-amazon-alexa/" class="related__link" data-astro-cid-sxj3akyn><div class="related__head" data-astro-cid-sxj3akyn><span class="badge badge--group-d badge--sm" data-astro-cid-35zd7xm4> <span class="badge__id" data-astro-cid-35zd7xm4>D</span> <span class="badge__label" data-astro-cid-35zd7xm4>Amazon / Uber</span> </span><span class="related__id meta" data-astro-cid-sxj3akyn>D02</span><span class="related__year meta" data-astro-cid-sxj3akyn>2019</span></div><p class="related__name" data-astro-cid-sxj3akyn>Amazon Alexa</p><p class="related__sub" data-astro-cid-sxj3akyn>Ludzkie odsłuchiwanie nagrań z kuchni, sypialni i rozmów prywatnych</p><p class="related__meta meta" data-astro-cid-sxj3akyn>Amazon</p></a></li></ul></section> </div> </article>  </main> <footer class="footer" data-astro-cid-35ed7um5> <div class="container footer__inner" data-astro-cid-35ed7um5> <div class="footer__privacy" data-astro-cid-35ed7um5> <span class="footer__privacy-label" data-astro-cid-35ed7um5>Prywatność:</span> <span data-astro-cid-35ed7um5>Portal nie zbiera danych o użytkownikach. Bez cookies. Bez analytics. Bez trackerów.</span> </div> <nav class="footer__nav" aria-label="Nawigacja pomocnicza" data-astro-cid-35ed7um5> <a href="/matryca/sprawy/" data-astro-cid-35ed7um5>Sprawy</a> <a href="/matryca/sygnalisci/" data-astro-cid-35ed7um5>Kto odkrył?</a> <a href="/matryca/firmy/" data-astro-cid-35ed7um5>Firmy</a> <a href="/matryca/tagi/" data-astro-cid-35ed7um5>Tagi</a> <a href="/matryca/teksty/" data-astro-cid-35ed7um5>Teksty</a> <a href="/matryca/zrodla/" data-astro-cid-35ed7um5>Źródła</a> <a href="/matryca/o-projekcie/" data-astro-cid-35ed7um5>O projekcie</a> <a href="/matryca/metodologia/" data-astro-cid-35ed7um5>Metodologia</a> </nav> <p class="footer__copy" data-astro-cid-35ed7um5> <span class="meta" data-astro-cid-35ed7um5>Matryca &copy; 2026 — materiał edukacyjny do swobodnego wykorzystania.</span> </p> </div> </footer> </body></html>
