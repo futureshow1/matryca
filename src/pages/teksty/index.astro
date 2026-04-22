@@ -1,0 +1,170 @@
+---
+import Page from '../../layouts/Page.astro';
+
+const texts = [
+  {
+    slug: 'od-autorow',
+    kicker: 'Od autorów',
+    title: 'To nie są wpadki. To jest kalkulacja.',
+    lede: 'Dlaczego robimy tę bazę, dlaczego po polsku, dlaczego teraz.',
+  },
+  {
+    slug: 'od-prawnika',
+    kicker: 'Od prawnika',
+    title: 'RODO istnieje. Egzekwowanie RODO — już niekoniecznie.',
+    lede: 'Architektura europejskiego prawa ochrony danych, jej ograniczenia i dlaczego irlandzki regulator decyduje o prywatności 450 milionów Europejczyków.',
+  },
+  {
+    slug: 'od-organizacji',
+    kicker: 'Od organizacji praw człowieka',
+    title: 'To nie jest debata o prywatności. To debata o władzy.',
+    lede: 'Inwigilacja korporacyjna, systemy rozpoznawania twarzy, algorytmiczna moderacja — dlaczego są kwestią praw podstawowych, nie komfortu użytkownika.',
+  },
+  {
+    slug: 'od-obywatelki',
+    kicker: 'Od obywatelki',
+    title: 'Mam konto na Facebooku od 2009 roku. To nie znaczy, że się zgodziłam.',
+    lede: 'Zwykła użytkowniczka czyta 33 karty tej bazy i sprawdza, co z tego wynika dla niej — bez paniki, bez nihilizmu, z listą konkretnych rzeczy.',
+  },
+];
+---
+
+<Page title="Teksty" description="Cztery głosy wprowadzające do bazy skandali Big Tech — autorzy, prawnik, organizacja praw człowieka, obywatelka.">
+  <article class="texts-index">
+    <div class="container">
+      <header class="texts-index__header">
+        <p class="texts-index__kicker">Teksty wprowadzające</p>
+        <h1 class="texts-index__title">Cztery głosy, jedna baza</h1>
+        <p class="texts-index__lede">
+          Baza 33 spraw mówi faktami. Te cztery teksty mówią w imieniu faktów —
+          z czterech punktów widzenia, z których każdy ma własne stawki.
+          Czyta się je w dowolnej kolejności; razem składają się na mapę tego,
+          o czym ta baza w ogóle jest.
+        </p>
+      </header>
+
+      <ol class="texts-list">
+        {texts.map((t, i) => (
+          <li class="texts-list__item">
+            <a href={`/teksty/${t.slug}/`} class="texts-list__link">
+              <span class="texts-list__index">{String(i + 1).padStart(2, '0')}</span>
+              <div class="texts-list__body">
+                <p class="texts-list__kicker">{t.kicker}</p>
+                <h2 class="texts-list__title">{t.title}</h2>
+                <p class="texts-list__lede">{t.lede}</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </article>
+</Page>
+
+<style lang="scss">
+  .texts-index {
+    padding-block: var(--space-8) var(--space-10);
+  }
+
+  .texts-index__header {
+    max-width: 720px;
+    margin-bottom: var(--space-10);
+  }
+
+  .texts-index__kicker {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-tertiary);
+    letter-spacing: 0.04em;
+    margin-bottom: var(--space-2);
+  }
+
+  .texts-index__title {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-4);
+  }
+
+  .texts-index__lede {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  .texts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 0.5px solid var(--border);
+  }
+
+  .texts-list__item {
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .texts-list__link {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: var(--space-6);
+    padding-block: var(--space-6);
+    text-decoration: none;
+    color: inherit;
+    transition: background-color var(--transition-fast);
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--accent) 4%, transparent);
+
+      .texts-list__title {
+        color: var(--accent);
+      }
+    }
+  }
+
+  .texts-list__index {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-tertiary);
+    padding-top: 6px;
+  }
+
+  .texts-list__body {
+    max-width: 720px;
+  }
+
+  .texts-list__kicker {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    margin-bottom: var(--space-2);
+  }
+
+  .texts-list__title {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: var(--space-2);
+    transition: color var(--transition-fast);
+  }
+
+  .texts-list__lede {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 640px) {
+    .texts-index__title {
+      font-size: 32px;
+    }
+    .texts-list__link {
+      grid-template-columns: 40px 1fr;
+      gap: var(--space-4);
+    }
+    .texts-list__title {
+      font-size: 20px;
+    }
+  }
+</style>
