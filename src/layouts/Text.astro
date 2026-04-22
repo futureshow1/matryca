@@ -1,0 +1,187 @@
+---
+import Page from './Page.astro';
+
+interface Props {
+  kicker: string;
+  title: string;
+  lede: string;
+  byline: string;
+  readingTime: string;
+  description: string;
+  prev?: { href: string; label: string };
+  next?: { href: string; label: string };
+}
+
+const { kicker, title, lede, byline, readingTime, description, prev, next } = Astro.props;
+---
+
+<Page title={`${title} — Matryca`} description={description}>
+  <article class="text">
+    <div class="container text__container">
+      <header class="text__header">
+        <nav class="text__breadcrumb" aria-label="Breadcrumb">
+          <a href="/teksty/">Teksty</a>
+          <span aria-hidden="true">/</span>
+          <span>{kicker}</span>
+        </nav>
+
+        <p class="text__kicker">{kicker}</p>
+        <h1 class="text__title">{title}</h1>
+        <p class="text__lede">{lede}</p>
+
+        <div class="text__meta">
+          <span class="text__byline">{byline}</span>
+          <span class="text__sep" aria-hidden="true">·</span>
+          <span class="text__reading">{readingTime}</span>
+        </div>
+      </header>
+
+      <div class="prose text__body">
+        <slot />
+      </div>
+
+      <nav class="text__pager" aria-label="Kolejne teksty">
+        {prev && (
+          <a href={prev.href} class="text__pager-link text__pager-link--prev">
+            <span class="text__pager-dir">← Poprzedni</span>
+            <span class="text__pager-label">{prev.label}</span>
+          </a>
+        )}
+        {next && (
+          <a href={next.href} class="text__pager-link text__pager-link--next">
+            <span class="text__pager-dir">Następny →</span>
+            <span class="text__pager-label">{next.label}</span>
+          </a>
+        )}
+      </nav>
+    </div>
+  </article>
+</Page>
+
+<style lang="scss">
+  .text {
+    padding-block: var(--space-8) var(--space-10);
+  }
+
+  .text__container {
+    max-width: 760px;
+  }
+
+  .text__breadcrumb {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-6);
+    display: flex;
+    gap: var(--space-2);
+
+    a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      &:hover { color: var(--accent); }
+    }
+  }
+
+  .text__kicker {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    margin-bottom: var(--space-3);
+  }
+
+  .text__title {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+    margin-bottom: var(--space-4);
+  }
+
+  .text__lede {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    line-height: 1.45;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-5);
+  }
+
+  .text__meta {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-tertiary);
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+    padding-bottom: var(--space-6);
+    border-bottom: 0.5px solid var(--border);
+    margin-bottom: var(--space-6);
+  }
+
+  .text__byline { color: var(--text-secondary); }
+
+  .text__body {
+    font-size: 18px;
+    line-height: 1.7;
+
+    :global(p) { margin-bottom: 1.25em; }
+    :global(h2) {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      line-height: 1.25;
+      margin-top: 2em;
+      margin-bottom: 0.6em;
+    }
+    :global(blockquote) {
+      border-left: 2px solid var(--accent);
+      padding-left: var(--space-4);
+      margin: 1.5em 0;
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--text-secondary);
+    }
+  }
+
+  .text__pager {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-top: var(--space-10);
+    padding-top: var(--space-6);
+    border-top: 0.5px solid var(--border);
+  }
+
+  .text__pager-link {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-decoration: none;
+    color: var(--text-primary);
+    max-width: 45%;
+
+    &--next { margin-left: auto; text-align: right; }
+
+    &:hover .text__pager-label { color: var(--accent); }
+  }
+
+  .text__pager-dir {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-tertiary);
+    letter-spacing: 0.04em;
+  }
+
+  .text__pager-label {
+    font-family: var(--font-serif);
+    font-size: 15px;
+    line-height: 1.35;
+    transition: color var(--transition-fast);
+  }
+
+  @media (max-width: 640px) {
+    .text__title { font-size: 30px; }
+    .text__lede { font-size: 18px; }
+    .text__body { font-size: 17px; }
+  }
+</style>

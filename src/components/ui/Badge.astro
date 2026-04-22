@@ -1,0 +1,96 @@
+---
+interface Props {
+  group: 'A' | 'B' | 'C' | 'D' | 'E';
+  size?: 'sm' | 'md';
+}
+
+const { group, size = 'md' } = Astro.props;
+
+const labels: Record<string, string> = {
+  A: 'Meta',
+  B: 'Google',
+  C: 'Apple / MS',
+  D: 'Amazon / Uber',
+  E: 'TikTok / X',
+};
+---
+
+<span class={`badge badge--group-${group.toLowerCase()} badge--${size}`}>
+  <span class="badge__id">{group}</span>
+  <span class="badge__label">{labels[group]}</span>
+</span>
+
+<style lang="scss">
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap-1);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    white-space: nowrap;
+
+    &--md {
+      font-size: 11px;
+      padding: 2px 7px;
+    }
+
+    &--sm {
+      font-size: 10px;
+      padding: 1px 5px;
+    }
+  }
+
+  .badge__id {
+    font-weight: 500;
+  }
+
+  .badge__label {
+    opacity: 0.75;
+  }
+
+  // Group colors — subtle, monochrome-adjacent
+  .badge--group-a {
+    background: rgba(99, 102, 241, 0.08);
+    color: #4f46e5;
+    [data-theme='dark'] & {
+      background: rgba(99, 102, 241, 0.15);
+      color: #a5b4fc;
+    }
+  }
+
+  .badge--group-b {
+    background: rgba(16, 163, 127, 0.08);
+    color: #0d9488;
+    [data-theme='dark'] & {
+      background: rgba(16, 163, 127, 0.15);
+      color: #5eead4;
+    }
+  }
+
+  .badge--group-c {
+    background: rgba(100, 116, 139, 0.1);
+    color: #475569;
+    [data-theme='dark'] & {
+      background: rgba(148, 163, 184, 0.12);
+      color: #94a3b8;
+    }
+  }
+
+  .badge--group-d {
+    background: rgba(245, 158, 11, 0.08);
+    color: #d97706;
+    [data-theme='dark'] & {
+      background: rgba(245, 158, 11, 0.12);
+      color: #fbbf24;
+    }
+  }
+
+  .badge--group-e {
+    background: rgba(163, 45, 45, 0.08);
+    color: var(--accent);
+    [data-theme='dark'] & {
+      background: rgba(163, 45, 45, 0.15);
+      color: #f09595;
+    }
+  }
+</style>
