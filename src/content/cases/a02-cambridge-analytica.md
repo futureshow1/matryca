@@ -42,7 +42,7 @@ fines:
   status: paid
 - amount: 725000000
   currency: USD
-  authority: Class action (Meta)
+  authority: Pozew zbiorowy (Meta)
   date: '2022'
   category: class_action_settlement
   status: paid
@@ -122,7 +122,7 @@ Brytyjsko-amerykańska firma konsultingowa **Cambridge Analytica** (założona w
 
 Sprawa wybuchła **17 marca 2018** po równoległych publikacjach *The Observer* (Carole Cadwalladr), *The New York Times* i *Channel 4 News*. Sygnalistą był **Christopher Wylie**, były dyrektor badań CA — 28-letni Kanadyjczyk o różowych włosach, który opisał siebie jako "tego, który zbudował narzędzie wojny psychologicznej Steve'a Bannona". Ujawnił dokumenty, zrzuty ekranu umów i nagrania. Channel 4 dołożył do tego ukrytą kamerę z dyrektorem CA **Alexandrem Nixem**, chwalącym się oferowaniem kampaniom "pięknych Ukrainek" do kompromitacji konkurentów.
 
-Skutki: Facebook zawiesił CA **16 marca 2018**; 1 maja 2018 CA i SCL ogłosiły upadłość; akcje Facebooka spadły o 24% (utrata ~134 mld USD kapitalizacji w tygodniu); Mark Zuckerberg zeznawał przed Kongresem USA **10–11 kwietnia 2018** (blisko 10 godzin pytań). Kary dla Facebooka: **5 mld USD FTC** (2019, największa kara FTC w historii), **100 mln USD SEC** (2019), **725 mln USD ugoda class action** (2022), **8 mld USD ugoda pozwu akcjonariuszy** (wrzesień 2025), **1,4 mld USD ugoda stanu Teksas** (2024), **500 tys. GBP** w UK (ICO). Alexander Nix i Aleksandr Kogan dostali 20-letnie zakazy prowadzenia określonej działalności (FTC, grudzień 2019).
+Skutki: Facebook zawiesił CA **16 marca 2018**; 1 maja 2018 CA i SCL ogłosiły upadłość; akcje Facebooka spadły o 24% (utrata ~134 mld USD kapitalizacji w tygodniu); Mark Zuckerberg zeznawał przed Kongresem USA **10–11 kwietnia 2018** (blisko 10 godzin pytań). Kary dla Facebooka: **5 mld USD FTC** (2019, największa kara FTC w historii), **100 mln USD SEC** (2019), **725 mln USD ugoda pozew zbiorowy** (2022), **8 mld USD ugoda pozwu akcjonariuszy** (wrzesień 2025), **1,4 mld USD ugoda stanu Teksas** (2024), **500 tys. GBP** w UK (ICO). Alexander Nix i Aleksandr Kogan dostali 20-letnie zakazy prowadzenia określonej działalności (FTC, grudzień 2019).
 
 ---
 
@@ -330,7 +330,7 @@ Zuckerberg stał się obiektem memów ze względu na:
 | 24.07.2019 | SEC | 100 000 000 USD | USA | Securities Act, disclosure |
 | 06.12.2019 | FTC (Nix) | zakaz + brak kwoty | USA | FTC Act |
 | 06.12.2019 | FTC (Kogan) | zakaz + brak kwoty | USA | FTC Act |
-| 12.2022 | Class action (Meta) | 725 000 000 USD | USA | Federal i stanowe |
+| 12.2022 | Pozew zbiorowy (Meta) | 725 000 000 USD | USA | Federal i stanowe |
 | 30.07.2024 | Stan Teksas | 1 400 000 000 USD | USA | CUBI, DTPA |
 | 09.2025 | Pozew akcjonariuszy | 8 000 000 000 USD | USA (Delaware) | Breach of fiduciary duty |
 

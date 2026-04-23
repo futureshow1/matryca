@@ -262,7 +262,7 @@ Sprawa wyłącznie w USA (California federalna). Globalny wpływ przez rynek Chr
 
 - ***Peña v. Google*** (2021) — wcześniejsza, podobna sprawa; Google wygrał na procedural grounds.
 - ***Calhoun v. Google*** (N.D. Cal.) — pokrewna sprawa o tracking Chrome sync.
-- **Sprawa Safari Workaround (B02)** — wzorzec wprowadzania w błąd.
+- **Sprawa Safari Obejście (B02)** — wzorzec wprowadzania w błąd.
 - ***In re Meta Pixel Healthcare Litigation*** — podobny wzorzec w kontekście danych medycznych.
 
 ---
@@ -410,7 +410,7 @@ Jeśli myślałeś, że **"Incognito" chroni cię przed Google** — byłeś **j
 
 8. Jonathan Mayer et al., prace Stanford/Princeton o fingerprintingu.
 
-9. EDPB Guidelines 03/2022 on dark patterns.
+9. EDPB Guidelines 03/2022 on mylące interfejsy.
 
 10. Sundar Pichai, zeznania w *United States v. Google* (DOJ antitrust), październik 2023.
 

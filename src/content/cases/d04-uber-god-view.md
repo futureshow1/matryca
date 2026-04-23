@@ -64,10 +64,10 @@ years_active:
 
 # D04 — Uber God View: Wewnętrzne narzędzie do śledzenia dziennikarzy i klientów
 
-> **Kategoria:** Nadużywanie dostępu / tracking journalistów / FTC consent decree
+> **Kategoria:** Nadużywanie dostępu / tracking journalistów / FTC ugoda z regulatorem
 > **Firma/firmy:** Uber Technologies
-> **Lata:** ~2013–2014 (praktyka), listopad 2014 (ujawnienie), 2017–2018 (FTC consent decree)
-> **Status:** Zakończone — FTC consent decree z 20-letnim monitoringiem; NY AG ugoda 2016
+> **Lata:** ~2013–2014 (praktyka), listopad 2014 (ujawnienie), 2017–2018 (FTC ugoda z regulatorem)
+> **Status:** Zakończone — FTC ugoda z regulatorem z 20-letnim monitoringiem; NY AG ugoda 2016
 > **ID karty:** D04
 
 ---
@@ -79,7 +79,7 @@ years_active:
 | Kraj/region | USA federalne i stanowe (Nowy Jork) |
 | Rok ujawnienia | 17–18 listopada 2014 (*BuzzFeed News*) |
 | Lata trwania praktyki | ~2013–2014 (God View jako narzędzie wewnętrzne) |
-| Łączna kara | Brak kary finansowej (FTC); **20-letni consent decree z audytami** |
+| Łączna kara | Brak kary finansowej (FTC); **20-letni ugoda z regulatorem z audytami** |
 | Waluta | — |
 | Podstawa prawna | FTC Act § 5, NY state consumer protection |
 | Sygnalista/odkrywca | **Johana Bhuiyan, Ben Smith** (*BuzzFeed News*) |
@@ -102,9 +102,9 @@ Skandal eskalował. **Eric Schneiderman** (NY Attorney General) wszczął śledz
 - Ograniczenie dostępu do God View
 - Coroczny audyt prywatności
 
-**15 sierpnia 2017** — **FTC wszczyna** pierwsze consent decree przeciw Uberowi za **wprowadzanie w błąd** ("zapewnialiśmy zabezpieczenia... niekoniecznie"). **Brak kary finansowej**, ale 20-letni monitoring.
+**15 sierpnia 2017** — **FTC wszczyna** pierwsze ugoda z regulatorem przeciw Uberowi za **wprowadzanie w błąd** ("zapewnialiśmy zabezpieczenia... niekoniecznie"). **Brak kary finansowej**, ale 20-letni monitoring.
 
-**Kwiecień 2018** — FTC **wycofuje** pierwsze consent decree i zawiera **nowe, szersze** — obejmujące również **wyciek 57 mln (2016, nieujawniony)** → sprawa D06. Nowy consent decree: kara **148 mln USD łącznie** z ugodami stanowymi.
+**Kwiecień 2018** — FTC **wycofuje** pierwsze ugoda z regulatorem i zawiera **nowe, szersze** — obejmujące również **wyciek 57 mln (2016, nieujawniony)** → sprawa D06. Nowy ugoda z regulatorem: kara **148 mln USD łącznie** z ugodami stanowymi.
 
 God View jako symbol "**Bro culture**" Uber stał się przedmiotem wielu książek (w tym *"Super Pumped: The Battle for Uber"* Mike'a Isaaca 2019). Sprawa D04 była **pierwszym wielkim korporacyjnym skandalem prywatności** w erze smartfonów — wzorcowym przypadkiem **nadużycia wewnętrznego dostępu do danych**.
 
@@ -126,12 +126,12 @@ God View jako symbol "**Bro culture**" Uber stał się przedmiotem wielu książ
 - **2015** — dochodzenia kontynuowane.
 - **6 stycznia 2016** — **NY AG ugoda**: 20 000 USD za 2014 breach notification + zobowiązania prywatnościowe.
 - **2016** — Uber doświadcza **kolejnego, większego wycieku (57 mln rekordów)** — ukrywany → D06.
-- **15 sierpnia 2017** — **FTC consent decree** (pierwsza wersja).
+- **15 sierpnia 2017** — **FTC ugoda z regulatorem** (pierwsza wersja).
 - **Listopad 2017** — publiczne ujawnienie wycieku 57 mln rekordów (ukrytego od 2016) → D06.
-- **12 kwietnia 2018** — FTC **wycofuje** pierwszy consent decree, zawiera **nowy** — obejmujący również wyciek 57 mln.
+- **12 kwietnia 2018** — FTC **wycofuje** pierwszy ugoda z regulatorem, zawiera **nowy** — obejmujący również wyciek 57 mln.
 - **Wrzesień 2018** — wspólna ugoda 50 stanów USA: **148 mln USD**.
 - **2018–2022** — reformy Uber pod nowym CEO **Darą Khosrowshahi** (od 2017).
-- **2038** — przewidywany koniec 20-letniego consent decree.
+- **2038** — przewidywany koniec 20-letniego ugoda z regulatorem.
 
 ---
 
@@ -220,7 +220,7 @@ Kultura "**move fast**" prioritetyzowała rozwój nad bezpieczeństwem. God View
 
 - **Eric Schneiderman** — NY Attorney General 2011–2018 (później rezygnacja po własnych skandalach). Prowadził śledztwo God View.
 - **Edith Ramirez** — chair FTC 2013–2017. Uruchomiła śledztwo 2016.
-- **Joseph Simons** — chair FTC 2018–2021. Zawarł drugi consent decree.
+- **Joseph Simons** — chair FTC 2018–2021. Zawarł drugi ugoda z regulatorem.
 
 ---
 
@@ -265,8 +265,8 @@ Reform era:
 | 17–18 listopada 2014 | BuzzFeed publikacje |
 | 19 listopada 2014 | NY AG wszczyna |
 | 6 stycznia 2016 | NY AG ugoda 20 000 USD |
-| 15 sierpnia 2017 | FTC pierwszy consent decree |
-| 12 kwietnia 2018 | FTC drugi consent decree (poszerzony) |
+| 15 sierpnia 2017 | FTC pierwszy ugoda z regulatorem |
+| 12 kwietnia 2018 | FTC drugi ugoda z regulatorem (poszerzony) |
 | Wrzesień 2018 | 50 stanów 148 mln USD (obejmuje też D06) |
 
 ---
@@ -276,14 +276,14 @@ Reform era:
 | Data | Organ | Kwota | Jurysdykcja | Podstawa |
 |------|-------|-------|-------------|----------|
 | 6 stycznia 2016 | NY AG | 20 000 USD | Nowy Jork | Breach notification 2014 |
-| 12 kwietnia 2018 | FTC | 0 USD (consent decree, 20 lat) | USA federalne | FTC Act § 5 |
+| 12 kwietnia 2018 | FTC | 0 USD (ugoda z regulatorem, 20 lat) | USA federalne | FTC Act § 5 |
 | Wrzesień 2018 | 50 stanów | 148 000 000 USD (obejmuje też D06) | USA stanowe | Consumer protection |
 
 ---
 
 ## Precedensy i implikacje
 
-- **Pierwszy FTC consent decree dla unicorn app company** — precedens.
+- **Pierwszy FTC ugoda z regulatorem dla unicorn app company** — precedens.
 - **20-letni audyt** — standardowo dla poważnych naruszeń (Microsoft 2002, Google 2011, Facebook 2011).
 - **Whistleblowing dziennikarski** — pokazanie, że **jeden nieuważny komentarz dyrektora** może uruchomić lawinę regulacyjną.
 

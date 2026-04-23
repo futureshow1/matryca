@@ -310,7 +310,7 @@ Wrzesień 2017, Kalifornia. Pracownik Ring (men, ~30 lat, nazwisko nieujawnione)
 
 ## Pozwy zbiorowe
 
-Główna sprawa: FTC (nie klasyczny class action). **Indywidualne pozwy** — niektóre rodziny ofiar hakerów złożyły pozwy. Wyniki pojedyncze, zwykle ugody ze zgodą na **NDA**.
+Główna sprawa: FTC (nie klasyczny pozew zbiorowy). **Indywidualne pozwy** — niektóre rodziny ofiar hakerów złożyły pozwy. Wyniki pojedyncze, zwykle ugody ze zgodą na **NDA**.
 
 ---
 

@@ -75,7 +75,7 @@ export const QUESTIONS: QuizQuestion[] = [
     id: 'cookies',
     question: 'Klikasz „Akceptuj wszystkie" w banerach cookies, żeby szybciej zamknąć?',
     revelation:
-      'Każde „akceptuj wszystkie" to zgoda dla 300–1500 firm ad-tech, żeby śledzić cię cross-site. Projektanci UX robią przycisk „odmów" mały i ukryty — to klasyczne dark pattern. CNIL nałożył kary 150 mln € (Google) i 60 mln € (Facebook) za to w 2022.',
+      'Każde „akceptuj wszystkie" to zgoda dla 300–1500 firm ad-tech, żeby śledzić cię cross-site. Projektanci UX robią przycisk „odmów" mały i ukryty — to klasyczne mylący interfejs. CNIL nałożył kary 150 mln € (Google) i 60 mln € (Facebook) za to w 2022.',
     weight: 2,
     caseIds: ['A10', 'B04'],
     action: 'Zainstaluj rozszerzenie „Consent-O-Matic" lub „I don\'t care about cookies" — automatycznie odrzuca zbędne cookies na większości stron. Używaj Firefox z włączoną „Total Cookie Protection".',
@@ -120,7 +120,7 @@ export const QUESTIONS: QuizQuestion[] = [
     id: 'linkedin',
     question: 'Masz konto LinkedIn?',
     revelation:
-      'LinkedIn (Microsoft) od września 2024 domyślnie używa wszystkich twoich postów, artykułów i profilu do trenowania modeli AI Microsoftu. Opt-out istnieje, ale jest ukryty. Kara irlandzkiego DPC: 310 mln € (2024) za naruszenie RODO.',
+      'LinkedIn (Microsoft) od września 2024 domyślnie używa wszystkich twoich postów, artykułów i profilu do trenowania modeli AI Microsoftu. Rezygnacja istnieje, ale jest ukryty. Kara irlandzkiego DPC: 310 mln € (2024) za naruszenie RODO.',
     weight: 2,
     caseIds: ['C05'],
     action: 'Settings → Data Privacy → „Data for Generative AI Improvement" → OFF. Sprawdź też „Third-party data access" — domyślnie wiele zewnętrznych aplikacji ma dostęp do twojego profilu.',
@@ -174,7 +174,7 @@ export function scoreProfile(answers: Record<string, 'tak' | 'nie' | 'nie-wiem'>
       maxScore,
       level: 'niski',
       description:
-        'Poziom ekspozycji jest niski — używasz niewielu usług Big Tech albo stosujesz opt-out. Dalsze działania: edukacja innych, wsparcie organizacji praw cyfrowych.',
+        'Poziom ekspozycji jest niski — używasz niewielu usług Big Tech albo stosujesz rezygnacja. Dalsze działania: edukacja innych, wsparcie organizacji praw cyfrowych.',
     };
   if (ratio < 0.5)
     return {

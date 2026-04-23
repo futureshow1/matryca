@@ -152,7 +152,7 @@ Krytycy: prawdziwi sprawcy CSAM **nie używają iCloud Photos z włączonym sync
 ### Co zostało z pomysłu (2024+)
 
 Apple zrezygnował z **CSAM Detection** w iCloud. Zamiast tego:
-- **Advanced Data Protection** dla iCloud (2022) — **end-to-end encryption** dla iCloud Photos (opt-in). To **praktycznie uniemożliwia** skanowanie w chmurze przez Apple.
+- **Advanced Data Protection** dla iCloud (2022) — **end-to-end encryption** dla iCloud Photos (dobrowolne włączenie). To **praktycznie uniemożliwia** skanowanie w chmurze przez Apple.
 - Apple zgłasza do NCMEC tylko **Communication Safety** i spotkania z ograniczonymi raportami e-mail.
 - **Communication Safety** rozszerzona na dorosłych w 2024 (bez notyfikacji rodzica).
 
@@ -353,7 +353,7 @@ W sprawach rozwodowych, ustalania kontaktów z dzieckiem:
 - **Koalicja "dziwnych towarzyszy"** — sprawa zjednoczyła ludzi, którzy zwykle nie stoją po tej samej stronie: **EFF + ACLU** (liberałowie prywatności) + **Edward Snowden** (radykalny libertarianin) + **Alex Stamos** (eks-Facebook security) + **800 pracowników Apple** + **ekstremici religijni** obawiający się skanowania memów + **Chiny dissidentów** obawiający się rozszerzenia.
 - **NeuralHash collision w 18 dni** — Apple pokazał system 5 sierpnia. **18 sierpnia 2021** badacze z GitHub/Reddit znaleźli kolizje NeuralHash. System "sprawdza się jak opisano" — odpowiedział Apple — ale pokazanie kolizji w tak krótkim czasie było PR kompromitacją.
 - **"Heat Initiative"** — założona w 2023 organizacja lobbyjąca za CSAM Detection Apple, finansowana przez donorów ochrony dzieci. Jej list do Apple wywołał odpowiedź Neuenschwandera: *"Scanning every user's privately stored iCloud data would create new threat vectors for data thieves to find and exploit."* To zdanie stało się **public pivot** Apple.
-- **Advanced Data Protection (2022)** — **tydzień po porzuceniu CSAM** Apple ogłosił E2E dla iCloud Photos jako opt-in. Krytycy: Apple wybrał drogę, która **uniemożliwia** własne skanowanie (nawet gdyby chciał). Wspierający: spójna strategia prywatności.
+- **Advanced Data Protection (2022)** — **tydzień po porzuceniu CSAM** Apple ogłosił E2E dla iCloud Photos jako dobrowolne włączenie. Krytycy: Apple wybrał drogę, która **uniemożliwia** własne skanowanie (nawet gdyby chciał). Wspierający: spójna strategia prywatności.
 - **Wewnętrzny Slack Apple** — rzadko się zdarza, żeby pracownicy Apple publicznie protestowali. Culture Apple tradycyjnie zabrania. Wyciek Slacka do Reuters z ponad 800 wiadomości pracowników był **bezprecedensowy**.
 - **Federighi w WSJ** — wywiad 13 sierpnia 2021 z Joanną Stern. Zamiast uspokoić, dał się zepchnąć do defensywy. Cytat: *"This is a widely misunderstood."* Stern: *"But why?"* Federighi nie miał dobrej odpowiedzi.
 - **Polski aspekt** — UODO nie miał formalnej pozycji (funkcja nigdy nie weszła do UE). Ale **Ministerstwo Cyfryzacji** (ówczesne Centrum Projektów Polska Cyfrowa) w 2021 wyraziło obawy w kontekście EU **CSAM Regulation** (tzw. Chat Control).

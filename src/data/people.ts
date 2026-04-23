@@ -264,7 +264,7 @@ pokazując, że dobrze zasoby regulator krajowy może działać asymetrycznie sk
     years: '2012–obecnie',
     portrait_initials: 'AS',
     bio_short:
-      'Niezależny badacz prywatności, współodkrywca Safari Workaround i wielu naruszeń prywatności.',
+      'Niezależny badacz prywatności, współodkrywca Safari Obejście i wielu naruszeń prywatności.',
     bio_long: `Irańsko-amerykański badacz. W 2012 roku, razem z Jonathanem Mayerem z Princeton, udowodnił,
 że Google omija ustawienia prywatności Safari, śledząc użytkowników Apple mimo ich wyraźnej
 konfiguracji. Sprawa trafiła na Wall Street Journal (lutego 2012) i doprowadziła do kary FTC

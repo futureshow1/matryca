@@ -17,7 +17,7 @@ jurisdictions:
 legal_basis:
 - Stanowe prawa konsumenckie
 - ECPA
-- class action
+- pozew zbiorowy
 fines:
 - amount: 25000000
   currency: USD
@@ -67,10 +67,10 @@ years_active:
 
 # D02 — Amazon Alexa: Ludzkie odsłuchiwanie nagrań z kuchni, sypialni i rozmów prywatnych
 
-> **Kategoria:** Smart speakers / always-on listening / human review / AI trenowanie
+> **Kategoria:** Smart speakers / always-on listening / weryfikacja przez ludzi / AI trenowanie
 > **Firma/firmy:** Amazon
-> **Lata:** 2014 (debiut Echo) – 2019 (ujawnienie human review) – 2024 (ugoda class action)
-> **Status:** Zakończone ugody; praktyka zmieniona na opt-out; nagrania nadal zbierane
+> **Lata:** 2014 (debiut Echo) – 2019 (ujawnienie weryfikacja przez ludzi) – 2024 (ugoda pozew zbiorowy)
+> **Status:** Zakończone ugody; praktyka zmieniona na rezygnacja; nagrania nadal zbierane
 > **ID karty:** D02
 
 ---
@@ -81,13 +81,13 @@ years_active:
 |------|---------|
 | Kraj/region | Globalnie; ogniska postępowań: USA, Niemcy, UK |
 | Rok ujawnienia | 10 kwietnia 2019 (*Bloomberg*, Matt Day, Giles Turner, Natalia Drozdiak) |
-| Lata trwania praktyki | 2014–2019 (domyślne human review) |
-| Łączna kara | 95 000 000 USD (class action 2024); brak kar regulacyjnych specyficznie za human review |
+| Lata trwania praktyki | 2014–2019 (domyślne weryfikacja przez ludzi) |
+| Łączna kara | 95 000 000 USD (pozew zbiorowy 2024); brak kar regulacyjnych specyficznie za weryfikacja przez ludzi |
 | Waluta | USD |
-| Podstawa prawna | Stanowe prawa konsumenckie (Illinois BIPA, Washington BPA), ECPA, class action |
+| Podstawa prawna | Stanowe prawa konsumenckie (Illinois BIPA, Washington BPA), ECPA, pozew zbiorowy |
 | Sygnalista/odkrywca | Bloomberg (inside sources); później VICE i The Guardian z kolejnymi ujawnieniami |
 | Liczba poszkodowanych | ~100+ mln użytkowników Alexa globalnie |
-| Status (na dziś) | Amazon wprowadził opt-out; human review nadal istnieje; class action rozliczony 2024 |
+| Status (na dziś) | Amazon wprowadził rezygnacja; weryfikacja przez ludzi nadal istnieje; pozew zbiorowy rozliczony 2024 |
 
 ---
 
@@ -105,13 +105,13 @@ Nagrania, które odsłuchiwali:
 Amazon nie informował użytkowników, że **człowiek może usłyszeć nagrania**. Domyślnie wszystkie nagrania były **używane do trenowania AI**. Bloomberg:
 > *"The team includes a mix of contractors and full-time Amazon employees who work in outposts from Boston to Costa Rica, India, and Romania. They transcribe, annotate and then feed the data back into the system."*
 
-Po publikacji Amazon w **3 dni** wprowadził **opt-out**. Domyślnie nadal było **włączone**. Meta, Apple, Google (które robiły podobnie) szybko ogłosiły zmiany polityki. Apple **zawiesił human review Siri** na kilka miesięcy.
+Po publikacji Amazon w **3 dni** wprowadził **rezygnacja**. Domyślnie nadal było **włączone**. Meta, Apple, Google (które robiły podobnie) szybko ogłosiły zmiany polityki. Apple **zawiesił weryfikacja przez ludzi Siri** na kilka miesięcy.
 
 **31 maja 2023** — FTC nałożyła na Amazon **25 mln USD kary** za naruszenia **COPPA** w związku z Alexa Kids → osobna sprawa, karta D03.
 
 **2022–2024** — class action ***In re Amazon Alexa Privacy Litigation*** w W.D. Washington. Powód wiodący **Jessica Garcia**, reprezentowana przez **Keller Rohrback L.L.P.**, reprezentował ~100 mln użytkowników Alexa. **23 października 2024** — ugoda na **95 000 000 USD**. Illinois residents — szczególne roszczenia pod **BIPA** (Biometric Information Privacy Act).
 
-Sprawa D02 pokazuje, że **głosowe AI assistants były trenowane na prywatnych rozmowach** bez ujawnionej zgody — klasyczny wzorzec "użytkownik nie wie, że człowiek go słyszy". Praktyka dziś jest **opt-out** domyślnie, ale **nagrania głosowe nadal są zbierane** i analizowane (w większości automatycznie, ale część nadal przechodzi przez human review).
+Sprawa D02 pokazuje, że **głosowe AI assistants były trenowane na prywatnych rozmowach** bez ujawnionej zgody — klasyczny wzorzec "użytkownik nie wie, że człowiek go słyszy". Praktyka dziś jest **rezygnacja** domyślnie, ale **nagrania głosowe nadal są zbierane** i analizowane (w większości automatycznie, ale część nadal przechodzi przez weryfikacja przez ludzi).
 
 ---
 
@@ -119,11 +119,11 @@ Sprawa D02 pokazuje, że **głosowe AI assistants były trenowane na prywatnych 
 
 - **Listopad 2014** — Amazon Echo debiut (początkowo tylko dla Prime members).
 - **2015–2019** — ekspansja Alexa do setek milionów urządzeń. Echo, Echo Dot, Echo Show, Echo Auto.
-- **2014–2019** — Amazon buduje **zespoły human review** w Boston, Costa Rice, Indiach, Rumunii. Pracownicy odsłuchują nagrania do trenowania AI.
+- **2014–2019** — Amazon buduje **zespoły weryfikacja przez ludzi** w Boston, Costa Rice, Indiach, Rumunii. Pracownicy odsłuchują nagrania do trenowania AI.
 - **10 kwietnia 2019** — ***Bloomberg*** publikuje: "Amazon Workers Are Listening to What You Tell Alexa".
 - **Kwiecień 2019** — *Guardian*, *VICE Motherboard* — dodatkowe ujawnienia podobnych praktyk w **Apple Siri**, **Google Assistant**, **Facebook Messenger voice clips**.
-- **Lipiec 2019** — **Apple wstrzymuje** human review Siri globalnie. Google — częściowe wstrzymanie dla EU. Facebook — wstrzymuje.
-- **13 kwietnia 2019** — Amazon wprowadza opt-out dla **human review** (ale domyślnie włączone).
+- **Lipiec 2019** — **Apple wstrzymuje** weryfikacja przez ludzi Siri globalnie. Google — częściowe wstrzymanie dla EU. Facebook — wstrzymuje.
+- **13 kwietnia 2019** — Amazon wprowadza rezygnacja dla **weryfikacja przez ludzi** (ale domyślnie włączone).
 - **Sierpień 2019** — **hamburski DPA Johannes Caspar** (ten sam od Google WiFi Street View) wszczyna postępowanie dot. Alexa w Niemczech.
 - **2020–2022** — szereg klas akcji w USA.
 - **31 maja 2023** — **FTC kara 25 mln USD** za naruszenia COPPA (→ D03).
@@ -150,7 +150,7 @@ Po detekcji wake word 5-10 sekund audio przed i po → wysyłane do serwerów Am
 - **Zapisanie nagrania** z timestamp, user ID, lokalizacją
 
 **4. Human review.**
-**~0,1%** nagrań szło do human review. Ale 0,1% × **miliardy nagrań** × **100+ mln użytkowników** = **miliony godzin audio** przetwarzanych przez ludzi. Zadania pracowników:
+**~0,1%** nagrań szło do weryfikacja przez ludzi. Ale 0,1% × **miliardy nagrań** × **100+ mln użytkowników** = **miliony godzin audio** przetwarzanych przez ludzi. Zadania pracowników:
 - Sprawdzić, czy transkrypcja jest poprawna
 - Oznaczyć gatunek mówiącego (mężczyzna/kobieta/dziecko)
 - Oznaczyć emocje
@@ -158,7 +158,7 @@ Po detekcji wake word 5-10 sekund audio przed i po → wysyłane do serwerów Am
 - Poprawić transkrypcję, jeśli była błędna
 
 **5. Karmienie AI.**
-Transkrypcje + audio + adnotacje **wracają do modelu**. Model uczy się lepiej rozpoznawać akcenty, gatunki, intencje. Im więcej human review, tym lepszy model.
+Transkrypcje + audio + adnotacje **wracają do modelu**. Model uczy się lepiej rozpoznawać akcenty, gatunki, intencje. Im więcej weryfikacja przez ludzi, tym lepszy model.
 
 ### Kluczowe ujawnienia Bloomberg
 
@@ -181,7 +181,7 @@ Transkrypcje + audio + adnotacje **wracają do modelu**. Model uczy się lepiej 
 ### Dlaczego to było naruszenie
 
 1. **Brak ujawnienia** — Amazon w 2019 **nie mówił** użytkownikom, że ludzie słuchają.
-2. **Domyślnie włączone** — nie było opt-out do kwietnia 2019.
+2. **Domyślnie włączone** — nie było rezygnacja do kwietnia 2019.
 3. **Nagrania dzieci** — COPPA wymaga zgody rodzica (→ D03).
 4. **Nagrania przypadkowe** — false wake activations → pracownicy słuchali intymnych rozmów bez jakiejkolwiek zgody.
 5. **Naruszenia ECPA** — Electronic Communications Privacy Act zakazuje przechwytywania komunikacji bez zgody (klasyczne **wiretapping**).
@@ -256,10 +256,10 @@ Le Bonniec zgłosił do francuskiego CNIL w 2020.
 
 **Etap 1: obrona (10 kwietnia 2019).** Oświadczenie: *"We take the security and privacy of our customers' personal information seriously. We only annotate an extremely small sample of Alexa voice recordings in order to improve the customer experience."*
 
-**Etap 2: szybkie wprowadzenie opt-out (13 kwietnia 2019).** 3 dni po publikacji Bloomberg, Amazon wprowadza opcję:
+**Etap 2: szybkie wprowadzenie rezygnacja (13 kwietnia 2019).** 3 dni po publikacji Bloomberg, Amazon wprowadza opcję:
 - Ustawienia → Alexa Privacy → **Manage Your Alexa Data** → **Help Improve Alexa** → wyłącz
 
-**Etap 3: komunikat publiczny o praktyce.** Rohit Prasad (VP Alexa AI) pisze blog post wyjaśniający, jak działa human review i dlaczego jest "niezbędne".
+**Etap 3: komunikat publiczny o praktyce.** Rohit Prasad (VP Alexa AI) pisze blog post wyjaśniający, jak działa weryfikacja przez ludzi i dlaczego jest "niezbędne".
 
 **Etap 4: reforma defaults (2019–2020).**
 - Opcja **"Don't save voice recordings"** (ale nowa domyślnie = zapisywanie)
@@ -294,7 +294,7 @@ Le Bonniec zgłosił do francuskiego CNIL w 2020.
 | Data | Etap |
 |------|------|
 | 10 kwietnia 2019 | Bloomberg publikacja |
-| 13 kwietnia 2019 | Opt-out wprowadzony |
+| 13 kwietnia 2019 | Rezygnacja wprowadzony |
 | 31 maja 2023 | FTC kara COPPA 25 mln |
 | 23 października 2024 | Ugoda klasy 95 mln |
 
@@ -324,9 +324,9 @@ Le Bonniec zgłosił do francuskiego CNIL w 2020.
 
 ### Dla praktyki Big Tech
 
-- **Apple** — wstrzymał human review Siri; później wprowadził **opt-in domyślny**.
+- **Apple** — wstrzymał weryfikacja przez ludzi Siri; później wprowadził **dobrowolne włączenie domyślny**.
 - **Google Assistant** — analogiczne zmiany.
-- **Meta (Facebook Portal, WhatsApp voice)** — wycofał human review.
+- **Meta (Facebook Portal, WhatsApp voice)** — wycofał weryfikacja przez ludzi.
 - **Microsoft Cortana** — wycofał większość funkcji voice 2020.
 
 ---
@@ -382,11 +382,11 @@ Jeśli masz Echo, Apple HomePod, Google Nest — **pamiętaj, że mikrofon jest 
 
 - **"Śpiewająca pod prysznicem"** — jeden z anegdotycznych cytatów Bloomberg — pracownicy Amazon w Bostonie dzielili się w Slacku anegdotami z najlepszymi klipami. **"It's funny"** — cytat. Krytycy: to jest **kultura niepoważnego podejścia do prywatności** klientów.
 - **Pracownik odsłuchujący napaść seksualną** — najbardziej wstrząsający detal Bloomberg. Pracownicy zgłosili potencjalne przestępstwo; Amazon odpowiedział: **"nie naszym zadaniem interwencja"**. To wywołało debatę: czy firma ma **obowiązek zgłaszać** organom ścigania przestępstwa usłyszane w nagraniach?
-- **Rumunia, Bukareszt** — główne europejskie hub Amazon do human review. Pracownicy mówili po angielsku, hiszpańsku, francusku, niemiecku. W 2022 Amazon przeniósł wiele operacji do Indii.
+- **Rumunia, Bukareszt** — główne europejskie hub Amazon do weryfikacja przez ludzi. Pracownicy mówili po angielsku, hiszpańsku, francusku, niemiecku. W 2022 Amazon przeniósł wiele operacji do Indii.
 - **Thomas le Bonniec** — francuski kontraktor Apple Siri. Zgłosił do CNIL w 2020. Jego whistleblowing był w stylu *Snowden light* — nie ujawnił danych, tylko praktykę. Apple reakcja: zatrudnił własnych pracowników zamiast outsourcingu (pozytywne), ale nie wypłacił odszkodowania.
-- **Apple reakcja była najlepsza** — wstrzymał human review globally w lipcu 2019, potem wprowadził **opt-in domyślny**. Tim Cook oświadczenie: *"We will not improve Siri at the cost of our customers' privacy."*
+- **Apple reakcja była najlepsza** — wstrzymał weryfikacja przez ludzi globally w lipcu 2019, potem wprowadził **dobrowolne włączenie domyślny**. Tim Cook oświadczenie: *"We will not improve Siri at the cost of our customers' privacy."*
 - **"Ring + Alexa paradox"** — Amazon w ten sam dzień (31 maja 2023) otrzymał dwie kary FTC: Ring (5,8 mln) + Alexa COPPA (25 mln) = **30,8 mln łącznie**. Rekordowy dzień złych nowości dla smart home Amazon.
-- **Polski rynek** — Echo jest w Polsce od 2019, ale rynek jest mały w porównaniu z USA/UK/DE. Alexa po polsku została wprowadzona dopiero 2021. Lokalizacja nagrań z polskich Echo — niejasna (prawdopodobnie w chmurze AWS w EU, ale human review mogło być w Costa Rica/India).
+- **Polski rynek** — Echo jest w Polsce od 2019, ale rynek jest mały w porównaniu z USA/UK/DE. Alexa po polsku została wprowadzona dopiero 2021. Lokalizacja nagrań z polskich Echo — niejasna (prawdopodobnie w chmurze AWS w EU, ale weryfikacja przez ludzi mogło być w Costa Rica/India).
 - **Hamburski Caspar znowu** — Johannes Caspar (sprawa Google WiFi Street View — B01) otworzył postępowanie przeciw Amazon w sierpniu 2019. Amazon zobowiązał się do zmian w UE wcześniej niż w USA. Klasyczny **Brussels effect**.
 - **False wake "election"** — słowo "election" brzmi podobnie do "Alexa" z texańskim akcentem. Bloomberg ujawnił, że pracownicy Amazon odsłuchali **tysiące nagrań z rozmów politycznych** podczas kampanii 2016 i 2018 w USA. Ludzie rozmawiający o wyborach przy Echo — ich komentarze były odsłuchiwane przez obcych pracowników w Indiach, Rumunii.
 - **"It knows your address"** — krytycy Amazon zauważali, że human reviewers widzieli **user ID, typ urządzenia, lokalizację IP** (miasto). W teorii możliwe było **powiązanie głosu z konkretną osobą**.

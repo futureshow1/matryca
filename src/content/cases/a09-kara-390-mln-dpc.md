@@ -93,7 +93,7 @@ years_active:
 
 **4 stycznia 2023** irlandzka **Data Protection Commission (DPC)** ogłosiła zakończenie dwóch postępowań przeciwko Meta Platforms Ireland dotyczących przetwarzania danych osobowych na **Facebooku i Instagramie** w celach reklamy behawioralnej. Kara: **390 mln EUR** (210 mln za Facebook + 180 mln za Instagram), plus **5,5 mln EUR za WhatsApp** ogłoszona w tym samym tygodniu — łącznie **395,5 mln EUR**. Podstawą były skargi złożone do DPC przez **NOYB / Maxa Schremsa 25 maja 2018** — **dokładnie w dniu wejścia RODO w życie**.
 
-Sedno sprawy: od dnia wejścia RODO Meta **przestała prosić o zgodę** użytkowników na targetowaną reklamę (wcześniejszy model **opt-in**) i zamiast tego przyjęła **ukryty prawny szwindel** — uznała, że reklama behawioralna jest **częścią umowy** między Meta a użytkownikiem. Meta zaktualizowała Terms of Service 25 maja 2018: użytkownik akceptujący nowe TOS "zawierał umowę", której "wykonanie" wymaga przetwarzania danych do reklam (art. 6 ust. 1 lit. b RODO — "processing is necessary for the performance of a contract"). **Bez zgody, bez opt-outu** — reklamy behawioralne jako produkt.
+Sedno sprawy: od dnia wejścia RODO Meta **przestała prosić o zgodę** użytkowników na targetowaną reklamę (wcześniejszy model **dobrowolne włączenie**) i zamiast tego przyjęła **ukryty prawny szwindel** — uznała, że reklama behawioralna jest **częścią umowy** między Meta a użytkownikiem. Meta zaktualizowała Terms of Service 25 maja 2018: użytkownik akceptujący nowe TOS "zawierał umowę", której "wykonanie" wymaga przetwarzania danych do reklam (art. 6 ust. 1 lit. b RODO — "processing is necessary for the performance of a contract"). **Bez zgody, bez opt-outu** — reklamy behawioralne jako produkt.
 
 DPC pierwotnie **zgodziła się z Meta** (projekt decyzji 2021 przewidywał jedynie 28–36 mln EUR kary tylko za brak transparentności). 10 innych europejskich organów nadzoru (w tym holenderska AP) nie zgodziło się. Sprawa trafiła do **EROD (Europejska Rada Ochrony Danych)**, która wiążącą decyzją z 5 grudnia 2022 **uchyliła stanowisko DPC** i stwierdziła, że:
 1. Reklamy behawioralne **nie są konieczne** do wykonania umowy FB/IG (usługa to "łączenie z przyjaciółmi", nie "oglądanie targetowanych reklam").
@@ -138,13 +138,13 @@ Dla obywateli UE to przełomowa sprawa: **Meta nie ma prawa pokazywać targetowa
 
 **Art. 6 ust. 1 RODO** wymienia **sześć możliwych podstaw prawnych** przetwarzania danych osobowych:
 - (a) **zgoda** (consent)
-- (b) **wykonanie umowy** (performance of contract)
+- (b) **wykonanie umowy** (wykonanie umowy)
 - (c) obowiązek prawny
 - (d) ochrona żywotnych interesów
 - (e) zadanie w interesie publicznym
 - (f) **uzasadniony interes** (legitimate interest)
 
-Przed RODO (do 25 maja 2018) Meta używała podstawy **(a) zgoda** dla reklam. System opt-in: użytkownik zgadzał się na reklamy personalizowane podczas rejestracji.
+Przed RODO (do 25 maja 2018) Meta używała podstawy **(a) zgoda** dla reklam. System dobrowolne włączenie: użytkownik zgadzał się na reklamy personalizowane podczas rejestracji.
 
 **Przez dekadę do RODO** zgoda była "ukryta w TOS" — ale formalnie była zgodą.
 
@@ -250,7 +250,7 @@ NOYB złożyła w tym samym dniu 4 skargi:
 *"Mocno nie zgadzamy się z ostateczną decyzją DPC i wierzymy, że w pełni przestrzegamy RODO, opierając się na 'Contractual Necessity' dla reklam behawioralnych, biorąc pod uwagę naturę naszych usług. Odwołamy się."*
 
 **Działania praktyczne (kwiecień 2023):**
-- Zmiana podstawy prawnej z "performance of contract" na **"legitimate interest"** (art. 6(1)(f) RODO). Użytkownicy dostali powiadomienie, że podstawa się zmieniła — ale nadal **bez opcji opt-out**.
+- Zmiana podstawy prawnej z "performance of contract" na **"legitimate interest"** (art. 6(1)(f) RODO). Użytkownicy dostali powiadomienie, że podstawa się zmieniła — ale nadal **bez opcji rezygnacja**.
 - EROD zakazał tego w październiku 2023.
 
 **Działania praktyczne (październik/listopad 2023):**

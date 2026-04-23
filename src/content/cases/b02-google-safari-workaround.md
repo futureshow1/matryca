@@ -1,9 +1,9 @@
 ---
 id: B02
-slug: b02-google-safari-workaround
+slug: b02-google-safari-obejście
 group: B
 group_label: Google
-title: Google Safari Workaround
+title: Google Safari Obejście
 year_revealed: 2012
 last_updated: '2026-04-17'
 companies:
@@ -58,16 +58,16 @@ priority: STANDARD
 card_complete: true
 word_count: 3650
 explainer:
-  src: /animations/b02-google-safari-workaround.html
+  src: /animations/b02-google-safari-obejście.html
   duration: '60s'
-  title: Safari Workaround — jak Google obszedł blokadę Apple
+  title: Safari Obejście — jak Google obszedł blokadę Apple
 subtitle: Omijanie domyślnej prywatności iPhone'ów
 years_active:
 - 2011
 - 2012
 ---
 
-# B02 — Google Safari Workaround: Omijanie domyślnej prywatności iPhone'ów
+# B02 — Google Safari Obejście: Omijanie domyślnej prywatności iPhone'ów
 
 > **Kategoria:** Obchodzenie ustawień prywatności przeglądarki / wprowadzanie w błąd / cookies
 > **Firma/firmy:** Google (DoubleClick)
@@ -110,7 +110,7 @@ Mayer po odkryciu zrobił karierę jako regulator: **Chief Technologist FCC 2014
 - **2003** — powstanie Apple Safari, od początku z polityką blokowania third-party cookies domyślnie.
 - **2008** — Google przejmuje **DoubleClick** (za 3,1 mld USD) — największą wówczas sieć reklamową świata. DoubleClick staje się podstawą silnika reklamowego Google.
 - **2011** — **FTC Consent Decree** z Google po wycieku Buzz (2010). Google zobowiązał się **nie wprowadzać użytkowników w błąd** co do prywatności; zobowiązał się również do **comprehensive privacy program** z audytami zewnętrznymi co 2 lata.
-- **2011** — Google zaczyna używać Safari Workaround: niewidoczne formularze HTML w reklamach DoubleClick obchodzące blokadę third-party cookies.
+- **2011** — Google zaczyna używać Safari Obejście: niewidoczne formularze HTML w reklamach DoubleClick obchodzące blokadę third-party cookies.
 - **Styczeń 2012** — Jonathan Mayer, prowadząc projekt Stanford Web Privacy Census, **zauważa anomalię**: iPhone'y i Maci mają nienaturalnie dużo cookies DoubleClick mimo domyślnej blokady Safari. Analiza reverse engineering reklam DoubleClick ujawnia mechanizm.
 - **17 lutego 2012** — *Wall Street Journal* (Julia Angwin, Jennifer Valentino-DeVries) publikuje: "*Google's iPhone Tracking*". Równolegle Mayer publikuje techniczny raport na Stanford CIS.
 - **17 lutego 2012** — Google **tego samego dnia** ogłasza zaprzestanie praktyki. Oficjalny komunikat: *"We used known Safari functionality to provide features that signed-in Google users had enabled."*
@@ -118,7 +118,7 @@ Mayer po odkryciu zrobił karierę jako regulator: **Chief Technologist FCC 2014
 - **17 sierpnia 2012** — **FTC: kara 22,5 mln USD** — **rekordowa w historii FTC w tamtym czasie**.
 - **Listopad 2012** — akcja 37 AG stanowych zaczyna się; koordynacja.
 - **18 listopada 2013** — **ugoda 37 stanów USA: 17 mln USD**. Google zobowiązane do edukacji konsumentów i utrzymania zgodności.
-- **2015** — Court of Appeal UK w sprawie **Vidal-Hall v Google**: szkoda niemajątkowa (distress) może być podstawą pozwu DPA 1998. Zielone światło dla class action.
+- **2015** — Court of Appeal UK w sprawie **Vidal-Hall v Google**: szkoda niemajątkowa (distress) może być podstawą pozwu DPA 1998. Zielone światło dla pozew zbiorowy.
 - **2017** — formalne złożenie **Lloyd v. Google** — Richard Lloyd reprezentuje 4,4 mln użytkowników iPhone w UK.
 - **Czerwiec 2017** — Apple wprowadza **Intelligent Tracking Prevention (ITP) 1.0** w Safari 11 (macOS High Sierra, iOS 11).
 - **Marzec 2019** — **High Court UK** odrzuca Lloyd v. Google.
@@ -181,7 +181,7 @@ Gdy użytkownik odwiedzał stronę z reklamą DoubleClick:
 
 **Jonathan Mayer** (ur. 1984) — amerykański informatyk i prawnik specjalizujący się w prywatności cyfrowej. Wykształcenie: **Princeton** (BA Computer Science), **Stanford Law School** (JD), **Stanford CS** (PhD). W latach 2011–2013 był **doktorantem Stanford** prowadzącym projekt **Web Privacy Census** — automatyczne skanowanie **milionów stron** pod kątem trackerów. Jego metodologia (OpenWPM, FourthParty) stała się standardem w badaniach prywatności webowej.
 
-Po ujawnieniu Safari Workaround: **Chief Technologist FCC** (2014–2015) za kadencji Toma Wheelera, następnie **Chief Technologist FTC** (2019–2021). Obecnie **assistant professor** na Princeton.
+Po ujawnieniu Safari Obejście: **Chief Technologist FCC** (2014–2015) za kadencji Toma Wheelera, następnie **Chief Technologist FTC** (2019–2021). Obecnie **assistant professor** na Princeton.
 
 Dodatkowe osiągnięcia:
 - Współautor standardu **Do Not Track (DNT)** (2010–2011)
@@ -282,7 +282,7 @@ Mayer skontaktował się z **Julią Angwin** z *Wall Street Journal*, która pro
 ### Orzecznictwo powiązane
 
 - ***Vidal-Hall v Google* [2015] EWCA Civ 311** — Court of Appeal UK: szkoda niemajątkowa (distress) jest podstawą roszczenia pod DPA 1998.
-- ***Lloyd v Google LLC* [2021] UKSC 50** — Sąd Najwyższy UK odrzucił class action z procedural grounds. Orzeczenie uważane za **odebranie UK narzędzia class action** w sprawach prywatności.
+- ***Lloyd v Google LLC* [2021] UKSC 50** — Sąd Najwyższy UK odrzucił pozew zbiorowy z przesłanki proceduralne. Orzeczenie uważane za **odebranie UK narzędzia pozew zbiorowy** w sprawach prywatności.
 - ***Fashion ID v Verbraucherzentrale NRW* (C-40/17, 2019)** — TSUE: właściciele stron z Facebook Like są współadministratorami danych.
 
 ---
@@ -314,7 +314,7 @@ Mayer skontaktował się z **Julią Angwin** z *Wall Street Journal*, która pro
 
 ### Dla praktyki Big Tech i Apple
 
-- **Eskalacja Apple vs Google** — Safari Workaround to **moment nieodwracalny**. Apple postanowił strategicznie **zróżnicować się od Google przez prywatność**. Kolejne kroki:
+- **Eskalacja Apple vs Google** — Safari Obejście to **moment nieodwracalny**. Apple postanowił strategicznie **zróżnicować się od Google przez prywatność**. Kolejne kroki:
   - **2017**: ITP 1.0 (Intelligent Tracking Prevention) — automatyczne wygaszanie cookies
   - **2019**: ITP 2.x — Storage Access API
   - **2020**: Full Third-Party Cookie Blocking
@@ -337,7 +337,7 @@ Mayer skontaktował się z **Julią Angwin** z *Wall Street Journal*, która pro
 
 ### Co to dla mnie znaczy?
 
-Jeśli w 2011–2012 używałeś iPhone'a, Macbooka lub iPada i surfowałeś po internecie — **Google prawdopodobnie śledził cię mimo twoich ustawień prywatności**. Dziś sytuacja jest lepsza dzięki reformom Apple, ale **reklamodawcy ciągle szukają nowych sposobów**, by obchodzić zabezpieczenia. Przykład z A01: "Local Mess" Mety to w istocie **Safari Workaround następnej generacji** — inny trick, ten sam cel.
+Jeśli w 2011–2012 używałeś iPhone'a, Macbooka lub iPada i surfowałeś po internecie — **Google prawdopodobnie śledził cię mimo twoich ustawień prywatności**. Dziś sytuacja jest lepsza dzięki reformom Apple, ale **reklamodawcy ciągle szukają nowych sposobów**, by obchodzić zabezpieczenia. Przykład z A01: "Local Mess" Mety to w istocie **Safari Obejście następnej generacji** — inny trick, ten sam cel.
 
 ### Jak się chronić?
 
@@ -357,14 +357,14 @@ Jeśli w 2011–2012 używałeś iPhone'a, Macbooka lub iPada i surfowałeś po 
 - **RODO art. 7** — zgoda musi być **swobodna, konkretna, świadoma i jednoznaczna**.
 
 **W UK (po Lloyd v. Google):**
-- Indywidualne pozwy są nadal możliwe (nie class action).
+- Indywidualne pozwy są nadal możliwe (nie pozew zbiorowy).
 - ICO może nakładać kary — w 2024 uchwalono reformę, która częściowo przywraca class actions.
 
 ### Gdzie się zgłosić?
 
 - **Polska**: UODO
-- **Cookies banner bez równorzędnego opt-out**: można zgłaszać do UODO i NOYB (noyb.eu)
-- **Ochrona konsumenta**: UOKiK dla dark patterns
+- **Cookies banner bez równorzędnego rezygnacja**: można zgłaszać do UODO i NOYB (noyb.eu)
+- **Ochrona konsumenta**: UOKiK dla mylące interfejsy
 
 ### Uwaga dla mediatorów, prawników, stron WWW
 
@@ -377,16 +377,16 @@ Jeśli **prowadzisz stronę internetową kancelarii, fundacji, firmy**:
 
 ## Ciekawostki
 
-- **Jonathan Mayer** — odkrywca Safari Workaround — został później **Chief Technologist FCC** (2014–2015) i **Chief Technologist FTC** (2019–2021). Klasyczny przypadek "zmiany strony": badacz → regulator → badacz. Rzadki wzorzec w świecie prywatności.
+- **Jonathan Mayer** — odkrywca Safari Obejście — został później **Chief Technologist FCC** (2014–2015) i **Chief Technologist FTC** (2019–2021). Klasyczny przypadek "zmiany strony": badacz → regulator → badacz. Rzadki wzorzec w świecie prywatności.
 - **"Do Not Track" (DNT)** — standard, którego Mayer był współautorem (2010–2011). Google **nigdy nie zaimplementował** respektowania DNT w reklamach. Jeden z powodów, dla których Mayer zajął się publikacją: *"Jeśli Google nie respektuje DNT, to ciekawe jak respektuje inne ustawienia prywatności..."*.
-- **Ashkan Soltani → California** — został w 2022 szefem **CPPA (California Privacy Protection Agency)**, najsilniejszego regulatora prywatności w USA. CPPA egzekwuje CCPA i CPRA. Soltani zaczynał jako niezależny badacz, pracował z WSJ na Safari Workaround, potem FTC, potem CPPA. Dziś kieruje egzekwowaniem prawa, które uchwalono częściowo w odpowiedzi na praktyki jak Safari Workaround.
+- **Ashkan Soltani → California** — został w 2022 szefem **CPPA (California Privacy Protection Agency)**, najsilniejszego regulatora prywatności w USA. CPPA egzekwuje CCPA i CPRA. Soltani zaczynał jako niezależny badacz, pracował z WSJ na Safari Obejście, potem FTC, potem CPPA. Dziś kieruje egzekwowaniem prawa, które uchwalono częściowo w odpowiedzi na praktyki jak Safari Obejście.
 - **Internet Explorer też dotknięty** — Microsoft wkrótce po WSJ ogłosił, że Google używa analogicznych technik w IE (trick z **P3P Policy tag**, używany w sposób niewłaściwy). Google potwierdził ("P3P jest przestarzały, nie traktowaliśmy go serio"), ale wywołało to dodatkowe PR negative.
 - **FTC 22,5 mln USD to rekord FTC w 2012** — dziś, po karze 5 mld za Cambridge Analytica, wygląda nominalnie. Ale w 2012 to było **największe osiągnięcie agencji**.
 - **Akcje Google wzrosły po karze** — inwestorzy zinterpretowali 22,5 mln jako **jednodniowy przychód** Google (który w 2012 wynosił ok. 37 mld USD rocznie, czyli ~100 mln dziennie).
 - **Google nie przyznał winy** — ugoda "neither admit nor deny". Standardowa strategia korporacyjna w USA.
 - **Symboliczna skala kary FTC 22,5 mln vs przychody Google 2012 (37 mld)** = **0,06% przychodów**. Dla porównania: kara prywatności w przypadku obywatela od UODO może sięgnąć 4% przychodów RODO (5% dochodów osobistych). Big Tech w 2012 miał de facto **niższe progi kar niż obywatele**.
-- **Apple vs Google — definiująca rywalizacja**: Safari Workaround zradykalizował Apple. **Steve Jobs** w 2010 w wywiadzie dla *All Things Digital* podkreślał, że "*privacy means people know what they're signing up for, in plain English*". Tim Cook po 2012 zrobił z prywatności **strategiczną różnicę marki Apple** — linie reklamowe typu "*Privacy. That's iPhone.*"
-- **Meta ATT hit: 10 mld USD rocznie** — App Tracking Transparency Apple (kwiecień 2021) kosztował Meta około 10 mld USD spadku przychodów reklamowych rocznie (ogłoszenie 2022). Zuckerberg publicznie ostro skrytykował Apple. Strategiczna reakcja Apple zaczęła się wiele lat wcześniej — od Safari Workaround.
+- **Apple vs Google — definiująca rywalizacja**: Safari Obejście zradykalizował Apple. **Steve Jobs** w 2010 w wywiadzie dla *All Things Digital* podkreślał, że "*privacy means people know what they're signing up for, in plain English*". Tim Cook po 2012 zrobił z prywatności **strategiczną różnicę marki Apple** — linie reklamowe typu "*Privacy. That's iPhone.*"
+- **Meta ATT hit: 10 mld USD rocznie** — App Tracking Transparency Apple (kwiecień 2021) kosztował Meta około 10 mld USD spadku przychodów reklamowych rocznie (ogłoszenie 2022). Zuckerberg publicznie ostro skrytykował Apple. Strategiczna reakcja Apple zaczęła się wiele lat wcześniej — od Safari Obejście.
 - **Chrome i Manifest V3** — od 2024 Chrome ogranicza rozszerzenia blokujące reklamy (Manifest V3). uBlock Origin jest w ograniczonej wersji w Chrome. To jest **przeciwieństwo** kierunku Apple: Google broni modelu reklamowego, Apple atakuje go w imię prywatności.
 - **Polska — "Fashion ID"** — wyrok TSUE z 2019 dotyczący właścicieli stron z przyciskiem Facebook Like. Sprawa pierwotnie niemiecka (Verbraucherzentrale NRW). Wyrok ma bezpośrednie znaczenie dla polskich sklepów internetowych, blogów, instytucji publicznych: jeśli masz Facebook Like, jesteś **współadministratorem**.
 
@@ -422,7 +422,7 @@ Jeśli **prowadzisz stronę internetową kancelarii, fundacji, firmy**:
 
 14. California Privacy Protection Agency — przemówienia Ashkana Soltaniego 2022–2025.
 
-15. The Markup (markup.org) — długoterminowa analiza Safari Workaround i następnych technik, 2020.
+15. The Markup (markup.org) — długoterminowa analiza Safari Obejście i następnych technik, 2020.
 
 ---
 

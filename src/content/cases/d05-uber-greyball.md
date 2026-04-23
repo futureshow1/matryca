@@ -98,7 +98,7 @@ Zidentyfikowane miasta: **Boston, Portland (Oregon), Las Vegas, Filadelfia** ora
 
 **8 marca 2017** — Uber publicznie ogłasza **"prohibiting its use against law enforcement going forward"** — zaprzestanie praktyki dla policji. Ale dla "prywatnych użytkowników" (konkurencja, dziennikarze) zachowuje prawo do używania.
 
-**DOJ inquiry** zakończyło się **bez zarzutów karnych** (2019), prawdopodobnie ze względu na trudność w udowodnieniu **celowej intencji oszustwa federalnej agencji** (większość celów było lokalnych). Sprawa została ujęta w szerszym **FTC consent decree kwiecień 2018** (→ D04) i ugodzie **148 mln USD z 50 stanami** (→ D04, D06).
+**DOJ inquiry** zakończyło się **bez zarzutów karnych** (2019), prawdopodobnie ze względu na trudność w udowodnieniu **celowej intencji oszustwa federalnej agencji** (większość celów było lokalnych). Sprawa została ujęta w szerszym **FTC ugoda z regulatorem kwiecień 2018** (→ D04) i ugodzie **148 mln USD z 50 stanami** (→ D04, D06).
 
 Greyball stał się **symbolem korporacyjnego unikania regulacji** i **wpłynął na nowego CEO Darę Khosrowshahi** (od sierpnia 2017) do wprowadzenia **zero-tolerance policy** wobec takich praktyk.
 
@@ -116,7 +116,7 @@ Greyball stał się **symbolem korporacyjnego unikania regulacji** i **wpłyną�
 - **8 marca 2017** — Uber publicznie zobowiązuje się do **nie używania Greyball przeciw law enforcement** (ale zachowuje dla "konkurencji").
 - **Czerwiec 2017** — Kalanick rezygnuje; Dara Khosrowshahi wkracza w sierpniu.
 - **2018–2019** — DOJ inquiry kontynuowana, ostatecznie umarzona.
-- **Kwiecień 2018** — FTC drugi consent decree (obejmuje Greyball jako część naruszeń) → D04.
+- **Kwiecień 2018** — FTC drugi ugoda z regulatorem (obejmuje Greyball jako część naruszeń) → D04.
 - **Wrzesień 2018** — 148 mln USD ugoda z 50 stanami → D04, D06.
 
 ---
@@ -225,7 +225,7 @@ Isaac korzystał z **ponad 50 anonimowych źródeł** wewnątrz Uber. Pracownicy
 
 - **DOJ** — criminal inquiry.
 - **Erich Zwettler** (Portland Bureau of Transportation) — jedna z pierwszych osób, która **zidentyfikowała** fake pojazdy i zgłosiła.
-- **FTC** — późniejsze consent decree.
+- **FTC** — późniejsze ugoda z regulatorem.
 
 ### Reformatorzy
 
@@ -263,7 +263,7 @@ DOJ śledztwo toczyło się 2017–2019. **Nie było zarzutów karnych**. Przycz
 
 ### Jurysdykcje
 
-- **USA federalne** — DOJ (criminal, bez zarzutów); FTC (civil, consent decree)
+- **USA federalne** — DOJ (criminal, bez zarzutów); FTC (civil, ugoda z regulatorem)
 - **USA stanowe** — 50 stanów ugoda 2018 (ujęta w D04, D06)
 
 ### Podstawa prawna
@@ -281,7 +281,7 @@ DOJ śledztwo toczyło się 2017–2019. **Nie było zarzutów karnych**. Przycz
 | 4 marca 2017 | DOJ inquiry |
 | 8 marca 2017 | Uber częściowa reforma |
 | 2017–2019 | DOJ inquiry |
-| Kwiecień 2018 | FTC drugi consent decree (D04) |
+| Kwiecień 2018 | FTC drugi ugoda z regulatorem (D04) |
 | Wrzesień 2018 | 50 stanów 148 mln USD (D04, D06) |
 | 2019 | DOJ inquiry zamknięty bez zarzutów |
 
@@ -290,7 +290,7 @@ DOJ śledztwo toczyło się 2017–2019. **Nie było zarzutów karnych**. Przycz
 ## Kary i ugody
 
 **Brak bezpośrednich kar za Greyball**. Sprawa ujęta w szerszych ugodach:
-- **FTC consent decree 2018** — zawiera Greyball jako część naruszeń (D04)
+- **FTC ugoda z regulatorem 2018** — zawiera Greyball jako część naruszeń (D04)
 - **148 mln USD** z 50 stanami — ujmuje wszystkie naruszenia Uber 2014–2016 (D04, D06)
 
 ---
@@ -384,7 +384,7 @@ W sprawach o **dyskryminację algorytmiczną**:
 
 3. Department of Justice, federal criminal inquiry into Greyball, 2017–2019.
 
-4. FTC, "In the Matter of Uber Technologies Inc.", File No. 152-3054, kwiecień 2018 consent decree.
+4. FTC, "In the Matter of Uber Technologies Inc.", File No. 152-3054, kwiecień 2018 ugoda z regulatorem.
 
 5. 50 states multi-state settlement with Uber, wrzesień 2018.
 

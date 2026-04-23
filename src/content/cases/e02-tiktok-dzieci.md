@@ -62,7 +62,7 @@ years_active:
 
 # E02 — TikTok: Kary za dane dzieci — DPC 345 mln €, ICO 12,7 mln £
 
-> **Kategoria:** Ochrona dzieci / RODO / public-by-default / dark patterns / Family Pairing
+> **Kategoria:** Ochrona dzieci / RODO / public-by-default / mylące interfejsy / Family Pairing
 > **Firma/firmy:** TikTok / ByteDance
 > **Lata:** Lipiec–grudzień 2020 (badany okres), kwiecień 2023 (ICO), wrzesień 2023 (DPC)
 > **Status:** Zakończone; TikTok w odwołaniu w Irish High Court
@@ -121,7 +121,7 @@ Sprawa E02 jest **punktem zwrotnym** w egzekwowaniu **Children's Online Privacy*
 - **Wrzesień 2021** — DPC oficjalnie rozpoczyna **own-volition inquiry**.
 - **2022** — dochodzenia DPC i ICO.
 - **Kwiecień 2023** — **ICO: kara 12,7 mln GBP**.
-- **Sierpień 2023** — **EDPB** wydaje wiążącą decyzję dodającą naruszenie art. 5(1)(a) RODO (zasada uczciwości dot. dark patterns).
+- **Sierpień 2023** — **EDPB** wydaje wiążącą decyzję dodającą naruszenie art. 5(1)(a) RODO (zasada uczciwości dot. mylące interfejsy).
 - **1 września 2023** — DPC przyjmuje końcową decyzję.
 - **15 września 2023** — **DPC ogłasza 345 mln EUR kary**.
 - **Październik 2023** — TikTok wnosi odwołanie w Irish High Court (judicial review).
@@ -227,7 +227,7 @@ Kara: **12,7 mln GBP**. Pierwotnie ICO rozważał **27 mln GBP**, ale obniżył 
 ### Sprawy krajowe (objections)
 
 - **Garante per la Protezione dei Dati Personali** (Włochy) — zgłosił objection ws. age verification.
-- **Berliner Beauftragte für Datenschutz** (Berlin) — zgłosił objection ws. dark patterns.
+- **Berliner Beauftragte für Datenschutz** (Berlin) — zgłosił objection ws. mylące interfejsy.
 
 ### Krytycy/organizacje
 
@@ -272,7 +272,7 @@ Kara: **12,7 mln GBP**. Pierwotnie ICO rozważał **27 mln GBP**, ale obniżył 
 ### Podstawa prawna
 
 DPC decyzja cytuje:
-- **Art. 5(1)(a) RODO** — zasada uczciwości (fairness) — **dodane przez EDPB dla dark patterns**
+- **Art. 5(1)(a) RODO** — zasada uczciwości (fairness) — **dodane przez EDPB dla mylące interfejsy**
 - **Art. 5(1)(c) RODO** — minimalizacja
 - **Art. 5(1)(f) RODO** — integralność i poufność (Family Pairing)
 - **Art. 12(1) RODO** — transparentność
@@ -314,7 +314,7 @@ DPC decyzja cytuje:
 
 ### Dla prawa UE
 
-- **Art. 5(1)(a) (fairness) jako broń przeciw dark patterns** — EDPB wiążąca decyzja sierpień 2023 to **pierwszy raz**, gdy fairness jest formalnie użyte dla dark patterns.
+- **Art. 5(1)(a) (fairness) jako broń przeciw mylące interfejsy** — EDPB wiążąca decyzja sierpień 2023 to **pierwszy raz**, gdy fairness jest formalnie użyte dla mylące interfejsy.
 - **"Public-by-default" dla dzieci = automatyczne naruszenie** RODO. To sygnał dla wszystkich platform.
 - **EDPB dispute resolution** — sprawa pokazała, że krajowe DPA mogą zmusić DPC do uwzględnienia ich obiekcji przez EDPB Article 65.
 
@@ -401,7 +401,7 @@ Jeśli twoje dziecko używa TikTok — **przed 2021 konto było prawdopodobnie p
 - **TikTok same zreformował przed dochodzeniem** — w 2021, zanim DPC oficjalnie rozpoczęło inquiry. Argument obrony: "już naprawiliśmy". DPC odpowiedź: **naprawienie po fakcie nie uchyla odpowiedzialności za okres naruszenia**.
 - **Family Pairing jako grooming vector** — potencjał, że **każdy dorosły** mógł sparować się z kontem dziecka (brak weryfikacji relacji), był najmocniejszym argumentem DPC. To klasyczny przypadek **privacy by design failure**.
 - **"Dark patterns" w wiążącej decyzji EDPB** — pierwsza taka sprawa. Fińska przewodnicząca Anu Talus: *"Options related to privacy should be provided in an objective and neutral way, avoiding any kind of deceptive or manipulative language or design."* Cytat stał się wzorcem.
-- **Berlin vs Italy objections** — ciekawa dynamika. Berlin chciał więcej (dark patterns). Italy chciał **cofnąć** decyzję DPC o compliance z art. 25 (age verification). Skrajne pozycje, EDPB zajęła średnią.
+- **Berlin vs Italy objections** — ciekawa dynamika. Berlin chciał więcej (mylące interfejsy). Italy chciał **cofnąć** decyzję DPC o compliance z art. 25 (age verification). Skrajne pozycje, EDPB zajęła średnią.
 - **Helen Dixon** — DPC Commissioner 2014–2024. Najdłużej służąca w historii regulatora. Krytykowana za **powolność** egzekwowania, ale w 2022–2023 jej biuro **wyegzekwowało ponad 2 mld EUR kar**. Wzmocniła reputację DPC.
 - **John Edwards** — UK ICO Commissioner od 2022. Wcześniej New Zealand Privacy Commissioner. Znany z **asertywnego stylu**. ICO kara TikTok była jedną z pierwszych jego dużych decyzji.
 - **Instagram 405 mln EUR (2022)** — analogiczna sprawa. DPC egzekwował Meta za to samo przed TikTok. Wzorzec: publiczne domyślne konta nastolatków + business email/phone visible. **Meta przegrał osobno** (A09).
@@ -412,7 +412,7 @@ Jeśli twoje dziecko używa TikTok — **przed 2021 konto było prawdopodobnie p
 - **PHMSA TikTok Amendment (2024)** — amerykańska ustawa wprowadzająca dodatkowe obowiązki platform dot. dzieci. Echa DPC i ICO spraw.
 - **Post-GDPR children's case pipeline** — po sprawie TikTok DPC przyjął podobne podejście wobec **Snap** (w postępowaniu), **Twitch**, **Roblox**. Regulator uczy się.
 - **2024 EDPB Statement** (grudzień 2024) dotyczący AI training opiera się na **precedensach dzieci** (TikTok, Instagram). Logika: dzieci nie mogą udzielić świadomej zgody, więc ich dane **nie powinny** być używane do trenowania AI. Dotyczy LinkedIn (C05) i innych.
-- **92 mln USD class action w USA** (2022) — osobna ugoda, BIPA Illinois i federalne pozwy. Wypłata: **~2 USD per dziecko**. Symbolicznie mała.
+- **92 mln USD pozew zbiorowy w USA** (2022) — osobna ugoda, BIPA Illinois i federalne pozwy. Wypłata: **~2 USD per dziecko**. Symbolicznie mała.
 
 ---
 

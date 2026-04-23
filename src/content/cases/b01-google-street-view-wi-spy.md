@@ -301,7 +301,7 @@ Pytania bez odpowiedzi:
 | Marzec 2011 | Pierwsze kary (FR, ES) |
 | Marzec 2013 | Ugoda 38 stanów USA: 7 mln USD |
 | Wrzesień 2013 | Wyrok 9th Circuit w *Joffe v. Google* |
-| 2019 | Ugoda class action 13 mln USD |
+| 2019 | Ugoda pozew zbiorowy 13 mln USD |
 
 ### Orzecznictwo powiązane
 

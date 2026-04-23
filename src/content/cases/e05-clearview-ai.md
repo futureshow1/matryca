@@ -457,7 +457,7 @@ Amerykańskie policje używają Clearview przy codziennych sprawach. Jeśli **ki
 
 **W USA:**
 - **Illinois BIPA** — rezydenci mogą pozywać indywidualnie.
-- **Kalifornia CCPA** — prawo do opt-out.
+- **Kalifornia CCPA** — prawo do rezygnacja.
 - **TXT, NY, VA, IL, CO** — stanowe privacy acts.
 
 ### Gdzie się zgłosić?

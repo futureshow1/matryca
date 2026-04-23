@@ -148,10 +148,10 @@ Sprawa ma znaczenie strukturalne: **Batterygate to pierwszy wielki przypadek reg
 - **29 marca 2018** — **iOS 11.3** — feature **Battery Health** (pokazywanie maksymalnej pojemności i opcja wyłączenia throttlingu).
 - **25 października 2018** — **Włochy AGCM**: kara **10 mln EUR** dla Apple (+10 mln dla Samsunga za tę samą praktykę).
 - **7 lutego 2020** — **Francja DGCCRF**: kara **25 mln EUR** + obowiązek publikacji oświadczenia na francuskiej stronie Apple przez miesiąc.
-- **2 marca 2020** — **ugoda class action USA**: ok. **500 mln USD**.
+- **2 marca 2020** — **ugoda pozew zbiorowy USA**: ok. **500 mln USD**.
 - **Listopad 2020** — **33 stany USA**: ugoda **113 mln USD**.
 - **2020** — Chile SERNAC: 2,5 mln USD.
-- **2022** — UK Competition Appeal Tribunal zielone światło dla class action w UK.
+- **2022** — UK Competition Appeal Tribunal zielone światło dla pozew zbiorowy w UK.
 - **2023** — **Portugalia**: kara **25 mln EUR**.
 - **2024** — UE uchwala **Right to Repair Directive 2024/1799**; obowiązek wymiennych baterii do 2027.
 
@@ -252,8 +252,8 @@ Post na blogu Primate Labs (**18 grudnia 2017**) zawierał **wykresy** pokazują
 
 ### Prawnicy
 
-- **Lieff Cabraser Heimann & Bernstein LLP** — główna kancelaria class action USA.
-- **Joseph Cotchett** (Cotchett, Pitre & McCarthy) — także class action USA.
+- **Lieff Cabraser Heimann & Bernstein LLP** — główna kancelaria pozew zbiorowy USA.
+- **Joseph Cotchett** (Cotchett, Pitre & McCarthy) — także pozew zbiorowy USA.
 - **Foltis & Nicholas** — reprezentował powodów w UK Competition Appeal Tribunal.
 
 ---
@@ -291,7 +291,7 @@ Apple przedstawiał throttling jako **akt troski o użytkownika** — "by unikn�
 
 ### Jurysdykcje
 
-1. **USA federalne** — class action (konsolidacja w N.D. Cal.)
+1. **USA federalne** — pozew zbiorowy (konsolidacja w N.D. Cal.)
 2. **USA stanowe** — 33 stany (AG action)
 3. **Francja** — DGCCRF
 4. **Włochy** — AGCM
@@ -319,7 +319,7 @@ Apple Batterygate to **pierwszy głośny przypadek**, gdy regulatorzy zastosowal
 | Styczeń 2018 | Pierwsze pozwy USA |
 | 25 października 2018 | Włochy 10 mln EUR |
 | 7 lutego 2020 | Francja 25 mln EUR |
-| 2 marca 2020 | Class action USA 500 mln USD |
+| 2 marca 2020 | Pozew zbiorowy USA 500 mln USD |
 | Listopad 2020 | 33 stany 113 mln USD |
 | 2023 | Portugalia 25 mln EUR |
 
@@ -426,7 +426,7 @@ Jeśli masz iPhone'a starszego niż 3 lata (dowolnego modelu) — **twoja bateri
 - **Rzecznik Konsumentów** w miastach — bezpłatne doradztwo.
 
 **W USA:**
-- Class action settlement 2020 — **zamknięty** okres zgłoszeń (2021). Jeśli byłeś właścicielem iPhone 6/6s/SE/7 w USA, mogłeś otrzymać 25 USD.
+- Pozew zbiorowy settlement 2020 — **zamknięty** okres zgłoszeń (2021). Jeśli byłeś właścicielem iPhone 6/6s/SE/7 w USA, mogłeś otrzymać 25 USD.
 - Stanowe prawa konsumenckie.
 
 ### Gdzie się zgłosić?

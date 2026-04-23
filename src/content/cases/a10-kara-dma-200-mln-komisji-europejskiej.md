@@ -404,7 +404,7 @@ Opcja trzecia jest **często ukryta** — Meta nie reklamuje jej aktywnie, bo je
 
 1. **Jeśli prowadzisz biznes w UE i używasz reklam Meta** — sprawdź, czy respektujesz DMA art. 5(2). Wiele firm reklamowych nie wie, że nowy model "less personalized ads" wymaga **rekonfiguracji kampanii** pod kątem retargetingu.
 2. **Dla mediatorów konsumenckich**: sprawa DMA otwiera nowe pole sporów — konsument może teraz argumentować, że został **zmuszony do zgody** na targetowanie.
-3. **Dla prawników cyfrowych**: DMA art. 39 otwiera drogę do **private enforcement**. W Polsce mogą powstać pierwsze class actions pod modelami opt-in (wymagają zgody).
+3. **Dla prawników cyfrowych**: DMA art. 39 otwiera drogę do **private enforcement**. W Polsce mogą powstać pierwsze class actions pod modelami dobrowolne włączenie (wymagają zgody).
 4. **Dla twórców treści** zarabiających na reklamach Meta: obniżenie intensywności targetowania może zmniejszyć CPM (cost per mille) o 20–40%. Warto **dywersyfikować źródła przychodów**: YouTube, Patreon, newslettery własne.
 
 ---

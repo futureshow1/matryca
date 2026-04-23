@@ -266,11 +266,11 @@ Mike Clark (Product Management Director Meta) w blogu firmowym (5 kwietnia 2021)
 
 ### UE — inne DPA
 
-- **Hamburg (Niemcy), Madrid (Hiszpania)** — równoległe badania, ale sprawa została przekazana DPC zgodnie z one-stop-shop mechanism RODO
+- **Hamburg (Niemcy), Madrid (Hiszpania)** — równoległe badania, ale sprawa została przekazana DPC zgodnie z jedno okienko mechanism RODO
 
 ### Polska
 
-- **UODO** — publiczne ostrzeżenia; **brak osobnego postępowania**, bo Meta podlega DPC (Irlandia) w ramach one-stop-shop.
+- **UODO** — publiczne ostrzeżenia; **brak osobnego postępowania**, bo Meta podlega DPC (Irlandia) w ramach jedno okienko.
 - **Indywidualne pozwy** — Polscy użytkownicy mogą pozwać Meta **indywidualnie w polskich sądach** o szkody niemajątkowe na podstawie **art. 82 RODO**. Kilka spraw zgłoszonych w 2022–2024, ugody lub odszkodowania indywidualne w granicach **200–2000 PLN**.
 
 ### Niemcy — *Facebook-Urteil* BGH i TSUE
@@ -310,7 +310,7 @@ Mike Clark (Product Management Director Meta) w blogu firmowym (5 kwietnia 2021)
 
 ### Dla praktyki Big Tech
 
-- **Koniec publicznych contact importers** jako domyślnego ustawienia — Instagram, Twitter/X, LinkedIn wprowadziły opt-out
+- **Koniec publicznych contact importers** jako domyślnego ustawienia — Instagram, Twitter/X, LinkedIn wprowadziły rezygnacja
 - **Rate limiting + captcha** standardem w funkcjach wyszukiwania
 - **Transparency reports o scrapingu** stały się kwartalnym zwyczajem
 
@@ -355,7 +355,7 @@ W Polsce, **brak skonsolidowanego pozwu zbiorowego**, ale indywidualne pozwy mo�
 
 ### Gdzie się zgłosić?
 
-- **UODO** (Polska) — można zgłaszać naruszenia, chociaż one-stop-shop kieruje ostatecznie do DPC Irlandii
+- **UODO** (Polska) — można zgłaszać naruszenia, chociaż jedno okienko kieruje ostatecznie do DPC Irlandii
 - **Irlandzki DPC** — [dataprotection.ie](https://www.dataprotection.ie) — Meta main EU regulator
 - **Sąd cywilny w Polsce** — dla roszczeń odszkodowawczych (art. 82 RODO + polski k.p.c.)
 - **Kancelarie prawne specjalizujące się w RODO** — niektóre prowadzą pozwy zbiorowe lub "masowe" na zasadzie opłaty warunkowej
@@ -375,7 +375,7 @@ W Polsce, **brak skonsolidowanego pozwu zbiorowego**, ale indywidualne pozwy mo�
 - **Polskie miasta w proporcji** — Warszawa > Wrocław > Kraków > Poznań > Gdańsk (81k > 50k > 46k > 37k > 24k) idealnie koreluje z ranking populacji miast Polski, co weryfikuje reprezentatywność próby.
 - **Alon Gal pisze po angielsku, ale z Tel Awiwu** — symbol nowego modelu cyberintelligence, gdzie niezależni badacze z Izraela, Ukrainy, Rosji, Estonii są często szybsi niż regulatorzy.
 - **Cena wycieku**: Meta rocznie zarabia ok. **30+ mld USD w UE**. Kara **265 mln EUR** to **< 1% jednego rocznego przychodu**. Krytycy (NOYB) nazywają to **"kosztem prowadzenia biznesu"**.
-- **Porównanie z polską karą Morele.net**: 2,83 mln PLN (ok. 630 tys. EUR) za wyciek 2,2 mln kont — **UODO dostał wtedy pochwałę**. Z 2 669 381 kont Polaków w 533M, **proporcjonalnie Meta powinno było zapłacić ok. 3,4 mln PLN w Polsce**, gdyby sprawa była pod UODO. Wyszła **na mniej** dzięki one-stop-shop.
+- **Porównanie z polską karą Morele.net**: 2,83 mln PLN (ok. 630 tys. EUR) za wyciek 2,2 mln kont — **UODO dostał wtedy pochwałę**. Z 2 669 381 kont Polaków w 533M, **proporcjonalnie Meta powinno było zapłacić ok. 3,4 mln PLN w Polsce**, gdyby sprawa była pod UODO. Wyszła **na mniej** dzięki jedno okienko.
 - **Baza była sprzedawana przez 2 lata**, zanim ktoś ją upublicznił "za darmo". To **klasyczna dynamika dark web data markets** — sprzedawca eksploatuje wartość, dopóki może, potem **upublicznia dla zwiększenia reputacji w środowisku**. Gal: *"Bazy danych, jeśli są duże lub rzadkie, nie są rozpowszechniane szeroko natychmiast — ci, którzy je trzymają, próbują je monetyzować tak długo, jak mogą. Proces czasem trwa lata, czasem dni, ale ostatecznie wszystkie prywatne bazy wyciekają, jeśli były sprzedawane."*
 - **Plik waży 400 MB dla polskiej części** — kompaktowy format JSON/CSV. Można go pobrać, otworzyć w Excelu, **i sprawdzać siebie i znajomych** (nielegalne w UE — dane osobowe). To pokazuje, jak realistyczny jest problem — **każdy, kto pobierze plik**, ma natychmiastowy dostęp do phonebook'a milionów osób.
 - **Bot Telegram** odwiedzał przez 2 miesiące (styczeń–marzec 2021) zanim ktoś zareagował medialnie. Pokazuje **lukę w monitorowaniu dark webu** przez same firmy — Meta nie wiedziała, że ich dane są sprzedawane, aż tweet Gala stał się viralem.

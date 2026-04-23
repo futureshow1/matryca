@@ -133,7 +133,7 @@ Plan Sullivana:
 - **Sierpień 2017** — Dara Khosrowshahi CEO.
 - **Jesień 2017** — Tony West (nowy CLO) i zewnętrzna kancelaria odkrywają historię.
 - **21 listopada 2017** — Khosrowshahi **publicznie ujawnia** wyciek. Sullivan **zwolniony**.
-- **Kwiecień 2018** — FTC drugi consent decree (obejmuje D04, D05, D06).
+- **Kwiecień 2018** — FTC drugi ugoda z regulatorem (obejmuje D04, D05, D06).
 - **Wrzesień 2018** — 50 stanów USA: **148 mln USD** ugoda.
 - **2019** — hakerzy Glover i Mereacre skazani za swoje czyny (nie Sullivana).
 - **20 sierpnia 2020** — DOJ składa zarzuty karne przeciw Sullivan.
@@ -297,7 +297,7 @@ Khosrowshahi ogłosił:
 | 14 listopada 2016 | Wyciek |
 | Listopad 2016 – 2017 | Ukrywanie |
 | 21 listopada 2017 | Publiczne ujawnienie |
-| Kwiecień 2018 | FTC drugi consent decree |
+| Kwiecień 2018 | FTC drugi ugoda z regulatorem |
 | Wrzesień 2018 | 148 mln USD ugoda |
 | 20 sierpnia 2020 | Zarzuty karne Sullivan |
 | 5 października 2022 | **Skazanie jury** |

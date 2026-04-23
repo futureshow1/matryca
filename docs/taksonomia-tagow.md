@@ -46,7 +46,7 @@ Każda karta ma 3–8 tagów.
 | `coppa` | Children's Online Privacy Protection Act (US) |
 | `bipa` | Biometric Information Privacy Act (Illinois) |
 | `schrems-ii` | Transfer danych EU→USA po wyroku Schrems II |
-| `pozew-zbiorowy` | Class action settlement, derivative suit |
+| `pozew-zbiorowy` | Pozew zbiorowy (class action / derivative suit) |
 
 ### Wydarzenia i konsekwencje (4)
 

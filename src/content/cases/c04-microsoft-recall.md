@@ -68,7 +68,7 @@ years_active:
 | Podstawa prawna | RODO art. 25 (privacy by design), art. 32 (bezpieczeństwo); krajowe prawa pracy |
 | Sygnalista/odkrywca | **Kevin Beaumont** (DoublePulsar); UK ICO; wewnętrzna krytyka środowiska cybersec |
 | Liczba poszkodowanych | Potencjalnie wszyscy użytkownicy Copilot+ PC (miliony urządzeń) |
-| Status (na dziś) | Opt-in; szyfrowane; wdrożone selektywnie poza UE; badania bezpieczeństwa wciąż wykazują luki |
+| Status (na dziś) | Dobrowolne włączenie; szyfrowane; wdrożone selektywnie poza UE; badania bezpieczeństwa wciąż wykazują luki |
 
 ---
 
@@ -78,14 +78,14 @@ years_active:
 
 Reakcja cybersec była **natychmiastowa i zabójcza**. **Kevin Beaumont** (DoublePulsar) jako pierwszy opublikował szczegółową analizę na podstawie preview builds: (1) baza Recall była przechowywana w **plaintext SQLite** (niezaszyfrowanym), (2) wszystkie screenshoty, w tym **hasła, numery kart kredytowych, poufne e-maile**, były dostępne dla **każdej aplikacji** działającej na koncie użytkownika, (3) **infostealery** (Agent Tesla, Redline, Lumma) mogły w ciągu sekund ekstrahować **całą historię aktywności użytkownika**, (4) BitLocker nie pomaga przeciwko lokalnym złośliwym aplikacjom. Beaumont nazwał to **"potential security disaster"**.
 
-**7 czerwca 2024** — badacz **Alexander Hagenah** opublikował narzędzie **TotalRecall** na GitHub, demonstrujące jak w kilka sekund eksfiltrować dane z bazy Recall. **13 czerwca 2024** — Microsoft **wstrzymał** premiery. **21 czerwca 2024** — ogłoszenie, że Recall będzie **opt-in**, wymagać **Windows Hello** authentication i **encrypted database**. Sygnalizacji z tego czasu: **Signal** (komunikator) wprowadził **Screen Security** by blokować Recall od robienia screenshotów Signal. Brave, AdGuard dołączyli w 2025.
+**7 czerwca 2024** — badacz **Alexander Hagenah** opublikował narzędzie **TotalRecall** na GitHub, demonstrujące jak w kilka sekund eksfiltrować dane z bazy Recall. **13 czerwca 2024** — Microsoft **wstrzymał** premiery. **21 czerwca 2024** — ogłoszenie, że Recall będzie **dobrowolne włączenie**, wymagać **Windows Hello** authentication i **encrypted database**. Sygnalizacji z tego czasu: **Signal** (komunikator) wprowadził **Screen Security** by blokować Recall od robienia screenshotów Signal. Brave, AdGuard dołączyli w 2025.
 
 **W 2025** Microsoft zaczął **ograniczony rollout** dla Windows Insiders, później dla Copilot+ PC (bez EOG). Wymagania:
 - Copilot+ PC z NPU ≥ 40 TOPS
 - 16 GB RAM, 256 GB storage
 - **Windows Hello biometric** do dostępu
 - **Virtualization-Based Security + Trusted Platform Module**
-- **Opt-in** dwukrotnie (przy setup + first run)
+- **Dobrowolne włączenie** dwukrotnie (przy setup + first run)
 - **Pause z system tray**
 - Wykluczanie aplikacji/stron (blokowanie)
 
@@ -104,7 +104,7 @@ Reakcja cybersec była **natychmiastowa i zabójcza**. **Kevin Beaumont** (Doubl
 - **3 czerwca 2024** — Signal (messenger) ogłasza **Screen Security** w Signal Desktop — blokuje Recall od robienia zrzutów Signal chats.
 - **7 czerwca 2024** — **Alexander Hagenah** publikuje **TotalRecall** na GitHub. Narzędzie w kilka sekund ekstrahuje bazę Recall.
 - **13 czerwca 2024** — Microsoft **wstrzymuje premiery** Recall. Komunikat: funkcja będzie Windows Insider-only.
-- **21 czerwca 2024** — Microsoft ogłasza nowy model: **opt-in**, **Windows Hello**, **encrypted database**.
+- **21 czerwca 2024** — Microsoft ogłasza nowy model: **dobrowolne włączenie**, **Windows Hello**, **encrypted database**.
 - **Wrzesień 2024** — Microsoft rozpoczyna testy Windows Insider Preview.
 - **Listopad 2024** — **dalsze opóźnienie** ze względu na odkryte luki.
 - **Grudzień 2024** — Recall w Windows Insider Preview, ale tylko dla ograniczonej grupy.
@@ -187,7 +187,7 @@ Beaumont **zdobył dostęp do preview** Windows 11 z Recall i opublikował seri�
 
 ### Alexander Hagenah — autor TotalRecall
 
-**Alexander Hagenah** (pseudonim **xaitax**) — europejski badacz cybersec. Jego narzędzie TotalRecall było kluczowym dowodem, że luki w Recall są **trywialnie exploitable**. Demonstracja podobna do tego, co zrobił Jonathan Mayer z Safari Workaround (B02) — dowód koncepcji uniemożliwiał Microsoftowi bronienie się przez "to tylko teoretyczne".
+**Alexander Hagenah** (pseudonim **xaitax**) — europejski badacz cybersec. Jego narzędzie TotalRecall było kluczowym dowodem, że luki w Recall są **trywialnie exploitable**. Demonstracja podobna do tego, co zrobił Jonathan Mayer z Safari Obejście (B02) — dowód koncepcji uniemożliwiał Microsoftowi bronienie się przez "to tylko teoretyczne".
 
 ### UK ICO
 
@@ -245,7 +245,7 @@ Masowa krytyka:
 **Faza 2: wstrzymanie (13 czerwca 2024).** Pavan Davuluri, blog post: *"We are adjusting the release model for Recall to leverage the expertise of the Windows Insider community to ensure the experience meets our high standards for quality and security."* Tłumaczenie: mieliśmy błąd, zawiesili wdrożenie.
 
 **Faza 3: redesign (lato 2024).** Zmiany:
-- Opt-in (dwukrotne) zamiast domyślnie włączonej
+- Dobrowolne włączenie (dwukrotne) zamiast domyślnie włączonej
 - Encrypted database
 - Windows Hello requirement
 - Wykluczanie aplikacji

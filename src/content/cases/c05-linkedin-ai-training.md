@@ -46,16 +46,16 @@ word_count: 3782
 explainer:
   src: /animations/c05-linkedin-ai-training.html
   duration: '60s'
-  title: LinkedIn AI Training — trening na profilach bez opt-in
-subtitle: Trenowanie na profilach pracowników bez opt-in
+  title: LinkedIn AI Training — trening na profilach bez dobrowolne włączenie
+subtitle: Trenowanie na profilach pracowników bez dobrowolne włączenie
 years_active:
 - 2003
 - 2022
 ---
 
-# C05 — LinkedIn AI Training: Trenowanie na profilach pracowników bez opt-in
+# C05 — LinkedIn AI Training: Trenowanie na profilach pracowników bez dobrowolne włączenie
 
-> **Kategoria:** AI training / legitimate interest / opt-out by default / dane zawodowe
+> **Kategoria:** AI training / legitimate interest / rezygnacja by default / dane zawodowe
 > **Firma/firmy:** LinkedIn (Microsoft)
 > **Lata:** Wrzesień 2024 (odkrycie) – listopad 2025 (interwencja DPC Irlandia)
 > **Status:** Rollout w UE z ograniczeniami; 5-miesięczny monitoring DPC; dodatkowo kara 310 mln € 2024 za behavioral analytics
@@ -85,13 +85,13 @@ years_active:
 
 W **UE i EOG** LinkedIn nie aktywował trenowania od razu (ze względu na RODO). Zamiast tego w **marcu 2025** notyfikował **irlandzką DPC** o planach rozpoczęcia trenowania **AI na danych EU/EOG od 3 listopada 2025**. Podstawa prawna: **legitimate interest** (art. 6 ust. 1 lit. f RODO). Zakres: publiczne posty, komentarze, profile, **dane do 2003 roku** (22 lata wstecz). DPC **podniosła obawy**, w szczególności co do: (1) zakresu i czasu retencji, (2) ochrony niepełnoletnich, (3) wrażliwych informacji (członkostwo związkowe, wyznanie), (4) prawa sprzeciwu art. 21 RODO.
 
-**7 listopada 2025** — DPC Irlandia opublikowała oświadczenie: LinkedIn **zgodził się na zmiany**: (1) zawężenie zakresu danych i okresu wsteczności, (2) lepsze filtrowanie danych niepełnoletnich (<18 lat), (3) filtry zapobiegające zbieraniu informacji związkowych ze specjalnych LinkedIn Pages i Groups, (4) dedykowany opt-out toggle + formularz sprzeciwu, (5) **5-miesięczny monitoring DPC**. DPC **nie zatwierdziła** praktyki — "*The DPC has not approved, or found compliant, LinkedIn's use of users' personal data for generative AI model training*" — ale nie wszczęła formalnego postępowania karnego.
+**7 listopada 2025** — DPC Irlandia opublikowała oświadczenie: LinkedIn **zgodził się na zmiany**: (1) zawężenie zakresu danych i okresu wsteczności, (2) lepsze filtrowanie danych niepełnoletnich (<18 lat), (3) filtry zapobiegające zbieraniu informacji związkowych ze specjalnych LinkedIn Pages i Groups, (4) dedykowany rezygnacja toggle + formularz sprzeciwu, (5) **5-miesięczny monitoring DPC**. DPC **nie zatwierdziła** praktyki — "*The DPC has not approved, or found compliant, LinkedIn's use of users' personal data for generative AI model training*" — ale nie wszczęła formalnego postępowania karnego.
 
 **Osobno**: **24 października 2024** — DPC nakłada na LinkedIn **karę 310 mln EUR** za **osobne naruszenie RODO** w praktykach analitycznych i reklamowych (oryginalna skarga *La Quadrature du Net* z 2018 we Francji). Podstawy: (1) brak ważnej zgody na przetwarzanie danych stron trzecich, (2) contractual necessity nie usprawiedliwia przetwarzania first-party data, (3) legitimate interests nie usprawiedliwia ani first-party ani third-party data dla analytics.
 
 Sprawa C05 pokazuje **trzy ważne trendy**:
 1. **"Legitimate interest" jako podstawa dla AI training** jest kwestionowana przez DPA.
-2. **Opt-out by default** dla AI training — standardowa praktyka Mety, Google, LinkedIn, X — jest niezgodna z duchem RODO (art. 7 wymaga *"swobodnie udzielonej, konkretnej, świadomej, jednoznacznej"* zgody).
+2. **Rezygnacja by default** dla AI training — standardowa praktyka Mety, Google, LinkedIn, X — jest niezgodna z duchem RODO (art. 7 wymaga *"swobodnie udzielonej, konkretnej, świadomej, jednoznacznej"* zgody).
 3. **"Chase-and-regulate"** — DPA reagują **po fakcie**, po wdrożeniu praktyki. Systemowe ograniczenie egzekucji RODO przed wprowadzeniem.
 
 ---
@@ -185,7 +185,7 @@ Alternatywa: formularz sprzeciwu (Data Processing Objection Form) — **bardziej
 - AI deepfakes i nonconsensual content
 - **LinkedIn AI training** (wrzesień 2024)
 
-Model biznesowy: **subskrypcje czytelników** (nie reklamy). 18 września 2024 — Samantha Cole opublikowała pierwszy artykuł o LinkedIn AI opt-out toggle.
+Model biznesowy: **subskrypcje czytelników** (nie reklamy). 18 września 2024 — Samantha Cole opublikowała pierwszy artykuł o LinkedIn AI rezygnacja toggle.
 
 ### TechCrunch follow-up
 
@@ -195,7 +195,7 @@ Model biznesowy: **subskrypcje czytelników** (nie reklamy). 18 września 2024 �
 
 - **DPC Irlandia**: Commissioner Dale Sunderland. Odbył spotkanie z LinkedIn w październiku 2024, następnie negocjacje marzec-październik 2025.
 - **Dutch DPA (AP)**: aktywnie ostrzegała publicznie we wrześniu-październiku 2025.
-- **CNIL (Francja)**: opublikowała instrukcję opt-out w październiku 2025.
+- **CNIL (Francja)**: opublikowała instrukcję rezygnacja w październiku 2025.
 - **ICO (UK)**: zgłoszone skargi od Open Rights Group.
 - **noyb (Max Schrems)**: krytyka: *"Opt-out model proves once again to be wholly inadequate"*.
 
@@ -242,7 +242,7 @@ Model biznesowy: **subskrypcje czytelników** (nie reklamy). 18 września 2024 �
 
 ### LinkedIn
 
-**Faza 1: ciche wdrożenie (wrzesień 2024).** LinkedIn aktywował trenowanie AI w USA, UK, AU, JP, CA, IN **bez uprzedniego ogłoszenia**. Toggle "Data for Generative AI Improvement" pojawił się w ustawieniach. Użytkownicy, którzy go nie zauważyli = wszyscy byli opt-in.
+**Faza 1: ciche wdrożenie (wrzesień 2024).** LinkedIn aktywował trenowanie AI w USA, UK, AU, JP, CA, IN **bez uprzedniego ogłoszenia**. Toggle "Data for Generative AI Improvement" pojawił się w ustawieniach. Użytkownicy, którzy go nie zauważyli = wszyscy byli dobrowolne włączenie.
 
 **Faza 2: reakcja na publikację (18 września 2024).** Tego samego dnia, co *404 Media* publikuje, LinkedIn **aktualizuje politykę prywatności**. Blake Lawit (GC) blog post:
 *"As technology and our business evolves, and the world of work changes, we remain committed to providing clarity about our practices and keeping you in control of the information you entrust with us."*
@@ -251,7 +251,7 @@ Model biznesowy: **subskrypcje czytelników** (nie reklamy). 18 września 2024 �
 
 **Faza 4: negocjacje z DPA (marzec–listopad 2025).** LinkedIn zgłasza plany do DPC marzec 2025. Negocjacje o zakres.
 
-**Faza 5: ograniczony rollout w UE (listopad 2025+).** Zakres zawężony, opt-out poprawiony, dzieci wykluczone, filtry dla wrażliwych.
+**Faza 5: ograniczony rollout w UE (listopad 2025+).** Zakres zawężony, rezygnacja poprawiony, dzieci wykluczone, filtry dla wrażliwych.
 
 **Uwaga**: LinkedIn **pierwotnie ogłosił** na LinkedIn własnym blog post o polityce — i **wyłączył komentarze pod postem**, mimo że w innych postach komentarze były włączone. PR strategy: **nie pozwolić użytkownikom publicznie wyrażać niezadowolenia**.
 
@@ -265,7 +265,7 @@ Macierzysta firma (od 2016) — Satya Nadella w publicznych komunikatach **nie o
 
 ### Jurysdykcje
 
-- **Irlandia** — DPC (lead supervisory authority pod one-stop-shop)
+- **Irlandia** — DPC (lead supervisory authority pod jedno okienko)
 - **Niderlandy** — AP
 - **Francja** — CNIL
 - **Wielka Brytania** — ICO
@@ -317,7 +317,7 @@ Macierzysta firma (od 2016) — Satya Nadella w publicznych komunikatach **nie o
 
 ### Dla prawa UE
 
-- **EDPB Opinion 28/2024 on AI training** (grudzień 2024) — opublikowana **w sam środek sporu LinkedIn**. Wyznaczyła standardy dla training AI na danych osobowych. Kluczowe: legitimate interest **może być** podstawą, ale musi być **bardzo ścisła** DPIA, **lepsze informowanie**, **efektywny opt-out**, **filtrowanie wrażliwych danych**.
+- **EDPB Opinion 28/2024 on AI training** (grudzień 2024) — opublikowana **w sam środek sporu LinkedIn**. Wyznaczyła standardy dla training AI na danych osobowych. Kluczowe: legitimate interest **może być** podstawą, ale musi być **bardzo ścisła** DPIA, **lepsze informowanie**, **efektywny rezygnacja**, **filtrowanie wrażliwych danych**.
 - **Sprawa LinkedIn jako test case** dla EDPB guidelines.
 
 ### Dla prawa USA
@@ -329,7 +329,7 @@ Macierzysta firma (od 2016) — Satya Nadella w publicznych komunikatach **nie o
 
 - **OpenAI, Anthropic, Google DeepMind** — wszystkie zwiększyły transparentność co do danych treningowych.
 - **Meta AI** — wstrzymał plany trenowania na EU user data (2024), restartował po zgodzie DPA w 2025.
-- **X (Twitter)** — pod Elonem Muskiem używa danych do trenowania Grok; opt-out podobny do LinkedIn.
+- **X (Twitter)** — pod Elonem Muskiem używa danych do trenowania Grok; rezygnacja podobny do LinkedIn.
 - **Reddit, Stack Overflow** — sprzedają dane treningowe firmom AI (kontrowersyjne — użytkownicy nie zgadzali się).
 
 ### Impuls dla **model cards** i **training data disclosure**
@@ -341,7 +341,7 @@ Sprawa przyspieszyła wymóg, by modele AI publikowały **zestawy treningowe** (
 ## Pozwy zbiorowe
 
 Brak znanych formalnych pozwów zbiorowych (na dzień obecny). Potencjalna możliwość:
-- **USA** — class action pod stanowe prawo prywatności (Illinois BIPA teoretycznie, ale dotyczy biometrii).
+- **USA** — pozew zbiorowy pod stanowe prawo prywatności (Illinois BIPA teoretycznie, ale dotyczy biometrii).
 - **UE** — pozwy grupowe pod RODO art. 82 możliwe, ale Lloyd v. Google (UK) zniechęcił.
 
 ---
@@ -401,7 +401,7 @@ Co zawiera twój profil LinkedIn? Często **więcej niż myślisz**:
 ### Gdzie się zgłosić?
 
 - **Polska**: UODO
-- **UE**: krajowy DPA (dla LinkedIn: DPC Irlandia przez one-stop-shop)
+- **UE**: krajowy DPA (dla LinkedIn: DPC Irlandia przez jedno okienko)
 - **UK**: ICO
 - **noyb**: noyb.eu — prowadzi skargi strategiczne
 
@@ -432,9 +432,9 @@ Co zawiera twój profil LinkedIn? Często **więcej niż myślisz**:
 - **Osobna kara 310 mln EUR** — ironia: DPC nakłada 310 mln EUR **miesiąc po** wybuchu AI training sprawy. Kara dotyczy **innej** sprawy (behavioral analytics z 2018), ale timing sugeruje, że DPC **używa tej kary jako sygnału** do LinkedIn: *"nie próbuj z AI training tego samego, co z analytics"*.
 - **La Quadrature du Net** — francuska organizacja, która złożyła oryginalną skargę w 2018. 6 lat trwała sprawa. Komentarz dyrektor La Quadrature: *"Six years to a fine. Facebook got €1.2 billion in 4 years. Justice moves slowly, but it moves."*
 - **Microsoft dystans** — Satya Nadella nie odnosił się bezpośrednio do sprawy. Microsoft prowadzi LinkedIn jako **"standalone"** — ale wszystkie decyzje AI są **koordynowane** z szerszą strategią Azure OpenAI.
-- **EDPB Opinion 28/2024** — wydana **grudnia 2024**, po publikacji o LinkedIn. Ustala **framework** dla AI training na danych osobowych: musi być **DPIA**, **informowanie**, **efektywny opt-out**, **filtrowanie wrażliwych**. Sprawa LinkedIn bezpośrednio wpłynęła.
+- **EDPB Opinion 28/2024** — wydana **grudnia 2024**, po publikacji o LinkedIn. Ustala **framework** dla AI training na danych osobowych: musi być **DPIA**, **informowanie**, **efektywny rezygnacja**, **filtrowanie wrażliwych**. Sprawa LinkedIn bezpośrednio wpłynęła.
 - **Polski LinkedIn** — w Polsce LinkedIn ma ~4 mln użytkowników (2024). Wielu specjalistów HR, rekruterów, prawników, menedżerów ma bogate profile. Polski UODO **nie wszczął osobnego postępowania** (sprawa pod DPC Irlandia), ale **tłumaczenia** zmian ustawień opublikował w 2025.
-- **"Opt-out vs opt-in"** — fundamentalna różnica. **Opt-in** (trzeba aktywnie zgodzić się) → niewielu użytkowników zgodziłoby się na AI training. **Opt-out** (domyślnie włączone, trzeba aktywnie wyłączyć) → 95%+ użytkowników **nie wyłącza**. Nawet jeśli zauważą, inercja wygrywa. To dlatego Big Tech **preferuje opt-out** dla praktyk, które nie chce wyraźnie ogłaszać.
+- **"Opt-out vs opt-in"** — fundamentalna różnica. **Dobrowolne włączenie** (trzeba aktywnie zgodzić się) → niewielu użytkowników zgodziłoby się na AI training. **Rezygnacja** (domyślnie włączone, trzeba aktywnie wyłączyć) → 95%+ użytkowników **nie wyłącza**. Nawet jeśli zauważą, inercja wygrywa. To dlatego Big Tech **preferuje rezygnacja** dla praktyk, które nie chce wyraźnie ogłaszać.
 - **noyb Mariano delli Santi**: *"The opt-out model proves once again to be wholly inadequate to protect our rights: the public cannot be expected to monitor and chase every single online company that decides to use our data to train AI. Opt-in consent isn't only legally mandated, but a common-sense requirement."*
 - **Signal not on LinkedIn** — wielu pracowników firm technologicznych świadomie **nie ma LinkedIn**. Meredith Whittaker (Signal) jest wyjątkiem — ma LinkedIn, ale bardzo ograniczony. Moxie Marlinspike (były CEO Signal) — **nie ma** LinkedIn.
 - **Reddit/Stack Overflow precedent** — obie firmy **sprzedają dane** firmom AI (OpenAI, Google DeepMind, Anthropic). Społeczność Stack Overflow w 2024 zorganizowała **strike** przeciw temu. Reddit miał serię protestów 2023–2024. LinkedIn uniknął takiej mobilizacji — **użytkownicy LinkedIn są bardziej pasywni** niż Reddit.
@@ -456,7 +456,7 @@ Co zawiera twój profil LinkedIn? Często **więcej niż myślisz**:
 
 6. European Data Protection Board, "Opinion 28/2024 on certain data protection aspects related to the processing of personal data in the context of AI models", grudzień 2024. URL: https://www.edpb.europa.eu
 
-7. CNIL, wytyczne opt-out dla LinkedIn AI training, październik 2025.
+7. CNIL, wytyczne rezygnacja dla LinkedIn AI training, październik 2025.
 
 8. Autoriteit Persoonsgegevens (Dutch DPA), publiczne ostrzeżenie o LinkedIn AI training, październik 2025.
 

@@ -70,7 +70,7 @@ years_active:
 | Kraj/region | Globalnie; ogniska postępowań: USA, Irlandia |
 | Rok ujawnienia | 8 października 2018 (*Wall Street Journal*) |
 | Lata trwania praktyki | 2015–2018 (pierwszy bug); drugi bug: listopad 2018 (6 dni) |
-| Łączna kara | 7 500 000 USD (ugoda class action) |
+| Łączna kara | 7 500 000 USD (ugoda pozew zbiorowy) |
 | Waluta | USD |
 | Podstawa prawna | US Securities Exchange Act (SOX), state consumer protection, pre-RODO (dla UE) |
 | Sygnalista/odkrywca | *WSJ* (Douglas MacMillan, Robert McMillan); wyciek wewnętrznego memo Google |
@@ -229,7 +229,7 @@ Oficjalna narracja: *"We want to keep our focus on our enterprise efforts [for G
 
 - **Sarbanes-Oxley Act 2002** (SOX) — obowiązek ujawnienia material events przez spółkę publiczną
 - **SEC Rule 10b-5** — misleading investors
-- **State consumer protection laws** — podstawa class action
+- **State consumer protection laws** — podstawa pozew zbiorowy
 - **UK DPA 1998** — pre-RODO, trudniej wyegzekwować
 - **RODO art. 33** — obowiązek 72h notification (gdyby sprawa była post-25.05.2018 w pełni)
 
@@ -240,7 +240,7 @@ Oficjalna narracja: *"We want to keep our focus on our enterprise efforts [for G
 | 8 października 2018 | Ujawnienie, ogłoszenie zamknięcia G+ |
 | 2018–2019 | Dochodzenia regulacyjne |
 | 2 kwietnia 2019 | Zamknięcie G+ consumer |
-| 27 lipca 2020 | Ugoda class action 7,5 mln USD |
+| 27 lipca 2020 | Ugoda pozew zbiorowy 7,5 mln USD |
 
 ### Orzecznictwo powiązane
 

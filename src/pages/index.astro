@@ -100,11 +100,12 @@ const doors = [
   <section class="hero">
     <div class="container hero__grid">
       <div class="hero__body">
+        <p class="hero__tagline">Big Tech Files</p>
         <h1 class="hero__title">Sprawy<br />Big Techu.</h1>
         <div class="hero__lead">
           <p class="hero__lead-thesis">To nie są wyjątki. To jest matryca.</p>
+          <p class="hero__lead-scope">Nadużycia. Wyłudzenia danych. Łamanie prawa.</p>
           <p class="hero__lead-numbers">33 sprawy. 12 firm. 480 źródeł.</p>
-          <p class="hero__lead-frame">Fakty, które znikają w cyklu dobowym.</p>
           <p class="hero__lead-stamp">Udokumentowane.</p>
         </div>
         <div class="hero__actions">
@@ -285,6 +286,15 @@ const doors = [
     max-width: 640px;
   }
 
+  .hero__tagline {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 var(--space-3);
+  }
+
   .hero__title {
     font-family: var(--font-serif);
     font-size: clamp(36px, 6vw, 52px);
@@ -320,19 +330,21 @@ const doors = [
     letter-spacing: -0.01em;
   }
 
+  .hero__lead-scope {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    line-height: 1.4;
+    color: var(--text-primary);
+    margin: 0;
+    font-style: italic;
+  }
+
   .hero__lead-numbers {
     font-family: var(--font-mono);
     font-size: 13px;
     color: var(--accent);
     margin: 0;
     letter-spacing: 0.02em;
-  }
-
-  .hero__lead-frame {
-    font-size: 15px;
-    color: var(--text-secondary);
-    line-height: 1.55;
-    margin: 0;
   }
 
   .hero__lead-stamp {

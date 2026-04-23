@@ -79,7 +79,7 @@ years_active:
 | Podstawa prawna | California Invasion of Privacy Act (CIPA), Federal Wiretap Act; w UE hipotetycznie RODO art. 5, 6, 9 |
 | Sygnalista/odkrywca | **Thomas Le Bonniec** (były kontraktor GlobeTech); dziennikarz **Alex Hern** (*The Guardian*) |
 | Liczba poszkodowanych | Dziesiątki/setki milionów użytkowników Siri (od 2014); kontraktorzy słyszeli miliony nagrań |
-| Status (na dziś) | Program zewnętrzny zakończony 2019; od iOS 13.2 opt-in; ugoda 2024 |
+| Status (na dziś) | Program zewnętrzny zakończony 2019; od iOS 13.2 dobrowolne włączenie; ugoda 2024 |
 
 ---
 
@@ -98,7 +98,7 @@ W oświadczeniu Le Bonniec wymienił konkretne kategorie nagrań, które osobiś
 - **Krytyczne wypowiedzi o Apple**
 - **Operacje chirurgiczne** (Apple Watch chirurga aktywowany podczas zabiegu)
 
-Apple **natychmiast zawiesił program** (2 sierpnia 2019), Tim Cook **publicznie przeprosił**, wprowadził **opt-in w iOS 13.2** (28 sierpnia 2019). **Od 2020** nagrania Siri są słuchane tylko przez **pracowników wewnętrznych Apple** (nie kontraktorów) i tylko **za wyraźną zgodą użytkownika** (*Settings → Privacy → Analytics & Improvements → Improve Siri & Dictation*).
+Apple **natychmiast zawiesił program** (2 sierpnia 2019), Tim Cook **publicznie przeprosił**, wprowadził **dobrowolne włączenie w iOS 13.2** (28 sierpnia 2019). **Od 2020** nagrania Siri są słuchane tylko przez **pracowników wewnętrznych Apple** (nie kontraktorów) i tylko **za wyraźną zgodą użytkownika** (*Settings → Privacy → Analytics & Improvements → Improve Siri & Dictation*).
 
 **Class action USA: *Lopez et al. v. Apple Inc.* (N.D. Cal.)** — ugoda **95 mln USD** sfinalizowana **styczeń 2024**. Do 20 USD per użytkownik, który złożył claim. Apple **nie przyznał winy**.
 
@@ -117,7 +117,7 @@ Sprawa jest istotna z trzech powodów: (1) **podważenie marketingu Apple "Priva
 - **Lipiec 2019** — **Thomas Le Bonniec** kończy pracę w GlobeTech; kontaktuje się z *The Guardian*.
 - **26 lipca 2019** — Alex Hern, "Apple contractors 'regularly hear confidential details' on Siri recordings", *The Guardian*.
 - **2 sierpnia 2019** — Apple publicznie **zawiesza program** globalnie. Oficjalne oświadczenie.
-- **28 sierpnia 2019** — **iOS 13.2** — **opt-in** dla Siri Grading. Domyślnie wyłączone.
+- **28 sierpnia 2019** — **iOS 13.2** — **dobrowolne włączenie** dla Siri Grading. Domyślnie wyłączone.
 - **Koniec 2019** — Apple zwalnia kontraktorów GlobeTech (300+ osób).
 - **20 maja 2020** — Le Bonniec **publicznie się ujawnia** — list do europejskich DPA. *Politico Europe* publikuje.
 - **2020** — pozwy class action USA. Konsolidacja jako *Lopez et al. v. Apple Inc.*
@@ -222,7 +222,7 @@ Po ujawnieniu Le Bonniec zyskał wsparcie **NOYB (Max Schrems)** i stał się **
 ### Apple
 
 - **Tim Cook** — CEO, odpowiedzialny za publiczne przeprosiny
-- **Craig Federighi** — SVP Software Engineering; gospodarz iOS 13.2 (wprowadzenie opt-in)
+- **Craig Federighi** — SVP Software Engineering; gospodarz iOS 13.2 (wprowadzenie dobrowolne włączenie)
 - **Erik Neuenschwander** — Head of User Privacy; kluczowy kontakt dla mediów
 
 ### Inni sygnaliści paralelni (2019 — "rok voice assistant scandal")
@@ -232,7 +232,7 @@ Po ujawnieniu Le Bonniec zyskał wsparcie **NOYB (Max Schrems)** i stał się **
 - Sygnaliści Microsoft Cortana / Skype Translator (Motherboard, sierpień 2019)
 - Sygnaliści Samsung Bixby (*Vice*, 2019)
 
-### Prawnicy class action
+### Prawnicy pozew zbiorowy
 
 - **Hunter J. Shkolnik** (Napoli Shkolnik) — główna kancelaria USA.
 
@@ -266,7 +266,7 @@ Po ujawnieniu Le Bonniec zyskał wsparcie **NOYB (Max Schrems)** i stał się **
 - Ustawienie: *Settings → Privacy → Analytics & Improvements → Improve Siri & Dictation* — **domyślnie wyłączone**.
 - Przycisk "Delete Siri & Dictation History" — użytkownicy mogą usunąć swoje nagrania.
 
-**Etap 5: zapłata (2024).** 95 mln USD ugody w class action.
+**Etap 5: zapłata (2024).** 95 mln USD ugody w pozew zbiorowy.
 
 **Pytania bez odpowiedzi:**
 - Co Apple zrobił z **miliardami nagrań zebranymi przed 2019**? Oficjalnie: usunięte w ramach programu resetu. Niezależna weryfikacja: brak.
@@ -349,7 +349,7 @@ Sądy amerykańskie przyjęły kontra-argument. W UE **słabsze wyegzekwowanie**
 
 ### Dla praktyki Big Tech
 
-- **2019 "rok voice assistant scandal"** — **wszystkie główne voice assistants** (Siri, Alexa, Google Assistant, Cortana, Bixby) miały ten sam problem. Wszystkie wprowadziły opt-in w 2019–2020.
+- **2019 "rok voice assistant scandal"** — **wszystkie główne voice assistants** (Siri, Alexa, Google Assistant, Cortana, Bixby) miały ten sam problem. Wszystkie wprowadziły dobrowolne włączenie w 2019–2020.
 - **"Privacy by default" dla voice AI** stało się normą.
 - **Wewnętrzne audytorium dla kontraktorów** — Apple, Amazon, Google wprowadzili nowe procesy audytu dla pracy kontraktowej.
 
@@ -469,7 +469,7 @@ Jeśli pracujesz w zawodzie chronionym tajemnicą (art. 180 k.p.k., art. 6 uokik
 - **Żaden regulator UE nie ukarał Apple** — to szczególnie bolesne dla NOYB. Sprawa jest **symbolem słabej egzekucji RODO** wobec amerykańskich Big Tech w Irlandii.
 - **Wszystkie voice assistants 2019** — "rok skandalu": kwiecień Amazon Alexa (Bloomberg), lipiec Apple Siri (Guardian), sierpień Google Assistant (VRT Belgia), sierpień Microsoft Cortana / Skype Translator (Motherboard), październik Samsung Bixby (*Vice*). **Wszystkie** miały zewnętrznych kontraktorów. **Wszystkie** zmieniły politykę w 2019–2020.
 - **Rekord sprzedaży głośników 2019**: mimo skandali, **sprzedaż smart speakerów wzrosła o 30%** w 2019. Konsumenci **nie przejmowali się** prywatnością tak jak powinni. To wskaźnik, że PR-skandaly Big Tech **nie zmieniają fundamentalnie** wyborów konsumenckich.
-- **Polska — mało danych**: w Polsce użytkownicy Siri nigdy nie otrzymali formalnego powiadomienia o tym, że ich nagrania mogły być słuchane. UODO nie wszczął postępowania. Obywatele polscy są wyłączeni z class action USA.
+- **Polska — mało danych**: w Polsce użytkownicy Siri nigdy nie otrzymali formalnego powiadomienia o tym, że ich nagrania mogły być słuchane. UODO nie wszczął postępowania. Obywatele polscy są wyłączeni z pozew zbiorowy USA.
 - **Siri w Polsce** — od iOS 13 (2019) Siri **obsługuje polski**. Ale **polskie nagrania** trafiały do kontraktorów **znających polski** — głównie w Polsce (wschodnia Europa była hubem dla języków słowiańskich). Konkretna firma: nieujawniona.
 - ***Lopez v. Apple*** — ugoda 95 mln USD. Dla Apple (firma warta 3 bln USD): **0,003% kapitalizacji**. Praktycznie niezauważalne finansowo, ale symbolicznie ważne.
 

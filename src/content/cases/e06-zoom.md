@@ -19,7 +19,7 @@ legal_basis:
 fines:
 - amount: 85000000
   currency: USD
-  authority: Class action (shareholder)
+  authority: Pozew zbiorowy (shareholder)
   date: '2021'
   category: class_action_settlement
   status: paid
@@ -75,7 +75,7 @@ years_active:
 | Podstawa prawna | FTC Act § 5 (deceptive practices); NY Executive Law § 63(12); stanowe prawa konsumenckie |
 | Sygnalista/odkrywca | **Micah Lee, Yael Grauer** (*The Intercept*, marzec 2020); **Citizen Lab** (Ron Deibert, Toronto) |
 | Liczba poszkodowanych | **300 mln dziennych użytkowników** w szczytowym momencie (kwiecień 2020) |
-| Status (na dziś) | Prawdziwe E2E dostępne od października 2020 (opt-in); FTC 20-letni monitoring trwa do 2040 |
+| Status (na dziś) | Prawdziwe E2E dostępne od października 2020 (dobrowolne włączenie); FTC 20-letni monitoring trwa do 2040 |
 
 ---
 
@@ -109,7 +109,7 @@ W tym samym momencie seria **wybuchowych ujawnień** pokazała, że Zoom **syste
 
 **BRAK wypłat dla użytkowników** — krytyka demokratycznych komisarek **Rohit Chopra** i **Rebecca Kelly Slaughter**: *"No redress for users. Zoom is not required to offer refunds, or even notice to its customers that material claims were false."*
 
-**Akt nawrotu (2020–2021):** Zoom **kupił Keybase** (maj 2020) — startup specjalizujący się w kryptografii. **26 października 2020** Zoom wypuścił **prawdziwe E2E** jako **technical preview** (opt-in). 
+**Akt nawrotu (2020–2021):** Zoom **kupił Keybase** (maj 2020) — startup specjalizujący się w kryptografii. **26 października 2020** Zoom wypuścił **prawdziwe E2E** jako **technical preview** (dobrowolne włączenie). 
 
 Sprawa E06 to **wzorzec "pandemia jako crisis stress-test"** — Zoom przetrwał, reformował, ale **zbudował reputację** na **kłamstwach**, które wyszłyby na jaw być może nigdy bez 300-milionowego przyrostu użytkowników.
 
@@ -135,10 +135,10 @@ Sprawa E06 to **wzorzec "pandemia jako crisis stress-test"** — Zoom przetrwał
 - **1 kwietnia 2020** — Eric Yuan publiczne przeprosiny: *"We recognize we have fallen short of the community's — and our own — privacy and security expectations."*
 - **7 maja 2020** — Zoom **kupuje Keybase** (kwota nieujawniona) — do rozwoju prawdziwego E2E.
 - **Maj 2020** — **NY Attorney General Letitia James** settlement: enhanced encryption protocols.
-- **26 października 2020** — Zoom wypuszcza **prawdziwe E2E** jako **technical preview** (opt-in).
+- **26 października 2020** — Zoom wypuszcza **prawdziwe E2E** jako **technical preview** (dobrowolne włączenie).
 - **9 listopada 2020** — **FTC settlement**: comprehensive security program, 20-letni monitoring, **brak wypłat**.
 - **Grudzień 2020** — dissent statements: **Rohit Chopra, Rebecca Kelly Slaughter** (FTC Democrats).
-- **2021–2026** — Zoom kontynuuje, rośnie; E2E domyślnie opt-in; raporty transparentności publikowane.
+- **2021–2026** — Zoom kontynuuje, rośnie; E2E domyślnie dobrowolne włączenie; raporty transparentności publikowane.
 - **Kwiecień 2026** (obecnie) — Zoom pod monitoringiem FTC do **2040**.
 
 ---
@@ -318,7 +318,7 @@ To było **najgorsze dla reputacji Zoom**: nie tylko techniczne kłamstwa, ale *
 
 ### Kontrowersyjna pozycja dot. E2E
 
-**Ważne**: Zoom **E2E jest opt-in**, nie default. **Domyślnie wszyscy mają transport encryption**. Decyzja biznesowa: **E2E wyłącza** niektóre funkcje (cloud recording, telefoniczne dial-in, live transcription). Zoom wybrał **convenience over security** dla masy użytkowników.
+**Ważne**: Zoom **E2E jest dobrowolne włączenie**, nie default. **Domyślnie wszyscy mają transport encryption**. Decyzja biznesowa: **E2E wyłącza** niektóre funkcje (cloud recording, telefoniczne dial-in, live transcription). Zoom wybrał **convenience over security** dla masy użytkowników.
 
 ---
 
@@ -361,9 +361,9 @@ To było **najgorsze dla reputacji Zoom**: nie tylko techniczne kłamstwa, ale *
 |------|-------|-------|-------------|--------|
 | Maj 2020 | NY AG | Brak kary finansowej | Settlement z enhanced security | Zrealizowane |
 | 9 listopada 2020 | FTC | **BRAK wypłat użytkownikom** | 20-letni monitoring | W toku do 2040 |
-| 2021 | Class action (shareholder) | **85 000 000 USD** | Private settlement | Zrealizowane |
+| 2021 | Pozew zbiorowy (shareholder) | **85 000 000 USD** | Private settlement | Zrealizowane |
 
-**Charakterystyka:** FTC settlement **nie zawierał** odszkodowań dla konsumentów, co **skrytykowały** Komisarki Chopra i Slaughter. Class action (shareholders) wypłacił **85 mln USD**, ale to głównie dla inwestorów, nie dla masowych użytkowników.
+**Charakterystyka:** FTC settlement **nie zawierał** odszkodowań dla konsumentów, co **skrytykowały** Komisarki Chopra i Slaughter. Pozew zbiorowy (shareholders) wypłacił **85 mln USD**, ale to głównie dla inwestorów, nie dla masowych użytkowników.
 
 ---
 
@@ -411,7 +411,7 @@ Jeśli używałeś Zoom w 2020 (szczególnie marzec–październik) — **twoje 
 
 Dzisiaj (2026) Zoom jest **znacznie lepszy**:
 - **AES-256-GCM** domyślnie
-- **E2E dostępne** (opt-in)
+- **E2E dostępne** (dobrowolne włączenie)
 - **Default passwords** i waiting rooms
 - **Bez chińskiego routingu** dla USA meetings
 - **20-letni FTC monitoring** (do 2040)

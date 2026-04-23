@@ -322,7 +322,7 @@ Nawet jeśli dziś, w 2026 roku, Facebook nie przeprowadza tak jawnych eksperyme
 
 **W USA:**
 - Common Rule chroni tylko badania akademickie z federalnym finansowaniem
-- CCPA (Kalifornia) daje prawo opt-out dla sprzedaży danych, nie dla A/B testów
+- CCPA (Kalifornia) daje prawo rezygnacja dla sprzedaży danych, nie dla A/B testów
 
 ### Gdzie się zgłosić?
 

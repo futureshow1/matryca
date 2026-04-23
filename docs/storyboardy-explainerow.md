@@ -78,7 +78,7 @@
 4. **MECHANISM** — diagram: atakujący → API Contact Importer → dopasowanie numeru do profilu FB → eksfiltracja. Skala: 533 000 000 rekordów.
 5. **SCALE** — mapa świata: USA 32 mln, Egipt 45 mln, Tunezja 40 mln, Polska **2,67 mln**. 106 krajów dotkniętych.
 6. **DISCOVERY** — „ALON GAL". Januar 2021 — dane w darknet forum za 5 000 USD. Wcześniej: Facebook wiedział od 2019, nie powiadomił użytkowników.
-7. **REACTION** — 265 mln € kara irlandzkiego DPC (2022). Class action trwa. Facebook odmawia zawiadamiania użytkowników o wycieku ich danych.
+7. **REACTION** — 265 mln € kara irlandzkiego DPC (2022). Pozew zbiorowy trwa. Facebook odmawia zawiadamiania użytkowników o wycieku ich danych.
 8. **CLOSE** — „2,67 MLN POLAKÓW" + „Twój numer mogli kupić za 0,01 USD". Karta A04.
 
 ---
@@ -188,7 +188,7 @@
 
 ---
 
-## B02 — Google Safari Workaround (2011–2012)
+## B02 — Google Safari Obejście (2011–2012)
 
 **Hook**: Google pisało w reklamie: „Safari domyślnie blokuje tracking". W kodzie: bypass.
 
@@ -213,7 +213,7 @@
 4. **MECHANISM** — diagram: aplikacja zewnętrzna → API Google+ People → zwracało dane profilowe „prywatnych" znajomych użytkownika → wyciek imion, emaili, zawodu.
 5. **SCALE** — „500 000 KONT". Bug istniał od 2015 do marca 2018. 438 zewnętrznych aplikacji.
 6. **DISCOVERY** — Wall Street Journal, Douglas MacMillan, październik 2018. Na bazie wewnętrznych dokumentów Google.
-7. **REACTION** — Google ogłasza zamknięcie Google+ (8 października 2018). Listopad 2018: drugi bug, 52,5 mln kont. Class action settlement: 7,5 mln USD.
+7. **REACTION** — Google ogłasza zamknięcie Google+ (8 października 2018). Listopad 2018: drugi bug, 52,5 mln kont. Pozew zbiorowy settlement: 7,5 mln USD.
 8. **CLOSE** — „GOOGLE+" + „zamknięty nie dlatego, że nie był popularny. Zamknięty, bo naruszenie wyciekło.". Karta B03.
 
 ---
@@ -228,7 +228,7 @@
 4. **MECHANISM** — diagram: Location History (widoczny) → Timeline. „Web & App Activity" (ukryty, domyślnie włączony) → lokalizacja przez Wi-Fi, IP, sensor fusion. 340 transmisji dziennie z Androida.
 5. **SCALE** — 8 lat praktyki (2014–2022). Miliardy użytkowników Androida. Wewnętrzne e-maile Google: „uproszczenie UX zmniejszy precyzję targetingu reklam".
 6. **DISCOVERY** — profil Douglas Schmidt, Vanderbilt — raport „Google Data Collection". Pozwy AG Arizony (2020), 40 stanów (2022).
-7. **REACTION** — Arizona 85 mln USD, 40 AG 391,5 mln USD (rekord historyczny), DC+IN+TX+WA 29,5 mln USD, Korea PIPC 48 mln EUR, Australia ACCC 35 mln EUR, class action 93 mln USD. **Łącznie ~660 mln USD**.
+7. **REACTION** — Arizona 85 mln USD, 40 AG 391,5 mln USD (rekord historyczny), DC+IN+TX+WA 29,5 mln USD, Korea PIPC 48 mln EUR, Australia ACCC 35 mln EUR, pozew zbiorowy 93 mln USD. **Łącznie ~660 mln USD**.
 8. **CLOSE** — „LOCATION HISTORY" + „dark patterns jako model biznesowy". Karta B04.
 
 ---
@@ -318,19 +318,19 @@
 4. **MECHANISM** — diagram: co 5 sekund → screenshot pulpitu → OCR → SQLite plaintext. Dostęp: każda aplikacja uruchomiona jako ten sam użytkownik.
 5. **SCALE** — wszystkie Copilot+ PC. Windows 11 ma 1,5 mld urządzeń.
 6. **DISCOVERY** — „KEVIN BEAUMONT, DOUBLEPULSAR, MAJ 2024". Pierwsza analiza. Alexander Hagenah (TotalRecall tool, czerwiec 2024): eksfiltracja w sekundach.
-7. **REACTION** — Microsoft wstrzymuje premiera 13 czerwca 2024 (3 tygodnie po ogłoszeniu). Redesign: opt-in, Windows Hello, VBS+TPM encryption. Ale 2026: TotalRecall Reloaded pokazuje kolejne luki.
+7. **REACTION** — Microsoft wstrzymuje premiera 13 czerwca 2024 (3 tygodnie po ogłoszeniu). Redesign: dobrowolne włączenie, Windows Hello, VBS+TPM encryption. Ale 2026: TotalRecall Reloaded pokazuje kolejne luki.
 8. **CLOSE** — „RECALL" + „najszybciej wycofana funkcja AI w historii Microsoftu". Karta C04.
 
 ---
 
 ## C05 — LinkedIn AI Training (2024)
 
-**Hook**: LinkedIn trenuje swoje modele AI na twoim profilu, twoich postach, twoich rekomendacjach. Opt-out ukryty 3 menu głęboko.
+**Hook**: LinkedIn trenuje swoje modele AI na twoim profilu, twoich postach, twoich rekomendacjach. Rezygnacja ukryty 3 menu głęboko.
 
 1. **SETUP** — „TWÓJ PROFIL LINKEDIN". Podpis: „dla kogo jest?".
 2. **TENSION** — „DLA AI MICROSOFTU". Czerwony slash.
 3. **REVEAL** — „SEPTEMBER 2024". LinkedIn globalnie zmienia domyślnie ustawienie „Use data for Generative AI Improvement" na „ON".
-4. **MECHANISM** — diagram: profile, posty, komentarze, reaction → modele AI → Copilot, Bing, Generative AI products Microsoftu. Opt-out: 3 menu głęboko.
+4. **MECHANISM** — diagram: profile, posty, komentarze, reaction → modele AI → Copilot, Bing, Generative AI products Microsoftu. Rezygnacja: 3 menu głęboko.
 5. **SCALE** — „1,1 MLD UŻYTKOWNIKÓW LINKEDIN". Większość nigdy nie zauważyła zmiany.
 6. **DISCOVERY** — 404 Media, Joseph Cox, wrzesień 2024. TechCrunch, Verge potwierdzają.
 7. **REACTION** — **310 mln € kara DPC** (listopad 2024). Rekord dla kategorii „dark patterns AI training". LinkedIn: „to było na tydzień". DPC: „to wystarczyło".
@@ -393,7 +393,7 @@
 4. **MECHANISM** — diagram: mapa miasta → każdy aktualny przejazd Uber → kliknięcie = pełna historia klienta. Używane do: „imprezy korporacyjne Ubera gdzie pokazywano tor jazdy dziennikarki Johany Bhuiyan".
 5. **SCALE** — wszystkie miasta Uber. Liczba mających dostęp: nieznana. Tysiące.
 6. **DISCOVERY** — „JOHANA BHUIYAN, BUZZFEED, LISTOPAD 2014". Uber's Emil Michael chciał śledzić dziennikarkę. Sarah Lacy, PandoDaily: „God View pokazali mi w biurze jako feature".
-7. **REACTION** — **20 000 USD ugoda NY AG** (pierwsza) — symboliczna. **148 mln USD w 50 stanach** (2018, połączone z wyciekiem D06). FTC consent decree.
+7. **REACTION** — **20 000 USD ugoda NY AG** (pierwsza) — symboliczna. **148 mln USD w 50 stanach** (2018, połączone z wyciekiem D06). FTC ugoda z regulatorem.
 8. **CLOSE** — „GOD VIEW" + „śledzenie klientów było feature, nie bug". Karta D04.
 
 ---
@@ -424,7 +424,7 @@
 4. **MECHANISM** — diagram: hakerzy włamują się do AWS → pobierają bazę → kontaktują Sullivana → transakcja „bug bounty" → NDA → ukrycie przed FTC, AG stanów, użytkownikami.
 5. **SCALE** — 57 000 000 rekordów: 600 tys. numerów prawa jazdy (kierowcy USA), miliony nazwisk/emaili/numerów.
 6. **DISCOVERY** — Dara Khosrowshahi, nowy CEO Ubera (listopad 2017), ujawnia. Bloomberg potwierdza.
-7. **REACTION** — **148 mln USD** ugoda 50 stanów (2018). **FTC consent decree**. Krytycznie: **październik 2022 — Joe Sullivan skazany** w federalnym sądzie USA. Pierwszy CISO skazany karnie za ukrycie wycieku.
+7. **REACTION** — **148 mln USD** ugoda 50 stanów (2018). **FTC ugoda z regulatorem**. Krytycznie: **październik 2022 — Joe Sullivan skazany** w federalnym sądzie USA. Pierwszy CISO skazany karnie za ukrycie wycieku.
 8. **CLOSE** — „JOE SULLIVAN" + „wyciek danych nie jest wstydem. Ukrycie wycieku jest przestępstwem.". Karta D06.
 
 ---

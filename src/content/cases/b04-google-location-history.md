@@ -95,7 +95,7 @@ years_active:
 
 # B04 — Google Location History: Śledzenie mimo wyłączenia ustawienia
 
-> **Kategoria:** Śledzenie lokalizacji / dark patterns / wprowadzanie w błąd
+> **Kategoria:** Śledzenie lokalizacji / mylące interfejsy / wprowadzanie w błąd
 > **Firma/firmy:** Google (Alphabet)
 > **Lata:** 2014–2022 (praktyka), 13 sierpnia 2018 (ujawnienie), 2022–2024 (ugody)
 > **Status:** Zakończone — rekordowa ugoda 391,5 mln USD z 40 stanami; dodatkowe kary w AU, KR, USA stany
@@ -121,15 +121,15 @@ years_active:
 
 ## TL;DR
 
-**13 sierpnia 2018** dziennikarz *Associated Press* **Ryan Nakashima** ujawnił, że **Google kontynuuje zbieranie danych lokalizacyjnych** z urządzeń Android i iOS **nawet po wyłączeniu przez użytkownika ustawienia "Historia lokalizacji" (Location History)**. Dane zamiast do widocznej Timeline trafiały do drugiego, ukrytego ustawienia: **"Web & App Activity"** — **domyślnie włączonego** i nie pytającego o lokalizację wprost. Nakashima udowodnił to naukowym eksperymentem: **kupił 20 telefonów z różnymi kontami Google**, wyłączył wszędzie Location History i przeanalizował, co Google zbiera. Rezultat: Google wiedział o pozycji użytkownika przez Wi-Fi, IP, sensor fusion, metadane zdjęć. Naukową weryfikację przeprowadził **Jonathan Mayer** z Princeton (ten sam od Safari Workaround — B02).
+**13 sierpnia 2018** dziennikarz *Associated Press* **Ryan Nakashima** ujawnił, że **Google kontynuuje zbieranie danych lokalizacyjnych** z urządzeń Android i iOS **nawet po wyłączeniu przez użytkownika ustawienia "Historia lokalizacji" (Location History)**. Dane zamiast do widocznej Timeline trafiały do drugiego, ukrytego ustawienia: **"Web & App Activity"** — **domyślnie włączonego** i nie pytającego o lokalizację wprost. Nakashima udowodnił to naukowym eksperymentem: **kupił 20 telefonów z różnymi kontami Google**, wyłączył wszędzie Location History i przeanalizował, co Google zbiera. Rezultat: Google wiedział o pozycji użytkownika przez Wi-Fi, IP, sensor fusion, metadane zdjęć. Naukową weryfikację przeprowadził **Jonathan Mayer** z Princeton (ten sam od Safari Obejście — B02).
 
 Przełomowy raport **prof. Douglasa Schmidta** z Vanderbilt University z 2018: stojący na biurku Android, z którego nikt nie korzysta, **wysyła 340 razy dziennie dane telemetryczne do Google**. Dla porównania iPhone w analogicznym stanie: ok. 30 razy dziennie do Apple.
 
-**14 listopada 2022 — 40 attorneys general stanów USA** zawarło wspólną ugodę z Google na **391,5 mln USD** — **rekordową tego typu w historii prawa konsumenckiego USA przed 2024**. Wcześniej: **Arizona osobno: 85 mln USD** (październik 2022). Po tym: **DC + Indiana + Teksas + Waszyngton: 29,5 mln USD** (styczeń 2023). **Texas jeszcze osobno: 8 mln USD** (ten sam miesiąc). **Australia ACCC: 60 mln AUD** (2023). **Korea Płd. PIPC: 80 mld KRW** (~60 mln USD, 2023). **Class action federalna: 93 mln USD** (2024).
+**14 listopada 2022 — 40 attorneys general stanów USA** zawarło wspólną ugodę z Google na **391,5 mln USD** — **rekordową tego typu w historii prawa konsumenckiego USA przed 2024**. Wcześniej: **Arizona osobno: 85 mln USD** (październik 2022). Po tym: **DC + Indiana + Teksas + Waszyngton: 29,5 mln USD** (styczeń 2023). **Texas jeszcze osobno: 8 mln USD** (ten sam miesiąc). **Australia ACCC: 60 mln AUD** (2023). **Korea Płd. PIPC: 80 mld KRW** (~60 mln USD, 2023). **Pozew zbiorowy federalna: 93 mln USD** (2024).
 
 Wewnętrzne dokumenty Google ujawnione w pozwie Arizona pokazały, że **Google wiedział o zamieszaniu użytkowników od 2014**. Wewnętrzni inżynierowie proponowali uproszczenie ustawień. Kierownictwo odrzuciło: **"to zmniejszy precyzję targetingu reklam"**. W innym wewnętrznym e-mailu **VP Google Maps Jen Fitzpatrick** sama przyznała, że **nie rozumie dokładnie, jak działają dwa ustawienia**.
 
-Sprawa stała się **wzorcowym przykładem dark patterns** — celowo zmylającego UX. Pod RODO to klasyczne naruszenie art. 7 (warunki zgody) i art. 13 (obowiązek informacyjny). W USA to naruszenie state consumer protection w 40+ stanach. W 2024 Google zreformował ustawienia i **domyślnie wyłącza Location History** dla nowych kont.
+Sprawa stała się **wzorcowym przykładem mylące interfejsy** — celowo zmylającego UX. Pod RODO to klasyczne naruszenie art. 7 (warunki zgody) i art. 13 (obowiązek informacyjny). W USA to naruszenie state consumer protection w 40+ stanach. W 2024 Google zreformował ustawienia i **domyślnie wyłącza Location History** dla nowych kont.
 
 ---
 
@@ -152,7 +152,7 @@ Sprawa stała się **wzorcowym przykładem dark patterns** — celowo zmylające
 - **Styczeń 2023** — **Teksas osobno: 8 mln USD**.
 - **2023** — **Australia ACCC: 60 mln AUD**.
 - **2023** — **Korea Południowa PIPC: 80 mld KRW**.
-- **2024** — ugoda class action federalna: **93 mln USD**.
+- **2024** — ugoda pozew zbiorowy federalna: **93 mln USD**.
 - **2024** — Google ogłasza reformy: **Location History domyślnie wyłączona dla nowych kont**; uproszczenie interfejsu.
 
 ---
@@ -196,7 +196,7 @@ Wyłączenie **Location History** nie wpływało na **Web & App Activity**. Uży
 
 Gdy użytkownik próbował wyłączyć Web & App Activity, Google wyświetlał **alarmujący pop-up**: *"Without this history, Google Maps, the Assistant, and other services will be less useful."* — obraz katastrofy, żeby odstraszyć od wyłączenia.
 
-Alternatywnie: przycisk "Turn off" był **mniej widoczny** niż "Cancel". Klasyczny dark pattern.
+Alternatywnie: przycisk "Turn off" był **mniej widoczny** niż "Cancel". Klasyczny mylący interfejs.
 
 Gdy użytkownik odwiedzał `myactivity.google.com`, interfejs pokazywał **dashboards z pięcioma różnymi typami historii**, bez klarownego wyjaśnienia relacji między nimi. Eksperci UX nazwali to **"intencjonalną złożonością"**.
 
@@ -253,7 +253,7 @@ Raport Schmidta został sfinansowany przez **DCN (Digital Content Next)**, stowa
 - **Ryan Nakashima** (*AP*) — opisany wyżej.
 - **Douglas C. Schmidt** — profesor Computer Science, Vanderbilt University. Autor raportu z 2018. Ekspert w middleware, networking, dawniej DARPA.
 - **Jonathan Mayer** (Princeton) — akademicka weryfikacja.
-- **Brian Fung** (*Washington Post*) — analiza dark patterns w interfejsach.
+- **Brian Fung** (*Washington Post*) — analiza mylące interfejsy w interfejsach.
 
 ### Regulatorzy / prokuratorzy
 
@@ -269,7 +269,7 @@ Raport Schmidta został sfinansowany przez **DCN (Digital Content Next)**, stowa
 
 ### Prawnicy
 
-- **Bernstein Litowitz Berger & Grossmann LLP** — główna kancelaria class action.
+- **Bernstein Litowitz Berger & Grossmann LLP** — główna kancelaria pozew zbiorowy.
 - **Bob Trujillo** — Arizona Assistant AG, architekt dokumentacji.
 
 ---
@@ -324,12 +324,12 @@ Raport Schmidta został sfinansowany przez **DCN (Digital Content Next)**, stowa
 | 14 listopada 2022 | 40 stanów 391,5 mln USD |
 | Styczeń 2023 | DC+3, Teksas osobno |
 | 2023 | Australia, Korea |
-| 2024 | Class action 93 mln USD |
+| 2024 | Pozew zbiorowy 93 mln USD |
 
 ### Orzecznictwo powiązane
 
 - ***Carpenter v. United States* (585 U.S. 296, 2018)** — Sąd Najwyższy USA: **4th Amendment wymaga nakazu** dla pobrania danych lokalizacyjnych od operatora komórkowego przez rząd. Bezpośrednio powiązane z Google Location History — później rozszerzone na **geofence warrants**.
-- **Sprawa Safari Workaround (B02)** — analogiczny wzorzec "wprowadzania w błąd".
+- **Sprawa Safari Obejście (B02)** — analogiczny wzorzec "wprowadzania w błąd".
 - **Sprawa Onavo (A03)** — szersza praktyka ukrytego trackingu.
 
 ---
@@ -360,14 +360,14 @@ Raport Schmidta został sfinansowany przez **DCN (Digital Content Next)**, stowa
 
 ### Dla prawa UE
 
-- **Nowa jakość dla art. 7 RODO** — dark patterns w interfejsach zgód są **klasycznym naruszeniem** warunku "swobodnie udzielonej" zgody.
+- **Nowa jakość dla art. 7 RODO** — mylące interfejsy w interfejsach zgód są **klasycznym naruszeniem** warunku "swobodnie udzielonej" zgody.
 - **DPA Dania, Niemcy, Hiszpania** wydały wytyczne inspirowane sprawą Google.
-- **EDPB wytyczne o dark patterns** (2022) częściowo inspirowane sprawą.
+- **EDPB wytyczne o mylące interfejsy** (2022) częściowo inspirowane sprawą.
 
 ### Dla praktyki Big Tech
 
 - **Defaults = decyzja biznesowa** — projekt UX "domyślnie włączone" jest regulacyjnie ryzykowny. Od 2023 Apple, Meta, TikTok przesuwają się w kierunku **defaults-off** dla nowych użytkowników.
-- **Wewnętrzne dokumenty to ryzyko** — spory o dark patterns, "nie wolno napisać, czego nie chcesz widzieć w NYT" (patrz też B03 Google+).
+- **Wewnętrzne dokumenty to ryzyko** — spory o mylące interfejsy, "nie wolno napisać, czego nie chcesz widzieć w NYT" (patrz też B03 Google+).
 - **"Geofence warrants"** — technika policyjna (lista wszystkich telefonów w promieniu X od crime scene) zaczęła być mocno ograniczana. Google w 2023 ogłosił, że **jego infrastruktura przyszłości nie będzie pozwalać na takie zapytania**.
 
 ---
@@ -429,7 +429,7 @@ Jeśli przez ostatnie 10 lat używałeś Androida lub aplikacji Google na iPhone
 ### Gdzie się zgłosić?
 
 - **Polska**: UODO
-- **Udostępnianie dark patterns**: UODO oraz UOKiK (prawo konsumenckie)
+- **Udostępnianie mylące interfejsy**: UODO oraz UOKiK (prawo konsumenckie)
 - **USA**: Stanowy AG
 - **Australia**: ACCC
 - **Korea**: PIPC
@@ -456,7 +456,7 @@ Procedura: klient może pobrać własne dane przez **takeout.google.com** → "L
 - **Raport Schmidta — 340 transmisji dziennie** — ta liczba jest od 2018 cytowana w setkach artykułów, książek, wykładów akademickich i zeznań kongresowych. Dla porównania: iPhone ~30/dzień. Różnica 10× pokazuje skalę ekosystemu Google.
 - **"Google already knew"** — wewnętrzne e-maile z 2014 ujawnione w pozwie Arizona pokazały, że Google **wiedział o zamieszaniu użytkowników od początku**. Inżynierowie proponowali uproszczenie. Kierownictwo odrzuciło, bo **"zmniejszy precyzję targetingu reklam o 12%"**.
 - **VP Maps nie rozumiała własnego produktu** — Jen Fitzpatrick w wewnętrznym e-mailu sama przyznała, że **nie jest pewna**, jak działają dwa ustawienia. Klasyczny przypadek "emergent complexity" — produkt, którego **własni liderzy** nie rozumieją.
-- **Polska nie dostała osobnej kary** — UODO nie wszczął postępowania, bo sprawa była pod Irlandzkim DPC przez mechanizm one-stop-shop. DPC nie zakwalifikował sprawy jako priorytet. Obywatele polscy byli jednak częścią pozwów zbiorowych, które mogły generować odszkodowania.
+- **Polska nie dostała osobnej kary** — UODO nie wszczął postępowania, bo sprawa była pod Irlandzkim DPC przez mechanizm jedno okienko. DPC nie zakwalifikował sprawy jako priorytet. Obywatele polscy byli jednak częścią pozwów zbiorowych, które mogły generować odszkodowania.
 - ***Carpenter v. United States* (SCOTUS 2018)** — przełomowy wyrok. Timothy Carpenter został skazany za kradzieże w Detroit m.in. na podstawie **127 dni danych lokalizacyjnych** pozyskanych od operatora komórkowego **bez nakazu**. Sąd Najwyższy USA orzekł 5:4: takie dane wymagają **nakazu sądowego** pod 4. Poprawką. To zmieniło praktykę policyjną w całych USA — i pośrednio otworzyło dyskusję o **geofence warrants** do Google.
 - **"Geofence warrants"** — technika, w której policja pyta Google: "daj nam wszystkie telefony w promieniu 500 m od crime scene w godzinach 14:00–16:00". Lista może mieć dziesiątki lub setki osób — w tym niewinnych świadków. W 2023 Google **ogłosił zmianę architektury**: nowa infrastruktura Location History nie pozwala na odpowiadanie na takie zapytania. To ograniczyło narzędzie dochodzeniowe policji — głównie w USA, gdzie geofence warrants były używane w dziesiątkach tysięcy spraw rocznie.
 - **Konserwatywny Teksas jako pierwszy** — styczeń 2023 Teksas (stan **nie słynący z aktywnej polityki konsumenckiej**) wszedł w osobną ugodę 8 mln USD. Niezwykłe. Analitycy tłumaczą: AG **Ken Paxton** (Republikanin) wykorzystywał sprawy przeciwko Big Tech jako narzędzie polityczne w konflikcie z Dolinami Krzemową.

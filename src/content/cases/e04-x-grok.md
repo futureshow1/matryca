@@ -124,7 +124,7 @@ Sprawa E04 jest **aktywnym** punktem: postępowania w toku, nowe deepfake'i codz
 - **27 października 2022** — Musk przejmuje Twitter za 44 mld USD. Przemianowuje na X.
 - **2023** — masowe zwolnienia, w tym zespół trust & safety. Musk rozluźnia polityki moderacji.
 - **2023** — xAI uruchomione. Grok pojawia się jako chatbot dla X Premium.
-- **18 grudnia 2023** — European Commission rozpoczyna śledztwo DSA ws. dezinformacji, dark patterns, reklamodawców.
+- **18 grudnia 2023** — European Commission rozpoczyna śledztwo DSA ws. dezinformacji, mylące interfejsy, reklamodawców.
 - **Styczeń 2024** — **Taylor Swift deepfakes**. Eksplozja skandalu. DEFIANCE Act proposal.
 - **13 lutego 2024** — EU **deal** ws. ustawy kryminalizującej deepfake porno (do mid-2027).
 - **Lato 2024** — Grok Image generation tool launched.

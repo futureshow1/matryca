@@ -335,7 +335,7 @@ Jeśli masz dzieci i w domu Echo/Alexa/Google Home — **dane twoich dzieci są 
 ## Ciekawostki
 
 - **Samuel Levine** cytat: *"Amazon's history of misleading parents, keeping children's recordings indefinitely, and flouting parents' deletion requests violated COPPA and sacrificed privacy for profits."* Zdanie stało się **symbolem** debaty o kupczeniu prywatności dzieci. Często cytowane.
-- **Epic Games 520 mln USD** (grudzień 2022) — największa kara COPPA w historii. Epic (Fortnite) zbierał dane dzieci bez zgody i używał dark patterns. Poprzednik precedensowy dla sprawy Amazon.
+- **Epic Games 520 mln USD** (grudzień 2022) — największa kara COPPA w historii. Epic (Fortnite) zbierał dane dzieci bez zgody i używał mylące interfejsy. Poprzednik precedensowy dla sprawy Amazon.
 - **YouTube Kids 170 mln USD** (2019) — poprzednia największa kara. Google/YouTube zbierał dane dzieci na YouTube Kids bez zgody. Po karze Google ogłosił "YouTube Kids as separate product".
 - **"Flouting parents' deletion requests"** — sformułowanie w skardze FTC było szczególnie obciążające. Oznacza, że Amazon **celowo** ignorował żądania. Nie "zapomniał", nie "miał bug". **Flouting** = lekceważenie.
 - **18 miesięcy** — nowa polityka retencji Amazon. To nadal długo (dziecko przez 18 miesięcy wypowie tysiące zdań, które są analizowane), ale lepsze niż "indefinite".
