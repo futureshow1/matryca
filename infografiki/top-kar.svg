@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <style>
+    .bg { fill: #FAFAF7; }
+    .accent { fill: #A32D2D; }
+    .text { fill: #1A1C20; }
+    .text-2 { fill: #5C5E64; }
+    .text-3 { fill: #8E9096; }
+    .serif { font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; }
+    .sans { font-family: 'Inter', -apple-system, system-ui, sans-serif; }
+    .mono { font-family: 'IBM Plex Mono', monospace; }
+    .bold { font-weight: 700; }
+  </style>
+  <rect class="bg" width="1200" height="675"/>
+
+  <!-- Header: tagline -->
+  <text x="60" y="60" class="mono accent" font-size="13" letter-spacing="1.5" text-transform="uppercase">MATRYCA · SPRAWY BIG TECHU</text>
+
+  <!-- Body -->
+  
+  <text x="60" y="140" class="serif text" font-size="42" letter-spacing="-0.5">
+    Top 5 kar RODO.
+  </text>
+  <text x="60" y="185" class="serif text" font-size="42" letter-spacing="-0.5">
+    Wszystkie z Dublina.
+  </text>
+  <text x="60" y="225" class="mono text-2" font-size="14">Irlandzki DPC — wiodący regulator dla Big Techu pod RODO. Wszystkie pięć największych kar — stąd.</text>
+
+  
+    <text x="60" y="275" class="mono text-2" font-size="11">A07 · 2023</text>
+    <rect x="60" y="280" width="900.0" height="30" class="accent"/>
+    <text x="970.0" y="300" class="sans bold" font-size="15" fill="#1A1C20">1200 mln €</text>
+    <text x="60" y="328" class="mono text-2" font-size="11">Meta / DPC Ireland — transfer danych do USA</text>
+
+    <text x="60" y="330" class="mono text-2" font-size="11">E03 · 2025</text>
+    <rect x="60" y="335" width="397.5" height="30" class="accent"/>
+    <text x="467.5" y="355" class="sans bold" font-size="15" fill="#1A1C20">530 mln €</text>
+    <text x="60" y="383" class="mono text-2" font-size="11">TikTok / DPC Ireland — transfery do Chin</text>
+
+    <text x="60" y="385" class="mono text-2" font-size="11">A09 · 2023</text>
+    <rect x="60" y="390" width="292.5" height="30" class="accent"/>
+    <text x="362.5" y="410" class="sans bold" font-size="15" fill="#1A1C20">390 mln €</text>
+    <text x="60" y="438" class="mono text-2" font-size="11">Meta / DPC Ireland — reklamy bez zgody</text>
+
+    <text x="60" y="440" class="mono text-2" font-size="11">E02 · 2023</text>
+    <rect x="60" y="445" width="258.75" height="30" class="accent"/>
+    <text x="328.75" y="465" class="sans bold" font-size="15" fill="#1A1C20">345 mln €</text>
+    <text x="60" y="493" class="mono text-2" font-size="11">TikTok / DPC Ireland — dane dzieci</text>
+
+    <text x="60" y="495" class="mono text-2" font-size="11">C05 · 2024</text>
+    <rect x="60" y="500" width="232.50000000000003" height="30" class="accent"/>
+    <text x="302.5" y="520" class="sans bold" font-size="15" fill="#1A1C20">310 mln €</text>
+    <text x="60" y="548" class="mono text-2" font-size="11">LinkedIn / DPC Ireland — trening AI bez zgody</text>
+
+
+  <text x="60" y="600" class="mono text-3" font-size="11">Razem: 2,775 mld €. Jedna centrala regulatora. 13 firm, które tam mają siedzibę europejską.</text>
+
+
+  <!-- Footer -->
+  <line x1="60" y1="625" x2="1140" y2="625" stroke="rgba(0,0,0,0.1)" stroke-width="0.5"/>
+  <text x="60" y="650" class="mono text-3" font-size="11">matryca.org · materiał do swobodnego wykorzystania · 2026</text>
+  <text x="1140" y="650" class="mono text-3" font-size="11" text-anchor="end">Top 5 kar RODO</text>
+</svg>
