@@ -138,7 +138,7 @@ export const QUESTIONS: QuizQuestion[] = [
     id: 'public-photos',
     question: 'Masz publicznie dostępne zdjęcia swojej twarzy (Facebook, Instagram, LinkedIn, blog)?',
     revelation:
-      'Clearview AI zeskrobało 30+ miliardów twarzy z publicznych źródeł w internecie — bez twojej zgody. Baza jest sprzedawana policji (400+ agencji USA), wywiadowi, a przez subskrypcje: niemal każdemu. W Polsce usługa PimEyes (nie w bazie, ale podobny model) działa komercyjnie. Od 2024 UE zakazała tego typu działalności.',
+      'Clearview AI zeskrobało 30+ miliardów zdjęć twarzy z publicznych źródeł w internecie — bez twojej zgody. Baza jest sprzedawana policji (400+ agencji USA), wywiadowi, a przez subskrypcje: niemal każdemu. W Polsce usługa PimEyes (nie w bazie, ale podobny model) działa komercyjnie. Od 2024 UE zakazała tego typu działalności.',
     weight: 2,
     caseIds: ['E05'],
     action: 'Rozważ prywatność profili (private mode Instagram, ograniczenie FB). Dla zdjęć publicznych: akceptuj, że twoja twarz jest już w kilku bazach rozpoznawania. W UE możesz żądać usunięcia przez RODO (Clearview musi usunąć dane obywateli UE).',

@@ -910,14 +910,14 @@ CASES_DATA = [
     {
         'id': 'E05', 'slug': 'e05-clearview-ai',
         'card_title': 'Clearview AI',
-        'header_title': 'Clearview AI — 30 miliardów twarzy',
+        'header_title': 'Clearview AI — 30 miliardów zdjęć twarzy',
         'scenes': [
             {'type':'title','phase':'Setup','text':'TWOJA TWARZ NA IG.','sub':'publicznie · bo tak wybrałaś','size':'huge'},
             {'type':'strike','phase':'Tension','strike':'TYLKO','rest':'? 30 MLD BAZA.','sub':'Clearview AI · Hoan Ton-That','size':'big'},
             {'type':'title','phase':'Reveal','text':'CLEARVIEW AI','sub':'założona 2017 · scraping Facebook · IG · LinkedIn · VK · Twitter','size':'med','color':'default'},
-            {'type':'diagram','phase':'Mechanizm','headline':'policjant → zdjęcie monitoringu → dopasowanie → link do IG','left_title':'Policja USA','left_sub':'3400 agencji · klienci','right_title':'Baza 30 mld twarzy','right_sub':'skradzione z internetu','label':'0,5 sekundy zapytanie','footer':'ICE · FBI · policja lokalna · komercyjni klienci'},
-            {'type':'scale','phase':'Skala','headline_pre':'30 000 000 000 TWARZY.','headline_post':'3 400 AGENCJI POLICJI.','tl_left':'2017 start','tl_mid':'I 2020 ujawnienie','tl_right':'2024 zakazy UE','tl_mid_pos':40,
-             'stats':[{'value':'30 mld','label':'twarzy w bazie'},{'value':'3400','label':'agencji policji USA'},{'value':'AI Act','sub':'zakaz retroactive'}]},
+            {'type':'diagram','phase':'Mechanizm','headline':'policjant → zdjęcie monitoringu → dopasowanie → link do IG','left_title':'Policja USA','left_sub':'3400 agencji · klienci','right_title':'Baza 30 mld zdjęć twarzy','right_sub':'skradzione z internetu','label':'0,5 sekundy zapytanie','footer':'ICE · FBI · policja lokalna · komercyjni klienci'},
+            {'type':'scale','phase':'Skala','headline_pre':'30 MLD ZDJĘĆ TWARZY.','headline_post':'3 400 AGENCJI POLICJI.','tl_left':'2017 start','tl_mid':'I 2020 ujawnienie','tl_right':'2024 zakazy UE','tl_mid_pos':40,
+             'stats':[{'value':'30 mld','label':'zdjęć twarzy w bazie'},{'value':'3400','label':'agencji policji USA'},{'value':'AI Act','sub':'zakaz retroactive'}]},
             {'type':'discovery','phase':'Ujawnienie','date':'STYCZEŃ 2020',
              'names':[{'name':'Kashmir Hill','sub':'New York Times'},{'name':'książka 2023','sub':'"Your Face Belongs to Us"'},{'name':'CNIL · ICO','sub':'europejskie dochodzenia'}],
              'footer':'Facebook · Twitter · Google zakazały scrapingu — Clearview ignoruje'},

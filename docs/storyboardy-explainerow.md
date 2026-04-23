@@ -491,13 +491,13 @@
 
 ## E05 — Clearview AI (2020)
 
-**Hook**: 30 miliardów twarzy zeskrapowanych z internetu. Firma sprzedaje identyfikację policji. W UE już nie wolno.
+**Hook**: 30 miliardów zdjęć twarzy zeskrapowanych z internetu. Firma sprzedaje identyfikację policji. W UE już nie wolno.
 
 1. **SETUP** — „TWOJA TWARZ NA INSTAGRAMIE". Podpis: „publicznie. Bo tak wybrałaś.".
 2. **TENSION** — „I W BAZIE 30 MILIARDÓW". Czerwony slash.
 3. **REVEAL** — „CLEARVIEW AI" — firma założona 2017, Hoan Ton-That. Zeskrapowała Facebook, Instagram, LinkedIn, VK, Twitter.
 4. **MECHANISM** — diagram: policjant wysyła zdjęcie z monitoringu → Clearview dopasowuje → zwraca link do FB/IG tej osoby. 0,5 sekundy zapytanie.
-5. **SCALE** — „30 000 000 000 TWARZY". 3 400 agencji policji USA klientami. Australijska policja: bez jakiejkolwiek jurysdykcji.
+5. **SCALE** — „30 MLD ZDJĘĆ TWARZY". 3 400 agencji policji USA klientami. Australijska policja: bez jakiejkolwiek jurysdykcji.
 6. **DISCOVERY** — „KASHMIR HILL, NYT, STYCZEŃ 2020". Książka „Your Face Belongs to Us" (2023).
 7. **REACTION** — **UK: 7,5 mln £** (ICO, 2022). **Francja: 20 mln €** (CNIL, 2022). **Włochy: 20 mln €** (Garante, 2022). **Grecja: 20 mln €** (HDPA, 2022). **Holandia: 30 mln €** (AP, 2024). AI Act (2024): zakaz retroactive biometric ID w przestrzeni publicznej.
 8. **CLOSE** — „CLEARVIEW" + „twarzy nie wyłączysz. Wyłączyć muszą regulatorzy.". Karta E05.

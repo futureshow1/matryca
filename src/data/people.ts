@@ -172,10 +172,10 @@ prawny od wewnątrz. Bez Schremsa europejskie RODO miałoby ułamek egzekucyjnej
     years: '2020–obecnie',
     portrait_initials: 'KH',
     bio_short:
-      'Dziennikarka NYT, która ujawniła Clearview AI — bazę 30 miliardów twarzy.',
+      'Dziennikarka NYT, która ujawniła Clearview AI — bazę 30 miliardów zdjęć twarzy.',
     bio_long: `Amerykańska dziennikarka, obecnie w NYT. W styczniu 2020 opublikowała artykuł „The Secret Company
 That Might End Privacy as We Know It" — pierwsze publiczne ujawnienie Clearview AI, firmy, która
-zbudowała bazę 3 miliardów twarzy (później: 30 miliardów) zeskrobanych z Facebooka, LinkedIn,
+zbudowała bazę 3 miliardów zdjęć twarzy (później: 30 miliardów) zeskrobanych z Facebooka, LinkedIn,
 Instagrama i innych platform, i sprzedaje ją agencjom ścigania.
 
 Hill śledziła firmę przez 5 miesięcy, znalazła CEO Hoan Ton-Thata i udokumentowała użycie przez

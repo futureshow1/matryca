@@ -78,7 +78,7 @@ export const COMPANIES: Record<string, CompanyInfo> = {
     slug: 'clearview',
     label: 'Clearview AI',
     description:
-      'Clearview AI Inc. — baza 30+ miliardów twarzy zeskrobanych z internetu, sprzedawana policji i agencjom. Zakazana przez regulatorów UE i UK.',
+      'Clearview AI Inc. — baza 30+ miliardów zdjęć twarzy zeskrobanych z internetu, sprzedawana policji i agencjom. Zakazana przez regulatorów UE i UK.',
     group: 'E',
   },
   zoom: {
