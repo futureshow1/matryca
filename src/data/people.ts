@@ -123,19 +123,19 @@ sygnalistów — Haugen miała zorganizowane PR; Zhang działała sama.`,
     years: '2024',
     portrait_initials: 'KB',
     bio_short:
-      'Jako pierwszy zdiagnozował, że Microsoft Recall to „plaintext keylogger dla każdej aplikacji".',
-    bio_long: `Brytyjski specjalista ds. cyberbezpieczeństwa, prowadzący blog DoublePulsar. Kiedy Microsoft
+      'Jako pierwszy zdiagnozował, że Microsoft Recall rejestruje każde naciśnięcie klawisza w formie nieszyfrowanej.',
+    bio_long: `Brytyjski specjalista cyberbezpieczeństwa, prowadzący blog DoublePulsar. Kiedy Microsoft
 w maju 2024 ogłosił funkcję Windows Recall, Beaumont był jednym z pierwszych, którzy zdobyli
-preview build i przeanalizowali jego architekturę. W serii postów w czerwcu 2024 pokazał, że Recall
-przechowuje wszystkie screenshoty i teksty w plaintext SQLite, dostępnym dla każdej aplikacji
-działającej na koncie użytkownika.
+wersję testową i przeanalizowali jej architekturę. W serii wpisów w czerwcu 2024 pokazał,
+że Recall przechowuje wszystkie zrzuty ekranu i teksty w bazie SQLite bez szyfrowania —
+dostępnej dla każdej aplikacji działającej na koncie użytkownika.
 
-Beaumont nazwał funkcję „potential security disaster". Jego analizy, razem z narzędziem TotalRecall
-Alexandra Hagenah, wymusiły na Microsofcie wstrzymanie premierach (13 czerwca 2024) i przeprojektowanie
-Recall jako opt-in z szyfrowaniem przez VBS+TPM.
+Beaumont nazwał funkcję „potencjalną katastrofą bezpieczeństwa". Jego analizy, razem z narzędziem TotalRecall
+Alexandra Hagenah, zmusiły Microsoft do wstrzymania premiery (13 czerwca 2024) i do przeprojektowania
+Recall: funkcja stała się dobrowolna (trzeba ją świadomie włączyć) i szyfrowana przez VBS+TPM.
 
 Jest przykładem sygnalisty zewnętrznego — nie pracownika firmy, ale niezależnego badacza, którego
-głos był wystarczająco silny, żeby wpłynąć na strategię produkcji Microsoftu.`,
+głos był wystarczająco silny, żeby wpłynąć na strategię produktową Microsoftu.`,
     caseIds: ['C04'],
   },
   {
@@ -152,16 +152,16 @@ Schrems I (2015, unieważnienie Safe Harbor) i Schrems II (2020, unieważnienie 
 fundamenty obecnej architektury transferu danych osobowych między UE a USA.
 
 Schrems zaczął aktywność w 2011 jako student austriackiej uczelni, wysyłając do Facebook Ireland
-żądanie dostępu do swoich danych. Otrzymał 1222 strony — dowód masowego zbiorów, o którym nie miał
-pojęcia. Od tego momentu zbudował sieć litygacji strategicznej, w której jedno nazwisko (jego)
-wygenerowało większość europejskich orzeczeń kluczowych dla RODO.
+żądanie dostępu do swoich danych. Otrzymał 1222 strony — dowód masowego zbioru, o którym nie miał
+pojęcia. Od tego momentu zbudował sieć strategicznych postępowań sądowych, w których jedno nazwisko
+(jego) wygenerowało większość europejskich orzeczeń kluczowych dla RODO.
 
-Noyb, organizacja którą założył, złożyła dziesiątki skarg — w tym pierwszą w dniu wejścia RODO
+Noyb, organizacja, którą założył, złożyła dziesiątki skarg — w tym pierwszą w dniu wejścia RODO
 (25 maja 2018) przeciwko Meta, Google i WhatsApp za „wymuszoną zgodę". Te skargi doprowadziły
 do kar 390 mln EUR (2023) i 1,2 mld EUR (2023).
 
-Nie jest whistleblowerem — ale funkcjonalnie jest „ujawniaczem" mechanizmu prawnego. Bez Schremsa
-europejskie RODO miałoby ułamek egzekucyjnej siły.`,
+Nie jest sygnalistą w sensie dosłownym — ale funkcjonalnie pełni tę samą rolę, ujawniając mechanizm
+prawny od wewnątrz. Bez Schremsa europejskie RODO miałoby ułamek egzekucyjnej siły.`,
     caseIds: ['A07', 'A09', 'A01'],
   },
   {
