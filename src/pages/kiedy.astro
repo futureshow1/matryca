@@ -1,0 +1,87 @@
+---
+import Page from '../layouts/Page.astro';
+import ScrollTimeline from '../components/timeline/ScrollTimeline';
+---
+
+<Page
+  title="Kiedy — oś czasu"
+  description="Narracyjna oś czasu spraw Big Techu od 2010 roku do dziś — sześć scen, które pokazują wzorzec."
+>
+  <section class="kiedy">
+    <div class="container">
+      <header class="kiedy__header">
+        <p class="meta" style="color: var(--text-tertiary)">Drzwi 02 — wersja narracyjna</p>
+        <h1>Kiedy</h1>
+        <p class="kiedy__lede">
+          Od Hamburga w 2010 roku, gdy nikomu nieznany komisarz ochrony danych
+          wymusił na Google pierwsze przyznanie się do zbierania ruchu Wi-Fi,
+          do Brukseli w 2025 roku, gdy Komisja Europejska nakłada pierwszą
+          w historii karę na mocy Digital Markets Act.
+        </p>
+        <p class="kiedy__note">
+          Sześć momentów, które razem składają się na jedną sekwencję. Scroll w dół —
+          każda scena zatrzyma się, żeby ją przeczytać.
+        </p>
+      </header>
+
+      <ScrollTimeline client:load />
+
+      <footer class="kiedy__footer">
+        <p class="meta">
+          To jest wersja 1 — sześć scen demo. Pełna oś czasu (16 scen,
+          ~20 tys. słów) jest w przygotowaniu.
+        </p>
+      </footer>
+    </div>
+  </section>
+</Page>
+
+<style lang="scss">
+  .kiedy {
+    padding-block: var(--space-8) 0;
+  }
+
+  .kiedy__header {
+    max-width: 760px;
+    margin-bottom: var(--space-10);
+  }
+
+  .kiedy__header h1 {
+    font-family: var(--font-serif);
+    font-size: 52px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-block: var(--space-2) var(--space-4);
+  }
+
+  .kiedy__lede {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-3);
+  }
+
+  .kiedy__note {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin: 0;
+  }
+
+  .kiedy__footer {
+    margin-top: var(--space-16);
+    padding: var(--space-6) 0;
+    border-top: 0.5px solid var(--border);
+    text-align: center;
+  }
+
+  .kiedy__footer .meta {
+    color: var(--text-tertiary);
+  }
+
+  @media (max-width: 900px) {
+    .kiedy__header h1 {
+      font-size: 36px;
+    }
+  }
+</style>

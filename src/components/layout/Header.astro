@@ -3,10 +3,9 @@ import { url } from '../../utils/url';
 const navLinks = [
   { href: '/sprawy/', label: 'Sprawy' },
   { href: '/sygnalisci/', label: 'Kto odkrył?' },
+  { href: '/gra/', label: 'Co byś zrobił?' },
   { href: '/kwestionariusz/', label: 'Ile wiedzą?' },
   { href: '/teksty/', label: 'Teksty' },
-  { href: '/firmy/', label: 'Firmy' },
-  { href: '/tagi/', label: 'Tagi' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -40,6 +39,11 @@ const currentPath = Astro.url.pathname;
     </nav>
 
     <div class="header__actions">
+      <a
+        href={url('/en/')}
+        class="header__lang"
+        title="English edition (preview)"
+      >EN</a>
       <button
         class="header__theme-toggle"
         id="theme-toggle"
@@ -158,6 +162,23 @@ const currentPath = Astro.url.pathname;
     align-items: center;
     gap: var(--gap-3);
     flex-shrink: 0;
+  }
+
+  .header__lang {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 4px 8px;
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+
+    &:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
   }
 
   .header__theme-toggle {

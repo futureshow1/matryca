@@ -1,0 +1,292 @@
+---
+import Page from '../../layouts/Page.astro';
+import { url } from '../../utils/url';
+---
+
+<Page
+  title="Big Tech Files — English edition (preview)"
+  description="Big Tech Files: 33 documented Big Tech cases — privacy, security, citizen rights. Reference base for journalists, lawyers, academics."
+>
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__body">
+        <p class="hero__tagline">Sprawy Big Techu — Polish edition</p>
+        <h1 class="hero__title">Big Tech<br />Files.</h1>
+        <div class="hero__lead">
+          <p class="hero__lead-thesis">Not exceptions. A pattern.</p>
+          <p class="hero__lead-scope">Abuse. Data extraction. Broken law.</p>
+          <p class="hero__lead-numbers">33 cases. 12 companies. 480 sources.</p>
+          <p class="hero__lead-stamp">Documented.</p>
+        </div>
+        <div class="hero__actions">
+          <a href={url('/')} class="btn btn--primary">← Polish edition</a>
+          <span class="hero__notice">
+            English edition in preview. Full translation planned for Phase 4.
+          </span>
+        </div>
+      </div>
+
+      <aside class="hero__aside" aria-label="Key figures">
+        <div class="hero__fact">
+          <p class="hero__fact-value">€1.2 bn</p>
+          <p class="hero__fact-label">Record GDPR fine</p>
+          <p class="hero__fact-desc">Meta Ireland, 2023. For transferring European data to the US.</p>
+        </div>
+        <div class="hero__fact">
+          <p class="hero__fact-value">0.7%</p>
+          <p class="hero__fact-label">of Meta's annual revenue</p>
+          <p class="hero__fact-desc">That's what the record fine represented. Stock price rose after the announcement.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="container">
+      <div class="intro__body">
+        <h2>What this is</h2>
+        <p>
+          <strong>Big Tech Files</strong> is a reference portal documenting 33 cases of
+          privacy, security and ethics violations by the largest technology companies —
+          Meta, Google, Apple, Microsoft, Amazon, Uber, TikTok, X (formerly Twitter),
+          Clearview AI, Zoom and LinkedIn.
+        </p>
+        <p>
+          Each case is a documentary card based exclusively on regulatory decisions,
+          court documents, investigative journalism, academic research and
+          whistleblower disclosures. All amounts and dates are verified against
+          at least two independent sources.
+        </p>
+
+        <h2>Five doors into the data</h2>
+        <p>
+          The portal has no single narrative path. The homepage presents five equal
+          entries into the same 33 cases:
+        </p>
+        <ul>
+          <li><strong>WHAT</strong> — grid of 33 cases with filters and full-text search</li>
+          <li><strong>WHEN</strong> — narrative timeline 2010–2026</li>
+          <li><strong>WHERE</strong> — map of regulators and jurisdictions</li>
+          <li><strong>WHY</strong> — network graph linking cases, people, companies</li>
+          <li><strong>WHO REVEALED IT</strong> — gallery of 12 whistleblowers and journalists</li>
+        </ul>
+
+        <h2>Privacy of this portal</h2>
+        <p>
+          A project that documents privacy violations cannot itself violate the privacy
+          of its readers. Matryca collects no user data, uses no analytics cookies,
+          loads no external trackers. All assets are self-hosted.
+        </p>
+
+        <h2>License</h2>
+        <p>
+          Content is educational material for free use. When citing, please credit:
+          <em>Matryca / Big Tech Files, 2026 — matryca.org</em>.
+        </p>
+
+        <h2>Status</h2>
+        <p class="status">
+          The English edition is currently a <strong>preview</strong>. Full translation
+          of all 33 case cards (~110,000 words), 4 editorial essays, 12 whistleblower
+          profiles and all supporting materials is planned for Phase 4. The Polish
+          edition at <a href={url('/')}>matryca.org</a> is complete and up to date.
+        </p>
+      </div>
+    </div>
+  </section>
+</Page>
+
+<style lang="scss">
+  .hero {
+    padding-block: var(--space-16) var(--space-12);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    align-items: start;
+
+    @media (min-width: 900px) {
+      grid-template-columns: minmax(0, 1.4fr) minmax(260px, 1fr);
+      gap: var(--space-10);
+    }
+  }
+
+  .hero__body { max-width: 640px; }
+
+  .hero__tagline {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 var(--space-3);
+  }
+
+  .hero__title {
+    font-family: var(--font-serif);
+    font-size: clamp(36px, 6vw, 52px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+    margin-bottom: var(--space-5);
+  }
+
+  .hero__lead {
+    margin-bottom: var(--space-6);
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .hero__lead-thesis {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--text-primary);
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  .hero__lead-scope {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    line-height: 1.4;
+    color: var(--text-primary);
+    margin: 0;
+    font-style: italic;
+  }
+
+  .hero__lead-numbers {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--accent);
+    margin: 0;
+    letter-spacing: 0.02em;
+  }
+
+  .hero__lead-stamp {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-tertiary);
+    margin: var(--space-1) 0 0;
+  }
+
+  .hero__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+    flex-wrap: wrap;
+  }
+
+  .hero__notice {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-tertiary);
+    max-width: 320px;
+    line-height: 1.5;
+  }
+
+  .hero__aside {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    padding-left: var(--space-6);
+    border-left: 1px solid var(--border);
+
+    @media (max-width: 899px) {
+      padding-left: var(--space-4);
+      margin-top: var(--space-4);
+    }
+  }
+
+  .hero__fact {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .hero__fact-value {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+    margin: 0;
+  }
+
+  .hero__fact-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .hero__fact-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  .intro {
+    padding-block: var(--space-12);
+  }
+
+  .intro__body {
+    max-width: 720px;
+  }
+
+  .intro__body h2 {
+    font-family: var(--font-serif);
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-block: var(--space-8) var(--space-3);
+  }
+
+  .intro__body h2:first-of-type {
+    margin-top: 0;
+  }
+
+  .intro__body p {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--text-primary);
+    margin-bottom: var(--space-4);
+  }
+
+  .intro__body ul {
+    margin: var(--space-3) 0 var(--space-4);
+    padding-left: var(--space-6);
+  }
+
+  .intro__body li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: var(--space-2);
+  }
+
+  .intro__body strong {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .status {
+    padding: var(--space-4) var(--space-5);
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: 15px !important;
+  }
+</style>

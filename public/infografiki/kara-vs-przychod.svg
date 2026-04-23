@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <style>
+    .bg { fill: #FAFAF7; }
+    .accent { fill: #A32D2D; }
+    .text { fill: #1A1C20; }
+    .text-2 { fill: #5C5E64; }
+    .text-3 { fill: #8E9096; }
+    .serif { font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; }
+    .sans { font-family: 'Inter', -apple-system, system-ui, sans-serif; }
+    .mono { font-family: 'IBM Plex Mono', monospace; }
+    .bold { font-weight: 700; }
+  </style>
+  <rect class="bg" width="1200" height="675"/>
+
+  <!-- Header: tagline -->
+  <text x="60" y="60" class="mono accent" font-size="13" letter-spacing="1.5" text-transform="uppercase">MATRYCA · SPRAWY BIG TECHU</text>
+
+  <!-- Body -->
+  
+  <text x="60" y="140" class="serif text" font-size="42" letter-spacing="-0.5">
+    Kara 1,2 miliarda euro to 0,7%
+  </text>
+  <text x="60" y="185" class="serif text" font-size="42" letter-spacing="-0.5">
+    rocznego przychodu Mety.
+  </text>
+  <text x="60" y="225" class="mono text-2" font-size="14">Rekordowa kara RODO (DPC Ireland, 2023) vs. przychód Mety 2024</text>
+
+  <!-- Bar: roczny przychód Mety — pełny -->
+  <g transform="translate(60, 290)">
+    <text x="0" y="-10" class="mono text-2" font-size="12" letter-spacing="1">PRZYCHÓD META 2024</text>
+    <rect x="0" y="0" width="1080" height="60" fill="#1A1C20"/>
+    <text x="540" y="38" class="sans" font-size="22" fill="white" text-anchor="middle" font-weight="500">164 mld USD</text>
+  </g>
+
+  <!-- Bar: kara 1.2B EUR -->
+  <g transform="translate(60, 400)">
+    <text x="0" y="-10" class="mono accent" font-size="12" letter-spacing="1">KARA RODO 2023</text>
+    <rect x="0" y="0" width="8.5" height="60" class="accent"/>
+    <text x="20" y="38" class="sans accent" font-size="16" font-weight="500">1,2 mld € ≈ 1,3 mld USD</text>
+  </g>
+
+  <!-- Statistic callout -->
+  <g transform="translate(60, 510)">
+    <text x="0" y="0" class="serif accent" font-size="72" letter-spacing="-2" font-weight="500">0,7%</text>
+    <text x="200" y="-22" class="mono text-2" font-size="12" letter-spacing="1">AKCJE META TYDZIEŃ PÓŹNIEJ:</text>
+    <text x="200" y="10" class="serif" font-size="28" class="accent" font-weight="500">+1,8%</text>
+    <text x="200" y="34" class="mono text-3" font-size="11">rynek odetchnął: kwota mniejsza niż się obawiano</text>
+  </g>
+
+
+  <!-- Footer -->
+  <line x1="60" y1="625" x2="1140" y2="625" stroke="rgba(0,0,0,0.1)" stroke-width="0.5"/>
+  <text x="60" y="650" class="mono text-3" font-size="11">matryca.org · materiał do swobodnego wykorzystania · 2026</text>
+  <text x="1140" y="650" class="mono text-3" font-size="11" text-anchor="end">Kara vs. przychód · A07</text>
+</svg>

@@ -27,48 +27,48 @@ export const TAG_LABELS: Record<string, string> = {
 
 export const TAG_DESCRIPTIONS: Record<string, string> = {
   'dark-patterns':
-    'Celowo mylący UX — przyciski odmowy ukryte, domyślne zgody, frustrujące przepływy rezygnacji.',
+    'Celowo mylący interfejs — ukryte przyciski odmowy, domyślne zgody, utrudnione ścieżki rezygnacji.',
   'addictive-design':
-    'Projektowanie pod uzależnienie: infinite scroll, autoplay, zmienne nagrody, powiadomienia push.',
+    'Projektowanie pod uzależnienie: przewijanie bez końca, automatyczne odtwarzanie, zmienne nagrody, powiadomienia wyrywające uwagę.',
   'rozpoznawanie-twarzy':
-    'Scraping twarzy z internetu i biometryczna identyfikacja bez zgody — Clearview, PimEyes.',
+    'Pobieranie zdjęć twarzy z internetu i biometryczna identyfikacja bez zgody — Clearview, PimEyes.',
   'sledzenie-lokalizacji':
-    'Geolokalizacja przez Wi-Fi, Bluetooth, GPS — często mimo wyłączenia ustawień.',
+    'Geolokalizacja przez Wi-Fi, Bluetooth, GPS — często mimo wyłączenia odpowiednich ustawień.',
   'trening-ai':
-    'Użycie danych użytkowników do trenowania modeli AI bez jasnej zgody.',
+    'Wykorzystywanie danych użytkowników do trenowania modeli AI bez wyraźnej zgody.',
   'moderacja-algorytmiczna':
     'Algorytmiczne wzmacnianie lub wyciszanie treści — infrastruktura sfery publicznej.',
   'eksperyment-psychologiczny':
-    'Manipulacja samopoczuciem użytkownika w ramach testów A/B — emotional contagion.',
+    'Manipulacja nastrojem użytkownika w ramach testów porównawczych (np. „emotional contagion" Facebooka).',
   dezinformacja:
-    'Platformy jako infrastruktura dla fałszywych narracji, deepfake, psyop.',
+    'Platformy jako infrastruktura dla fałszywych narracji, obrazów generowanych przez AI i operacji psychologicznych.',
   dzieci:
-    'Sprawy dotyczące użytkowników poniżej 13 lub 16 lat.',
+    'Sprawy dotyczące użytkowników poniżej 13. lub 16. roku życia.',
   wyborcy:
-    'Konteksty wyborcze, kampanijne, manipulacja procesem demokratycznym.',
+    'Wątki wyborcze i kampanijne, manipulacja procesem demokratycznym.',
   pracownicy:
-    'Pracownicy platform, warunki pracy, związki, nadzór pracodawcy.',
+    'Pracownicy platform, warunki pracy, związki zawodowe, nadzór pracodawcy.',
   dziennikarze:
     'Dziennikarze jako cel inwigilacji, cenzury lub wzmożonej krytyki.',
   mniejszosci:
     'Mniejszości etniczne, religijne, seksualne — dyskryminacja algorytmiczna i strukturalna.',
   rodo: 'Sprawy z kluczowym elementem Ogólnego Rozporządzenia o Ochronie Danych.',
-  coppa: 'Children\'s Online Privacy Protection Act — federalne prawo USA.',
-  bipa: 'Biometric Information Privacy Act — prawo stanu Illinois.',
+  coppa: 'Children\'s Online Privacy Protection Act — federalne prawo USA o prywatności dzieci w sieci.',
+  bipa: 'Biometric Information Privacy Act — prawo stanu Illinois o danych biometrycznych.',
   'schrems-ii':
-    'Transfer danych EU → USA po wyroku TSUE w sprawie Maxa Schremsa.',
+    'Transfer danych UE → USA po wyroku TSUE w sprawie Maxa Schremsa.',
   'pozew-zbiorowy':
-    'Class action settlement lub derivative suit — postępowania cywilne.',
+    'Pozew zbiorowy lub pozew akcjonariuszy — postępowania cywilne.',
   'wyciek-danych':
-    'Data breach, niezamierzone lub celowe ujawnienie danych osobowych.',
+    'Niezamierzone lub celowe ujawnienie danych osobowych.',
   sygnalista:
-    'Sprawy ujawnione przez whistleblowera — Haugen, Wylie, Snowden i inni.',
+    'Sprawy ujawnione przez sygnalistę — Haugen, Wylie, Snowden i innych.',
   criminal:
     'Postępowania karne (nie tylko regulacyjne czy cywilne).',
   geopolityka:
-    'Sprawy rzutujące na relacje międzypaństwowe — transfer do Chin, sankcje, bezpieczeństwo narodowe.',
+    'Sprawy rzutujące na relacje międzypaństwowe — transfer danych do Chin, sankcje, bezpieczeństwo narodowe.',
   'polski-watek':
     'Sprawy z wyraźnym polskim kontekstem — UODO, Panoptykon, polscy poszkodowani.',
   deepfake:
-    'Generatywna manipulacja obrazem i dźwiękiem — Grok, aplikacje AI imagine.',
+    'Generatywna manipulacja obrazem i dźwiękiem — Grok, aplikacje do tworzenia sztucznych zdjęć.',
 };

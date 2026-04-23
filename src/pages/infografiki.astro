@@ -1,0 +1,185 @@
+---
+import Page from '../layouts/Page.astro';
+import { url } from '../utils/url';
+
+const infografiki = [
+  {
+    slug: 'kara-vs-przychod',
+    title: 'Kara a przychód',
+    description: 'Rekordowa kara RODO 1,2 mld € = 0,7% rocznego przychodu Mety. Rynek odetchnął: akcje wzrosły o 1,8%.',
+  },
+  {
+    slug: 'chronologia',
+    title: 'Chronologia 33 spraw',
+    description: 'Każda kropka = jedna sprawa. 15 lat, jeden wzorzec — od Google Street View Wi-Spy (2010) do Local Mess (2025).',
+  },
+  {
+    slug: 'top-kar',
+    title: 'Top 5 kar RODO',
+    description: 'Wszystkie pięć największych kar RODO wydał irlandzki DPC. Razem: 2,775 mld €.',
+  },
+  {
+    slug: 'firmy',
+    title: 'Sześć firm — 27 spraw',
+    description: 'Meta, Google, TikTok, Uber, Apple, Amazon. 82% bazy Matrycy dotyczy tych sześciu podmiotów.',
+  },
+  {
+    slug: 'sygnalisci',
+    title: 'Kto odkrył?',
+    description: 'Sześciu sygnalistów i dziennikarzy, bez których nie byłoby największych ujawnień.',
+  },
+  {
+    slug: 'geografia',
+    title: 'Geografia egzekwowania',
+    description: 'Dublin i Waszyngton skupiają większość decyzji regulacyjnych. Reszta Europy nadąża — lub nie.',
+  },
+];
+---
+
+<Page
+  title="Infografiki"
+  description="Sześć statycznych SVG do swobodnego wykorzystania w artykułach, prezentacjach, lekcjach."
+>
+  <section class="infografiki">
+    <div class="container">
+      <header class="infografiki__header">
+        <p class="meta" style="color: var(--text-tertiary)">Biblioteka wizualizacji</p>
+        <h1>Infografiki</h1>
+        <p class="infografiki__lede">
+          Sześć statycznych SVG-ów podsumowujących kluczowe liczby bazy Matrycy.
+          Do swobodnego wykorzystania w artykułach prasowych, prezentacjach, lekcjach,
+          raportach. Format wektorowy (skaluje się do dowolnego rozmiaru),
+          16:9, z typografią portalu.
+        </p>
+        <p class="infografiki__note">
+          Przy wykorzystaniu prosimy o wskazanie źródła: <em>Matryca — Sprawy Big Techu</em>.
+          Plik PNG do szybkiego użycia można wygenerować dowolnym konwerterem SVG → PNG
+          (np. Squoosh, CloudConvert).
+        </p>
+      </header>
+
+      <ul class="infografiki__grid">
+        {infografiki.map((i) => (
+          <li class="infografiki__item">
+            <a href={url(`/infografiki/${i.slug}.svg`)} target="_blank" class="infografiki__link">
+              <div class="infografiki__preview">
+                <img src={url(`/infografiki/${i.slug}.svg`)} alt={i.title} loading="lazy" />
+              </div>
+              <div class="infografiki__body">
+                <p class="infografiki__title">{i.title}</p>
+                <p class="infografiki__desc">{i.description}</p>
+                <p class="infografiki__action meta">Otwórz SVG →</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Page>
+
+<style lang="scss">
+  .infografiki {
+    padding-block: var(--space-8) var(--space-10);
+  }
+
+  .infografiki__header {
+    max-width: 760px;
+    margin-bottom: var(--space-10);
+  }
+
+  .infografiki__header h1 {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    line-height: 1.15;
+    margin-block: var(--space-2) var(--space-4);
+  }
+
+  .infografiki__lede {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-3);
+  }
+
+  .infografiki__note {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin: 0;
+    padding-top: var(--space-2);
+    border-top: 0.5px solid var(--border);
+  }
+
+  .infografiki__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: var(--gap-4);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .infografiki__item {
+    margin: 0;
+  }
+
+  .infografiki__link {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--transition-fast);
+
+    &:hover {
+      border-color: var(--accent);
+      .infografiki__title { color: var(--accent); }
+      .infografiki__action { color: var(--accent); }
+    }
+  }
+
+  .infografiki__preview {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--bg-secondary);
+    overflow: hidden;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .infografiki__preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .infografiki__body {
+    padding: var(--gap-5);
+  }
+
+  .infografiki__title {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 6px;
+    transition: color var(--transition-fast);
+  }
+
+  .infografiki__desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0 0 10px;
+  }
+
+  .infografiki__action {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin: 0;
+    transition: color var(--transition-fast);
+  }
+</style>

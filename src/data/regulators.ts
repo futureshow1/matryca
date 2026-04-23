@@ -27,7 +27,7 @@ export const REGULATORS: Regulator[] = [
     lng: -6.2603,
     region: 'Europa',
     authorityPatterns: ['DPC Ireland', 'DPC Irlandia', 'Irlandzki DPC'],
-    description: 'Wiodący regulator RODO dla Big Tech — centrala europejska Meta, Google, X, TikTok, LinkedIn, Apple. Źródło rekordowych kar 390 mln € (2023) i 1,2 mld € (2023).',
+    description: 'Wiodący regulator RODO dla Big Techu — europejska centrala Mety, Google, X, TikToka, LinkedIna i Apple mieści się w Irlandii. Źródło rekordowych kar: 390 mln € (2023) i 1,2 mld € (2023).',
   },
   {
     slug: 'cnil',
@@ -51,7 +51,7 @@ export const REGULATORS: Regulator[] = [
     lng: -2.2369,
     region: 'Europa',
     authorityPatterns: ['ICO (UK)', 'ICO UK', 'UK ICO'],
-    description: 'Brytyjski regulator danych — po Brexit działa poza RODO, w ramach UK GDPR.',
+    description: 'Brytyjski regulator danych — po brexicie działa poza RODO, w ramach osobnej ustawy UK GDPR.',
   },
   {
     slug: 'aepd',
@@ -63,7 +63,7 @@ export const REGULATORS: Regulator[] = [
     lng: -3.7038,
     region: 'Europa',
     authorityPatterns: ['AEPD'],
-    description: 'Hiszpański regulator danych — znany z szybszych decyzji niż DPC.',
+    description: 'Hiszpański regulator danych — znany z szybszych decyzji niż irlandzki DPC.',
   },
   {
     slug: 'garante',
@@ -75,7 +75,7 @@ export const REGULATORS: Regulator[] = [
     lng: 12.4964,
     region: 'Europa',
     authorityPatterns: ['Garante (IT)'],
-    description: 'Włoski regulator danych — pierwsi w UE, którzy tymczasowo zablokowali ChatGPT (2023).',
+    description: 'Włoski regulator danych — pierwszy w UE, który tymczasowo zablokował ChatGPT (2023).',
   },
   {
     slug: 'hamburg-dpa',
@@ -132,7 +132,7 @@ export const REGULATORS: Regulator[] = [
     lng: 4.3517,
     region: 'Europa',
     authorityPatterns: ['European Commission', 'Komisja Europejska'],
-    description: 'Komisja egzekwuje DSA i DMA bezpośrednio, omijając irlandzki bottleneck.',
+    description: 'Komisja egzekwuje DSA i DMA bezpośrednio, omijając irlandzkie wąskie gardło.',
   },
   {
     slug: 'ftc',
@@ -144,7 +144,7 @@ export const REGULATORS: Regulator[] = [
     lng: -77.0369,
     region: 'Ameryka Pn.',
     authorityPatterns: ['FTC', 'FTC (dystrybucja)', 'FTC + DOJ'],
-    description: 'Główny federalny regulator konsumencki USA — autor 5 mld USD kary dla Mety (2019).',
+    description: 'Główny federalny regulator konsumencki w USA — autor kary 5 mld USD dla Mety (2019).',
   },
   {
     slug: 'sec',
@@ -193,7 +193,7 @@ export const REGULATORS: Regulator[] = [
       'Ława w NM',
       'Sąd w Nowym Meksyku',
     ],
-    description: 'Zbiór AG stanów, które koordynują multi-state actions. Największe: Teksas, Kalifornia, Nowy Jork.',
+    description: 'Koalicje prokuratorów generalnych stanów USA koordynują wspólne pozwy wielostanowe. Najbardziej aktywne: Teksas, Kalifornia, Nowy Jork.',
   },
   {
     slug: 'accc',

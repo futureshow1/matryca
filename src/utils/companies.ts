@@ -22,77 +22,77 @@ export const COMPANIES: Record<string, CompanyInfo> = {
     slug: 'google',
     label: 'Google',
     description:
-      'Alphabet Inc. / Google LLC — Search, Chrome, Android, YouTube, Maps, Gmail. Dominujący gracz rynku reklamy internetowej i mobilnej.',
+      'Alphabet Inc. / Google LLC — wyszukiwarka, Chrome, Android, YouTube, Maps, Gmail. Dominujący gracz rynku reklamy internetowej i mobilnej.',
     group: 'B',
   },
   apple: {
     slug: 'apple',
     label: 'Apple',
     description:
-      'Apple Inc. — iPhone, Mac, iPad, iCloud, App Store. Pozycjonowany jako „firma prywatności" — co jest częścią jego marketingu i przedmiotem niejednej z tu dokumentowanych spraw.',
+      'Apple Inc. — iPhone, Mac, iPad, iCloud, App Store. Marka pozycjonowana jako „firma prywatności" — co jest częścią jej komunikacji marketingowej i przedmiotem niejednej z tu dokumentowanych spraw.',
     group: 'C',
   },
   microsoft: {
     slug: 'microsoft',
     label: 'Microsoft',
     description:
-      'Microsoft Corporation — Windows, Office, Azure, LinkedIn, GitHub, Xbox. Jeden z największych integratorów AI w swoich produktach konsumenckich.',
+      'Microsoft Corporation — Windows, Office, Azure, LinkedIn, GitHub, Xbox. Jedna z firm najmocniej integrujących AI z produktami konsumenckimi.',
     group: 'C',
   },
   linkedin: {
     slug: 'linkedin',
     label: 'LinkedIn',
     description:
-      'LinkedIn (własność Microsoftu) — portal zawodowy. Miejsce pojawienia się problemów z AI trained on user data bez opt-in.',
+      'LinkedIn (własność Microsoftu) — portal zawodowy. Tu ujawniono problem trenowania modeli AI na danych użytkowników bez wyraźnej zgody.',
     group: 'C',
   },
   amazon: {
     slug: 'amazon',
     label: 'Amazon',
     description:
-      'Amazon.com Inc. — e-commerce, AWS, Alexa, Ring, Kindle. Operator sieci kamer domowych udostępnianych policji w USA.',
+      'Amazon.com Inc. — handel internetowy, AWS, Alexa, Ring, Kindle. Operator sieci kamer domowych udostępnianych policji w USA.',
     group: 'D',
   },
   uber: {
     slug: 'uber',
     label: 'Uber',
     description:
-      'Uber Technologies Inc. — transport, dostawy, logistyka. Historyczny przykład „move fast and break things" przeniesionego na infrastrukturę miejską.',
+      'Uber Technologies Inc. — transport, dostawy, logistyka. Historyczny przykład strategii „działaj szybko, łam rzeczy" przeniesionej na infrastrukturę miejską.',
     group: 'D',
   },
   tiktok: {
     slug: 'tiktok',
     label: 'TikTok / ByteDance',
     description:
-      'ByteDance (chiński właściciel) / TikTok — platforma krótkich filmów, dominujący algorytm rekomendacyjny u młodych użytkowników. Wątek bezpieczeństwa narodowego w USA i UE.',
+      'ByteDance (chiński właściciel) / TikTok — platforma krótkich filmów z dominującym algorytmem rekomendacyjnym dla młodych użytkowników. Wątek bezpieczeństwa narodowego w USA i UE.',
     group: 'E',
   },
   x: {
     slug: 'x',
     label: 'X (dawniej Twitter)',
     description:
-      'X Corp. / xAI — platforma mikroblogowa przekupiona przez Elona Muska w 2022. Zmiana moderacji, rozwijanie Grok (model AI) i jego generowanie obrazów bez restrykcji.',
+      'X Corp. / xAI — platforma mikroblogowa przejęta przez Elona Muska w 2022 roku. Zmiana zasad moderacji, rozwój Grok (model AI) i nieograniczone generowanie obrazów.',
     group: 'E',
   },
   clearview: {
     slug: 'clearview',
     label: 'Clearview AI',
     description:
-      'Clearview AI Inc. — baza 30+ miliardów zdjęć twarzy zeskrobanych z internetu, sprzedawana policji i agencjom. Zakazana przez regulatorów UE i UK.',
+      'Clearview AI Inc. — baza 30+ miliardów zdjęć twarzy pobranych z internetu, sprzedawana policji i agencjom. Zakazana przez regulatorów UE i Wielkiej Brytanii.',
     group: 'E',
   },
   zoom: {
     slug: 'zoom',
     label: 'Zoom',
     description:
-      'Zoom Video Communications — komunikator video, który dorósł w pandemii. Sprawa fałszywego „end-to-end encryption" i serwerów w Chinach.',
+      'Zoom Video Communications — komunikator wideo, który rozrósł się w pandemii. Sprawa fałszywego szyfrowania end-to-end i przesyłania ruchu przez serwery w Chinach.',
     group: 'E',
   },
   yandex: {
     slug: 'yandex',
     label: 'Yandex',
     description:
-      'Yandex N.V. — rosyjski odpowiednik Google. Występuje jako cocompany w sprawach lokalnego scraping, w pewnych kontekstach wspólnie z Metą.',
+      'Yandex N.V. — rosyjski odpowiednik Google. Pojawia się jako współwykonawca w sprawach lokalnego pobierania danych, w pewnych kontekstach wspólnie z Metą.',
     group: 'A',
   },
 };
