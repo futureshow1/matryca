@@ -72,19 +72,19 @@ Animacja statyczna (SVG + CSS). Bez dźwięku. Bez narzędzi śledzących.
 
 
 
-<table><thead><tr><th>Pole</th><th>Wartość</th></tr></thead><tbody><tr><td>Kraj/region</td><td>Globalnie (Windows 11); wdrożenie w EOG opóźnione</td></tr><tr><td>Rok ujawnienia</td><td>20 maja 2024 (Microsoft sam ogłosił funkcję)</td></tr><tr><td>Lata trwania praktyki</td><td>Maj 2024 – czerwiec 2024 (zapowiedź), kwiecień 2025+ (ograniczony rollout)</td></tr><tr><td>Łączna kara</td><td><strong>Brak kar</strong> — wstrzymane przed wdrożeniem; brak postępowań regulacyjnych</td></tr><tr><td>Waluta</td><td>—</td></tr><tr><td>Podstawa prawna</td><td>RODO art. 25 (privacy by design), art. 32 (bezpieczeństwo); krajowe prawa pracy</td></tr><tr><td>Sygnalista/odkrywca</td><td><strong>Kevin Beaumont</strong> (DoublePulsar); UK ICO; wewnętrzna krytyka środowiska cybersec</td></tr><tr><td>Liczba poszkodowanych</td><td>Potencjalnie wszyscy użytkownicy Copilot+ PC (miliony urządzeń)</td></tr><tr><td>Status (na dziś)</td><td>Opt-in; szyfrowane; wdrożone selektywnie poza UE; badania bezpieczeństwa wciąż wykazują luki</td></tr></tbody></table>
+<table><thead><tr><th>Pole</th><th>Wartość</th></tr></thead><tbody><tr><td>Kraj/region</td><td>Globalnie (Windows 11); wdrożenie w EOG opóźnione</td></tr><tr><td>Rok ujawnienia</td><td>20 maja 2024 (Microsoft sam ogłosił funkcję)</td></tr><tr><td>Lata trwania praktyki</td><td>Maj 2024 – czerwiec 2024 (zapowiedź), kwiecień 2025+ (ograniczony rollout)</td></tr><tr><td>Łączna kara</td><td><strong>Brak kar</strong> — wstrzymane przed wdrożeniem; brak postępowań regulacyjnych</td></tr><tr><td>Waluta</td><td>—</td></tr><tr><td>Podstawa prawna</td><td>RODO art. 25 (privacy by design), art. 32 (bezpieczeństwo); krajowe prawa pracy</td></tr><tr><td>Sygnalista/odkrywca</td><td><strong>Kevin Beaumont</strong> (DoublePulsar); UK ICO; wewnętrzna krytyka środowiska cybersec</td></tr><tr><td>Liczba poszkodowanych</td><td>Potencjalnie wszyscy użytkownicy Copilot+ PC (miliony urządzeń)</td></tr><tr><td>Status (na dziś)</td><td>Dobrowolne włączenie; szyfrowane; wdrożone selektywnie poza UE; badania bezpieczeństwa wciąż wykazują luki</td></tr></tbody></table>
 <hr>
 <h2 id="tldr">TL;DR</h2>
 <p><strong>20 maja 2024</strong> Microsoft na konferencji <strong>Build 2024</strong> ogłosił <strong>“Windows Recall”</strong> — funkcję AI dla nowych komputerów <strong>Copilot+ PC</strong>, która <strong>co kilka sekund robi screenshot pulpitu użytkownika</strong>, OCR-uje tekst i tworzy <strong>przeszukiwalną bazę danych wszystkiego, co zobaczyłeś/napisałeś na komputerze</strong>. Reklama Microsoftu: <em>“remember anything you’ve ever seen”</em>. Premiera miała nastąpić <strong>18 czerwca 2024</strong> na nowych Copilot+ PC, <strong>domyślnie włączona</strong>.</p>
 <p>Reakcja cybersec była <strong>natychmiastowa i zabójcza</strong>. <strong>Kevin Beaumont</strong> (DoublePulsar) jako pierwszy opublikował szczegółową analizę na podstawie preview builds: (1) baza Recall była przechowywana w <strong>plaintext SQLite</strong> (niezaszyfrowanym), (2) wszystkie screenshoty, w tym <strong>hasła, numery kart kredytowych, poufne e-maile</strong>, były dostępne dla <strong>każdej aplikacji</strong> działającej na koncie użytkownika, (3) <strong>infostealery</strong> (Agent Tesla, Redline, Lumma) mogły w ciągu sekund ekstrahować <strong>całą historię aktywności użytkownika</strong>, (4) BitLocker nie pomaga przeciwko lokalnym złośliwym aplikacjom. Beaumont nazwał to <strong>“potential security disaster”</strong>.</p>
-<p><strong>7 czerwca 2024</strong> — badacz <strong>Alexander Hagenah</strong> opublikował narzędzie <strong>TotalRecall</strong> na GitHub, demonstrujące jak w kilka sekund eksfiltrować dane z bazy Recall. <strong>13 czerwca 2024</strong> — Microsoft <strong>wstrzymał</strong> premiery. <strong>21 czerwca 2024</strong> — ogłoszenie, że Recall będzie <strong>opt-in</strong>, wymagać <strong>Windows Hello</strong> authentication i <strong>encrypted database</strong>. Sygnalizacji z tego czasu: <strong>Signal</strong> (komunikator) wprowadził <strong>Screen Security</strong> by blokować Recall od robienia screenshotów Signal. Brave, AdGuard dołączyli w 2025.</p>
+<p><strong>7 czerwca 2024</strong> — badacz <strong>Alexander Hagenah</strong> opublikował narzędzie <strong>TotalRecall</strong> na GitHub, demonstrujące jak w kilka sekund eksfiltrować dane z bazy Recall. <strong>13 czerwca 2024</strong> — Microsoft <strong>wstrzymał</strong> premiery. <strong>21 czerwca 2024</strong> — ogłoszenie, że Recall będzie <strong>dobrowolne włączenie</strong>, wymagać <strong>Windows Hello</strong> authentication i <strong>encrypted database</strong>. Sygnalizacji z tego czasu: <strong>Signal</strong> (komunikator) wprowadził <strong>Screen Security</strong> by blokować Recall od robienia screenshotów Signal. Brave, AdGuard dołączyli w 2025.</p>
 <p><strong>W 2025</strong> Microsoft zaczął <strong>ograniczony rollout</strong> dla Windows Insiders, później dla Copilot+ PC (bez EOG). Wymagania:</p>
 <ul>
 <li>Copilot+ PC z NPU ≥ 40 TOPS</li>
 <li>16 GB RAM, 256 GB storage</li>
 <li><strong>Windows Hello biometric</strong> do dostępu</li>
 <li><strong>Virtualization-Based Security + Trusted Platform Module</strong></li>
-<li><strong>Opt-in</strong> dwukrotnie (przy setup + first run)</li>
+<li><strong>Dobrowolne włączenie</strong> dwukrotnie (przy setup + first run)</li>
 <li><strong>Pause z system tray</strong></li>
 <li>Wykluczanie aplikacji/stron (blokowanie)</li>
 </ul>
@@ -100,7 +100,7 @@ Animacja statyczna (SVG + CSS). Bez dźwięku. Bez narzędzi śledzących.
 <li><strong>3 czerwca 2024</strong> — Signal (messenger) ogłasza <strong>Screen Security</strong> w Signal Desktop — blokuje Recall od robienia zrzutów Signal chats.</li>
 <li><strong>7 czerwca 2024</strong> — <strong>Alexander Hagenah</strong> publikuje <strong>TotalRecall</strong> na GitHub. Narzędzie w kilka sekund ekstrahuje bazę Recall.</li>
 <li><strong>13 czerwca 2024</strong> — Microsoft <strong>wstrzymuje premiery</strong> Recall. Komunikat: funkcja będzie Windows Insider-only.</li>
-<li><strong>21 czerwca 2024</strong> — Microsoft ogłasza nowy model: <strong>opt-in</strong>, <strong>Windows Hello</strong>, <strong>encrypted database</strong>.</li>
+<li><strong>21 czerwca 2024</strong> — Microsoft ogłasza nowy model: <strong>dobrowolne włączenie</strong>, <strong>Windows Hello</strong>, <strong>encrypted database</strong>.</li>
 <li><strong>Wrzesień 2024</strong> — Microsoft rozpoczyna testy Windows Insider Preview.</li>
 <li><strong>Listopad 2024</strong> — <strong>dalsze opóźnienie</strong> ze względu na odkryte luki.</li>
 <li><strong>Grudzień 2024</strong> — Recall w Windows Insider Preview, ale tylko dla ograniczonej grupy.</li>
@@ -174,7 +174,7 @@ Animacja statyczna (SVG + CSS). Bez dźwięku. Bez narzędzi śledzących.
 <li>Porównanie do <strong>Xbox One E3 launch</strong> jako PR disaster</li>
 </ul>
 <h3 id="alexander-hagenah--autor-totalrecall">Alexander Hagenah — autor TotalRecall</h3>
-<p><strong>Alexander Hagenah</strong> (pseudonim <strong>xaitax</strong>) — europejski badacz cybersec. Jego narzędzie TotalRecall było kluczowym dowodem, że luki w Recall są <strong>trywialnie exploitable</strong>. Demonstracja podobna do tego, co zrobił Jonathan Mayer z Safari Workaround (B02) — dowód koncepcji uniemożliwiał Microsoftowi bronienie się przez “to tylko teoretyczne”.</p>
+<p><strong>Alexander Hagenah</strong> (pseudonim <strong>xaitax</strong>) — europejski badacz cybersec. Jego narzędzie TotalRecall było kluczowym dowodem, że luki w Recall są <strong>trywialnie exploitable</strong>. Demonstracja podobna do tego, co zrobił Jonathan Mayer z Safari Obejście (B02) — dowód koncepcji uniemożliwiał Microsoftowi bronienie się przez “to tylko teoretyczne”.</p>
 <h3 id="uk-ico">UK ICO</h3>
 <p>UK Information Commissioner’s Office — John Edwards (Commissioner) — zwrócił się do Microsoft 30 maja 2024 z pytaniami. Publiczne oświadczenie: <em>“We are making enquiries with Microsoft to understand the safeguards in place to protect user privacy.”</em></p>
 <h3 id="społeczność-cybersec">Społeczność cybersec</h3>
@@ -223,7 +223,7 @@ Animacja statyczna (SVG + CSS). Bez dźwięku. Bez narzędzi śledzących.
 <p><strong>Faza 2: wstrzymanie (13 czerwca 2024).</strong> Pavan Davuluri, blog post: <em>“We are adjusting the release model for Recall to leverage the expertise of the Windows Insider community to ensure the experience meets our high standards for quality and security.”</em> Tłumaczenie: mieliśmy błąd, zawiesili wdrożenie.</p>
 <p><strong>Faza 3: redesign (lato 2024).</strong> Zmiany:</p>
 <ul>
-<li>Opt-in (dwukrotne) zamiast domyślnie włączonej</li>
+<li>Dobrowolne włączenie (dwukrotne) zamiast domyślnie włączonej</li>
 <li>Encrypted database</li>
 <li>Windows Hello requirement</li>
 <li>Wykluczanie aplikacji</li>
