@@ -1,10 +1,33 @@
 import { useEffect, useRef, useState } from 'react';
-import { TIMELINE_SCENES } from '../../data/timeline-scenes';
+import { TIMELINE_SCENES, type TimelineScene } from '../../data/timeline-scenes';
 
 const BASE_URL = import.meta.env.BASE_URL.replace(/\/$/, '');
 const makeUrl = (path: string) => `${BASE_URL}${path.startsWith('/') ? path : `/${path}`}`;
 
-export default function ScrollTimeline() {
+export interface ScrollTimelineLabels {
+  /** "Sprawy:" / "Cases:" */
+  casesLabel: string;
+  /** "Scena" / "Scene" */
+  sceneLabel: string;
+  /** Path prefix for case links: "/sprawy/" or "/en/cases/" */
+  casesHrefPrefix: string;
+}
+
+const DEFAULT_LABELS: ScrollTimelineLabels = {
+  casesLabel: 'Sprawy:',
+  sceneLabel: 'Scena',
+  casesHrefPrefix: '/sprawy/',
+};
+
+interface Props {
+  scenes?: TimelineScene[];
+  labels?: ScrollTimelineLabels;
+}
+
+export default function ScrollTimeline({
+  scenes = TIMELINE_SCENES,
+  labels = DEFAULT_LABELS,
+}: Props = {}) {
   const [activeScene, setActiveScene] = useState<number>(0);
   const scrollerRef = useRef<HTMLDivElement>(null);
 
@@ -35,7 +58,7 @@ export default function ScrollTimeline() {
     };
   }, []);
 
-  const current = TIMELINE_SCENES[activeScene];
+  const current = scenes[activeScene];
 
   return (
     <div
@@ -49,7 +72,7 @@ export default function ScrollTimeline() {
     >
       {/* Left column: scrolling text */}
       <div>
-        {TIMELINE_SCENES.map((scene, i) => (
+        {scenes.map((scene, i) => (
           <section
             key={scene.id}
             className="timeline-step"
@@ -107,11 +130,11 @@ export default function ScrollTimeline() {
                   margin: '24px 0 0',
                 }}
               >
-                Sprawy:{' '}
+                {labels.casesLabel}{' '}
                 {scene.caseIds.map((id, idx) => (
                   <span key={id}>
                     <a
-                      href={makeUrl(`/sprawy/?filter=${id}`)}
+                      href={makeUrl(`${labels.casesHrefPrefix}?filter=${id}`)}
                       style={{ color: 'var(--accent)', textDecoration: 'none' }}
                     >
                       {id}
@@ -152,7 +175,7 @@ export default function ScrollTimeline() {
               margin: '0 0 4px',
             }}
           >
-            Scena {activeScene + 1} / {TIMELINE_SCENES.length}
+            {labels.sceneLabel} {activeScene + 1} / {scenes.length}
           </p>
           <p
             style={{
@@ -211,7 +234,7 @@ export default function ScrollTimeline() {
             gap: '6px',
           }}
         >
-          {TIMELINE_SCENES.map((_, idx) => (
+          {scenes.map((_, idx) => (
             <div
               key={idx}
               style={{

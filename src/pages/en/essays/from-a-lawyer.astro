@@ -1,0 +1,100 @@
+---
+import TextEn from '../../../layouts/TextEn.astro';
+---
+
+<TextEn
+  kicker="From a lawyer"
+  title="The GDPR exists. Enforcing the GDPR — that's another matter."
+  lede="The architecture of European data protection law, its structural limits, and why the privacy of 450 million Europeans is decided by a regulator in Dublin."
+  byline="A reference text commissioned from an IT and data protection law practitioner"
+  readingTime="11 min read"
+  description="A legal analysis: the structure of the GDPR, the one-stop-shop mechanism, the Dublin bottleneck, the DSA, the DMA, the economics of fines, and the lobbying asymmetry."
+  prev={{ href: '/en/essays/from-authors/', label: 'These are not mishaps. This is calculation.' }}
+  next={{ href: '/en/essays/from-an-organization/', label: 'This is not a debate about privacy. It is a debate about power.' }}
+>
+  <p>
+    The General Data Protection Regulation, which entered into force on May 25, 2018, was and still is the most ambitious privacy law on the planet. It defines personal data broadly. It requires consent to be unambiguous and knowingly given. It obliges controllers to identify a legal basis for processing, to document it, and to inform users of it. It provides for fines of up to four percent of global annual revenue. It creates rights that the European citizen did not have before: the right of access, the right to be forgotten, the right to data portability, the right to object to automated decision-making.
+  </p>
+
+  <p>
+    If you are reading this database and have the impression that something here does not add up — that the law is somehow in force and yet not in force, that fines exist but are symbolic, that judgments are handed down but the companies are unchanged — you are not mistaken. The mechanism that produces this outcome is not a secret. It is written into the text of the GDPR itself.
+  </p>
+
+  <h2>The one-stop shop, or why everything stops in Dublin</h2>
+
+  <p>
+    Article 56 of the GDPR introduces the "one-stop-shop" mechanism. For multinational companies with establishments in several Member States, the lead supervisory authority is the authority of the state in which the company has its "main establishment." For Meta, Google, TikTok, X, Apple, Microsoft — meaning the vast majority of the companies covered in this database — the main establishment is Ireland, owing to the tax policy that Dublin has not hidden for years. In practice, this means that complaints from Polish, German, French, and Italian users land at the Irish Data Protection Commission, a body of 230 staff in a state whose regulatory budget is a fraction of Meta's legal budget.
+  </p>
+
+  <p>
+    The consequences are measurable. The 2018 noyb complaint filed by Max Schrems against Facebook — lodged on the first day the GDPR took effect — received its first decision in 2023. Five years. The first major fine imposed on Meta for data transfers to the United States, the basis of Schrems II, was handed down in May 2023 and came to 1.2 billion euros. It is a record. And at the same time, as we calculated in the introduction, it amounts to 0.7 percent of Meta's annual revenue. The salary of the CEO of the largest platform company is of comparable magnitude.
+  </p>
+
+  <p>
+    Alternative supervisory authorities — France's CNIL, Spain's AEPD, Germany's BfDI — have tried to work around the Irish bottleneck by invoking Article 66 of the GDPR (the urgency procedure). Sometimes successfully: the 390 million euro fine imposed on Meta in January 2023 by the Irish DPC was issued after an intervention by the European Data Protection Board, which "instructed" Ireland to render a decision. The very fact that one national regulator is disciplined by another points to a systemic dysfunction.
+  </p>
+
+  <h2>Fines as a cost of doing business</h2>
+
+  <p>
+    The economic logic of GDPR fines is straightforward: a fine is supposed to be dissuasive, proportionate, and effective (Article 83(1)). The question of when a fine ceases to be dissuasive is not a legal question — it is an accounting question. The economists Graham Allen and Fabio Bassan, in work published between 2021 and 2023, compared the aggregate of all GDPR fines imposed on the five largest platform companies with their annual revenue over the same period. The answer: less than one percent. In some years, less than half a percent. For a company with a gross margin of 80 percent, a fine absorbing 0.7 percent of revenue is not even comparable to a seasonal dip in advertising income.
+  </p>
+
+  <p>
+    The market understands this. Meta's share price did not fall after the announcement of the 1.2 billion euro fine. Meta's share price rose after the announcement of the 5 billion dollar FTC fine. Investors respond to smaller-than-expected fines not as a deterrent signal but as the clearing of uncertainty. A fine that will not hurt is good news.
+  </p>
+
+  <h2>The DSA and the DMA — new tools, old barriers</h2>
+
+  <p>
+    The Digital Services Act (DSA) and the Digital Markets Act (DMA) — both adopted in 2022 and phased into force from 2023 — were designed to bypass the Irish bottleneck. They are enforced directly by the European Commission rather than by national regulators. Fines can reach six percent of global revenue under the DSA and ten percent under the DMA. The Commission has already opened proceedings: against X for disinformation (December 2023), against Meta over algorithms that foster addictive behavior in children (May 2024), and against TikTok Lite for "addictive design" (April 2024, suspended after TikTok withdrew the service).
+  </p>
+
+  <p>
+    The potential of these instruments is significant, but potential is not the same as practice. The DSA and the DMA are young; there is no CJEU case law to sharpen the key definitions: "systemic risk," "dark pattern," "very large online platform." Each of the pending cases — and more than ten are already queued in the first year — will set a precedent. In the meantime, companies are spending hundreds of millions of euros a year on compliance teams, preparing a "play for time" strategy: challenge, appeal, negotiate a settlement, dilute the decisions.
+  </p>
+
+  <h2>Class actions: where they don't exist</h2>
+
+  <p>
+    In the United States, the typical civic response to a discovered privacy violation is a class action. Law firms make a living from the model, and federal case law is well developed. Settlements are measured in billions: 725 million dollars for those harmed in the Cambridge Analytica case, 650 million dollars for Facebook's violation of the Illinois Biometric Information Privacy Act (BIPA) in the facial-recognition matter, 85 million dollars for TikTok users over the exploitation of minors' data.
+  </p>
+
+  <p>
+    In the European Union, there is no analogous mechanism. Directive 2020/1828 on representative actions entered into force in 2023, but it is being implemented unevenly across Member States. The 2023 Polish transposing statute confines the right to bring such actions to a narrow circle of authorized organizations. In practice, this means that the average Polish Facebook user whose data leaked in one of the scandals documented in this database has no path to compensation that is not economically or procedurally out of reach.
+  </p>
+
+  <h2>Poland: UODO, Pegasus, a capacity gap</h2>
+
+  <p>
+    The Personal Data Protection Office (UODO), the Polish supervisory authority, imposed fines totaling several tens of millions of zlotys between 2018 and 2024. For comparison: Meta's legal department in Dublin alone employs more people than work in the entire UODO in Warsaw. UODO's annual budget runs into the tens of millions of zlotys; Meta's quarterly marketing budget in Poland is, in all likelihood, higher. The asymmetry is systemic and will not dissolve without a political decision.
+  </p>
+
+  <p>
+    A separate matter is Pegasus and state surveillance, which falls outside this database, because the database concerns Big Tech, not the state. But the analytical framework is analogous: the law exists, procedures exist, even constitutional provisions on the freedom of communication exist — none of which prevents the surveillance tools from being used outside the law, because the oversight of the overseers is not effective. A Polish citizen whose data is commercially exploited by Meta and simultaneously surveilled operationally by the security services has constitutional rights in both instances — and in both instances those rights are, in practice, dead letters unless active enforcement stands behind them.
+  </p>
+
+  <h2>Who writes the law</h2>
+
+  <p>
+    A 2023 Transparency International EU report indicates that Big Tech spent more than 100 million euros on lobbying in Brussels in 2022. Meta: 8 million. Google: 6 million. Microsoft: 6 million. Amazon: 3 million. For comparison: the combined budget of the ten largest European digital-rights organizations (including EDRi, noyb, and Panoptykon) is little more than 10 million euros a year. The ratio is ten to one in favor of corporate lobbying.
+  </p>
+
+  <p>
+    This does not mean that lobbying automatically wins. The DSA and the DMA passed over the intense opposition of Big Tech. The AI Act, adopted in 2024, contains facial-recognition provisions that the companies contested sharply. Civil society in Europe has more leverage than in the United States, where the "revolving door" between agency and industry (the commissioner becomes a consultant, the consultant becomes a commissioner) turns more smoothly. But the asymmetry is real: every hour of a Meta lobbyist's work is paid from a budget that is out of reach for the best lawyer at Panoptykon.
+  </p>
+
+  <h2>What follows from this</h2>
+
+  <p>
+    To the legal practitioner who reaches the end of this text, I am saying nothing they do not already know. To the journalist, the student, the citizen — I may be saying something that sounds like cynicism. It is not cynicism; it is a diagnosis: European data-protection law is well drafted. The problem lies in the architecture of its enforcement, in the asymmetry of resources, in the economics of fines, and in the political construction that allows Ireland to serve as the gateway to 450 million consumers.
+  </p>
+
+  <p>
+    What would change the picture: moving oversight of very large platforms directly to the European Commission (partially accomplished by the DSA); introducing minimum fines keyed to global revenue (instead of tied to the "gravity" of the violation); making class actions easier in every Member State; funding national regulators in proportion to the industry they supervise; curbing the revolving door between agencies and industry; financing digital-rights organizations at a level comparable to corporate lobbying.
+  </p>
+
+  <p>
+    Each of these proposals is a political decision, not a legal one. The lawyer can argue, litigate, appeal — but the system changes where a political decision is made. That is why the last word in this series belongs to the citizen, not the lawyer. The lawyer has said what the lawyer could. Now it is the user's turn.
+  </p>
+</TextEn>

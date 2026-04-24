@@ -4,32 +4,32 @@ import { url } from '../../../utils/url';
 
 const infographics = [
   {
-    slug: 'kara-vs-przychod',
+    slug: 'fine-vs-revenue',
     title: 'Fine vs. revenue',
     description: 'Record GDPR fine €1.2B = 0.7% of Meta\'s annual revenue. The market reacted: stock rose 1.8% the week after.',
   },
   {
-    slug: 'chronologia',
+    slug: 'chronology',
     title: 'Chronology of 33 cases',
     description: 'Each dot = one case. Fifteen years, one pattern — from Google Street View Wi-Spy (2010) to Local Mess (2025).',
   },
   {
-    slug: 'top-kar',
+    slug: 'top-fines',
     title: 'Top 5 GDPR fines',
     description: 'All five largest GDPR fines were issued by the Irish DPC. Combined: €2.775 billion.',
   },
   {
-    slug: 'firmy',
+    slug: 'firms',
     title: 'Six firms — 27 cases',
     description: 'Meta, Google, TikTok, Uber, Apple, Amazon. 82% of the Matryca database relates to these six entities.',
   },
   {
-    slug: 'sygnalisci',
+    slug: 'whistleblowers',
     title: 'Who revealed it?',
     description: 'Six whistleblowers and journalists without whom the biggest disclosures would not have happened.',
   },
   {
-    slug: 'geografia',
+    slug: 'geography',
     title: 'Geography of enforcement',
     description: 'Dublin and Washington concentrate most regulatory decisions. The rest of Europe is catching up — or not.',
   },
@@ -51,19 +51,17 @@ const infographics = [
           Vector format (scales to any size), 16:9, using the portal's typography.
         </p>
         <p class="infografiki__note">
-          Labels on the SVGs themselves are currently in Polish. English labels
-          are planned for Phase 4. When citing, please credit:
-          <em>Big Tech Files (Matryca)</em>. A PNG can be generated from any
-          SVG converter (Squoosh, CloudConvert).
+          When citing, please credit: <em>Big Tech Files (Matryca)</em>.
+          A PNG can be generated from any SVG converter (Squoosh, CloudConvert).
         </p>
       </header>
 
       <ul class="infografiki__grid">
         {infographics.map((i) => (
           <li class="infografiki__item">
-            <a href={url(`/infografiki/${i.slug}.svg`)} target="_blank" class="infografiki__link">
+            <a href={url(`/infografiki-en/${i.slug}.svg`)} target="_blank" class="infografiki__link">
               <div class="infografiki__preview">
-                <img src={url(`/infografiki/${i.slug}.svg`)} alt={i.title} loading="lazy" />
+                <img src={url(`/infografiki-en/${i.slug}.svg`)} alt={i.title} loading="lazy" />
               </div>
               <div class="infografiki__body">
                 <p class="infografiki__title">{i.title}</p>

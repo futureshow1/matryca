@@ -8,28 +8,24 @@ const essays = [
     title: 'From the authors',
     length: '~2,400 words',
     teaser: 'Why a reference portal, why in Polish first, why now. A database that documents privacy violations cannot itself violate privacy. The design choices behind Matryca — no analytics, no cookies, no external trackers — are part of the method, not a decoration.',
-    polishSlug: 'od-autorow',
   },
   {
     slug: 'from-a-lawyer',
     title: 'From a lawyer',
     length: '~3,100 words',
-    teaser: 'GDPR is not a paper. The legal architecture behind enforcement — why Irish DPC is the choke point, why Schrems I and Schrems II are structurally different, how "dark patterns" became a recognised legal category. A practitioner\'s view of what the case-base shows about European administrative law.',
-    polishSlug: 'od-prawnika',
+    teaser: 'GDPR is not a paper. The legal architecture behind enforcement — why the Irish DPC is the choke point, why Schrems I and Schrems II are structurally different, how "dark patterns" became a recognised legal category. A practitioner view of what the case-base shows about European administrative law.',
   },
   {
     slug: 'from-an-organization',
     title: 'From an organization',
     length: '~2,800 words',
-    teaser: 'Written by Panoptykon Foundation — Poland\'s principal civil-liberties organisation focused on digital rights. Why individual cases require organisational response. How NOYB, EDRi, EFF, Panoptykon split the enforcement burden. What a single citizen realistically can and cannot do.',
-    polishSlug: 'od-organizacji',
+    teaser: 'Written from the perspective of the Panoptykon Foundation — Poland\'s principal civil-liberties organisation focused on digital rights. Why individual cases require organisational response. How NOYB, EDRi, EFF, Panoptykon split the enforcement burden. What a single citizen realistically can and cannot do.',
   },
   {
     slug: 'from-a-citizen',
     title: 'From a citizen',
     length: '~2,200 words',
-    teaser: 'From the user side. How to read a case card without becoming despairing or cynical. What concretely can you change in your week. What is worth changing and what is performative. Written as a companion to the "citizen conclusions" section of each case card.',
-    polishSlug: 'od-obywatelki',
+    teaser: 'From the user side. How to read a case card without becoming despairing or cynical. What concretely can you change in your week. What is worth changing and what is performative. Written as a companion to the "conclusions for citizens" section of each case card.',
   },
 ];
 ---
@@ -45,25 +41,21 @@ const essays = [
         <h1>Essays</h1>
         <p class="editorial__lede">
           The case cards are documentary. The essays are interpretive. Four
-          voices — the project authors, a lawyer, an organisation working on
+          voices — the project authors, a lawyer, an organization working on
           digital rights, and a private citizen — each read the same 33-case
           database from a different angle.
-        </p>
-        <p class="editorial__note">
-          Full essays (~10,500 words total) are currently available in Polish
-          only. English translations planned for Phase 4. Teasers below.
         </p>
       </header>
 
       <ul class="essay-list">
         {essays.map((e) => (
           <li class="essay-list__item">
-            <p class="essay-list__length">{e.length}</p>
-            <h2 class="essay-list__title">{e.title}</h2>
-            <p class="essay-list__teaser">{e.teaser}</p>
-            <p class="essay-list__link">
-              <a href={url(`/teksty/${e.polishSlug}/`)}>Read in Polish →</a>
-            </p>
+            <a href={url(`/en/essays/${e.slug}/`)} class="essay-list__link">
+              <p class="essay-list__length">{e.length}</p>
+              <h2 class="essay-list__title">{e.title}</h2>
+              <p class="essay-list__teaser">{e.teaser}</p>
+              <p class="essay-list__action meta">Read →</p>
+            </a>
           </li>
         ))}
       </ul>
@@ -92,15 +84,6 @@ const essays = [
     font-size: 17px;
     line-height: 1.55;
     color: var(--text-secondary);
-    margin-bottom: var(--space-3);
-  }
-
-  .editorial__note {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--text-tertiary);
-    padding-top: var(--space-2);
-    border-top: 0.5px solid var(--border);
     margin: 0;
   }
 
@@ -111,12 +94,24 @@ const essays = [
   }
 
   .essay-list__item {
-    padding: var(--space-6) 0;
+    max-width: 820px;
     border-top: 0.5px solid var(--border);
-    max-width: 760px;
 
     &:last-child {
       border-bottom: 0.5px solid var(--border);
+    }
+  }
+
+  .essay-list__link {
+    display: block;
+    padding: var(--space-6) 0;
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+
+    &:hover {
+      .essay-list__title { color: var(--accent); }
+      .essay-list__action { color: var(--accent); }
     }
   }
 
@@ -135,6 +130,7 @@ const essays = [
     font-weight: 500;
     line-height: 1.2;
     margin: 0 0 var(--space-3);
+    transition: color var(--transition-fast);
   }
 
   .essay-list__teaser {
@@ -142,20 +138,13 @@ const essays = [
     line-height: 1.65;
     color: var(--text-primary);
     margin: 0 0 var(--space-3);
+    max-width: 720px;
   }
 
-  .essay-list__link {
+  .essay-list__action {
+    font-size: 11px;
+    color: var(--text-tertiary);
     margin: 0;
-
-    a {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color var(--transition-fast);
-
-      &:hover { border-bottom-color: var(--accent); }
-    }
+    transition: color var(--transition-fast);
   }
 </style>

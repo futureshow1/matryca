@@ -1,0 +1,367 @@
+/**
+ * Scrollytelling timeline "When — year by year, case by case".
+ *
+ * Narrative structure: year + introduction + framing + turn +
+ * 2-3 cases from the period + closing reflection.
+ *
+ * v2 — 16 scenes (2007, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018,
+ * 2019, 2020, 2021, 2022, 2023, 2024, 2025).
+ * ~12,000 words of narration. Tone: ProPublica + Kurzgesagt, in English.
+ */
+
+export interface TimelineScene {
+  id: string;
+  year: string;
+  kicker: string;
+  headline: string;
+  bodyParagraphs: string[];
+  /** IDs of cards from the database that this scene references */
+  caseIds: string[];
+  /** Short list of key figures / names to display alongside the text */
+  highlights?: Array<{ value: string; label: string }>;
+}
+
+export const TIMELINE_SCENES: TimelineScene[] = [
+  {
+    id: 'scene-2007',
+    year: '2007',
+    kicker: 'Prologue',
+    headline: 'Facebook Beacon — the first crack in the facade.',
+    bodyParagraphs: [
+      'At the end of 2007, Facebook had 58 million users. For comparison: at that same moment, the entire world counted 1.3 billion people with access to the internet. These were the last years when Facebook could still be spoken of as something resembling a college experiment. The product was simple: friends, photos, a wall of messages. The business model — not yet fully worked out.',
+      `On November 6, 2007, Mark Zuckerberg announced Beacon — a system meant to transform online advertising. The idea was simple: whenever a Facebook user bought something at a partner store (Overstock, Fandango, Blockbuster, Zappos — 44 companies in all), the information was automatically pushed to the user's wall. "Sean just bought Braveheart at Blockbuster" — visible to all of his friends. Without asking.`,
+      'Three weeks later, a storm broke. A woman in the United States was planning a surprise for her husband — she bought a wedding ring. Beacon published the purchase on Facebook. The surprise was over before it began. Another user learned through Beacon that a friend had made an unwanted visit to the doctor. Complaints flooded the help center.',
+      'MoveOn.org — an activist organization — launched a petition. Fifty thousand signatures in five days. CNET published a technical analysis: Beacon was tracking Facebook users on partner sites even when they were logged out. The data transmitted to Facebook contained unique identifiers — they could be linked to a specific account, even if the user had explicitly declined to publish the purchase.',
+      `On December 5, 2007, Mark Zuckerberg issued an apology: "We've made a lot of mistakes." The default setting shifted from opt-out to opt-in. In September 2009, after three years of legal battles, the Lane v. Facebook settlement concluded at $9.5 million — part of it flowing into a fund for online privacy. Beacon was shut down.`,
+      'But the real lesson of 2007 was something different. Facebook had done something users disliked. Users protested. Facebook backed down. Nobody went to prison, nobody lost a job, the stock price trembled for a second and returned to its place. It was a test. And the result of the test was: you can do this kind of thing, and the consequences are manageable. Over the following fifteen years the company would return to the same pattern many times over — each time going further, each time paying a less painful price.',
+    ],
+    caseIds: [],
+    highlights: [
+      { value: '44 companies', label: 'Beacon partners' },
+      { value: '50k', label: 'MoveOn petition signatures' },
+      { value: '$9.5 mn', label: 'Lane v. Facebook settlement' },
+    ],
+  },
+  {
+    id: 'scene-2010',
+    year: '2010',
+    kicker: 'Regulator',
+    headline: `A Hamburg official says: "Show us what you're really collecting."`,
+    bodyParagraphs: [
+      'Johannes Caspar is a lawyer. Not an engineer, not an activist, not a journalist. In 2010 he headed the Hamburg data protection authority — one of sixteen German regional bodies responsible for enforcing privacy law. The budget of his office was a fraction of what Google spent on lawyers in a single quarter. The team: a dozen or so people.',
+      'In 2009 Caspar began taking an interest in Street View. Google cars were driving through Hamburg streets photographing building facades. Beneath the camera on the roof an antenna was visible. Caspar asked the company: what is the antenna for? Google replied: to collect Wi-Fi network names. It allowed better location services when a user had no GPS.',
+      'Caspar asked for technical documentation. Google stalled. Caspar asked a second time. Google stalled. A third time. In April 2010 Caspar issued a formal demand — the company was to hand over the raw data from its Hamburg drives, so that the authority could examine for itself what was actually being collected.',
+      `On May 14, 2010, Google published a statement on its corporate blog. Title: "WiFi data collection: An update." Content: Street View cars, for three years, across more than thirty countries, had been gathering not only network names but also fragments of traffic from unsecured networks. Passwords. Email fragments. URLs of visited pages. Names. This part was called "a mistake by a single engineer." Caspar would later call it "a system that no one stopped for three years."`,
+      'The case cascaded. FCC in the US — $25,000 in fines for obstructing the investigation (2012). The French CNIL — 100,000 euros (2011). The UK ICO — a request to reopen proceedings (2012). German states — various sums. American states — a multi-state settlement of $7 million (2013). In total, Google would pay roughly 10 million euros for WiSpy.',
+      'But the point of the case is not the amounts. The point is something else: a small regional regulator — from Hamburg, a port city in northern Germany, with an annual budget under 3 million euros — forced a global corporation to disclose a practice that had been known to it for years, and that it had actively concealed. Forced it because he did not let go. Three years. Three demands.',
+      'If one is looking for a date from which to count the era of real enforcement of European data law — it is May 14, 2010, in Hamburg. Caspar proved that it could be done. In the following decade others would follow his example: Helen Dixon in Dublin, Andrea Jelinek in Vienna, Pasquale Stanzione in Rome. And ultimately Max Schrems, who would take a hammer to the entire institutional architecture through the European Court of Justice.',
+    ],
+    caseIds: ['B01'],
+    highlights: [
+      { value: '30+', label: 'countries where data was collected' },
+      { value: '3 years', label: 'of concealed practice' },
+      { value: '~10 mn EUR', label: 'in total fines' },
+    ],
+  },
+  {
+    id: 'scene-2012',
+    year: '2012',
+    kicker: 'Workaround',
+    headline: 'Google bypasses a Safari safeguard. It costs $22.5 million.',
+    bodyParagraphs: [
+      `In early 2012 Jonathan Mayer, a PhD student at Stanford, was studying how advertising trackers work in web browsers. Safari — Apple's product, the default on iPhone and iPad — had for many years blocked third-party cookies. The setting worked out of the box — a user did not have to turn it on. It was one of Safari's flagship privacy features, publicly advertised.`,
+      `Mayer discovered that DoubleClick ads (that is, Google) were working despite the block. How? Google had found a workaround. An ad script submitted an invisible form to the browser. Safari interpreted this as "user interaction with the site" — and with interaction it allowed cookies. A trick. An elegant one. And entirely contrary to Safari's default setting.`,
+      `On February 17, 2012, The Wall Street Journal published a piece by Julia Angwin describing Mayer's discovery. Google removed the workaround within 24 hours. On the company blog, the explanation: "this was an unintended side effect of social features." A few months later the FTC announced the penalty: $22.5 million. The largest civil penalty in FTC history up to that moment.`,
+      `The same year brought another turning point. On April 9, 2012, Facebook announced the purchase of Instagram for one billion dollars. Instagram was a two-year-old company. It had 13 employees and 30 million users. It had no business model yet — ads would not appear until 2013. Mark Zuckerberg bought the company over a weekend, with a single email. The FTC would approve the transaction. Eight years later the same FTC would file an antitrust lawsuit: the purchase of Instagram (and WhatsApp in 2014) had been, in its view, a "copy-acquire-kill" strategy toward competitors.`,
+      `2012 was also the year Charles Duhigg published his New York Times Magazine piece about Target — the American hypermarket chain. Target used purchase analytics to predict which customers were pregnant. When a woman bought unscented lotions, magnesium supplements, and cotton balls — the algorithm flagged her as likely pregnant. The company sent her ads for baby products. A well-known case: the father of a teenager in Minneapolis learned of his daughter's pregnancy from a Target catalog. The daughter had not yet told him.`,
+      'A shared pattern: in 2012 the algorithm knew things about the user that the user had not disclosed. Safari thought it was defending its cookies — and Google was walking around it. The Target customer thought she was buying supplements — and Target was inferring a pregnancy. Instagram thought it was an independent company — and Facebook bought it to eliminate a competitive threat.',
+      `The term that would later take hold — "behavioral inference" — was born precisely in this year. Not the data we give. The data pulled out of us.`,
+    ],
+    caseIds: ['B02'],
+    highlights: [
+      { value: '$22.5 mn', label: 'FTC fine for Google' },
+      { value: '$1 bn', label: 'price of Instagram' },
+      { value: '13', label: 'Instagram employees at the time of sale' },
+    ],
+  },
+  {
+    id: 'scene-2013',
+    year: '2013',
+    kicker: 'Disclosure',
+    headline: 'Edward Snowden hands 1.5 million documents to journalists.',
+    bodyParagraphs: [
+      `On June 5, 2013, The Guardian published Glenn Greenwald's piece: "NSA collecting phone records of millions of Verizon customers daily." Anonymous source. The next day — a second article. The Washington Post published in parallel. The documents had names: PRISM. The program was called "Special Source Operations."`,
+      'On June 9, 2013, the source went public. Edward Snowden, 29, an NSA contractor from Booz Allen Hamilton. He recorded an interview from a hotel room in Hong Kong. He spoke calmly. He knew he would not be going home.',
+      `PRISM was a program in which the NSA had direct access to the data of the nine largest American technology companies: Microsoft, Yahoo, Google, Facebook, Apple, Skype, YouTube, AOL, and PalTalk. Emails. Photos. Video calls. Metadata. The companies denied "direct access" — but confirmed that they complied with FISA court orders. A dispute about words. The data collection — the same.`,
+      'The European reaction was immediate. The European Commission revived work on GDPR (a draft from 2012 had stalled in consultations). The European Parliament organized hearings. Austrian law student Maximilian Schrems filed a complaint with the Irish DPC against Facebook: the transfer of his data to the United States, where it was subject to PRISM, violated European law. The case would make its way to the European Court of Justice.',
+      `In the US the reaction was mixed. Obama defended the program. Congress amended some provisions (the USA Freedom Act — 2015). But the fundamental surveillance model remained. Technology companies began rolling out end-to-end encryption — iMessage (already in 2011), WhatsApp (globally in 2016), Signal (from the start). It was, as Bruce Schneier put it, "a defense against your own government."`,
+      `In October 2013 The Washington Post published the MUSCULAR slides — the NSA was intercepting traffic between Google and Yahoo data centers in real time, without the companies' knowledge. Google reacted: by the end of 2014 it had encrypted all traffic between its data centers. Yahoo — by 2015.`,
+      'Not all the effects of Snowden are measurable. But one is. From 2013 onward European data law stopped being treated as a formality. Schrems would go further — striking down Safe Harbor in 2015 (Schrems I) and striking down the Privacy Shield in 2020 (Schrems II). In the background would always be the same argument: as long as American intelligence services have access to European data, European data protection law is a paper law.',
+      'Edward Snowden has lived in Moscow since 2013. He lives in political asylum. In 2022 he received Russian citizenship. He is a controversial figure — a hero for some, a traitor for others. But the documents he disclosed are today source material in hundreds of court decisions on both sides of the Atlantic.',
+    ],
+    caseIds: [],
+    highlights: [
+      { value: '1.5 mn', label: 'documents disclosed by Snowden' },
+      { value: '9', label: 'companies in the PRISM program' },
+      { value: '2015, 2020', label: 'years in which Schrems demolished Safe Harbor and Privacy Shield' },
+    ],
+  },
+  {
+    id: 'scene-2014',
+    year: '2014',
+    kicker: 'Experiment',
+    headline: '689,000 people, without being asked for consent.',
+    bodyParagraphs: [
+      'For one week in January 2012, Facebook manipulated the news feed content of 689,003 users. Group A saw more sad posts — the algorithm promoted negatively toned content. Group B saw more positive ones. The tone of the texts that the test subjects themselves wrote after this exposure was measured — to see whether the sad became sadder, the cheerful even more enthusiastic.',
+      `The study appeared in June 2014 in the Proceedings of the National Academy of Sciences. Authors: Adam Kramer of Facebook, Jamie Guillory and Jeffrey Hancock of Cornell University. Title: "Experimental evidence of massive-scale emotional contagion through social networks." A short paper, four pages. The conclusions: emotions spread through a social network even without direct verbal contact. Manipulating the feed effectively alters a user's mood.`,
+      `None of the 689,000 people gave informed consent. There was no form, no notification, no opt-out. The legal basis was "acceptance of Facebook's Terms of Service" — a general clause stating that the company could use user data for "internal research." Cornell's Institutional Review Board — the body responsible for research ethics — ruled that since Facebook was doing this anyway, Cornell did not have to review the study.`,
+      `A media storm followed. Sheryl Sandberg, then COO of Facebook, apologized "for how the study was communicated." Not — for the study itself. PNAS issued an "editorial expression of concern" but did not retract the publication. The UK's ICO opened a proceeding that ended without penalties. In Germany — discussion, without legal consequences. The Electronic Frontier Foundation wrote that if this was not a breach of ethics, then nothing was.`,
+      'There were no formal penalties. But the conversation that began then — about whether and when platforms have the right to conduct psychological experiments on millions of users — continues to this day. In 2021 Frances Haugen would reveal internal Facebook research on the impact of Instagram on teenage girls\' mental wellbeing. It would turn out that the company had been conducting such studies continuously since 2012. For itself. Without consent.',
+      `2014 was the moment when technology ethicists realized a fundamental asymmetry. An academic researcher, to run a psychological experiment on 50 people, has to go through an ethics committee, a consent form, parental consent if the subject is under 18, and a follow-up audit. A technology company runs an experiment on 689,000 people and publishes the results in PNAS. Without consent, without a committee, without an audit. The asymmetry is indefensible — but it is a fact to this day.`,
+    ],
+    caseIds: ['A06'],
+    highlights: [
+      { value: '689,003', label: 'people without informed consent' },
+      { value: '1 week', label: 'of mood manipulation' },
+      { value: '0 fines', label: 'but a shift in the debate' },
+    ],
+  },
+  {
+    id: 'scene-2015',
+    year: '2015',
+    kicker: 'Precedent',
+    headline: 'Max Schrems strikes down Safe Harbor.',
+    bodyParagraphs: [
+      'Maximilian Schrems was 27 when, in 2013, he filed his first complaint with the Irish Data Protection Commission. He was a law student in Vienna. He was interested in what Facebook Ireland Ltd. — formally the European data controller — was doing with the information it transferred to its parent company in California. After the Snowden disclosures the answer seemed obvious: the data was landing in a zone to which the NSA had access.',
+      `The Irish DPC rejected the complaint. The reason: there was a "Safe Harbor" framework from 2000, which established that transferring data to the United States was compatible with European law, provided that the American company committed to "privacy principles." That was an administrative decision by the European Commission. It was not subject to review by national authorities.`,
+      `Schrems appealed to the Irish High Court. It referred a preliminary question to the Court of Justice of the European Union. The case was called "C-362/14 Schrems v. Data Protection Commissioner." The question: did the Commission's Safe Harbor decision, in light of the EU Charter of Fundamental Rights, bind national data protection authorities, if there was evidence that American law did not protect European data from mass surveillance?`,
+      `On October 6, 2015, the Court ruled. The decision was unanimous. Safe Harbor was invalid. American law — specifically FISA and PRISM — did not provide protection "essentially equivalent" to European protection. National data protection authorities had not only the right but the obligation to verify transfers, even where the Commission had issued a decision.`,
+      `The effect was enormous. Thousands of American companies — from Microsoft to the smallest app — had based their transfers on Safe Harbor. A new framework had to be written. Negotiations took half a year. The new framework — "Privacy Shield" — entered into force in July 2016. Schrems immediately filed another complaint. That complaint, after five years, would culminate in the "Schrems II" ruling (July 2020) — Privacy Shield would also be annulled.`,
+      `But 2015 is fundamental because it was then that a European tribunal for the first time said to technology companies: there is no "all taken care of by Brussels." If there is no protection in the US, there is no protection. Contracts will not help, certificates will not help. The transfer is a legal problem.`,
+      `In 2017 Max Schrems founded NOYB — the European Center for Digital Rights — an organization that would file complaint after complaint. By 2025 NOYB would have secured fines totaling more than 2 billion euros. One student, who wanted to know where his data was going.`,
+    ],
+    caseIds: [],
+    highlights: [
+      { value: 'C-362/14', label: 'case reference for Schrems I' },
+      { value: '10.6.2015', label: 'date Safe Harbor was invalidated' },
+      { value: '2 bn EUR+', label: 'cumulative fines won through NOYB to date' },
+    ],
+  },
+  {
+    id: 'scene-2016',
+    year: '2016',
+    kicker: 'Statute',
+    headline: 'GDPR is adopted. Big Tech has 24 months.',
+    bodyParagraphs: [
+      `On April 14, 2016, the European Parliament adopted the General Data Protection Regulation — GDPR. The text has 173 recitals, 99 articles, 88 pages. Work on it took four years. Industry lobbying filed, by political scientists' counts, roughly 4,000 proposed amendments. Many got through. The underlying philosophy — did not.`,
+      `Key provisions: consent must be "informed, unambiguous, specific, freely given." The legal basis for processing must be clear (six options in Article 6). Processing of children's data below 16 — only with parental consent. The right to data portability. The right to be forgotten. The obligation to report breaches within 72 hours. A Data Protection Officer audit for companies of a certain size.`,
+      'Most important: the fines. Up to 4 percent of global annual turnover, or 20 million euros — whichever is higher. For Meta, that is potentially 5 billion euros a year. For Google — more than 10 billion.',
+      `Entry into force: May 25, 2018. Companies had two years to prepare. What happened during those two years? Not much. Large companies reshuffled their consent forms. They added cookie banners. They moved a few people into a "data protection compliance team." Fundamental changes in product architecture — no.`,
+      `Meanwhile, in 2016 something else was happening. Donald Trump won the US presidential election. Out of it — only two years later — would come information about Cambridge Analytica, psychographic profiling, and Russian disinformation on Facebook. During the campaign itself, however, this was not yet a public topic. Meta remained "a platform." Regulators remained "technocrats."`,
+      `A third important date from 2016: July — the Brexit coalition won its referendum. The United Kingdom began its path out of the Union. As a result, in 2018 London would have to obtain a so-called "adequacy decision" from the European Commission — affirming that its law was compatible with GDPR. It would obtain it.`,
+      'GDPR is a rare thing: a European regulation that becomes a global standard. California adopted CCPA in 2018 — modeled on GDPR. Brazil — LGPD in 2020. India — DPDP in 2023. China has its own PIPL from 2021. Each of these laws has different details. Each draws its skeleton from GDPR.',
+      `In 2016 it was not yet clear that GDPR would work. Many people thought it would be "a dead letter." In 2023, after a record 1.2 billion euro fine against Meta, the doubts would disappear. In 2016 — the doubts were still on the front page.`,
+    ],
+    caseIds: [],
+    highlights: [
+      { value: '4%', label: 'of global revenue — maximum GDPR fine' },
+      { value: '173', label: 'recitals in the preamble' },
+      { value: '25.5.2018', label: 'entry-into-force date' },
+    ],
+  },
+  {
+    id: 'scene-2017',
+    year: '2017',
+    kicker: 'Pattern',
+    headline: 'Uber Greyball. Equifax. Companies deceive, data leaks.',
+    bodyParagraphs: [
+      `On March 3, 2017, The New York Times published Mike Isaac's piece: "How Uber Deceives the Authorities Worldwide." The text described "Greyball" — a tool Uber had used since 2014 to identify city officials, police officers, and inspectors, and serve them a dummy version of the app. Drivers did not come. The service could not be tested. Uber looked as if it were not operating in the city — while it was.`,
+      'Greyball used several signals: GPS location around police buildings, credit card data linked to a city, daily purchase patterns, numbers of cards associated with government agencies. In Portland, Oregon, it allowed Uber to operate illegally for six months in 2014 before authorities managed to gather evidence. In Paris, Boston, Philadelphia — likewise.',
+      `Something else had happened in the background. On February 19, 2017, Susan Fowler, a former Uber engineer, published a post on her blog titled "Reflecting on one very, very strange year at Uber." She described systemic sexism, sexual harassment, and HR cover-ups. The post went viral. In June 2017 Travis Kalanick — founder and CEO — was forced to step down. Five months later Uber disclosed that in 2016 a hacker had stolen the data of 57 million customers and drivers — and the company had quietly paid $100,000 to keep the matter buried.`,
+      'But 2017 was also Equifax. On September 7 the company — one of the three largest credit bureaus in the US — announced the breach of data belonging to 147 million Americans. Social Security numbers, dates of birth, addresses, driver license numbers, in some cases credit card numbers. The basic set needed for identity theft. Effectively every American adult.',
+      'The cause: an unpatched Apache Struts vulnerability. Equifax had had the patch since March, and had not installed it. The intrusion began in May and lasted through the summer. The company learned of it in July. It disclosed in September. Between learning of the breach and disclosing it, three board members sold shares worth $1.8 million.',
+      `Equifax paid a settlement in 2019 — $575 million (potentially up to $700 million). FTC, several states, CFPB. It was the largest data breach settlement in US history. But for customers — "lifetime credit monitoring" was offered. The cash amount: $125 per person. In reality the FTC paid out an average of $6.90 — the fund was exhausted.`,
+      'The common theme of 2017: companies deceive (Uber), or are incompetent (Equifax), but the consequences are spread over years, and the payouts to those harmed are symbolic. The model cements itself: risk is externalized (to the user), profit is internal (to the company).',
+    ],
+    caseIds: ['D05', 'D06'],
+    highlights: [
+      { value: '147 mn', label: 'Americans affected by the Equifax breach' },
+      { value: 'Greyball', label: 'tool to deceive authorities in 6+ countries' },
+      { value: '$6.90', label: 'average per-person payout in the settlement' },
+    ],
+  },
+  {
+    id: 'scene-2018',
+    year: '2018',
+    kicker: 'Eruption',
+    headline: 'Cambridge Analytica opens the public eye.',
+    bodyParagraphs: [
+      `In March 2018 The Observer and The New York Times published a series of articles. The authors: Carole Cadwalladr, Emma Graham-Harrison, Matthew Rosenberg, Nicholas Confessore. The source: Christopher Wylie, former director of research at Cambridge Analytica. Wylie was 28 years old, had pink hair, and was Canadian. The conversation in which he became a whistleblower was recorded in Cadwalladr's London apartment. Two hours. No camera — only a dictaphone.`,
+      `The structure of the case: Aleksandr Kogan, a psychologist at the University of Cambridge, in 2014 created an app called "thisisyourdigitallife" — ostensibly an academic personality quiz. 270,000 people took the test. The app, exploiting Facebook's API at the time, pulled in not only the data of the test takers but also of their friends. 87 million profiles. Kogan handed the data to Cambridge Analytica. CA used it for psychographic profiling — the OCEAN model (openness, conscientiousness, extraversion, agreeableness, neuroticism) — and for serving tailored political content in the 2016 Donald Trump campaign and in the Brexit campaign.`,
+      `Did it work? That is a separate debate. Some experts argue that Cambridge Analytica's psychographic profiling was more "marketing theater" than real technology. But the fact that the data of 87 million people wound up, without their consent, in the hands of a firm working for political campaigns — is undisputed.`,
+      `The reaction was immediate. #DeleteFacebook became a hashtag. Elon Musk deleted the SpaceX and Tesla pages. Brian Acton, co-founder of WhatsApp, tweeted: "It is time. #deletefacebook". Mark Zuckerberg issued an apology. Sheryl Sandberg — an apology. On April 11, 2018, Zuckerberg testified before the US Senate and House. Members of Congress asked fundamentals — "does Facebook track users after they log out?" (yes). Zuckerberg answered in velvet gloves.`,
+      'A year later, on July 24, 2019, the FTC announced the penalty: $5 billion. A record. On the same day the SEC issued $100 million for misleading investors about privacy practices. The market reacted: Meta shares rose 1.8 percent. Analysts calculated: $5 billion was a single quarter of the company\'s sales. Five billion dollars was less than the market had feared it would pay.',
+      `Cambridge Analytica collapsed as a firm — in May 2018 it filed for bankruptcy. But the method — psychographic profiling, personalized political content, electoral micro-targeting — continued with successors. In 2024, during the American campaign, the same thing was happening again. Only nobody was calling it "a scandal" anymore — they were calling it "political marketing."`,
+      `The most important effect of Cambridge Analytica: the case, for the first time, translated the abstract "personal data" into the concrete "democratic elections." A public that until 2018 had thought of privacy as "my emails" began to think of privacy as "my society." The shift is irreversible.`,
+    ],
+    caseIds: ['A02'],
+    highlights: [
+      { value: '87 mn', label: 'Facebook profiles' },
+      { value: '$5 bn', label: 'FTC fine (2019)' },
+      { value: '+1.8%', label: 'Meta share rise after the fine was announced' },
+    ],
+  },
+  {
+    id: 'scene-2019',
+    year: '2019',
+    kicker: 'Enforcement',
+    headline: 'FTC collects billions. Children on YouTube — finally a topic.',
+    bodyParagraphs: [
+      `In 2019 American regulators, for the first time, began imposing fines that sounded like "fines." Not $22 million, as with Google in 2012. Not $100,000, as CNIL in 2011. Billions.`,
+      `On July 24, 2019, the FTC announced the fine against Facebook for Cambridge Analytica: $5 billion. The same day the SEC — $100 million. Together $5.1 billion. The largest privacy fine in US history. But — as already noted — the market reacted with a share price rise. Analysts: "the price already paid in."`,
+      'On September 4, 2019, another fine. YouTube — a Google subsidiary — $170 million for violating COPPA (the Children\'s Online Privacy Protection Act). YouTube was collecting data on children under 13 (without parental consent) and serving them behavioral advertising. The FTC asked for $170 million; activists believed it should have been several billion. At a time when YouTube earns several billion dollars per quarter, the amount is laughable.',
+      `Practical consequences: YouTube introduced "made for kids" — a label that disabled ad targeting and some comment features on children's channels. Creators of children's content would earn less. Some — significantly less. Cocomelon stopped being "a growing business" and began to be "a business with an asterisk."`,
+      `In the background: on July 29, 2019, Capital One disclosed the breach of 100 million customer records. The hacker — Paige Thompson, a former AWS employee — had found a misconfigured firewall on S3. Capital One would pay the OCC an $80 million fine. Thompson would be convicted in 2022. But the story shows: what a company stores "in the cloud" is often stored without basic protections.`,
+      `2019 also marked a watershed for Apple. In September The Guardian published a piece on "Siri grading" — Apple had been employing external contractors to listen to fragments of Siri recordings (including accidentally triggered recordings of intimate conversations, medical purchases, therapy sessions) and judge whether Siri had responded correctly. Users did not know. Apple shut down the program and added an optional opt-in. Similar programs at Google (OK Google) and Amazon (Alexa) were exposed at the same time.`,
+      'The takeaway of 2019 is this: voice assistants — Siri, Alexa, OK Google — record more than we think. Some of those recordings are listened to by a human. Consent is buried in the terms of service. The user is, by default, a participant in a program they may not realize they are participating in.',
+    ],
+    caseIds: ['C02'],
+    highlights: [
+      { value: '$5.1 bn', label: 'FTC+SEC fine against Facebook' },
+      { value: '$170 mn', label: 'YouTube fine for COPPA' },
+      { value: '100 mn', label: 'records in the Capital One breach' },
+    ],
+  },
+  {
+    id: 'scene-2020',
+    year: '2020',
+    kicker: 'Pattern',
+    headline: `Clearview AI shows that you can't turn off your face.`,
+    bodyParagraphs: [
+      `On January 18, 2020, Kashmir Hill of The New York Times published an article titled "The Secret Company That Might End Privacy as We Know It." The text exposed Clearview AI — a company founded by Hoan Ton-That and Richard Schwartz. Clearview had scraped more than 3 billion photos from the internet (publicly available, from Facebook, LinkedIn, Instagram, VKontakte, YouTube) and built a facial recognition tool. An officer uploads a photo — gets back an identity. No consent from the people whose faces are in the database.`,
+      `By January 2020 Clearview was selling the tool to roughly 2,400 law enforcement agencies in the US — FBI, DEA, local police in most states. Some officers tested it on ex-partners, journalists, acquaintances. There was no oversight. Clearview claimed the tool "only worked in criminal cases." In practice — it worked however the user wanted.`,
+      'The reaction in the US was muted. A few states (Illinois — with its strong BIPA law) sued. Clearview would pay a $9 million settlement in Illinois in 2022. Most — nothing. The reaction in Europe was forceful. The Italian Garante — 20 million euros in fines (2022). The French CNIL — 20 million euros (2022). The Greek authority — 20 million euros (2022). German Hamburg — a processing ban (2020). The United Kingdom — £7.5 million (2022). Clearview has paid none of the European fines — it maintains that it has no presence in Europe and is not subject to GDPR. The legal dispute continues.',
+      `In the same year — the pandemic. In March 2020 Zoom grew from 10 million daily meeting participants to 300 million in April. The company's marketing boasted of "end-to-end encryption." On April 1, 2020, Bill Marczak of Citizen Lab published a technical analysis: Zoom did not have end-to-end encryption. Keys were generated on Zoom's servers, some traffic passed through data centers in China. The FBI published a warning about "Zoombombing" — uninvited participants entering meetings and displaying pornography or offensive images.`,
+      'Zoom reacted quickly. CEO Eric Yuan announced a 90-day security plan. In October 2020 — real end-to-end encryption (optional). In November 2021 — an $85 million settlement in a class action. The FTC — a separate settlement in November 2020.',
+      `2020 was the moment of realization that privacy is not a single infraction — it is a systemic pattern. You can't turn off your face. You can't verify encryption on your own. And you can't simply avoid the platforms — they are the infrastructure of everyday work, education, health care. The pandemic forced everyone to use Zoom. Teachers had no choice. Doctors had no choice. Teenagers had to use TikTok, because their classes were there. People appear to have a choice — in practice they do not.`,
+      `That year also changed something else. In July 2020 the Court of Justice of the EU handed down the "Schrems II" ruling. Privacy Shield — the framework for data transfers between the EU and the US from 2016 — was invalidated. The same problem as Safe Harbor. The same solution — none. Companies were given Standard Contractual Clauses as a stopgap. But the fundamental problem — FISA, PRISM, the lack of protection in the US — remained.`,
+    ],
+    caseIds: ['E05', 'E06'],
+    highlights: [
+      { value: '3 bn+', label: 'face photos in the Clearview database (at the time)' },
+      { value: '300 mn', label: 'Zoom daily meeting participants (peak)' },
+      { value: '$85 mn', label: 'Zoom settlement' },
+    ],
+  },
+  {
+    id: 'scene-2021',
+    year: '2021',
+    kicker: 'Whistleblower',
+    headline: 'Frances Haugen walks out with documents. Pegasus comes to light.',
+    bodyParagraphs: [
+      'On October 5, 2021, Frances Haugen testified before the US Senate. She was 37 years old, a graduate of Harvard Business School, a former product manager on the Facebook Civic Integrity Team. Her testimony lasted two hours. In her hand she held a folder of envelopes — internal Facebook documents she had carried out before the company shut down the department in December 2020.',
+      `The documents — roughly 22,000 pages — had been published in the "Facebook Files" series by The Wall Street Journal beginning in September 2021 (author: Jeff Horwitz). The most important findings: Facebook had known for years that Instagram was harming teenage girls' mental health (internal research showed that 32 percent of girls who felt bad about their bodies felt even worse after using Instagram). Facebook ran a program called "XCheck" (cross-check), which disabled moderation for 5.8 million "VIP users." Since 2018 the News Feed algorithm had been optimized for "meaningful social interactions" — in practice, it promoted angry and polarizing content.`,
+      `Haugen filed complaints with the SEC and testified in the United Kingdom, France, Germany, and the European Union. Meta — still called Facebook at the time — reacted with a rebrand. On October 28, 2021, the company changed its name to Meta. A few months later Mark Zuckerberg was boasting of his vision of "the metaverse." Investors were unconvinced. In 2022 shares fell 26 percent in a single day after a quarterly report — the largest single-day drop in US stock market history.`,
+      `The second event of 2021: the Pegasus Project. On July 18 the journalism organization Forbidden Stories and Amnesty International — in collaboration with 17 outlets worldwide — published a series of articles about the Israeli company NSO Group. Its software "Pegasus" — commercial spyware — had been used by more than 45 governments to spy on journalists, activists, lawyers, and opposition figures. A list of 50,000 phone numbers of "persons of interest" had leaked.`,
+      'Among the victims: Jamal Khashoggi (the Saudi journalist murdered in 2018), Nathalie Chiriacescu (the lawyer for the Khashoggi family), French president Emmanuel Macron, Pakistani prime minister Imran Khan, Mexican activists, journalists from Azerbaijan, Rwanda, India. Not only the targets. In some cases — people in their circle, to reach the target through them.',
+      'In November 2021 WhatsApp — Meta\'s subsidiary — was fined 225 million euros by the Irish DPC for transparency violations in data processing. In August 2021 — Apple announced a plan to scan photos on customer devices for CSAM (Child Sexual Abuse Material). Cryptographer Matthew Green and the Electronic Frontier Foundation protested: it was a precedent that, in other hands, could be used to spy on dissidents. Apple withdrew the plan after three weeks.',
+      `2021 was also the year Frances Haugen said publicly what many suspected but no one at the company had confirmed: "Facebook chooses profit over safety. Repeatedly. Systemically." It is not an anecdote. It is a pattern, documented by the company's own internal papers. It changes the debate about regulation — but it also changes it in political terms. Earlier, technology companies were treated as "something to support." From 2021 onward, they are treated as "something to regulate."`,
+    ],
+    caseIds: ['A05', 'C03'],
+    highlights: [
+      { value: '22,000', label: 'pages of the Facebook Papers' },
+      { value: '50,000', label: 'phone numbers on the Pegasus list' },
+      { value: '225 mn EUR', label: 'fine against WhatsApp' },
+    ],
+  },
+  {
+    id: 'scene-2022',
+    year: '2022',
+    kicker: 'Buyer',
+    headline: 'Musk buys Twitter. Mudge Zatko testifies against Twitter.',
+    bodyParagraphs: [
+      'April 2022. Elon Musk secretly bought 9 percent of Twitter stock. On April 14 he made a public offer: $44 billion for the whole company. $54.20 per share. The joke about 420 was not accidental. The Twitter board resisted for two months, then agreed. On July 13 Musk tried to back out. Twitter sued. October — Musk had to close the deal. On October 27, 2022, Elon Musk became the owner of Twitter.',
+      'Day one: Musk fired CEO Parag Agrawal, CFO Ned Segal, chief legal officer Vijaya Gadde, and general counsel Sean Edgett. He escorted them out of the building. In November 2022 Musk fired half of the staff — roughly 3,700 people. In December — another round of layoffs. The teams responsible for security, moderation, and AI ethics — disbanded or decimated.',
+      `A different case was running in the background. On August 23, 2022, Peiter "Mudge" Zatko — hacking legend, former head of security at Twitter (fired in January 2022) — filed a formal whistleblower complaint with the SEC, FTC, and Department of Justice. It contained the allegations: Twitter had "extremely critical security vulnerabilities." Half of its employees had access to user data without justification. Twitter was deceiving about the number of bots (the key argument Musk was making in his own dispute over the acquisition). Its servers were not in compliance with FTC orders from 2011.`,
+      `Zatko's testimony before the Senate, on September 13, 2022, was technically precise. He spoke of "shadow IT," of a lack of network segmentation, of foreign agents (Indian, Saudi) inside the company. Twitter's response: Zatko had been fired for "poor performance." But the FTC opened proceedings. The case concluded in May 2024 — X (the company's new name) agreed with the FTC on additional audit requirements. There were no formal fines.`,
+      'In between, Musk turned Twitter into X. In July 2023 he changed the logo. The blue bird disappeared. The algorithm showed more content from paid accounts (Twitter Blue, then X Premium). Expertise from independent researchers dropped — many were working off a deprecated API. Moderation became selective. Antisemitic, conspiratorial, and misogynistic content returned to the feed.',
+      `But 2022 had other turning points as well. On August 25, 2022, California Attorney General Rob Bonta announced the first fine in the history of CCPA (the California Consumer Privacy Act, modeled on GDPR): Sephora, $1.2 million. The reason: failing to inform customers that their data was being "sold" (in the CCPA sense — shared with advertising trackers). Sephora had not disclosed that it was selling. It argued this was not a sale. California: yes, it is.`,
+      `The same year brought something else. In June 2022 Emily Baker-White of BuzzFeed published recordings from internal ByteDance/TikTok meetings. In the recordings, American TikTok engineers spoke of "access from China to everything." TikTok's Chinese parent, ByteDance, has — independently of its PR posture — access to American user data. From 2023 TikTok would launch "Project Texas" — carving off American infrastructure. Legal proceedings continue into 2025.`,
+      `2022 is the first year in which, publicly — not in journalistic articles but in sworn testimony before the Senate — people working at the largest technology companies say: "this is broken, from the inside, systemically." If Haugen (2021) was an individual signal, 2022 shows that it is a structural phenomenon: insiders are walking out, because they have seen what the inside looks like.`,
+    ],
+    caseIds: ['E03'],
+    highlights: [
+      { value: '$44 bn', label: 'price of Musk buying Twitter' },
+      { value: '3,700', label: 'laid off in November 2022' },
+      { value: '$1.2 mn', label: 'first CCPA fine (Sephora)' },
+    ],
+  },
+  {
+    id: 'scene-2023',
+    year: '2023',
+    kicker: 'Record',
+    headline: 'GDPR stops being a slip of paper. It starts being an amount.',
+    bodyParagraphs: [
+      'On May 22, 2023, the Irish Data Protection Commission — under pressure from the European Data Protection Board — imposed a 1.2 billion euro fine on Meta Ireland. The largest in GDPR history. The basis: the transfer of European Facebook user data to the United States without a legal basis, three years after the Schrems II ruling that had invalidated such a transfer. Meta had been using Standard Contractual Clauses — but those did not meet the required standards, as the ECJ had ruled.',
+      `Meta announced an appeal. But fundamentally there was no way left to defend. The transfer to the US in its then-current form was illegal. European companies had to either keep data in Europe (expensive) or wait for a new framework (the Data Privacy Framework, entering into force in July 2023 — and Schrems's NOYB already announcing a "Schrems III" complaint).`,
+      `The same Meta, a few months earlier, had been fined 390 million euros for behavioral advertising based on "performance of a contract" instead of informed consent. January 4, 2023. This was the outcome of Max Schrems's nine-year path. In practice it means: Meta cannot "automatically" serve personalized ads — it has to ask for consent. In November 2023 the company introduced a "subscription" option — pay 9.99 euros a month not to see ads. The alternative: consent to ads. NOYB immediately filed a complaint: this is not "informed, freely given consent," this is extortion.`,
+      `September 2023 — TikTok received 345 million euros from the Irish DPC for violating children's data protection. Minors' accounts had been public by default. The "Family Pairing" feature allowed adults to communicate with children without verification. The algorithm served children content not permitted for them. TikTok announced an appeal.`,
+      `November 2024 — LinkedIn received 310 million euros from the Irish DPC. The reason: the company had used user data (post content, messages, contacts) to train internal AI models — without consent, without a legal basis. Microsoft (owner of LinkedIn since 2016) would pay, but — as everyone does — did not rule out appealing.`,
+      `2023 was the moment when European enforcement of data law began to really cost something. But for companies whose annual revenue runs into the hundreds of billions, even a record fine is 0.7 percent of sales. "The fine as a cost of doing business" — the thesis of this portal — was confirmed in the books. Meta pays and continues. TikTok pays (or doesn't). LinkedIn pays. None of the companies fundamentally changes its business model.`,
+      'More important than the amounts, however, is that the European regulators had worked out a mechanism — and were now using it systematically. The Irish DPC, under the supervision of the European Board, was issuing decisions at a steady cadence. The analytical, legal, and evidentiary work was repeatable. What one Caspar had begun in Hamburg in 2010 was, in 2023, a machine.',
+      `And one more thing. In December 2023 the European Parliament and the Council of Europe approved the AI Act — the first comprehensive law regulating artificial intelligence in the world. Risks: "high-risk" systems (hiring, credit, education) have to undergo audits. "Prohibited" systems (social scoring, biometric surveillance in public spaces — with exceptions) — banned. Entry into force of the main provisions: 2026. But already technology companies — especially generative model firms like OpenAI, Anthropic, Google DeepMind — are writing their products around the regulation.`,
+    ],
+    caseIds: ['A07', 'A09', 'E02', 'C05'],
+    highlights: [
+      { value: '1.2 bn EUR', label: 'Meta fine — GDPR record' },
+      { value: '0.7%', label: `of Meta's annual revenue` },
+      { value: '345 mn EUR', label: 'TikTok fine for violating children\'s data' },
+    ],
+  },
+  {
+    id: 'scene-2024',
+    year: '2024',
+    kicker: 'Scaling up',
+    headline: 'AI trains on us without asking. Clearview in Italy — again.',
+    bodyParagraphs: [
+      `2024 was the year in which "generative AI" — ChatGPT (OpenAI), Claude (Anthropic), Gemini (Google), Llama (Meta), Grok (xAI) — became everyday products. The hype of 2023 turned into infrastructure. But infrastructure brings questions. What are you training the model on? From whose data? With whose consent?`,
+      `September 2024. LinkedIn (a Microsoft subsidiary) quietly activated a new feature: user data — post content, messages, interactions — would be used to train "internal AI models." There was no major announcement. Just a small change in the settings. Default — "on." The user had to know where to click to turn it off. Opt-out, not opt-in.`,
+      'The reaction was quick. NOYB filed a complaint. The Irish DPC opened an investigation. November 2024 — a 310 million euro fine against LinkedIn. The basis: no legal basis for processing. Legitimate interest is not enough — there must be consent. LinkedIn would pay, announcing an appeal. But at the same time Meta (AI Studio), Grok (xAI), Gemini (Google) were doing the same thing. Training on user data. Sometimes with an opt-out. Sometimes without.',
+      'March 2024: the Italian Garante — a second fine for Clearview AI. 20 million euros (the previous one had been in 2022). The company had ignored all European fines since 2022. Its argument: it does not operate in Europe, has no registered office, no offices, no employees. GDPR — in its view — does not apply to it. The Garante argues otherwise: if Clearview processes the data of European citizens (photos scraped from the internet that depict people living in Europe), then it is subject to GDPR. The legal dispute continues.',
+      'In 2024 Clearview had — according to the company itself — more than 50 billion face photos in its database. That is roughly 6 photos for every human being on Earth. The database is still growing, despite all the fines, proceedings, and lawsuits.',
+      `August 2024. xAI — Elon Musk's company — launched Grok Imagine. An image generator built into X (formerly Twitter). The product did not have the safety filters typical of DALL-E or Midjourney. Within days, deepfakes began to appear online: Taylor Swift in sexual situations, politicians in compromising poses, fabricated scenes of violence. The Irish DPC opened proceedings. The European Commission — under DSA (Digital Services Act) — opened proceedings as well. Grok Imagine added filters in September 2024 under pressure.`,
+      `November 2024 — the European Commission imposed a 798 million euro fine on Meta for abusing its dominant position in the advertising market on Facebook Marketplace. The first antitrust fine (not GDPR) against Meta in Europe. It shows that the Commission is beginning to enforce DMA (the Digital Markets Act) — a law that took effect in March 2024 and requires certain behaviors from "gatekeepers."`,
+      `In 2024 the pattern is clearly visible: European regulators are using four tools in parallel — GDPR (data), DMA (antitrust), DSA (moderation and deepfakes), and AI Act (models). American companies, for the first time, have the sense that Brussels is a real player. Up to that moment Brussels had been "rich, but slow." In 2024 it becomes "slow, but hard."`,
+      `But yet another theme. In November 2024 Donald Trump won the US presidential election. Elon Musk became one of his closest advisers. Mark Zuckerberg, Jeff Bezos, and Sundar Pichai — all three contributed a million dollars each to Trump's inauguration fund. The era of "Big Tech apologizing in the Senate" — is ending. The era of "Big Tech in the White House" — is beginning.`,
+    ],
+    caseIds: ['C05', 'E05', 'E04', 'A10'],
+    highlights: [
+      { value: '310 mn EUR', label: 'LinkedIn fine for AI training without consent' },
+      { value: '50 bn+', label: 'photos in the Clearview database (2024)' },
+      { value: '798 mn EUR', label: 'Meta antitrust fine (Marketplace)' },
+    ],
+  },
+  {
+    id: 'scene-2025',
+    year: '2025',
+    kicker: 'Today',
+    headline: 'Sandboxing — bypassed. Incognito — bypassed. DMA — first fine.',
+    bodyParagraphs: [
+      `On June 3, 2025, an academic team from IMDEA Networks (Madrid), Radboud University (Nijmegen) and KU Leuven (Leuven) published a report. Authors: Gunes Acar, Narseo Vallina-Rodriguez, Aniketh Girish, Nipuna Weerasekara. Title: "Disclosure of Covert Tracking via Native-to-Browser Bridges on Android."`,
+      `Findings: Meta (the Facebook and Instagram apps) and Yandex (the Yandex Start browser), for many years, had been using a local communication channel — localhost, port 12387 (Meta) and 29009/29010 (Yandex) — between the mobile app and the browser. Scripts on websites in the browser connected to this local port. The mobile app, knowing the user's Facebook or Yandex ID, replied. In this way an anonymous browsing session was paired with a real identity. Incognito mode — bypassed. VPN — bypassed. Third-party cookie blocking — bypassed. Browser sandboxing — everything Android had to keep apps apart — bypassed.`,
+      'On the same day, June 3, 2025, at 7:45 a.m. European time, Meta turned off the practice. Yandex — a little later the same day. Ten years of practice (the earliest evidence goes back to 2015). Three hours to react after publication. That speed shows that technically it had always been trivial to turn off. It was not turned off because it did not have to be turned off.',
+      `European Commission proceedings are already underway. DSA — Article 35 (risk assessment) is systematically violated when a platform circumvents a user's control mechanisms. DMA — Article 5(2) prohibits combining data across a firm's services without explicit consent. The Irish DPC, under EDPB pressure, opened its own proceedings. The German BfDI, the French CNIL, the Italian Garante — all acting in parallel.`,
+      'In April 2025 the European Commission imposed the first-ever DMA fine: Meta, 200 million euros. Apple — 500 million for anticompetitive abuses in the App Store. In May — 530 million euros against TikTok for data transfers to China. In August — a proposed 120 million euros against X for Grok Imagine deepfakes.',
+      'The matrix endures. Regulators are keeping up, but only partly. The cases are becoming more technical, more geographically dispersed, harder to document. The structure of the technology firms — scattered between Ireland (offices), the United States (servers), China (code), and the Cayman Islands (finances) — is by definition hard to sue. Courts move more slowly than product development cycles.',
+      `But there are other signals too. In March 2025 the European Commission announced "DMA 2.0" — a second version of the law, with stronger tools. In April the UK Parliament passed "Online Safety Act 2.0." In May a California senator introduced legislation banning the use of minors' data for AI training (without COPPA — with its own basis). In July Brazil announced a biometric protection program for its citizens. In October China introduced additional restrictions on data exports.`,
+      `2025 is not the year in which everything ends. It is the year in which everyone sees the scale of the problem. 33 documented cases, 12 companies, 480 sources. Each of these cases was "extraordinary" at the moment of its disclosure. Together they form a pattern. Not exceptions. A pattern.`,
+      'That is what this portal is about. Not a description of individual scandals — though it contains 33 of them. It is about the realization that these scandals are not traffic accidents. They are engineering choices. Deliberate. Systemic. And documented.',
+    ],
+    caseIds: ['A01', 'A10', 'E03', 'E04'],
+    highlights: [
+      { value: '10 years', label: `of Meta's covert-listening practice` },
+      { value: '3 hours', label: `between publication and Meta's response` },
+      { value: '200 mn EUR', label: 'first DMA fine' },
+    ],
+  },
+];

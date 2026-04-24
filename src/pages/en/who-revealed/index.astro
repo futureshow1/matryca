@@ -1,171 +1,167 @@
 ---
 import PageEn from '../../../layouts/PageEn.astro';
+import { PEOPLE, ROLE_LABELS_EN } from '../../../data/people-en';
 import { url } from '../../../utils/url';
-
-const whistleblowers = [
-  {
-    slug: 'frances-haugen',
-    name: 'Frances Haugen',
-    role: 'Whistleblower — Meta',
-    year: '2021',
-    summary: 'Harvard Business School graduate and former product manager on Facebook\'s Civic Integrity team. Leaked 22,000 pages of internal documents. Testified before the US Senate, UK, EU. Her disclosures forced a global debate about Instagram\'s harm to teen girls and Facebook\'s XCheck VIP-exemption system.',
-  },
-  {
-    slug: 'max-schrems',
-    name: 'Max Schrems',
-    role: 'Lawyer, activist — NOYB',
-    year: '2011–',
-    summary: 'Austrian lawyer who, as a Vienna law student in 2011, filed the first formal complaint against Facebook Ireland. His cases brought down Safe Harbor (2015) and Privacy Shield (2020). Founded NOYB in 2017; has since won over €2 billion in European enforcement decisions.',
-  },
-  {
-    slug: 'christopher-wylie',
-    name: 'Christopher Wylie',
-    role: 'Whistleblower — Cambridge Analytica',
-    year: '2018',
-    summary: '28-year-old Canadian with pink hair and a PhD in fashion trend forecasting. Former research director at Cambridge Analytica. His two-hour interview in Carole Cadwalladr\'s London flat became the foundation of the March 2018 Observer/NYT series.',
-  },
-  {
-    slug: 'carole-cadwalladr',
-    name: 'Carole Cadwalladr',
-    role: 'Journalist — The Observer',
-    year: '2018–',
-    summary: 'British journalist whose investigations revealed Cambridge Analytica, Russian influence via Facebook in the Brexit referendum, and the mechanics of personalized political targeting. Pulitzer finalist, TED speaker, defendant in defamation cases she ultimately won.',
-  },
-  {
-    slug: 'kashmir-hill',
-    name: 'Kashmir Hill',
-    role: 'Journalist — New York Times',
-    year: '2020–',
-    summary: 'NYT technology reporter whose January 2020 article "The Secret Company That Might End Privacy as We Know It" exposed Clearview AI. Has since documented face-recognition wrongful-arrest cases and smart-device surveillance in domestic abuse contexts.',
-  },
-  {
-    slug: 'peiter-zatko',
-    name: 'Peiter "Mudge" Zatko',
-    role: 'Whistleblower — Twitter',
-    year: '2022',
-    summary: 'Hacking legend, former DARPA director, former Twitter head of security. Filed SEC/FTC/DOJ disclosure in August 2022 alleging Twitter had "extreme, egregious" security vulnerabilities. Testified before the US Senate. His claims about bot counts became a central argument in Musk\'s attempt to exit the Twitter acquisition.',
-  },
-  {
-    slug: 'edward-snowden',
-    name: 'Edward Snowden',
-    role: 'Whistleblower — NSA',
-    year: '2013',
-    summary: 'NSA contractor who disclosed to journalists 1.5 million pages of documents in June 2013. Revealed PRISM, MUSCULAR, and the full architecture of mass surveillance. His disclosures triggered GDPR passage (2016), Schrems I (2015), Schrems II (2020). Lives in Moscow.',
-  },
-  {
-    slug: 'johannes-caspar',
-    name: 'Johannes Caspar',
-    role: 'Regulator — Hamburg',
-    year: '2010',
-    summary: 'Lawyer and then-Hamburg Data Protection Commissioner. His three-year pursuit of Google Street View forced the 14 May 2010 disclosure that Street View cars had collected Wi-Fi traffic fragments in 30+ countries. First credible enforcement action against a US tech giant by a European regional regulator.',
-  },
-  {
-    slug: 'susan-fowler',
-    name: 'Susan Fowler',
-    role: 'Whistleblower — Uber',
-    year: '2017',
-    summary: 'Former Uber site-reliability engineer. Her February 2017 blog post "Reflecting on One Very, Very Strange Year at Uber" went viral. Within five months, CEO Travis Kalanick was forced out. Catalyst for #MeToo in tech.',
-  },
-  {
-    slug: 'ryan-mac',
-    name: 'Ryan Mac',
-    role: 'Journalist — NYT, BuzzFeed',
-    year: '2016–',
-    summary: 'Investigative journalist covering Meta, Uber, ByteDance. Co-author of the BuzzFeed exposé revealing Beijing-based ByteDance staff accessing US TikTok user data.',
-  },
-  {
-    slug: 'emily-baker-white',
-    name: 'Emily Baker-White',
-    role: 'Journalist — Forbes, BuzzFeed',
-    year: '2022–',
-    summary: 'Reporter whose leaked internal TikTok recordings (June 2022) confirmed US employees saying "everything is seen in China". Forced the "Project Texas" data-segregation program and congressional hearings.',
-  },
-  {
-    slug: 'paul-mozur',
-    name: 'Paul Mozur',
-    role: 'Journalist — New York Times',
-    year: '2013–',
-    summary: 'Pulitzer-winning NYT reporter covering technology and authoritarianism. Documented Chinese government surveillance of Uyghurs via facial recognition and Xinjiang police databases. Forced into exile from Hong Kong.',
-  },
-];
 ---
 
 <PageEn
   title="Who revealed it — Big Tech Files"
-  description="The journalists, whistleblowers and regulators who forced the stories out. Twelve profiles."
+  description="Twelve whistleblowers, journalists, researchers and regulators who forced the stories into the public record."
 >
-  <article class="editorial">
+  <article class="people">
     <div class="container">
-      <header class="editorial__header">
+      <header class="people__header">
         <p class="meta" style="color: var(--text-tertiary)">Gallery — twelve profiles</p>
-        <h1>Who revealed it</h1>
-        <p class="editorial__lede">
+        <h1 class="people__title">Who revealed it</h1>
+        <p class="people__lede">
           None of the 33 cases documented in Big Tech Files came to light by
           itself. Each was forced into the public record by specific people
           doing specific work at specific moments. This gallery is a minimum
           map of that labour.
         </p>
-        <p class="editorial__note">
-          Full biographies (~1,500 words each) are available in the Polish
-          edition. English short profiles follow. Full translations planned
-          for Phase 4.
-        </p>
       </header>
 
-      <ul class="person-list">
-        {whistleblowers.map((p) => (
-          <li class="person-list__item">
-            <div class="person-list__meta">
-              <p class="person-list__year">{p.year}</p>
-              <p class="person-list__role">{p.role}</p>
+      <ul class="people__list">
+        {PEOPLE.map((p) => (
+          <li class="person">
+            <div class="person__head">
+              <div class="person__avatar" aria-hidden="true">{p.portrait_initials}</div>
+              <div>
+                <h2 class="person__name">{p.name}</h2>
+                <p class="person__meta meta">
+                  {ROLE_LABELS_EN[p.role]}
+                  {p.affiliation && <span> · {p.affiliation}</span>}
+                  {' · '}{p.years}
+                </p>
+              </div>
             </div>
-            <div class="person-list__body">
-              <h2 class="person-list__name">{p.name}</h2>
-              <p class="person-list__summary">{p.summary}</p>
-            </div>
+            <p class="person__short">{p.bio_short}</p>
+            <div class="person__bio" set:html={p.bio_long.split('\n\n').map((para) => `<p>${para}</p>`).join('')}></div>
+            {p.caseIds.length > 0 && (
+              <p class="person__cases meta">
+                Cases: {p.caseIds.map((cid, i) => (
+                  <>
+                    <a href={url(`/en/cases/`)}>{cid}</a>{i < p.caseIds.length - 1 && <span> · </span>}
+                  </>
+                ))}
+              </p>
+            )}
           </li>
         ))}
       </ul>
-
-      <p class="editorial__note" style="margin-top: var(--space-10);">
-        See also: <a href={url('/sygnalisci/')}>full Polish gallery</a> with complete
-        biographies, source citations, links to their original publications.
-      </p>
     </div>
   </article>
 </PageEn>
 
 <style lang="scss">
-  .editorial {
+  .people {
     padding-block: var(--space-8);
   }
 
-  .editorial__header {
+  .people__header {
     max-width: 760px;
     margin-bottom: var(--space-10);
   }
 
-  .editorial__header h1 {
+  .people__title {
     font-family: var(--font-serif);
     font-size: 42px;
     line-height: 1.15;
     margin-block: var(--space-2) var(--space-4);
   }
 
-  .editorial__lede {
+  .people__lede {
     font-size: 17px;
     line-height: 1.55;
     color: var(--text-secondary);
+    margin: 0;
+  }
+
+  .people__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .person {
+    padding: var(--space-6) 0;
+    border-top: 0.5px solid var(--border);
+    max-width: 760px;
+
+    &:last-child {
+      border-bottom: 0.5px solid var(--border);
+    }
+  }
+
+  .person__head {
+    display: flex;
+    gap: var(--gap-4);
+    align-items: center;
     margin-bottom: var(--space-3);
   }
 
-  .editorial__note {
+  .person__avatar {
+    width: 48px;
+    height: 48px;
+    background: var(--bg-secondary);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 14px;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+  }
+
+  .person__name {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 0 4px;
+  }
+
+  .person__meta {
+    font-family: var(--font-mono);
+    font-size: 11px;
     color: var(--text-tertiary);
-    padding-top: var(--space-2);
-    border-top: 0.5px solid var(--border);
     margin: 0;
+  }
+
+  .person__short {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--text-primary);
+    margin: 0 0 var(--space-3);
+  }
+
+  .person__bio {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--text-primary);
+
+    p {
+      margin: 0 0 var(--space-3);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .person__cases {
+    margin-top: var(--space-3);
+    padding-top: var(--space-3);
+    border-top: 0.5px solid var(--border);
+    font-size: 11px;
+    color: var(--text-tertiary);
 
     a {
       color: var(--accent);
@@ -174,62 +170,6 @@ const whistleblowers = [
       transition: border-color var(--transition-fast);
 
       &:hover { border-bottom-color: var(--accent); }
-    }
-  }
-
-  .person-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .person-list__item {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: var(--gap-6);
-    padding: var(--space-5) 0;
-    border-top: 0.5px solid var(--border);
-
-    &:last-child {
-      border-bottom: 0.5px solid var(--border);
-    }
-  }
-
-  .person-list__meta {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--text-tertiary);
-    line-height: 1.6;
-  }
-
-  .person-list__year {
-    margin: 0 0 4px;
-    color: var(--accent);
-    letter-spacing: 0.04em;
-  }
-
-  .person-list__role {
-    margin: 0;
-  }
-
-  .person-list__name {
-    font-family: var(--font-serif);
-    font-size: 22px;
-    font-weight: 500;
-    margin: 0 0 var(--space-2);
-  }
-
-  .person-list__summary {
-    font-size: 15px;
-    line-height: 1.65;
-    color: var(--text-primary);
-    margin: 0;
-    max-width: 720px;
-  }
-
-  @media (max-width: 640px) {
-    .person-list__item {
-      grid-template-columns: 1fr;
     }
   }
 </style>

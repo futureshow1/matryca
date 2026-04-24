@@ -1,156 +1,92 @@
 ---
 import PageEn from '../../../layouts/PageEn.astro';
-import { url } from '../../../utils/url';
-
-const scenes = [
-  { year: '2007', title: 'Facebook Beacon — the first crack', summary: 'Facebook launched a shopping-activity broadcast feature without opt-in. Public protest, a MoveOn petition with 50,000 signatures in five days, and a $9.5M Lane v. Facebook settlement followed. The first documented stress test of "move fast, apologize after".' },
-  { year: '2010', title: 'Hamburg tells Google: show us', summary: 'Johannes Caspar, Hamburg\'s Commissioner for Data Protection, forced Google to admit that Street View cars had harvested fragments of open Wi-Fi traffic — passwords, emails, URLs — across 30+ countries over three years. First credible enforcement of European data law against a US giant.' },
-  { year: '2012', title: 'Google bypasses Safari. Instagram costs $1B.', summary: 'Google circumvented Safari\'s default third-party cookie block via a hidden form trick. $22.5M FTC fine — then a record. The same year Facebook acquired Instagram for $1B on a weekend email; eight years later the FTC filed antitrust charges.' },
-  { year: '2013', title: 'Snowden hands journalists 1.5 million documents', summary: 'The Guardian and Washington Post began publishing on June 5. PRISM revealed. Nine US tech firms named. The European debate around data transfers restarted in earnest — leading to Schrems I (2015), GDPR (2016), Schrems II (2020).' },
-  { year: '2014', title: '689,003 users without informed consent', summary: 'Facebook manipulated the News Feeds of 689,003 users for one week in 2012 to study emotional contagion. Published in PNAS in June 2014. No fines; but the debate about platform-scale human experimentation without consent — still active today — began here.' },
-  { year: '2015', title: 'Schrems I — Safe Harbor falls', summary: '27-year-old Max Schrems, the Austrian law student, forced the European Court of Justice to invalidate the 15-year-old Safe Harbor framework. Thousands of US firms suddenly had to redesign their data transfers. Schrems then founded NOYB to keep pushing.' },
-  { year: '2016', title: 'GDPR is adopted', summary: 'The European Parliament adopted the General Data Protection Regulation on April 14. Maximum fines of 4% global turnover. Two-year grace period until May 25, 2018. Most firms made cosmetic adjustments; fundamental product rearchitecture was delayed.' },
-  { year: '2017', title: 'Uber\'s Greyball. Equifax\'s 147 million.', summary: 'Uber\'s Greyball tool deceived regulators for years. Susan Fowler\'s February blog post triggered the Kalanick ouster. Equifax disclosed a breach of 147 million Americans\' data in September — payout per victim ultimately averaged $6.90.' },
-  { year: '2018', title: 'Cambridge Analytica breaks the surface', summary: 'The March Observer/NYT series revealed 87 million Facebook profiles harvested via a personality-test app and used for psychographic targeting in Trump 2016 and Brexit. FTC fine: $5B (July 2019). Facebook stock rose 1.8% the week after.' },
-  { year: '2019', title: 'FTC collects billions. Children finally matter.', summary: 'FTC $5.1B Facebook settlement. YouTube $170M COPPA fine. Capital One breach: 100 million records. The year American regulators stopped fining with thousands and started fining with billions.' },
-  { year: '2020', title: 'Faces cannot be turned off', summary: 'Kashmir Hill\'s NYT exposé on Clearview AI revealed 3+ billion scraped photos sold to US police. The same year Zoom\'s claimed "end-to-end encryption" was debunked by Citizen Lab. Pandemic made these platforms unavoidable.' },
-  { year: '2021', title: 'Haugen carries out 22,000 pages', summary: 'Frances Haugen testified before the Senate with Facebook internal research showing Instagram harmed teen girls. Same year: the Pegasus Project revealed NSO spyware on journalists, activists, heads of state. Apple tried on-device CSAM scanning, backed down in three weeks.' },
-  { year: '2022', title: 'Musk buys Twitter. Mudge Zatko testifies.', summary: 'Elon Musk completed the $44B Twitter acquisition in October. Half the staff was laid off. Peiter "Mudge" Zatko, former Twitter security chief, filed SEC/FTC/DOJ disclosures alleging "extreme" vulnerabilities. Sephora received the first CCPA fine ($1.2M).' },
-  { year: '2023', title: 'GDPR becomes a number, not a letter', summary: 'Irish DPC fined Meta €1.2B for transfers to the US — the largest GDPR fine in history. €390M for behavioral-ads basis. €345M against TikTok for children\'s data. Meta\'s reaction: 1.8% stock increase. 0.7% of annual revenue. "Fine as cost of business" — confirmed.' },
-  { year: '2024', title: 'AI trains on us without asking. Clearview Italy — again.', summary: 'LinkedIn activated AI training on user posts and messages, opt-out only. €310M Irish DPC fine. Italian Garante issued its second €20M fine against Clearview AI for continuing to scrape EU citizen faces. EU Digital Markets Act took effect.' },
-  { year: '2025', title: 'Browser sandboxing — bypassed. Incognito — bypassed.', summary: 'IMDEA Networks / Radboud / KU Leuven disclosed Meta and Yandex apps using localhost sockets to re-identify incognito sessions. Ten years of practice. Three hours to switch off. First DMA fine: €200M against Meta. €530M against TikTok for transfers to China.' },
-];
+import ScrollTimeline from '../../../components/timeline/ScrollTimeline';
+import { TIMELINE_SCENES as TIMELINE_SCENES_EN } from '../../../data/timeline-scenes-en';
 ---
 
 <PageEn
   title="Timeline — Big Tech Files"
-  description="Sixteen moments from 2007 to 2025 — one pattern. The history of Big Tech privacy and ethics cases year by year."
+  description="Sixteen narrative scenes from 2007 to 2025 — one pattern. A scrollytelling history of Big Tech privacy and ethics cases."
 >
-  <article class="editorial">
+  <section class="kiedy">
     <div class="container">
-      <header class="editorial__header">
-        <p class="meta" style="color: var(--text-tertiary)">Timeline — sixteen scenes</p>
-        <h1>Timeline</h1>
-        <p class="editorial__lede">
+      <header class="kiedy__header">
+        <p class="meta" style="color: var(--text-tertiary)">Door 02 — narrative version</p>
+        <h1>When</h1>
+        <p class="kiedy__lede">
           From Facebook Beacon in 2007, when users first publicly protested
           being made subjects of their own shopping, to localhost in 2025,
-          when Meta and Yandex apps were shown to bypass every browser safeguard
-          to keep tracking in incognito mode.
+          when Meta and Yandex apps were shown to bypass every browser
+          safeguard to keep tracking in incognito mode.
         </p>
-        <p class="editorial__note">
-          Interactive scrollytelling version with ~12,000 words of narrative
-          is currently available in the Polish edition. English summaries
-          follow. Full translation planned for Phase 4.
+        <p class="kiedy__note">
+          Sixteen scenes — year by year, case by case. Scroll down, each
+          scene stops so you can read it. ~12,000 words of narrative.
         </p>
       </header>
 
-      <ol class="tl">
-        {scenes.map((s) => (
-          <li class="tl__item">
-            <p class="tl__year">{s.year}</p>
-            <div class="tl__body">
-              <h2 class="tl__title">{s.title}</h2>
-              <p class="tl__summary">{s.summary}</p>
-            </div>
-          </li>
-        ))}
-      </ol>
+      <ScrollTimeline
+        client:load
+        scenes={TIMELINE_SCENES_EN}
+        labels={{ casesLabel: 'Cases:', sceneLabel: 'Scene', casesHrefPrefix: '/en/cases/' }}
+      />
 
-      <p class="editorial__note" style="margin-top: var(--space-10);">
-        Try the interactive scrollytelling — <a href={url('/kiedy/')}>Polish timeline</a>.
-      </p>
+      <footer class="kiedy__footer">
+        <p class="meta">
+          Version 2 — sixteen scenes, ~700 words each. We continue to
+          deepen individual years.
+        </p>
+      </footer>
     </div>
-  </article>
+  </section>
 </PageEn>
 
 <style lang="scss">
-  .editorial {
-    padding-block: var(--space-8);
+  .kiedy {
+    padding-block: var(--space-8) 0;
   }
 
-  .editorial__header {
+  .kiedy__header {
     max-width: 760px;
     margin-bottom: var(--space-10);
   }
 
-  .editorial__header h1 {
+  .kiedy__header h1 {
     font-family: var(--font-serif);
-    font-size: 42px;
-    line-height: 1.15;
+    font-size: 52px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
     margin-block: var(--space-2) var(--space-4);
   }
 
-  .editorial__lede {
+  .kiedy__lede {
     font-size: 17px;
-    line-height: 1.55;
+    line-height: 1.6;
     color: var(--text-secondary);
     margin-bottom: var(--space-3);
   }
 
-  .editorial__note {
+  .kiedy__note {
     font-family: var(--font-mono);
     font-size: 12px;
     color: var(--text-tertiary);
-    padding-top: var(--space-2);
+    margin: 0;
+  }
+
+  .kiedy__footer {
+    margin-top: var(--space-16);
+    padding: var(--space-6) 0;
     border-top: 0.5px solid var(--border);
-    margin: 0;
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color var(--transition-fast);
-
-      &:hover { border-bottom-color: var(--accent); }
-    }
+    text-align: center;
   }
 
-  .tl {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  .kiedy__footer .meta {
+    color: var(--text-tertiary);
   }
 
-  .tl__item {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: var(--gap-5);
-    padding: var(--space-5) 0;
-    border-top: 0.5px solid var(--border);
-    max-width: 820px;
-
-    &:last-child {
-      border-bottom: 0.5px solid var(--border);
-    }
-  }
-
-  .tl__year {
-    font-family: var(--font-mono);
-    font-size: 14px;
-    color: var(--accent);
-    letter-spacing: 0.04em;
-    margin: 0;
-    padding-top: 4px;
-  }
-
-  .tl__title {
-    font-family: var(--font-serif);
-    font-size: 21px;
-    font-weight: 500;
-    line-height: 1.3;
-    margin: 0 0 var(--space-2);
-  }
-
-  .tl__summary {
-    font-size: 15px;
-    line-height: 1.6;
-    color: var(--text-secondary);
-    margin: 0;
-  }
-
-  @media (max-width: 640px) {
-    .tl__item {
-      grid-template-columns: 1fr;
+  @media (max-width: 900px) {
+    .kiedy__header h1 {
+      font-size: 36px;
     }
   }
 </style>

@@ -1,163 +1,50 @@
 ---
 import PageEn from '../../../layouts/PageEn.astro';
-import { url } from '../../../utils/url';
-
-const topics = [
-  { num: '01', topic: 'Location', question: 'Do any apps have access to your precise location?', reveal: 'Even "Never" settings often leak IP-based geolocation. Google kept tracking users who had turned Location History off — the 2022 multistate settlement cost $391.5M.' },
-  { num: '02', topic: 'Microphone', question: 'Is your microphone always available to an app running in the background?', reveal: 'Siri, Alexa, Google Assistant all listen for wake words. In 2019 it emerged that Apple contractors were grading intimate fragments of these recordings — including medical visits and sexual encounters.' },
-  { num: '03', topic: 'Camera', question: 'Have you ever checked which apps have permission to use your camera?', reveal: 'In 2019 TikTok was fined $5.7M (FTC) for collecting children\'s images. In 2023 Amazon paid $5.8M because Ring doorbell employees watched video of customers.' },
-  { num: '04', topic: 'Contacts', question: 'Do you know which apps can read your contacts?', reveal: 'WhatsApp (2021), LinkedIn (2020) and dozens of others automatically scrape your contact list. Information about people who never signed up for the service ends up in Meta and Microsoft databases.' },
-  { num: '05', topic: 'Ad targeting', question: 'Have you seen an ad that felt "too personalized"?', reveal: 'Google Location History kept running after users turned it off (2018). Meta served ads across websites without consent until the €390M Irish DPC fine in January 2023.' },
-  { num: '06', topic: 'Face', question: 'Have you ever uploaded a photo of your face to a public network?', reveal: 'Clearview AI has scraped 50+ billion face photos from Facebook, LinkedIn, Instagram. Sold to 2,400+ US police agencies. Fines in France, Italy, Greece, UK — all unpaid.' },
-  { num: '07', topic: 'Health', question: 'Does your app track your steps, sleep, heart rate?', reveal: 'Period-tracking apps have been subpoenaed by US prosecutors post-Roe. Health data, unlike medical records, is not protected by HIPAA when collected by non-medical apps.' },
-  { num: '08', topic: 'Financial', question: 'Do financial apps have access to your purchase history?', reveal: 'In 2012 Target predicted customers\' pregnancies from purchase patterns. Known case: a father in Minneapolis learned of his teenage daughter\'s pregnancy from a Target catalogue.' },
-  { num: '09', topic: 'Browser history', question: 'Do you know that "incognito" mode does not hide you from your ISP, employer, or visited sites?', reveal: 'Google Chrome Incognito was silently still logged by Google ad tech. Brown v. Google settled in 2023 — estimated $5 billion.' },
-  { num: '10', topic: 'E2E myth', question: 'Do you assume "end-to-end encryption" means your messages cannot be read by the platform?', reveal: 'Zoom advertised "E2EE" that did not exist. Keys stored on Zoom servers. Part of traffic routed through China. $85M class action (2021).' },
-  { num: '11', topic: 'Children', question: 'Do you know what age must be verified before a child uses an app?', reveal: 'TikTok made child accounts public by default. "Family Pairing" allowed adults to message minors without verification. €345M Irish DPC fine (September 2023).' },
-  { num: '12', topic: 'Deletion', question: 'Have you tried to delete data and checked whether it was actually deleted?', reveal: 'Amazon stored Alexa voice recordings indefinitely, even after deletion requests, including children\'s recordings. $25M FTC fine (2023).' },
-  { num: '13', topic: 'Data breach', question: 'Has any service you use ever suffered a data breach?', reveal: '533 million Facebook phone numbers leaked in 2021 (2.67 million Polish users). Equifax: 147 million Americans (2017). Most users never receive individual notice.' },
-  { num: '14', topic: 'Export', question: 'Have you ever requested a GDPR data export from a major service?', reveal: 'Max Schrems requested 1,200 pages from Facebook in 2011 as a 23-year-old student. His single request triggered Schrems I, Schrems II, and €2B+ in subsequent fines.' },
-  { num: '15', topic: 'AI training', question: 'Do you know which of your data was used to train AI models?', reveal: 'LinkedIn silently activated AI training on user posts and messages in 2024. Opt-out, not opt-in. €310M fine from Irish DPC. Meta, xAI (Grok), Gemini — all doing similar things.' },
-];
+import QuizEn from '../../../components/quiz/QuizEn';
 ---
 
 <PageEn
   title="How much they know — Big Tech Files"
-  description="Fifteen quick topics that map what Big Tech actually knows about you. Each linked to a documented case."
+  description="Fifteen quick questions that map what Big Tech actually knows about you. Each linked to a documented case."
 >
-  <article class="editorial">
+  <section class="quiz">
     <div class="container">
-      <header class="editorial__header">
-        <p class="meta" style="color: var(--text-tertiary)">Questionnaire — fifteen topics</p>
-        <h1>How much they know</h1>
-        <p class="editorial__lede">
-          Fifteen quick questions, one for each category of data that Big Tech
-          can — and in many cases does — hold on you. Each question is linked
-          to at least one documented case in the database.
-        </p>
-        <p class="editorial__note">
-          Interactive questionnaire with personal risk scoring is currently
-          available in the Polish edition. English topic list follows. The
-          full interactive version is planned for Phase 4.
+      <header class="quiz__header">
+        <p class="meta" style="color: var(--text-tertiary)">Diagnostic questionnaire — 15 questions</p>
+        <h1 class="quiz__title">How much they know</h1>
+        <p class="quiz__lede">
+          Fifteen quick questions about your digital habits. Each question is
+          linked to at least one documented case in the database. Answer
+          honestly — no-one is watching (this portal collects no data).
         </p>
       </header>
 
-      <ol class="topic-list">
-        {topics.map((t) => (
-          <li class="topic-list__item">
-            <span class="topic-list__num">{t.num}</span>
-            <div class="topic-list__body">
-              <p class="topic-list__topic">{t.topic}</p>
-              <p class="topic-list__question">{t.question}</p>
-              <p class="topic-list__reveal">{t.reveal}</p>
-            </div>
-          </li>
-        ))}
-      </ol>
-
-      <p class="editorial__note" style="margin-top: var(--space-10);">
-        Try the interactive version — <a href={url('/kwestionariusz/')}>Polish questionnaire</a>.
-      </p>
+      <QuizEn client:load />
     </div>
-  </article>
+  </section>
 </PageEn>
 
 <style lang="scss">
-  .editorial {
-    padding-block: var(--space-8);
+  .quiz {
+    padding-block: var(--space-8) var(--space-12);
   }
 
-  .editorial__header {
+  .quiz__header {
     max-width: 760px;
-    margin-bottom: var(--space-10);
+    margin-bottom: var(--space-8);
   }
 
-  .editorial__header h1 {
+  .quiz__title {
     font-family: var(--font-serif);
     font-size: 42px;
     line-height: 1.15;
     margin-block: var(--space-2) var(--space-4);
   }
 
-  .editorial__lede {
+  .quiz__lede {
     font-size: 17px;
-    line-height: 1.55;
-    color: var(--text-secondary);
-    margin-bottom: var(--space-3);
-  }
-
-  .editorial__note {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--text-tertiary);
-    padding-top: var(--space-2);
-    border-top: 0.5px solid var(--border);
-    margin: 0;
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color var(--transition-fast);
-
-      &:hover { border-bottom-color: var(--accent); }
-    }
-  }
-
-  .topic-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .topic-list__item {
-    display: grid;
-    grid-template-columns: 60px 1fr;
-    gap: var(--gap-4);
-    padding: var(--space-5) 0;
-    border-top: 0.5px solid var(--border);
-    max-width: 760px;
-
-    &:last-child {
-      border-bottom: 0.5px solid var(--border);
-    }
-  }
-
-  .topic-list__num {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--accent);
-    letter-spacing: 0.04em;
-  }
-
-  .topic-list__topic {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--text-tertiary);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin: 0 0 6px;
-  }
-
-  .topic-list__question {
-    font-family: var(--font-serif);
-    font-size: 17px;
-    font-weight: 500;
-    line-height: 1.4;
-    margin: 0 0 var(--space-2);
-    color: var(--text-primary);
-  }
-
-  .topic-list__reveal {
-    font-size: 14px;
     line-height: 1.6;
     color: var(--text-secondary);
     margin: 0;
-  }
-
-  @media (max-width: 640px) {
-    .topic-list__item {
-      grid-template-columns: 1fr;
-    }
   }
 </style>
