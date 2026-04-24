@@ -1,0 +1,263 @@
+---
+import StatusPillEn from '../ui/StatusPillEn.astro';
+import { formatFineEn, CATEGORY_LABELS_EN } from '../../utils/format';
+
+interface Fine {
+  amount: number;
+  currency: string;
+  authority: string;
+  date: string;
+  category: string;
+  status?: string;
+}
+
+interface Props {
+  id: string;
+  status: string;
+  companies: string[];
+  jurisdictions: string[];
+  legal_basis: string[];
+  fines: Fine[];
+  categories: string[];
+  year_revealed: number;
+  years_active?: [number, number];
+  lead_regulator?: string;
+  affected_users?: number;
+  affected_users_description?: string;
+  last_updated: string;
+}
+
+const {
+  id,
+  status,
+  companies,
+  jurisdictions,
+  legal_basis,
+  fines,
+  categories,
+  year_revealed,
+  years_active,
+  lead_regulator,
+  affected_users,
+  affected_users_description,
+  last_updated,
+} = Astro.props;
+
+const totalByCurrency = fines.reduce<Record<string, number>>((acc, f) => {
+  acc[f.currency] = (acc[f.currency] ?? 0) + f.amount;
+  return acc;
+}, {});
+---
+
+<aside class="case-meta" aria-label="Case metadata">
+  <div class="case-meta__block">
+    <span class="case-meta__label">Status</span>
+    <StatusPillEn status={status} />
+  </div>
+
+  <div class="case-meta__block">
+    <span class="case-meta__label">Case ID</span>
+    <span class="case-meta__value meta">{id}</span>
+  </div>
+
+  {companies.length > 0 && (
+    <div class="case-meta__block">
+      <span class="case-meta__label">Entity</span>
+      <span class="case-meta__value">{companies.join(', ')}</span>
+    </div>
+  )}
+
+  <div class="case-meta__block">
+    <span class="case-meta__label">Year revealed</span>
+    <span class="case-meta__value meta">{year_revealed}</span>
+  </div>
+
+  {years_active && (
+    <div class="case-meta__block">
+      <span class="case-meta__label">Years of practice</span>
+      <span class="case-meta__value meta">{years_active[0]}–{years_active[1]}</span>
+    </div>
+  )}
+
+  {jurisdictions.length > 0 && (
+    <div class="case-meta__block">
+      <span class="case-meta__label">Jurisdictions</span>
+      <span class="case-meta__value">{jurisdictions.join(', ')}</span>
+    </div>
+  )}
+
+  {lead_regulator && (
+    <div class="case-meta__block">
+      <span class="case-meta__label">Lead regulator</span>
+      <span class="case-meta__value">{lead_regulator}</span>
+    </div>
+  )}
+
+  {(affected_users || affected_users_description) && (
+    <div class="case-meta__block">
+      <span class="case-meta__label">Affected</span>
+      <span class="case-meta__value">
+        {affected_users_description ?? new Intl.NumberFormat('en-US').format(affected_users!)}
+      </span>
+    </div>
+  )}
+
+  {fines.length > 0 && (
+    <div class="case-meta__block">
+      <span class="case-meta__label">Total penalties</span>
+      <div class="case-meta__fines">
+        {Object.entries(totalByCurrency).map(([currency, amount]) => (
+          <span class="case-meta__value meta">{formatFineEn(amount, currency)}</span>
+        ))}
+      </div>
+    </div>
+  )}
+
+  {fines.length > 0 && (
+    <div class="case-meta__block">
+      <span class="case-meta__label">Penalties breakdown</span>
+      <table class="case-meta__fine-table">
+        {fines.map((f) => (
+          <tr>
+            <td class="meta">{formatFineEn(f.amount, f.currency)}</td>
+            <td>{f.authority}</td>
+            <td class="meta">{f.date}</td>
+          </tr>
+        ))}
+      </table>
+    </div>
+  )}
+
+  {legal_basis.length > 0 && (
+    <div class="case-meta__block">
+      <span class="case-meta__label">Legal basis</span>
+      <ul class="case-meta__list">
+        {legal_basis.map((lb) => <li>{lb}</li>)}
+      </ul>
+    </div>
+  )}
+
+  {categories.length > 0 && (
+    <div class="case-meta__block">
+      <span class="case-meta__label">Categories</span>
+      <div class="case-meta__tags">
+        {categories.map((cat) => (
+          <span class="case-meta__tag">{CATEGORY_LABELS_EN[cat] ?? cat}</span>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <div class="case-meta__block case-meta__block--updated">
+    <span class="case-meta__label">Last updated</span>
+    <span class="case-meta__value meta">{last_updated}</span>
+  </div>
+</aside>
+
+<style lang="scss">
+  .case-meta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-6);
+    padding: var(--gap-6);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    font-size: var(--text-small);
+  }
+
+  .case-meta__label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: var(--gap-1);
+  }
+
+  .case-meta__value {
+    color: var(--text-primary);
+    line-height: 1.4;
+  }
+
+  .case-meta__fines {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-1);
+  }
+
+  .case-meta__fine-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    td {
+      padding: var(--gap-1) 0;
+      vertical-align: top;
+      font-size: 12px;
+
+      &:first-child {
+        color: var(--text-primary);
+        padding-right: var(--gap-3);
+        white-space: nowrap;
+      }
+
+      &:nth-child(2) {
+        color: var(--text-secondary);
+        padding-right: var(--gap-2);
+      }
+
+      &:last-child {
+        color: var(--text-tertiary);
+        white-space: nowrap;
+      }
+    }
+
+    tr:not(:last-child) td {
+      border-bottom: 0.5px solid var(--border);
+      padding-bottom: var(--gap-2);
+      margin-bottom: var(--gap-1);
+    }
+  }
+
+  .case-meta__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-1);
+
+    li {
+      color: var(--text-secondary);
+      font-size: 12px;
+      line-height: 1.4;
+
+      &::before {
+        content: '—';
+        margin-right: 5px;
+        color: var(--text-tertiary);
+      }
+    }
+  }
+
+  .case-meta__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-1);
+  }
+
+  .case-meta__tag {
+    font-size: 11px;
+    padding: 1px 6px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    color: var(--text-secondary);
+  }
+
+  .case-meta__block--updated {
+    margin-top: auto;
+    padding-top: var(--gap-6);
+    border-top: 0.5px solid var(--border);
+  }
+</style>

@@ -65,6 +65,52 @@ export const STATUS_LABELS: Record<string, string> = {
   criminal_proceedings: 'Postępowanie karne',
 };
 
+export const STATUS_LABELS_EN: Record<string, string> = {
+  active_investigation: 'Active investigation',
+  settled: 'Settled',
+  withdrawn: 'Withdrawn',
+  concluded: 'Concluded',
+  ongoing_litigation: 'Ongoing litigation',
+  regulatory_monitoring: 'Under monitoring',
+  criminal_proceedings: 'Criminal proceedings',
+};
+
+export const CATEGORY_LABELS_EN: Record<string, string> = {
+  privacy: 'Privacy',
+  children_safety: 'Children safety',
+  election_manipulation: 'Election manipulation',
+  biometrics: 'Biometrics',
+  ai_training: 'AI training',
+  surveillance: 'Surveillance',
+  financial_deception: 'Financial deception',
+  content_moderation: 'Content moderation',
+  workers_access: 'Employee access',
+  false_security_claims: 'False security claims',
+  data_transfer: 'Data transfer',
+  geopolitics: 'Geopolitics',
+};
+
+export function formatAmountEn(amount: number): string {
+  if (amount >= 1_000_000_000) {
+    return `${(amount / 1_000_000_000).toFixed(1).replace('.0', '')}B`;
+  }
+  if (amount >= 1_000_000) {
+    return `${(amount / 1_000_000).toFixed(0)}M`;
+  }
+  return new Intl.NumberFormat('en-US').format(amount);
+}
+
+export function formatFineEn(amount: number, currency: string): string {
+  const formatted = new Intl.NumberFormat('en-US', {
+    maximumFractionDigits: 0,
+  }).format(amount);
+  // Currency prefix for EUR/USD/GBP, suffix for PLN
+  if (currency === 'EUR') return `€${formatted}`;
+  if (currency === 'USD') return `$${formatted}`;
+  if (currency === 'GBP') return `£${formatted}`;
+  return `${formatted} ${currency}`;
+}
+
 export const GROUP_LABELS: Record<string, string> = {
   A: 'Meta',
   B: 'Google',

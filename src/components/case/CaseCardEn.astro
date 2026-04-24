@@ -26,6 +26,8 @@ interface Props {
   priority?: string;
   hasExplainer?: boolean;
   featured?: boolean;
+  /** Whether a translated English card exists for this slug. If true, link points to /en/cases/{slug}/; otherwise to Polish /sprawy/{slug}/. */
+  hasEn?: boolean;
 }
 
 const {
@@ -43,7 +45,10 @@ const {
   priority,
   hasExplainer = false,
   featured = false,
+  hasEn = false,
 } = Astro.props;
+
+const cardHref = hasEn ? url(`/en/cases/${slug}/`) : url(`/sprawy/${slug}/`);
 
 const topFine = getTopFine(fines);
 const jurisdictionCount = jurisdictions.length;
@@ -79,7 +84,7 @@ const TAG_LABELS_EN: Record<string, string> = {
 ---
 
 <a
-  href={url(`/sprawy/${slug}/`)}
+  href={cardHref}
   class={`case-card${featured ? ' case-card--featured' : ''}${priority === 'TOP' ? ' case-card--top' : ''}`}
 >
   <div class="case-card__header">

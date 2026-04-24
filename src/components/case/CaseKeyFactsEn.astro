@@ -1,0 +1,166 @@
+---
+import { formatAmountEn, getTopFine, STATUS_LABELS_EN } from '../../utils/format';
+
+interface Fine {
+  amount: number;
+  currency: string;
+  authority: string;
+  date: string;
+  category: string;
+  status?: string;
+}
+
+interface Props {
+  fines: Fine[];
+  whistleblowers?: string[];
+  years_active?: [number, number];
+  jurisdictions?: string[];
+  status: string;
+  affected_users?: number;
+  affected_users_description?: string;
+}
+
+const {
+  fines,
+  whistleblowers = [],
+  years_active,
+  jurisdictions = [],
+  status,
+  affected_users,
+  affected_users_description,
+} = Astro.props;
+
+const topFine = getTopFine(fines) as (typeof fines)[number] | null;
+
+const whistleblowerLabel = whistleblowers.length > 0
+  ? whistleblowers.length === 1
+    ? whistleblowers[0]
+    : `${whistleblowers[0]} +${whistleblowers.length - 1}`
+  : null;
+
+const yearsLabel = years_active
+  ? years_active[0] === years_active[1]
+    ? `${years_active[0]}`
+    : `${years_active[0]}–${years_active[1]}`
+  : null;
+
+const affectedLabel = (() => {
+  if (!affected_users) return null;
+  if (affected_users >= 1_000_000_000) return `${(affected_users / 1_000_000_000).toFixed(1)}B`;
+  if (affected_users >= 1_000_000) return `${Math.round(affected_users / 1_000_000)}M`;
+  if (affected_users >= 1_000) return `${Math.round(affected_users / 1_000)}K`;
+  return affected_users.toString();
+})();
+
+const statusLabel = STATUS_LABELS_EN[status] ?? status;
+
+// Currency symbol
+function currencySymbol(c: string): string {
+  if (c === 'EUR') return '€';
+  if (c === 'USD') return '$';
+  if (c === 'GBP') return '£';
+  return c + ' ';
+}
+---
+
+<aside class="keyfacts" aria-label="Key facts">
+  {topFine && (
+    <div class="keyfacts__item">
+      <span class="keyfacts__label meta">Largest fine</span>
+      <span class="keyfacts__value">
+        {currencySymbol(topFine.currency)}{formatAmountEn(topFine.amount)}
+      </span>
+      <span class="keyfacts__desc">{topFine.authority}</span>
+    </div>
+  )}
+
+  {affectedLabel && (
+    <div class="keyfacts__item">
+      <span class="keyfacts__label meta">Affected</span>
+      <span class="keyfacts__value">{affectedLabel}</span>
+      {affected_users_description && (
+        <span class="keyfacts__desc">{affected_users_description}</span>
+      )}
+    </div>
+  )}
+
+  {whistleblowerLabel && (
+    <div class="keyfacts__item">
+      <span class="keyfacts__label meta">Whistleblower</span>
+      <span class="keyfacts__value keyfacts__value--small">{whistleblowerLabel}</span>
+      <span class="keyfacts__desc">brought the case to light</span>
+    </div>
+  )}
+
+  {yearsLabel && (
+    <div class="keyfacts__item">
+      <span class="keyfacts__label meta">Years of practice</span>
+      <span class="keyfacts__value">{yearsLabel}</span>
+      <span class="keyfacts__desc">period covered by documentation</span>
+    </div>
+  )}
+
+  {jurisdictions.length > 0 && (
+    <div class="keyfacts__item">
+      <span class="keyfacts__label meta">Jurisdictions</span>
+      <span class="keyfacts__value">{jurisdictions.length}</span>
+      <span class="keyfacts__desc">{jurisdictions.slice(0, 4).join(', ')}{jurisdictions.length > 4 ? ` +${jurisdictions.length - 4}` : ''}</span>
+    </div>
+  )}
+
+  <div class="keyfacts__item">
+    <span class="keyfacts__label meta">Status</span>
+    <span class="keyfacts__value keyfacts__value--small">{statusLabel}</span>
+  </div>
+</aside>
+
+<style lang="scss">
+  .keyfacts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-5);
+    padding: var(--space-5) var(--space-6);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    border: 0.5px solid var(--border);
+    margin-bottom: var(--space-8);
+  }
+
+  .keyfacts__item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .keyfacts__label {
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .keyfacts__value {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+
+    &--small {
+      font-size: 15px;
+      line-height: 1.25;
+    }
+  }
+
+  .keyfacts__desc {
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>

@@ -1,0 +1,94 @@
+---
+import { url } from '../../utils/url';
+
+interface Props {
+  src: string;
+  duration?: string;
+  title?: string;
+}
+
+const { src, duration = '60s', title } = Astro.props;
+const resolvedSrc = url(src);
+---
+
+<section class="explainer">
+  <header class="explainer__header">
+    <p class="explainer__kicker meta">Explainer · {duration}</p>
+    {title && <p class="explainer__title">{title}</p>}
+    <p class="explainer__help meta">
+      Static animation (SVG + CSS). No audio. No trackers.
+      <a href={resolvedSrc} target="_blank" rel="noopener">Open in a new window ↗</a>
+    </p>
+  </header>
+  <div class="explainer__frame">
+    <iframe
+      src={resolvedSrc}
+      title={title ?? `60-second explainer`}
+      loading="lazy"
+      sandbox="allow-scripts allow-same-origin"
+    ></iframe>
+  </div>
+</section>
+
+<style lang="scss">
+  .explainer {
+    margin-bottom: var(--space-8);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--bg-card);
+  }
+
+  .explainer__header {
+    padding: var(--space-4) var(--space-5);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .explainer__kicker {
+    color: var(--accent);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0 0 4px;
+  }
+
+  .explainer__title {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0 0 6px;
+  }
+
+  .explainer__help {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin: 0;
+
+    a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      margin-left: 4px;
+
+      &:hover {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .explainer__frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: var(--bg-card);
+
+    iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+</style>

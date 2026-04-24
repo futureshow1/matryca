@@ -1,190 +1,156 @@
 ---
+import { getCollection } from 'astro:content';
 import PageEn from '../../../layouts/PageEn.astro';
+import CaseCardEn from '../../../components/case/CaseCardEn.astro';
 import { url } from '../../../utils/url';
 
-const cases = [
-  { id: 'A01', slug: 'a01-local-mess', title: 'Local Mess', year: 2025, company: 'Meta', summary: 'Meta and Yandex apps covertly used localhost sockets to re-identify incognito browser sessions. Eight years of practice. Three hours to switch off after publication.' },
-  { id: 'A02', slug: 'a02-cambridge-analytica', title: 'Cambridge Analytica', year: 2018, company: 'Meta', summary: '87 million Facebook profiles harvested via a personality-test app. Psychographic targeting in Trump 2016 and Brexit. $5B FTC fine. Stock went up.' },
-  { id: 'A03', slug: 'a03-onavo-i-facebook-research-vpn-project-atlas', title: 'Onavo / Facebook Research / Project Atlas', year: 2019, company: 'Meta', summary: 'Facebook paid teenagers $20/month for root access to their phones via a "research VPN" that bypassed Apple and Google app store rules.' },
-  { id: 'A04', slug: 'a04-wyciek-533-milionow-numerow-facebooka-z-2-67-mln-polakow', title: 'Leak of 533M phone numbers', year: 2021, company: 'Meta', summary: '533 million Facebook phone numbers scraped via a contact-import flaw. 2.67 million Polish users among them. Meta declined to notify affected users.' },
-  { id: 'A05', slug: 'a05-facebook-files', title: 'Facebook Files / Frances Haugen', year: 2021, company: 'Meta', summary: '22,000 internal pages leaked by Frances Haugen. Instagram documented as harmful to teen girls. Senate testimony, SEC filings, EU disclosures.' },
-  { id: 'A06', slug: 'a06-emotional-contagion', title: 'Emotional contagion experiment', year: 2014, company: 'Meta', summary: 'Facebook manipulated feeds of 689,003 users for one week without informed consent. Published in PNAS. Sparked the ethics debate about platform experiments.' },
-  { id: 'A07', slug: 'a07-meta-1-2-mld-dpc', title: 'Meta — €1.2B DPC fine', year: 2023, company: 'Meta', summary: 'Record GDPR fine for transferring EU user data to the US without legal basis after Schrems II. Stock price rose the week after.' },
-  { id: 'A08', slug: 'a08-new-mexico-v-meta', title: 'New Mexico v. Meta', year: 2023, company: 'Meta', summary: 'New Mexico AG sued Meta for exposing children to sexual content and predators. Internal documents revealed Meta knew for years and did nothing.' },
-  { id: 'A09', slug: 'a09-kara-390-mln-dpc', title: '€390M fine — behavioral ads', year: 2023, company: 'Meta', summary: 'Meta cannot automatically serve behavioral ads based on "contract performance". Must ask for consent. Nine-year legal journey by Max Schrems.' },
-  { id: 'A10', slug: 'a10-kara-dma-200-mln-komisji-europejskiej', title: '€200M DMA fine', year: 2025, company: 'Meta', summary: 'First penalty under the EU Digital Markets Act. Meta\'s "pay or consent" subscription model ruled incompatible with free choice.' },
-  { id: 'B01', slug: 'b01-google-street-view-wi-spy', title: 'Google Street View Wi-Spy', year: 2010, company: 'Google', summary: 'Street View cars collected fragments of open Wi-Fi traffic — emails, passwords, URLs — in 30+ countries for three years. Hamburg regulator forced disclosure.' },
-  { id: 'B02', slug: 'b02-google-safari-workaround', title: 'Google Safari workaround', year: 2012, company: 'Google', summary: 'Google circumvented Safari\'s default cookie block via a hidden form trick. $22.5M FTC fine — at the time, largest privacy fine in US history.' },
-  { id: 'B03', slug: 'b03-google-api-bugs', title: 'Google+ API bugs', year: 2018, company: 'Google', summary: 'Two API bugs exposed private data of ~500,000 users (2015) and 52.5 million (2018). Google chose not to disclose. $7.5M class-action settlement.' },
-  { id: 'B04', slug: 'b04-google-location-history', title: 'Google Location History', year: 2018, company: 'Google', summary: 'Google continued tracking users even after they turned Location History off. AP investigation, 40-state settlement, $391.5 million.' },
-  { id: 'B05', slug: 'b05-brown-v-google', title: 'Brown v. Google', year: 2020, company: 'Google', summary: 'Class action over Chrome Incognito mode secretly still being tracked by Google. Settled in 2023 — details sealed, estimated $5 billion.' },
-  { id: 'B06', slug: 'b06-project-dragonfly', title: 'Project Dragonfly', year: 2018, company: 'Google', summary: 'Secret Google project to build a censored search engine for China. Exposed by The Intercept. Internal revolt by engineers. Project officially dead in 2019.' },
-  { id: 'C01', slug: 'c01-apple-batterygate', title: 'Apple "Batterygate"', year: 2017, company: 'Apple', summary: 'Apple secretly throttled older iPhones. $500M US class action, $25M French CNIL fine, €10M Italian Antitrust.' },
-  { id: 'C02', slug: 'c02-apple-siri-grading', title: 'Apple Siri grading', year: 2019, company: 'Apple', summary: 'Apple contractors listened to intimate Siri recordings — medical appointments, sex, business calls — for quality grading. No opt-in, no notice.' },
-  { id: 'C03', slug: 'c03-apple-csam', title: 'Apple CSAM scanning', year: 2021, company: 'Apple', summary: 'Apple announced on-device scanning for child sexual abuse material. EFF and cryptographers warned: the infrastructure is reusable for dissident surveillance. Apple backed down in three weeks.' },
-  { id: 'C04', slug: 'c04-microsoft-recall', title: 'Microsoft Recall', year: 2024, company: 'Microsoft', summary: 'Windows 11 feature took screenshots every few seconds. Security researchers demonstrated plaintext extraction. Microsoft delayed launch indefinitely.' },
-  { id: 'C05', slug: 'c05-linkedin-ai-training', title: 'LinkedIn AI training', year: 2024, company: 'LinkedIn / Microsoft', summary: 'LinkedIn quietly activated AI training on user posts and messages. Opt-out, not opt-in. Irish DPC — €310 million fine.' },
-  { id: 'D01', slug: 'd01-amazon-ring', title: 'Amazon Ring', year: 2023, company: 'Amazon', summary: 'Ring doorbell employees watched video recordings of customers for years. Police accessed footage without warrants. $5.8M FTC fine.' },
-  { id: 'D02', slug: 'd02-amazon-alexa', title: 'Amazon Alexa recordings', year: 2019, company: 'Amazon', summary: 'Amazon stored Alexa recordings indefinitely, even after user deletion. Employees transcribed samples. Class actions across multiple states.' },
-  { id: 'D03', slug: 'd03-amazon-alexa-coppa', title: 'Amazon Alexa COPPA', year: 2023, company: 'Amazon', summary: 'Amazon retained children\'s voice recordings indefinitely in violation of COPPA. $25M FTC fine.' },
-  { id: 'D04', slug: 'd04-uber-god-view', title: 'Uber God View', year: 2014, company: 'Uber', summary: 'Uber employees used "God View" tool to track journalists, celebrities, ex-partners in real time. $20K New York AG settlement — for abuse that should have cost millions.' },
-  { id: 'D05', slug: 'd05-uber-greyball', title: 'Uber Greyball', year: 2017, company: 'Uber', summary: 'Software tool to identify and deceive regulators and police. Deployed in Portland, Paris, Boston, Philadelphia. Exposed by NYT.' },
-  { id: 'D06', slug: 'd06-uber-2016-breach', title: 'Uber 2016 breach', year: 2017, company: 'Uber', summary: 'Hacker stole data of 57 million users and drivers. Uber paid hacker $100,000 to conceal the breach. CSO Joe Sullivan convicted of obstruction in 2022.' },
-  { id: 'E01', slug: 'e01-tiktok-bytedance', title: 'TikTok / ByteDance', year: 2020, company: 'TikTok', summary: 'TikTok algorithm, addictive design, data flows to China. Multiple investigations worldwide.' },
-  { id: 'E02', slug: 'e02-tiktok-dzieci', title: 'TikTok — children', year: 2023, company: 'TikTok', summary: 'Child accounts were public by default. "Family Pairing" allowed adults to message minors without verification. €345M Irish DPC fine.' },
-  { id: 'E03', slug: 'e03-tiktok-chiny', title: 'TikTok — data transfers to China', year: 2022, company: 'TikTok', summary: 'Internal TikTok recordings confirmed Beijing-based ByteDance staff accessing US user data. Emily Baker-White reporting. Ongoing proceedings.' },
-  { id: 'E04', slug: 'e04-x-grok', title: 'X / Grok Imagine', year: 2024, company: 'X / xAI', summary: 'xAI launched image generator without safety filters. Taylor Swift deepfakes, political fakes, violence. EU DSA investigation.' },
-  { id: 'E05', slug: 'e05-clearview-ai', title: 'Clearview AI', year: 2020, company: 'Clearview AI', summary: '50+ billion face photos scraped from the public internet. Sold to police. Massive European fines — all unpaid. Firm maintains it is outside GDPR reach.' },
-  { id: 'E06', slug: 'e06-zoom', title: 'Zoom — end-to-end myth', year: 2020, company: 'Zoom', summary: 'Zoom marketed "E2EE" that did not exist. Keys stored on Zoom servers. Traffic routed through China. $85M class-action settlement.' },
-];
+const allCases = await getCollection('cases');
+const allCasesEn = await getCollection('cases_en');
+const enById = new Map(allCasesEn.map((c) => [c.data.id, c]));
+
+// Fallback English titles for cases that don't yet have a full EN translation
+const EN_TITLES_FALLBACK: Record<string, { title: string; subtitle?: string }> = {
+  A01: { title: 'Local Mess', subtitle: 'Meta and Yandex apps bypassed incognito via localhost sockets.' },
+  A02: { title: 'Cambridge Analytica', subtitle: '87 million Facebook profiles harvested for psychographic targeting.' },
+  A03: { title: 'Onavo / Project Atlas', subtitle: 'Facebook paid teens $20/month for root access to their phones.' },
+  A04: { title: '533 million phone numbers', subtitle: 'Facebook scraping flaw exposed 2.67 million Polish users among others.' },
+  A05: { title: 'Facebook Files', subtitle: 'Frances Haugen carried 22,000 internal pages out of Meta.' },
+  A06: { title: 'Emotional contagion', subtitle: '689,003 users manipulated for one week without informed consent.' },
+  A07: { title: '€1.2B DPC fine', subtitle: 'Record GDPR penalty for US data transfers after Schrems II.' },
+  A08: { title: 'New Mexico v. Meta', subtitle: 'Meta internally knew children were being exposed to predators.' },
+  A09: { title: '€390M behavioral-ads fine', subtitle: 'Meta cannot serve behavioral ads on contract-performance basis.' },
+  A10: { title: '€200M DMA fine', subtitle: 'First penalty under the EU Digital Markets Act — against Meta.' },
+  B01: { title: 'Google Street View Wi-Spy', subtitle: 'Street View cars collected Wi-Fi traffic fragments in 30+ countries.' },
+  B02: { title: 'Google Safari workaround', subtitle: 'Google bypassed Safari default cookie block. $22.5M FTC fine.' },
+  B03: { title: 'Google+ API bugs', subtitle: 'Two API bugs exposed millions of users. Google chose not to disclose.' },
+  B04: { title: 'Google Location History', subtitle: 'Google kept tracking users who had turned Location History off.' },
+  B05: { title: 'Brown v. Google', subtitle: 'Chrome Incognito mode was secretly still tracked. ~$5B settlement.' },
+  B06: { title: 'Project Dragonfly', subtitle: 'Google secret plan for a censored Chinese search engine.' },
+  C01: { title: 'Apple Batterygate', subtitle: 'Apple secretly throttled older iPhones. $500M class action.' },
+  C02: { title: 'Apple Siri grading', subtitle: 'Contractors listened to intimate Siri recordings without opt-in.' },
+  C03: { title: 'Apple CSAM scanning', subtitle: 'Proposed on-device surveillance. EFF protested. Withdrawn in 3 weeks.' },
+  C04: { title: 'Microsoft Recall', subtitle: 'Windows 11 screenshot-every-few-seconds feature. Security nightmare.' },
+  C05: { title: 'LinkedIn AI training', subtitle: 'LinkedIn silently activated AI training on posts and messages.' },
+  D01: { title: 'Amazon Ring', subtitle: 'Ring employees watched customer video for years.' },
+  D02: { title: 'Amazon Alexa', subtitle: 'Indefinite voice-recording retention. Class actions across states.' },
+  D03: { title: 'Amazon Alexa COPPA', subtitle: 'Amazon kept children voice recordings in violation of COPPA.' },
+  D04: { title: 'Uber God View', subtitle: 'Employees tracked journalists, celebrities, ex-partners in real time.' },
+  D05: { title: 'Uber Greyball', subtitle: 'Tool to identify and deceive regulators. Deployed on multiple continents.' },
+  D06: { title: 'Uber 2016 breach', subtitle: '57 million users. $100,000 paid to hacker to conceal. CSO convicted.' },
+  E01: { title: 'TikTok / ByteDance', subtitle: 'Addictive algorithm, teen-targeted design, China-ownership concerns.' },
+  E02: { title: 'TikTok — children', subtitle: 'Child accounts public by default. €345M Irish DPC fine.' },
+  E03: { title: 'TikTok — data to China', subtitle: 'Internal recordings confirmed Beijing access to US user data.' },
+  E04: { title: 'X / Grok Imagine', subtitle: 'xAI launched image generator without safety filters. Deepfakes followed.' },
+  E05: { title: 'Clearview AI', subtitle: '50+ billion scraped face photos. Sold to police.' },
+  E06: { title: 'Zoom — end-to-end myth', subtitle: 'E2EE marketing that was false. $85M settlement.' },
+};
+
+// Merge and sort: show all 33 cases
+const merged = allCases.map((c) => {
+  const en = enById.get(c.data.id);
+  const fallback = EN_TITLES_FALLBACK[c.data.id];
+  return {
+    data: c.data,
+    title: en?.data.title ?? fallback?.title ?? c.data.title,
+    subtitle: en?.data.subtitle ?? fallback?.subtitle ?? c.data.subtitle,
+    hasEn: !!en,
+  };
+});
+
+// Sort by group, then ID
+merged.sort((a, b) => {
+  if (a.data.group !== b.data.group) return a.data.group.localeCompare(b.data.group);
+  return a.data.id.localeCompare(b.data.id);
+});
+
+const translatedCount = merged.filter((c) => c.hasEn).length;
 ---
 
 <PageEn
   title="Cases — Big Tech Files"
-  description="33 documented cases of privacy, security and ethics violations by Big Tech companies. Reference base for journalists, lawyers, academics."
+  description="33 documented cases of Big Tech privacy, security and ethics violations. Full English translations as they come in; others link to the Polish original."
 >
-  <article class="editorial">
+  <section class="cases">
     <div class="container">
-      <header class="editorial__header">
+      <header class="cases__header">
         <p class="meta" style="color: var(--text-tertiary)">33 documented cases</p>
-        <h1>Cases</h1>
-        <p class="editorial__lede">
+        <h1 class="cases__title">Cases</h1>
+        <p class="cases__lede">
           Each case card is a reference document based exclusively on regulatory
           decisions, court records, investigative journalism, academic research
           and whistleblower disclosures. All figures and dates are verified
           against at least two independent sources.
         </p>
-        <p class="editorial__note">
-          Full case cards (3,000–4,000 words each) are currently available in
-          the Polish edition. English summaries are listed below. Click a title
-          to open the Polish card — the source notes and citations are largely
-          language-independent.
+        <p class="cases__status meta">
+          <strong>{translatedCount}</strong> of <strong>33</strong> cards fully translated into English.
+          Cards without a full translation link to the Polish original.
         </p>
       </header>
 
-      <ul class="case-list">
-        {cases.map((c) => (
-          <li class="case-list__item">
-            <a href={url(`/sprawy/${c.slug}/`)} class="case-list__link">
-              <span class="case-list__id">{c.id}</span>
-              <span class="case-list__year">{c.year}</span>
-              <div class="case-list__body">
-                <p class="case-list__title">{c.title}</p>
-                <p class="case-list__company">{c.company}</p>
-                <p class="case-list__summary">{c.summary}</p>
-              </div>
-            </a>
-          </li>
+      <div class="cases__grid">
+        {merged.map((c) => (
+          <CaseCardEn
+            id={c.data.id}
+            slug={c.data.slug}
+            group={c.data.group}
+            title={c.title}
+            subtitle={c.subtitle}
+            companies={c.data.companies}
+            year_revealed={c.data.year_revealed}
+            status={c.data.status}
+            fines={c.data.fines}
+            jurisdictions={c.data.jurisdictions}
+            tags={c.data.tags}
+            priority={c.data.priority}
+            hasExplainer={!!c.data.explainer}
+            hasEn={c.hasEn}
+          />
         ))}
-      </ul>
+      </div>
     </div>
-  </article>
+  </section>
 </PageEn>
 
 <style lang="scss">
-  .editorial {
+  .cases {
     padding-block: var(--space-8);
   }
 
-  .editorial__header {
+  .cases__header {
     max-width: 760px;
     margin-bottom: var(--space-10);
   }
 
-  .editorial__header h1 {
+  .cases__title {
     font-family: var(--font-serif);
     font-size: 42px;
     line-height: 1.15;
     margin-block: var(--space-2) var(--space-4);
   }
 
-  .editorial__lede {
+  .cases__lede {
     font-size: 17px;
     line-height: 1.55;
     color: var(--text-secondary);
     margin-bottom: var(--space-3);
   }
 
-  .editorial__note {
-    font-family: var(--font-mono);
+  .cases__status {
     font-size: 12px;
     color: var(--text-tertiary);
-    margin: 0;
     padding-top: var(--space-2);
     border-top: 0.5px solid var(--border);
-  }
-
-  .case-list {
-    list-style: none;
     margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
 
-  .case-list__item {
-    border-top: 0.5px solid var(--border);
-
-    &:last-child {
-      border-bottom: 0.5px solid var(--border);
+    strong {
+      color: var(--accent);
+      font-weight: 500;
     }
   }
 
-  .case-list__link {
+  .cases__grid {
     display: grid;
-    grid-template-columns: 60px 60px 1fr;
-    gap: var(--gap-4);
-    padding: var(--space-4) 0;
-    text-decoration: none;
-    color: inherit;
-    transition: color var(--transition-fast);
-
-    &:hover {
-      .case-list__title { color: var(--accent); }
-    }
-  }
-
-  .case-list__id {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--accent);
-    letter-spacing: 0.04em;
-  }
-
-  .case-list__year {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--text-tertiary);
-  }
-
-  .case-list__title {
-    font-family: var(--font-serif);
-    font-size: 20px;
-    font-weight: 500;
-    margin: 0 0 4px;
-    transition: color var(--transition-fast);
-  }
-
-  .case-list__company {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--text-tertiary);
-    letter-spacing: 0.06em;
-    margin: 0 0 8px;
-  }
-
-  .case-list__summary {
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--text-secondary);
-    margin: 0;
-    max-width: 640px;
-  }
-
-  @media (max-width: 640px) {
-    .case-list__link {
-      grid-template-columns: 1fr;
-    }
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--gap-3);
   }
 </style>

@@ -1,0 +1,204 @@
+---
+import PageEn from './PageEn.astro';
+import CaseMetaEn from '../components/case/CaseMetaEn.astro';
+import CaseKeyFactsEn from '../components/case/CaseKeyFactsEn.astro';
+import CaseExplainerEn from '../components/case/CaseExplainerEn.astro';
+import Badge from '../components/ui/Badge.astro';
+import RelatedCasesEn from '../components/case/RelatedCasesEn.astro';
+import { url } from '../utils/url';
+
+interface Fine {
+  amount: number;
+  currency: string;
+  authority: string;
+  date: string;
+  category: string;
+  status?: string;
+}
+
+interface Props {
+  id: string;
+  slug: string;
+  group: 'A' | 'B' | 'C' | 'D' | 'E';
+  group_label: string;
+  title: string;
+  subtitle?: string;
+  status: string;
+  companies: string[];
+  jurisdictions: string[];
+  legal_basis: string[];
+  fines: Fine[];
+  categories: string[];
+  year_revealed: number;
+  years_active?: [number, number];
+  lead_regulator?: string;
+  affected_users?: number;
+  affected_users_description?: string;
+  last_updated: string;
+  related_cases: string[];
+  whistleblowers?: string[];
+  explainer?: { src: string; duration?: string; title?: string };
+  seo_description?: string;
+}
+
+const {
+  id,
+  group,
+  title,
+  subtitle,
+  status,
+  companies,
+  jurisdictions,
+  legal_basis,
+  fines,
+  categories,
+  year_revealed,
+  years_active,
+  lead_regulator,
+  affected_users,
+  affected_users_description,
+  last_updated,
+  related_cases,
+  whistleblowers,
+  explainer,
+  seo_description,
+} = Astro.props;
+---
+
+<PageEn title={title} description={seo_description}>
+  <article class="case-page">
+    <div class="container">
+      <header class="case-page__header">
+        <div class="case-page__breadcrumb">
+          <a href={url('/en/cases/')}>All cases</a>
+          <span aria-hidden="true">/</span>
+          <Badge group={group} size="sm" />
+        </div>
+        <h1 class="case-page__title">{title}</h1>
+        {subtitle && <p class="case-page__subtitle">{subtitle}</p>}
+      </header>
+
+      <CaseKeyFactsEn
+        fines={fines}
+        whistleblowers={whistleblowers}
+        years_active={years_active}
+        jurisdictions={jurisdictions}
+        status={status}
+        affected_users={affected_users}
+        affected_users_description={affected_users_description}
+      />
+
+      {explainer && (
+        <CaseExplainerEn
+          src={explainer.src}
+          duration={explainer.duration}
+          title={explainer.title}
+        />
+      )}
+
+      <div class="case-page__layout">
+        <div class="case-page__content prose">
+          <slot />
+        </div>
+
+        <div class="case-page__sidebar">
+          <CaseMetaEn
+            id={id}
+            status={status}
+            companies={companies}
+            jurisdictions={jurisdictions}
+            legal_basis={legal_basis}
+            fines={fines}
+            categories={categories}
+            year_revealed={year_revealed}
+            years_active={years_active}
+            lead_regulator={lead_regulator}
+            affected_users={affected_users}
+            affected_users_description={affected_users_description}
+            last_updated={last_updated}
+          />
+        </div>
+      </div>
+
+      {related_cases && related_cases.length > 0 && (
+        <RelatedCasesEn ids={related_cases} currentId={id} />
+      )}
+    </div>
+  </article>
+</PageEn>
+
+<style lang="scss">
+  .case-page {
+    padding-block: var(--space-8);
+  }
+
+  .case-page__breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-2);
+    margin-bottom: var(--space-6);
+    font-size: var(--text-small);
+    color: var(--text-secondary);
+
+    a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      transition: color var(--transition-fast);
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+
+  .case-page__header {
+    margin-bottom: var(--space-8);
+  }
+
+  .case-page__title {
+    font-family: var(--font-serif);
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: var(--space-3);
+    max-width: 800px;
+
+    @media (max-width: 640px) {
+      font-size: 26px;
+    }
+  }
+
+  .case-page__subtitle {
+    font-size: 17px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    max-width: 600px;
+  }
+
+  .case-page__layout {
+    display: grid;
+    grid-template-columns: 1fr var(--sidebar-width);
+    gap: var(--space-12);
+    align-items: start;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .case-page__content {
+    min-width: 0;
+  }
+
+  .case-page__sidebar {
+    position: sticky;
+    top: calc(var(--space-8) + 60px);
+
+    @media (max-width: 900px) {
+      position: static;
+      order: -1;
+    }
+  }
+</style>

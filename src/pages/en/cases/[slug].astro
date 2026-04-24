@@ -1,0 +1,43 @@
+---
+import { getCollection, render } from 'astro:content';
+import CaseLayoutEn from '../../../layouts/CaseEn.astro';
+
+export async function getStaticPaths() {
+  const cases = await getCollection('cases_en');
+  return cases.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+---
+
+<CaseLayoutEn
+  id={d.id}
+  slug={d.slug}
+  group={d.group}
+  group_label={d.group_label}
+  title={d.title}
+  subtitle={d.subtitle}
+  status={d.status}
+  companies={d.companies}
+  jurisdictions={d.jurisdictions}
+  legal_basis={d.legal_basis}
+  fines={d.fines}
+  categories={d.categories}
+  year_revealed={d.year_revealed}
+  years_active={d.years_active}
+  lead_regulator={d.lead_regulator}
+  affected_users={d.affected_users}
+  affected_users_description={d.affected_users_description}
+  last_updated={d.last_updated}
+  related_cases={d.related_cases}
+  whistleblowers={d.whistleblowers}
+  explainer={d.explainer}
+  seo_description={d.seo_description}
+>
+  <Content />
+</CaseLayoutEn>

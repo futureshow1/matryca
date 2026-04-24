@@ -5,6 +5,8 @@ import CaseCardEn from '../../components/case/CaseCardEn.astro';
 import { url } from '../../utils/url';
 
 const allCases = await getCollection('cases');
+const allCasesEn = await getCollection('cases_en');
+const enById = new Map(allCasesEn.map((c) => [c.data.id, c]));
 
 // Stats — state-imposed fines (regulators + state AGs) counted separately from class actions
 const govCategories = ['regulatory_fine', 'state_attorney_general'] as const;
@@ -72,8 +74,15 @@ const EN_TITLES: Record<string, { title: string; subtitle?: string }> = {
 };
 
 const withEnTitle = (c: typeof allCases[number]) => {
+  // Prefer full EN translation frontmatter when available
+  const enCard = enById.get(c.data.id);
+  if (enCard) {
+    return { title: enCard.data.title, subtitle: enCard.data.subtitle, hasEn: true };
+  }
+  // Fall back to inline English title map
   const override = EN_TITLES[c.data.id];
-  return override ?? { title: c.data.title, subtitle: c.data.subtitle };
+  if (override) return { ...override, hasEn: false };
+  return { title: c.data.title, subtitle: c.data.subtitle, hasEn: false };
 };
 
 // TOP cases
@@ -263,14 +272,15 @@ const doors = [
               tags={c.data.tags}
               priority={c.data.priority}
               hasExplainer={!!c.data.explainer}
+              hasEn={en.hasEn}
             />
           );
         })}
       </div>
 
       <p class="featured__note meta">
-        Clicking a card opens the full Polish case document — the primary source
-        of truth. English summaries are on the <a href={url('/en/cases/')}>cases index</a>.
+        Cards with a full English translation open in English; others fall back
+        to the Polish original. All 33 cards: <a href={url('/en/cases/')}>cases index</a>.
       </p>
     </div>
   </section>
