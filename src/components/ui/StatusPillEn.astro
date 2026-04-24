@@ -1,0 +1,63 @@
+---
+interface Props {
+  status: string;
+}
+
+const { status } = Astro.props;
+
+const labels: Record<string, string> = {
+  active_investigation: 'Active investigation',
+  settled: 'Settled',
+  withdrawn: 'Withdrawn',
+  concluded: 'Concluded',
+  ongoing_litigation: 'Ongoing litigation',
+  regulatory_monitoring: 'Under monitoring',
+  criminal_proceedings: 'Criminal proceedings',
+};
+
+const label = labels[status] ?? status;
+---
+
+<span class={`status-pill status-pill--${status.replace(/_/g, '-')}`}>
+  {label}
+</span>
+
+<style lang="scss">
+  .status-pill {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.03em;
+    padding: 2px 7px;
+    border-radius: var(--radius-sm);
+    border: 0.5px solid currentColor;
+    white-space: nowrap;
+
+    &--active-investigation,
+    &--ongoing-litigation,
+    &--criminal-proceedings {
+      color: #b45309;
+      background: rgba(180, 83, 9, 0.06);
+      [data-theme='dark'] & {
+        color: #fbbf24;
+        background: rgba(251, 191, 36, 0.08);
+      }
+    }
+
+    &--settled,
+    &--concluded {
+      color: var(--text-secondary);
+      background: transparent;
+    }
+
+    &--regulatory-monitoring {
+      color: var(--accent);
+      background: var(--accent-bg);
+    }
+
+    &--withdrawn {
+      color: var(--text-tertiary);
+      background: transparent;
+    }
+  }
+</style>

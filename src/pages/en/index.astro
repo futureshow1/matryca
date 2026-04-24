@@ -1,12 +1,136 @@
 ---
-import Page from '../../layouts/PageEn.astro';
+import { getCollection } from 'astro:content';
+import PageEn from '../../layouts/PageEn.astro';
+import CaseCardEn from '../../components/case/CaseCardEn.astro';
 import { url } from '../../utils/url';
+
+const allCases = await getCollection('cases');
+
+// Stats — state-imposed fines (regulators + state AGs) counted separately from class actions
+const govCategories = ['regulatory_fine', 'state_attorney_general'] as const;
+type FineCategory = typeof govCategories[number];
+const isGovFine = (cat: string | undefined): cat is FineCategory =>
+  govCategories.includes(cat as FineCategory);
+
+const totalFinesEUR = allCases.reduce((sum, c) => {
+  return sum + c.data.fines
+    .filter((f) => f.currency === 'EUR' && isGovFine(f.category))
+    .reduce((s, f) => s + f.amount, 0);
+}, 0);
+const totalFinesUSD = allCases.reduce((sum, c) => {
+  return sum + c.data.fines
+    .filter((f) => f.currency === 'USD' && isGovFine(f.category))
+    .reduce((s, f) => s + f.amount, 0);
+}, 0);
+const totalClassActionUSD = allCases.reduce((sum, c) => {
+  return sum + c.data.fines
+    .filter((f) => f.currency === 'USD' && f.category === 'class_action_settlement')
+    .reduce((s, f) => s + f.amount, 0);
+}, 0);
+
+function formatBillions(n: number): string {
+  if (n >= 1_000_000_000) return `${(n / 1_000_000_000).toFixed(1)}B`;
+  if (n >= 1_000_000) return `${Math.round(n / 1_000_000)}M`;
+  return n.toString();
+}
+
+// English titles and subtitles override so the EN homepage reads as English
+const EN_TITLES: Record<string, { title: string; subtitle?: string }> = {
+  A01: { title: 'Local Mess', subtitle: 'Meta and Yandex apps bypassed incognito via localhost sockets.' },
+  A02: { title: 'Cambridge Analytica', subtitle: '87 million Facebook profiles harvested for psychographic targeting.' },
+  A03: { title: 'Onavo / Project Atlas', subtitle: 'Facebook paid teens $20/month for root access to their phones.' },
+  A04: { title: '533 million phone numbers', subtitle: 'Facebook scraping flaw exposed phone numbers of 2.67 million Polish users.' },
+  A05: { title: 'Facebook Files', subtitle: 'Frances Haugen carried 22,000 internal pages out of Meta.' },
+  A06: { title: 'Emotional contagion', subtitle: '689,003 users manipulated for one week without informed consent.' },
+  A07: { title: '€1.2B DPC fine', subtitle: 'Record GDPR penalty for US data transfers after Schrems II.' },
+  A08: { title: 'New Mexico v. Meta', subtitle: 'Meta internally knew children were being exposed to predators. Did nothing.' },
+  A09: { title: '€390M behavioral-ads fine', subtitle: 'Meta cannot serve behavioral ads on contract-performance basis.' },
+  A10: { title: '€200M DMA fine', subtitle: 'First penalty under the EU Digital Markets Act — against Meta.' },
+  B01: { title: 'Google Street View Wi-Spy', subtitle: 'Street View cars collected Wi-Fi traffic fragments in 30+ countries.' },
+  B02: { title: 'Google Safari workaround', subtitle: 'Google bypassed Safari default cookie block. $22.5M FTC fine.' },
+  B03: { title: 'Google+ API bugs', subtitle: 'Two API bugs exposed millions of users. Google chose not to disclose.' },
+  B04: { title: 'Google Location History', subtitle: 'Google kept tracking users who had turned Location History off.' },
+  B05: { title: 'Brown v. Google', subtitle: 'Chrome Incognito mode was secretly still tracked. ~$5B settlement.' },
+  B06: { title: 'Project Dragonfly', subtitle: 'Google secret plan for a censored Chinese search engine.' },
+  C01: { title: 'Apple Batterygate', subtitle: 'Apple secretly throttled older iPhones. $500M class action.' },
+  C02: { title: 'Apple Siri grading', subtitle: 'Contractors listened to intimate Siri recordings without opt-in.' },
+  C03: { title: 'Apple CSAM scanning', subtitle: 'Proposed on-device surveillance. EFF protested. Withdrawn in 3 weeks.' },
+  C04: { title: 'Microsoft Recall', subtitle: 'Windows 11 screenshot-every-few-seconds feature. Security nightmare.' },
+  C05: { title: 'LinkedIn AI training', subtitle: 'LinkedIn silently activated AI training on posts and messages. €310M fine.' },
+  D01: { title: 'Amazon Ring', subtitle: 'Ring employees watched customer video for years. Police warrant-free access.' },
+  D02: { title: 'Amazon Alexa', subtitle: 'Indefinite voice-recording retention. Class actions across states.' },
+  D03: { title: 'Amazon Alexa COPPA', subtitle: 'Amazon kept children voice recordings in violation of COPPA.' },
+  D04: { title: 'Uber God View', subtitle: 'Employees tracked journalists, celebrities, ex-partners in real time.' },
+  D05: { title: 'Uber Greyball', subtitle: 'Tool to identify and deceive regulators. Deployed on multiple continents.' },
+  D06: { title: 'Uber 2016 breach', subtitle: '57 million users. $100,000 paid to hacker to conceal. CSO convicted.' },
+  E01: { title: 'TikTok / ByteDance', subtitle: 'Addictive algorithm, teen-targeted design, China-ownership concerns.' },
+  E02: { title: 'TikTok — children', subtitle: 'Child accounts public by default. €345M Irish DPC fine.' },
+  E03: { title: 'TikTok — data to China', subtitle: 'Internal recordings confirmed Beijing access to US user data.' },
+  E04: { title: 'X / Grok Imagine', subtitle: 'xAI launched image generator without safety filters. Deepfakes followed.' },
+  E05: { title: 'Clearview AI', subtitle: '50+ billion scraped face photos. Sold to police. European fines unpaid.' },
+  E06: { title: 'Zoom — end-to-end myth', subtitle: 'E2EE marketing that was false. Keys on Zoom servers. $85M settlement.' },
+};
+
+const withEnTitle = (c: typeof allCases[number]) => {
+  const override = EN_TITLES[c.data.id];
+  return override ?? { title: c.data.title, subtitle: c.data.subtitle };
+};
+
+// TOP cases
+const topCases = allCases
+  .filter((c) => c.data.priority === 'TOP')
+  .sort((a, b) => b.data.year_revealed - a.data.year_revealed)
+  .slice(0, 6);
+
+// Recently updated — 3 cards
+const recentCases = [...allCases]
+  .sort((a, b) => b.data.last_updated.localeCompare(a.data.last_updated))
+  .slice(0, 3);
+
+const doors = [
+  {
+    id: '01',
+    key: 'What',
+    description: 'Grid of 33 cases with filters — search by company, year, fine, category.',
+    href: '/en/cases/',
+    available: true,
+  },
+  {
+    id: '02',
+    key: 'When',
+    description: 'Timeline 2007–2025: sixteen narrative scenes, year by year, case by case.',
+    href: '/en/timeline/',
+    available: true,
+  },
+  {
+    id: '03',
+    key: 'Where',
+    description: 'Map of regulators, courts and data flows. Where your data decisions were made.',
+    href: '/mapa/',
+    available: true,
+  },
+  {
+    id: '04',
+    key: 'Why',
+    description: 'Network graph: cases, companies, whistleblowers, tags — as a navigable network.',
+    href: '/graf/',
+    available: true,
+  },
+  {
+    id: '05',
+    key: 'Who revealed it',
+    description: 'Whistleblowers, journalists, researchers and activists who unpicked these stories.',
+    href: '/en/who-revealed/',
+    available: true,
+  },
+];
 ---
 
-<Page
-  title="Big Tech Files — English edition (preview)"
-  description="Big Tech Files: 33 documented Big Tech cases — privacy, security, citizen rights. Reference base for journalists, lawyers, academics."
+<PageEn
+  title="Big Tech Files"
+  description="33 documented cases of Big Tech privacy, security and ethics violations. Reference base for journalists, lawyers, academics."
 >
+  <!-- Hero -->
   <section class="hero">
     <div class="container hero__grid">
       <div class="hero__body">
@@ -19,10 +143,8 @@ import { url } from '../../utils/url';
           <p class="hero__lead-stamp">Documented.</p>
         </div>
         <div class="hero__actions">
-          <a href={url('/')} class="btn btn--primary">← Polish edition</a>
-          <span class="hero__notice">
-            English edition in preview. Full translation planned for Phase 4.
-          </span>
+          <a href={url('/en/cases/')} class="btn btn--primary">Browse cases</a>
+          <a href={url('/en/about/')} class="link">Why we built this</a>
         </div>
       </div>
 
@@ -41,62 +163,169 @@ import { url } from '../../utils/url';
     </div>
   </section>
 
-  <section class="intro">
+  <!-- Five Doors -->
+  <section class="doors">
     <div class="container">
-      <div class="intro__body">
-        <h2>What this is</h2>
-        <p>
-          <strong>Big Tech Files</strong> is a reference portal documenting 33 cases of
-          privacy, security and ethics violations by the largest technology companies —
-          Meta, Google, Apple, Microsoft, Amazon, Uber, TikTok, X (formerly Twitter),
-          Clearview AI, Zoom and LinkedIn.
+      <div class="doors__header">
+        <p class="doors__intro meta">Portal architecture</p>
+        <p class="doors__lede">
+          The same 33 cases — five ways in. All five doors lead to the same
+          database, by different navigational paths.
         </p>
-        <p>
-          Each case is a documentary card based exclusively on regulatory decisions,
-          court documents, investigative journalism, academic research and
-          whistleblower disclosures. All amounts and dates are verified against
-          at least two independent sources.
-        </p>
+      </div>
 
-        <h2>Five doors into the data</h2>
-        <p>
-          The portal has no single narrative path. The homepage presents five equal
-          entries into the same 33 cases:
-        </p>
-        <ul>
-          <li><strong>WHAT</strong> — grid of 33 cases with filters and full-text search</li>
-          <li><strong>WHEN</strong> — narrative timeline 2010–2026</li>
-          <li><strong>WHERE</strong> — map of regulators and jurisdictions</li>
-          <li><strong>WHY</strong> — network graph linking cases, people, companies</li>
-          <li><strong>WHO REVEALED IT</strong> — gallery of 12 whistleblowers and journalists</li>
-        </ul>
+      <div class="doors__grid">
+        {doors.map((door) => (
+          <div class={`door${!door.available ? ' door--soon' : ''}`}>
+            {door.available ? (
+              <a href={url(door.href)} class="door__inner">
+                <span class="door__num meta">{door.id}</span>
+                <strong class="door__key">{door.key}</strong>
+                <p class="door__desc">{door.description}</p>
+                <div class="door__footer">
+                  <span class="door__status door__status--live">Open →</span>
+                </div>
+              </a>
+            ) : (
+              <div class="door__inner door__inner--disabled">
+                <span class="door__num meta">{door.id}</span>
+                <strong class="door__key">{door.key}</strong>
+                <p class="door__desc">{door.description}</p>
+                <div class="door__footer">
+                  <span class="door__status">Coming soon</span>
+                </div>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-        <h2>Privacy of this portal</h2>
-        <p>
-          A project that documents privacy violations cannot itself violate the privacy
-          of its readers. Matryca collects no user data, uses no analytics cookies,
-          loads no external trackers. All assets are self-hosted.
-        </p>
+  <!-- Stats -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stats__item">
+          <span class="stats__label meta">Cases in database</span>
+          <span class="stats__value">{allCases.length}</span>
+          <span class="stats__desc">5 thematic groups</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__label meta">Regulatory fines</span>
+          <span class="stats__value">~€{formatBillions(totalFinesEUR)}</span>
+          <span class="stats__desc">EU, Asia, Australia regulators</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__label meta">US penalties</span>
+          <span class="stats__value">~${formatBillions(totalFinesUSD)}</span>
+          <span class="stats__desc">FTC, SEC, state AGs</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__label meta">Class-action settlements</span>
+          <span class="stats__value">~${formatBillions(totalClassActionUSD)}</span>
+          <span class="stats__desc">collective and shareholder suits</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <h2>License</h2>
-        <p>
-          Content is educational material for free use. When citing, please credit:
-          <em>Matryca / Big Tech Files, 2026 — matryca.org</em>.
-        </p>
+  <!-- Featured TOP cases -->
+  <section class="featured">
+    <div class="container">
+      <div class="featured__header">
+        <div>
+          <p class="meta featured__kicker">Selected from 33</p>
+          <h2 class="featured__title">Key cases</h2>
+          <p class="featured__lede">
+            Billion-euro fines, whistleblowers, constitutional precedents —
+            the cases we suggest starting with.
+          </p>
+        </div>
+        <a href={url('/en/cases/')} class="link featured__all">All 33 cases →</a>
+      </div>
 
-        <h2>Status</h2>
-        <p class="status">
-          The English edition is currently a <strong>preview</strong>. Full translation
-          of all 33 case cards (~110,000 words), 4 editorial essays, 12 whistleblower
-          profiles and all supporting materials is planned for Phase 4. The Polish
-          edition at <a href={url('/')}>matryca.org</a> is complete and up to date.
+      <div class="featured__grid">
+        {topCases.map((c) => {
+          const en = withEnTitle(c);
+          return (
+            <CaseCardEn
+              id={c.data.id}
+              slug={c.data.slug}
+              group={c.data.group}
+              title={en.title}
+              subtitle={en.subtitle}
+              companies={c.data.companies}
+              year_revealed={c.data.year_revealed}
+              status={c.data.status}
+              fines={c.data.fines}
+              jurisdictions={c.data.jurisdictions}
+              tags={c.data.tags}
+              priority={c.data.priority}
+              hasExplainer={!!c.data.explainer}
+            />
+          );
+        })}
+      </div>
+
+      <p class="featured__note meta">
+        Clicking a card opens the full Polish case document — the primary source
+        of truth. English summaries are on the <a href={url('/en/cases/')}>cases index</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Recent updates -->
+  <section class="recent">
+    <div class="container">
+      <div class="recent__header">
+        <span class="meta" style="color: var(--text-tertiary)">Recently updated</span>
+        <a href={url('/en/cases/')} class="link">All cases →</a>
+      </div>
+      <div class="recent__grid">
+        {recentCases.map((c) => {
+          const en = withEnTitle(c);
+          return (
+            <CaseCardEn
+              id={c.data.id}
+              slug={c.data.slug}
+              group={c.data.group}
+              title={en.title}
+              subtitle={en.subtitle}
+              companies={c.data.companies}
+              year_revealed={c.data.year_revealed}
+              status={c.data.status}
+              fines={c.data.fines}
+              jurisdictions={c.data.jurisdictions}
+              tags={c.data.tags}
+              priority={c.data.priority}
+              hasExplainer={!!c.data.explainer}
+            />
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Preview notice -->
+  <section class="notice">
+    <div class="container">
+      <div class="notice__inner">
+        <p class="notice__title">English edition — preview</p>
+        <p class="notice__body">
+          This English homepage is a navigational shell. The full 33 case cards
+          (~110,000 words), 12 whistleblower biographies, 4 editorial essays and
+          16 timeline scenes are currently available in Polish only. Full
+          English translation is planned for Phase 4. The Polish edition at
+          <a href={url('/')}>matryca.org</a> is complete and up to date.
         </p>
       </div>
     </div>
   </section>
-</Page>
+</PageEn>
 
 <style lang="scss">
+  // Hero
   .hero {
     padding-block: var(--space-16) var(--space-12);
     border-bottom: 0.5px solid var(--border);
@@ -186,14 +415,6 @@ import { url } from '../../utils/url';
     flex-wrap: wrap;
   }
 
-  .hero__notice {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--text-tertiary);
-    max-width: 320px;
-    line-height: 1.5;
-  }
-
   .hero__aside {
     display: flex;
     flex-direction: column;
@@ -239,54 +460,260 @@ import { url } from '../../utils/url';
     margin: 0;
   }
 
-  .intro {
+  // Doors
+  .doors {
     padding-block: var(--space-12);
+    border-bottom: 0.5px solid var(--border);
   }
 
-  .intro__body {
-    max-width: 720px;
+  .doors__header {
+    max-width: 640px;
+    margin-bottom: var(--space-6);
   }
 
-  .intro__body h2 {
-    font-family: var(--font-serif);
-    font-size: 26px;
-    font-weight: 500;
-    line-height: 1.3;
-    margin-block: var(--space-8) var(--space-3);
-  }
-
-  .intro__body h2:first-of-type {
-    margin-top: 0;
-  }
-
-  .intro__body p {
-    font-size: 17px;
-    line-height: 1.65;
-    color: var(--text-primary);
-    margin-bottom: var(--space-4);
-  }
-
-  .intro__body ul {
-    margin: var(--space-3) 0 var(--space-4);
-    padding-left: var(--space-6);
-  }
-
-  .intro__body li {
-    font-size: 16px;
-    line-height: 1.6;
+  .doors__intro {
+    color: var(--text-tertiary);
     margin-bottom: var(--space-2);
   }
 
-  .intro__body strong {
-    color: var(--accent);
-    font-weight: 500;
+  .doors__lede {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin: 0;
   }
 
-  .status {
-    padding: var(--space-4) var(--space-5);
+  .doors__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: var(--gap-3);
+  }
+
+  .door__inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+    padding: var(--gap-6);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--bg-card);
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    transition: border-color var(--transition-fast);
+
+    &:not(.door__inner--disabled):hover {
+      border-color: var(--accent);
+    }
+
+    &--disabled {
+      cursor: default;
+    }
+  }
+
+  .door__num {
+    color: var(--text-tertiary);
+    font-size: 10px;
+  }
+
+  .door__key {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  .door--soon .door__key {
+    color: var(--text-secondary);
+  }
+
+  .door__desc {
+    font-size: var(--text-small);
+    color: var(--text-secondary);
+    line-height: 1.5;
+    flex: 1;
+    margin: 0;
+  }
+
+  .door__footer {
+    margin-top: var(--gap-3);
+    padding-top: var(--gap-2);
+    border-top: 0.5px solid var(--border);
+  }
+
+  .door__status {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--text-tertiary);
+
+    &--live {
+      color: var(--accent);
+    }
+  }
+
+  // Stats
+  .stats {
+    background: var(--bg-secondary);
+    padding-block: var(--space-12);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .stats__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--gap-6);
+  }
+
+  .stats__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-1);
+  }
+
+  .stats__label {
+    font-size: 10px;
+    color: var(--text-tertiary);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .stats__value {
+    font-family: var(--font-serif);
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .stats__desc {
+    font-size: var(--text-small);
+    color: var(--text-secondary);
+  }
+
+  // Featured TOP cases
+  .featured {
+    padding-block: var(--space-12);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .featured__header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-6);
+    align-items: end;
+    margin-bottom: var(--space-6);
+
+    @media (max-width: 760px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .featured__kicker {
+    color: var(--accent);
+    margin-bottom: var(--space-2);
+  }
+
+  .featured__title {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 var(--space-2);
+  }
+
+  .featured__lede {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 640px;
+  }
+
+  .featured__all {
+    justify-self: end;
+
+    @media (max-width: 760px) {
+      justify-self: start;
+    }
+  }
+
+  .featured__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--gap-3);
+  }
+
+  .featured__note {
+    margin-top: var(--space-6);
+    font-size: 12px;
+    color: var(--text-tertiary);
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--transition-fast);
+
+      &:hover { border-bottom-color: var(--accent); }
+    }
+  }
+
+  // Recent
+  .recent {
+    padding-block: var(--space-10);
+  }
+
+  .recent__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-5);
+  }
+
+  .recent__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--gap-3);
+  }
+
+  // Preview notice
+  .notice {
+    padding-block: var(--space-10);
+    border-top: 0.5px solid var(--border);
+  }
+
+  .notice__inner {
+    max-width: 720px;
+    padding: var(--space-5) var(--space-6);
     background: var(--bg-card);
     border: 0.5px solid var(--border);
     border-radius: var(--radius-md);
-    font-size: 15px !important;
+  }
+
+  .notice__title {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 var(--space-2);
+  }
+
+  .notice__body {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--transition-fast);
+
+      &:hover { border-bottom-color: var(--accent); }
+    }
   }
 </style>

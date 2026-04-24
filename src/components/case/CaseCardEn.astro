@@ -1,0 +1,249 @@
+---
+import Badge from '../ui/Badge.astro';
+import StatusPillEn from '../ui/StatusPillEn.astro';
+import { formatAmount, getTopFine } from '../../utils/format';
+import { url } from '../../utils/url';
+
+interface Fine {
+  amount: number;
+  currency: string;
+  status?: string;
+  category?: string;
+}
+
+interface Props {
+  id: string;
+  slug: string;
+  group: 'A' | 'B' | 'C' | 'D' | 'E';
+  title: string;
+  subtitle?: string;
+  companies: string[];
+  year_revealed: number;
+  status: string;
+  fines: Fine[];
+  jurisdictions?: string[];
+  tags?: string[];
+  priority?: string;
+  hasExplainer?: boolean;
+  featured?: boolean;
+}
+
+const {
+  id,
+  slug,
+  group,
+  title,
+  subtitle,
+  companies,
+  year_revealed,
+  status,
+  fines,
+  jurisdictions = [],
+  tags = [],
+  priority,
+  hasExplainer = false,
+  featured = false,
+} = Astro.props;
+
+const topFine = getTopFine(fines);
+const jurisdictionCount = jurisdictions.length;
+const displayTags = tags.slice(0, 3);
+
+// English labels for tags (id → label)
+const TAG_LABELS_EN: Record<string, string> = {
+  'dark-patterns': 'dark patterns',
+  'addictive-design': 'addictive design',
+  'rozpoznawanie-twarzy': 'face recognition',
+  'sledzenie-lokalizacji': 'location tracking',
+  'trening-ai': 'AI training',
+  'moderacja-algorytmiczna': 'algorithmic moderation',
+  'eksperyment-psychologiczny': 'psychological experiment',
+  'dezinformacja': 'disinformation',
+  'dzieci': 'children',
+  'wyborcy': 'voters',
+  'pracownicy': 'employees',
+  'dziennikarze': 'journalists',
+  'mniejszosci': 'minorities',
+  'rodo': 'GDPR',
+  'coppa': 'COPPA',
+  'bipa': 'BIPA',
+  'schrems-ii': 'Schrems II',
+  'pozew-zbiorowy': 'class action',
+  'wyciek-danych': 'data breach',
+  'sygnalista': 'whistleblower',
+  'criminal': 'criminal',
+  'geopolityka': 'geopolitics',
+  'polski-watek': 'Polish context',
+  'deepfake': 'deepfake',
+};
+---
+
+<a
+  href={url(`/sprawy/${slug}/`)}
+  class={`case-card${featured ? ' case-card--featured' : ''}${priority === 'TOP' ? ' case-card--top' : ''}`}
+>
+  <div class="case-card__header">
+    <Badge group={group} size="sm" />
+    <span class="case-card__id meta">{id}</span>
+    {hasExplainer && (
+      <span class="case-card__explainer meta" title="Has a 60-second explainer">▶ 60s</span>
+    )}
+    <span class="case-card__year meta">{year_revealed}</span>
+  </div>
+
+  <div class="case-card__title-block">
+    <h3 class="case-card__title">{title}</h3>
+    {subtitle && <p class="case-card__subtitle">{subtitle}</p>}
+  </div>
+
+  <p class="case-card__companies meta">
+    {companies.slice(0, 3).join(' · ')}
+    {jurisdictionCount > 0 && (
+      <span class="case-card__juris"> · {jurisdictionCount} {jurisdictionCount === 1 ? 'jurisdiction' : 'jurisdictions'}</span>
+    )}
+  </p>
+
+  {displayTags.length > 0 && (
+    <div class="case-card__tags">
+      {displayTags.map((t) => (
+        <span class="case-card__tag">{TAG_LABELS_EN[t] ?? t}</span>
+      ))}
+      {tags.length > displayTags.length && (
+        <span class="case-card__tag case-card__tag--more">+{tags.length - displayTags.length}</span>
+      )}
+    </div>
+  )}
+
+  <div class="case-card__footer">
+    <StatusPillEn status={status} />
+    {topFine && (
+      <span class="case-card__fine meta">
+        {formatAmount(topFine.amount)} {topFine.currency}
+      </span>
+    )}
+  </div>
+</a>
+
+<style lang="scss">
+  .case-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-3);
+    padding: var(--gap-6);
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--transition-fast);
+
+    &:hover {
+      border-color: var(--accent);
+
+      .case-card__title {
+        color: var(--accent);
+      }
+    }
+
+    &--top {
+      border-left: 2px solid var(--accent);
+    }
+  }
+
+  .case-card__header {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-2);
+  }
+
+  .case-card__id {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-right: auto;
+  }
+
+  .case-card__explainer {
+    font-size: 10px;
+    color: var(--accent);
+    background: var(--accent-bg);
+    padding: 1px 6px;
+    border-radius: var(--radius-sm);
+  }
+
+  .case-card__year {
+    font-size: 11px;
+    color: var(--text-tertiary);
+  }
+
+  .case-card__title-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .case-card__title {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--text-primary);
+    margin: 0;
+    transition: color var(--transition-fast);
+  }
+
+  .case-card__subtitle {
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--text-secondary);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .case-card__companies {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin: 0;
+    margin-top: auto;
+  }
+
+  .case-card__juris {
+    color: var(--text-tertiary);
+  }
+
+  .case-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .case-card__tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+
+    &--more {
+      color: var(--text-tertiary);
+    }
+  }
+
+  .case-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-2);
+    padding-top: var(--gap-2);
+    border-top: 0.5px solid var(--border);
+  }
+
+  .case-card__fine {
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+</style>
