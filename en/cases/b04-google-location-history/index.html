@@ -1,0 +1,544 @@
+<!DOCTYPE html><html lang="pl"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Matryca — baza 33 udokumentowanych skandali Big Tech. Prywatność, bezpieczeństwo, prawa obywateli."><link rel="canonical" href="https://futureshow1.github.io/matryca/en/cases/b04-google-location-history/"><title>Google Location History — Matryca</title><!-- No external font CDN — fonts loaded locally via SCSS --><!-- Favicon --><link rel="icon" type="image/svg+xml" href="/matryca/favicon.svg"><!-- Theme: default LIGHT, dark tylko po świadomym toggle.
+         (Opcja C: portal editorialny startuje jasno dla wszystkich;
+          `prefers-color-scheme: dark` nie jest automatycznie honorowane.
+          Parametr ?theme= zachowany dla strony porównawczej.) --><script>
+      (function () {
+        const urlTheme = new URLSearchParams(location.search).get('theme');
+        const stored = localStorage.getItem('matryca-theme');
+        document.documentElement.setAttribute(
+          'data-theme',
+          urlTheme || stored || 'light'
+        );
+      })();
+    </script><!-- Open Graph --><meta property="og:title" content="Google Location History — Matryca"><meta property="og:description" content="Matryca — baza 33 udokumentowanych skandali Big Tech. Prywatność, bezpieczeństwo, prawa obywateli."><meta property="og:url" content="https://futureshow1.github.io/matryca/en/cases/b04-google-location-history/"><meta property="og:type" content="website"><style>.status-pill[data-astro-cid-eiggyogj]{display:inline-block;font-family:var(--font-mono);font-size:10px;letter-spacing:.03em;padding:2px 7px;border-radius:var(--radius-sm);border:.5px solid currentColor;white-space:nowrap}.status-pill--active-investigation[data-astro-cid-eiggyogj],.status-pill--ongoing-litigation[data-astro-cid-eiggyogj],.status-pill--criminal-proceedings[data-astro-cid-eiggyogj]{color:#b45309;background:#b453090f}[data-astro-cid-eiggyogj][data-theme=dark] .status-pill--active-investigation[data-astro-cid-eiggyogj],[data-astro-cid-eiggyogj][data-theme=dark] .status-pill--ongoing-litigation[data-astro-cid-eiggyogj],[data-astro-cid-eiggyogj][data-theme=dark] .status-pill--criminal-proceedings[data-astro-cid-eiggyogj]{color:#fbbf24;background:#fbbf2414}.status-pill--settled[data-astro-cid-eiggyogj],.status-pill--concluded[data-astro-cid-eiggyogj]{color:var(--text-secondary);background:transparent}.status-pill--regulatory-monitoring[data-astro-cid-eiggyogj]{color:var(--accent);background:var(--accent-bg)}.status-pill--withdrawn[data-astro-cid-eiggyogj]{color:var(--text-tertiary);background:transparent}
+</style>
+<link rel="stylesheet" href="/matryca/_astro/Base.1YUpm5js.css">
+<style>.header[data-astro-cid-z7y2axjr]{border-bottom:.5px solid var(--border);background:var(--bg-primary);position:sticky;top:0;z-index:100}.header__inner[data-astro-cid-z7y2axjr]{display:flex;align-items:center;gap:var(--space-8);padding-block:var(--space-4)}.header__logo[data-astro-cid-z7y2axjr]{display:flex;align-items:baseline;gap:12px;text-decoration:none;flex-shrink:0}.header__logo-bar[data-astro-cid-z7y2axjr]{display:block;width:3px;height:22px;background:var(--accent);border-radius:2px;flex-shrink:0;position:relative;top:2px}.header__logo-name[data-astro-cid-z7y2axjr]{font-family:var(--font-serif);font-size:20px;font-weight:500;color:var(--text-primary);letter-spacing:-.01em}.header__logo-sub[data-astro-cid-z7y2axjr]{font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary);letter-spacing:.02em}.header__nav[data-astro-cid-z7y2axjr]{flex:1}.header__nav-list[data-astro-cid-z7y2axjr]{display:flex;gap:var(--space-6);list-style:none;margin:0;padding:0}.header__nav-link[data-astro-cid-z7y2axjr]{font-size:var(--text-small);color:var(--text-secondary);text-decoration:none;padding-bottom:2px;border-bottom:1px solid transparent;transition:color var(--transition-fast),border-color var(--transition-fast)}.header__nav-link[data-astro-cid-z7y2axjr]:hover{color:var(--text-primary);border-color:var(--text-primary)}.header__nav-link--active[data-astro-cid-z7y2axjr]{color:var(--text-primary);border-color:var(--accent)}.header__actions[data-astro-cid-z7y2axjr]{display:flex;align-items:center;gap:var(--gap-3);flex-shrink:0}.header__lang[data-astro-cid-z7y2axjr]{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:var(--text-secondary);text-decoration:none;padding:4px 8px;border:.5px solid var(--border);border-radius:var(--radius-sm);transition:color var(--transition-fast),border-color var(--transition-fast)}.header__lang[data-astro-cid-z7y2axjr]:hover{color:var(--accent);border-color:var(--accent)}.header__theme-toggle[data-astro-cid-z7y2axjr]{background:none;border:1px solid var(--border);border-radius:var(--radius-sm);width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-secondary);font-size:13px;transition:border-color var(--transition-fast),color var(--transition-fast)}.header__theme-toggle[data-astro-cid-z7y2axjr]:hover{border-color:var(--border-hover);color:var(--text-primary)}@media(max-width:640px){.header__nav[data-astro-cid-z7y2axjr]{display:none}}.footer[data-astro-cid-yigv2lp6]{border-top:.5px solid var(--border);margin-top:var(--space-24);padding-block:var(--space-8)}.footer__inner[data-astro-cid-yigv2lp6]{display:flex;flex-direction:column;gap:var(--space-4)}.footer__privacy[data-astro-cid-yigv2lp6]{font-size:var(--text-small);color:var(--text-secondary)}.footer__privacy[data-astro-cid-yigv2lp6] .footer__privacy-label[data-astro-cid-yigv2lp6]{font-family:var(--font-mono);font-size:11px;color:var(--accent);margin-right:var(--gap-2)}.footer__nav[data-astro-cid-yigv2lp6]{display:flex;gap:var(--space-6);flex-wrap:wrap}.footer__nav[data-astro-cid-yigv2lp6] a[data-astro-cid-yigv2lp6]{font-size:var(--text-small);color:var(--text-secondary);text-decoration:none;transition:color var(--transition-fast)}.footer__nav[data-astro-cid-yigv2lp6] a[data-astro-cid-yigv2lp6]:hover{color:var(--accent)}.footer__copy[data-astro-cid-yigv2lp6]{color:var(--text-tertiary)}
+</style>
+<link rel="stylesheet" href="/matryca/_astro/_slug_@_@astro.77hgp4XU.css">
+<style>.badge[data-astro-cid-35zd7xm4]{display:inline-flex;align-items:center;gap:var(--gap-1);border-radius:var(--radius-sm);font-family:var(--font-mono);white-space:nowrap}.badge--md[data-astro-cid-35zd7xm4]{font-size:11px;padding:2px 7px}.badge--sm[data-astro-cid-35zd7xm4]{font-size:10px;padding:1px 5px}.badge__id[data-astro-cid-35zd7xm4]{font-weight:500}.badge__label[data-astro-cid-35zd7xm4]{opacity:.75}.badge--group-a[data-astro-cid-35zd7xm4]{background:#6366f114;color:#4f46e5}[data-astro-cid-35zd7xm4][data-theme=dark] .badge--group-a[data-astro-cid-35zd7xm4]{background:#6366f126;color:#a5b4fc}.badge--group-b[data-astro-cid-35zd7xm4]{background:#10a37f14;color:#0d9488}[data-astro-cid-35zd7xm4][data-theme=dark] .badge--group-b[data-astro-cid-35zd7xm4]{background:#10a37f26;color:#5eead4}.badge--group-c[data-astro-cid-35zd7xm4]{background:#64748b1a;color:#475569}[data-astro-cid-35zd7xm4][data-theme=dark] .badge--group-c[data-astro-cid-35zd7xm4]{background:#94a3b81f;color:#94a3b8}.badge--group-d[data-astro-cid-35zd7xm4]{background:#f59e0b14;color:#d97706}[data-astro-cid-35zd7xm4][data-theme=dark] .badge--group-d[data-astro-cid-35zd7xm4]{background:#f59e0b1f;color:#fbbf24}.badge--group-e[data-astro-cid-35zd7xm4]{background:#a32d2d14;color:var(--accent)}[data-astro-cid-35zd7xm4][data-theme=dark] .badge--group-e[data-astro-cid-35zd7xm4]{background:#a32d2d26;color:#f09595}
+</style></head> <body>  <header class="header" data-astro-cid-z7y2axjr> <div class="container header__inner" data-astro-cid-z7y2axjr> <a href="/matryca/en/" class="header__logo" aria-label="Big Tech Files — home" data-astro-cid-z7y2axjr> <span class="header__logo-bar" aria-hidden="true" data-astro-cid-z7y2axjr></span> <span class="header__logo-name" data-astro-cid-z7y2axjr>Big Tech Files</span> <span class="header__logo-sub" data-astro-cid-z7y2axjr>/ reference base</span> </a> <nav class="header__nav" aria-label="Main navigation" data-astro-cid-z7y2axjr> <ul class="header__nav-list" data-astro-cid-z7y2axjr> <li data-astro-cid-z7y2axjr> <a href="/matryca/en/cases/" class="header__nav-link header__nav-link--active" data-astro-cid-z7y2axjr> Cases </a> </li><li data-astro-cid-z7y2axjr> <a href="/matryca/en/who-revealed/" class="header__nav-link" data-astro-cid-z7y2axjr> Who revealed it </a> </li><li data-astro-cid-z7y2axjr> <a href="/matryca/en/what-would-you-do/" class="header__nav-link" data-astro-cid-z7y2axjr> What would you do? </a> </li><li data-astro-cid-z7y2axjr> <a href="/matryca/en/how-much-they-know/" class="header__nav-link" data-astro-cid-z7y2axjr> How much they know </a> </li><li data-astro-cid-z7y2axjr> <a href="/matryca/en/essays/" class="header__nav-link" data-astro-cid-z7y2axjr> Essays </a> </li> </ul> </nav> <div class="header__actions" data-astro-cid-z7y2axjr> <a href="/matryca/" class="header__lang" title="Polska wersja — Sprawy Big Techu" data-astro-cid-z7y2axjr>PL</a> <button class="header__theme-toggle" id="theme-toggle" aria-label="Switch theme" title="Light / dark theme" data-astro-cid-z7y2axjr> <span class="header__theme-icon" aria-hidden="true" id="theme-icon" data-astro-cid-z7y2axjr>☀</span> </button> </div> </div> </header> <script type="module">const m=document.getElementById("theme-toggle"),n=document.getElementById("theme-icon");function c(){const t=document.documentElement.getAttribute("data-theme");n&&(n.textContent=t==="dark"?"☽":"☀")}c();m?.addEventListener("click",()=>{const e=document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",e),localStorage.setItem("matryca-theme",e),c()});</script> <main>  <article class="case-page" data-astro-cid-7l3ranxr> <div class="container" data-astro-cid-7l3ranxr> <header class="case-page__header" data-astro-cid-7l3ranxr> <div class="case-page__breadcrumb" data-astro-cid-7l3ranxr> <a href="/matryca/en/cases/" data-astro-cid-7l3ranxr>All cases</a> <span aria-hidden="true" data-astro-cid-7l3ranxr>/</span> <span class="badge badge--group-b badge--sm" data-astro-cid-35zd7xm4> <span class="badge__id" data-astro-cid-35zd7xm4>B</span> <span class="badge__label" data-astro-cid-35zd7xm4>Google</span> </span> </div> <h1 class="case-page__title" data-astro-cid-7l3ranxr>Google Location History</h1> <p class="case-page__subtitle" data-astro-cid-7l3ranxr>Tracking despite the setting being turned off</p> </header> <aside class="keyfacts" aria-label="Key facts" data-astro-cid-ftry6glj> <div class="keyfacts__item" data-astro-cid-ftry6glj> <span class="keyfacts__label meta" data-astro-cid-ftry6glj>Largest fine</span> <span class="keyfacts__value" data-astro-cid-ftry6glj> $392M </span> <span class="keyfacts__desc" data-astro-cid-ftry6glj>40 AG USA</span> </div>   <div class="keyfacts__item" data-astro-cid-ftry6glj> <span class="keyfacts__label meta" data-astro-cid-ftry6glj>Years of practice</span> <span class="keyfacts__value" data-astro-cid-ftry6glj>2014–2022</span> <span class="keyfacts__desc" data-astro-cid-ftry6glj>period covered by documentation</span> </div> <div class="keyfacts__item" data-astro-cid-ftry6glj> <span class="keyfacts__label meta" data-astro-cid-ftry6glj>Jurisdictions</span> <span class="keyfacts__value" data-astro-cid-ftry6glj>3</span> <span class="keyfacts__desc" data-astro-cid-ftry6glj>EU, US, AU</span> </div> <div class="keyfacts__item" data-astro-cid-ftry6glj> <span class="keyfacts__label meta" data-astro-cid-ftry6glj>Status</span> <span class="keyfacts__value keyfacts__value--small" data-astro-cid-ftry6glj>Concluded</span> </div> </aside> <section class="explainer" data-astro-cid-xo5oglzn> <header class="explainer__header" data-astro-cid-xo5oglzn> <p class="explainer__kicker meta" data-astro-cid-xo5oglzn>Explainer · 60s</p> <p class="explainer__title" data-astro-cid-xo5oglzn>Location History — tracking despite being turned off</p> <p class="explainer__help meta" data-astro-cid-xo5oglzn>
+Static animation (SVG + CSS). No audio. No trackers.
+<a href="/matryca/animations/b04-google-location-history.html" target="_blank" rel="noopener" data-astro-cid-xo5oglzn>Open in a new window ↗</a> </p> </header> <div class="explainer__frame" data-astro-cid-xo5oglzn> <iframe src="/matryca/animations/b04-google-location-history.html" title="Location History — tracking despite being turned off" loading="lazy" sandbox="allow-scripts allow-same-origin" data-astro-cid-xo5oglzn></iframe> </div> </section> <div class="case-page__layout" data-astro-cid-7l3ranxr> <div class="case-page__content prose" data-astro-cid-7l3ranxr>  <h1 id="b04--google-location-history-tracking-despite-the-setting-being-turned-off">B04 — Google Location History: Tracking despite the setting being turned off</h1>
+<blockquote>
+<p><strong>Category:</strong> Location tracking / misleading interfaces / deceptive practices
+<strong>Company/companies:</strong> Google (Alphabet)
+<strong>Years:</strong> 2014–2022 (practice), August 13, 2018 (disclosure), 2022–2024 (settlements)
+<strong>Status:</strong> Concluded — record $391.5 million settlement with 40 states; additional penalties in AU, KR, US states
+<strong>Card ID:</strong> B04</p>
+</blockquote>
+<hr>
+<h2 id="metadata">Metadata</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>Country/region</td><td>USA (40+ states), Australia, South Korea, EU (limited)</td></tr><tr><td>Year revealed</td><td>August 13, 2018 (<em>Associated Press</em>, Ryan Nakashima)</td></tr><tr><td>Years of practice</td><td>2014–2022 (over 8 years)</td></tr><tr><td>Total penalties</td><td><strong>~$660 million / ~€610 million</strong> total (USA + AU + KR + class actions)</td></tr><tr><td>Currency</td><td>USD/AUD/KRW/EUR</td></tr><tr><td>Legal basis</td><td>State consumer protection (40 US states), FTC Act § 5, GDPR art. 6, 7, 13; ACL (Australia); PIPA (Korea)</td></tr><tr><td>Whistleblower/discoverer</td><td><strong>Ryan Nakashima</strong> (<em>Associated Press</em>) + <strong>Douglas C. Schmidt</strong> (Vanderbilt)</td></tr><tr><td>Number of affected</td><td>All Google/Android users worldwide — billions of people</td></tr><tr><td>Current status</td><td>Google has reformed the settings; Location History is off by default for new accounts (2024)</td></tr></tbody></table>
+<hr>
+<h2 id="tldr">TL;DR</h2>
+<p><strong>On August 13, 2018</strong>, <em>Associated Press</em> journalist <strong>Ryan Nakashima</strong> revealed that <strong>Google continues collecting location data</strong> from Android and iOS devices <strong>even after the user turns off the “Location History” setting</strong>. Instead of feeding the visible Timeline, the data was routed to a second, hidden setting: <strong>“Web &#x26; App Activity”</strong> — <strong>on by default</strong> and without asking explicitly about location. Nakashima proved it with a scientific experiment: he <strong>bought 20 phones with different Google accounts</strong>, disabled Location History on all of them, and analyzed what Google was collecting. The result: Google knew the user’s position via Wi-Fi, IP, sensor fusion, and photo metadata. Academic verification was carried out by <strong>Jonathan Mayer</strong> of Princeton (the same researcher behind Safari Workaround — B02).</p>
+<p>A landmark 2018 report by <strong>Prof. Douglas Schmidt</strong> of Vanderbilt University: an Android sitting idle on a desk, with nobody using it, <strong>sends 340 telemetry transmissions to Google per day</strong>. By comparison, an iPhone in an analogous state: about 30 per day to Apple.</p>
+<p><strong>November 14, 2022 — 40 US state attorneys general</strong> reached a joint settlement with Google for <strong>$391.5 million</strong> — <strong>a record of its kind in US consumer-law history before 2024</strong>. Earlier: <strong>Arizona separately: $85 million</strong> (October 2022). After: <strong>DC + Indiana + Texas + Washington: $29.5 million</strong> (January 2023). <strong>Texas again separately: $8 million</strong> (same month). <strong>Australia ACCC: AUD 60 million</strong> (2023). <strong>South Korea PIPC: KRW 80 billion</strong> (~$60 million, 2023). <strong>Federal class action: $93 million</strong> (2024).</p>
+<p>Internal Google documents disclosed in the Arizona lawsuit showed that <strong>Google had known about user confusion since 2014</strong>. Internal engineers proposed simplifying the settings. Management rejected the idea: <strong>“this will reduce ad targeting precision.”</strong> In another internal email, <strong>Google Maps VP Jen Fitzpatrick</strong> herself admitted that <strong>she did not fully understand how the two settings worked</strong>.</p>
+<p>The case became <strong>a textbook example of misleading interfaces</strong> — deliberately confusing UX. Under GDPR, it is a classic violation of art. 7 (conditions for consent) and art. 13 (information obligation). In the US, it is a violation of state consumer protection law in 40+ states. In 2024, Google reformed the settings and <strong>turns off Location History by default</strong> for new accounts.</p>
+<hr>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li><strong>2005</strong> — Google acquires Keyhole → launches Google Earth → later Google Maps Timeline.</li>
+<li><strong>2009</strong> — Android debuts. Location Services introduced.</li>
+<li><strong>2013</strong> — Google introduces “Location History” as a Maps feature.</li>
+<li><strong>2014</strong> — Google introduces <strong>Web &#x26; App Activity</strong> as a separate setting. <strong>Internal engineers notice user confusion</strong>; simplification proposals are rejected.</li>
+<li><strong>2014–2018</strong> — the practice continues undetected publicly. Billions of location data points collected from users who believe they have turned tracking off.</li>
+<li><strong>August 13, 2018</strong> — <em>Associated Press</em>, Ryan Nakashima: “Google tracks your movements, like it or not.” AP experiment with 20 phones.</li>
+<li><strong>August 13, 2018</strong> — Within hours, Google <strong>updates its help text</strong> (without changing functionality). The line “When Location History is off, the places you go are not stored” is rewritten.</li>
+<li><strong>August 13, 2018</strong> — Prof. Schmidt of Vanderbilt publishes the report “Google Data Collection” — 340 transmissions per day from Android.</li>
+<li><strong>September 2018</strong> — Class action <strong>Patacsil v. Google</strong> (N.D. California).</li>
+<li><strong>May 2020</strong> — Arizona AG (Mark Brnovich) files <em>State of Arizona v. Google</em>.</li>
+<li><strong>January 2022</strong> — 4 state AGs join: DC (Karl Racine), Indiana, Texas, Washington.</li>
+<li><strong>October 2022</strong> — <strong>Arizona wins: $85 million settlement</strong>.</li>
+<li><strong>November 14, 2022</strong> — <strong>40 US attorneys general reach a joint settlement: $391.5 million</strong> (historic record).</li>
+<li><strong>January 2023</strong> — <strong>DC + Indiana + Texas + Washington: $29.5 million</strong>.</li>
+<li><strong>January 2023</strong> — <strong>Texas separately: $8 million</strong>.</li>
+<li><strong>2023</strong> — <strong>Australia ACCC: AUD 60 million</strong>.</li>
+<li><strong>2023</strong> — <strong>South Korea PIPC: KRW 80 billion</strong>.</li>
+<li><strong>2024</strong> — federal class-action settlement: <strong>$93 million</strong>.</li>
+<li><strong>2024</strong> — Google announces reforms: <strong>Location History off by default for new accounts</strong>; interface simplification.</li>
+</ul>
+<hr>
+<h2 id="mechanism">Mechanism</h2>
+<h3 id="how-it-worked--the-architecture-of-deception">How it worked — the architecture of deception</h3>
+<p><strong>Two settings, misleading names, one illusion of control.</strong></p>
+<p>Google had (and in part still has) <strong>two separate settings</strong> for location:</p>
+<h4 id="1-location-history">1. “Location History”</h4>
+<ul>
+<li>Google’s description: “Save a history of places you’ve been.”</li>
+<li>Creates the <strong>visible Timeline</strong> on a map (timeline.google.com).</li>
+<li>The user sees a visualization of their movements against a map.</li>
+<li>Turning it off: it seemed logical that this would end location collection.</li>
+</ul>
+<h4 id="2-web--app-activity">2. “Web &#x26; App Activity”</h4>
+<ul>
+<li>Google’s description: “Save activity in Google Search, Maps, Chrome, Gmail.”</li>
+<li><strong>On by default</strong> with every new account.</li>
+<li><strong>Does not ask explicitly about location.</strong></li>
+<li>But <strong>collects location</strong> every time you:
+<ul>
+<li>open Google Maps</li>
+<li>search on Google Search (Google knows where you are searching from)</li>
+<li>write an email via Gmail mobile</li>
+<li>open Chrome</li>
+<li>Android sends a crash report</li>
+<li>Google Assistant responds to a hotword</li>
+<li>Google Photos syncs</li>
+</ul>
+</li>
+</ul>
+<p>Turning off <strong>Location History</strong> did not affect <strong>Web &#x26; App Activity</strong>. The user would turn off “history” thinking tracking had stopped — but Google kept collecting data from the second setting.</p>
+<p><strong>Even turning off both settings</strong> did not end everything:</p>
+<ul>
+<li><strong>IP address</strong> signals the city</li>
+<li><strong>Wi-Fi scans</strong> (Android scans surrounding networks even when Wi-Fi is turned off on the phone — via “Wi-Fi scanning” and “Bluetooth scanning” in settings)</li>
+<li><strong>Sensor fusion</strong> — accelerometer, gyroscope, magnetometer provide information about movement and orientation</li>
+<li><strong>EXIF metadata</strong> in photos saved to Google Photos (if sync is enabled)</li>
+</ul>
+<h3 id="dark-patterns-in-the-interface">Dark patterns in the interface</h3>
+<p>When a user tried to turn off Web &#x26; App Activity, Google displayed an <strong>alarming pop-up</strong>: <em>“Without this history, Google Maps, the Assistant, and other services will be less useful.”</em> — a picture of catastrophe designed to deter the user from turning it off.</p>
+<p>Alternatively: the “Turn off” button was <strong>less visible</strong> than “Cancel.” A classic misleading interface.</p>
+<p>When the user visited <code>myactivity.google.com</code>, the interface showed <strong>dashboards with five different types of history</strong>, without a clear explanation of the relationships between them. UX experts called it <strong>“intentional complexity.”</strong></p>
+<h3 id="internal-evidence-arizona-discovery-20202022">Internal evidence (Arizona discovery, 2020–2022)</h3>
+<p>In the Arizona lawsuit, Google was compelled to disclose internal documents. The key ones:</p>
+<ol>
+<li><strong>2014 email</strong>: Google Maps VP <strong>Jen Fitzpatrick</strong> — admits herself that <em>“I don’t know exactly how these two settings work together.”</em> If the VP of Maps doesn’t understand, how can a user?</li>
+<li><strong>2015 memo</strong>: the UX team proposes <strong>consolidating the settings into one</strong>. The marketing response: <strong>“this will reduce ad targeting precision by about 12%.”</strong> Proposal rejected.</li>
+<li><strong>2017 presentation</strong>: internal data shows that <strong>73% of users</strong>, after turning off Location History, <strong>did not know</strong> that location was still being collected.</li>
+</ol>
+<hr>
+<h2 id="discovery">Discovery</h2>
+<h3 id="who-is-ryan-nakashima">Who is Ryan Nakashima</h3>
+<p><strong>Ryan Nakashima</strong> — a technology journalist at <em>Associated Press</em> (at the time). He specializes in analytical tech journalism. His <strong>20-phone</strong> experiment has been described as <strong>“the most cost-effective journalistic experiment of the decade”</strong> — AP paid around $5,000 for the phones, and the case led to <strong>$660+ million in fines and changes in Google’s policy</strong>.</p>
+<h3 id="experimental-methodology">Experimental methodology</h3>
+<p>Nakashima bought <strong>20 phones</strong> of various models (Android, iPhone) with different Google accounts. On each one he:</p>
+<ol>
+<li>Turned off “Location History” in Google account settings.</li>
+<li>Turned off “Location” in the operating system settings (where available).</li>
+<li>Turned off various combinations of app permissions.</li>
+<li>Over several weeks, <strong>walked around with the phones</strong> across the San Francisco Bay Area.</li>
+<li>Downloaded the activity history of each account from <code>myactivity.google.com</code>.</li>
+</ol>
+<p><strong>Result:</strong> Google knew the user’s exact location despite the settings being turned off. The data contained names of cafés, parks, addresses, observation points.</p>
+<p><strong>Academic verification:</strong> Jonathan Mayer (Princeton, formerly Stanford) repeated the experiment and confirmed the findings.</p>
+<h3 id="the-role-of-douglas-schmidt">The role of Douglas Schmidt</h3>
+<p><strong>Prof. Douglas C. Schmidt</strong> of Vanderbilt University published the 2018 report <strong>“Google Data Collection”</strong> — a quantitative analysis of data sent by Android to Google. Key findings:</p>
+<ul>
+<li><strong>An Android at rest</strong> on a desk sends Google <strong>340 telemetry transmissions per day</strong>.</li>
+<li>An iPhone with comparable activity: <strong>~30 transmissions per day</strong> to Apple (10× fewer).</li>
+<li>Even <strong>without active Chrome</strong>, Android sends <strong>location information every few minutes</strong> (if Wi-Fi scanning is on).</li>
+</ul>
+<p>Schmidt’s report was funded by <strong>DCN (Digital Content Next)</strong>, a publishers’ association, which gave Google an argument about conflict of interest. But the methodology was sound — later studies by Mayer, Acar, and Narayanan confirmed it.</p>
+<h3 id="first-publications">First publications</h3>
+<ul>
+<li><strong>August 13, 2018</strong> — Ryan Nakashima, “AP Exclusive: Google tracks your movements, like it or not,” <em>Associated Press</em>.</li>
+<li><strong>August 13, 2018</strong> — Douglas Schmidt, “Google Data Collection,” Vanderbilt University.</li>
+<li><strong>August 14, 2018</strong> — reactions in <em>NYT</em>, <em>WSJ</em>, <em>WaPo</em>, <em>BBC</em>, <em>The Guardian</em>.</li>
+</ul>
+<hr>
+<h2 id="key-people">Key people</h2>
+<h3 id="discoverers">Discoverers</h3>
+<ul>
+<li><strong>Ryan Nakashima</strong> (<em>AP</em>) — described above.</li>
+<li><strong>Douglas C. Schmidt</strong> — professor of Computer Science, Vanderbilt University. Author of the 2018 report. Expert in middleware, networking, formerly DARPA.</li>
+<li><strong>Jonathan Mayer</strong> (Princeton) — academic verification.</li>
+<li><strong>Brian Fung</strong> (<em>Washington Post</em>) — analysis of misleading interfaces.</li>
+</ul>
+<h3 id="regulators--prosecutors">Regulators / prosecutors</h3>
+<ul>
+<li><strong>Mark Brnovich</strong> — Attorney General of Arizona 2015–2023 (Republican). The first AG to go after Google for Location History. Lawsuit filed May 2020.</li>
+<li><strong>Karl Racine</strong> — Attorney General of DC 2015–2023 (Democrat). Joined the action in January 2022.</li>
+<li><strong>Letitia James</strong> — AG of New York, a key figure coordinating the 40-state settlement.</li>
+<li><strong>Rob Bonta</strong> — AG of California.</li>
+</ul>
+<h3 id="google">Google</h3>
+<ul>
+<li><strong>Jen Fitzpatrick</strong> — VP of Google Maps, later VP of Core Systems. The internal email disclosed in discovery showed that <strong>she herself was not sure</strong> how the two settings worked.</li>
+<li><strong>Sundar Pichai</strong> — CEO. Led the PR campaign for reforms in 2024.</li>
+</ul>
+<h3 id="lawyers">Lawyers</h3>
+<ul>
+<li><strong>Bernstein Litowitz Berger &#x26; Grossmann LLP</strong> — lead firm on the class action.</li>
+<li><strong>Bob Trujillo</strong> — Arizona Assistant AG, architect of the documentation.</li>
+</ul>
+<hr>
+<h2 id="company-response">Company response</h2>
+<h3 id="google-1">Google</h3>
+<p><strong>Stage 1: cosmetic change (August 2018).</strong> Within hours of the AP publication, Google updated its <strong>help text</strong> but <strong>did not change the functionality</strong>. The old line <em>“When Location History is off, the places you go are not stored”</em> was rewritten to be more precise, explaining the difference between LH and W&#x26;AA. This did not change the practice — only the documentation.</p>
+<p><strong>Stage 2: defense (2018–2022).</strong> For 4 years Google argued that the settings were clear and that users had full control. In AG lawsuits, they repeated: <em>“Our products are built with privacy in mind.”</em></p>
+<p><strong>Stage 3: loss (2022).</strong> Arizona wins in October 2022 — $85 million. This breaks the defense. One month later, 40 states reach a settlement.</p>
+<p><strong>Stage 4: reform (2023–2024).</strong> Google announces changes:</p>
+<ul>
+<li><strong>Location History off by default</strong> for new accounts (2024)</li>
+<li>Simplification of the “Your Data in Maps” interface</li>
+<li><strong>Auto-delete after 18 months</strong> (previously: unlimited retention)</li>
+<li><strong>Incognito Mode in Maps</strong> feature</li>
+<li><strong>Geofence warrants: architecture change</strong> — in 2023 Google announced that <strong>the new Location History infrastructure will not allow responses to geofence warrants</strong>.</li>
+</ul>
+<hr>
+<h2 id="legal-proceedings">Legal proceedings</h2>
+<h3 id="jurisdictions">Jurisdictions</h3>
+<ul>
+<li>US federal (FTC did not open a case — notably)</li>
+<li>US state (40+ states, various proceedings)</li>
+<li>US class actions (Patacsil v. Google and others)</li>
+<li>Australia (ACCC)</li>
+<li>South Korea (PIPC)</li>
+<li>Several EU states — limited actions (a case was before Ireland’s DPC, but the DPC did not open proceedings)</li>
+</ul>
+<h3 id="legal-basis">Legal basis</h3>
+<ul>
+<li><strong>State Consumer Protection Acts</strong> — 40+ US states</li>
+<li><strong>FTC Act § 5</strong> — unfair/deceptive practices (argument used, but FTC did not open a separate case)</li>
+<li><strong>GDPR art. 6</strong> — lack of a valid legal basis for processing</li>
+<li><strong>GDPR art. 7</strong> — conditions for consent (must be “freely given, specific, informed, and unambiguous”)</li>
+<li><strong>GDPR art. 13/14</strong> — information obligation</li>
+<li><strong>ACL (Australian Consumer Law)</strong> — misleading/deceptive conduct</li>
+<li><strong>PIPA (Personal Information Protection Act, Korea)</strong> — duty of informed consent</li>
+</ul>
+<h3 id="key-stages">Key stages</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Date</th><th>Stage</th></tr></thead><tbody><tr><td>August 2018</td><td>AP publication; Google changes help text</td></tr><tr><td>May 2020</td><td>Arizona lawsuit</td></tr><tr><td>October 2022</td><td>Arizona wins $85 million</td></tr><tr><td>November 14, 2022</td><td>40 states, $391.5 million</td></tr><tr><td>January 2023</td><td>DC+3, Texas separately</td></tr><tr><td>2023</td><td>Australia, Korea</td></tr><tr><td>2024</td><td>Class action $93 million</td></tr></tbody></table>
+<h3 id="related-case-law">Related case law</h3>
+<ul>
+<li><strong><em>Carpenter v. United States</em> (585 U.S. 296, 2018)</strong> — US Supreme Court: <strong>the 4th Amendment requires a warrant</strong> for the government to obtain cell-site location data from a mobile carrier. Directly connected to Google Location History — later extended to <strong>geofence warrants</strong>.</li>
+<li><strong>Safari Workaround case (B02)</strong> — analogous pattern of “deception.”</li>
+<li><strong>Onavo case (A03)</strong> — broader practice of hidden tracking.</li>
+</ul>
+<hr>
+<h2 id="penalties-and-settlements">Penalties and settlements</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Date</th><th>Body</th><th>Amount</th><th>Jurisdiction</th><th>Basis</th></tr></thead><tbody><tr><td>October 2022</td><td>AZ AG</td><td>$85,000,000</td><td>Arizona</td><td>Consumer Fraud Act</td></tr><tr><td>November 14, 2022</td><td>40 US AGs</td><td><strong>$391,500,000</strong></td><td>US state</td><td>Consumer protection</td></tr><tr><td>January 2023</td><td>DC + IN + TX + WA</td><td>$29,500,000</td><td>States</td><td>as above</td></tr><tr><td>January 2023</td><td>TX separately</td><td>$8,000,000</td><td>Texas</td><td>as above</td></tr><tr><td>2023</td><td>ACCC</td><td>AUD 60,000,000</td><td>Australia</td><td>ACL</td></tr><tr><td>2023</td><td>PIPC</td><td>KRW 80,000,000,000</td><td>Korea</td><td>PIPA</td></tr><tr><td>2024</td><td><em>Patacsil v. Google</em></td><td>$93,000,000</td><td>US class</td><td>State laws</td></tr></tbody></table>
+<p><strong>Total: ~$660 million / ~€610 million</strong></p>
+<hr>
+<h2 id="precedents-and-implications">Precedents and implications</h2>
+<h3 id="for-us-law">For US law</h3>
+<ul>
+<li><strong>Record state settlement of $391.5 million</strong> (November 2022) — the largest of its kind before 2024.</li>
+<li><strong>The “multi-state AG action” model</strong> — established as effective against Big Tech. Repeated in cases against Meta (2023), TikTok.</li>
+<li><em><strong>Carpenter v. United States</strong></em> — a sustained 4th Amendment precedent for location data.</li>
+</ul>
+<h3 id="for-eu-law">For EU law</h3>
+<ul>
+<li><strong>A new quality for GDPR art. 7</strong> — misleading interfaces in consent flows are <strong>a classic violation</strong> of the “freely given” consent requirement.</li>
+<li><strong>The DPAs of Denmark, Germany, Spain</strong> issued guidance inspired by the Google case.</li>
+<li><strong>The EDPB’s guidelines on misleading interfaces</strong> (2022) were partly inspired by the case.</li>
+</ul>
+<h3 id="for-big-tech-practice">For Big Tech practice</h3>
+<ul>
+<li><strong>Defaults = a business decision</strong> — UX design with “on by default” is regulatorily risky. Since 2023, Apple, Meta, and TikTok have been moving toward <strong>defaults-off</strong> for new users.</li>
+<li><strong>Internal documents are a risk</strong> — disputes about misleading interfaces, “don’t write anything you don’t want to see in the NYT” (see also B03 Google+).</li>
+<li><strong>“Geofence warrants”</strong> — a police technique (a list of all phones within X radius of a crime scene) began to be heavily restricted. In 2023, Google announced that <strong>its future infrastructure will not allow such queries</strong>. This curtailed an investigative tool for police — mainly in the US, where geofence warrants were used in tens of thousands of cases per year.</li>
+</ul>
+<hr>
+<h2 id="class-actions">Class actions</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Case</th><th>Court</th><th>Status</th><th>Value</th><th>Affected</th></tr></thead><tbody><tr><td><em>Patacsil et al. v. Google</em></td><td>N.D. Cal.</td><td>Settled 2024</td><td>$93 million</td><td>Android users, USA</td></tr><tr><td><em>Matera v. Google</em></td><td>N.D. Cal.</td><td>Settled</td><td>Part of the above</td><td>Chrome users</td></tr><tr><td><em>Roe v. Google</em> (geofence)</td><td>N.D. Cal.</td><td>Pending</td><td>Undetermined</td><td>People affected by geofence warrants</td></tr></tbody></table>
+<hr>
+<h2 id="conclusions-for-citizens">Conclusions for citizens</h2>
+<h3 id="what-does-this-mean-for-me">What does this mean for me?</h3>
+<p>If you have used Android or Google apps on an iPhone for the last 10 years — <strong>Google knows your movements in detail: your workplace, your home, your doctor, your lover, your Sunday Mass</strong>. Even if you turned off “Location History.” That data can be used for: ad targeting, police geofence warrants, leaks, sales to “data brokers,” and, in the event of a hack — to track your family.</p>
+<h3 id="how-to-protect-yourself">How to protect yourself?</h3>
+<p><strong>Immediate steps (10 minutes):</strong></p>
+<ol>
+<li><strong>Go to <code>myactivity.google.com</code></strong> and <strong>turn off</strong>:
+<ul>
+<li>Web &#x26; App Activity</li>
+<li>Location History</li>
+<li>YouTube History</li>
+</ul>
+</li>
+<li><strong>Set auto-delete to 3 months</strong> (minimum) for all activity: Data &#x26; Privacy → Auto-delete.</li>
+<li><strong>Delete existing history</strong>: Timeline → Settings → “Delete all Location History.”</li>
+<li><strong>Turn off “Ad personalization”</strong> at <code>adssettings.google.com</code>.</li>
+</ol>
+<p><strong>Android — in detail:</strong></p>
+<ol start="5">
+<li><strong>Settings → Location</strong> → turn off “Use precise location” for apps that don’t need precise location (weather, social media).</li>
+<li><strong>Settings → Location → Wi-Fi scanning, Bluetooth scanning</strong> — <strong>turn both off</strong>! Even with Wi-Fi off, Android scans nearby networks if these options are enabled.</li>
+<li><strong>Settings → Apps → review each app</strong> — location should be set to <strong>“Only while using the app”</strong> instead of “Always.”</li>
+<li><strong>Consider GrapheneOS</strong> — a privacy-focused Android distribution without Google Services. For advanced users.</li>
+</ol>
+<p><strong>iPhone:</strong></p>
+<ol start="9">
+<li><strong>Settings → Privacy &#x26; Security → Location Services</strong> — review app by app. For Google Maps, set “Only While Using the App” or “Precise Location: OFF.”</li>
+<li><strong>Settings → Privacy &#x26; Security → Tracking</strong> — turn off “Allow Apps to Request to Track.”</li>
+<li><strong>iCloud Private Relay</strong> (iCloud+) — hides your IP from Google.</li>
+</ol>
+<h3 id="what-are-my-rights">What are my rights?</h3>
+<p><strong>In the EU (GDPR):</strong></p>
+<ul>
+<li><strong>Art. 7</strong> — withdraw consent that was coerced by dark patterns. Meta and Google must accept withdrawal of consent.</li>
+<li><strong>Art. 17</strong> — demand erasure of location data from Google’s history.</li>
+<li><strong>Art. 15</strong> — obtain a full copy of the data via Google Takeout.</li>
+<li><strong>Art. 82</strong> — compensation for non-material damage (<strong>see CJEU C-340/21, 2023</strong>, the mere fear of misuse may constitute damage).</li>
+</ul>
+<p><strong>In the US:</strong></p>
+<ul>
+<li>State consumer protection laws (40+ states with precedent).</li>
+<li>California CCPA/CPRA — right to “opt out of sale.”</li>
+<li>State privacy laws (NY Stop Hacks, Massachusetts, etc.).</li>
+</ul>
+<h3 id="where-to-file-complaints">Where to file complaints?</h3>
+<ul>
+<li><strong>Poland</strong>: UODO</li>
+<li><strong>Reporting misleading interfaces</strong>: UODO and UOKiK (consumer law)</li>
+<li><strong>USA</strong>: State AG</li>
+<li><strong>Australia</strong>: ACCC</li>
+<li><strong>Korea</strong>: PIPC</li>
+</ul>
+<h3 id="a-note-for-mediators-and-lawyers">A note for mediators and lawyers</h3>
+<p>Google location data is potentially <strong>key evidence</strong> in cases involving:</p>
+<ol>
+<li><strong>Family law</strong> — divorces (proving cohabitation / separation), child custody (where the child actually lives).</li>
+<li><strong>Inheritance</strong> — where the deceased spent time, how they spent it.</li>
+<li><strong>Insurance</strong> — whether an accident truly occurred where it was claimed.</li>
+<li><strong>Alibis</strong> — in criminal cases, the data can confirm or refute an alibi.</li>
+</ol>
+<p>Procedure: the client can download their own data via <strong>takeout.google.com</strong> → “Location History” → export as JSON or KML. In Polish civil proceedings, these data can be requested as evidence if the client consents.</p>
+<p><strong>Conflicting interests</strong>: a client may want to turn off history (to avoid being tracked) or keep it (as a potential alibi). <strong>An informed decision</strong>, not a default.</p>
+<p><strong>Geofence warrants</strong> in Poland — theoretically possible under art. 180 of the Code of Criminal Procedure, but case law is almost nonexistent. Polish courts have not yet developed a precedent analogous to <em>Carpenter</em>.</p>
+<hr>
+<h2 id="context">Context</h2>
+<ul>
+<li><strong>Nakashima’s 20-phone experiment</strong> cost AP about <strong>$5,000</strong>. The consequences: <strong>$660+ million in fines</strong> for Google and global reform of its settings. <strong>Journalism ROI</strong>: ~132,000×.</li>
+<li><strong>Schmidt’s report — 340 transmissions per day</strong> — since 2018 this number has been cited in hundreds of articles, books, academic lectures, and congressional testimony. By comparison: iPhone ~30/day. The 10× difference shows the scale of Google’s ecosystem.</li>
+<li><strong>“Google already knew”</strong> — internal emails from 2014, disclosed in the Arizona lawsuit, showed that Google <strong>had known about user confusion from the start</strong>. Engineers proposed simplification. Management rejected it because <strong>“it will reduce ad targeting precision by 12%.”</strong></li>
+<li><strong>The VP of Maps didn’t understand her own product</strong> — in an internal email, Jen Fitzpatrick herself admitted that <strong>she was not sure</strong> how the two settings worked. A classic case of “emergent complexity” — a product that <strong>its own leaders</strong> do not understand.</li>
+<li><strong>Poland did not receive a separate penalty</strong> — UODO did not open proceedings, because the case sat with Ireland’s DPC via the one-stop-shop mechanism. The DPC did not treat the case as a priority. Polish citizens were, however, part of class actions that could generate compensation.</li>
+<li><strong><em>Carpenter v. United States</em> (SCOTUS 2018)</strong> — a landmark ruling. Timothy Carpenter was convicted of robberies in Detroit in part on the basis of <strong>127 days of location data</strong> obtained from a mobile carrier <strong>without a warrant</strong>. The US Supreme Court ruled 5:4: such data requires <strong>a judicial warrant</strong> under the 4th Amendment. This changed police practice across the US — and indirectly opened a discussion on <strong>geofence warrants</strong> to Google.</li>
+<li><strong>“Geofence warrants”</strong> — a technique in which police ask Google: “give us all phones within a 500 m radius of a crime scene between 2:00 and 4:00 p.m.” The list may contain dozens or hundreds of people — including innocent bystanders. In 2023, Google <strong>announced an architecture change</strong>: the new Location History infrastructure does not allow such queries to be answered. This limited an investigative tool for police — mainly in the US, where geofence warrants were used in tens of thousands of cases per year.</li>
+<li><strong>Conservative Texas was first</strong> — in January 2023, Texas (a state <strong>not known for active consumer-protection policy</strong>) entered a separate $8 million settlement. Unusual. Analysts explain: AG <strong>Ken Paxton</strong> (Republican) used cases against Big Tech as a political tool in his conflict with Silicon Valley.</li>
+<li><strong>Australia ACCC</strong> — in 2021, the Australian market regulator lost the first trial-level case. Only on appeal (2023) did it secure an AUD 60 million penalty. A case-law precedent for common-law jurisdictions.</li>
+<li><strong>South Korea</strong> — the KRW 80 billion fine (~$60 million) imposed by the PIPC (Personal Information Protection Commission) was one of the largest in the agency’s history. Korea is particularly strict about location data.</li>
+<li><strong>Google Takeout as an answer</strong> — after the case, Google made it easier to download location history as a “response to privacy concerns.” In practice: downloading one’s own data shows most users <strong>how detailed it is</strong>, which is often shocking.</li>
+</ul>
+<hr>
+<h2 id="sources">Sources</h2>
+<ol>
+<li>
+<p>Ryan Nakashima, “AP Exclusive: Google tracks your movements, like it or not,” <em>Associated Press</em>, August 13, 2018. URL: <a href="https://apnews.com/article/north-america-science-technology-business-ap-top-news-828aefab64d4411bac257a07c1af0ecb">https://apnews.com/article/north-america-science-technology-business-ap-top-news-828aefab64d4411bac257a07c1af0ecb</a> (accessed: 2026-04-17)</p>
+</li>
+<li>
+<p>Douglas C. Schmidt, “Google Data Collection,” Digital Content Next / Vanderbilt University, August 15, 2018. URL: <a href="https://digitalcontentnext.org/wp-content/uploads/2018/08/DCN-Google-Data-Collection-Paper.pdf">https://digitalcontentnext.org/wp-content/uploads/2018/08/DCN-Google-Data-Collection-Paper.pdf</a> (accessed: 2026-04-17)</p>
+</li>
+<li>
+<p><em>State of Arizona v. Google LLC</em>, Maricopa County Superior Court, Case No. CV 2020-006219 (court documents).</p>
+</li>
+<li>
+<p>National Association of Attorneys General, press release “40 States Reach $391.5 Million Settlement with Google Over Location Tracking Practices,” November 14, 2022.</p>
+</li>
+<li>
+<p><em>Carpenter v. United States</em>, 585 U.S. 296 (2018) — SCOTUS ruling. URL: <a href="https://www.supremecourt.gov/opinions/17pdf/16-402_h315.pdf">https://www.supremecourt.gov/opinions/17pdf/16-402_h315.pdf</a></p>
+</li>
+<li>
+<p>Australian Competition &#x26; Consumer Commission, “ACCC v Google LLC &#x26; Anor,” 2023 decision.</p>
+</li>
+<li>
+<p>Personal Information Protection Commission (Korea), 2023 decision imposing a KRW 80 billion fine.</p>
+</li>
+<li>
+<p><em>Patacsil et al. v. Google LLC</em>, N.D. Cal., PACER documents.</p>
+</li>
+<li>
+<p><em>Matera v. Google Inc.</em>, N.D. Cal., related lawsuit.</p>
+</li>
+<li>
+<p>European Data Protection Board, “Guidelines 03/2022 on deceptive design patterns in social media platform interfaces,” 2022.</p>
+</li>
+<li>
+<p>Brian Fung, “Google keeps a detailed record of your location, even when you tell it not to,” <em>The Washington Post</em>, August 2018.</p>
+</li>
+<li>
+<p>Jonathan Mayer et al., Princeton University CITP — verification of the AP experiment.</p>
+</li>
+<li>
+<p>Google blog, “Your personal data is protected on Google. Here’s how,” 2023 — announcement of Location History reforms.</p>
+</li>
+<li>
+<p>GDPR art. 6, 7, 13; EDPB Guidelines on Consent under Regulation 2016/679.</p>
+</li>
+<li>
+<p>CEO Sundar Pichai, congressional testimony 2018, 2020 — location-related issues.</p>
+</li>
+</ol>
+<hr>
+<p><em>Last updated: 2026-04-17</em>
+<em>Card in database: B04_location_history.md</em></p>  </div> <div class="case-page__sidebar" data-astro-cid-7l3ranxr> <aside class="case-meta" aria-label="Case metadata" data-astro-cid-mwx44fnd> <div class="case-meta__block" data-astro-cid-mwx44fnd> <span class="case-meta__label" data-astro-cid-mwx44fnd>Status</span> <span class="status-pill status-pill--concluded" data-astro-cid-eiggyogj> Concluded </span> </div> <div class="case-meta__block" data-astro-cid-mwx44fnd> <span class="case-meta__label" data-astro-cid-mwx44fnd>Case ID</span> <span class="case-meta__value meta" data-astro-cid-mwx44fnd>B04</span> </div> <div class="case-meta__block" data-astro-cid-mwx44fnd> <span class="case-meta__label" data-astro-cid-mwx44fnd>Entity</span> <span class="case-meta__value" data-astro-cid-mwx44fnd>Google</span> </div> <div class="case-meta__block" data-astro-cid-mwx44fnd> <span class="case-meta__label" data-astro-cid-mwx44fnd>Year revealed</span> <span class="case-meta__value meta" data-astro-cid-mwx44fnd>2018</span> </div> <div class="case-meta__block" data-astro-cid-mwx44fnd> <span class="case-meta__label" data-astro-cid-mwx44fnd>Years of practice</span> <span class="case-meta__value meta" data-astro-cid-mwx44fnd>2014–2022</span> </div> <div class="case-meta__block" data-astro-cid-mwx44fnd> <span class="case-meta__label" data-astro-cid-mwx44fnd>Jurisdictions</span> <span class="case-meta__value" data-astro-cid-mwx44fnd>EU, US, AU</span> </div>   <div class="case-meta__block" data-astro-cid-mwx44fnd> <span class="case-meta__label" data-astro-cid-mwx44fnd>Total penalties</span> <div class="case-meta__fines" data-astro-cid-mwx44fnd> <span class="case-meta__value meta" data-astro-cid-mwx44fnd>$607,000,000</span><span class="case-meta__value meta" data-astro-cid-mwx44fnd>€83,000,000</span> </div> </div> <div class="case-meta__block" data-astro-cid-mwx44fnd> <span class="case-meta__label" data-astro-cid-mwx44fnd>Penalties breakdown</span> <table class="case-meta__fine-table" data-astro-cid-mwx44fnd> <tr data-astro-cid-mwx44fnd> <td class="meta" data-astro-cid-mwx44fnd>$85,000,000</td> <td data-astro-cid-mwx44fnd>AZ AG</td> <td class="meta" data-astro-cid-mwx44fnd>2022-10</td> </tr><tr data-astro-cid-mwx44fnd> <td class="meta" data-astro-cid-mwx44fnd>$391,500,000</td> <td data-astro-cid-mwx44fnd>40 AG USA</td> <td class="meta" data-astro-cid-mwx44fnd>2022-11</td> </tr><tr data-astro-cid-mwx44fnd> <td class="meta" data-astro-cid-mwx44fnd>$29,500,000</td> <td data-astro-cid-mwx44fnd>DC + IN + TX + WA</td> <td class="meta" data-astro-cid-mwx44fnd>2023-01</td> </tr><tr data-astro-cid-mwx44fnd> <td class="meta" data-astro-cid-mwx44fnd>$8,000,000</td> <td data-astro-cid-mwx44fnd>TX osobno</td> <td class="meta" data-astro-cid-mwx44fnd>2023-01</td> </tr><tr data-astro-cid-mwx44fnd> <td class="meta" data-astro-cid-mwx44fnd>€35,000,000</td> <td data-astro-cid-mwx44fnd>ACCC (AU, ~60 mln AUD)</td> <td class="meta" data-astro-cid-mwx44fnd>2023</td> </tr><tr data-astro-cid-mwx44fnd> <td class="meta" data-astro-cid-mwx44fnd>€48,000,000</td> <td data-astro-cid-mwx44fnd>PIPC (KR, ~69,2 mld KRW)</td> <td class="meta" data-astro-cid-mwx44fnd>2023</td> </tr><tr data-astro-cid-mwx44fnd> <td class="meta" data-astro-cid-mwx44fnd>$93,000,000</td> <td data-astro-cid-mwx44fnd>*Patacsil v. Google*</td> <td class="meta" data-astro-cid-mwx44fnd>2024</td> </tr> </table> </div> <div class="case-meta__block" data-astro-cid-mwx44fnd> <span class="case-meta__label" data-astro-cid-mwx44fnd>Legal basis</span> <ul class="case-meta__list" data-astro-cid-mwx44fnd> <li data-astro-cid-mwx44fnd>State consumer protection</li><li data-astro-cid-mwx44fnd>FTC Act § 5</li><li data-astro-cid-mwx44fnd>RODO art. 6</li><li data-astro-cid-mwx44fnd>7</li><li data-astro-cid-mwx44fnd>13</li><li data-astro-cid-mwx44fnd>ACL</li> </ul> </div> <div class="case-meta__block" data-astro-cid-mwx44fnd> <span class="case-meta__label" data-astro-cid-mwx44fnd>Categories</span> <div class="case-meta__tags" data-astro-cid-mwx44fnd> <span class="case-meta__tag" data-astro-cid-mwx44fnd>Privacy</span> </div> </div> <div class="case-meta__block case-meta__block--updated" data-astro-cid-mwx44fnd> <span class="case-meta__label" data-astro-cid-mwx44fnd>Last updated</span> <span class="case-meta__value meta" data-astro-cid-mwx44fnd>2026-04-17</span> </div> </aside> </div> </div> <section class="related" aria-labelledby="related-heading" data-astro-cid-ejmdlorb><div class="related__header" data-astro-cid-ejmdlorb><h2 id="related-heading" class="related__title" data-astro-cid-ejmdlorb>Related cases</h2><p class="related__lede" data-astro-cid-ejmdlorb>
+Cases that share a company, mechanism, legal precedent or jurisdiction.
+</p></div><ul class="related__list" data-astro-cid-ejmdlorb><li class="related__item" data-astro-cid-ejmdlorb><a href="/matryca/en/cases/b02-google-safari-obejście/" class="related__link" data-astro-cid-ejmdlorb><div class="related__head" data-astro-cid-ejmdlorb><span class="badge badge--group-b badge--sm" data-astro-cid-35zd7xm4> <span class="badge__id" data-astro-cid-35zd7xm4>B</span> <span class="badge__label" data-astro-cid-35zd7xm4>Google</span> </span><span class="related__id meta" data-astro-cid-ejmdlorb>B02</span><span class="related__year meta" data-astro-cid-ejmdlorb>2012</span></div><p class="related__name" data-astro-cid-ejmdlorb>Google Safari Workaround</p><p class="related__sub" data-astro-cid-ejmdlorb>Circumventing the default privacy settings of iPhones</p><p class="related__meta meta" data-astro-cid-ejmdlorb>Google</p></a></li><li class="related__item" data-astro-cid-ejmdlorb><a href="/matryca/en/cases/b03-google-api-bugs/" class="related__link" data-astro-cid-ejmdlorb><div class="related__head" data-astro-cid-ejmdlorb><span class="badge badge--group-b badge--sm" data-astro-cid-35zd7xm4> <span class="badge__id" data-astro-cid-35zd7xm4>B</span> <span class="badge__label" data-astro-cid-35zd7xm4>Google</span> </span><span class="related__id meta" data-astro-cid-ejmdlorb>B03</span><span class="related__year meta" data-astro-cid-ejmdlorb>2018</span></div><p class="related__name" data-astro-cid-ejmdlorb>Google+ API bugs</p><p class="related__sub" data-astro-cid-ejmdlorb>Concealing the leak and shutting down the platform</p><p class="related__meta meta" data-astro-cid-ejmdlorb>Google</p></a></li><li class="related__item" data-astro-cid-ejmdlorb><a href="/matryca/en/cases/b01-google-street-view-wi-spy/" class="related__link" data-astro-cid-ejmdlorb><div class="related__head" data-astro-cid-ejmdlorb><span class="badge badge--group-b badge--sm" data-astro-cid-35zd7xm4> <span class="badge__id" data-astro-cid-35zd7xm4>B</span> <span class="badge__label" data-astro-cid-35zd7xm4>Google</span> </span><span class="related__id meta" data-astro-cid-ejmdlorb>B01</span><span class="related__year meta" data-astro-cid-ejmdlorb>2010</span></div><p class="related__name" data-astro-cid-ejmdlorb>Google Street View Wi-Spy</p><p class="related__sub" data-astro-cid-ejmdlorb>Google cars harvested private data from Wi-Fi networks</p><p class="related__meta meta" data-astro-cid-ejmdlorb>Google</p></a></li><li class="related__item" data-astro-cid-ejmdlorb><a href="/matryca/en/cases/d04-uber-god-view/" class="related__link" data-astro-cid-ejmdlorb><div class="related__head" data-astro-cid-ejmdlorb><span class="badge badge--group-d badge--sm" data-astro-cid-35zd7xm4> <span class="badge__id" data-astro-cid-35zd7xm4>D</span> <span class="badge__label" data-astro-cid-35zd7xm4>Amazon / Uber</span> </span><span class="related__id meta" data-astro-cid-ejmdlorb>D04</span><span class="related__year meta" data-astro-cid-ejmdlorb>2014</span></div><p class="related__name" data-astro-cid-ejmdlorb>Uber God View</p><p class="related__sub" data-astro-cid-ejmdlorb>An internal tool for tracking journalists and customers</p><p class="related__meta meta" data-astro-cid-ejmdlorb>Uber Technologies</p></a></li><li class="related__item" data-astro-cid-ejmdlorb><a href="/matryca/en/cases/b06-project-dragonfly/" class="related__link" data-astro-cid-ejmdlorb><div class="related__head" data-astro-cid-ejmdlorb><span class="badge badge--group-b badge--sm" data-astro-cid-35zd7xm4> <span class="badge__id" data-astro-cid-35zd7xm4>B</span> <span class="badge__label" data-astro-cid-35zd7xm4>Google</span> </span><span class="related__id meta" data-astro-cid-ejmdlorb>B06</span><span class="related__year meta" data-astro-cid-ejmdlorb>2018</span></div><p class="related__name" data-astro-cid-ejmdlorb>Project Dragonfly</p><p class="related__sub" data-astro-cid-ejmdlorb>Google&#39;s censored search engine for China</p><p class="related__meta meta" data-astro-cid-ejmdlorb>Google</p></a></li></ul></section> </div> </article>  </main> <footer class="footer" data-astro-cid-yigv2lp6> <div class="container footer__inner" data-astro-cid-yigv2lp6> <div class="footer__privacy" data-astro-cid-yigv2lp6> <span class="footer__privacy-label" data-astro-cid-yigv2lp6>Privacy:</span> <span data-astro-cid-yigv2lp6>This portal collects no user data. No cookies. No analytics. No trackers.</span> </div> <nav class="footer__nav" aria-label="Supplementary navigation" data-astro-cid-yigv2lp6> <a href="/matryca/en/cases/" data-astro-cid-yigv2lp6>Cases</a> <a href="/matryca/en/who-revealed/" data-astro-cid-yigv2lp6>Who revealed it</a> <a href="/matryca/en/companies/" data-astro-cid-yigv2lp6>Companies</a> <a href="/matryca/en/tags/" data-astro-cid-yigv2lp6>Tags</a> <a href="/matryca/en/essays/" data-astro-cid-yigv2lp6>Essays</a> <a href="/matryca/en/how-much-they-know/" data-astro-cid-yigv2lp6>Questionnaire</a> <a href="/matryca/en/what-would-you-do/" data-astro-cid-yigv2lp6>Decision game</a> <a href="/matryca/en/infographics/" data-astro-cid-yigv2lp6>Infographics</a> <a href="/matryca/en/timeline/" data-astro-cid-yigv2lp6>Timeline</a> <a href="/matryca/en/about/" data-astro-cid-yigv2lp6>About</a> <a href="/matryca/en/methodology/" data-astro-cid-yigv2lp6>Methodology</a> </nav> <p class="footer__copy" data-astro-cid-yigv2lp6> <span class="meta" data-astro-cid-yigv2lp6>Big Tech Files (Matryca) &copy; 2026 — educational material, free to reuse.</span> </p> </div> </footer> </body></html>
