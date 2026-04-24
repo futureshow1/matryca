@@ -1,0 +1,69 @@
+---
+import { url } from '../../utils/url';
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__privacy">
+      <span class="footer__privacy-label">Privacy:</span>
+      <span>This portal collects no user data. No cookies. No analytics. No trackers.</span>
+    </div>
+
+    <nav class="footer__nav" aria-label="Supplementary navigation">
+      <a href={url('/en/cases/')}>Cases</a>
+      <a href={url('/en/who-revealed/')}>Who revealed it</a>
+      <a href={url('/en/companies/')}>Companies</a>
+      <a href={url('/en/tags/')}>Tags</a>
+      <a href={url('/en/essays/')}>Essays</a>
+      <a href={url('/en/how-much-they-know/')}>Questionnaire</a>
+      <a href={url('/en/what-would-you-do/')}>Decision game</a>
+      <a href={url('/en/infographics/')}>Infographics</a>
+      <a href={url('/en/timeline/')}>Timeline</a>
+      <a href={url('/en/about/')}>About</a>
+      <a href={url('/en/methodology/')}>Methodology</a>
+    </nav>
+
+    <p class="footer__copy">
+      <span class="meta">Big Tech Files (Matryca) &copy; {year} — educational material, free to reuse.</span>
+    </p>
+  </div>
+</footer>
+
+<style lang="scss">
+  .footer {
+    border-top: 0.5px solid var(--border);
+    margin-top: var(--space-24);
+    padding-block: var(--space-8);
+  }
+  .footer__inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  .footer__privacy {
+    font-size: var(--text-small);
+    color: var(--text-secondary);
+    .footer__privacy-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent);
+      margin-right: var(--gap-2);
+    }
+  }
+  .footer__nav {
+    display: flex;
+    gap: var(--space-6);
+    flex-wrap: wrap;
+    a {
+      font-size: var(--text-small);
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+      &:hover { color: var(--accent); }
+    }
+  }
+  .footer__copy {
+    color: var(--text-tertiary);
+  }
+</style>

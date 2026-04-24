@@ -1,0 +1,90 @@
+---
+import PageEn from '../../../layouts/PageEn.astro';
+import { url } from '../../../utils/url';
+---
+
+<PageEn
+  title="About — Big Tech Files"
+  description="About Big Tech Files — a reference portal documenting 33 cases of privacy, security and ethics violations by major technology companies."
+>
+  <article class="editorial">
+    <div class="container">
+      <h1>About</h1>
+
+      <div class="prose">
+        <p>
+          <strong>Big Tech Files</strong> (Polish: <em>Sprawy Big Techu</em>, working
+          project title: <em>Matryca</em>) is a reference portal documenting 33
+          cases of privacy, security and ethics violations by the largest
+          technology companies — Meta, Google, Apple, Microsoft, LinkedIn,
+          Amazon, Uber, TikTok, X (formerly Twitter), Clearview AI, Zoom and Yandex.
+        </p>
+
+        <h2>Purpose</h2>
+        <p>The portal has three equal purposes:</p>
+        <ul>
+          <li><strong>Reference material</strong> — for citation by journalists, lawyers, academics. Stable URLs, full sources, exportable data.</li>
+          <li><strong>Education</strong> — an accessible introduction to the topic for a broader audience.</li>
+          <li><strong>Intellectual provocation</strong> — showing patterns that are invisible when reading individual stories.</li>
+        </ul>
+
+        <h2>Who it is for</h2>
+        <ul>
+          <li><strong>Journalists</strong> — a ready reference base of facts and primary-document links.</li>
+          <li><strong>Lawyers and mediators</strong> — consolidated view of fines, jurisdictions, legal bases.</li>
+          <li><strong>Teachers and lecturers</strong> — educational material on privacy and technology ethics.</li>
+          <li><strong>Parents</strong> — sections on child safety online.</li>
+          <li><strong>Students</strong> of law, political science, journalism, computer science.</li>
+          <li><strong>Citizens</strong> — each card includes a "Conclusions for citizens" section with specific protection steps.</li>
+        </ul>
+
+        <h2>Method</h2>
+        <p>Each card is based exclusively on:</p>
+        <ul>
+          <li>Official regulator documents (DPC, FTC, CNIL, ICO, European Commission)</li>
+          <li>Court rulings (CJEU, national courts, SCOTUS)</li>
+          <li>Investigative journalism (NYT, Forbes, Guardian, Bloomberg, The Intercept)</li>
+          <li>Academic research and civil-rights organization reports (EFF, NOYB, Panoptykon)</li>
+          <li>Testimony before the US Congress and European Parliament</li>
+        </ul>
+        <p>All fines and dates are verified against at least two independent sources.</p>
+
+        <h2>Privacy of this portal</h2>
+        <p>
+          A project that documents privacy violations cannot itself violate
+          the privacy of its readers. Big Tech Files collects no user data,
+          uses no analytics cookies, loads no external tracking assets.
+          All resources are self-hosted.
+        </p>
+
+        <h2>License</h2>
+        <p>
+          Content is educational material for free use. When citing, please
+          credit: <em>Big Tech Files (Matryca), 2026 — matryca.org</em>.
+        </p>
+
+        <h2>Status</h2>
+        <p>
+          The English edition is currently a preview. Full translations of all
+          33 case cards (~110,000 words), 4 editorial essays, 12 whistleblower
+          profiles, 16 timeline scenes and all supporting materials are planned
+          for Phase 4. The Polish edition at <a href={url('/')}>matryca.org</a>
+          is complete and up to date.
+        </p>
+      </div>
+    </div>
+  </article>
+</PageEn>
+
+<style lang="scss">
+  .editorial {
+    padding-block: var(--space-8);
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: 42px;
+      line-height: 1.15;
+      margin-bottom: var(--space-8);
+    }
+  }
+</style>

@@ -1,0 +1,161 @@
+---
+import PageEn from '../../../layouts/PageEn.astro';
+import { url } from '../../../utils/url';
+
+const essays = [
+  {
+    slug: 'from-authors',
+    title: 'From the authors',
+    length: '~2,400 words',
+    teaser: 'Why a reference portal, why in Polish first, why now. A database that documents privacy violations cannot itself violate privacy. The design choices behind Matryca — no analytics, no cookies, no external trackers — are part of the method, not a decoration.',
+    polishSlug: 'od-autorow',
+  },
+  {
+    slug: 'from-a-lawyer',
+    title: 'From a lawyer',
+    length: '~3,100 words',
+    teaser: 'GDPR is not a paper. The legal architecture behind enforcement — why Irish DPC is the choke point, why Schrems I and Schrems II are structurally different, how "dark patterns" became a recognised legal category. A practitioner\'s view of what the case-base shows about European administrative law.',
+    polishSlug: 'od-prawnika',
+  },
+  {
+    slug: 'from-an-organization',
+    title: 'From an organization',
+    length: '~2,800 words',
+    teaser: 'Written by Panoptykon Foundation — Poland\'s principal civil-liberties organisation focused on digital rights. Why individual cases require organisational response. How NOYB, EDRi, EFF, Panoptykon split the enforcement burden. What a single citizen realistically can and cannot do.',
+    polishSlug: 'od-organizacji',
+  },
+  {
+    slug: 'from-a-citizen',
+    title: 'From a citizen',
+    length: '~2,200 words',
+    teaser: 'From the user side. How to read a case card without becoming despairing or cynical. What concretely can you change in your week. What is worth changing and what is performative. Written as a companion to the "citizen conclusions" section of each case card.',
+    polishSlug: 'od-obywatelki',
+  },
+];
+---
+
+<PageEn
+  title="Essays — Big Tech Files"
+  description="Four editorial essays framing the portal: from the authors, from a lawyer, from an organization, from a citizen."
+>
+  <article class="editorial">
+    <div class="container">
+      <header class="editorial__header">
+        <p class="meta" style="color: var(--text-tertiary)">Editorial framing — four essays</p>
+        <h1>Essays</h1>
+        <p class="editorial__lede">
+          The case cards are documentary. The essays are interpretive. Four
+          voices — the project authors, a lawyer, an organisation working on
+          digital rights, and a private citizen — each read the same 33-case
+          database from a different angle.
+        </p>
+        <p class="editorial__note">
+          Full essays (~10,500 words total) are currently available in Polish
+          only. English translations planned for Phase 4. Teasers below.
+        </p>
+      </header>
+
+      <ul class="essay-list">
+        {essays.map((e) => (
+          <li class="essay-list__item">
+            <p class="essay-list__length">{e.length}</p>
+            <h2 class="essay-list__title">{e.title}</h2>
+            <p class="essay-list__teaser">{e.teaser}</p>
+            <p class="essay-list__link">
+              <a href={url(`/teksty/${e.polishSlug}/`)}>Read in Polish →</a>
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </article>
+</PageEn>
+
+<style lang="scss">
+  .editorial {
+    padding-block: var(--space-8);
+  }
+
+  .editorial__header {
+    max-width: 760px;
+    margin-bottom: var(--space-10);
+  }
+
+  .editorial__header h1 {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    line-height: 1.15;
+    margin-block: var(--space-2) var(--space-4);
+  }
+
+  .editorial__lede {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-3);
+  }
+
+  .editorial__note {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-tertiary);
+    padding-top: var(--space-2);
+    border-top: 0.5px solid var(--border);
+    margin: 0;
+  }
+
+  .essay-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .essay-list__item {
+    padding: var(--space-6) 0;
+    border-top: 0.5px solid var(--border);
+    max-width: 760px;
+
+    &:last-child {
+      border-bottom: 0.5px solid var(--border);
+    }
+  }
+
+  .essay-list__length {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-tertiary);
+    letter-spacing: 0.06em;
+    margin: 0 0 var(--space-2);
+    text-transform: uppercase;
+  }
+
+  .essay-list__title {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 var(--space-3);
+  }
+
+  .essay-list__teaser {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text-primary);
+    margin: 0 0 var(--space-3);
+  }
+
+  .essay-list__link {
+    margin: 0;
+
+    a {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--transition-fast);
+
+      &:hover { border-bottom-color: var(--accent); }
+    }
+  }
+</style>

@@ -1,0 +1,192 @@
+---
+import { url } from '../../utils/url';
+const navLinks = [
+  { href: '/en/cases/', label: 'Cases' },
+  { href: '/en/who-revealed/', label: 'Who revealed it' },
+  { href: '/en/what-would-you-do/', label: 'What would you do?' },
+  { href: '/en/how-much-they-know/', label: 'How much they know' },
+  { href: '/en/essays/', label: 'Essays' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="header">
+  <div class="container header__inner">
+    <a href={url('/en/')} class="header__logo" aria-label="Big Tech Files — home">
+      <span class="header__logo-bar" aria-hidden="true"></span>
+      <span class="header__logo-name">Big Tech Files</span>
+      <span class="header__logo-sub">/ reference base</span>
+    </a>
+
+    <nav class="header__nav" aria-label="Main navigation">
+      <ul class="header__nav-list">
+        {navLinks.map((link) => {
+          const resolved = url(link.href);
+          const isActive = currentPath === resolved || currentPath.startsWith(resolved);
+          return (
+            <li>
+              <a
+                href={resolved}
+                class={`header__nav-link${isActive ? ' header__nav-link--active' : ''}`}
+              >
+                {link.label}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <a
+        href={url('/')}
+        class="header__lang"
+        title="Polska wersja — Sprawy Big Techu"
+      >PL</a>
+      <button
+        class="header__theme-toggle"
+        id="theme-toggle"
+        aria-label="Switch theme"
+        title="Light / dark theme"
+      >
+        <span class="header__theme-icon" aria-hidden="true" id="theme-icon">☀</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  const icon = document.getElementById('theme-icon');
+
+  function updateIcon() {
+    const theme = document.documentElement.getAttribute('data-theme');
+    if (icon) icon.textContent = theme === 'dark' ? '☽' : '☀';
+  }
+
+  updateIcon();
+
+  toggle?.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('matryca-theme', next);
+    updateIcon();
+  });
+</script>
+
+<style lang="scss">
+  .header {
+    border-bottom: 0.5px solid var(--border);
+    background: var(--bg-primary);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header__inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+    padding-block: var(--space-4);
+  }
+  .header__logo {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .header__logo-bar {
+    display: block;
+    width: 3px;
+    height: 22px;
+    background: var(--accent);
+    border-radius: 2px;
+    flex-shrink: 0;
+    position: relative;
+    top: 2px;
+  }
+  .header__logo-name {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+  }
+  .header__logo-sub {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-tertiary);
+    letter-spacing: 0.02em;
+  }
+  .header__nav { flex: 1; }
+  .header__nav-list {
+    display: flex;
+    gap: var(--space-6);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .header__nav-link {
+    font-size: var(--text-small);
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+
+    &:hover {
+      color: var(--text-primary);
+      border-color: var(--text-primary);
+    }
+    &--active {
+      color: var(--text-primary);
+      border-color: var(--accent);
+    }
+  }
+  .header__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-3);
+    flex-shrink: 0;
+  }
+  .header__lang {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 4px 8px;
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+
+    &:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+  }
+  .header__theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 13px;
+    transition: border-color var(--transition-fast), color var(--transition-fast);
+
+    &:hover {
+      border-color: var(--border-hover);
+      color: var(--text-primary);
+    }
+  }
+  @media (max-width: 640px) {
+    .header__nav { display: none; }
+  }
+</style>

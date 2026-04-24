@@ -1,0 +1,171 @@
+---
+import PageEn from '../../../layouts/PageEn.astro';
+import { url } from '../../../utils/url';
+
+const companies = [
+  { name: 'Meta', cases: 10, revenue: '$156B (2024)', hq: 'Menlo Park, CA', description: 'Facebook, Instagram, WhatsApp, Threads. Largest single operator in the database — 10 documented cases, from Cambridge Analytica to Local Mess. Record €1.2B GDPR fine (May 2023).' },
+  { name: 'Google / Alphabet', cases: 6, revenue: '$305B (2024)', hq: 'Mountain View, CA', description: 'Search, YouTube, Android, Chrome, Maps, Gmail. Six documented cases: Street View Wi-Spy, Safari cookie workaround, Location History, Project Dragonfly, Brown v. Google (Chrome Incognito), API bugs.' },
+  { name: 'Apple', cases: 3, revenue: '$383B (2024)', hq: 'Cupertino, CA', description: 'iPhone, iPad, Mac, Siri. Three documented cases: Batterygate (secret throttling), Siri grading (intimate recordings), CSAM scanning (proposed on-device surveillance, withdrawn).' },
+  { name: 'Microsoft', cases: 2, revenue: '$228B (2024)', hq: 'Redmond, WA', description: 'Windows, Office, Azure, LinkedIn, Xbox. Two documented cases: Windows Recall (every-few-seconds screenshots) and LinkedIn AI training without consent.' },
+  { name: 'LinkedIn', cases: 1, revenue: '$15B (2024, as part of Microsoft)', hq: 'Sunnyvale, CA', description: 'Professional network. Owned by Microsoft since 2016. Activated AI training on user posts and messages in 2024, opt-out only. €310M Irish DPC fine (November 2024).' },
+  { name: 'Amazon', cases: 3, revenue: '$575B (2024)', hq: 'Seattle, WA', description: 'E-commerce, AWS, Alexa, Ring, Prime Video. Three documented cases: Ring (employees watching customer video), Alexa (indefinite retention), Alexa COPPA (children\'s recordings).' },
+  { name: 'Uber', cases: 3, revenue: '$38B (2024)', hq: 'San Francisco, CA', description: 'Ride-sharing, food delivery, freight. Three documented cases: "God View" internal abuse, Greyball (deceiving regulators), 2016 breach with $100K cover-up. CEO ousted, CSO convicted.' },
+  { name: 'TikTok / ByteDance', cases: 3, revenue: '~$120B (2024, private)', hq: 'Beijing / Culver City, CA', description: 'Short-form video platform owned by Chinese ByteDance. Three documented cases: addictive algorithm targeting teens, child accounts public by default (€345M fine), data access from China confirmed by internal recordings.' },
+  { name: 'X / Twitter', cases: 1, revenue: '~$2B (2024, down from $5B)', hq: 'San Francisco, CA', description: 'Formerly Twitter. Acquired by Elon Musk (October 2022) for $44B. Half of staff laid off. Moderation and security teams dissolved. Grok Imagine deepfake controversy (August 2024).' },
+  { name: 'Clearview AI', cases: 1, revenue: 'Private, undisclosed', hq: 'New York, NY', description: 'Face recognition firm. 50+ billion face photos scraped from public internet. Sold to 2,400+ US police agencies. Massive European fines (Italy €20M, France €20M, Greece €20M, UK £7.5M) — all unpaid.' },
+  { name: 'Zoom', cases: 1, revenue: '$4.7B (2024)', hq: 'San Jose, CA', description: 'Video conferencing. Marketed "E2EE" that did not exist. Keys stored on Zoom servers. Part of traffic routed through China data centers. $85M class-action settlement (2021).' },
+  { name: 'Yandex', cases: 1, revenue: '~$5B (before 2022 restructuring)', hq: 'Moscow / Amsterdam', description: 'Russian search and advertising company. Partner in Local Mess case: Yandex Start browser used localhost to re-identify incognito sessions. Shut off the practice the day of publication.' },
+];
+---
+
+<PageEn
+  title="Companies — Big Tech Files"
+  description="Twelve companies covered by the database. Meta, Google, Apple, Microsoft, LinkedIn, Amazon, Uber, TikTok, X, Clearview, Zoom, Yandex."
+>
+  <article class="editorial">
+    <div class="container">
+      <header class="editorial__header">
+        <p class="meta" style="color: var(--text-tertiary)">Index — twelve companies</p>
+        <h1>Companies</h1>
+        <p class="editorial__lede">
+          The 33 cases in the database are distributed across twelve companies.
+          Five of them (Meta, Google, Apple, Microsoft, Amazon) account for 24
+          cases — roughly 73% of the total. Five more have one or two cases each.
+        </p>
+        <p class="editorial__note">
+          Full company pages with case links, timelines and source indexes are
+          available in the Polish edition. English summaries follow.
+        </p>
+      </header>
+
+      <ul class="company-list">
+        {companies.map((c) => (
+          <li class="company-list__item">
+            <div class="company-list__header">
+              <h2 class="company-list__name">{c.name}</h2>
+              <p class="company-list__cases">{c.cases} case{c.cases === 1 ? '' : 's'}</p>
+            </div>
+            <div class="company-list__meta">
+              <p><span class="company-list__label">Revenue:</span> {c.revenue}</p>
+              <p><span class="company-list__label">HQ:</span> {c.hq}</p>
+            </div>
+            <p class="company-list__desc">{c.description}</p>
+          </li>
+        ))}
+      </ul>
+
+      <p class="editorial__note" style="margin-top: var(--space-10);">
+        See also: <a href={url('/firmy/')}>Polish company index</a> with full metadata
+        and case links.
+      </p>
+    </div>
+  </article>
+</PageEn>
+
+<style lang="scss">
+  .editorial {
+    padding-block: var(--space-8);
+  }
+
+  .editorial__header {
+    max-width: 760px;
+    margin-bottom: var(--space-10);
+  }
+
+  .editorial__header h1 {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    line-height: 1.15;
+    margin-block: var(--space-2) var(--space-4);
+  }
+
+  .editorial__lede {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-3);
+  }
+
+  .editorial__note {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-tertiary);
+    padding-top: var(--space-2);
+    border-top: 0.5px solid var(--border);
+    margin: 0;
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--transition-fast);
+
+      &:hover { border-bottom-color: var(--accent); }
+    }
+  }
+
+  .company-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .company-list__item {
+    padding: var(--space-5) 0;
+    border-top: 0.5px solid var(--border);
+    max-width: 760px;
+
+    &:last-child {
+      border-bottom: 0.5px solid var(--border);
+    }
+  }
+
+  .company-list__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--gap-4);
+    margin-bottom: var(--space-2);
+  }
+
+  .company-list__name {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .company-list__cases {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .company-list__meta {
+    display: flex;
+    gap: var(--gap-4);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-2);
+
+    p {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin: 0;
+    }
+  }
+
+  .company-list__label {
+    color: var(--text-secondary);
+  }
+
+  .company-list__desc {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--text-primary);
+    margin: 0;
+  }
+</style>

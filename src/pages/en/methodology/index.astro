@@ -1,0 +1,98 @@
+---
+import PageEn from '../../../layouts/PageEn.astro';
+---
+
+<PageEn
+  title="Methodology — Big Tech Files"
+  description="How we document Big Tech cases — sources, verification, card structure."
+>
+  <article class="editorial">
+    <div class="container">
+      <h1>Methodology</h1>
+
+      <div class="prose">
+        <h2>Structure of each card</h2>
+        <p>Each of the 33 cards is structured into 14 sections:</p>
+        <ol>
+          <li><strong>Metadata</strong> — country, years, fine, legal basis</li>
+          <li><strong>TL;DR</strong> — 500–800 word summary</li>
+          <li><strong>Timeline</strong> — chronology of key events</li>
+          <li><strong>Mechanism</strong> — how the practice worked, technically</li>
+          <li><strong>Discovery</strong> — who uncovered it, and how</li>
+          <li><strong>Key people</strong> — dramatis personae</li>
+          <li><strong>Company response</strong> — public position</li>
+          <li><strong>Legal proceedings</strong> — jurisdictions, legal basis</li>
+          <li><strong>Fines and settlements</strong> — tabular summary</li>
+          <li><strong>Precedents and implications</strong> — impact on law and practice</li>
+          <li><strong>Class actions</strong> — collective civil suits and settlements</li>
+          <li><strong>Conclusions for citizens</strong> — what this means for me, how to protect myself</li>
+          <li><strong>Context</strong> — anecdotes, Polish dimension, ambient signal</li>
+          <li><strong>Sources</strong> — links and citations to primary documents</li>
+        </ol>
+
+        <h2>Inclusion criteria</h2>
+        <p>A case is included in the database if it meets at least one of:</p>
+        <ul>
+          <li>Documented financial penalty imposed by a regulator</li>
+          <li>Formal regulatory or judicial proceeding</li>
+          <li>Disclosure by a credible media outlet or whistleblower, confirmed by multiple sources</li>
+          <li>Significant legal or regulatory precedent</li>
+        </ul>
+
+        <h2>Verification</h2>
+        <p>
+          All fine amounts and dates are verified against at least two
+          independent sources. Primary documents (regulator decisions, court
+          records) take precedence over media reports.
+        </p>
+
+        <h2>Updates</h2>
+        <p>The database is updated when:</p>
+        <ul>
+          <li>New disclosures or documents emerge</li>
+          <li>New rulings or regulator decisions are issued</li>
+          <li>Key facts change (e.g. a fine is overturned or reduced on appeal)</li>
+        </ul>
+        <p>
+          The last-updated date of each card is visible in the metadata panel.
+        </p>
+
+        <h2>Polish perspective</h2>
+        <p>
+          The portal was created primarily for a Polish audience. Each card,
+          where possible, includes a "Polish dimension" section describing
+          the case&rsquo;s impact on Polish users, regulators (UODO) and
+          organizations (Panoptykon Foundation).
+        </p>
+
+        <h2>What the database does not do</h2>
+        <ul>
+          <li>It does not predict outcomes of ongoing legal proceedings</li>
+          <li>It does not assign legal guilt — it describes facts and documents</li>
+          <li>It does not update in real time — this is a reference base, not a news channel</li>
+        </ul>
+
+        <h2>Language and translation policy</h2>
+        <p>
+          The primary source of truth for each card is the Polish text in
+          <code>src/content/cases/*.md</code>. English translations, where
+          available, are derived from the Polish. When in doubt, the Polish
+          text is authoritative.
+        </p>
+      </div>
+    </div>
+  </article>
+</PageEn>
+
+<style lang="scss">
+  .editorial {
+    padding-block: var(--space-8);
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: 42px;
+      line-height: 1.15;
+      margin-bottom: var(--space-8);
+    }
+  }
+</style>

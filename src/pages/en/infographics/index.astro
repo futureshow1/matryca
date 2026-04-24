@@ -1,0 +1,185 @@
+---
+import PageEn from '../../../layouts/PageEn.astro';
+import { url } from '../../../utils/url';
+
+const infographics = [
+  {
+    slug: 'kara-vs-przychod',
+    title: 'Fine vs. revenue',
+    description: 'Record GDPR fine €1.2B = 0.7% of Meta\'s annual revenue. The market reacted: stock rose 1.8% the week after.',
+  },
+  {
+    slug: 'chronologia',
+    title: 'Chronology of 33 cases',
+    description: 'Each dot = one case. Fifteen years, one pattern — from Google Street View Wi-Spy (2010) to Local Mess (2025).',
+  },
+  {
+    slug: 'top-kar',
+    title: 'Top 5 GDPR fines',
+    description: 'All five largest GDPR fines were issued by the Irish DPC. Combined: €2.775 billion.',
+  },
+  {
+    slug: 'firmy',
+    title: 'Six firms — 27 cases',
+    description: 'Meta, Google, TikTok, Uber, Apple, Amazon. 82% of the Matryca database relates to these six entities.',
+  },
+  {
+    slug: 'sygnalisci',
+    title: 'Who revealed it?',
+    description: 'Six whistleblowers and journalists without whom the biggest disclosures would not have happened.',
+  },
+  {
+    slug: 'geografia',
+    title: 'Geography of enforcement',
+    description: 'Dublin and Washington concentrate most regulatory decisions. The rest of Europe is catching up — or not.',
+  },
+];
+---
+
+<PageEn
+  title="Infographics — Big Tech Files"
+  description="Six static SVGs summarizing the key numbers behind the Big Tech Files database. Free to reuse in articles, presentations, lessons."
+>
+  <section class="infografiki">
+    <div class="container">
+      <header class="infografiki__header">
+        <p class="meta" style="color: var(--text-tertiary)">Library of visualizations</p>
+        <h1>Infographics</h1>
+        <p class="infografiki__lede">
+          Six static SVGs summarizing the key numbers from the Big Tech Files
+          database. Free to reuse in articles, presentations, lessons, reports.
+          Vector format (scales to any size), 16:9, using the portal's typography.
+        </p>
+        <p class="infografiki__note">
+          Labels on the SVGs themselves are currently in Polish. English labels
+          are planned for Phase 4. When citing, please credit:
+          <em>Big Tech Files (Matryca)</em>. A PNG can be generated from any
+          SVG converter (Squoosh, CloudConvert).
+        </p>
+      </header>
+
+      <ul class="infografiki__grid">
+        {infographics.map((i) => (
+          <li class="infografiki__item">
+            <a href={url(`/infografiki/${i.slug}.svg`)} target="_blank" class="infografiki__link">
+              <div class="infografiki__preview">
+                <img src={url(`/infografiki/${i.slug}.svg`)} alt={i.title} loading="lazy" />
+              </div>
+              <div class="infografiki__body">
+                <p class="infografiki__title">{i.title}</p>
+                <p class="infografiki__desc">{i.description}</p>
+                <p class="infografiki__action meta">Open SVG →</p>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</PageEn>
+
+<style lang="scss">
+  .infografiki {
+    padding-block: var(--space-8) var(--space-10);
+  }
+
+  .infografiki__header {
+    max-width: 760px;
+    margin-bottom: var(--space-10);
+  }
+
+  .infografiki__header h1 {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    line-height: 1.15;
+    margin-block: var(--space-2) var(--space-4);
+  }
+
+  .infografiki__lede {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-3);
+  }
+
+  .infografiki__note {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin: 0;
+    padding-top: var(--space-2);
+    border-top: 0.5px solid var(--border);
+  }
+
+  .infografiki__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: var(--gap-4);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .infografiki__item {
+    margin: 0;
+  }
+
+  .infografiki__link {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-card);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color var(--transition-fast);
+
+    &:hover {
+      border-color: var(--accent);
+      .infografiki__title { color: var(--accent); }
+      .infografiki__action { color: var(--accent); }
+    }
+  }
+
+  .infografiki__preview {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--bg-secondary);
+    overflow: hidden;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .infografiki__preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .infografiki__body {
+    padding: var(--gap-5);
+  }
+
+  .infografiki__title {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 6px;
+    transition: color var(--transition-fast);
+  }
+
+  .infografiki__desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0 0 10px;
+  }
+
+  .infografiki__action {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin: 0;
+    transition: color var(--transition-fast);
+  }
+</style>

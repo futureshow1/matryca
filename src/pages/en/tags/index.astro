@@ -1,0 +1,178 @@
+---
+import PageEn from '../../../layouts/PageEn.astro';
+import { url } from '../../../utils/url';
+
+const tagGroups = [
+  {
+    group: 'What happened',
+    tags: [
+      { name: 'Data transfers', description: 'Unlawful movement of personal data across jurisdictions, typically EU→US without valid legal basis. Schrems I, Schrems II, Meta €1.2B fine.' },
+      { name: 'Behavioral advertising', description: 'Ads personalized from inferred user interests tracked across sites. Meta €390M fine; basis-of-processing cases.' },
+      { name: 'Face recognition', description: 'Identification of individuals from photographs without consent. Clearview AI (50+ billion photos), police use cases, wrongful arrests.' },
+      { name: 'Location tracking', description: 'Continuous logging of physical movement via GPS, Wi-Fi, cell towers. Google Location History, Carpenter v US (2018).' },
+      { name: 'Addictive design', description: 'Infinite scroll, autoplay, streaks, intermittent reward. Meta whistleblower disclosures, TikTok teen addiction lawsuits.' },
+      { name: 'Dark patterns', description: 'Interface design that misleads users into choices against their interest. CNIL rulings, DPC enforcement.' },
+    ],
+  },
+  {
+    group: 'Who was affected',
+    tags: [
+      { name: 'Children', description: 'Violations specific to minors — COPPA, GDPR children protections, child-directed content, targeting. TikTok €345M, Amazon Alexa COPPA $25M, YouTube COPPA $170M.' },
+      { name: 'Journalists', description: 'Platforms used against press — NSO/Pegasus targeting, Uber "God View" tracking of reporters, content suppression.' },
+      { name: 'Activists', description: 'Dissidents, protesters, civil-society members. Pegasus Project, Chinese Uyghur surveillance, X/Twitter account bans.' },
+      { name: 'Employees', description: 'Tech-company workers themselves — whistleblowers, NDA cases, internal revolts (Dragonfly, Haugen, Fowler, Zatko).' },
+      { name: 'Political targets', description: 'Voters, campaigns, political actors. Cambridge Analytica psychographic targeting, Russian influence ops.' },
+    ],
+  },
+  {
+    group: 'How we know',
+    tags: [
+      { name: 'Regulator decisions', description: 'Formal findings by DPC (Ireland), CNIL (France), Garante (Italy), BfDI (Germany), FTC (US), ICO (UK).' },
+      { name: 'Court rulings', description: 'CJEU (Court of Justice of the EU), US federal and state courts, national courts. Schrems I, Schrems II, Carpenter.' },
+      { name: 'Whistleblower disclosures', description: 'SEC filings, Congressional testimony, sworn depositions. Haugen, Zatko, Fowler, Snowden.' },
+      { name: 'Investigative journalism', description: 'Verified reporting by major outlets — NYT, Guardian, Observer, BuzzFeed, Forbes, Intercept, ProPublica.' },
+      { name: 'Academic research', description: 'Peer-reviewed papers. Citizen Lab Pegasus analysis, IMDEA Networks Local Mess, Cambridge AICHE studies.' },
+    ],
+  },
+  {
+    group: 'What the penalty was',
+    tags: [
+      { name: 'Record fine', description: 'Largest-in-history penalties. Meta €1.2B (GDPR, 2023), Facebook $5B (FTC, 2019).' },
+      { name: 'Class-action settlement', description: 'Collective civil lawsuits. Brown v. Google estimated $5B, Zoom $85M, Lane v. Facebook $9.5M.' },
+      { name: 'Structural remedy', description: 'Beyond cash — mandatory audits, consent-board orders, operational change. FTC 2011 & 2019 Facebook consent orders.' },
+      { name: 'Criminal charge', description: 'Individual criminal liability. Joe Sullivan (Uber CSO) convicted 2022 — conviction is extremely rare in tech privacy cases.' },
+      { name: 'Operational ban', description: 'Full prohibition on processing. Hamburg vs. Clearview (2020), Italian Garante vs. ChatGPT (brief, 2023).' },
+    ],
+  },
+];
+---
+
+<PageEn
+  title="Tags — Big Tech Files"
+  description="Browse the case database by category — what happened, who was affected, how we know, what the penalty was."
+>
+  <article class="editorial">
+    <div class="container">
+      <header class="editorial__header">
+        <p class="meta" style="color: var(--text-tertiary)">Index — four groups of tags</p>
+        <h1>Tags</h1>
+        <p class="editorial__lede">
+          Every case in the database is tagged along four axes: what happened,
+          who was affected, how we know it happened, what the penalty was.
+          The tag structure makes patterns visible that individual cards do not.
+        </p>
+        <p class="editorial__note">
+          Full tag pages with case listings are available in the Polish edition.
+          English tag descriptions follow.
+        </p>
+      </header>
+
+      <div class="tag-groups">
+        {tagGroups.map((g) => (
+          <section class="tag-group">
+            <h2 class="tag-group__title">{g.group}</h2>
+            <ul class="tag-list">
+              {g.tags.map((t) => (
+                <li class="tag-list__item">
+                  <p class="tag-list__name">{t.name}</p>
+                  <p class="tag-list__desc">{t.description}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+
+      <p class="editorial__note" style="margin-top: var(--space-10);">
+        See also: <a href={url('/tagi/')}>Polish tag index</a> with case counts and links.
+      </p>
+    </div>
+  </article>
+</PageEn>
+
+<style lang="scss">
+  .editorial {
+    padding-block: var(--space-8);
+  }
+
+  .editorial__header {
+    max-width: 760px;
+    margin-bottom: var(--space-10);
+  }
+
+  .editorial__header h1 {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    line-height: 1.15;
+    margin-block: var(--space-2) var(--space-4);
+  }
+
+  .editorial__lede {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-3);
+  }
+
+  .editorial__note {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-tertiary);
+    padding-top: var(--space-2);
+    border-top: 0.5px solid var(--border);
+    margin: 0;
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--transition-fast);
+
+      &:hover { border-bottom-color: var(--accent); }
+    }
+  }
+
+  .tag-groups {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-10);
+  }
+
+  .tag-group__title {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 0 var(--space-4);
+    padding-bottom: var(--space-2);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .tag-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: var(--gap-5);
+  }
+
+  .tag-list__item {
+    margin: 0;
+  }
+
+  .tag-list__name {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+  }
+
+  .tag-list__desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+</style>
