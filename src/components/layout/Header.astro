@@ -1,5 +1,6 @@
 ---
 import { url } from '../../utils/url';
+import { altLangUrl } from '../../utils/lang-switcher';
 const navLinks = [
   { href: '/sprawy/', label: 'Sprawy' },
   { href: '/sygnalisci/', label: 'Kto odkrył?' },
@@ -9,6 +10,7 @@ const navLinks = [
 ];
 
 const currentPath = Astro.url.pathname;
+const enHref = altLangUrl(currentPath, 'en');
 ---
 
 <header class="header">
@@ -40,9 +42,9 @@ const currentPath = Astro.url.pathname;
 
     <div class="header__actions">
       <a
-        href={url('/en/')}
+        href={enHref}
         class="header__lang"
-        title="English edition (preview)"
+        title="English edition — same page"
       >EN</a>
       <button
         class="header__theme-toggle"

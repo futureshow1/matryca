@@ -77,7 +77,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 3 czerwca 2025 międzynarodowy zespół badaczy akademickich ujawnił, że aplikacje **Facebook i Instagram na Androidzie** — a od 2017 również aplikacje **Yandex (Maps, Browser, Navi, Search)** — latami prowadziły ukryte śledzenie aktywności użytkowników w przeglądarkach, **omijając piaskownicę (sandboxing)** systemu Android oraz wszystkie tryby prywatności dostępne dla użytkownika (incognito, VPN, czyszczenie ciasteczek, blokada ciasteczek stron trzecich). Technika, nazwana przez badaczy **"Local Mess"**, polegała na uruchamianiu w tle aplikacji ukrytego nasłuchu na porcie lokalnym (localhost, 127.0.0.1) — gdy użytkownik odwiedzał dowolną z **milionów stron** z osadzonym skryptem Meta Pixel lub Yandex Metrica, skrypt wysyłał identyfikator sesji do tego ukrytego kanału, a aplikacja (z zalogowanym użytkownikiem) łączyła anonimową tożsamość przeglądarki z realnym kontem.
 

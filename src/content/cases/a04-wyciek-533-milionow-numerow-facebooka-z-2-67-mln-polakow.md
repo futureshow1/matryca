@@ -79,7 +79,7 @@ explainer:
 
 ---
 
-## TL;DR
+## W skrócie
 
 W **2018–2019** nieznany atakujący wykorzystał **funkcję odnajdywania użytkowników po numerze telefonu** (tzw. *contact importer* w Messengerze) do scrapingu **533 136 969 kont Facebooka ze 106 krajów**. Wykorzystana technika to **phone number enumeration**: skrypt generował losowe numery telefonów i sprawdzał, które są powiązane z kontem Facebooka. Gdy trafiał, pobierał powiązane dane publiczne. Facebook **załatał lukę w sierpniu 2019** — ale **nie poinformował** użytkowników ani regulatorów.
 

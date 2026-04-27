@@ -86,7 +86,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **15 września 2023** irlandzka **Data Protection Commission (DPC)** ogłosiła karę **345 mln EUR** dla TikTok za naruszenia RODO w traktowaniu danych dzieci. Wcześniej, **4 kwietnia 2023**, brytyjskie **ICO** (Information Commissioner's Office) nałożyło karę **12,7 mln GBP** za **nielegalnne przetwarzanie danych 1,4 mln dzieci <13 lat** — które **nie powinny były mieć** kont TikTok.
 

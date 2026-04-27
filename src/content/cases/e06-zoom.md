@@ -79,7 +79,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **Zoom Video Communications** — założona 2011 przez **Erica Yuan** (były inżynier Cisco WebEx). Do **grudnia 2019** Zoom miał **10 mln dziennych użytkowników**. Po **wybuchu pandemii COVID-19** (marzec 2020) skala eksplodowała do **300 mln dziennych użytkowników** (kwiecień 2020). Wszystkie szkoły, uczelnie, firmy, rządy, terapeuci, prawnicy przenieśli się na Zoom z dnia na dzień.
 

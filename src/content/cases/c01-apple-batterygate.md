@@ -109,7 +109,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **20 grudnia 2017** Apple **oficjalnie przyznał**, że w aktualizacjach **iOS 10.2.1** (styczeń 2017) i **iOS 11.2** (grudzień 2017) **celowo spowalnia procesor** starszych iPhone'ów (**6, 6s, SE, 7**) — rzekomo by zapobiec niespodziewanym wyłączeniom spowodowanym zużytymi bateriami. Apple **nie poinformował** użytkowników, nie ostrzegł w release notes ("addresses issues that could in rare cases cause iPhone 6 and iPhone 6s to unexpectedly shut down" — **technicznie prawda, ale wprowadzająca w błąd**), nie dał opcji wyłączenia throttlingu. Efekt: iPhone 6s z zużytą baterią mógł działać **o 40–60% wolniej** niż z nową, bez wiedzy użytkownika.
 

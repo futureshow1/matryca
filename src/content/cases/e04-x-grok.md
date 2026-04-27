@@ -87,7 +87,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **X** (Twitter pod Elonem Muskiem od października 2022) i jego AI asystent **Grok** (xAI) stały się w 2024–2026 epicentrum wielu nakładających się kontrowersji dotyczących AI i bezpieczeństwa platform:
 

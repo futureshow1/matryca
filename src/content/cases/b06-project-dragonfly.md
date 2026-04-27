@@ -80,7 +80,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **1 sierpnia 2018** brytyjski dziennikarz śledczy **Ryan Gallagher** w *The Intercept* ujawnił tajny projekt Google o kryptonimie **Project Dragonfly** — budowę **ocenzurowanej wyszukiwarki dla rynku chińskiego**. Projekt, prowadzony od 2017 roku w ścisłej tajemnicy przez wąską grupę inżynierów Google, zakładał:
 

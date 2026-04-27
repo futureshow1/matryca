@@ -72,7 +72,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **3 marca 2017** — ***New York Times***, ***Mike Isaac*** opublikował przełomowy artykuł: **"How Uber Deceives the Authorities Worldwide"**. Ujawnił istnienie programu o kryptonimie **"Greyball"** — narzędzia Uber służącego do **identyfikowania i oszukiwania regulatorów i pracowników law enforcement** w miastach, gdzie Uber działał nielegalnie lub był zakazany.
 

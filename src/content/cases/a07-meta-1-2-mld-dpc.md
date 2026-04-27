@@ -77,7 +77,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **22 maja 2023** irlandzka **Data Protection Commission (DPC)** nałożyła na Meta Platforms Ireland — europejskie ramię Meta — **rekordową karę 1,2 mld EUR**, najwyższą w historii RODO. Podstawa: Meta **kontynuowała transfery danych użytkowników Facebooka z EOG do USA** po lipcu 2020, kiedy Trybunał Sprawiedliwości UE wyrokiem **Schrems II (C-311/18)** unieważnił ramy *Privacy Shield*. Meta opierała transfery na Standardowych Klauzulach Umownych (SCC) z dodatkowymi zabezpieczeniami, ale DPC — po **wiążącej decyzji Europejskiej Rady Ochrony Danych (EROD)** z 13 kwietnia 2023 — uznała te zabezpieczenia za **niewystarczające**, bo nie neutralizują dostępu amerykańskich służb wywiadowczych (FISA 702, Executive Order 12333) do danych przetwarzanych przez Meta na serwerach w USA.
 

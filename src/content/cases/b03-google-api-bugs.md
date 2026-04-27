@@ -79,7 +79,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **8 października 2018** *Wall Street Journal* (Douglas MacMillan, Robert McMillan) ujawnił, że **Google wiedział o lukach w API Google+** od **marca 2018** — ale **celowo ukrył informację przed użytkownikami i regulatorami**. Pierwszy bug wystawił dane **~500 000 użytkowników** na dostęp deweloperów aplikacji trzecich (niepubliczne dane profilu: płeć, wiek, email, zawód, miejsce pracy) **od 2015 roku**. Google wykrył błąd w marcu 2018 w ramach **audytu Project Strobe** — wewnętrznej rewizji API po skandalu Cambridge Analytica. Załatał lukę, ale **nie poinformował nikogo**.
 

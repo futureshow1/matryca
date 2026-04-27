@@ -116,7 +116,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 Brytyjsko-amerykańska firma konsultingowa **Cambridge Analytica** (założona w grudniu 2013 w Delaware jako filia SCL Group, z inwestycją miliardera **Roberta Mercera** ~15 mln USD i operacyjnym zaangażowaniem **Steve'a Bannona** jako wiceprezesa) zbudowała w latach 2014–2015 gigantyczną bazę psychometryczną opartą o dane **87 milionów** profili użytkowników Facebooka. Dane zostały pozyskane przez naukowca z Uniwersytetu Cambridge **Aleksandra Kogana** i jego firmę **Global Science Research (GSR)**, poprzez aplikację quizową "thisisyourdigitallife" — **270 000 osób** pobrało aplikację, wypełniało quiz osobowości za drobne wynagrodzenie z Amazon Mechanical Turk, a Facebook Graph API v1.0 pozwalała aplikacji pobrać dane także wszystkich ich znajomych (średnio 300 na osobę) **bez wiedzy i zgody tych znajomych**. Dane zostały przekazane CA niezgodnie z regulaminem Facebooka i wykorzystane do targetowania politycznego na rzecz kampanii **Teda Cruza, a następnie Donalda Trumpa** w wyborach prezydenckich 2016.
 

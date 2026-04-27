@@ -74,7 +74,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **22 kwietnia 2025** Komisja Europejska nałożyła na Meta Platforms Ireland **pierwszą karę w historii Digital Markets Act (DMA)**: **200 milionów euro**. Podstawą było naruszenie **art. 5 ust. 2 DMA** — przepisu zakazującego gatekeepers łączenia danych osobowych użytkowników **z różnych kluczowych usług platformowych** (core platform services) **bez wyraźnej zgody**. Meta wdrożyła bowiem w listopadzie 2023 **model "consent or pay"**: użytkownik ma tylko dwa wybory — zgoda na targetowaną reklamę behawioralną (z łączeniem danych FB i Instagram) **albo płatność 9,99–12,99 euro miesięcznie** za wersję bez reklam. Komisja uznała, że **to nie jest wolna zgoda** w rozumieniu DMA.
 

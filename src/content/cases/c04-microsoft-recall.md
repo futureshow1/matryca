@@ -72,7 +72,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **20 maja 2024** Microsoft na konferencji **Build 2024** ogłosił **"Windows Recall"** — funkcję AI dla nowych komputerów **Copilot+ PC**, która **co kilka sekund robi screenshot pulpitu użytkownika**, OCR-uje tekst i tworzy **przeszukiwalną bazę danych wszystkiego, co zobaczyłeś/napisałeś na komputerze**. Reklama Microsoftu: *"remember anything you've ever seen"*. Premiera miała nastąpić **18 czerwca 2024** na nowych Copilot+ PC, **domyślnie włączona**.
 

@@ -84,7 +84,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **13 września 2021** *Wall Street Journal* (dziennikarz **Jeff Horwitz**) rozpoczyna serię **"The Facebook Files"** — cykl kilkunastu artykułów opartych na **dziesiątkach tysięcy wewnętrznych dokumentów** wyniesionych z Facebooka przez sygnalistkę **Frances Haugen**, byłą Product Manager w zespole Civic Integrity. **3 października 2021** Haugen pojawia się z twarzą w programie ***60 Minutes*** telewizji CBS. Dwa dni później zeznaje przed **Senatem USA**. 8 listopada — przed **Parlamentem Europejskim**. Dokumenty, które zabrała ze sobą, pokazują coś bardziej szokującego niż jakakolwiek zewnętrzna krytyka Meta: **firma wewnętrznie wiedziała o szkodach, jakie wyrządza — i latami je ukrywała**.
 

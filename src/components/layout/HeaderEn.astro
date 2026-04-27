@@ -1,5 +1,6 @@
 ---
 import { url } from '../../utils/url';
+import { altLangUrl } from '../../utils/lang-switcher';
 const navLinks = [
   { href: '/en/cases/', label: 'Cases' },
   { href: '/en/who-revealed/', label: 'Who revealed it' },
@@ -9,6 +10,7 @@ const navLinks = [
 ];
 
 const currentPath = Astro.url.pathname;
+const plHref = altLangUrl(currentPath, 'pl');
 ---
 
 <header class="header">
@@ -40,9 +42,9 @@ const currentPath = Astro.url.pathname;
 
     <div class="header__actions">
       <a
-        href={url('/')}
+        href={plHref}
         class="header__lang"
-        title="Polska wersja — Sprawy Big Techu"
+        title="Polska wersja — ta sama strona"
       >PL</a>
       <button
         class="header__theme-toggle"

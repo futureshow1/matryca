@@ -75,7 +75,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **31 maja 2023** — w tym samym dniu, co kara 5,8 mln USD za Ring (→ D01), **Federal Trade Commission** i **Department of Justice** nałożyły na Amazon **osobną karę 25 mln USD** za naruszenia **COPPA (Children's Online Privacy Protection Act)** w związku z **Alexa Kids**. Zarzuty:
 

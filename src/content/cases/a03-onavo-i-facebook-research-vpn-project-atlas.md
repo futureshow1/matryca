@@ -78,7 +78,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **Onavo** była izraelską aplikacją VPN kupioną przez Facebook w październiku 2013 za ok. 120–200 mln USD. Reklamowała się jako "chroniąca prywatność" i "oszczędzająca dane komórkowe", ale w praktyce była **sondą Meta do śledzenia zachowań użytkowników** na telefonach — widziała całe ich zachowanie sieciowe, które aplikacje otwierali, jak długo, kiedy. Kluczowa wartość strategiczna: **Facebook poznał, że WhatsApp wysyła ponad 2× więcej wiadomości niż Messenger**, co uzasadniło wydanie 19 mld USD na przejęcie WhatsAppa w 2014. Po ostrzeżeniu Apple, Onavo zostało usunięte z App Store (sierpień 2018), a następnie zamknięte (luty 2019).
 

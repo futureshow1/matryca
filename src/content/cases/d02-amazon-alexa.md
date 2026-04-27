@@ -91,7 +91,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **Amazon Echo** — głośnik z asystentem głosowym **Alexa** — zadebiutował w listopadzie 2014. Do 2019 Amazon sprzedał **>100 mln urządzeń Echo**. **10 kwietnia 2019** *Bloomberg* (Matt Day, Giles Turner, Natalia Drozdiak) opublikował śledztwo: **Amazon zatrudniał tysiące pracowników i kontraktorów na całym świecie**, którzy **odsłuchiwali prywatne nagrania Alexa** z domów klientów. Zespoły operowały w **Boston, Costa Rica, Indiach, Rumunii**. Każdy pracownik słuchał **ok. 1 000 klipów dziennie**. Zadaniem było **poprawianie transkrypcji** do trenowania AI.
 

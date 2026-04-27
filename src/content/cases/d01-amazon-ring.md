@@ -83,7 +83,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **Ring**, założony 2013 w Kalifornii, produkował domowe kamery bezpieczeństwa (dzwonki wideo, wewnętrzne, zewnętrzne). W **2018 roku Amazon kupił Ring** za ~1 mld USD. **31 maja 2023** Federal Trade Commission (FTC) ogłosiła, że Ring zgodził się zapłacić **5,8 mln USD** za rażące naruszenia prywatności klientów. Dwa wątki skargi FTC:
 

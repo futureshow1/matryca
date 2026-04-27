@@ -119,7 +119,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **13 sierpnia 2018** dziennikarz *Associated Press* **Ryan Nakashima** ujawnił, że **Google kontynuuje zbieranie danych lokalizacyjnych** z urządzeń Android i iOS **nawet po wyłączeniu przez użytkownika ustawienia "Historia lokalizacji" (Location History)**. Dane zamiast do widocznej Timeline trafiały do drugiego, ukrytego ustawienia: **"Web & App Activity"** — **domyślnie włączonego** i nie pytającego o lokalizację wprost. Nakashima udowodnił to naukowym eksperymentem: **kupił 20 telefonów z różnymi kontami Google**, wyłączył wszędzie Location History i przeanalizował, co Google zbiera. Rezultat: Google wiedział o pozycji użytkownika przez Wi-Fi, IP, sensor fusion, metadane zdjęć. Naukową weryfikację przeprowadził **Jonathan Mayer** z Princeton (ten sam od Safari Obejście — B02).
 

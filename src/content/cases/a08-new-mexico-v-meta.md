@@ -77,7 +77,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **24 marca 2026** dwunastoosobowa ława przysięgłych w **Santa Fe, Nowy Meksyk**, po **siedmiu tygodniach procesu** wydała historyczny wyrok w sprawie ***State of New Mexico v. Meta Platforms, Inc.***: Meta ma zapłacić **375 milionów USD** za wprowadzanie konsumentów w błąd co do bezpieczeństwa Facebooka, Instagrama i WhatsAppa oraz **umyślne narażanie dzieci na wykorzystywanie seksualne**. To **pierwszy w historii wyrok ławy przysięgłych w stanowej sprawie typu "state attorney general vs Big Tech"** — kamień milowy porównywany przez prawników do precedensów pozwów przeciwko **Big Tobacco** z lat 90. XX wieku.
 

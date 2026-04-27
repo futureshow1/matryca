@@ -109,7 +109,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **Clearview AI** — założona w 2017 w Nowym Jorku przez **Hoana Ton-That** (australijsko-wietnamski programista) i **Richarda Schwartza** (operativac polityczny Rudy'ego Giulianiego). Model biznesowy: **scrapować publiczne zdjęcia z internetu** (Facebook, Instagram, LinkedIn, YouTube, osobiste blogi) i budować **największą na świecie bazę rozpoznawania twarzy**. Sprzedawać dostęp **organom ścigania**.
 

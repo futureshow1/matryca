@@ -93,7 +93,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 W **lutym 2012** **Jonathan Mayer**, doktorant Stanford Law School i Stanford CS, wspólnie z dziennikarzami *Wall Street Journal* (**Julia Angwin**) ujawnił, że **Google celowo omijał domyślne ustawienia prywatności przeglądarki Safari** na iPhone'ach, iPadach i komputerach Mac. Safari była wówczas jedyną mainstreamową przeglądarką, która **domyślnie blokowała ciasteczka stron trzecich** (third-party cookies używane do śledzenia). Google wykorzystał techniczną lukę — wyjątek w Safari pozwalający na cookies po **"interakcji użytkownika z formularzem"** — wstawiając **niewidoczne formularze HTML z autosubmit** w reklamach swojej sieci **DoubleClick**. Safari interpretowała automatyczne zgłoszenie formularza jako interakcję użytkownika i akceptowała ciasteczko. Konsekwencja: **Google śledził miliony użytkowników iPhone'ów mimo ich ustawień prywatności**, podczas gdy na stronie Google "Advertising Help" publicznie **chwalił się, że szanuje ustawienia Safari**.
 

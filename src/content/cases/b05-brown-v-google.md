@@ -78,7 +78,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **2 czerwca 2020** **Chasom Brown** i kilku innych użytkowników Chrome złożyli pozew zbiorowy w *Northern District of California* — *Brown v. Google LLC* (nr 4:20-cv-03664-YGR). Zarzut: Google **śledzi użytkowników Chrome w trybie Incognito** mimo obietnicy prywatności. Chrome wyświetlał komunikat: *"Now you can browse privately, and other people who use this device won't see your activity"*. Użytkownicy rozumieli to jako "Google mnie nie widzi". W rzeczywistości Google zbierał dane nawet w trybie Incognito przez **Google Analytics** (na ~80% stron WWW), **Google Ads**, **reCAPTCHA**, **Google Fonts**, **YouTube embeds** i inne usługi osadzone na stronach.
 

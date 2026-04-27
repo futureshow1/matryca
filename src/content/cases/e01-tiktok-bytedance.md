@@ -77,7 +77,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **22 grudnia 2022** *Forbes* (Emily Baker-White) ujawnił, że **czterej pracownicy ByteDance** — parentu TikTok — **dwóch w Chinach i dwóch w USA** — **celowo uzyskiwali dostęp do danych konta TikTok dziennikarzy**, aby **zidentyfikować wewnętrzne źródła** przekazujące im informacje. Dotknięci dziennikarze: **Emily Baker-White** (*BuzzFeed News*, później *Forbes*), **Cristina Criddle** (*Financial Times*), **Katharine Schwab** (*Forbes*), **Richard Nieva** (*Forbes*). Wszyscy pisali wcześniej **krytyczne artykuły o praktykach dostępu ByteDance do danych użytkowników TikTok w USA**.
 

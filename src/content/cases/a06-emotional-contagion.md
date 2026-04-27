@@ -74,7 +74,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 W **styczniu 2012** przez **jeden tydzień** Facebook **manipulował news feedem 689 003 anglojęzycznych użytkowników**, pokazując im celowo więcej postów **pozytywnych lub negatywnych emocjonalnie** — aby zbadać zjawisko **"zarażania emocjami" (emotional contagion)** przez sieci społecznościowe. Żaden z uczestników nie wyraził na to świadomej zgody. Naukowcy i firma nie przeszli standardowej procedury **Institutional Review Board (IRB)** — zgody komitetu etycznego wymaganej dla badań na ludziach. Wyniki opublikowano **17 czerwca 2014** w prestiżowym czasopiśmie **PNAS** (*Proceedings of the National Academy of Sciences*), w artykule **Adama Kramera** (Facebook), **Jamie Guillory** (UCSF) i **Jeffreya Hancocka** (Cornell).
 

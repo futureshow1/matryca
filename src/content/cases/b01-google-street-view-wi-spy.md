@@ -124,7 +124,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 W **maju 2010** Google **publicznie przyznał**, że samochody programu **Street View** w latach **2007–2010 w ponad 30 krajach** zbierały nie tylko panoramiczne zdjęcia ulic, ale także **fragmenty ruchu sieciowego z niezabezpieczonych (otwartych) sieci Wi-Fi**, obok których przejeżdżały. Dane obejmowały: **fragmenty e-maili, hasła w nieszyfrowanych protokołach, adresy URL odwiedzanych stron, nazwy plików, fragmenty rozmów w komunikatorach, dane logowania do serwisów** — w jednym raporcie UK ICO wymieniono **logowania bankowe kilku obywateli**. Łącznie zebrano **setki gigabajtów** danych z prywatnych komunikacji.
 

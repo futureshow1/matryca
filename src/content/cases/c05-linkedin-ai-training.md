@@ -79,7 +79,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **18 września 2024** — portal *404 Media* (potem kontynuowany przez *TechCrunch*) ujawnił, że **LinkedIn potajemnie zaczął trenować swoje generatywne modele AI na danych użytkowników** — **bez uprzedniego ogłoszenia i bez zgody**. Użytkownicy w USA, UK, Australii, Japonii, Kanadzie, Indiach odkryli w swoich ustawieniach przełącznik **"Data for Generative AI Improvement"**, który był **domyślnie włączony**. LinkedIn **dopiero po publikacji** zaktualizował swoją politykę prywatności, która weszła w życie **18 września 2024**.
 

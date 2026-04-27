@@ -83,7 +83,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **14 listopada 2016** — dwóch hakerów (**Brandon Charles Glover** i **Vasile Mereacre**) włamało się do serwera Uber w **Amazon S3** używając **klucza AWS** znalezionego na prywatnym GitHub pracownika Uber. Ukradli dane **57 milionów kont** — w tym **600 000 numerów prawa jazdy amerykańskich kierowców Uber**. Hakerzy skontaktowali się z Uber, żądając **okupu**.
 

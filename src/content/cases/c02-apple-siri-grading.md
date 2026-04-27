@@ -83,7 +83,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **26 lipca 2019** *The Guardian* (dziennikarz **Alex Hern**) ujawnił: **Apple zatrudniał zewnętrznych kontraktorów** do **odsłuchiwania nagrań z Siri** — w celu "poprawy jakości rozpoznawania mowy". Kontraktorzy pracowali m.in. w **GlobeTech Technical Services** w **Cork (Irlandia)**, w ramach programu "**Apple grading program**". Słyszeli nagrania **intymne**, **medyczne**, **biznesowe**, **kryminalne** — bardzo często pochodzące z **przypadkowych aktywacji** Siri (np. dźwięk suwaka spodni podobny do "Hey Siri", Apple Watch aktywowany podniesieniem nadgarstka, dźwięk kroków).
 

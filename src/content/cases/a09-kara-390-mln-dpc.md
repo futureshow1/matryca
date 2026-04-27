@@ -89,7 +89,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **4 stycznia 2023** irlandzka **Data Protection Commission (DPC)** ogłosiła zakończenie dwóch postępowań przeciwko Meta Platforms Ireland dotyczących przetwarzania danych osobowych na **Facebooku i Instagramie** w celach reklamy behawioralnej. Kara: **390 mln EUR** (210 mln za Facebook + 180 mln za Instagram), plus **5,5 mln EUR za WhatsApp** ogłoszona w tym samym tygodniu — łącznie **395,5 mln EUR**. Podstawą były skargi złożone do DPC przez **NOYB / Maxa Schremsa 25 maja 2018** — **dokładnie w dniu wejścia RODO w życie**.
 

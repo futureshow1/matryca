@@ -70,7 +70,7 @@ subtitle: Niewdrożony skaner zdjęć jako konflikt prywatności z ochroną dzie
 
 ---
 
-## TL;DR
+## W skrócie
 
 **5 sierpnia 2021** Apple ogłosił plany wprowadzenia **trzech nowych funkcji ochrony dzieci** — w tym najbardziej kontrowersyjnej **"CSAM Detection"**: systemu, który miał **skanować na urządzeniu (on-device)** zdjęcia użytkownika przesyłane do iCloud Photos i porównywać ich hash **NeuralHash** z bazą znanych materiałów wykorzystywania seksualnego dzieci (CSAM) dostarczoną przez **NCMEC (National Center for Missing & Exploited Children)**. Przy przekroczeniu progu ~30 dopasowań Apple miał **ręcznie przejrzeć zdjęcia i zgłosić do NCMEC**, a następnie władz. Cel: walka z CSAM bez skanowania w chmurze (przeciwnie niż Google, Meta, Microsoft).
 

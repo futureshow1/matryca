@@ -79,7 +79,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 Sprawa E03 to **dwutorowa bitwa** TikTok z regulatorami w 2024–2026:
 

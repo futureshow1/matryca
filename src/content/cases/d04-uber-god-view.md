@@ -88,7 +88,7 @@ years_active:
 
 ---
 
-## TL;DR
+## W skrócie
 
 **17 listopada 2014** — ***BuzzFeed News***, **Ben Smith** (redaktor naczelny) i **Johana Bhuiyan** (dziennikarka) opublikowali serię artykułów, które wywołały **pierwszy wielki skandal Ubera**. Zaczęło się od wydarzenia: Bhuiyan zamówiła Ubera, żeby spotkać się z **Josh Mohrer** (regional general manager Uber NYC). Gdy przyjechała, Mohrer powiedział: *"I was tracking you."* Podczas kolacji dla dziennikarzy, **Emil Michael** (SVP Business, #2 w Uber) zasugerował w rozmowie off-record (później opublikowanej), że Uber mógłby zatrudnić **"opposition researchers"** do **kopania brudów na dziennikarzy** krytycznych wobec Ubera — konkretnie na **Sarah Lacy** z PandoDaily, która pisała o **"asshole culture"** firmy.
 
