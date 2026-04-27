@@ -220,11 +220,21 @@
       if (intervalId) { clearTimeout(intervalId); intervalId = null; }
       if (masterGain && ctx) {
         const t = ctx.currentTime;
+        // setTargetAtTime exponentially approaches the target — does NOT
+        // depend on reading current gain value (which Web Audio reports
+        // as the last setValueAtTime, not the post-ramp computed value).
+        // This is the only fade-out that actually works after a ramp.
         masterGain.gain.cancelScheduledValues(t);
-        masterGain.gain.setValueAtTime(masterGain.gain.value, t);
-        masterGain.gain.linearRampToValueAtTime(0, t + 0.6);
+        masterGain.gain.setTargetAtTime(0, t, 0.15);
+        // After fade, suspend the AudioContext entirely so even oscillators
+        // that are still running stop producing audible output.
+        const ctxRef = ctx;
+        setTimeout(() => {
+          if (ctxRef && !running && ctxRef.state === 'running') {
+            ctxRef.suspend();
+          }
+        }, 700);
       }
-      // We keep ctx alive so toggle-on fades back in instantly
       setVisualState('off');
     }
 
@@ -236,9 +246,11 @@
           // Already initialized — just resume + fade up
           ctx.resume().then(() => {
             const t = ctx!.currentTime;
+            // Reset gain to 0 explicitly, then ramp up via setTargetAtTime —
+            // setTargetAtTime is reliable regardless of prior automation history.
             masterGain!.gain.cancelScheduledValues(t);
-            masterGain!.gain.setValueAtTime(masterGain!.gain.value, t);
-            masterGain!.gain.linearRampToValueAtTime(0.18, t + 2);
+            masterGain!.gain.setValueAtTime(0, t);
+            masterGain!.gain.setTargetAtTime(0.18, t, 0.6);
             running = true;
             // Restart swell ticker
             const tickFn = () => {
