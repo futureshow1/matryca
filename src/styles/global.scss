@@ -77,3 +77,87 @@
   white-space: nowrap;
   border: 0;
 }
+
+// ============================================================
+// Animations: scroll-triggered fade/slide-up + view-transition tuning
+// ============================================================
+
+// Mark elements with `class="reveal-on-scroll"` to animate them in.
+// JS in Base.astro adds `is-revealed` when the element enters viewport.
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px) scale(0.985);
+  transition: opacity 600ms cubic-bezier(0.2, 0.7, 0.2, 1),
+              transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: opacity, transform;
+
+  &.is-revealed {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+// Stagger variant — apply to a parent + children get index-based delays
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms cubic-bezier(0.2, 0.7, 0.2, 1),
+              transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal-stagger.is-revealed > * { opacity: 1; transform: translateY(0); }
+.reveal-stagger.is-revealed > *:nth-child(1)  { transition-delay: 0ms; }
+.reveal-stagger.is-revealed > *:nth-child(2)  { transition-delay: 80ms; }
+.reveal-stagger.is-revealed > *:nth-child(3)  { transition-delay: 160ms; }
+.reveal-stagger.is-revealed > *:nth-child(4)  { transition-delay: 240ms; }
+.reveal-stagger.is-revealed > *:nth-child(5)  { transition-delay: 320ms; }
+.reveal-stagger.is-revealed > *:nth-child(6)  { transition-delay: 400ms; }
+.reveal-stagger.is-revealed > *:nth-child(7)  { transition-delay: 480ms; }
+.reveal-stagger.is-revealed > *:nth-child(8)  { transition-delay: 560ms; }
+.reveal-stagger.is-revealed > *:nth-child(n+9) { transition-delay: 640ms; }
+
+// Hero — text reveals on load (no scroll needed)
+.hero-reveal-on-load > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: hero-rise 900ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+.hero-reveal-on-load > *:nth-child(1) { animation-delay:   0ms; }
+.hero-reveal-on-load > *:nth-child(2) { animation-delay: 120ms; }
+.hero-reveal-on-load > *:nth-child(3) { animation-delay: 240ms; }
+.hero-reveal-on-load > *:nth-child(4) { animation-delay: 360ms; }
+.hero-reveal-on-load > *:nth-child(5) { animation-delay: 480ms; }
+
+@keyframes hero-rise {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+// Astro view transition — softer crossfade than default 200ms cut
+::view-transition-old(root) {
+  animation: vt-fade-out 350ms cubic-bezier(0.4, 0, 0.6, 1) both;
+}
+::view-transition-new(root) {
+  animation: vt-fade-in 480ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@keyframes vt-fade-out {
+  to { opacity: 0; transform: translateY(-12px) scale(0.992); }
+}
+@keyframes vt-fade-in {
+  from { opacity: 0; transform: translateY(18px) scale(1.008); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+// Respect users who explicitly opted out of motion
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .reveal-stagger > *,
+  .hero-reveal-on-load > * {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+}

@@ -142,7 +142,7 @@ const doors = [
   <!-- Hero -->
   <section class="hero">
     <div class="container hero__grid">
-      <div class="hero__body">
+      <div class="hero__body hero-reveal-on-load">
         <p class="hero__tagline">Sprawy Big Techu — Polish edition</p>
         <h1 class="hero__title">Big Tech<br />Files.</h1>
         <div class="hero__lead">
@@ -183,7 +183,7 @@ const doors = [
         </p>
       </div>
 
-      <div class="doors__grid">
+      <div class="doors__grid reveal-stagger reveal-on-scroll">
         {doors.map((door) => (
           <div class={`door${!door.available ? ' door--soon' : ''}`}>
             {door.available ? (
@@ -214,7 +214,7 @@ const doors = [
   <!-- Stats -->
   <section class="stats">
     <div class="container">
-      <div class="stats__grid">
+      <div class="stats__grid reveal-stagger reveal-on-scroll">
         <div class="stats__item">
           <span class="stats__label meta">Cases in database</span>
           <span class="stats__value">{allCases.length}</span>
@@ -254,7 +254,7 @@ const doors = [
         <a href={url('/en/cases/')} class="link featured__all">All 33 cases →</a>
       </div>
 
-      <div class="featured__grid">
+      <div class="featured__grid reveal-stagger reveal-on-scroll">
         {topCases.map((c) => {
           const en = withEnTitle(c);
           return (
@@ -292,7 +292,7 @@ const doors = [
         <span class="meta" style="color: var(--text-tertiary)">Recently updated</span>
         <a href={url('/en/cases/')} class="link">All cases →</a>
       </div>
-      <div class="recent__grid">
+      <div class="recent__grid reveal-stagger reveal-on-scroll">
         {recentCases.map((c) => {
           const en = withEnTitle(c);
           return (

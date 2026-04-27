@@ -29,6 +29,8 @@ export default function ScrollTimeline({
   labels = DEFAULT_LABELS,
 }: Props = {}) {
   const [activeScene, setActiveScene] = useState<number>(0);
+  const [transitionKey, setTransitionKey] = useState<number>(0);
+  const [scrollProgress, setScrollProgress] = useState<number>(0);
   const scrollerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -43,10 +45,15 @@ export default function ScrollTimeline({
         .setup({
           step: '.timeline-step',
           offset: 0.5,
+          progress: true,
           debug: false,
         })
         .onStepEnter((res: { index: number }) => {
           setActiveScene(res.index);
+          setTransitionKey((k) => k + 1);
+        })
+        .onStepProgress((res: { progress: number }) => {
+          setScrollProgress(res.progress);
         });
 
       window.addEventListener('resize', () => scroller.resize());
@@ -59,6 +66,10 @@ export default function ScrollTimeline({
   }, []);
 
   const current = scenes[activeScene];
+  // Parallax y-shift for the sticky panel: -16px..+16px across a scene
+  const parallaxY = (scrollProgress - 0.5) * 32;
+  // Background hue shift per scene (subtle drift through the deck)
+  const hue = (activeScene * 7) % 360;
 
   return (
     <div
@@ -67,12 +78,30 @@ export default function ScrollTimeline({
         gridTemplateColumns: 'minmax(320px, 1fr) minmax(280px, 440px)',
         gap: '48px',
         alignItems: 'start',
+        position: 'relative',
       }}
       ref={scrollerRef}
     >
+      {/* Cinematic background gradient that drifts with each scene */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'fixed',
+          inset: 0,
+          zIndex: -1,
+          background: `radial-gradient(ellipse at ${30 + (scrollProgress * 40)}% ${20 + (activeScene * 4) % 60}%,
+            hsla(${hue}, 60%, 50%, 0.06) 0%,
+            transparent 50%)`,
+          transition: 'background 1200ms ease-out',
+          pointerEvents: 'none',
+        }}
+      />
       {/* Left column: scrolling text */}
       <div>
-        {scenes.map((scene, i) => (
+        {scenes.map((scene, i) => {
+          const isActive = activeScene === i;
+          const distance = Math.abs(activeScene - i);
+          return (
           <section
             key={scene.id}
             className="timeline-step"
@@ -80,8 +109,10 @@ export default function ScrollTimeline({
             style={{
               minHeight: '90vh',
               padding: '120px 0',
-              opacity: activeScene === i ? 1 : 0.35,
-              transition: 'opacity 400ms ease-out',
+              opacity: isActive ? 1 : Math.max(0.18, 0.5 - distance * 0.12),
+              transform: isActive ? 'translateY(0) scale(1)' : `translateY(${distance * 6}px) scale(${1 - distance * 0.012})`,
+              filter: isActive ? 'blur(0)' : `blur(${Math.min(distance * 0.6, 2.4)}px)`,
+              transition: 'opacity 600ms cubic-bezier(0.2, 0.7, 0.2, 1), transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 600ms ease-out',
             }}
           >
             <p
@@ -145,24 +176,30 @@ export default function ScrollTimeline({
               </p>
             )}
           </section>
-        ))}
+          );
+        })}
       </div>
 
-      {/* Right column: sticky highlights panel */}
+      {/* Right column: sticky highlights panel with parallax + scene-key animation */}
       <aside
         style={{
           position: 'sticky',
           top: 'calc(60px + 2rem)',
           alignSelf: 'start',
+          transform: `translateY(${parallaxY}px)`,
+          transition: 'transform 200ms ease-out',
         }}
       >
         <div
+          key={transitionKey}
           style={{
             padding: '32px 28px',
             background: 'var(--bg-card)',
             border: '0.5px solid var(--border)',
             borderRadius: 'var(--radius-md)',
             minHeight: '320px',
+            animation: 'tl-scene-in 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both',
+            boxShadow: `0 8px 40px rgba(0, 0, 0, 0.04), 0 0 0 1px hsla(${hue}, 60%, 50%, 0.08)`,
           }}
         >
           <p
@@ -186,6 +223,7 @@ export default function ScrollTimeline({
               letterSpacing: '-0.03em',
               lineHeight: 1,
               margin: '0 0 24px',
+              animation: 'tl-year-pop 900ms cubic-bezier(0.2, 0.7, 0.2, 1) both',
             }}
           >
             {current.year}
@@ -238,16 +276,38 @@ export default function ScrollTimeline({
             <div
               key={idx}
               style={{
-                width: 8,
+                width: idx === activeScene ? 22 : 8,
                 height: 8,
-                borderRadius: '50%',
+                borderRadius: 4,
                 background: idx === activeScene ? 'var(--accent)' : 'var(--border)',
-                transition: 'background 200ms ease-out',
+                transition: 'background 300ms ease-out, width 400ms cubic-bezier(0.2, 0.7, 0.2, 1)',
               }}
             />
           ))}
         </div>
       </aside>
+
+      {/* Inline keyframes — kept colocated so the component is self-contained */}
+      <style>{`
+        @keyframes tl-scene-in {
+          from { opacity: 0; transform: translateY(24px) scale(0.985); }
+          to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        @keyframes tl-year-pop {
+          0%   { opacity: 0; transform: scale(0.7) translateY(8px); letter-spacing: 0; }
+          60%  { opacity: 1; transform: scale(1.05) translateY(0); letter-spacing: -0.05em; }
+          100% { opacity: 1; transform: scale(1) translateY(0); letter-spacing: -0.03em; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          [class*="timeline-step"], aside [style*="animation"] {
+            animation: none !important;
+            transition: none !important;
+            transform: none !important;
+            filter: none !important;
+            opacity: 1 !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }

@@ -1,5 +1,7 @@
 ---
+import { ClientRouter } from 'astro:transitions';
 import { url } from '../utils/url';
+import AmbientPlayer from '../components/global/AmbientPlayer.astro';
 interface Props {
   title: string;
   description?: string;
@@ -51,9 +53,42 @@ const pageTitle = title === 'Matryca' ? title : `${title} — Matryca`;
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content="website" />
     {ogImage && <meta property="og:image" content={ogImage} />}
+
+    <!-- Astro view transitions: subtle crossfade between pages -->
+    <ClientRouter fallback="swap" />
   </head>
   <body>
     <slot />
+    <AmbientPlayer />
+
+    <!-- Global scroll-fade observer: any element with class="reveal-on-scroll"
+         gets .is-revealed when it enters the viewport. -->
+    <script is:inline>
+      (function () {
+        function arm() {
+          const els = document.querySelectorAll('.reveal-on-scroll:not(.is-revealed)');
+          if (!('IntersectionObserver' in window)) {
+            els.forEach((el) => el.classList.add('is-revealed'));
+            return;
+          }
+          const io = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('is-revealed');
+                  io.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+          );
+          els.forEach((el) => io.observe(el));
+        }
+        arm();
+        // Re-arm after Astro view-transition swaps the DOM
+        document.addEventListener('astro:page-load', arm);
+      })();
+    </script>
   </body>
 </html>
 
