@@ -6,7 +6,7 @@ interface Props {
   kicker: string;
   title: string;
   lede: string;
-  byline: string;
+  byline?: string;
   readingTime: string;
   description: string;
   prev?: { href: string; label: string };
@@ -14,6 +14,7 @@ interface Props {
 }
 
 const { kicker, title, lede, byline, readingTime, description, prev, next } = Astro.props;
+const showByline = byline && byline.trim().length > 0;
 ---
 
 <Page title={`${title} — Matryca`} description={description}>
@@ -31,8 +32,12 @@ const { kicker, title, lede, byline, readingTime, description, prev, next } = As
         <p class="text__lede">{lede}</p>
 
         <div class="text__meta">
-          <span class="text__byline">{byline}</span>
-          <span class="text__sep" aria-hidden="true">·</span>
+          {showByline && (
+            <>
+              <span class="text__byline">{byline}</span>
+              <span class="text__sep" aria-hidden="true">·</span>
+            </>
+          )}
           <span class="text__reading">{readingTime}</span>
         </div>
       </header>
