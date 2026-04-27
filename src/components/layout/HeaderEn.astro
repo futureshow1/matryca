@@ -58,25 +58,8 @@ const plHref = altLangUrl(currentPath, 'pl');
   </div>
 </header>
 
-<script>
-  const toggle = document.getElementById('theme-toggle');
-  const icon = document.getElementById('theme-icon');
-
-  function updateIcon() {
-    const theme = document.documentElement.getAttribute('data-theme');
-    if (icon) icon.textContent = theme === 'dark' ? '☽' : '☀';
-  }
-
-  updateIcon();
-
-  toggle?.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('matryca-theme', next);
-    updateIcon();
-  });
-</script>
+<!-- Theme toggle wiring lives in Base.astro inline script so it survives
+     Astro view-transitions (this <script type="module"> would only run once). -->
 
 <style lang="scss">
   .header {

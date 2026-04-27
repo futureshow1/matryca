@@ -35,15 +35,28 @@ const pageTitle = title === 'Matryca' ? title : `${title} — Matryca`;
     <!-- Theme: default LIGHT, dark tylko po świadomym toggle.
          (Opcja C: portal editorialny startuje jasno dla wszystkich;
           `prefers-color-scheme: dark` nie jest automatycznie honorowane.
-          Parametr ?theme= zachowany dla strony porównawczej.) -->
+          Parametr ?theme= zachowany dla strony porównawczej.)
+
+         Pre-paint theme application — runs before <body> renders to avoid flash.
+         Also re-applies on Astro view-transition swaps. -->
     <script is:inline>
       (function () {
-        const urlTheme = new URLSearchParams(location.search).get('theme');
-        const stored = localStorage.getItem('matryca-theme');
-        document.documentElement.setAttribute(
-          'data-theme',
-          urlTheme || stored || 'light'
-        );
+        function applyTheme() {
+          const urlTheme = new URLSearchParams(location.search).get('theme');
+          const stored = localStorage.getItem('matryca-theme');
+          document.documentElement.setAttribute(
+            'data-theme',
+            urlTheme || stored || 'light'
+          );
+        }
+        applyTheme();
+        // ClientRouter replaces <html data-theme> on swap; re-apply right before
+        document.addEventListener('astro:before-swap', (e) => {
+          /** @type {HTMLElement} */
+          const newDoc = e.newDocument.documentElement;
+          const stored = localStorage.getItem('matryca-theme') || 'light';
+          newDoc.setAttribute('data-theme', stored);
+        });
       })();
     </script>
 
@@ -61,11 +74,12 @@ const pageTitle = title === 'Matryca' ? title : `${title} — Matryca`;
     <slot />
     <AmbientPlayer />
 
-    <!-- Global scroll-fade observer: any element with class="reveal-on-scroll"
-         gets .is-revealed when it enters the viewport. -->
+    <!-- Global scroll-fade observer + theme toggle wiring.
+         Both run on initial load AND re-bind after every Astro view-transition
+         swap, since <script type="module"> in components only runs once. -->
     <script is:inline>
       (function () {
-        function arm() {
+        function armScrollReveal() {
           const els = document.querySelectorAll('.reveal-on-scroll:not(.is-revealed)');
           if (!('IntersectionObserver' in window)) {
             els.forEach((el) => el.classList.add('is-revealed'));
@@ -84,9 +98,47 @@ const pageTitle = title === 'Matryca' ? title : `${title} — Matryca`;
           );
           els.forEach((el) => io.observe(el));
         }
-        arm();
-        // Re-arm after Astro view-transition swaps the DOM
-        document.addEventListener('astro:page-load', arm);
+
+        function bindThemeToggle() {
+          const toggle = document.getElementById('theme-toggle');
+          const icon = document.getElementById('theme-icon');
+          if (!toggle) return;
+
+          // Always sync the icon to the current theme — even if listener was
+          // already bound, re-running this is harmless and keeps the icon right.
+          function syncIcon() {
+            if (!icon) return;
+            const t = document.documentElement.getAttribute('data-theme');
+            icon.textContent = t === 'dark' ? '☽' : '☀';
+          }
+          syncIcon();
+
+          // Idempotent: skip if we already bound this exact element instance
+          if (toggle.dataset.themeBound === '1') return;
+          toggle.dataset.themeBound = '1';
+
+          toggle.addEventListener('click', () => {
+            const cur = document.documentElement.getAttribute('data-theme');
+            const next = cur === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('matryca-theme', next);
+            syncIcon();
+          });
+        }
+
+        function init() {
+          armScrollReveal();
+          bindThemeToggle();
+        }
+
+        // Initial load
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', init);
+        } else {
+          init();
+        }
+        // Every view-transition page swap
+        document.addEventListener('astro:page-load', init);
       })();
     </script>
   </body>
