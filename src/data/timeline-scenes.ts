@@ -67,7 +67,7 @@ export const TIMELINE_SCENES: TimelineScene[] = [
     id: "scene-2012",
     year: "2012",
     kicker: "Obejście",
-    headline: "Google omija zabezpieczenie Safari. Kosztuje go 22,5 miliona.",
+    headline: "Google omija zabezpieczenie Safari. Kosztuje go to 22,5 miliona.",
     bodyParagraphs: [
       `Na początku 2012 roku Jonathan Mayer, doktorant z Uniwersytetu Stanforda, bada, jak działają trackery reklamowe w przeglądarkach. Safari — produkt Apple, domyślny w iPhone i iPad — od wielu lat blokuje ciasteczka stron trzecich. Ustawienie działa „out of the box" — użytkownik nie musi niczego włączać. To jedna z głównych funkcji prywatności Safari, reklamowana publicznie.`,
       `Mayer odkrywa, że reklamy DoubleClick (czyli Google) mimo blokady działają. Jakim cudem? Google znalazło obejście. Skrypt reklamowy wysyła do przeglądarki niewidoczny formularz. Safari interpretuje to jako „interakcję użytkownika z witryną" — a przy interakcji pozwala na ciasteczka. Trik. Elegancki. I całkowicie przeciwny domyślnemu ustawieniu Safari.`,
