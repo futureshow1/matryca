@@ -286,6 +286,63 @@
       }
     });
 
+    // === Listen for explainer-music events from iframe ===
+    // When an animation iframe starts its dramatic soundtrack, mute the
+    // ambient drone. When it stops (or unmounts), restore the user's choice.
+    let suppressedByExplainer = false;
+    window.addEventListener('message', (e: MessageEvent) => {
+      if (!e.data || e.data.type !== 'matryca-explainer-audio') return;
+      if (e.data.state === 'on') {
+        // Explainer music started — mute ambient if currently playing
+        if (running) {
+          suppressedByExplainer = true;
+          stop();
+          // Override visual state so user knows ambient is paused, not off
+          icon!.textContent = '♪';
+          label!.textContent = 'audio · paused';
+          toggle!.classList.remove('is-on');
+        }
+      } else if (e.data.state === 'off') {
+        // Explainer music stopped — restore ambient if user had it on
+        if (suppressedByExplainer && intendedState === 'on') {
+          suppressedByExplainer = false;
+          if (ctx && masterGain) {
+            ctx.resume().then(() => {
+              const t = ctx!.currentTime;
+              masterGain!.gain.cancelScheduledValues(t);
+              masterGain!.gain.setValueAtTime(0, t);
+              masterGain!.gain.setTargetAtTime(0.18, t, 0.6);
+              running = true;
+              const tickFn = () => {
+                if (!running) return;
+                const now = ctx!.currentTime;
+                const swellOsc = ctx!.createOscillator();
+                swellOsc.type = 'sawtooth';
+                swellOsc.frequency.setValueAtTime(220, now);
+                swellOsc.frequency.exponentialRampToValueAtTime(440, now + 5);
+                const swellFilter = ctx!.createBiquadFilter();
+                swellFilter.type = 'bandpass';
+                swellFilter.frequency.value = 1200;
+                swellFilter.Q.value = 6;
+                const swellGain = ctx!.createGain();
+                swellGain.gain.setValueAtTime(0, now);
+                swellGain.gain.linearRampToValueAtTime(0.06, now + 2.5);
+                swellGain.gain.linearRampToValueAtTime(0, now + 5);
+                swellOsc.connect(swellFilter).connect(swellGain).connect(masterGain!);
+                swellOsc.start(now);
+                swellOsc.stop(now + 5.5);
+                intervalId = window.setTimeout(tickFn, 18000 + Math.random() * 14000);
+              };
+              intervalId = window.setTimeout(tickFn, 6000);
+              setVisualState('on');
+            });
+          } else {
+            start();
+          }
+        }
+      }
+    });
+
     // Try to autoplay if user wants it
     if (intendedState === 'on') {
       start().then(() => {
