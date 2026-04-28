@@ -71,17 +71,94 @@ export default function ScrollTimeline({
   // Background hue shift per scene (subtle drift through the deck)
   const hue = (activeScene * 7) % 360;
 
+  const jumpToScene = (idx: number) => {
+    const el = document.querySelector(`.timeline-step[data-step="${idx}"]`);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setActiveScene(idx);
+    }
+  };
+
   return (
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'minmax(320px, 1fr) minmax(280px, 440px)',
-        gap: '48px',
-        alignItems: 'start',
-        position: 'relative',
-      }}
-      ref={scrollerRef}
-    >
+    <div ref={scrollerRef} style={{ position: 'relative' }}>
+      {/* Sticky horizontal year ribbon — always visible while scrolling */}
+      <div
+        style={{
+          position: 'sticky',
+          top: 60,
+          zIndex: 50,
+          marginInline: 'calc(-1 * var(--space-4))',
+          paddingBlock: '10px',
+          paddingInline: 'var(--space-4)',
+          background: 'color-mix(in srgb, var(--bg-primary) 92%, transparent)',
+          backdropFilter: 'blur(8px)',
+          borderBottom: '0.5px solid var(--border)',
+          marginBottom: '24px',
+        }}
+      >
+        <div
+          role="tablist"
+          aria-label={labels.sceneLabel === 'Scena' ? 'Skok do roku' : 'Jump to year'}
+          style={{
+            display: 'flex',
+            gap: 4,
+            overflowX: 'auto',
+            scrollbarWidth: 'thin',
+            paddingBlock: 4,
+          }}
+        >
+          {scenes.map((scene, idx) => {
+            const isActive = idx === activeScene;
+            return (
+              <button
+                key={scene.id}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                onClick={() => jumpToScene(idx)}
+                style={{
+                  flexShrink: 0,
+                  padding: '6px 12px',
+                  borderRadius: 999,
+                  border: `0.5px solid ${isActive ? 'var(--accent)' : 'var(--border)'}`,
+                  background: isActive ? 'var(--accent)' : 'transparent',
+                  color: isActive ? 'white' : 'var(--text-secondary)',
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '12px',
+                  letterSpacing: '0.04em',
+                  cursor: 'pointer',
+                  transition: 'all 200ms',
+                  fontWeight: isActive ? 500 : 400,
+                }}
+                onMouseEnter={(e) => {
+                  if (!isActive) {
+                    e.currentTarget.style.borderColor = 'var(--accent)';
+                    e.currentTarget.style.color = 'var(--text-primary)';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (!isActive) {
+                    e.currentTarget.style.borderColor = 'var(--border)';
+                    e.currentTarget.style.color = 'var(--text-secondary)';
+                  }
+                }}
+              >
+                {scene.year}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'minmax(320px, 1fr) minmax(280px, 440px)',
+          gap: '48px',
+          alignItems: 'start',
+          position: 'relative',
+        }}
+      >
       {/* Cinematic background gradient that drifts with each scene */}
       <div
         aria-hidden="true"
@@ -263,29 +340,141 @@ export default function ScrollTimeline({
           )}
         </div>
 
-        {/* Dots navigation */}
-        <div
+        {/* Vertical timeline axis — clickable years */}
+        <nav
+          aria-label={labels.sceneLabel === 'Scena' ? 'Skok do roku' : 'Jump to year'}
           style={{
-            marginTop: '16px',
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '6px',
+            marginTop: '20px',
+            paddingTop: '20px',
+            borderTop: '0.5px solid var(--border)',
           }}
         >
-          {scenes.map((_, idx) => (
-            <div
-              key={idx}
+          <p
+            style={{
+              fontFamily: 'var(--font-mono)',
+              fontSize: '10px',
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              color: 'var(--text-tertiary)',
+              margin: '0 0 12px',
+            }}
+          >
+            {labels.sceneLabel === 'Scena' ? 'Skok do roku' : 'Jump to year'}
+          </p>
+          <ol
+            style={{
+              listStyle: 'none',
+              padding: 0,
+              margin: 0,
+              position: 'relative',
+            }}
+          >
+            {/* Connecting line behind the dots */}
+            <span
+              aria-hidden="true"
               style={{
-                width: idx === activeScene ? 22 : 8,
-                height: 8,
-                borderRadius: 4,
-                background: idx === activeScene ? 'var(--accent)' : 'var(--border)',
-                transition: 'background 300ms ease-out, width 400ms cubic-bezier(0.2, 0.7, 0.2, 1)',
+                position: 'absolute',
+                left: 7,
+                top: 6,
+                bottom: 6,
+                width: 1,
+                background: 'var(--border)',
               }}
             />
-          ))}
-        </div>
+            {/* Progress overlay on the connecting line */}
+            <span
+              aria-hidden="true"
+              style={{
+                position: 'absolute',
+                left: 7,
+                top: 6,
+                width: 1,
+                height: `calc(${(activeScene / Math.max(scenes.length - 1, 1)) * 100}% - 12px + ${scrollProgress * (100 / scenes.length)}%)`,
+                background: 'var(--accent)',
+                transition: 'height 400ms cubic-bezier(0.2, 0.7, 0.2, 1)',
+              }}
+            />
+            {scenes.map((scene, idx) => {
+              const isActive = idx === activeScene;
+              const isPast = idx < activeScene;
+              return (
+                <li key={scene.id} style={{ position: 'relative', margin: 0 }}>
+                  <button
+                    type="button"
+                    onClick={() => jumpToScene(idx)}
+                    aria-current={isActive ? 'true' : undefined}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 12,
+                      width: '100%',
+                      padding: '6px 0',
+                      background: 'transparent',
+                      border: 0,
+                      cursor: 'pointer',
+                      textAlign: 'left',
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: isActive ? '13px' : '12px',
+                      color: isActive
+                        ? 'var(--accent)'
+                        : isPast
+                          ? 'var(--text-secondary)'
+                          : 'var(--text-tertiary)',
+                      letterSpacing: '0.04em',
+                      fontWeight: isActive ? 500 : 400,
+                      transition: 'color 200ms, font-size 200ms',
+                    }}
+                    onMouseEnter={(e) => {
+                      if (!isActive) e.currentTarget.style.color = 'var(--text-primary)';
+                    }}
+                    onMouseLeave={(e) => {
+                      if (!isActive) {
+                        e.currentTarget.style.color = isPast ? 'var(--text-secondary)' : 'var(--text-tertiary)';
+                      }
+                    }}
+                  >
+                    <span
+                      aria-hidden="true"
+                      style={{
+                        width: isActive ? 14 : 8,
+                        height: isActive ? 14 : 8,
+                        borderRadius: '50%',
+                        background: isActive
+                          ? 'var(--accent)'
+                          : isPast
+                            ? 'var(--accent)'
+                            : 'var(--bg-card)',
+                        border: isActive
+                          ? '2px solid var(--bg-card)'
+                          : isPast
+                            ? '0'
+                            : '1.5px solid var(--border)',
+                        boxShadow: isActive ? '0 0 0 2px var(--accent)' : 'none',
+                        flexShrink: 0,
+                        marginLeft: isActive ? -3 : 0,
+                        transition: 'all 250ms cubic-bezier(0.2, 0.7, 0.2, 1)',
+                      }}
+                    />
+                    <span style={{ flex: 1 }}>{scene.year}</span>
+                    <span
+                      style={{
+                        fontSize: '10px',
+                        color: isActive ? 'var(--accent)' : 'var(--text-tertiary)',
+                        opacity: isActive ? 1 : 0.6,
+                        textTransform: 'lowercase',
+                        letterSpacing: '0.04em',
+                      }}
+                    >
+                      {scene.kicker.toLowerCase()}
+                    </span>
+                  </button>
+                </li>
+              );
+            })}
+          </ol>
+        </nav>
       </aside>
+      </div>
 
       {/* Inline keyframes — kept colocated so the component is self-contained */}
       <style>{`
