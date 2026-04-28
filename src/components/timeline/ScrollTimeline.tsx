@@ -81,19 +81,21 @@ export default function ScrollTimeline({
 
   return (
     <div ref={scrollerRef} style={{ position: 'relative' }}>
-      {/* Sticky horizontal year ribbon — always visible while scrolling */}
+      {/* Sticky horizontal year ribbon — discreet, non-dominant. The
+          narrative scrollytelling stays the primary reading mode; this
+          is just a subtle navigation aid that doesn't fight with the
+          long-form text. */}
       <div
         style={{
           position: 'sticky',
           top: 60,
           zIndex: 50,
           marginInline: 'calc(-1 * var(--space-4))',
-          paddingBlock: '10px',
+          paddingBlock: '4px',
           paddingInline: 'var(--space-4)',
-          background: 'color-mix(in srgb, var(--bg-primary) 92%, transparent)',
-          backdropFilter: 'blur(8px)',
-          borderBottom: '0.5px solid var(--border)',
-          marginBottom: '24px',
+          background: 'color-mix(in srgb, var(--bg-primary) 88%, transparent)',
+          backdropFilter: 'blur(10px)',
+          marginBottom: '12px',
         }}
       >
         <div
@@ -101,10 +103,10 @@ export default function ScrollTimeline({
           aria-label={labels.sceneLabel === 'Scena' ? 'Skok do roku' : 'Jump to year'}
           style={{
             display: 'flex',
-            gap: 4,
+            gap: 2,
             overflowX: 'auto',
-            scrollbarWidth: 'thin',
-            paddingBlock: 4,
+            scrollbarWidth: 'none',
+            paddingBlock: 2,
           }}
         >
           {scenes.map((scene, idx) => {
@@ -118,28 +120,29 @@ export default function ScrollTimeline({
                 onClick={() => jumpToScene(idx)}
                 style={{
                   flexShrink: 0,
-                  padding: '6px 12px',
+                  padding: '3px 8px',
                   borderRadius: 999,
-                  border: `0.5px solid ${isActive ? 'var(--accent)' : 'var(--border)'}`,
+                  border: 0,
                   background: isActive ? 'var(--accent)' : 'transparent',
-                  color: isActive ? 'white' : 'var(--text-secondary)',
+                  color: isActive ? 'white' : 'var(--text-tertiary)',
                   fontFamily: 'var(--font-mono)',
-                  fontSize: '12px',
+                  fontSize: '10px',
                   letterSpacing: '0.04em',
                   cursor: 'pointer',
                   transition: 'all 200ms',
                   fontWeight: isActive ? 500 : 400,
+                  opacity: isActive ? 1 : 0.7,
                 }}
                 onMouseEnter={(e) => {
                   if (!isActive) {
-                    e.currentTarget.style.borderColor = 'var(--accent)';
-                    e.currentTarget.style.color = 'var(--text-primary)';
+                    e.currentTarget.style.color = 'var(--accent)';
+                    e.currentTarget.style.opacity = '1';
                   }
                 }}
                 onMouseLeave={(e) => {
                   if (!isActive) {
-                    e.currentTarget.style.borderColor = 'var(--border)';
-                    e.currentTarget.style.color = 'var(--text-secondary)';
+                    e.currentTarget.style.color = 'var(--text-tertiary)';
+                    e.currentTarget.style.opacity = '0.7';
                   }
                 }}
               >
