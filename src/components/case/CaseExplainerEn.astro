@@ -8,7 +8,10 @@ interface Props {
 }
 
 const { src, duration = '60s', title } = Astro.props;
-const resolvedSrc = url(src);
+// EN explainers live at /animations-en/ alongside the Polish ones at /animations/.
+// Frontmatter still references the PL path; auto-rewrite for the EN locale.
+const enSrc = src.replace('/animations/', '/animations-en/');
+const resolvedSrc = url(enSrc);
 ---
 
 <section class="explainer">
