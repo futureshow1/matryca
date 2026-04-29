@@ -173,7 +173,7 @@ export const TIMELINE_SCENES: TimelineScene[] = [
     id: "scene-2017",
     year: "2017",
     kicker: "Wzorzec",
-    headline: "Uber Greyball. Equifax. Firmy oszukują, dane ciekną.",
+    headline: "Uber Greyball. Equifax. Firmy oszukują, dane wyciekają.",
     bodyParagraphs: [
       `3 marca 2017 roku „New York Times" publikuje tekst Mike'a Isaaca: „How Uber Deceives the Authorities Worldwide". Tekst opisuje „Greyball" — narzędzie, które Uber stosował od 2014 roku do identyfikowania urzędników miejskich, policjantów i kontrolerów, i serwowania im „dummy" aplikacji. Kierowcy nie przyjeżdżali. Usług nie można było przetestować. Uber wyglądał, jakby nie działał w danym mieście — a działał.`,
       "Greyball używał kilku sygnałów: lokalizacja GPS wokół budynków policji, dane kart kredytowych powiązane z miastem, wzorce zakupów w ciągu dnia, numery kart stowarzyszonych z organami państwowymi. W Portland, Oregon, to pozwoliło Uberowi operować nielegalnie przez sześć miesięcy w 2014 roku, zanim władze zdążyły zebrać dowody. W Paryżu, Bostonie, Filadelfii — podobnie.",
