@@ -46,7 +46,7 @@ export const TIMELINE_SCENES: TimelineScene[] = [
     id: "scene-2010",
     year: "2010",
     kicker: "Regulator",
-    headline: "Hamburski urzędnik mówi: „Pokażcie, co naprawdę zbieracie".",
+    headline: `Hamburski urzędnik mówi: „Pokażcie, co naprawdę zbieracie".`,
     bodyParagraphs: [
       "Johannes Caspar jest prawnikiem. Nie inżynierem, nie aktywistą, nie dziennikarzem. W 2010 roku kieruje hamburskim urzędem ochrony danych — jednym z szesnastu regionalnych urzędów w Niemczech odpowiedzialnych za egzekwowanie prawa o prywatności. Budżet jego urzędu to ułamek tego, co Google wydaje na prawników w jednym kwartale. Zespół: kilkanaście osób.",
       "W 2009 roku Caspar zaczyna interesować się Street View. Samochody Google jeżdżą po hamburskich ulicach i fotografują elewacje. Pod kamerą na dachu widać antenę. Caspar pyta firmę: po co? Google odpowiada: do zbierania nazw sieci Wi-Fi. Pozwala to na dokładniejsze usługi lokalizacyjne tam, gdzie GPS jest niedostępny.",
