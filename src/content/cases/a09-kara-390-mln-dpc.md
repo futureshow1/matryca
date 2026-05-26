@@ -223,7 +223,7 @@ NOYB złożyła w tym samym dniu 4 skargi:
 
 ### Regulatorzy
 
-- **Helen Dixon** — Information Commissioner Irlandia do 2024. Krytykowana za **zbyt łagodne** stanowisko wobec Meta w 2021 (projekt decyzji 28–36 mln €). Później broniła: "DPC zaproponowała karę większą niż jakakolwiek DPA dotychczas nałożyła. EROD tylko potrzebował więcej."
+- **Helen Dixon** — Data Protection Commissioner Irlandia (2014–2024). Krytykowana za **zbyt łagodne** stanowisko wobec Meta w 2021 (projekt decyzji 28–36 mln €). Później broniła: "DPC zaproponowała karę większą niż jakakolwiek DPA dotychczas nałożyła. EROD tylko potrzebował więcej."
 - **Andrea Jelinek** — przewodnicząca EROD do 2023. Pod jej kierownictwem EROD wydało wiążącą decyzję 3/2022 i 4/2022.
 - **Anu Talus** — przewodnicząca EROD od 2023.
 - **Aleid Wolfsen** — przewodniczący holenderskiej Autoriteit Persoonsgegevens (AP); jedna z kluczowych osób, która zgłosiła zastrzeżenia do projektu DPC i skierowała sprawę do EROD.

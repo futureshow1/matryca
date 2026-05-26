@@ -52,12 +52,6 @@ fines:
   date: 2024-07
   category: state_attorney_general
   status: paid
-- amount: 8000000000
-  currency: USD
-  authority: Pozew akcjonariuszy
-  date: '2025'
-  category: class_action_settlement
-  status: paid
 whistleblowers:
 - wylie
 - schrems
@@ -122,7 +116,7 @@ The British-American consulting firm **Cambridge Analytica** (founded in Decembe
 
 The story broke on **March 17, 2018** following simultaneous publications by *The Observer* (Carole Cadwalladr), *The New York Times*, and *Channel 4 News*. The whistleblower was **Christopher Wylie**, former director of research at CA — a 28-year-old Canadian with pink hair, who described himself as "the person who built Steve Bannon's psychological warfare tool." He disclosed documents, screenshots of contracts, and recordings. Channel 4 added hidden-camera footage of CA director **Alexander Nix**, boasting about offering "beautiful Ukrainian women" to political campaigns to compromise opponents.
 
-The fallout: Facebook suspended CA on **March 16, 2018**; on May 1, 2018, CA and SCL declared bankruptcy; Facebook's stock fell by 24% (a loss of approximately $134 billion in market capitalization in one week); Mark Zuckerberg testified before the US Congress on **April 10–11, 2018** (nearly 10 hours of questioning). Penalties for Facebook: **$5 billion from the FTC** (2019, the largest FTC fine in history), **$100 million from the SEC** (2019), **$725 million class action settlement** (2022), **$8 billion shareholder derivative settlement** (September 2025), **$1.4 billion settlement with the State of Texas** (2024), **500,000 GBP** in the UK (ICO). Alexander Nix and Aleksandr Kogan received 20-year bans on engaging in specified business activities (FTC, December 2019).
+The fallout: Facebook suspended CA on **March 16, 2018**; on May 1, 2018, CA and SCL declared bankruptcy; Facebook's stock fell by 24% (a loss of approximately $134 billion in market capitalization in one week); Mark Zuckerberg testified before the US Congress on **April 10–11, 2018** (nearly 10 hours of questioning). Penalties for Facebook: **$5 billion from the FTC** (2019, the largest FTC fine in history), **$100 million from the SEC** (2019), **$725 million class action settlement** (2022), **shareholder derivative settlement, terms undisclosed** (July 17, 2025; plaintiffs sought $8 billion), **$1.4 billion settlement with the State of Texas** (2024), **500,000 GBP** in the UK (ICO). Alexander Nix and Aleksandr Kogan received 20-year bans on engaging in specified business activities (FTC, December 2019).
 
 ---
 
@@ -142,7 +136,8 @@ The fallout: Facebook suspended CA on **March 16, 2018**; on May 1, 2018, CA and
 - **May 2016** — Trump hires CA; Steve Bannon becomes Trump campaign chief in August 2016.
 - **November 2016** — Trump wins the US presidential election.
 - **June 2016** — Brexit referendum; subsequent reports about CA's involvement would later be dismissed by the ICO as marginal ("no significant breaches").
-- **January 2017** — Bannon becomes White House Chief Strategist; he divests his CA holdings in accordance with ethics requirements (his shares were valued between $1 and $5 million).
+- **January 20, 2017** — Bannon takes office as White House Chief Strategist.
+- **April 2017** — Bannon divests his CA holdings in accordance with ethics requirements (his shares were valued between $1 and $5 million).
 - **March 2017** — CA begins drawing controversy, but the scandal has yet to break.
 - **September 2017** — Christopher Wylie begins cooperating with *The Guardian* and Carole Cadwalladr.
 - **October 2017 – February 2018** — journalistic investigation underway; Wylie gathers documents, contracts, emails.
@@ -155,14 +150,14 @@ The fallout: Facebook suspended CA on **March 16, 2018**; on May 1, 2018, CA and
 - **April 10–11, 2018** — Mark Zuckerberg testifies before the US Congress (Senate and House of Representatives); roughly 10 hours of testimony in total.
 - **May 22, 2018** — Zuckerberg testifies before the European Parliament.
 - **May 1, 2018** — CA and SCL Group file for bankruptcy.
-- **October 25, 2018** — the UK ICO imposes a **500,000 GBP** fine on Facebook (the maximum under the pre-GDPR UK DPA 1998).
+- **October 24, 2018** — the UK ICO issues a **Monetary Penalty Notice** of **500,000 GBP** against Facebook (the maximum under the pre-GDPR UK DPA 1998); Facebook paid after a settlement on October 30, 2019.
 - **July 24, 2019** — **the FTC announces a $5 billion penalty** against Facebook — the largest in FTC history; a 20-year consent to supervision.
 - **July 24, 2019** — the SEC imposes a **$100 million** fine for misleading investors.
 - **December 6, 2019** — the FTC enters into administrative consent orders with Alexander Nix and Aleksandr Kogan: 20-year bans on specified activities; mandatory deletion of data and models.
 - **December 2022** — Meta agrees to a **$725 million** settlement in a class action (In re: Facebook Inc. Consumer Privacy User Profile Litigation, N.D. Cal.).
 - **2022** — the State of Texas sues Meta for violating the state biometric privacy statute (BIPA-like); the case does not directly concern CA but a broader privacy breach.
 - **July 30, 2024** — **$1.4 billion settlement** in Texas (facial recognition case, but historically tied to Meta's overall reckoning).
-- **September 2025** — **$8.0 billion settlement** in a shareholder derivative suit in Delaware Chancery Court against Meta's board and Zuckerberg personally.
+- **July 17, 2025** — **settlement on undisclosed terms** in a shareholder derivative suit in the Delaware Court of Chancery against Meta's board and Zuckerberg personally; the shareholders had originally sought **$8 billion** in damages (reimbursement of fines and costs after the CA scandal). The parties settled on the second day of trial without disclosing the amount.
 
 ---
 
@@ -308,7 +303,7 @@ Zuckerberg became the subject of memes on account of:
 ### US — shareholder derivative suit
 
 - **2021–2025** — shareholder lawsuit in Delaware against Meta's board.
-- **September 2025** — **$8 billion settlement** paid out of the company's assets, including corporate governance reforms (privacy committee, oversight).
+- **July 17, 2025** — **settlement on undisclosed terms** in the Delaware Court of Chancery; shareholders had originally sought **$8 billion** (reimbursement of fines and costs after the CA scandal). The actual payout figure remains under confidentiality.
 
 ### UK — ICO
 
@@ -332,7 +327,7 @@ Zuckerberg became the subject of memes on account of:
 | 12/06/2019 | FTC (Kogan) | ban + no monetary amount | US | FTC Act |
 | 12/2022 | Class action (Meta) | $725,000,000 | US | Federal and state |
 | 07/30/2024 | State of Texas | $1,400,000,000 | US | CUBI, DTPA |
-| 09/2025 | Shareholder derivative | $8,000,000,000 | US (Delaware) | Breach of fiduciary duty |
+| 07/17/2025 | Shareholder derivative | undisclosed (plaintiffs sought $8B) | US (Delaware) | Breach of fiduciary duty |
 
 **Total (approximate):** ~$15.7 billion + 500,000 GBP (though the Texas settlement is also considered to cover the biometrics case, and the shareholder settlement encompasses broader oversight issues).
 
@@ -375,7 +370,7 @@ After CA, it became common to view the **2016 election** as a precedent for "dem
 | Case | Court | Status | Value | Affected parties |
 |--------|-----|------|---------|--------------|
 | In re Facebook Inc. Consumer Privacy User Profile Litigation (MDL 2843) | N.D. Cal. | Settled 12/2022, payouts 2024 | $725 million | approx. 250–280 million US FB users (2007–2022) |
-| Shareholder derivative (In re Meta Platforms, Inc. Stockholder Litigation) | Delaware Chancery | Settled 09/2025 | $8 billion | Meta shareholders |
+| Shareholder derivative (In re Meta Platforms, Inc. Stockholder Litigation) | Delaware Chancery | Settled 07/17/2025 | undisclosed (plaintiffs sought $8B) | Meta shareholders |
 
 ---
 

@@ -149,7 +149,7 @@ The legal basis for the fine: **GDPR Art. 46(1)** — a transfer outside the EEA
 
 ### Who is Max Schrems
 
-**Maximilian Schrems** (born 1987 in Vienna, Austria) is a lawyer and privacy activist, founder of the Vienna-based organization **NOYB (None Of Your Business)**. In 2011, as a student at the University of California in Santa Clara, he was writing a term paper on **US privacy law**. To research how Facebook handled personal data, he filed a data-access request with Facebook Ireland (an Art. 15 GDPR request avant la lettre). He received **1,222 pages** of documents — including data he had supposedly deleted. That became the seed of his activism.
+**Maximilian Schrems** (born October 10, 1987 in Salzburg, Austria; NOYB is currently headquartered in Vienna) is a lawyer and privacy activist, founder of **NOYB (None Of Your Business)**. In 2011, as a student at the University of California in Santa Clara, he was writing a term paper on **US privacy law**. To research how Facebook handled personal data, he filed a data-access request with Facebook Ireland (an Art. 15 GDPR request avant la lettre). He received **1,222 pages** of documents — including data he had supposedly deleted. That became the seed of his activism.
 
 In 2013, after Snowden's disclosures, he filed his first complaint with the DPC. In 2015 he won Schrems I. In 2018 he founded NOYB, a nonprofit funded through membership dues, national research grants and private donations. In 2020 he won Schrems II.
 
@@ -177,8 +177,8 @@ The EUR 1.2 billion fine is not a classic whistleblower disclosure — it is **t
 
 ### Regulators
 
-- **Helen Dixon** — Irish Information Commissioner until 2024; criticized for the slow pace of proceedings. Under her leadership the DPC was widely seen as **too lenient** toward Big Tech.
-- **Des Hogan** — Dixon's successor since 2024.
+- **Helen Dixon** — Irish Data Protection Commissioner (2014–2024); criticized for the slow pace of proceedings. Under her leadership the DPC was widely seen as **too lenient** toward Big Tech.
+- **Des Hogan** (Chairperson) and **Dale Sunderland** — Data Protection Commissioners since February 20, 2024 (after Helen Dixon). Since 2024 the DPC operates with a two-commissioner model.
 - **Andrea Jelinek** — EDPB chair until 2023; a key figure behind the binding decision 1/2023.
 - **Anu Talus** — EDPB chair since 2023.
 - **Didier Reynders** — EU Commissioner for Justice 2019–2024; architect of the Data Privacy Framework.

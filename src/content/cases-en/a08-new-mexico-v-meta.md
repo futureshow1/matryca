@@ -8,7 +8,7 @@ year_revealed: 2023
 last_updated: '2026-04-17'
 companies:
 - Meta Platforms Inc.
-status: concluded
+status: ongoing_litigation
 jurisdictions:
 - US
 legal_basis:

@@ -52,7 +52,7 @@ years_active:
 
 > **Category:** DMA art. 5(2) / combining data across services / "consent or pay"
 > **Company/companies:** Meta Platforms Ireland (Facebook, Instagram)
-> **Years:** March 7, 2024 – November 2024 (infringement period), April 22, 2025 (fine)
+> **Years:** March 7, 2024 – November 2024 (infringement period), April 23, 2025 (fine)
 > **Status:** First DMA fine in history; Meta has announced an appeal to the EU General Court
 > **Card ID:** A10
 
@@ -63,7 +63,7 @@ years_active:
 | Field | Value |
 |------|---------|
 | Country/region | European Union (European Commission) |
-| Year revealed | April 22, 2025 (fine announcement) |
+| Year revealed | April 23, 2025 (fine announcement) |
 | Years the practice ran | March 7, 2024 (DMA obligations take effect) – November 2024 (Meta introduced a new model) |
 | Total fine | EUR 200,000,000 |
 | Currency | EUR |
@@ -76,13 +76,13 @@ years_active:
 
 ## TL;DR
 
-**On April 22, 2025**, the European Commission imposed on Meta Platforms Ireland **the first ever fine under the Digital Markets Act (DMA)**: **€200 million**. The basis was a breach of **art. 5(2) DMA** — the provision that bars gatekeepers from combining users' personal data **across different core platform services** **without explicit consent**. In November 2023, Meta rolled out the **"consent or pay" model**: users had only two choices — consent to behavioral targeted advertising (with data combined across Facebook and Instagram) **or pay €9.99–12.99 per month** for an ad-free version. The Commission found that **this is not freely given consent** within the meaning of the DMA.
+**On April 23, 2025**, the European Commission imposed on Meta Platforms Ireland **the first ever fine under the Digital Markets Act (DMA)**: **€200 million**. The basis was a breach of **art. 5(2) DMA** — the provision that bars gatekeepers from combining users' personal data **across different core platform services** **without explicit consent**. In November 2023, Meta rolled out the **"consent or pay" model**: users had only two choices — consent to behavioral targeted advertising (with data combined across Facebook and Instagram) **or pay €9.99–12.99 per month** for an ad-free version. The Commission found that **this is not freely given consent** within the meaning of the DMA.
 
 Starting **March 7, 2024**, the DMA imposed on the 6 "gatekeepers" (Meta, Apple, Google, Amazon, Microsoft, ByteDance) a series of obligations, including art. 5(2): if a user refuses consent to data combination, the platform must **offer a free alternative that is clearly less personalized** but **equivalent**. Meta argued that a paid €9.99/month subscription was that "alternative." The Commission sided with the EDPB (Opinion 08/2024, April 17, 2024): payment **is not equivalent** to free use — a user who does not want targeting must have **a free, less personalized option**.
 
 In November 2024 Meta **modified the model**: it introduced **a third option** — free use of Facebook/Instagram with **contextual (non-personal) advertising** based, for instance, on what you are currently viewing rather than on a profile. The Commission is still evaluating whether **the new model** meets the DMA — a decision is expected in 2026.
 
-The €200 million fine is **the first DMA sanction in history** — alongside the €500 million fine for Apple over anti-steering (App Store). Symbolically, it opens **the era of DMA enforcement**. Meta has filed an appeal. **Joel Kaplan** (Chief Global Affairs Officer at Meta, former deputy chief of staff in the Trump White House 2017–2018): *"The Commission is forcing us to change our business model, effectively imposing a multi-billion-dollar tariff on Meta while requiring us to offer an inferior service."*
+The €200 million fine is **the first DMA sanction in history** — alongside the €500 million fine for Apple over anti-steering (App Store). Symbolically, it opens **the era of DMA enforcement**. Meta has filed an appeal. **Joel Kaplan** (Chief Global Affairs Officer at Meta since January 2025, previously Deputy Chief of Staff for Policy in the George W. Bush administration 2006–2009): *"The Commission is forcing us to change our business model, effectively imposing a multi-billion-dollar tariff on Meta while requiring us to offer an inferior service."*
 
 For EU citizens, the decision **confirms the direction set in A09**: social media platforms **have no right to combine your data across different products without freely given consent**. A subscription in exchange for privacy is not freely given consent if the price of refusal is losing free access to the underlying service. The case has fundamental significance for the future of **the advertising model in Europe**.
 
@@ -93,7 +93,7 @@ For EU citizens, the decision **confirms the direction set in A09**: social medi
 - **September 14, 2022** — announcement of the **Digital Markets Act (DMA)** — EU Regulation 2022/1925.
 - **November 1, 2022** — DMA enters into force.
 - **May 2, 2023** — DMA begins to apply fully, but without enforcement against gatekeepers (preparatory period).
-- **September 5, 2023** — the European Commission designates **6 gatekeepers**: Meta, Apple, Amazon, Alphabet (Google), Microsoft, ByteDance (TikTok). For Meta: Facebook, Instagram, WhatsApp, Messenger, Meta Marketplace, Meta Ads.
+- **September 6, 2023** — the European Commission designates **6 gatekeepers**: Meta, Apple, Amazon, Alphabet (Google), Microsoft, ByteDance (TikTok). For Meta: Facebook, Instagram, WhatsApp, Messenger, Meta Marketplace, Meta Ads.
 - **October 2023** — in response to the DPC fine (A09), Meta announces a **"consent or pay"** model — €9.99/month (web) or €12.99/month (iOS/Android).
 - **November 28, 2023** — NOYB files complaints against Meta's "consent or pay" model with multiple DPAs.
 - **February 29, 2024** — BEUC, Verbraucherzentrale Bundesverband (German consumer association) and other consumer organizations file complaints with the European Commission.
@@ -102,7 +102,7 @@ For EU citizens, the decision **confirms the direction set in A09**: social medi
 - **April 17, 2024** — **EDPB Opinion 08/2024** — a fundamental opinion: "consent or pay" models in the case of large online platforms **generally do not meet** the consent requirements under the GDPR.
 - **July 1, 2024** — the European Commission **issues preliminary findings**: Meta's model infringes DMA art. 5(2).
 - **November 2024** — Meta **introduces a third option**: free use of Facebook/Instagram with **context-based ads** (less personalized) instead of behavioral ads. At the same time, it **lowers the subscription price** for the ad-free version: from €9.99/12.99 to €5.99/7.99 per month.
-- **April 22, 2025** — the European Commission announces **the first non-compliance decisions in DMA history**:
+- **April 23, 2025** — the European Commission announces **the first non-compliance decisions in DMA history**:
   - **Apple: €500 million** for breach of art. 5(4) (App Store anti-steering)
   - **Meta: €200 million** for breach of art. 5(2) (consent or pay)
 - **April 23, 2025** — Meta announces an appeal to the EU General Court.
@@ -197,12 +197,12 @@ The sequence:
 3. **July 1, 2024** — the Commission sends preliminary findings to Meta.
 4. **November 2024** — Meta introduces the third option (contextual ads).
 5. **October 2024 – April 2025** — defense period; Meta files its response.
-6. **April 22, 2025** — final non-compliance decision.
+6. **April 23, 2025** — final non-compliance decision.
 
 ### First publications
 
-- **April 22, 2025** — European Commission press release (IP/25/1085)
-- **April 22, 2025** — in parallel: *POLITICO EU*, *Reuters*, *FT*, *Bloomberg*
+- **April 23, 2025** — European Commission press release (IP/25/1085)
+- **April 23, 2025** — in parallel: *POLITICO EU*, *Reuters*, *FT*, *Bloomberg*
 - **April 23, 2025** — Meta's response (blog post by Joel Kaplan)
 - **April 23–24, 2025** — commentary: Taylor Wessing, Bird & Bird, Noerr, Hunton, Kluwer Competition Law Blog
 
@@ -219,7 +219,7 @@ The sequence:
 
 ### On Meta's side
 
-- **Joel Kaplan** — Chief Global Affairs Officer at Meta since 2024 (after Nick Clegg). Previously VP Global Public Policy at Facebook from 2011 and **deputy chief of staff to George W. Bush** in the White House. A Republican; his appointment signaled **Meta's rightward shift** ahead of Trump's return to power. Author of Meta's statement following the fine.
+- **Joel Kaplan** — Chief Global Affairs Officer at Meta since January 2025 (after Nick Clegg). Previously VP Global Public Policy at Facebook from 2014 and **Deputy Chief of Staff for Policy** in the George W. Bush administration (2006–2009). A Republican; his appointment signaled **Meta's rightward shift** ahead of Trump's return to power. Author of Meta's statement following the fine.
 - **Nick Clegg** (until end of 2024) — VP Global Affairs at Meta, responsible for relations with the Commission during the investigation.
 - **Rob Sherman** — Chief Privacy Counsel at Meta.
 - **Markus Reinisch** — VP Public Policy Europe at Meta.
@@ -296,7 +296,7 @@ Meta shares fell about 1.5% after the fine was announced and quickly rebounded. 
 | April 17, 2024 | EDPB Opinion 08/2024 |
 | July 1, 2024 | Preliminary findings |
 | November 2024 | Meta introduces the third option |
-| April 22, 2025 | Final non-compliance decision, €200 million |
+| April 23, 2025 | Final non-compliance decision, €200 million |
 | June 2025 | Meta files an appeal |
 
 ### Related case law
@@ -312,7 +312,7 @@ Meta shares fell about 1.5% after the fine was announced and quickly rebounded. 
 
 | Date | Authority | Amount | Jurisdiction | Basis |
 |------|-------|-------|-------------|----------|
-| April 22, 2025 | European Commission | EUR 200,000,000 | EU | DMA art. 5(2) |
+| April 23, 2025 | European Commission | EUR 200,000,000 | EU | DMA art. 5(2) |
 
 **Maximum possible**: 10% of Meta's 2024 global turnover (~$160 billion) = ~€16 billion. The Commission imposed **about 1.25%** of the maximum — **relatively lenient**, given the infringement period (8 months) and the fact that Meta introduced fixes.
 
@@ -411,9 +411,9 @@ The third option is **often hidden** — Meta does not actively promote it becau
 
 ## Context
 
-- **The first DMA fines in history** — April 22, 2025 will be remembered in the history of digital regulation as "DMA Day One." Together with Apple (€500 million) — a combined **€700 million on a single day**.
+- **The first DMA fines in history** — April 23, 2025 will be remembered in the history of digital regulation as "DMA Day One." Together with Apple (€500 million) — a combined **€700 million on a single day**.
 - **Meta got off relatively "lightly"** — with a possible maximum of 10% of global turnover (~€16 billion), €200 million is 1.25%. The Commission explained this by: the short infringement period (8 months) + the fact that Meta introduced fixes in November 2024.
-- **Joel Kaplan instead of Nick Clegg** — Kaplan's appointment (a Republican, a former Bush aide) as Chief Global Affairs Officer at Meta in January 2024 was a clear political signal: Meta was positioning itself for the incoming Trump administration. Kaplan's statement after the fine (**"a tariff on Meta"**) is a natural extension of that.
+- **Joel Kaplan instead of Nick Clegg** — Kaplan's appointment (a Republican, a former Bush aide) as Chief Global Affairs Officer at Meta in January 2025 was a clear political signal: Meta was positioning itself for the incoming Trump administration. Kaplan's statement after the fine (**"a tariff on Meta"**) is a natural extension of that.
 - **Meta's new November 2024 model — "contextual" ads** — is a return to the **pre-algorithmic era** of internet advertising. Ads are based on **what you are viewing at the moment** (e.g., an article about cooking → an ad for a cookware pot), rather than on **a user profile**. Ironically, this is **closer to the traditional press model** — advertisers buy space next to content, rather than access to a reader profile.
 - **"Consent or pay" as a business experiment** — the adtech industry had been considering it for years, but no major platform dared to introduce it before Meta (October 2023). After the Commission's decision in April 2025, several other platforms (including X/Twitter under Elon Musk) backed away from plans for similar models.
 - **The economics of privacy subscriptions**: Meta initially priced the subscription at €9.99/month (web) = €120/year. Meta's Average Revenue Per User (ARPU) in the EU is ~€60/year. That means Meta was demanding **2× ARPU** for refusing targeting. After criticism, this was lowered to €5.99/month = €72/year = 1.2× ARPU.
@@ -427,9 +427,9 @@ The third option is **often hidden** — Meta does not actively promote it becau
 
 ## Sources
 
-1. European Commission, "Commission decisions under the Digital Markets Act — Apple and Meta", IP/25/1085, April 22, 2025. URL: https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1085 (accessed: 2026-04-17)
+1. European Commission, "Commission decisions under the Digital Markets Act — Apple and Meta", IP/25/1085, April 23, 2025. URL: https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1085 (accessed: 2026-04-17)
 
-2. European Commission, "Digital Markets Act: Commission fines Meta €200 million", official press release, April 22, 2025.
+2. European Commission, "Digital Markets Act: Commission fines Meta €200 million", official press release, April 23, 2025.
 
 3. European Data Protection Board, "Opinion 08/2024 on Valid Consent in the Context of Consent or Pay Models implemented by Large Online Platforms", April 17, 2024. URL: https://edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-082024-valid-consent-context-consent-or_en (accessed: 2026-04-17)
 

@@ -46,14 +46,14 @@ word_count: 3782
 explainer:
   src: /animations/c05-linkedin-ai-training.html
   duration: '60s'
-  title: LinkedIn AI Training — trening na profilach bez dobrowolne włączenie
-subtitle: Trenowanie na profilach pracowników bez dobrowolne włączenie
+  title: LinkedIn AI Training — trening na profilach bez świadomej zgody
+subtitle: Trenowanie na profilach pracowników bez świadomej zgody
 years_active:
 - 2003
 - 2022
 ---
 
-# C05 — LinkedIn AI Training: Trenowanie na profilach pracowników bez dobrowolne włączenie
+# C05 — LinkedIn AI Training: Trenowanie na profilach pracowników bez świadomej zgody
 
 > **Kategoria:** AI training / legitimate interest / rezygnacja by default / dane zawodowe
 > **Firma/firmy:** LinkedIn (Microsoft)
@@ -242,7 +242,7 @@ Model biznesowy: **subskrypcje czytelników** (nie reklamy). 18 września 2024 �
 
 ### LinkedIn
 
-**Faza 1: ciche wdrożenie (wrzesień 2024).** LinkedIn aktywował trenowanie AI w USA, UK, AU, JP, CA, IN **bez uprzedniego ogłoszenia**. Toggle "Data for Generative AI Improvement" pojawił się w ustawieniach. Użytkownicy, którzy go nie zauważyli = wszyscy byli dobrowolne włączenie.
+**Faza 1: ciche wdrożenie (wrzesień 2024).** LinkedIn aktywował trenowanie AI w USA, UK, AU, JP, CA, IN **bez uprzedniego ogłoszenia**. Toggle "Data for Generative AI Improvement" pojawił się w ustawieniach. Użytkownicy, którzy go nie zauważyli = wszyscy byli automatycznie włączeni.
 
 **Faza 2: reakcja na publikację (18 września 2024).** Tego samego dnia, co *404 Media* publikuje, LinkedIn **aktualizuje politykę prywatności**. Blake Lawit (GC) blog post:
 *"As technology and our business evolves, and the world of work changes, we remain committed to providing clarity about our practices and keeping you in control of the information you entrust with us."*

@@ -52,12 +52,6 @@ fines:
   date: 2024-07
   category: state_attorney_general
   status: paid
-- amount: 8000000000
-  currency: USD
-  authority: Pozew akcjonariuszy
-  date: '2025'
-  category: class_action_settlement
-  status: paid
 whistleblowers:
 - wylie
 - schrems
@@ -122,7 +116,7 @@ Brytyjsko-amerykańska firma konsultingowa **Cambridge Analytica** (założona w
 
 Sprawa wybuchła **17 marca 2018** po równoległych publikacjach *The Observer* (Carole Cadwalladr), *The New York Times* i *Channel 4 News*. Sygnalistą był **Christopher Wylie**, były dyrektor badań CA — 28-letni Kanadyjczyk o różowych włosach, który opisał siebie jako "tego, który zbudował narzędzie wojny psychologicznej Steve'a Bannona". Ujawnił dokumenty, zrzuty ekranu umów i nagrania. Channel 4 dołożył do tego ukrytą kamerę z dyrektorem CA **Alexandrem Nixem**, chwalącym się oferowaniem kampaniom "pięknych Ukrainek" do kompromitacji konkurentów.
 
-Skutki: Facebook zawiesił CA **16 marca 2018**; 1 maja 2018 CA i SCL ogłosiły upadłość; akcje Facebooka spadły o 24% (utrata ~134 mld USD kapitalizacji w tygodniu); Mark Zuckerberg zeznawał przed Kongresem USA **10–11 kwietnia 2018** (blisko 10 godzin pytań). Kary dla Facebooka: **5 mld USD FTC** (2019, największa kara FTC w historii), **100 mln USD SEC** (2019), **725 mln USD ugoda pozew zbiorowy** (2022), **8 mld USD ugoda pozwu akcjonariuszy** (wrzesień 2025), **1,4 mld USD ugoda stanu Teksas** (2024), **500 tys. GBP** w UK (ICO). Alexander Nix i Aleksandr Kogan dostali 20-letnie zakazy prowadzenia określonej działalności (FTC, grudzień 2019).
+Skutki: Facebook zawiesił CA **16 marca 2018**; 1 maja 2018 CA i SCL ogłosiły upadłość; akcje Facebooka spadły o 24% (utrata ~134 mld USD kapitalizacji w tygodniu); Mark Zuckerberg zeznawał przed Kongresem USA **10–11 kwietnia 2018** (blisko 10 godzin pytań). Kary dla Facebooka: **5 mld USD FTC** (2019, największa kara FTC w historii), **100 mln USD SEC** (2019), **725 mln USD ugoda pozew zbiorowy** (2022), **ugoda pozwu akcjonariuszy na nieujawnionych warunkach** (17 lipca 2025; akcjonariusze żądali 8 mld USD), **1,4 mld USD ugoda stanu Teksas** (2024), **500 tys. GBP** w UK (ICO). Alexander Nix i Aleksandr Kogan dostali 20-letnie zakazy prowadzenia określonej działalności (FTC, grudzień 2019).
 
 ---
 
@@ -142,7 +136,8 @@ Skutki: Facebook zawiesił CA **16 marca 2018**; 1 maja 2018 CA i SCL ogłosiły
 - **Maj 2016** — Trump zatrudnia CA; Steve Bannon zostaje szefem kampanii Trumpa w sierpniu 2016.
 - **Listopad 2016** — Trump wygrywa wybory prezydenckie USA.
 - **Czerwiec 2016** — referendum w sprawie Brexitu; późniejsze doniesienia o udziale CA zostaną przez ICO uznane za marginalne ("no significant breaches").
-- **Styczeń 2017** — Bannon zostaje Chief Strategist Białego Domu; zbywa udziały w CA zgodnie z wymaganiami etycznymi (udziały miał wart 1–5 mln USD).
+- **20 stycznia 2017** — Bannon obejmuje funkcję Chief Strategist Białego Domu.
+- **Kwiecień 2017** — Bannon zbywa udziały w CA zgodnie z wymaganiami etycznymi (udziały miał wart 1–5 mln USD).
 - **Marzec 2017** — CA zaczyna być kontrowersyjna, ale skandal jeszcze nie wybucha.
 - **Wrzesień 2017** — Christopher Wylie zaczyna współpracę z *The Guardian* i Carole Cadwalladr.
 - **Październik 2017 – luty 2018** — dziennikarskie śledztwo; Wylie gromadzi dokumenty, umowy, e-maile.
@@ -155,14 +150,14 @@ Skutki: Facebook zawiesił CA **16 marca 2018**; 1 maja 2018 CA i SCL ogłosiły
 - **10–11 kwietnia 2018** — Mark Zuckerberg zeznaje przed Kongresem USA (Senat i Izba Reprezentantów); łącznie ~10 godzin zeznań.
 - **22 maja 2018** — Zuckerberg zeznaje przed Parlamentem Europejskim.
 - **1 maja 2018** — CA i SCL Group składają wniosek o upadłość.
-- **25 października 2018** — brytyjski ICO nakłada grzywnę **500 000 GBP** na Facebook (maksymalną w ramach przedRODO-wskiego UK DPA 1998).
+- **24 października 2018** — brytyjski ICO wydaje *Monetary Penalty Notice* na **500 000 GBP** wobec Facebooka (kara maksymalna w ramach przedRODO-wskiego UK DPA 1998); Facebook zapłaci po ugodzie 30 października 2019.
 - **24 lipca 2019** — **FTC ogłasza karę 5 miliardów USD** dla Facebooka — największa w historii FTC; 20-letnia zgoda na nadzór.
 - **24 lipca 2019** — SEC nakłada karę **100 mln USD** za wprowadzanie inwestorów w błąd.
 - **6 grudnia 2019** — FTC zawiera zgody administracyjne z Alexandrem Nixem i Aleksandrem Koganem: 20-letnie zakazy określonej działalności; obowiązek usunięcia danych i modeli.
 - **Grudzień 2022** — Meta zgadza się na ugodę **725 mln USD** w pozwie zbiorowym (In re: Facebook Inc. Consumer Privacy User Profile Litigation, N.D. Cal.).
 - **2022** — stan Teksas pozywa Meta za naruszenie prawa stanowego ochrony biometrii (BIPA-podobne); sprawa nie dotyczy bezpośrednio CA, ale ogólnego naruszenia prywatności.
 - **30 lipca 2024** — **ugoda 1,4 mld USD** w Teksasie (sprawa rozpoznawania twarzy, ale historycznie łączona z całościowym rozrachunkiem Meta).
-- **Wrzesień 2025** — **8,0 mld USD ugoda** w pozwie akcjonariuszy (shareholder derivative suit) w sądzie Delaware przeciwko zarządowi Meta i samemu Zuckerbergowi personalnie.
+- **17 lipca 2025** — **ugoda na nieujawnionych warunkach** w pozwie akcjonariuszy (shareholder derivative suit) w Delaware Court of Chancery przeciwko zarządowi Meta i samemu Zuckerbergowi personalnie; akcjonariusze pierwotnie żądali **8 mld USD** odszkodowania (zwrot kar i kosztów po skandalu CA). Strony zawarły ugodę na początku drugiego dnia procesu, bez ujawnienia kwoty.
 
 ---
 
@@ -308,7 +303,7 @@ Zuckerberg stał się obiektem memów ze względu na:
 ### USA — pozew akcjonariuszy (shareholder derivative)
 
 - **2021–2025** — pozew akcjonariuszy w Delaware przeciwko zarządowi Meta.
-- **Wrzesień 2025** — **ugoda 8 mld USD** wypłacona z majątku spółki, obejmująca reformy ładu korporacyjnego (privacy committee, oversight).
+- **17 lipca 2025** — **ugoda na nieujawnionych warunkach** w Delaware Court of Chancery; akcjonariusze pierwotnie domagali się **8 mld USD** (zwrot kar i kosztów po skandalu CA). Kwota faktycznej wypłaty pozostaje pod klauzulą poufności.
 
 ### UK — ICO
 
@@ -375,7 +370,7 @@ Po CA stało się powszechne obserwowanie **wyborów 2016** jako precedensu "zł
 | Sprawa | Sąd | Stan | Wartość | Poszkodowani |
 |--------|-----|------|---------|--------------|
 | In re Facebook Inc. Consumer Privacy User Profile Litigation (MDL 2843) | N.D. Cal. | Ugoda 12.2022, wypłaty 2024 | 725 mln USD | ok. 250–280 mln użytkowników FB w USA (2007–2022) |
-| Shareholder derivative (In re Meta Platforms, Inc. Stockholder Litigation) | Delaware Chancery | Ugoda 09.2025 | 8 mld USD | Akcjonariusze Meta |
+| Shareholder derivative (In re Meta Platforms, Inc. Stockholder Litigation) | Delaware Chancery | Ugoda 17.07.2025 | nieujawnione (żądano 8 mld USD) | Akcjonariusze Meta |
 
 ---
 

@@ -223,7 +223,7 @@ NOYB filed 4 complaints that same day:
 
 ### Regulators
 
-- **Helen Dixon** — Information Commissioner Ireland until 2024. Criticized for **overly lenient** treatment of Meta in 2021 (draft decision of €28–36M). She later defended: "The DPC proposed a fine larger than any DPA had imposed to that date. The EDPB just required more."
+- **Helen Dixon** — Data Protection Commissioner Ireland (2014–2024). Criticized for **overly lenient** treatment of Meta in 2021 (draft decision of €28–36M). She later defended: "The DPC proposed a fine larger than any DPA had imposed to that date. The EDPB just required more."
 - **Andrea Jelinek** — EDPB chair until 2023. Under her leadership the EDPB issued binding decisions 3/2022 and 4/2022.
 - **Anu Talus** — EDPB chair from 2023.
 - **Aleid Wolfsen** — chair of the Dutch Autoriteit Persoonsgegevens (AP); one of the key figures who raised objections to the DPC's draft and referred the matter to the EDPB.

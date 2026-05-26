@@ -149,7 +149,7 @@ Podstawa prawna kary: **RODO art. 46 ust. 1** — transfer poza EOG tylko jeśli
 
 ### Kim jest Max Schrems
 
-**Maximilian Schrems** (ur. 1987 w Wiedniu, Austria) — prawnik i aktywista ochrony prywatności, założyciel organizacji **NOYB (None Of Your Business)** z siedzibą w Wiedniu. W 2011, jako student na University of California w Santa Clara, pisał pracę zaliczeniową o **prawie prywatności w USA**. Żeby zbadać, jak Facebook obchodzi się z danymi, złożył do Facebook Ireland wniosek o dostęp do swoich danych (art. 15 RODO avant la lettre). Otrzymał **1222 strony** dokumentów — w tym dane, które rzekomo skasował. To stało się osnową jego aktywizmu.
+**Maximilian Schrems** (ur. 10 października 1987 w Salzburgu, Austria; obecna siedziba NOYB: Wiedeń) — prawnik i aktywista ochrony prywatności, założyciel organizacji **NOYB (None Of Your Business)**. W 2011, jako student na University of California w Santa Clara, pisał pracę zaliczeniową o **prawie prywatności w USA**. Żeby zbadać, jak Facebook obchodzi się z danymi, złożył do Facebook Ireland wniosek o dostęp do swoich danych (art. 15 RODO avant la lettre). Otrzymał **1222 strony** dokumentów — w tym dane, które rzekomo skasował. To stało się osnową jego aktywizmu.
 
 W 2013 po ujawnieniach Snowdena złożył pierwszą skargę do DPC. W 2015 wygrał Schrems I. W 2018 założył NOYB — non-profit finansowany ze składek członkowskich, krajowych grantów badawczych i datków prywatnych. W 2020 wygrał Schrems II.
 
@@ -177,8 +177,8 @@ Kara 1,2 mld € to nie ujawnienie sygnalistyczne w klasycznym sensie — to **k
 
 ### Regulatorzy
 
-- **Helen Dixon** — Information Commissioner Irlandia do 2024; krytykowana za powolność postępowań. DPC pod jej kierownictwem przez lata traktowana była jako **zbyt łagodna** wobec Big Tech.
-- **Des Hogan** — następca Dixon od 2024.
+- **Helen Dixon** — Data Protection Commissioner Irlandia (2014–2024); krytykowana za powolność postępowań. DPC pod jej kierownictwem przez lata traktowana była jako **zbyt łagodna** wobec Big Tech.
+- **Des Hogan** (Chairperson) i **Dale Sunderland** — Data Protection Commissioners od 20 lutego 2024 (po Helen Dixon). Od 2024 DPC działa w modelu dwukomisyjnym.
 - **Andrea Jelinek** — przewodnicząca EROD do 2023; kluczowa postać przy wiążącej decyzji 1/2023.
 - **Anu Talus** — przewodnicząca EROD od 2023.
 - **Didier Reynders** — Komisarz UE ds. sprawiedliwości 2019–2024; architekt Data Privacy Framework.
