@@ -72,7 +72,7 @@ years_active:
 | Łączna kara | **"Do 5 mld USD" wartości** (niszczenie miliardów rekordów); brak bezpośrednich wypłat użytkownikom |
 | Waluta | USD |
 | Podstawa prawna | California Invasion of Privacy Act (CIPA), California Unfair Competition Law, ECPA, CDA § 230 (odrzucone) |
-| Sygnalista/odkrywca | Chasom Brown (powód wiodący); prawnicy **Boies Schiller Flexner** |
+| Sygnalista/odkrywca | Pięciu powodów wiodących: Chasom Brown, William Byatt, Jeremy Davis, Christopher Castillo, Monique Trujillo; prawnicy **Boies Schiller Flexner** |
 | Liczba poszkodowanych | Szacunkowo **136 mln użytkowników** Chrome Incognito w USA |
 | Status (na dziś) | Ugoda sfinalizowana; Google niszczy miliardy rekordów; 5-letni monitoring |
 
@@ -80,11 +80,11 @@ years_active:
 
 ## W skrócie
 
-**2 czerwca 2020** **Chasom Brown** i kilku innych użytkowników Chrome złożyli pozew zbiorowy w *Northern District of California* — *Brown v. Google LLC* (nr 4:20-cv-03664-YGR). Zarzut: Google **śledzi użytkowników Chrome w trybie Incognito** mimo obietnicy prywatności. Chrome wyświetlał komunikat: *"Now you can browse privately, and other people who use this device won't see your activity"*. Użytkownicy rozumieli to jako "Google mnie nie widzi". W rzeczywistości Google zbierał dane nawet w trybie Incognito przez **Google Analytics** (na ~80% stron WWW), **Google Ads**, **reCAPTCHA**, **Google Fonts**, **YouTube embeds** i inne usługi osadzone na stronach.
+**2 czerwca 2020** pięciu powodów wiodących — **Chasom Brown, William Byatt, Jeremy Davis, Christopher Castillo, Monique Trujillo** — złożyło pozew zbiorowy w *Northern District of California* — *Brown v. Google LLC* (nr 4:20-cv-03664-YGR). Zarzut: Google **śledzi użytkowników Chrome w trybie Incognito** mimo obietnicy prywatności. Chrome wyświetlał komunikat: *"Now you can browse privately, and other people who use this device won't see your activity"*. Użytkownicy rozumieli to jako "Google mnie nie widzi". W rzeczywistości Google zbierał dane nawet w trybie Incognito przez **Google Analytics** (na ~80% stron WWW), **Google Ads**, **reCAPTCHA**, **Google Fonts**, **YouTube embeds** i inne usługi osadzone na stronach.
 
 **Przełomem była faza discovery (2021–2022)**, gdy Google został zmuszony ujawnić **wewnętrzne dokumenty**. Najbardziej obciążający: e-mail **Lorraine Twohill**, CMO Google, do **Sundara Pichai** (CEO): *"Incognito should be truly private. We are limited in how strongly we can market Incognito because it's not truly private, thus requiring really fuzzy, hedging language that is almost more damaging."* Tłumaczenie: "Nie możemy się chwalić prywatnością Incognito, bo to kłamstwo — a niewyraźny język marketingu **szkodzi nam bardziej**". CMO firmy **wprost przyznała wewnętrznie**, że produkt jest wprowadzeniem w błąd.
 
-Ugoda sfinalizowana **1 kwietnia 2024**. Warunki bezprecedensowe: (1) **Google zniszczy miliardy rekordów** zebranych w Incognito między 1 czerwca 2016 a datą ugody; (2) **Chrome Incognito będzie domyślnie blokował third-party cookies** przez co najmniej 5 lat; (3) **nowy, bardziej szczery komunikat Incognito**; (4) **5-letni niezależny monitoring** przez special master; (5) **BRAK bezpośrednich wypłat** klasie — każdy użytkownik może indywidualnie pozwać o 5 000 USD pod CIPA, co analitycy wyceniają na potencjalne **5–7,8 mld USD wartości**.
+**1 kwietnia 2024** powodowie złożyli unopposed motion for final approval ugody; fairness hearing zaplanowany na lipiec 2024. Warunki bezprecedensowe: (1) **Google zniszczy miliardy rekordów** zebranych w Incognito między 1 czerwca 2016 a datą ugody; (2) **Chrome Incognito będzie domyślnie blokował third-party cookies** przez co najmniej 5 lat; (3) **nowy, bardziej szczery komunikat Incognito**; (4) **5-letni niezależny monitoring** przez special master; (5) **BRAK bezpośrednich wypłat** klasie — każdy użytkownik może indywidualnie pozwać o 5 000 USD pod CIPA, co analitycy wyceniają na potencjalne **5–7,8 mld USD wartości**.
 
 Sprawa jest istotna z trzech powodów: (1) **pierwsza ugoda "data destruction"** w historii — zwykle Big Tech płaci karę i zatrzymuje dane; tu Google **zniszczy dane**; (2) **precedens dla class actions prywatnościowych** w USA — po Lloyd v. Google (UK 2021) wydawało się, że class actions prywatnościowe umierają; tu pokazano, że w USA nadal działają; (3) **wewnętrzna dokumentacja Big Tech jako dowód** — e-mail Twohill stał się wzorcem dla setek późniejszych pozwów.
 
@@ -97,8 +97,9 @@ Sprawa jest istotna z trzech powodów: (1) **pierwsza ugoda "data destruction"**
 - **2018** — wewnętrzne memo Google: *"Incognito (Third Paper)"* — *"People often think Incognito protects them more than it does."*
 - **2019** — *Hacking Week* w Google: inżynierowie identyfikują **12 sposobów**, w których Incognito zawodzi obietnicę prywatności. Raport **nie został wdrożony**.
 - **Luty 2020** — e-mail Lorraine Twohill do Sundara Pichai.
-- **2 czerwca 2020** — **Chasom Brown et al. v. Google LLC** — pozew zbiorowy złożony w N.D. California. Kancelaria **Boies Schiller Flexner** (ta sama, która reprezentowała Ala Gore'a w Bush v. Gore 2000).
-- **Marzec 2021** — Google składa motion to dismiss. **Judge Yvonne Gonzalez Rogers** odrzuca. Sprawa idzie dalej. (Gonzalez Rogers to ta sama sędzia, która prowadziła *Epic v. Apple*.)
+- **2 czerwca 2020** — **Chasom Brown et al. v. Google LLC** — pozew zbiorowy złożony w N.D. California przez pięciu powodów wiodących: Chasom Brown, William Byatt, Jeremy Davis, Christopher Castillo, Monique Trujillo. Kancelaria **Boies Schiller Flexner** (ta sama, która reprezentowała Ala Gore'a w Bush v. Gore 2000).
+- **Marzec 2021** — Google składa motion to dismiss. **Judge Lucy H. Koh** (pierwotnie przydzielona do sprawy) odrzuca. Sprawa idzie dalej.
+- **2021** — po nominacji Judge Koh na 9th Circuit, sprawa przechodzi do **Judge Yvonne Gonzalez Rogers** (ta sama sędzia, która prowadziła *Epic v. Apple*).
 - **Sierpień 2021** — zespół Boies Schiller uzyskuje access do wewnętrznych dokumentów Google.
 - **2022** — discovery. Ujawnienie e-maila Twohill do Pichai. Ujawnienie memo "Third Paper". Ujawnienie raportu Hacking Week.
 - **Marzec 2022** — Google próbuje zablokować publikację e-maila Twohill. Sędzia odrzuca.
@@ -106,7 +107,7 @@ Sprawa jest istotna z trzech powodów: (1) **pierwsza ugoda "data destruction"**
 - **2023** — dalszy discovery i negocjacje.
 - **Październik 2023** — Sundar Pichai zeznaje w sprawie antytrustowej DOJ (osobna sprawa *US v. Google*), gdzie jest pytany także o Incognito.
 - **28 grudnia 2023** — **tentatywna ugoda** ogłoszona.
-- **1 kwietnia 2024** — **ugoda sfinalizowana** z zatwierdzeniem sądu.
+- **1 kwietnia 2024** — powodowie złożyli **unopposed motion for final approval** ugody; fairness hearing zaplanowany na lipiec 2024.
 - **2024–2029** — okres wdrażania zmian w Chrome i 5-letni monitoring niezależny.
 
 ---
@@ -154,7 +155,7 @@ Tu jest sedno: użytkownik otwiera Incognito, wchodzi na stronę (np. **portal z
 
 ### Jak doszło do ujawnienia
 
-Odkrycie nastąpiło przez **pozew zbiorowy**, nie przez sygnalistę czy badacza. Kancelaria **Boies Schiller Flexner** w 2020 zauważyła, że sposób marketingu Chrome Incognito ("browse privately") był **klasycznym wprowadzaniem w błąd** w rozumieniu California Unfair Competition Law. Zebrali powodów reprezentacyjnych (w tym Chasoma Browna), podnieśli pozew i — kluczowo — **wymusili discovery**. Discovery ujawniło wewnętrzne dokumenty, które stały się fundamentem sprawy.
+Odkrycie nastąpiło przez **pozew zbiorowy**, nie przez sygnalistę czy badacza. Kancelaria **Boies Schiller Flexner** w 2020 zauważyła, że sposób marketingu Chrome Incognito („browse privately") był **klasycznym wprowadzaniem w błąd** w rozumieniu California Unfair Competition Law. Zebrali pięciu powodów wiodących (Chasom Brown, William Byatt, Jeremy Davis, Christopher Castillo, Monique Trujillo), podnieśli pozew i — kluczowo — **wymusili discovery**. Discovery ujawniło wewnętrzne dokumenty, które stały się fundamentem sprawy.
 
 ### Wewnętrzne dokumenty Google — materiały dowodowe
 
@@ -185,9 +186,9 @@ Tłumaczenie:
 
 ## Osoby kluczowe
 
-### Powód wiodący
+### Powodowie wiodący
 
-- **Chasom Brown** — mieszkaniec Kalifornii, typowy użytkownik Chrome. Celowo wybrany jako "test case" — nie aktywista, nie ekspert, reprezentant przeciętnego amerykańskiego konsumenta.
+Pięciu powodów wiodących: **Chasom Brown, William Byatt, Jeremy Davis, Christopher Castillo, Monique Trujillo** — wszyscy mieszkańcy Kalifornii, typowi użytkownicy Chrome. Celowo dobrana grupa jako „test case" — nie aktywiści, nie eksperci, reprezentanci przeciętnych amerykańskich konsumentów. Brown jako pierwszy w tytule pozwu stał się publiczną twarzą sprawy.
 
 ### Prawnicy
 
@@ -195,9 +196,12 @@ Tłumaczenie:
 - **Mark C. Mao** — partner Boies Schiller, lead counsel w *Brown v. Google*. Specjalizacja: prywatność i nowe technologie.
 - **William Carmody** — Susman Godfrey, co-lead counsel.
 
-### Sędzia
+### Sędziowie
 
-- **Judge Yvonne Gonzalez Rogers** — sędzia federalna Northern District of California od 2011 (nominacja Obama). Znana z twardego podejścia do Big Tech: prowadziła *Epic v. Apple* (2020–2021), *In re: Google Play Store Antitrust Litigation* i inne. Często cytowana za zdanie: *"You are not above the law, simply because of your size."*
+Pierwotnie **Judge Lucy H. Koh** (do nominacji na 9th Circuit w 2021), potem **Judge Yvonne Gonzalez Rogers**. Motion to dismiss z marca 2021 wydała jeszcze Judge Koh.
+
+- **Judge Lucy H. Koh** — sędzia federalna N.D. California (nominacja Obama 2010), nominowana na 9th Circuit Court of Appeals w 2021. Pierwotnie prowadziła *Brown v. Google* i wydała kluczowy ruling odrzucający motion to dismiss Google w marcu 2021. Znana z głośnych spraw o prywatność i antytrust (m.in. *In re Yahoo! Inc. Customer Data Security Breach Litigation*).
+- **Judge Yvonne Gonzalez Rogers** — sędzia federalna Northern District of California od 2011 (nominacja Obama). Przejęła sprawę po Judge Koh w 2021. Znana z twardego podejścia do Big Tech: prowadziła *Epic v. Apple* (2020–2021), *In re: Google Play Store Antitrust Litigation* i inne. Często cytowana za zdanie: *"You are not above the law, simply because of your size."*
 
 ### Google
 
@@ -256,7 +260,7 @@ Sprawa wyłącznie w USA (California federalna). Globalny wpływ przez rynek Chr
 | Marzec 2021 | Motion to dismiss odrzucony |
 | 2022 | Ujawnienie wewnętrznych dokumentów |
 | Grudzień 2023 | Tentatywna ugoda |
-| 1 kwietnia 2024 | Ugoda sfinalizowana |
+| 1 kwietnia 2024 | Unopposed motion for final approval; fairness hearing zaplanowany na lipiec 2024 |
 
 ### Orzecznictwo powiązane
 

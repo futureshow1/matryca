@@ -48,7 +48,7 @@ subtitle: Niewdrożony skaner zdjęć jako konflikt prywatności z ochroną dzie
 
 > **Kategoria:** On-device scanning / bezpieczeństwo dzieci vs prywatność / konflikt praw podstawowych
 > **Firma/firmy:** Apple
-> **Lata:** Sierpień 2021 (ogłoszenie) – grudzień 2022 (porzucenie projektu) – grudzień 2024 (pozew ofiary)
+> **Lata:** Sierpień 2021 (ogłoszenie) – grudzień 2022 (porzucenie projektu) – 7 grudnia 2024 (pozew Amy et al. v. Apple Inc., Case No. 5:24-cv-8832, N.D. Cal.)
 > **Status:** Funkcja nigdy nie wdrożona; pozew ofiary CSAM 2024 w toku
 > **ID karty:** C03
 
@@ -66,7 +66,7 @@ subtitle: Niewdrożony skaner zdjęć jako konflikt prywatności z ochroną dzie
 | Podstawa prawna | 18 USC § 2255 (Masha's Law, 150 000 USD minimum per ofiara); stanowe prawa o odpowiedzialności za produkt |
 | Sygnalista/odkrywca | Apple sam ogłosił; krytyka od **Edward Snowden**, **EFF**, **Matthew Green** (Johns Hopkins), pracownicy Apple |
 | Liczba poszkodowanych | Konflikt wartości: **2 680+ ofiar CSAM** (wg pozwu 2024) vs **1+ mld użytkowników iCloud** |
-| Status (na dziś) | Funkcja porzucona; pozew Jane Doe v. Apple (2024) może wymusić powrót lub odszkodowania |
+| Status (na dziś) | Funkcja porzucona; pozew Amy et al. v. Apple Inc., Case No. 5:24-cv-8832 (N.D. Cal.), pozew z 7 grudnia 2024 może wymusić powrót lub odszkodowania |
 
 ---
 
@@ -78,7 +78,7 @@ Reakcja była **bezprecedensowa**. W ciągu tygodni ponad **90 organizacji praw 
 
 **3 września 2021** — Apple **opóźnił** wdrożenie. **15 grudnia 2021** — Apple **usunął wszystkie referencje** z witryny Child Safety. **7 grudnia 2022** — Apple oficjalnie **porzucił projekt**: *"We have decided to not move forward with our previously proposed CSAM detection tool for iCloud Photos."* Apple uzasadnił to argumentacją prywatnościową: *"Children can be protected without companies combing through personal data."*
 
-**8 grudnia 2024** — **Jane Doe**, 27-letnia ofiara CSAM, **pozywa Apple** w sądzie federalnym N.D. Cal. Zarzut: Apple **obiecał** skanowanie, potem **wycofał się**, przez co Apple wie, że na iCloud znajdują się materiały z jej wykorzystywania, ale nic z tym nie robi. Pozew dotyczy do **2 680 ofiar**, potencjalna odpowiedzialność: **1,2 mld USD+** (150 000 USD minimum per ofiara pod **18 USC § 2255 / Masha's Law**). W sierpniu 2024 podobny pozew złożyła **9-letnia ofiara** w Karolinie Północnej — nieznajomi wysłali jej CSAM przez linki iCloud.
+**7 grudnia 2024** — **Amy et al. v. Apple Inc., Case No. 5:24-cv-8832 (N.D. Cal.), pozew z 7 grudnia 2024**. Powódka wiodąca (pod pseudonimem) to 27-letnia ofiara CSAM, która **pozywa Apple** w sądzie federalnym N.D. Cal. Zarzut: Apple **obiecał** skanowanie, potem **wycofał się**, przez co Apple wie, że na iCloud znajdują się materiały z jej wykorzystywania, ale nic z tym nie robi. Pozew dotyczy do **2 680 ofiar**, potencjalna odpowiedzialność: **1,2 mld USD+** (150 000 USD minimum per ofiara pod **18 USC § 2255 / Masha's Law**). W sierpniu 2024 podobny pozew złożyła **9-letnia ofiara** w Karolinie Północnej — nieznajomi wysłali jej CSAM przez linki iCloud.
 
 Dla porównania skali: w 2022 **Meta zgłosiła do NCMEC 27 mln raportów CSAM**. **Google: 2,2 mln**. **Apple: 234 raporty**. Krytycy mówią: Apple chroni prywatność za cenę niedziałającego systemu zgłaszania CSAM. Apple: chronimy prywatność przez nie-skanowanie w chmurze.
 
@@ -100,7 +100,7 @@ Sprawa C03 jest w bazie jako **fascynujący przypadek konfliktu dwóch wartości
 - **15 grudnia 2021** — Apple **usuwa referencje** do CSAM Detection z witryny.
 - **7 grudnia 2022** — Apple **oficjalnie porzuca** projekt. Oświadczenie: *"We have decided to not move forward."*
 - **Sierpień 2024** — pozew 9-letniej ofiary CSAM w Karolinie Północnej.
-- **8 grudnia 2024** — **Jane Doe v. Apple** — pozew federalny N.D. Cal., potencjalnie 2 680 ofiar, 1,2 mld USD.
+- **7 grudnia 2024** — **Amy et al. v. Apple Inc., Case No. 5:24-cv-8832 (N.D. Cal.), pozew z 7 grudnia 2024** — pozew federalny N.D. Cal., potencjalnie 2 680 ofiar, 1,2 mld USD.
 - **2025–2026** — rozprawy, motions. Sprawa w toku.
 
 ---
@@ -180,7 +180,7 @@ Sprawa CSAM zjednoczyła **skrajnie różne środowiska**:
 
 ### Pozew 2024
 
-**8 grudnia 2024** — *Jane Doe v. Apple Inc.*, N.D. California. Jane Doe (pseudonim sądowy) to 27-letnia ofiara CSAM z dzieciństwa, molestowana przez krewnego. Jej zdjęcia krążą w sieci od lat. Zarzut: Apple **obiecał CSAM Detection w 2021**, potem **porzucił w 2022**. Apple **wie**, że na iCloud są materiały wykorzystywania Jane Doe (NCMEC hash w bazie), ale **nie zgłasza** (Apple zgłosił tylko 234 przypadki CSAM w 2022 — 27 mln raportów Mety dla kontekstu). Pozew dotyczy do **2 680 ofiar** z bazy NCMEC, których materiały są krążą. Potencjalna odpowiedzialność: **1,2 mld USD+**.
+**7 grudnia 2024** — *Amy et al. v. Apple Inc.*, **Case No. 5:24-cv-8832 (N.D. Cal.), pozew z 7 grudnia 2024**. Powódka wiodąca (pod pseudonimem) to 27-letnia ofiara CSAM z dzieciństwa, molestowana przez krewnego. Jej zdjęcia krążą w sieci od lat. Zarzut: Apple **obiecał CSAM Detection w 2021**, potem **porzucił w 2022**. Apple **wie**, że na iCloud są materiały jej wykorzystywania (NCMEC hash w bazie), ale **nie zgłasza** (Apple zgłosił tylko 234 przypadki CSAM w 2022 — 27 mln raportów Mety dla kontekstu). Pozew dotyczy do **2 680 ofiar** z bazy NCMEC, których materiały krążą. Potencjalna odpowiedzialność: **1,2 mld USD+**.
 
 ---
 
@@ -212,7 +212,7 @@ Sprawa CSAM zjednoczyła **skrajnie różne środowiska**:
 
 ### Pozwy
 
-- **Jane Doe** (pseudonim) — powódka wiodąca w pozwie z grudnia 2024.
+- **Amy** (pseudonim) — powódka wiodąca w pozwie *Amy et al. v. Apple Inc., Case No. 5:24-cv-8832 (N.D. Cal.), pozew z 7 grudnia 2024*.
 - **Marsh Law Firm** (Nowy Jork) — kancelaria specjalizująca się w sprawach CSAM i ofiar wykorzystywania.
 
 ---
@@ -229,7 +229,7 @@ Sprawa CSAM zjednoczyła **skrajnie różne środowiska**:
 
 **Etap 4: porzucenie (grudzień 2022).** Oświadczenie dla Wired (Joanna Stern): *"Children can be protected without companies combing through personal data, and we will continue working with governments, child advocates, and other companies to help protect young people, preserve their right to privacy, and make the internet a safer place for children and for us all."*
 
-**Etap 5: pozwy (2024+).** Apple w procesie przeciwko Jane Doe argumentuje, że nie ma obowiązku prawnego wdrożenia systemu, który **zapowiedział**.
+**Etap 5: pozwy (2024+).** Apple w procesie *Amy et al. v. Apple Inc., Case No. 5:24-cv-8832 (N.D. Cal.), pozew z 7 grudnia 2024* argumentuje, że nie ma obowiązku prawnego wdrożenia systemu, który **zapowiedział**.
 
 ### Communication Safety (2021+)
 
@@ -244,7 +244,7 @@ Funkcja **została wdrożona** w iOS 15.2 (grudzień 2021). W 2022–2024 rozsze
 
 ### Jurysdykcje
 
-- USA — *Jane Doe v. Apple* (N.D. Cal. 2024), sprawa 9-latki (NC 2024)
+- USA — *Amy et al. v. Apple Inc.*, Case No. 5:24-cv-8832 (N.D. Cal.), pozew z 7 grudnia 2024; sprawa 9-latki (NC 2024)
 
 ### Podstawa prawna
 
@@ -262,7 +262,7 @@ Funkcja **została wdrożona** w iOS 15.2 (grudzień 2021). W 2022–2024 rozsze
 | Wrzesień 2021 | Opóźnienie |
 | Grudzień 2022 | Porzucenie |
 | Sierpień 2024 | Pozew 9-latki (NC) |
-| 8 grudnia 2024 | Jane Doe v. Apple (N.D. Cal.) |
+| 7 grudnia 2024 | Amy et al. v. Apple Inc., Case No. 5:24-cv-8832 (N.D. Cal.) |
 
 ### Precedensy i analogie
 
@@ -274,7 +274,7 @@ Funkcja **została wdrożona** w iOS 15.2 (grudzień 2021). W 2022–2024 rozsze
 
 ## Kary i ugody
 
-**Brak** — funkcja nigdy nie wdrożona, brak regulacyjnych kar. **Potencjalna odpowiedzialność**: do 1,2 mld USD+ w przypadku Jane Doe v. Apple.
+**Brak** — funkcja nigdy nie wdrożona, brak regulacyjnych kar. **Potencjalna odpowiedzialność**: do 1,2 mld USD+ w sprawie *Amy et al. v. Apple Inc., Case No. 5:24-cv-8832 (N.D. Cal.), pozew z 7 grudnia 2024*.
 
 ---
 
@@ -305,7 +305,7 @@ Funkcja **została wdrożona** w iOS 15.2 (grudzień 2021). W 2022–2024 rozsze
 
 | Sprawa | Sąd | Stan | Wartość | Poszkodowani |
 |--------|-----|------|---------|--------------|
-| *Jane Doe v. Apple Inc.* | N.D. Cal. | W toku od 12.2024 | Potencjalnie 1,2 mld USD+ | Do 2 680 ofiar CSAM |
+| *Amy et al. v. Apple Inc.*, Case No. 5:24-cv-8832 | N.D. Cal. | W toku od 12.2024 | Potencjalnie 1,2 mld USD+ | Do 2 680 ofiar CSAM |
 | Sprawa 9-latki | NC court | W toku od 8.2024 | Nieokreślona | Indywidualna |
 
 ---
@@ -343,7 +343,7 @@ W sprawach rozwodowych, ustalania kontaktów z dzieckiem:
 1. **Pytanie kluczowe**: czy dziecko używa iCloud Photos z sync? Jeśli dorosły w domu miał dostęp, zdjęcia dziecka mogły krążyć.
 2. **Cyber-stalking po rozwodzie** — sprawca może mieć login do wspólnego konta iCloud. Opcja: zmiana haseł, wyłączenie Family Sharing.
 3. **Komunikatory dla dzieci** — Messenger Kids (Meta), Signal dla starszych. iMessage z Communication Safety.
-4. **Jako adwokat specjalizujący się w prawie dzieci** — śledź sprawę *Jane Doe v. Apple*; precedens może zmienić obowiązki platform.
+4. **Jako adwokat specjalizujący się w prawie dzieci** — śledź sprawę *Amy et al. v. Apple Inc., Case No. 5:24-cv-8832 (N.D. Cal.), pozew z 7 grudnia 2024*; precedens może zmienić obowiązki platform.
 
 ---
 
@@ -376,7 +376,7 @@ W sprawach rozwodowych, ustalania kontaktów z dzieckiem:
 
 5. Joanna Stern, wywiad z Craig Federighi, *WSJ*, 13 sierpnia 2021.
 
-6. *Jane Doe v. Apple Inc.*, N.D. California, pozew z 8 grudnia 2024. Dokumenty PACER.
+6. *Amy et al. v. Apple Inc.*, Case No. 5:24-cv-8832 (N.D. Cal.), pozew z 7 grudnia 2024 (Class Action Complaint PDF). Dokumenty PACER.
 
 7. Malcolm Owen, "Apple sued over 2022 dropping of CSAM detection features", *AppleInsider*, 8 grudnia 2024. URL: https://appleinsider.com/articles/24/12/08/apple-sued-over-2022-dropping-of-csam-detection-features
 

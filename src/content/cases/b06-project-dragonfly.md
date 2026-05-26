@@ -91,7 +91,7 @@ years_active:
 5. **Powiązanie każdego zapytania z numerem telefonu użytkownika** — pełna deanonimizacja, dane potencjalnie dostępne chińskiemu rządowi
 6. **Prototyp mobilny o nazwie kodowej "Maotai"** — dla Androida, testowany wewnętrznie
 
-Reakcja **wewnątrz Google była bezprecedensowa**. List otwarty pracowników "*We urge Google to cancel project Dragonfly*" podpisało **ponad 1 400 pracowników**. Kilku starszych inżynierów zrezygnowało publicznie w proteście — najbardziej znany **Jack Poulson**, research scientist Google, który po odejściu założył organizację **Tech Inquiry** monitorującą kontrakty Big Tech z rządami i wojskami. **Meredith Whittaker** (wówczas Google, organizatorka wcześniejszego **Google Walkout** przeciwko obsłudze ofiar molestowania) i **Kate Crawford** publicznie krytykowały projekt z pozycji AI ethics.
+Reakcja **wewnątrz Google była bezprecedensowa**. List otwarty pracowników „*We urge Google to cancel project Dragonfly*" podpisało **ponad 1 400 pracowników**. Kilku starszych inżynierów zrezygnowało w proteście — najbardziej znany **Jack Poulson**, research scientist Google, który **20 sierpnia 2018** złożył list rezygnacyjny w wewnętrznej sieci Google, **31 sierpnia 2018** miał ostatni dzień pracy, a sprawa została publicznie ujawniona przez *The Intercept* 13 września 2018. **Tech Inquiry** — organizację non-profit monitorującą kontrakty Big Tech z rządami i wojskami — Poulson założył **latem 2019 wraz z Irene Knapp, Laurą Nolan, Liz O'Sullivan i Shauną Gordon-McKeon**. **Meredith Whittaker** (wówczas Google, organizatorka wcześniejszego **Google Walkout** przeciwko obsłudze ofiar molestowania) i **Kate Crawford** publicznie krytykowały projekt z pozycji AI ethics.
 
 **Sundar Pichai** (CEO) początkowo milczał, potem w październiku 2018 na konferencji **Wired 25** przyznał "*explorations*" projektu. W grudniu 2018 przed House Judiciary Committee zeznał: *"We don't have plans to launch Search in China at this point in time."* — niezaprzeczając definitywnie. W lipcu 2019 VP Public Policy **Karan Bhatia** przed Senate Judiciary powtórzył ten wzór: *"we have no current plans"*. Od 2019 brak publicznych sygnałów o aktywności projektu — ale **nigdy nie ogłoszono formalnego anulowania**. Projekt mógł zostać **zawieszony, nie zakopany**.
 
@@ -112,7 +112,9 @@ Znaczenie sprawy nie polega na karach (ich nie było) ani na technologii (nie zo
 - **6 sierpnia 2018** — kolejne ujawnienia Gallaghera: szczegółowa blacklista zapytań, powiązanie z numerem telefonu.
 - **16 sierpnia 2018** — **list otwarty 1 400 pracowników Google**: *"We urge Google to cancel project Dragonfly..."*.
 - **Sierpień–wrzesień 2018** — **Pence** (wiceprezydent USA), Rubio, Warner, inni kongresmeni publicznie krytykują Google.
-- **Wrzesień 2018** — **Jack Poulson** (research scientist) publicznie rezygnuje w proteście.
+- **20 sierpnia 2018** — **Jack Poulson** (research scientist) publikuje list rezygnacyjny w wewnętrznej sieci Google w proteście.
+- **31 sierpnia 2018** — ostatni dzień pracy Poulsona w Google.
+- **13 września 2018** — *The Intercept* publicznie ujawnia rezygnację Poulsona.
 - **15 października 2018** — **Sundar Pichai** podczas konferencji Wired 25: *"We have been exploring what search could look like in China... it turns out we can serve well over 99% of the queries."*
 - **Listopad 2018** — **Google Walkout** (inny powód, ale wzmocniony kontekstem Dragonfly) — 20 000 pracowników wychodzi z biur w proteście.
 - **Grudzień 2018** — **Pichai przed House Judiciary Committee**: *"We have no plans to launch Search in China at this point in time."*.
@@ -182,11 +184,11 @@ Gallagher otrzymał dokumenty od **pracowników Google** (tożsamości chronione
 
 ### Jack Poulson — rezygnacja publiczna
 
-**Jack Poulson** — matematyk i research scientist Google przez 4 lata. We wrześniu 2018 **publicznie zrezygnował** w proteście wobec Dragonfly. List rezygnacyjny opublikował online.
+**Jack Poulson** — matematyk i research scientist Google przez 4 lata. **20 sierpnia 2018** opublikował list rezygnacyjny w wewnętrznej sieci Google; **31 sierpnia 2018** miał ostatni dzień pracy; sprawa została publicznie ujawniona przez *The Intercept* **13 września 2018** (Ryan Gallagher).
 
 Cytat z listu: *"I am forfeiting more than $100,000 a year by resigning. But in doing so, I am saving my integrity. Google's pursuit of Dragonfly represents a capitulation to the Chinese government's demands."*
 
-Po rezygnacji Poulson **założył Tech Inquiry** — organizację non-profit monitorującą kontrakty Big Tech z rządami, wojskami, służbami. Tech Inquiry od 2019 ujawniła:
+**Latem 2019** Poulson — wraz z Irene Knapp, Laurą Nolan, Liz O'Sullivan i Shauną Gordon-McKeon — **założył Tech Inquiry**, organizację non-profit monitorującą kontrakty Big Tech z rządami, wojskami, służbami. Tech Inquiry od 2019 ujawniła:
 - **Project Nimbus** — kontrakt Google Cloud z Izraelem (2021); wcześniej tajny
 - Liczne kontrakty Amazon AWS z ICE (US Immigration and Customs Enforcement)
 - Kontrakty Microsoft Azure z izraelskim Mossadem
@@ -290,7 +292,9 @@ Istotne: Google **nie opublikował raportu wewnętrznego** o zamknięciu projekt
 |------|------|
 | 1 sierpnia 2018 | Publikacja Gallaghera |
 | 16 sierpnia 2018 | List 1 400 pracowników |
-| Wrzesień 2018 | Rezygnacja Poulsona |
+| 20 sierpnia 2018 | List rezygnacyjny Poulsona w sieci wewnętrznej |
+| 31 sierpnia 2018 | Ostatni dzień pracy Poulsona |
+| 13 września 2018 | Publiczne ujawnienie rezygnacji Poulsona (*The Intercept*) |
 | Grudzień 2018 | Pichai przed Kongresem |
 | Lipiec 2019 | Bhatia przed Senatem |
 | Od 2019 | Cisza publiczna |

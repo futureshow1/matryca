@@ -78,7 +78,7 @@ years_active:
 
 Reakcja cybersec była **natychmiastowa i zabójcza**. **Kevin Beaumont** (DoublePulsar) jako pierwszy opublikował szczegółową analizę na podstawie preview builds: (1) baza Recall była przechowywana w **plaintext SQLite** (niezaszyfrowanym), (2) wszystkie screenshoty, w tym **hasła, numery kart kredytowych, poufne e-maile**, były dostępne dla **każdej aplikacji** działającej na koncie użytkownika, (3) **infostealery** (Agent Tesla, Redline, Lumma) mogły w ciągu sekund ekstrahować **całą historię aktywności użytkownika**, (4) BitLocker nie pomaga przeciwko lokalnym złośliwym aplikacjom. Beaumont nazwał to **"potential security disaster"**.
 
-**7 czerwca 2024** — badacz **Alexander Hagenah** opublikował narzędzie **TotalRecall** na GitHub, demonstrujące jak w kilka sekund eksfiltrować dane z bazy Recall. **13 czerwca 2024** — Microsoft **wstrzymał** premiery. **21 czerwca 2024** — ogłoszenie, że Recall będzie **dobrowolne włączenie**, wymagać **Windows Hello** authentication i **encrypted database**. Sygnalizacji z tego czasu: **Signal** (komunikator) wprowadził **Screen Security** by blokować Recall od robienia screenshotów Signal. Brave, AdGuard dołączyli w 2025.
+**7 czerwca 2024** — badacz **Alexander Hagenah** opublikował narzędzie **TotalRecall** na GitHub, demonstrujące jak w kilka sekund eksfiltrować dane z bazy Recall. Tego samego dnia **Pavan Davuluri ogłasza opt-in** (domyślnie wyłączony), wymagający **Windows Hello** authentication i **encrypted database**. **13 czerwca 2024** — postponement broad rollout, Microsoft przeniósł Recall do **Windows Insider Program**. Sygnalizacji z tego czasu: **Signal** (komunikator) wprowadził **Screen Security** by blokować Recall od robienia screenshotów Signal. Brave, AdGuard dołączyli w 2025.
 
 **W 2025** Microsoft zaczął **ograniczony rollout** dla Windows Insiders, później dla Copilot+ PC (bez EOG). Wymagania:
 - Copilot+ PC z NPU ≥ 40 TOPS
@@ -102,10 +102,9 @@ Reakcja cybersec była **natychmiastowa i zabójcza**. **Kevin Beaumont** (Doubl
 - **22–31 maja 2024** — Kevin Beaumont (DoublePulsar) na blogu publikuje pierwsze techniczne analizy. Ostra krytyka: **plaintext SQLite, brak szyfrowania, każda aplikacja czyta bazę**.
 - **30 maja 2024** — **UK ICO** (Information Commissioner's Office) oficjalnie zwraca się do Microsoftu z pytaniami.
 - **3 czerwca 2024** — Signal (messenger) ogłasza **Screen Security** w Signal Desktop — blokuje Recall od robienia zrzutów Signal chats.
-- **7 czerwca 2024** — **Alexander Hagenah** publikuje **TotalRecall** na GitHub. Narzędzie w kilka sekund ekstrahuje bazę Recall.
-- **13 czerwca 2024** — Microsoft **wstrzymuje premiery** Recall. Komunikat: funkcja będzie Windows Insider-only.
-- **21 czerwca 2024** — Microsoft ogłasza nowy model: **dobrowolne włączenie**, **Windows Hello**, **encrypted database**.
-- **Wrzesień 2024** — Microsoft rozpoczyna testy Windows Insider Preview.
+- **7 czerwca 2024** — **Alexander Hagenah** publikuje **TotalRecall** na GitHub. Narzędzie w kilka sekund ekstrahuje bazę Recall. Tego samego dnia **Pavan Davuluri** (Windows Experience Blog) ogłasza nowy model: **opt-in (domyślnie wyłączony)**, **Windows Hello**, **encrypted database**.
+- **13 czerwca 2024** — postponement broad rollout: Microsoft przenosi Recall do **Windows Insider Program**.
+- **22 listopada 2024** — Recall trafia do **Windows Insider Program** (Snapdragon Copilot+ PC). Wcześniejszy plan: czerwiec → październik → listopad 2024.
 - **Listopad 2024** — **dalsze opóźnienie** ze względu na odkryte luki.
 - **Grudzień 2024** — Recall w Windows Insider Preview, ale tylko dla ograniczonej grupy.
 - **Kwiecień 2025** — **rollout do Copilot+ PC** (globalnie poza EOG).
@@ -204,7 +203,7 @@ Masowa krytyka:
 
 ### Pierwsze publikacje
 
-- **22 maja 2024** — Kevin Beaumont, "Stealing Everything You've Ever Typed or Viewed on Your Own Windows PC is Now Possible With Two Lines of Code — Inside the Copilot+ Recall Disaster", DoublePulsar
+- **21 maja 2024** — Kevin Beaumont, „How the new Microsoft Recall feature fundamentally undermines Windows security", DoublePulsar
 - **23 maja 2024** — *Ars Technica*, *The Verge*, *Wired* — krytyczne analizy
 - **7 czerwca 2024** — *The Register*, *BleepingComputer* — o TotalRecall
 - **13 czerwca 2024** — *Reuters*, *Bloomberg* — wstrzymanie
@@ -242,7 +241,7 @@ Masowa krytyka:
 
 **Faza 1: euforia marketingowa (maj 2024).** Build conference, wielkie ogłoszenie, Windows Copilot+ PC jako "największa zmiana od Windows 95".
 
-**Faza 2: wstrzymanie (13 czerwca 2024).** Pavan Davuluri, blog post: *"We are adjusting the release model for Recall to leverage the expertise of the Windows Insider community to ensure the experience meets our high standards for quality and security."* Tłumaczenie: mieliśmy błąd, zawiesili wdrożenie.
+**Faza 2: opt-in i wstrzymanie (7–13 czerwca 2024).** Pavan Davuluri (7 czerwca, Windows Experience Blog): ogłoszenie opt-in (domyślnie wyłączony), wymóg Windows Hello, encrypted database. 13 czerwca 2024 — postponement broad rollout: *„We are adjusting the release model for Recall to leverage the expertise of the Windows Insider community to ensure the experience meets our high standards for quality and security."* Tłumaczenie: mieliśmy błąd, przeniesiono do Insider Program.
 
 **Faza 3: redesign (lato 2024).** Zmiany:
 - Dobrowolne włączenie (dwukrotne) zamiast domyślnie włączonej
@@ -394,13 +393,13 @@ Jeśli korzystasz z komputera służbowego — **zapytaj administratora IT**, cz
 
 1. Microsoft Build 2024 keynote, 20 maja 2024. Satya Nadella, Yusuf Mehdi. URL: https://build.microsoft.com/en-US/sessions (dostęp: 2026-04-17)
 
-2. Kevin Beaumont, "Stealing everything you've ever typed or viewed on your own Windows PC is now possible with two lines of code — inside the Copilot+ Recall disaster", DoublePulsar, 22 maja 2024. URL: https://doublepulsar.com/ (dostęp: 2026-04-17)
+2. Kevin Beaumont, „How the new Microsoft Recall feature fundamentally undermines Windows security", DoublePulsar, 21 maja 2024. URL: https://doublepulsar.com/ (dostęp: 2026-04-17)
 
 3. Kevin Beaumont, "Microsoft Recall on Copilot+ PC: testing the security and privacy implications", DoublePulsar, kwiecień 2025.
 
 4. Alexander Hagenah, "TotalRecall", GitHub, 7 czerwca 2024. URL: https://github.com/xaitax/TotalRecall (dostęp: 2026-04-17)
 
-5. Pavan Davuluri, "Update on the Recall (preview) feature for Copilot+ PCs", Windows Experience Blog, 13 czerwca 2024. URL: https://blogs.windows.com (dostęp: 2026-04-17)
+5. Pavan Davuluri, „Update on the Recall (preview) feature for Copilot+ PCs", Windows Experience Blog, 7 czerwca 2024. URL: https://blogs.windows.com (dostęp: 2026-04-17)
 
 6. UK Information Commissioner's Office, "Enquiries into Microsoft Recall", maj 2024 — komunikat prasowy.
 

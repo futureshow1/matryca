@@ -85,7 +85,7 @@ years_active:
 
 ## W skrócie
 
-**Ring**, założony 2013 w Kalifornii, produkował domowe kamery bezpieczeństwa (dzwonki wideo, wewnętrzne, zewnętrzne). W **2018 roku Amazon kupił Ring** za ~1 mld USD. **31 maja 2023** Federal Trade Commission (FTC) ogłosiła, że Ring zgodził się zapłacić **5,8 mln USD** za rażące naruszenia prywatności klientów. Dwa wątki skargi FTC:
+**Ring**, założony 2013 w Kalifornii, produkował domowe kamery bezpieczeństwa (dzwonki wideo, wewnętrzne, zewnętrzne). **27 lutego 2018 — ogłoszenie akwizycji; 12 kwietnia 2018 — zamknięcie. Cena wg SEC 10-K Amazon: ~839 mln USD (Bloomberg/WSJ podały „około 1 mld")**. **31 maja 2023** Federal Trade Commission (FTC) ogłosiła, że Ring zgodził się zapłacić **5,8 mln USD** za rażące naruszenia prywatności klientów. Dwa wątki skargi FTC:
 
 **Wątek 1: Pracownicy mieli nieograniczony dostęp do wideo klientów.** Do stycznia 2018 każdy pracownik i kontraktor Ring (w tym zespół w Ukrainie) mógł przeglądać **dowolne wideo** z kamer klientów — łazienki, sypialnie, pokoje dziecięce. Kluczowy przypadek: **pracownik w 2017 roku przez kilka miesięcy oglądał tysiące nagrań z kamer 81 kobiet-użytkowniczek**. Wykryła to **jego koleżanka z pracy**, zgłosiła przełożonemu. Pierwsze zgłoszenie zostało **zignorowane**. Dopiero gdy supervisor zauważył, że pracownik ogląda tylko **"ładne dziewczyny"**, sprawa została eskalowana i pracownik zwolniony. Ring nie potrafił nawet ustalić, ilu innych pracowników mogło robić to samo — **nie monitorował dostępu pracowników do wideo**.
 
@@ -104,7 +104,7 @@ Po publikacji FTC Ring zgodził się:
 - Zgłaszać FTC naruszenia bezpieczeństwa
 - 20-letni monitoring zgodności
 
-**Kwiecień 2024** — FTC wysłała **117 044 zwroty po ok. 48 USD** via PayPal.
+**25 kwietnia 2024 — FTC rozpoczęła wysyłanie 117 044 zwrotów (PayPal), łącznie >5,6 mln USD. Kwota indywidualna: 47,70 USD lub 150,00 USD**.
 
 Osobno: **31 maja 2023 Amazon zapłacił dodatkowo 25 mln USD za naruszenia COPPA przez Alexa** (→ karta D02/D03). Łącznie Amazon zapłacił w tym dniu **30,8 mln USD** za dwa osobne naruszenia prywatności (Ring + Alexa).
 
@@ -118,14 +118,14 @@ Sprawa Ring to **jeden z najbardziej jaskrawych przykładów "move fast and brea
 - **2014–2017** — Ring rośnie. Centra operacji w USA i **Ukrainie** (Kijów, Charków).
 - **2016** — Ring zaczyna działalność z **Ring Neighborhoods** — aplikacją do udostępniania nagrań sąsiadom.
 - **2017** — **pracownik Ring** w USA przez ~6 miesięcy ogląda **tysiące nagrań** z kamer **81 kobiet**. Wykryty przez koleżankę z pracy.
-- **Kwiecień 2018** — **Amazon kupuje Ring** za ~1 mld USD (wg raportów Bloomberg). Cena nigdy oficjalnie nie potwierdzona.
+- **27 lutego 2018 / 12 kwietnia 2018** — **Amazon kupuje Ring**: 27 lutego 2018 — ogłoszenie akwizycji; 12 kwietnia 2018 — zamknięcie. Cena wg SEC 10-K Amazon: **~839 mln USD** (Bloomberg/WSJ podały „około 1 mld").
 - **Styczeń 2018** — Ring, po nieformalnej presji FTC, **po raz pierwszy próbuje informować użytkowników** o dostępie pracowników.
 - **Styczeń 2019** — ***The Intercept*** (Sam Biddle) publikuje: "For Owners of Amazon's Ring Security Cameras, Strangers May Have Been Watching Too". Ujawnienie zespołu w Ukrainie mającego nieograniczony dostęp.
 - **Styczeń 2019 – Marzec 2020** — okres, w którym **55 000+ klientów Ring** padło ofiarą credential stuffing i brute force. **Tysiące wideo** pobranych przez hakerów.
 - **Grudzień 2019** — viralny klip na TikTok: haker rozmawia z **8-letnią afroamerykańską dziewczynką** w jej pokoju w Mississippi, używa obelg rasistowskich. Jej matka zainstalowała kamerę "dla bezpieczeństwa".
 - **2020** — FTC zaczyna śledztwo.
 - **31 maja 2023** — **FTC ogłasza kary**: **5,8 mln USD (Ring)** + **25 mln USD (Alexa/COPPA)** = łącznie 30,8 mln USD dla Amazon.
-- **Kwiecień 2024** — FTC wysyła **117 044 zwroty** konsumenckie po ok. 48 USD.
+- **25 kwietnia 2024** — FTC rozpoczęła wysyłanie **117 044 zwrotów** konsumenckich (PayPal), łącznie **>5,6 mln USD**. Kwota indywidualna: **47,70 USD lub 150,00 USD**.
 - **2025+** — Ring kontynuuje działalność; Amazon rozszerza o Ring Alarm, Ring for Business.
 
 ---

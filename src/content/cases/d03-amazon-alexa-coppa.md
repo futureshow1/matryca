@@ -107,7 +107,7 @@ Sprawa D03 jest **bezpośrednim rozszerzeniem** sprawy Alexa (D02), ale dotyczy 
 - **2013** — aktualizacja COPPA Rule. Rozszerzona na geolokalizację, pliki audio/video, identyfikatory trwałe.
 - **2018** — Amazon uruchamia **Echo Dot Kids** i **Alexa Kids Service** (Amazon Kids+, wcześniej FreeTime Unlimited). Dedykowane dla dzieci.
 - **2019** — ***Common Sense Media*** i ***Mozilla Foundation*** publikują raporty o problemach z prywatnością Alexa Kids.
-- **Maj 2019** — **19 organizacji praw dzieci** (Center for Digital Democracy, EPIC, others) **złożyły skargę COPPA** do FTC przeciw Amazon i Alexa.
+- **8 maja 2019** — **koalicja prowadzona przez Campaign for a Commercial-Free Childhood (CCFC) i Center for Digital Democracy (CDD)**, łącznie 19 organizacji praw dzieci (m.in. EPIC, Consumer Federation of America), **złożyła skargę COPPA** do FTC przeciw Amazon i Alexa.
 - **2019–2022** — FTC śledztwo.
 - **31 maja 2023** — **FTC + DOJ nakładają karę 25 mln USD**.
 - **2023–2025** — Amazon wdraża zmiany polityki; niezależne audyty compliance.
@@ -180,7 +180,7 @@ Amazon naruszył **co najmniej punkty 3, 4, 5**. Szczególnie ciężkie: ignorow
 
 ### Skarga COPPA 2019
 
-**9 maja 2019** — koalicja **19 organizacji** (Center for Digital Democracy, Electronic Privacy Information Center, Consumer Federation of America, etc.) złożyła **formalną skargę COPPA** do FTC przeciw Amazon. Kluczowe zarzuty:
+**8 maja 2019** — koalicja **prowadzona przez Campaign for a Commercial-Free Childhood (CCFC) i Center for Digital Democracy (CDD)**, łącznie **19 organizacji** (Electronic Privacy Information Center, Consumer Federation of America, etc.) złożyła **formalną skargę COPPA** do FTC przeciw Amazon. Kluczowe zarzuty:
 - Niedostateczna zgoda rodzica
 - Nadmierna retencja danych
 - Brak efektywnego mechanizmu usunięcia
@@ -193,7 +193,7 @@ Skarga była **punktem wyjścia** dla FTC śledztwa 2019–2023.
 
 ### Pierwsze publikacje
 
-- **9 maja 2019** — Center for Digital Democracy, skarga COPPA
+- **8 maja 2019** — Campaign for a Commercial-Free Childhood (CCFC) i Center for Digital Democracy (CDD), skarga COPPA
 - **31 maja 2023** — FTC press release, liczne relacje NYT, WaPo, NPR, CNN, Bloomberg
 
 ---
@@ -214,7 +214,8 @@ Skarga była **punktem wyjścia** dla FTC śledztwa 2019–2023.
 
 ### Krytycy
 
-- **Jeff Chester** (Center for Digital Democracy) — główny organizator koalicji skargi COPPA 2019.
+- **Josh Golin** (Campaign for a Commercial-Free Childhood, CCFC) — współlider koalicji skargi COPPA 2019.
+- **Jeff Chester** (Center for Digital Democracy) — współlider i jeden z głównych organizatorów koalicji skargi COPPA 2019.
 - **Katharina Kopp** (Center for Digital Democracy) — współautorka analiz.
 - **Shuman Ghosemajumder** (były CEO Shape Security) — ekspert techniczny.
 
@@ -248,7 +249,7 @@ Klasyczna **"neither admit nor deny"** strategia.
 
 | Data | Etap |
 |------|------|
-| 9 maja 2019 | Skarga 19 organizacji do FTC |
+| 8 maja 2019 | Skarga koalicji 19 organizacji (prowadzonej przez CCFC i CDD) do FTC |
 | 2019–2022 | Śledztwo FTC |
 | 31 maja 2023 | Kara 25 mln USD |
 
@@ -341,7 +342,8 @@ Jeśli masz dzieci i w domu Echo/Alexa/Google Home — **dane twoich dzieci są 
 - **18 miesięcy** — nowa polityka retencji Amazon. To nadal długo (dziecko przez 18 miesięcy wypowie tysiące zdań, które są analizowane), ale lepsze niż "indefinite".
 - **COPPA od 1998** — jedno z najstarszych praw internetowych USA. Napisane w erze AOL, modernizowane dla smart speakers i AI. Pokazuje, że dobrze zaprojektowane prawo **może trwać dziesięciolecia**.
 - **Polska i dzieci+Alexa** — UODO nie wszczęło osobnego postępowania. W Polsce regulacje dla dzieci słabsze niż w USA/UK. RODO **art. 8** + **krajowa ustawa z 2018** regulują.
-- **Koalicja 19 organizacji** — tak duża koalicja rzadko zdarza się w USA. Pokazała, że **prywatność dzieci** jednoczy lewicę, prawicę, religijne organizacje (Focus on the Family także podpisało). Zjednoczony front.
+- **Koalicja 19 organizacji** — tak duża koalicja rzadko zdarza się w USA. Pokazała, że **prywatność dzieci** jednoczy lewicę, prawicę, religijne organizacje (Focus on the Family także podpisało). Zjednoczony front. Skargę z 8 maja 2019 współprowadziły **Campaign for a Commercial-Free Childhood (CCFC)** i **Center for Digital Democracy (CDD)**.
+- **Campaign for a Commercial-Free Childhood (CCFC)** — organizacja założona w 2000 r. (od 2022 r. działa pod nazwą Fairplay), historycznie kluczowy aktor amerykańskiej polityki prywatności dzieci, współlider skargi COPPA przeciwko Amazon.
 - **Center for Digital Democracy** — Jeff Chester, jeden z najstarszych i najbardziej skutecznych amerykańskich aktywistów prywatności dzieci. Organizacja istnieje od 1991, była za kulisami niemal każdej amerykańskiej reformy dziecięcej.
 - **Amazon Kids+ (dawniej FreeTime Unlimited)** — subskrypcja Amazon dla rodzin (9,99 USD/mies). Książki, gry, filmy dla dzieci. Po karze 2023 Amazon ograniczył zbieranie danych — ale model biznesowy wymaga znajomości preferencji dziecka.
 - **Voice cloning ryzyko** — głos dziecka w bazie Amazon to potencjalnie **materiał do voice deepfakes**. Rodzice zaniepokojeni: nagrania dziecka w chmurze mogłyby być użyte do kłamstwa ("twój syn miał wypadek, przelej pieniądze" — znane oszustwa od 2023 używają voice cloning).
@@ -353,7 +355,7 @@ Jeśli masz dzieci i w domu Echo/Alexa/Google Home — **dane twoich dzieci są 
 
 1. Federal Trade Commission / Department of Justice, "FTC and DOJ Charge Amazon with Violating Children's Privacy Law by Keeping Kids' Alexa Voice Recordings Forever and Undermining Parents' Deletion Requests", 31 maja 2023. URL: https://www.ftc.gov/news-events/news/press-releases/2023/05/ftc-doj-charge-amazon-violating-childrens-privacy-law-keeping-kids-alexa-voice-recordings-forever (dostęp: 2026-04-17)
 
-2. Center for Digital Democracy et al., "Complaint and Request for Investigation of Amazon's Alexa for Unlawfully Collecting, Using, and Sharing Children's Personal Information Without Parental Consent", 9 maja 2019.
+2. Campaign for a Commercial-Free Childhood (CCFC) i Center for Digital Democracy (CDD) et al., "Complaint and Request for Investigation of Amazon's Alexa for Unlawfully Collecting, Using, and Sharing Children's Personal Information Without Parental Consent", 8 maja 2019. (Źródło: Fairplay — następca CCFC.)
 
 3. United States v. Amazon.com, Inc., Case No. 2:23-cv-00811 (W.D. Wash.), FTC Complaint, 31 maja 2023.
 

@@ -85,7 +85,7 @@ years_active:
 
 ## TL;DR
 
-**Ring**, founded in 2013 in California, manufactured home security cameras (video doorbells, indoor, outdoor). In **2018, Amazon acquired Ring** for roughly 1 billion USD. On **May 31, 2023**, the Federal Trade Commission (FTC) announced that Ring had agreed to pay **5.8 million USD** for egregious violations of customer privacy. The FTC complaint contained two threads:
+**Ring**, founded in 2013 in California, manufactured home security cameras (video doorbells, indoor, outdoor). **February 27, 2018 — acquisition announcement; April 12, 2018 — closing. Price per Amazon SEC 10-K: ~$839M (Bloomberg/WSJ reported "~$1B")**. On **May 31, 2023**, the Federal Trade Commission (FTC) announced that Ring had agreed to pay **5.8 million USD** for egregious violations of customer privacy. The FTC complaint contained two threads:
 
 **Thread 1: Employees had unrestricted access to customer video.** Until January 2018, every Ring employee and contractor (including the team in Ukraine) could view **any video** from customer cameras — bathrooms, bedrooms, children's rooms. A key case: **in 2017, one employee spent several months watching thousands of recordings from the cameras of 81 women users**. He was discovered by **a female colleague at work**, who reported him to a supervisor. The first report was **ignored**. Only when another supervisor noticed that the employee was watching only **"pretty girls"** was the case escalated and the employee fired. Ring could not even determine how many other employees might have been doing the same thing — **it was not monitoring employee access to video**.
 
@@ -104,7 +104,7 @@ After the FTC's findings, Ring agreed to:
 - Report security breaches to the FTC
 - 20 years of compliance monitoring
 
-**April 2024** — the FTC sent out **117,044 refunds of roughly 48 USD each** via PayPal.
+**April 25, 2024 — FTC began sending 117,044 refunds (PayPal), totaling >$5.6M. Individual amount: $47.70 or $150.00**.
 
 Separately: on **May 31, 2023, Amazon paid an additional 25 million USD for COPPA violations by Alexa** (→ cards D02/D03). In total, Amazon paid **30.8 million USD** that day for two separate privacy violations (Ring + Alexa).
 
@@ -118,14 +118,14 @@ The Ring case is **one of the starkest examples of "move fast and break privacy"
 - **2014–2017** — Ring grows. Operations centers in the USA and **Ukraine** (Kyiv, Kharkiv).
 - **2016** — Ring launches **Ring Neighborhoods** — an app for sharing recordings with neighbors.
 - **2017** — a **Ring employee** in the USA spends roughly 6 months watching **thousands of recordings** from the cameras of **81 women**. Discovered by a female colleague.
-- **April 2018** — **Amazon buys Ring** for roughly 1 billion USD (per Bloomberg reports). The price has never been officially confirmed.
+- **February 27, 2018 / April 12, 2018** — **Amazon buys Ring**: February 27, 2018 — acquisition announcement; April 12, 2018 — closing. Price per Amazon SEC 10-K: **~$839M** (Bloomberg/WSJ reported "~$1B").
 - **January 2018** — Ring, after informal FTC pressure, **begins informing users for the first time** about employee access.
 - **January 2019** — ***The Intercept*** (Sam Biddle) publishes: "For Owners of Amazon's Ring Security Cameras, Strangers May Have Been Watching Too." Reveals the Ukraine team's unrestricted access.
 - **January 2019 – March 2020** — the period in which **55,000+ Ring customers** fell victim to credential stuffing and brute force. **Thousands of videos** downloaded by hackers.
 - **December 2019** — a viral TikTok clip: a hacker speaks to an **8-year-old African American girl** in her bedroom in Mississippi, using racist slurs. Her mother had installed the camera "for safety."
 - **2020** — the FTC opens an investigation.
 - **May 31, 2023** — **FTC announces penalties**: **5.8 million USD (Ring)** + **25 million USD (Alexa/COPPA)** = total of 30.8 million USD against Amazon.
-- **April 2024** — the FTC sends out **117,044 consumer refunds** of roughly 48 USD each.
+- **April 25, 2024** — the FTC began sending **117,044 consumer refunds** (PayPal), totaling **>$5.6M**. Individual amount: **$47.70 or $150.00**.
 - **2025+** — Ring continues to operate; Amazon expands with Ring Alarm, Ring for Business.
 
 ---

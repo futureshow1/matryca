@@ -72,7 +72,7 @@ years_active:
 | Total penalty | **"Up to $5 billion" in value** (destruction of billions of records); no direct payouts to users |
 | Currency | USD |
 | Legal basis | California Invasion of Privacy Act (CIPA), California Unfair Competition Law, ECPA, CDA § 230 (rejected) |
-| Whistleblower/discoverer | Chasom Brown (lead plaintiff); lawyers **Boies Schiller Flexner** |
+| Whistleblower/discoverer | Five lead plaintiffs: Chasom Brown, William Byatt, Jeremy Davis, Christopher Castillo, Monique Trujillo; lawyers **Boies Schiller Flexner** |
 | Number of affected | Estimated **136 million users** of Chrome Incognito in the U.S. |
 | Status (as of today) | Settlement finalized; Google destroying billions of records; 5-year monitoring |
 
@@ -80,11 +80,11 @@ years_active:
 
 ## TL;DR
 
-On **June 2, 2020**, **Chasom Brown** and several other Chrome users filed a class action in the *Northern District of California* — *Brown v. Google LLC* (No. 4:20-cv-03664-YGR). The allegation: Google **tracks Chrome users in Incognito mode** despite promising privacy. Chrome displayed the message: *"Now you can browse privately, and other people who use this device won't see your activity."* Users understood this to mean "Google doesn't see me." In reality, Google collected data even in Incognito through **Google Analytics** (on about 80% of websites), **Google Ads**, **reCAPTCHA**, **Google Fonts**, **YouTube embeds**, and other services embedded on pages.
+On **June 2, 2020**, five lead plaintiffs — **Chasom Brown, William Byatt, Jeremy Davis, Christopher Castillo, Monique Trujillo** — filed a class action in the *Northern District of California* — *Brown v. Google LLC* (No. 4:20-cv-03664-YGR). The allegation: Google **tracks Chrome users in Incognito mode** despite promising privacy. Chrome displayed the message: *"Now you can browse privately, and other people who use this device won't see your activity."* Users understood this to mean "Google doesn't see me." In reality, Google collected data even in Incognito through **Google Analytics** (on about 80% of websites), **Google Ads**, **reCAPTCHA**, **Google Fonts**, **YouTube embeds**, and other services embedded on pages.
 
 **The breakthrough came during the discovery phase (2021–2022)**, when Google was compelled to disclose **internal documents**. The most damning: an email from **Lorraine Twohill**, Google's CMO, to **Sundar Pichai** (CEO): *"Incognito should be truly private. We are limited in how strongly we can market Incognito because it's not truly private, thus requiring really fuzzy, hedging language that is almost more damaging."* Translation: "We can't boast about Incognito's privacy because it's a lie — and the fuzzy marketing language **hurts us more**." The company's CMO **explicitly acknowledged internally** that the product was deceptive.
 
-The settlement was finalized on **April 1, 2024**. The terms were unprecedented: (1) **Google will destroy billions of records** collected in Incognito between June 1, 2016, and the settlement date; (2) **Chrome Incognito will block third-party cookies by default** for at least 5 years; (3) **a new, more honest Incognito notice**; (4) **5-year independent monitoring** by a special master; (5) **NO direct payouts** to the class — each user may individually sue for $5,000 under CIPA, which analysts value at a potential **$5–7.8 billion**.
+On **April 1, 2024**, plaintiffs filed an unopposed motion for final approval of the settlement; the fairness hearing was scheduled for July 2024. The terms were unprecedented: (1) **Google will destroy billions of records** collected in Incognito between June 1, 2016, and the settlement date; (2) **Chrome Incognito will block third-party cookies by default** for at least 5 years; (3) **a new, more honest Incognito notice**; (4) **5-year independent monitoring** by a special master; (5) **NO direct payouts** to the class — each user may individually sue for $5,000 under CIPA, which analysts value at a potential **$5–7.8 billion**.
 
 The case is significant for three reasons: (1) **the first "data destruction" settlement** in history — normally Big Tech pays a fine and keeps the data; here Google **destroys the data**; (2) **a precedent for privacy class actions** in the U.S. — after Lloyd v. Google (UK 2021), privacy class actions appeared to be dying; this showed they still work in the U.S.; (3) **Big Tech internal documentation as evidence** — the Twohill email became a template for hundreds of subsequent lawsuits.
 
@@ -97,8 +97,9 @@ The case is significant for three reasons: (1) **the first "data destruction" se
 - **2018** — Google internal memo: *"Incognito (Third Paper)"* — *"People often think Incognito protects them more than it does."*
 - **2019** — *Hacking Week* at Google: engineers identify **12 ways** in which Incognito fails its privacy promise. The report was **not implemented**.
 - **February 2020** — Lorraine Twohill's email to Sundar Pichai.
-- **June 2, 2020** — **Chasom Brown et al. v. Google LLC** — class action filed in N.D. California. The firm **Boies Schiller Flexner** (the same firm that represented Al Gore in Bush v. Gore 2000).
-- **March 2021** — Google files a motion to dismiss. **Judge Yvonne Gonzalez Rogers** rejects it. The case proceeds. (Gonzalez Rogers is the same judge who presided over *Epic v. Apple*.)
+- **June 2, 2020** — **Chasom Brown et al. v. Google LLC** — class action filed in N.D. California by five lead plaintiffs: Chasom Brown, William Byatt, Jeremy Davis, Christopher Castillo, Monique Trujillo. The firm **Boies Schiller Flexner** (the same firm that represented Al Gore in Bush v. Gore 2000).
+- **March 2021** — Google files a motion to dismiss. **Judge Lucy H. Koh** (originally assigned to the case) rejects it. The case proceeds.
+- **2021** — after Judge Koh's nomination to the 9th Circuit, the case is reassigned to **Judge Yvonne Gonzalez Rogers** (the same judge who presided over *Epic v. Apple*).
 - **August 2021** — the Boies Schiller team obtains access to Google's internal documents.
 - **2022** — discovery. Disclosure of the Twohill email to Pichai. Disclosure of the "Third Paper" memo. Disclosure of the Hacking Week report.
 - **March 2022** — Google tries to block publication of the Twohill email. The judge rejects.
@@ -106,7 +107,7 @@ The case is significant for three reasons: (1) **the first "data destruction" se
 - **2023** — continued discovery and negotiations.
 - **October 2023** — Sundar Pichai testifies in the DOJ antitrust case (separate *US v. Google* case), where he is also questioned about Incognito.
 - **December 28, 2023** — **tentative settlement** announced.
-- **April 1, 2024** — **settlement finalized** with court approval.
+- **April 1, 2024** — plaintiffs filed **unopposed motion for final approval** of the settlement; fairness hearing scheduled for July 2024.
 - **2024–2029** — implementation period for Chrome changes and 5-year independent monitoring.
 
 ---
@@ -154,7 +155,7 @@ Here's the crux: the user opens Incognito, visits a page (e.g., **a news portal*
 
 ### How the disclosure came about
 
-The discovery came through **a class action lawsuit**, not through a whistleblower or researcher. The firm **Boies Schiller Flexner** in 2020 noticed that the way Chrome Incognito was marketed ("browse privately") was **classic deception** under the California Unfair Competition Law. They assembled representative plaintiffs (including Chasom Brown), filed the lawsuit, and — crucially — **forced discovery**. Discovery exposed the internal documents that became the foundation of the case.
+The discovery came through **a class action lawsuit**, not through a whistleblower or researcher. The firm **Boies Schiller Flexner** in 2020 noticed that the way Chrome Incognito was marketed ("browse privately") was **classic deception** under the California Unfair Competition Law. They assembled five lead plaintiffs (Chasom Brown, William Byatt, Jeremy Davis, Christopher Castillo, Monique Trujillo), filed the lawsuit, and — crucially — **forced discovery**. Discovery exposed the internal documents that became the foundation of the case.
 
 ### Google's internal documents — evidentiary material
 
@@ -185,9 +186,9 @@ Translation:
 
 ## Key people
 
-### Lead plaintiff
+### Lead plaintiffs
 
-- **Chasom Brown** — a California resident, a typical Chrome user. Deliberately chosen as a "test case" — not an activist, not an expert, a representative of the average American consumer.
+Five lead plaintiffs: **Chasom Brown, William Byatt, Jeremy Davis, Christopher Castillo, Monique Trujillo** — all California residents, typical Chrome users. Deliberately chosen as a "test case" group — not activists, not experts, representatives of the average American consumer. Brown, first in the case caption, became the public face of the lawsuit.
 
 ### Lawyers
 
@@ -195,9 +196,12 @@ Translation:
 - **Mark C. Mao** — partner at Boies Schiller, lead counsel in *Brown v. Google*. Specialization: privacy and emerging technologies.
 - **William Carmody** — Susman Godfrey, co-lead counsel.
 
-### Judge
+### Judges
 
-- **Judge Yvonne Gonzalez Rogers** — federal judge for the Northern District of California since 2011 (Obama nominee). Known for a tough approach to Big Tech: she presided over *Epic v. Apple* (2020–2021), *In re: Google Play Store Antitrust Litigation*, and others. Frequently quoted for: *"You are not above the law, simply because of your size."*
+Originally **Judge Lucy H. Koh** (until her nomination to the 9th Circuit in 2021), then **Judge Yvonne Gonzalez Rogers**. The March 2021 motion to dismiss was still ruled by Judge Koh.
+
+- **Judge Lucy H. Koh** — federal judge for N.D. California (Obama nominee, 2010), nominated to the 9th Circuit Court of Appeals in 2021. Originally presided over *Brown v. Google* and issued the key ruling denying Google's motion to dismiss in March 2021. Known for high-profile privacy and antitrust cases (including *In re Yahoo! Inc. Customer Data Security Breach Litigation*).
+- **Judge Yvonne Gonzalez Rogers** — federal judge for the Northern District of California since 2011 (Obama nominee). Took over the case from Judge Koh in 2021. Known for a tough approach to Big Tech: she presided over *Epic v. Apple* (2020–2021), *In re: Google Play Store Antitrust Litigation*, and others. Frequently quoted for: *"You are not above the law, simply because of your size."*
 
 ### Google
 
@@ -256,7 +260,7 @@ The case was solely in the U.S. (California federal). Global impact via the Chro
 | March 2021 | Motion to dismiss rejected |
 | 2022 | Disclosure of internal documents |
 | December 2023 | Tentative settlement |
-| April 1, 2024 | Settlement finalized |
+| April 1, 2024 | Unopposed motion for final approval; fairness hearing scheduled for July 2024 |
 
 ### Related case law
 

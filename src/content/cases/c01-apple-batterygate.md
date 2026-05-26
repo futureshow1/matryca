@@ -23,7 +23,7 @@ fines:
 - amount: 10000000
   currency: EUR
   authority: AGCM
-  date: 2018-10
+  date: '2018-10-24'
   category: regulatory_fine
   status: paid
 - amount: 25000000
@@ -44,18 +44,18 @@ fines:
   date: 2020-11
   category: state_attorney_general
   status: paid
-- amount: 2500000
+- amount: 3400000
   currency: USD
   authority: SERNAC
-  date: '2020'
-  category: regulatory_fine
+  date: '2021-04-08'
+  category: class_action_settlement
   status: paid
-- amount: 25000000
+- amount: 7000000
   currency: EUR
-  authority: DGSI
+  authority: Deco Proteste (class action)
   date: '2023'
-  category: regulatory_fine
-  status: paid
+  category: class_action_settlement
+  status: pending
 whistleblowers: []
 journalists: []
 related_cases:
@@ -119,9 +119,9 @@ Odkrycie nastąpiło przez **anegdotę na Reddit**. 10 grudnia 2017 użytkownik 
 - **Marzec 2020** — **Class action USA (*In re Apple Device Performance Litigation*): ~500 mln USD** (~25 USD per urządzenie × ~25 mln posiadaczy)
 - **Listopad 2020** — **33 stany USA: 113 mln USD**
 - **Luty 2020** — **Francja DGCCRF: 25 mln EUR**
-- **Październik 2018** — **Włochy AGCM: 10 mln EUR**
-- **2023** — **Portugalia: 25 mln EUR**
-- **2018** — Chile SERNAC: 2,5 mln USD
+- **24 października 2018** — **Włochy AGCM: 10 mln EUR**
+- **2023** — pozew zbiorowy Deco Proteste przeciwko Apple (nie kara regulacyjna). Szacunkowa wartość: ~7 mln EUR (60 EUR × ~115 000 poszkodowanych)
+- **8 kwietnia 2021** — Chile: ugoda 3,4 mln USD (~150 000 użytkowników iPhone 6/6s/SE/7); max 50 USD per użytkownik
 
 **Reformy operacyjne:** Apple obniżył cenę wymiany baterii z 79 USD do **29 USD na cały 2018 rok** — wykonano **11 mln wymian** (5× więcej niż normalnie). Szacowana strata Apple w przychodach ze sprzedaży nowych iPhone'ów: **10–15 mld USD** (ludzie zostawali przy starszych telefonach). W **iOS 11.3** (marzec 2018) Apple wprowadził **Settings → Battery → Battery Health** — publicznie widoczną **maksymalną pojemność** baterii i **opcję wyłączenia throttlingu** (z ostrzeżeniem o ryzyku nagłego wyłączenia).
 
@@ -143,16 +143,16 @@ Sprawa ma znaczenie strukturalne: **Batterygate to pierwszy wielki przypadek reg
 - **10 grudnia 2017** — **Reddit user primate1980** na r/iphone: "wymieniłem baterię, GeekBench wzrósł o 70%".
 - **18 grudnia 2017** — **John Poole** (Primate Labs) publikuje analizę danych GeekBench. Bezpośredni dowód throttlingu.
 - **20 grudnia 2017** — **Apple oficjalnie przyznaje** praktykę. Pierwsza publiczna odpowiedź.
-- **28 grudnia 2017** — **"A Message to Our Customers about iPhone Batteries and Performance"** — apologia Tima Cooka. Obniżenie ceny wymiany baterii z 79 USD do **29 USD** przez cały 2018.
+- **28 grudnia 2017** — **„A Message to Our Customers about iPhone Batteries and Performance"** — oficjalne oświadczenie Apple Inc. (NIE podpisane przez Tima Cooka; zaczyna się „We've been hearing feedback from our customers"). Obniżenie ceny wymiany baterii z 79 USD do **29 USD** przez cały 2018.
 - **Styczeń 2018** — pozwy class action zaczynają napływać (ostatecznie skonsolidowane w **In re Apple Inc. Device Performance Litigation**, N.D. Cal.).
 - **29 marca 2018** — **iOS 11.3** — feature **Battery Health** (pokazywanie maksymalnej pojemności i opcja wyłączenia throttlingu).
-- **25 października 2018** — **Włochy AGCM**: kara **10 mln EUR** dla Apple (+10 mln dla Samsunga za tę samą praktykę).
+- **24 października 2018** — **Włochy AGCM**: kara **10 mln EUR** dla Apple (+10 mln dla Samsunga za tę samą praktykę).
 - **7 lutego 2020** — **Francja DGCCRF**: kara **25 mln EUR** + obowiązek publikacji oświadczenia na francuskiej stronie Apple przez miesiąc.
 - **2 marca 2020** — **ugoda pozew zbiorowy USA**: ok. **500 mln USD**.
 - **Listopad 2020** — **33 stany USA**: ugoda **113 mln USD**.
-- **2020** — Chile SERNAC: 2,5 mln USD.
+- **8 kwietnia 2021** — Chile: ugoda 3,4 mln USD (~150 000 użytkowników iPhone 6/6s/SE/7); max 50 USD per użytkownik.
 - **2022** — UK Competition Appeal Tribunal zielone światło dla pozew zbiorowy w UK.
-- **2023** — **Portugalia**: kara **25 mln EUR**.
+- **2023** — pozew zbiorowy Deco Proteste przeciwko Apple (nie kara regulacyjna). Szacunkowa wartość: ~7 mln EUR (60 EUR × ~115 000 poszkodowanych).
 - **2024** — UE uchwala **Right to Repair Directive 2024/1799**; obowiązek wymiennych baterii do 2027.
 
 ---
@@ -224,7 +224,7 @@ Post na blogu Primate Labs (**18 grudnia 2017**) zawierał **wykresy** pokazują
 - **10 grudnia 2017** — post primate1980 na r/iphone
 - **18 grudnia 2017** — John Poole, "iPhone Performance and Battery Age", Primate Labs Blog
 - **20 grudnia 2017** — Apple Newsroom, pierwsze oświadczenie
-- **28 grudnia 2017** — Apple, "A Message to Our Customers about iPhone Batteries and Performance" — apologia Tima Cooka
+- **28 grudnia 2017** — Apple, „A Message to Our Customers about iPhone Batteries and Performance" — oficjalne oświadczenie Apple Inc. (NIE podpisane przez Cooka)
 
 ---
 
@@ -238,7 +238,7 @@ Post na blogu Primate Labs (**18 grudnia 2017**) zawierał **wykresy** pokazują
 
 ### Apple
 
-- **Tim Cook** — CEO, autor publicznej apologii z 28 grudnia 2017.
+- **Tim Cook** — CEO. Uwaga: list „A Message to Our Customers" (28.12.2017) NIE był podpisany przez Cooka — oficjalne oświadczenie Apple Inc. zaczyna się „We've been hearing feedback from our customers".
 - **Phil Schiller** — SVP Worldwide Marketing (wówczas).
 - **Dan Riccio** — SVP Hardware Engineering.
 - **Bob Mansfield** — wcześniej SVP Hardware; odszedł w 2012, ale wiele decyzji dot. baterii w iPhone 6/6s było z jego kadencji.
@@ -268,7 +268,7 @@ Post na blogu Primate Labs (**18 grudnia 2017**) zawierał **wykresy** pokazują
 
 Apple przedstawiał throttling jako **akt troski o użytkownika** — "by uniknąć wyłączeń". Ale nie tłumaczył **dlaczego bez informowania**.
 
-**Etap 3: publiczna apologia (28 grudnia 2017).** List Tima Cooka "A Message to Our Customers":
+**Etap 3: publiczna apologia (28 grudnia 2017).** List „A Message to Our Customers" — oficjalne oświadczenie Apple Inc. (NIE podpisane przez Tima Cooka; zaczyna się „We've been hearing feedback from our customers"):
 - Apologia za **brak komunikacji**, nie za sam throttling
 - Obniżka ceny wymiany baterii do **29 USD** na 2018 rok
 - Zapowiedź **Battery Health** w iOS
@@ -317,11 +317,11 @@ Apple Batterygate to **pierwszy głośny przypadek**, gdy regulatorzy zastosowal
 |------|------|
 | 20 grudnia 2017 | Przyznanie Apple |
 | Styczeń 2018 | Pierwsze pozwy USA |
-| 25 października 2018 | Włochy 10 mln EUR |
+| 24 października 2018 | Włochy 10 mln EUR |
 | 7 lutego 2020 | Francja 25 mln EUR |
 | 2 marca 2020 | Pozew zbiorowy USA 500 mln USD |
 | Listopad 2020 | 33 stany 113 mln USD |
-| 2023 | Portugalia 25 mln EUR |
+| 2023 | Portugalia pozew Deco Proteste ~7 mln EUR |
 
 ### Orzecznictwo powiązane
 
@@ -335,12 +335,12 @@ Apple Batterygate to **pierwszy głośny przypadek**, gdy regulatorzy zastosowal
 
 | Data | Organ | Kwota | Jurysdykcja | Podstawa |
 |------|-------|-------|-------------|----------|
-| 25 października 2018 | AGCM | 10 000 000 EUR | Włochy | Codice del Consumo |
+| 24 października 2018 | AGCM | 10 000 000 EUR | Włochy | Codice del Consumo |
 | 7 lutego 2020 | DGCCRF | 25 000 000 EUR | Francja | Code de la consommation |
 | 2 marca 2020 | *In re Apple Device Performance Litigation* | ~500 000 000 USD | USA federalne | Class action |
 | Listopad 2020 | 33 stany USA | 113 000 000 USD | USA stanowe | Consumer protection |
-| 2020 | SERNAC | 2 500 000 USD | Chile | Consumer rights |
-| 2023 | DGSI | 25 000 000 EUR | Portugalia | Consumer protection |
+| 8 kwietnia 2021 | SERNAC | 3 400 000 USD | Chile | Consumer rights |
+| 2023 | Deco Proteste (pozew zbiorowy) | ~7 000 000 EUR (szacunek) | Portugalia | Class action |
 
 **Łącznie: ~650 mln USD / ~600 mln EUR**
 

@@ -96,13 +96,13 @@ The **DPC's review period** covered **31 July – 31 December 2020** (5 months).
 
 2. **"Family Pairing"** — a feature allowing a parent to **pair** their own account with a child's account and manage settings. The problem: TikTok **did not verify** whether the person setting up Family Pairing was actually a parent. **Any adult** could pair themselves with a child's account and **expand access** (for example, enabling Direct Messages for children over 16, even if the child had them turned off). A **potential grooming tool**.
 
-3. **Dark patterns** — the children-facing interface used **deceptive design**: the "Skip" text for ignoring privacy settings was larger than "Review," and colors signaled "fast setup" = less privacy. The **EDPB** (European Data Protection Board), in its binding decision of August 2023, added a violation of **GDPR art. 5(1)(a) (fairness principle)**.
+3. **Dark patterns** — the children-facing interface used **deceptive design**: the "Skip" text for ignoring privacy settings was larger than "Review," and colors signaled "fast setup" = less privacy. The **EDPB** (European Data Protection Board), in its binding decision of August 2, 2023 (Binding Decision 2/2023), added a violation of **GDPR art. 5(1)(a) (fairness principle)**.
 
 4. **Transparency** — information for children about the **public nature** of posts was inadequate. Terms like "public," "anyone," and "everyone" were unclear to a teenager.
 
 5. **Age verification** — the DPC initially challenged this but ultimately found it compliant (although Italy's **Garante** filed an objection).
 
-The DPC imposed a **EUR 345 million** fine + a compliance order within **3 months** + a reprimand. **TikTok appealed** to the Irish High Court in October 2023, arguing that the fine was **"disproportionate"** and that all charges concerned **practices from 2020** — changed in 2021 (before the DPC inquiry had even begun).
+The DPC imposed a **EUR 345 million** fine + a compliance order within **3 months** + a reprimand. The €345M fine comprised: €100M (public-by-default), €65M (Family Pairing), €180M (transparency). **TikTok appealed** to the Irish High Court in October 2023, arguing that the fine was **"disproportionate"** and that all charges concerned **practices from 2020** — changed in 2021 (before the DPC inquiry had even begun).
 
 **UK ICO — separate case**, April 2023. The ICO concluded that TikTok **knowingly allowed** **1.4 million children under 13** to use the platform **without parental consent** — in violation of the **UK DPA 2018** and the **Children's Code**. The fine of **GBP 12.7 million** was reduced from an initial figure of **GBP 27 million** after negotiations.
 
@@ -121,7 +121,7 @@ Case E02 is a **turning point** in enforcement of **children's online privacy** 
 - **September 2021** — DPC officially opens an **own-volition inquiry**.
 - **2022** — DPC and ICO investigations.
 - **April 2023** — **ICO: GBP 12.7 million fine**.
-- **August 2023** — **EDPB** issues a binding decision adding a GDPR art. 5(1)(a) violation (fairness principle regarding deceptive interfaces).
+- **August 2, 2023** — EDPB Binding Decision 2/2023 adds a GDPR art. 5(1)(a) violation (fairness principle regarding deceptive interfaces).
 - **1 September 2023** — DPC adopts its final decision.
 - **15 September 2023** — **DPC announces the EUR 345 million fine**.
 - **October 2023** — TikTok files an appeal in the Irish High Court (judicial review).
@@ -175,7 +175,7 @@ For a 13-year-old, the "you can change it" argument is inadequate. Teenagers rar
 
 ### UK ICO — 1.4 million children under 13
 
-**TikTok's minimum age is 13.** But in 2018–2020, the ICO determined that TikTok **knowingly allowed** **1.4 million British children under 13** to use the platform. How:
+**TikTok's minimum age is 13.** But in the period May 2018 – July 2020 (exact range examined by ICO), the ICO determined that TikTok **knowingly allowed** **1.4 million British children under 13** to use the platform. How:
 - Weak **age gates** — a child could enter a false date of birth.
 - No **age assurance** (tools for verifying age).
 - The **UK Children's Code** (ICO, 2020) requires robust age verification.
@@ -212,7 +212,7 @@ Fine: **GBP 12.7 million**. The ICO originally considered **GBP 27 million**, bu
 - **Helen Dixon** — DPC Commissioner 2014–2024.
 - **Dale Sunderland** — Commissioner from 2024.
 - **Des Hogan** — Commissioner from 2024.
-- **Anu Talus** — EDPB Chair (from 2023), Finnish authority.
+- **Anu Talus** — EDPB Chair since May 25, 2023, Data Protection Ombudsman of Finland.
 
 ### ICO / UK
 

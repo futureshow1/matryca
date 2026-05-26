@@ -77,7 +77,7 @@ years_active:
 | Field | Value |
 |------|---------|
 | Country/region | US federal and state (New York) |
-| Year revealed | November 17–18, 2014 (*BuzzFeed News*) |
+| Year revealed | November 17 and 19, 2014 (*BuzzFeed News*) |
 | Years the practice ran | ~2013–2014 (God View as an internal tool) |
 | Total penalty | No financial fine (FTC); **20-year consent decree with audits** |
 | Currency | — |
@@ -117,11 +117,11 @@ God View became a symbol of Uber's **"bro culture"** and the subject of many boo
 - **~2011–2014** — God View used by Uber employees **without effective access controls**.
 - **2013–2014** — documented instances of God View use: tracking journalists, celebrities, employees spying on ex-partners.
 - **October 2014** — Uber dinner with journalists at Waverly Inn (NYC). Emil Michael makes comments about "opposition researchers" investigating Sarah Lacy.
-- **November 15, 2014** — Bhuiyan orders an Uber to the office; Josh Mohrer admits he had been tracking her.
+- **Early November 2014** — Bhuiyan orders an Uber to the office; Josh Mohrer admits he had been tracking her.
 - **November 17, 2014** — ***Ben Smith***, *BuzzFeed*: "Uber Executive Suggests Digging Up Dirt On Journalists." Dinner comments revealed.
-- **November 18, 2014** — ***Johana Bhuiyan, Charlie Warzel***, *BuzzFeed*: "'God View': Uber Investigates Its Top New York Executive For Privacy Violations." Mohrer and God View.
-- **November 18, 2014** — Uber speaks publicly and **publishes its privacy policy for the first time** (it had not had one before).
-- **November 19, 2014** — **Eric Schneiderman** (NY AG) opens an investigation.
+- **November 19, 2014** — ***Johana Bhuiyan, Charlie Warzel***, *BuzzFeed*: "'God View': Uber Investigates Its Top New York Executive For Privacy Violations." Mohrer and God View.
+- **November 19, 2014** — Uber speaks publicly and **publishes its privacy policy for the first time** (it had not had one before).
+- **November 2014** — **Eric Schneiderman** (NY AG) opens an investigation (exact date not publicly confirmed).
 - **February 2015** — Uber reveals that **a breach of 50,000 drivers took place in 2014** (but not 2016).
 - **2015** — investigations continue.
 - **January 6, 2016** — **NY AG settlement**: $20,000 for 2014 breach notification + privacy obligations.
@@ -193,7 +193,7 @@ The "**move fast**" culture prioritized growth over security. God View was **a k
 ### First publications
 
 - **November 17, 2014** — Ben Smith, "Uber Executive Suggests Digging Up Dirt On Journalists," *BuzzFeed News*. URL: buzzfeed.com/bensmith/uber-executive-suggests-digging-up-dirt-on-journalists
-- **November 18, 2014** — Johana Bhuiyan, Charlie Warzel, "'God View': Uber Investigates Its Top New York Executive For Privacy Violations," *BuzzFeed News*. URL: buzzfeed.com/johanabhuiyan/uber-is-investigating-its-top-new-york-executive-for-privacy
+- **November 19, 2014** — Johana Bhuiyan, Charlie Warzel, "'God View': Uber Investigates Its Top New York Executive For Privacy Violations," *BuzzFeed News*. URL: buzzfeed.com/johanabhuiyan/uber-is-investigating-its-top-new-york-executive-for-privacy
 - **November 19, 2014** — numerous follow-ups in *NYT*, *Wired*, *Recode*
 
 ---
@@ -240,7 +240,7 @@ Reform era:
 - Travis Kalanick **ousted** in June 2017
 - Khosrowshahi (from Expedia) takes over the company
 - **New cultural code** ("Cultural Norms"): integrity first
-- **Reform CTO** — new Chief Legal Officer, Chief Privacy Officer
+- **Reform CTO** — **Tony West** (CLO of Uber from November 2017), Chief Privacy Officer
 - Implementation of the **Holder Report** recommendations (Eric Holder, former US AG, conducted a review of Uber's culture in 2017)
 
 ---
@@ -262,8 +262,8 @@ Reform era:
 
 | Date | Stage |
 |------|------|
-| November 17–18, 2014 | BuzzFeed publications |
-| November 19, 2014 | NY AG opens investigation |
+| November 17 and 19, 2014 | BuzzFeed publications |
+| November 2014 | NY AG opens investigation (exact date not publicly confirmed) |
 | January 6, 2016 | NY AG settlement $20,000 |
 | August 15, 2017 | FTC first consent decree |
 | April 12, 2018 | FTC second consent decree (broader) |
@@ -338,7 +338,7 @@ If you use Uber (or a similar app — Bolt, Lyft, FreeNow), **your location, rid
 
 1. Ben Smith, "Uber Executive Suggests Digging Up Dirt On Journalists," *BuzzFeed News*, November 17, 2014. URL: https://www.buzzfeed.com/bensmith/uber-executive-suggests-digging-up-dirt-on-journalists (accessed: 2026-04-17)
 
-2. Johana Bhuiyan, Charlie Warzel, "'God View': Uber Investigates Its Top New York Executive For Privacy Violations," *BuzzFeed News*, November 18, 2014. URL: https://www.buzzfeed.com/johanabhuiyan/uber-is-investigating-its-top-new-york-executive-for-privacy (accessed: 2026-04-17)
+2. Johana Bhuiyan, Charlie Warzel, "'God View': Uber Investigates Its Top New York Executive For Privacy Violations," *BuzzFeed News*, November 19, 2014. URL: https://www.buzzfeed.com/johanabhuiyan/uber-is-investigating-its-top-new-york-executive-for-privacy (accessed: 2026-04-17)
 
 3. New York State Attorney General, "A.G. Schneiderman Announces Settlement with Uber to Enhance Rider Privacy," January 6, 2016.
 

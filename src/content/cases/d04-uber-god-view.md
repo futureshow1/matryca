@@ -77,7 +77,7 @@ years_active:
 | Pole | Wartość |
 |------|---------|
 | Kraj/region | USA federalne i stanowe (Nowy Jork) |
-| Rok ujawnienia | 17–18 listopada 2014 (*BuzzFeed News*) |
+| Rok ujawnienia | 17 i 19 listopada 2014 (*BuzzFeed News*) |
 | Lata trwania praktyki | ~2013–2014 (God View jako narzędzie wewnętrzne) |
 | Łączna kara | Brak kary finansowej (FTC); **20-letni ugoda z regulatorem z audytami** |
 | Waluta | — |
@@ -116,12 +116,12 @@ God View jako symbol "**Bro culture**" Uber stał się przedmiotem wielu książ
 - **2010–2013** — ekspansja, rozwój aplikacji. Wewnętrzne narzędzia, w tym **God View**.
 - **~2011–2014** — God View używany przez pracowników Uber **bez efektywnej kontroli dostępu**.
 - **2013–2014** — ujawnione przypadki użycia God View: tracking dziennikarzy, celebrytów, szpiegowanie ex-partnerów przez pracowników.
-- **Październik 2014** — kolacja Uber z dziennikarzami w Waverly Inn (NYC). Emil Michael wypowiada komentarze o "opposition researchers" badających Sarah Lacy.
-- **15 listopada 2014** — Bhuiyan zamawia Uber do siedziby; Josh Mohrer przyznaje, że ją śledził.
-- **17 listopada 2014** — ***Ben Smith***, *BuzzFeed*: "Uber Executive Suggests Digging Up Dirt On Journalists". Kolacja ujawniona.
-- **18 listopada 2014** — ***Johana Bhuiyan, Charlie Warzel***, *BuzzFeed*: "'God View': Uber Investigates Its Top New York Executive For Privacy Violations". Mohrer i God View.
-- **18 listopada 2014** — Uber wypowiada się publicznie, **po raz pierwszy publikuje politykę prywatności** (wcześniej nie miała).
-- **19 listopada 2014** — **Eric Schneiderman** (NY AG) wszczyna śledztwo.
+- **Październik 2014** — kolacja Uber z dziennikarzami w Waverly Inn (NYC). Emil Michael wypowiada komentarze o „opposition researchers" badających Sarah Lacy.
+- **Początek listopada 2014 („early November")** — Bhuiyan zamawia Uber do siedziby; Josh Mohrer przyznaje, że ją śledził.
+- **17 listopada 2014** — ***Ben Smith***, *BuzzFeed*: „Uber Executive Suggests Digging Up Dirt On Journalists". Kolacja ujawniona.
+- **19 listopada 2014** — ***Johana Bhuiyan, Charlie Warzel***, *BuzzFeed*: „'God View': Uber Investigates Its Top New York Executive For Privacy Violations". Mohrer i God View.
+- **19 listopada 2014** — Uber wypowiada się publicznie, **po raz pierwszy publikuje politykę prywatności** (wcześniej nie miała).
+- **Listopad 2014** — **Eric Schneiderman** (NY AG) wszczyna śledztwo (dokładna data nie jest publicznie potwierdzona).
 - **Luty 2015** — Uber ujawnia, że w **2014 miało miejsce wycieku 50 000 kierowców** (ale nie 2016).
 - **2015** — dochodzenia kontynuowane.
 - **6 stycznia 2016** — **NY AG ugoda**: 20 000 USD za 2014 breach notification + zobowiązania prywatnościowe.
@@ -192,8 +192,8 @@ Kultura "**move fast**" prioritetyzowała rozwój nad bezpieczeństwem. God View
 
 ### Pierwsze publikacje
 
-- **17 listopada 2014** — Ben Smith, "Uber Executive Suggests Digging Up Dirt On Journalists", *BuzzFeed News*. URL: buzzfeed.com/bensmith/uber-executive-suggests-digging-up-dirt-on-journalists
-- **18 listopada 2014** — Johana Bhuiyan, Charlie Warzel, "'God View': Uber Investigates Its Top New York Executive For Privacy Violations", *BuzzFeed News*. URL: buzzfeed.com/johanabhuiyan/uber-is-investigating-its-top-new-york-executive-for-privacy
+- **17 listopada 2014** — Ben Smith, „Uber Executive Suggests Digging Up Dirt On Journalists", *BuzzFeed News*. URL: buzzfeed.com/bensmith/uber-executive-suggests-digging-up-dirt-on-journalists
+- **19 listopada 2014** — Johana Bhuiyan, Charlie Warzel, „'God View': Uber Investigates Its Top New York Executive For Privacy Violations", *BuzzFeed News*. URL: buzzfeed.com/johanabhuiyan/uber-is-investigating-its-top-new-york-executive-for-privacy
 - **19 listopada 2014** — wiele follow-upów w *NYT*, *Wired*, *Recode*
 
 ---
@@ -239,8 +239,8 @@ Kultura "**move fast**" prioritetyzowała rozwój nad bezpieczeństwem. God View
 Reform era:
 - Travis Kalanick **zwolniony** czerwiec 2017
 - Khosrowshahi (z Expedia) przejmuje firmę
-- **Nowy kodeks kultury** ("Cultural Norms"): integrity first
-- **Reform CTO** — nowy Chief Legal Officer, Chief Privacy Officer
+- **Nowy kodeks kultury** („Cultural Norms"): integrity first
+- **Reform CTO** — **Tony West** (CLO Uber od listopada 2017), Chief Privacy Officer
 - Implementacja rekomendacji **Holder Report** (Eric Holder, były AG USA, przeprowadził review kultury Uber 2017)
 
 ---
@@ -262,8 +262,8 @@ Reform era:
 
 | Data | Etap |
 |------|------|
-| 17–18 listopada 2014 | BuzzFeed publikacje |
-| 19 listopada 2014 | NY AG wszczyna |
+| 17 i 19 listopada 2014 | BuzzFeed publikacje |
+| Listopad 2014 | NY AG wszczyna (dokładna data nie jest publicznie potwierdzona) |
 | 6 stycznia 2016 | NY AG ugoda 20 000 USD |
 | 15 sierpnia 2017 | FTC pierwszy ugoda z regulatorem |
 | 12 kwietnia 2018 | FTC drugi ugoda z regulatorem (poszerzony) |
@@ -338,7 +338,7 @@ Jeśli używasz Ubera (lub analogicznej aplikacji — Bolt, Lyft, FreeNow), **tw
 
 1. Ben Smith, "Uber Executive Suggests Digging Up Dirt On Journalists", *BuzzFeed News*, 17 listopada 2014. URL: https://www.buzzfeed.com/bensmith/uber-executive-suggests-digging-up-dirt-on-journalists (dostęp: 2026-04-17)
 
-2. Johana Bhuiyan, Charlie Warzel, "'God View': Uber Investigates Its Top New York Executive For Privacy Violations", *BuzzFeed News*, 18 listopada 2014. URL: https://www.buzzfeed.com/johanabhuiyan/uber-is-investigating-its-top-new-york-executive-for-privacy (dostęp: 2026-04-17)
+2. Johana Bhuiyan, Charlie Warzel, „'God View': Uber Investigates Its Top New York Executive For Privacy Violations", *BuzzFeed News*, 19 listopada 2014. URL: https://www.buzzfeed.com/johanabhuiyan/uber-is-investigating-its-top-new-york-executive-for-privacy (dostęp: 2026-04-17)
 
 3. New York State Attorney General, "A.G. Schneiderman Announces Settlement with Uber to Enhance Rider Privacy", 6 stycznia 2016.
 

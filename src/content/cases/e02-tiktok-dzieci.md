@@ -96,13 +96,13 @@ years_active:
 
 2. **"Family Pairing"** — funkcja pozwalająca rodzicowi **sparować** swoje konto z kontem dziecka i zarządzać ustawieniami. Problem: TikTok **nie weryfikował**, czy osoba uruchamiająca Family Pairing jest rzeczywiście rodzicem. **Dowolna osoba dorosła** mogła sparować się z kontem dziecka i **wzmocnić dostęp** (np. włączyć Direct Messages dla dzieci >16 lat, mimo że dziecko miało wyłączone). **Potencjalne narzędzie grooming'u**.
 
-3. **Dark patterns** — interfejs skierowany do dzieci używał **zwodniczych wzorców**: tekst "Skip" do zignorowania ostawień prywatności był większy niż "Review", kolory wskazywały "fast setup" = mniej prywatności. **EDPB** (Europejska Rada Ochrony Danych) w wiążącej decyzji z sierpnia 2023 dodała naruszenie **art. 5(1)(a) RODO (zasada uczciwości)**.
+3. **Dark patterns** — interfejs skierowany do dzieci używał **zwodniczych wzorców**: tekst „Skip" do zignorowania ostawień prywatności był większy niż „Review", kolory wskazywały „fast setup" = mniej prywatności. **EDPB** (Europejska Rada Ochrony Danych) w wiążącej decyzji z 2 sierpnia 2023 (Binding Decision 2/2023) dodała naruszenie **art. 5(1)(a) RODO (zasada uczciwości)**.
 
 4. **Transparency** — informacje dla dzieci o **publicznym charakterze** postów były niewystarczające. Pojęcia jak "public", "anyone", "everyone" były niejasne dla nastolatka.
 
 5. **Age verification** — DPC początkowo zakwestionował, ale ostatecznie uznał, że był zgodny (choć **Garante** z Włoch zgłosił sprzeciw).
 
-DPC wymierzył **345 mln EUR** + nakaz **compliance w 3 miesiące** + reprymenda. **TikTok odwołał się** do Irish High Court w październiku 2023 twierdząc, że fine jest **"disproportionate"** i że wszystkie zarzuty dotyczą **praktyk z 2020** — zmienionych w 2021 (jeszcze przed rozpoczęciem dochodzenia DPC).
+DPC wymierzył **345 mln EUR** + nakaz **compliance w 3 miesiące** + reprymenda. Kara 345 mln EUR składała się z: 100 mln EUR (public-by-default), 65 mln EUR (Family Pairing), 180 mln EUR (transparentność). **TikTok odwołał się** do Irish High Court w październiku 2023 twierdząc, że fine jest **„disproportionate"** i że wszystkie zarzuty dotyczą **praktyk z 2020** — zmienionych w 2021 (jeszcze przed rozpoczęciem dochodzenia DPC).
 
 **UK ICO — osobna sprawa**, kwiecień 2023. ICO stwierdził, że TikTok **świadomie pozwalał** **1,4 mln dzieci poniżej 13 lat** korzystać z platformy **bez zgody rodziców** — co narusza **UK DPA 2018** i **Children's Code**. Kara **12,7 mln GBP** (obniżona z pierwotnej kwoty **27 mln GBP** po procesie negotiations).
 
@@ -121,7 +121,7 @@ Sprawa E02 jest **punktem zwrotnym** w egzekwowaniu **Children's Online Privacy*
 - **Wrzesień 2021** — DPC oficjalnie rozpoczyna **own-volition inquiry**.
 - **2022** — dochodzenia DPC i ICO.
 - **Kwiecień 2023** — **ICO: kara 12,7 mln GBP**.
-- **Sierpień 2023** — **EDPB** wydaje wiążącą decyzję dodającą naruszenie art. 5(1)(a) RODO (zasada uczciwości dot. mylące interfejsy).
+- **2 sierpnia 2023** — EDPB Binding Decision 2/2023 dodaje naruszenie art. 5(1)(a) RODO (zasada uczciwości dot. mylące interfejsy).
 - **1 września 2023** — DPC przyjmuje końcową decyzję.
 - **15 września 2023** — **DPC ogłasza 345 mln EUR kary**.
 - **Październik 2023** — TikTok wnosi odwołanie w Irish High Court (judicial review).
@@ -175,7 +175,7 @@ Dla nastolatka 13 lat argumenty **"możesz zmienić"** są niewystarczające. Na
 
 ### UK ICO — 1,4 mln dzieci <13 lat
 
-**TikTok minimum wiek: 13 lat.** Ale w 2018–2020 ICO stwierdził, że TikTok **świadomie pozwalał** **1,4 mln brytyjskich dzieci <13 lat** korzystać z platformy. Jak:
+**TikTok minimum wiek: 13 lat.** Ale w okresie maj 2018 – lipiec 2020 (dokładny zakres badany przez ICO) ICO stwierdził, że TikTok **świadomie pozwalał** **1,4 mln brytyjskich dzieci <13 lat** korzystać z platformy. Jak:
 - Słabe **age gates** — dziecko mogło podać fałszywą datę urodzenia.
 - Brak **age assurance** (narzędzi weryfikujących wiek).
 - **Children's Code UK** (ICO, 2020) wymaga silnej weryfikacji wieku.
@@ -212,7 +212,7 @@ Kara: **12,7 mln GBP**. Pierwotnie ICO rozważał **27 mln GBP**, ale obniżył 
 - **Helen Dixon** — DPC Commissioner 2014–2024.
 - **Dale Sunderland** — Commissioner od 2024.
 - **Des Hogan** — Commissioner od 2024.
-- **Anu Talus** — przewodnicząca EDPB (od 2023), fiński kod.
+- **Anu Talus** — przewodnicząca EDPB od 25 maja 2023, Data Protection Ombudsman Finlandii.
 
 ### ICO / UK
 
