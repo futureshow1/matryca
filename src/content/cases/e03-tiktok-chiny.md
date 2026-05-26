@@ -74,7 +74,7 @@ years_active:
 | Waluta | EUR |
 | Podstawa prawna | RODO art. 46(1) (transfery), art. 13(1)(f) (transparentność); PAFACA (USA federal); SCOTUS *TikTok v. Garland* |
 | Sygnalista/odkrywca | DPC Ireland own-volition inquiry; FBI/Christopher Wray ostrzeżenia |
-| Liczba poszkodowanych | **159 mln** aktywnych użytkowników TikTok w UE; **170 mln** w USA |
+| Liczba poszkodowanych | **159 mln** (stan na 2024; TikTok raportował 175 mln dla 2023) aktywnych użytkowników TikTok w UE; **170 mln** w USA |
 | Status (na dziś) | UE: kara zapłacona, Project Clover; USA: USDS Joint Venture (22.01.2026) |
 
 ---
@@ -434,7 +434,7 @@ DPC rozpoczął dochodzenie **samodzielnie** (bez konkretnej skargi), jako lead 
 - **"Algorytm IP w Pekinie"** — kluczowy problem USDS Joint Venture. Licencja ≠ własność. House Select Committee on CCP uznało **structural deficiency**. Alternatywa: **ByteDance wolała shutdown** niż sprzedaż algorytmu (chińskie export controls).
 - **SCOTUS 9-0** — unanimous decision to **rare** ws. tak kontrowersyjnej sprawy. Pokazuje **siłę national security argument** nawet w składzie ideologicznie podzielonym (Gorsuch, Thomas, Kavanaugh z konserwatywnej strony; Sotomayor, Kagan, Jackson z progresywnej — wszyscy razem).
 - **ACLU + EFF + Knight First Amendment Institute** — amicus brief argumentował, że **PAFACA to cenzura prior restraint**. Nieskuteczne. Ale ich stanowisko pozostaje wzorcem dla przyszłych spraw.
-- **159 mln użytkowników TikTok w UE** — porównywalne z Meta/Instagram. Polska: ~16 mln. TikTok **głęboko wkorzeniony** w kulturze medialnej.
+- **159 mln użytkowników TikTok w UE** (stan na 2024; TikTok raportował 175 mln dla 2023) — porównywalne z Meta/Instagram. Polska: ~16 mln. TikTok **głęboko wkorzeniony** w kulturze medialnej.
 - **"FTC warned domestic technology companies"** (sierpień 2025) — FTC pod Trumpem **ostrzegła**, że **compliance z RODO** przez amerykańskie firmy może być "cenzurą Amerykanów by zadowolić obce państwa" — potencjalnie naruszającą **FTC Act**. To **wyjątkowa** reakcja: USA **broni** swoich firm przed UE regulacjami. Precedens konfliktu jurysdykcji.
 - **TikTok kłamał w śledztwie DPC** — w kwietniu 2025, trzy miesiące **po zamknięciu argumentacji**, TikTok przyznał, że **limited EEA User Data** było jednak na serwerach w Chinach wbrew wcześniejszym zapewnieniom. DPC rozważa **dalsze działania**. To sygnał: nie tylko naruszenie RODO, ale **wprowadzanie regulatora w błąd** — potencjalnie kryminalne.
 - **Jeffrey Yass — kluczowa postać za kulisami** — miliarder, Susquehanna International Group, 15% ByteDance. Trade firm Yass zarobił miliardy na China emerging tech. Trump's reversal on TikTok jest ***szeroko* przypisywana** wpływowi Yassa. Yass też **współinwestor** Trump Media & Technology Group (Truth Social).

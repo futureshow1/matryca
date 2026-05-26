@@ -1,9 +1,11 @@
 ---
 interface Props {
   status: string;
+  /** Optional case ID to apply per-case label overrides (e.g. A08 → "Appeal pending"). */
+  id?: string;
 }
 
-const { status } = Astro.props;
+const { status, id } = Astro.props;
 
 const labels: Record<string, string> = {
   active_investigation: 'Active investigation',
@@ -15,7 +17,12 @@ const labels: Record<string, string> = {
   criminal_proceedings: 'Criminal proceedings',
 };
 
-const label = labels[status] ?? status;
+// Per-case status label overrides (factcheck P3 corrections).
+const PER_CASE_LABELS: Record<string, string> = {
+  A08: 'Appeal pending',
+};
+
+const label = (id && PER_CASE_LABELS[id]) ?? labels[status] ?? status;
 ---
 
 <span class={`status-pill status-pill--${status.replace(/_/g, '-')}`}>

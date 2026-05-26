@@ -47,7 +47,7 @@ explainer:
   src: /animations/c05-linkedin-ai-training.html
   duration: '60s'
   title: LinkedIn AI Training — trening na profilach bez świadomej zgody
-subtitle: Trenowanie na profilach pracowników bez świadomej zgody
+subtitle: 'Kara 310 mln EUR (RODO behavioral ads, X.2024) + monitoring DPC ws. trenowania AI (XI.2025)'
 years_active:
 - 2003
 - 2022

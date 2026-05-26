@@ -47,7 +47,7 @@ explainer:
   src: /animations/c05-linkedin-ai-training.html
   duration: '60s'
   title: LinkedIn AI Training — training on profiles without voluntary opt-in
-subtitle: Training on employee profiles without voluntary opt-in
+subtitle: '€310M fine (GDPR behavioral ads, Oct 2024) + DPC monitoring of AI training (Nov 2025)'
 years_active:
 - 2003
 - 2022

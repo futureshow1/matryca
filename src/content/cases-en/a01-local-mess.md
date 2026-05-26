@@ -66,7 +66,7 @@ years_active:
 | Field | Value |
 |------|---------|
 | Country/region | Global; enforcement hotspots: US (California), EU (German and Spanish DPAs), Russia (Yandex) |
-| Year revealed | June 3, 2025 |
+| Date revealed | June 3, 2025 |
 | Years practice was active | Yandex: 2017–2025; Meta: September 2024 – June 3, 2025 |
 | Total fines | None (as of 04.2026) — proceedings ongoing |
 | Currency | — |

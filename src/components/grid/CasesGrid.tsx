@@ -49,6 +49,14 @@ const STATUS_LABELS: Record<string, string> = {
   criminal_proceedings: 'Postępowanie karne',
 };
 
+// Per-case overrides (factcheck P3 corrections).
+const PER_CASE_STATUS_LABELS: Record<string, string> = {
+  A08: 'Apelacja w toku',
+};
+const PER_CASE_YEAR_LABELS: Record<string, string> = {
+  A08: '2026 (wyrok)',
+};
+
 const CATEGORY_LABELS: Record<string, string> = {
   privacy: 'Prywatność',
   children_safety: 'Bezpieczeństwo dzieci',
@@ -109,8 +117,8 @@ function getTopFine(fines: Fine[]): Fine | null {
   })[0];
 }
 
-function StatusPill({ status }: { status: string }) {
-  const label = STATUS_LABELS[status] ?? status;
+function StatusPill({ status, id }: { status: string; id?: string }) {
+  const label = (id && PER_CASE_STATUS_LABELS[id]) ?? STATUS_LABELS[status] ?? status;
   const isActive = ['active_investigation', 'ongoing_litigation', 'criminal_proceedings'].includes(status);
   return (
     <span
@@ -417,7 +425,7 @@ export default function CasesGrid({ cases }: Props) {
                   {c.id}
                 </span>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--text-tertiary)' }}>
-                  {c.year_revealed}
+                  {PER_CASE_YEAR_LABELS[c.id] ?? c.year_revealed}
                 </span>
               </div>
 
@@ -489,7 +497,7 @@ export default function CasesGrid({ cases }: Props) {
                 paddingTop: '8px',
                 borderTop: '0.5px solid var(--border)',
               }}>
-                <StatusPill status={c.status} />
+                <StatusPill status={c.status} id={c.id} />
                 {topFine && (
                   <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent)', fontWeight: 500 }}>
                     {formatAmount(topFine.amount)} {topFine.currency}

@@ -52,7 +52,7 @@ const totalByCurrency = fines.reduce<Record<string, number>>((acc, f) => {
 <aside class="case-meta" aria-label="Metadane sprawy">
   <div class="case-meta__block">
     <span class="case-meta__label">Status</span>
-    <StatusPill status={status} />
+    <StatusPill status={status} id={id} />
   </div>
 
   <div class="case-meta__block">

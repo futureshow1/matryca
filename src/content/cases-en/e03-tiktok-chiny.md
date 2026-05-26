@@ -74,7 +74,7 @@ years_active:
 | Currency | EUR |
 | Legal basis | GDPR art. 46(1) (transfers), art. 13(1)(f) (transparency); PAFACA (US federal); SCOTUS *TikTok v. Garland* |
 | Whistleblower/discoverer | DPC Ireland own-volition inquiry; FBI/Christopher Wray warnings |
-| Number of affected | **159M** active TikTok users in the EU; **170M** in the US |
+| Number of affected | **159M** (as of 2024; TikTok reported 175M for 2023) active TikTok users in the EU; **170M** in the US |
 | Status (as of today) | EU: fine paid, Project Clover; US: USDS Joint Venture (Jan 22, 2026) |
 
 ---
@@ -434,7 +434,7 @@ The DPC opened the investigation **on its own initiative** (without a specific c
 - **"Algorithm IP in Beijing"** — the key problem with the USDS Joint Venture. License ≠ ownership. The House Select Committee on CCP deemed this a **structural deficiency**. Alternative: **ByteDance preferred shutdown** to selling the algorithm (Chinese export controls).
 - **SCOTUS 9-0** — a unanimous decision is **rare** in such a contested case. It shows **the strength of the national security argument** even on an ideologically divided bench (Gorsuch, Thomas, Kavanaugh from the conservative side; Sotomayor, Kagan, Jackson from the progressive side — all joined).
 - **ACLU + EFF + Knight First Amendment Institute** — an amicus brief argued that **PAFACA is prior-restraint censorship**. Unsuccessful. But their position remains a template for future cases.
-- **159M TikTok users in the EU** — comparable to Meta/Instagram. Poland: ~16M. TikTok is **deeply rooted** in media culture.
+- **159M TikTok users in the EU** (as of 2024; TikTok reported 175M for 2023) — comparable to Meta/Instagram. Poland: ~16M. TikTok is **deeply rooted** in media culture.
 - **"FTC warned domestic technology companies"** (August 2025) — the FTC under Trump **warned** that **GDPR compliance** by American firms could be "censoring Americans to appease foreign states" — potentially violating the **FTC Act**. This is an **unusual** reaction: the US **defending** its companies from EU regulation. A precedent for jurisdictional conflict.
 - **TikTok lied during the DPC investigation** — in April 2025, three months **after closing arguments**, TikTok admitted that **limited EEA User Data** had in fact been on servers in China contrary to earlier assurances. The DPC is considering **further action**. This is a signal: not just a GDPR violation, but **misleading the regulator** — potentially criminal.
 - **Jeffrey Yass — a key figure behind the scenes** — billionaire, Susquehanna International Group, 15% stake in ByteDance. Yass's trading firm earned billions on Chinese emerging tech. Trump's reversal on TikTok is **widely attributed** to Yass's influence. Yass is also a **co-investor** in Trump Media & Technology Group (Truth Social).

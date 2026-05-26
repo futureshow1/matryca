@@ -54,6 +54,12 @@ const topFine = getTopFine(fines);
 const jurisdictionCount = jurisdictions.length;
 const displayTags = tags.slice(0, 3);
 
+// Per-case year-label overrides (factcheck P3 corrections).
+const PER_CASE_YEAR_LABELS: Record<string, string> = {
+  A08: '2026 (verdict)',
+};
+const yearLabel = PER_CASE_YEAR_LABELS[id] ?? String(year_revealed);
+
 // English labels for tags (id → label)
 const TAG_LABELS_EN: Record<string, string> = {
   'dark-patterns': 'dark patterns',
@@ -93,7 +99,7 @@ const TAG_LABELS_EN: Record<string, string> = {
     {hasExplainer && (
       <span class="case-card__explainer meta" title="Has a 60-second explainer">▶ 60s</span>
     )}
-    <span class="case-card__year meta">{year_revealed}</span>
+    <span class="case-card__year meta">{yearLabel}</span>
   </div>
 
   <div class="case-card__title-block">
@@ -120,7 +126,7 @@ const TAG_LABELS_EN: Record<string, string> = {
   )}
 
   <div class="case-card__footer">
-    <StatusPillEn status={status} />
+    <StatusPillEn status={status} id={id} />
     {topFine && (
       <span class="case-card__fine meta">
         {formatAmount(topFine.amount)} {topFine.currency}

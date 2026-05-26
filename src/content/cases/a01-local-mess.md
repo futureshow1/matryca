@@ -66,7 +66,7 @@ years_active:
 | Pole | Wartość |
 |------|---------|
 | Kraj/region | Globalnie; ogniska postępowań: USA (Kalifornia), UE (niemieckie i hiszpańskie DPA), Rosja (Yandex) |
-| Rok ujawnienia | 3 czerwca 2025 |
+| Data ujawnienia | 3 czerwca 2025 |
 | Lata trwania praktyki | Yandex: 2017–2025; Meta: wrzesień 2024 – 3 czerwca 2025 |
 | Łączna kara | Brak (stan na 04.2026) — postępowania w toku |
 | Waluta | — |
