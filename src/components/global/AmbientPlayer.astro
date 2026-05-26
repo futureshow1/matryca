@@ -218,22 +218,18 @@
     function stop() {
       running = false;
       if (intervalId) { clearTimeout(intervalId); intervalId = null; }
-      if (masterGain && ctx) {
-        const t = ctx.currentTime;
-        // setTargetAtTime exponentially approaches the target — does NOT
-        // depend on reading current gain value (which Web Audio reports
-        // as the last setValueAtTime, not the post-ramp computed value).
-        // This is the only fade-out that actually works after a ramp.
-        masterGain.gain.cancelScheduledValues(t);
-        masterGain.gain.setTargetAtTime(0, t, 0.15);
-        // After fade, suspend the AudioContext entirely so even oscillators
-        // that are still running stop producing audible output.
-        const ctxRef = ctx;
-        setTimeout(() => {
-          if (ctxRef && !running && ctxRef.state === 'running') {
-            ctxRef.suspend();
-          }
-        }, 700);
+      // Hard cut: disconnect masterGain from destination. This is synchronous
+      // and atomic — no audio path can flow through a disconnected node, so
+      // we don't depend on fade-out automation or AudioContext suspend timing.
+      // (Previous attempts using setTargetAtTime + setTimeout suspend kept
+      //  failing intermittently — Web Audio's gain readback is unreliable
+      //  during scheduled ramps, and the suspend race window let oscillators
+      //  keep producing audible output in some browsers.)
+      if (masterGain) {
+        try { masterGain.disconnect(); } catch {}
+      }
+      if (ctx && ctx.state === 'running') {
+        ctx.suspend().catch(() => {});
       }
       setVisualState('off');
     }
@@ -243,11 +239,12 @@
         intendedState = 'on';
         localStorage.setItem('matryca-audio', 'on');
         if (ctx && masterGain) {
-          // Already initialized — just resume + fade up
+          // Already initialized — resume context, re-establish audio path, fade up.
+          // stop() disconnected masterGain from destination so we MUST reconnect.
           ctx.resume().then(() => {
             const t = ctx!.currentTime;
-            // Reset gain to 0 explicitly, then ramp up via setTargetAtTime —
-            // setTargetAtTime is reliable regardless of prior automation history.
+            try { masterGain!.connect(ctx!.destination); } catch {}
+            // Reset gain to 0 explicitly, then ramp up via setTargetAtTime.
             masterGain!.gain.cancelScheduledValues(t);
             masterGain!.gain.setValueAtTime(0, t);
             masterGain!.gain.setTargetAtTime(0.18, t, 0.6);
@@ -309,6 +306,7 @@
           if (ctx && masterGain) {
             ctx.resume().then(() => {
               const t = ctx!.currentTime;
+              try { masterGain!.connect(ctx!.destination); } catch {}
               masterGain!.gain.cancelScheduledValues(t);
               masterGain!.gain.setValueAtTime(0, t);
               masterGain!.gain.setTargetAtTime(0.18, t, 0.6);
