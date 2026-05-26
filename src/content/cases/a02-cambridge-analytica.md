@@ -320,14 +320,14 @@ Zuckerberg stał się obiektem memów ze względu na:
 
 | Data | Organ / Strona | Kwota | Jurysdykcja | Podstawa |
 |------|---------|-------|-------------|----------|
-| 25.10.2018 | ICO UK | 500 000 GBP | UK | DPA 1998 |
+| 24.10.2018 | ICO UK | 500 000 GBP | UK | DPA 1998 |
 | 24.07.2019 | FTC | 5 000 000 000 USD | USA | FTC Act sec. 5 + Consent Order 2012 |
 | 24.07.2019 | SEC | 100 000 000 USD | USA | Securities Act, disclosure |
 | 06.12.2019 | FTC (Nix) | zakaz + brak kwoty | USA | FTC Act |
 | 06.12.2019 | FTC (Kogan) | zakaz + brak kwoty | USA | FTC Act |
 | 12.2022 | Pozew zbiorowy (Meta) | 725 000 000 USD | USA | Federal i stanowe |
 | 30.07.2024 | Stan Teksas | 1 400 000 000 USD | USA | CUBI, DTPA |
-| 09.2025 | Pozew akcjonariuszy | 8 000 000 000 USD | USA (Delaware) | Breach of fiduciary duty |
+| 17.07.2025 | Pozew akcjonariuszy | nieujawnione (żądano 8 mld USD) | USA (Delaware) | Breach of fiduciary duty |
 
 **Razem (przybliżenie):** ~15,7 mld USD + 500 tys. GBP (choć ugoda teksańska jest uznawana także za pokrycie sprawy biometrycznej, a ugoda akcjonariuszy obejmuje szersze zagadnienia nadzoru).
 

@@ -29,38 +29,44 @@ fines:
   status: paid
 - amount: 391500000
   currency: USD
-  authority: 40 AG USA
+  authority: 40 US AGs
   date: 2022-11
   category: state_attorney_general
   status: paid
-- amount: 29500000
+- amount: 20000000
   currency: USD
-  authority: DC + IN + TX + WA
-  date: 2023-01
+  authority: Indiana AG
+  date: 2022-12
+  category: state_attorney_general
+  status: paid
+- amount: 9500000
+  currency: USD
+  authority: DC AG
+  date: 2022-12
   category: state_attorney_general
   status: paid
 - amount: 8000000
   currency: USD
-  authority: TX osobno
+  authority: TX AG (Pixel 4 DJ ads, not location)
   date: 2023-01
   category: state_attorney_general
   status: paid
-- amount: 35000000
-  currency: EUR
-  authority: ACCC (AU, ~60 mln AUD)
-  date: '2023'
-  category: regulatory_fine
-  status: paid
-- amount: 48000000
-  currency: EUR
-  authority: PIPC (KR, ~69,2 mld KRW)
-  date: '2023'
-  category: regulatory_fine
-  status: paid
-- amount: 93000000
+- amount: 40000000
   currency: USD
-  authority: '*Patacsil v. Google*'
-  date: '2024'
+  authority: ACCC / Federal Court of Australia (~AUD 60M)
+  date: 2022-08
+  category: regulatory_fine
+  status: paid
+- amount: 50000000
+  currency: USD
+  authority: PIPC South Korea (~KRW 69.2B)
+  date: 2022-09
+  category: regulatory_fine
+  status: paid
+- amount: 62000000
+  currency: USD
+  authority: '*Patacsil v. Google* (cy pres)'
+  date: 2024-04
   category: class_action_settlement
   status: paid
 whistleblowers: []
@@ -98,7 +104,7 @@ years_active:
 > **Category:** Location tracking / misleading interfaces / deceptive practices
 > **Company/companies:** Google (Alphabet)
 > **Years:** 2014–2022 (practice), August 13, 2018 (disclosure), 2022–2024 (settlements)
-> **Status:** Concluded — record $391.5 million settlement with 40 states; additional penalties in AU, KR, US states
+> **Status:** Concluded (on the location track) — record $391.5 million settlement with 40 states; additional penalties in AU, KR, US states; the separate Texas location case closed in 2025 with a $1.375 billion settlement
 > **Card ID:** B04
 
 ---
@@ -110,7 +116,7 @@ years_active:
 | Country/region | USA (40+ states), Australia, South Korea, EU (limited) |
 | Year revealed | August 13, 2018 (*Associated Press*, Ryan Nakashima) |
 | Years of practice | 2014–2022 (over 8 years) |
-| Total penalties | **~$660 million / ~€610 million** total (USA + AU + KR + class actions) |
+| Total penalties | **~$620 million** (location track: state AGs + ACCC + PIPC on Google + *Patacsil* cy pres). Excludes the $8M Texas Pixel 4 ad settlement (separate case) and the $1.375B Texas location settlement of 2025. |
 | Currency | USD/AUD/KRW/EUR |
 | Legal basis | State consumer protection (40 US states), FTC Act § 5, GDPR art. 6, 7, 13; ACL (Australia); PIPA (Korea) |
 | Whistleblower/discoverer | **Ryan Nakashima** (*Associated Press*) + **Douglas C. Schmidt** (Vanderbilt) |
@@ -125,7 +131,7 @@ years_active:
 
 A landmark 2018 report by **Prof. Douglas Schmidt** of Vanderbilt University: an Android sitting idle on a desk, with nobody using it, **sends 340 telemetry transmissions to Google per day**. By comparison, an iPhone in an analogous state: about 30 per day to Apple.
 
-**November 14, 2022 — 40 US state attorneys general** reached a joint settlement with Google for **$391.5 million** — **a record of its kind in US consumer-law history before 2024**. Earlier: **Arizona separately: $85 million** (October 2022). After: **DC + Indiana + Texas + Washington: $29.5 million** (January 2023). **Texas again separately: $8 million** (same month). **Australia ACCC: AUD 60 million** (2023). **South Korea PIPC: KRW 80 billion** (~$60 million, 2023). **Federal class action: $93 million** (2024).
+**November 14, 2022 — 40 US state attorneys general** reached a joint settlement with Google for **$391.5 million** — **a record of its kind in US consumer-law history before 2024**. Earlier: **Arizona separately: $85 million** (October 2022). After: **December 29, 2022 — Indiana $20 million; December 30, 2022 — DC $9.5 million** (totaling $29.5M; Texas and Washington did NOT enter this settlement in that timeframe). **January 2023 — Texas separately: $8 million** — but that settlement was over **misleading Pixel 4 ads (DJ endorsements), NOT location tracking**. The Texas location case ended in 2025 with a $1.375 billion settlement. **August 12, 2022 — Federal Court of Australia: AUD 60 million**. **September 14, 2022 — South Korea PIPC: KRW 69.2 billion** (~$50 million) on Google (and a separate KRW 30.8 billion on Meta — totaling KRW 100 billion). **April 2024 — Patacsil et al. v. Google: $62 million cy pres** (Berkman Klein, Free Press, ACLU N. Cal., CDT, EFF); class members did NOT receive individual payments.
 
 Internal Google documents disclosed in the Arizona lawsuit showed that **Google had known about user confusion since 2014**. Internal engineers proposed simplifying the settings. Management rejected the idea: **"this will reduce ad targeting precision."** In another internal email, **Google Maps VP Jen Fitzpatrick** herself admitted that **she did not fully understand how the two settings worked**.
 
@@ -146,14 +152,16 @@ The case became **a textbook example of misleading interfaces** — deliberately
 - **September 2018** — Class action **Patacsil v. Google** (N.D. California).
 - **May 2020** — Arizona AG (Mark Brnovich) files *State of Arizona v. Google*.
 - **January 2022** — 4 state AGs join: DC (Karl Racine), Indiana, Texas, Washington.
+- **August 12, 2022** — **Federal Court of Australia imposes AUD 60 million on Google** (ACCC action).
+- **September 14, 2022** — **South Korea PIPC: KRW 69.2 billion** (~$50M) on Google + KRW 30.8 billion (~$22M) on Meta (KRW 100 billion combined).
 - **October 2022** — **Arizona wins: $85 million settlement**.
 - **November 14, 2022** — **40 US attorneys general reach a joint settlement: $391.5 million** (historic record).
-- **January 2023** — **DC + Indiana + Texas + Washington: $29.5 million**.
-- **January 2023** — **Texas separately: $8 million**.
-- **2023** — **Australia ACCC: AUD 60 million**.
-- **2023** — **South Korea PIPC: KRW 80 billion**.
-- **2024** — federal class-action settlement: **$93 million**.
+- **December 29, 2022** — **Indiana: $20 million**.
+- **December 30, 2022** — **DC: $9.5 million** (combined with Indiana: $29.5M).
+- **January 2023** — **Texas separately: $8 million** — but for **misleading Pixel 4 ads (DJ endorsements)**, NOT location tracking.
+- **April 2024** — **federal class-action settlement *Patacsil et al. v. Google*: $62 million cy pres** (Berkman Klein, Free Press, ACLU N. Cal., CDT, EFF); class members did NOT receive individual payments. Lead plaintiffs: Napoleon Patacsil, Michael Childs, Noe Gamboa.
 - **2024** — Google announces reforms: **Location History off by default for new accounts**; interface simplification.
+- **2025** — the Texas location case closes with a **$1.375 billion** settlement (separate from the Pixel 4 settlement).
 
 ---
 
@@ -320,15 +328,18 @@ Schmidt's report was funded by **DCN (Digital Content Next)**, a publishers' ass
 |------|-------|
 | August 2018 | AP publication; Google changes help text |
 | May 2020 | Arizona lawsuit |
+| August 12, 2022 | Federal Court of Australia: AUD 60M |
+| September 14, 2022 | South Korea PIPC: KRW 69.2B (Google) |
 | October 2022 | Arizona wins $85 million |
 | November 14, 2022 | 40 states, $391.5 million |
-| January 2023 | DC+3, Texas separately |
-| 2023 | Australia, Korea |
-| 2024 | Class action $93 million |
+| December 29–30, 2022 | Indiana $20M + DC $9.5M |
+| January 2023 | Texas $8M (Pixel 4 DJ ads — NOT location) |
+| April 2024 | *Patacsil v. Google*: $62M cy pres |
+| 2025 | Texas (location, separate case): $1.375B |
 
 ### Related case law
 
-- ***Carpenter v. United States* (585 U.S. 296, 2018)** — US Supreme Court: **the 4th Amendment requires a warrant** for the government to obtain cell-site location data from a mobile carrier. Directly connected to Google Location History — later extended to **geofence warrants**.
+- ***Carpenter v. United States* (585 U.S. 296, 2018)** — US Supreme Court, decided **June 22, 2018** by a 5-4 vote (majority opinion: Chief Justice **John Roberts**): **the 4th Amendment requires a warrant** for the government to obtain cell-site location data from a mobile carrier. Directly connected to Google Location History — later extended to **geofence warrants**.
 - **Safari Workaround case (B02)** — analogous pattern of "deception."
 - **Onavo case (A03)** — broader practice of hidden tracking.
 
@@ -338,15 +349,18 @@ Schmidt's report was funded by **DCN (Digital Content Next)**, a publishers' ass
 
 | Date | Body | Amount | Jurisdiction | Basis |
 |------|------|--------|--------------|-------|
+| August 12, 2022 | Federal Court of Australia (ACCC) | AUD 60,000,000 | Australia | ACL |
+| September 14, 2022 | PIPC | KRW 69,200,000,000 (~$50M) | Korea | PIPA |
 | October 2022 | AZ AG | $85,000,000 | Arizona | Consumer Fraud Act |
 | November 14, 2022 | 40 US AGs | **$391,500,000** | US state | Consumer protection |
-| January 2023 | DC + IN + TX + WA | $29,500,000 | States | as above |
-| January 2023 | TX separately | $8,000,000 | Texas | as above |
-| 2023 | ACCC | AUD 60,000,000 | Australia | ACL |
-| 2023 | PIPC | KRW 80,000,000,000 | Korea | PIPA |
-| 2024 | *Patacsil v. Google* | $93,000,000 | US class | State laws |
+| December 29, 2022 | Indiana AG | $20,000,000 | Indiana | Consumer protection |
+| December 30, 2022 | DC AG | $9,500,000 | DC | Consumer protection |
+| January 2023 | TX AG (Pixel 4 DJ ads — NOT location) | $8,000,000 | Texas | False advertising |
+| April 2024 | *Patacsil v. Google* (cy pres, no individual payments) | $62,000,000 | US class | State laws |
 
-**Total: ~$660 million / ~€610 million**
+**Total (location-track cases, excluding Pixel 4 and 2025 Texas): ~$620 million**
+
+> **Note:** the $8M Texas settlement (January 2023) was about **misleading Pixel 4 advertising** (DJ endorsements), NOT location tracking. The Texas location case ended only in **2025 with a $1.375 billion settlement**. From Korea: KRW 69.2B on Google + KRW 30.8B on Meta = KRW 100B combined.
 
 ---
 
@@ -376,7 +390,7 @@ Schmidt's report was funded by **DCN (Digital Content Next)**, a publishers' ass
 
 | Case | Court | Status | Value | Affected |
 |------|-------|--------|-------|----------|
-| *Patacsil et al. v. Google* | N.D. Cal. | Settled 2024 | $93 million | Android users, USA |
+| *Patacsil et al. v. Google* | N.D. Cal. | Settled April 2024 | **$62 million cy pres** (Berkman Klein, Free Press, ACLU N. Cal., CDT, EFF) — class members did NOT receive individual payments. Lead plaintiffs: Napoleon Patacsil, Michael Childs, Noe Gamboa | Android users, USA |
 | *Matera v. Google* | N.D. Cal. | Settled | Part of the above | Chrome users |
 | *Roe v. Google* (geofence) | N.D. Cal. | Pending | Undetermined | People affected by geofence warrants |
 
@@ -452,16 +466,16 @@ Procedure: the client can download their own data via **takeout.google.com** →
 
 ## Context
 
-- **Nakashima's 20-phone experiment** cost AP about **$5,000**. The consequences: **$660+ million in fines** for Google and global reform of its settings. **Journalism ROI**: ~132,000×.
+- **Nakashima's 20-phone experiment** cost AP about **$5,000**. The consequences: **$620+ million in fines** for Google (location track only, excluding the Pixel 4 settlement and the $1.375B Texas 2025 settlement) and a global reform of its settings. **Journalism ROI**: ~124,000×.
 - **Schmidt's report — 340 transmissions per day** — since 2018 this number has been cited in hundreds of articles, books, academic lectures, and congressional testimony. By comparison: iPhone ~30/day. The 10× difference shows the scale of Google's ecosystem.
 - **"Google already knew"** — internal emails from 2014, disclosed in the Arizona lawsuit, showed that Google **had known about user confusion from the start**. Engineers proposed simplification. Management rejected it because **"it will reduce ad targeting precision by 12%."**
 - **The VP of Maps didn't understand her own product** — in an internal email, Jen Fitzpatrick herself admitted that **she was not sure** how the two settings worked. A classic case of "emergent complexity" — a product that **its own leaders** do not understand.
 - **Poland did not receive a separate penalty** — UODO did not open proceedings, because the case sat with Ireland's DPC via the one-stop-shop mechanism. The DPC did not treat the case as a priority. Polish citizens were, however, part of class actions that could generate compensation.
-- ***Carpenter v. United States* (SCOTUS 2018)** — a landmark ruling. Timothy Carpenter was convicted of robberies in Detroit in part on the basis of **127 days of location data** obtained from a mobile carrier **without a warrant**. The US Supreme Court ruled 5:4: such data requires **a judicial warrant** under the 4th Amendment. This changed police practice across the US — and indirectly opened a discussion on **geofence warrants** to Google.
+- ***Carpenter v. United States* (SCOTUS 2018)** — a landmark ruling decided **June 22, 2018**, majority opinion by Chief Justice **John Roberts**. Timothy Carpenter was convicted of robberies in Detroit in part on the basis of **127 days of location data** obtained from a mobile carrier **without a warrant**. The US Supreme Court ruled 5:4: such data requires **a judicial warrant** under the 4th Amendment. This changed police practice across the US — and indirectly opened a discussion on **geofence warrants** to Google.
 - **"Geofence warrants"** — a technique in which police ask Google: "give us all phones within a 500 m radius of a crime scene between 2:00 and 4:00 p.m." The list may contain dozens or hundreds of people — including innocent bystanders. In 2023, Google **announced an architecture change**: the new Location History infrastructure does not allow such queries to be answered. This limited an investigative tool for police — mainly in the US, where geofence warrants were used in tens of thousands of cases per year.
-- **Conservative Texas was first** — in January 2023, Texas (a state **not known for active consumer-protection policy**) entered a separate $8 million settlement. Unusual. Analysts explain: AG **Ken Paxton** (Republican) used cases against Big Tech as a political tool in his conflict with Silicon Valley.
-- **Australia ACCC** — in 2021, the Australian market regulator lost the first trial-level case. Only on appeal (2023) did it secure an AUD 60 million penalty. A case-law precedent for common-law jurisdictions.
-- **South Korea** — the KRW 80 billion fine (~$60 million) imposed by the PIPC (Personal Information Protection Commission) was one of the largest in the agency's history. Korea is particularly strict about location data.
+- **Texas — note: two distinct cases** — the January 2023 settlement under AG **Ken Paxton** (Republican) of $8 million was over **misleading Pixel 4 ads (DJ endorsements)**, NOT location tracking. The Texas location case ended only in **2025 with a $1.375 billion settlement**.
+- **Australia ACCC** — in 2021, the Australian market regulator lost the first trial-level case. The appeal resulted in a decision by the **Federal Court of Australia on August 12, 2022 imposing AUD 60 million**. A case-law precedent for common-law jurisdictions.
+- **South Korea** — on **September 14, 2022**, the PIPC (Personal Information Protection Commission) imposed a **combined KRW 100 billion** on Google + Meta: **KRW 69.2 billion (~$50M) on Google** and **KRW 30.8 billion (~$22M) on Meta**. One of the largest decisions in the agency's history. Korea is particularly strict about location data.
 - **Google Takeout as an answer** — after the case, Google made it easier to download location history as a "response to privacy concerns." In practice: downloading one's own data shows most users **how detailed it is**, which is often shocking.
 
 ---
@@ -478,11 +492,13 @@ Procedure: the client can download their own data via **takeout.google.com** →
 
 5. *Carpenter v. United States*, 585 U.S. 296 (2018) — SCOTUS ruling. URL: https://www.supremecourt.gov/opinions/17pdf/16-402_h315.pdf
 
-6. Australian Competition & Consumer Commission, "ACCC v Google LLC & Anor," 2023 decision.
+6. Australian Competition & Consumer Commission, *ACCC v Google LLC & Anor*, Federal Court of Australia decision of August 12, 2022 (AUD 60M). See DLA Piper analysis.
 
-7. Personal Information Protection Commission (Korea), 2023 decision imposing a KRW 80 billion fine.
+7. Personal Information Protection Commission (Korea), decision of September 14, 2022 — KRW 69.2 billion on Google + KRW 30.8 billion on Meta (KRW 100 billion combined). See TechCrunch, "South Korea's privacy watchdog fines Google and Meta…," September 14, 2022.
 
-8. *Patacsil et al. v. Google LLC*, N.D. Cal., PACER documents.
+8. *Patacsil et al. v. Google LLC*, N.D. Cal., PACER documents. Settlement approved in April 2024 ($62 million cy pres distribution to Berkman Klein, Free Press, ACLU N. Cal., CDT, EFF; class members did not receive individual payments). See MediaPost, April 22, 2024.
+
+8a. Kelley Drye & Warren LLP — analysis of the January 2023 Texas vs Google settlement ($8 million over misleading Pixel 4 ads — DJ endorsements; NOT location tracking).
 
 9. *Matera v. Google Inc.*, N.D. Cal., related lawsuit.
 

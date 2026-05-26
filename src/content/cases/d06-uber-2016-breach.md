@@ -20,7 +20,7 @@ legal_basis:
 fines:
 - amount: 148000000
   currency: USD
-  authority: 50 stanów USA
+  authority: 50 stanów USA i Dystrykt Kolumbii
   date: 2018-09
   category: state_attorney_general
   status: paid
@@ -78,14 +78,14 @@ years_active:
 | Waluta | USD |
 | Podstawa prawna | Obstruction of justice (18 USC § 1505); misprision of felony (18 USC § 4); breach notification laws (50 stanów); FTC Act |
 | Sygnalista/odkrywca | Wewnętrzne zgłoszenia + nowa administracja Uber pod Dara Khosrowshahi (2017) |
-| Liczba poszkodowanych | **57 milionów** klientów + 600 000 kierowców USA (nr prawa jazdy) |
+| Liczba poszkodowanych | **57 milionów kont łącznie**: ~50 mln pasażerów i ~7 mln kierowców. Dodatkowo ~600 000 amerykańskich kierowców miało ujawnione numery prawa jazdy (podzbiór 7 mln). |
 | Status (na dziś) | Sullivan: 3 lata probation + 50 000 USD; Uber: 148 mln USD ugoda; 9th Circuit potwierdził 13.03.2025 |
 
 ---
 
 ## W skrócie
 
-**14 listopada 2016** — dwóch hakerów (**Brandon Charles Glover** i **Vasile Mereacre**) włamało się do serwera Uber w **Amazon S3** używając **klucza AWS** znalezionego na prywatnym GitHub pracownika Uber. Ukradli dane **57 milionów kont** — w tym **600 000 numerów prawa jazdy amerykańskich kierowców Uber**. Hakerzy skontaktowali się z Uber, żądając **okupu**.
+**14 listopada 2016** — dwóch hakerów (**Brandon Charles Glover** i **Vasile Mereacre**) włamało się do serwera Uber w **Amazon S3** używając **klucza AWS** znalezionego na prywatnym GitHub pracownika Uber. Ukradli dane **57 mln kont łącznie**: ~50 mln pasażerów i ~7 mln kierowców. Dodatkowo ~600 000 amerykańskich kierowców miało ujawnione numery prawa jazdy (podzbiór 7 mln). Hakerzy skontaktowali się z Uber, żądając **okupu**.
 
 **Joe Sullivan** — **Chief Security Officer** (CSO) Uber od 2015, wcześniej CSO Facebook i federalny prokurator — odebrał telefon. Wybrał radykalne podejście: **ukrył wyciek przed władzami**.
 
@@ -104,7 +104,7 @@ Plan Sullivana:
 
 **21 listopada 2017** — Khosrowshahi **publicznie ujawnia** wyciek i fakt jego ukrywania. **Sullivan zwolniony**.
 
-**Wrzesień 2018** — 50 stanów USA zawiera wspólną ugodę z Uber: **148 mln USD** (za breach notification failures; obejmuje także sprawy D04, D05).
+**26 września 2018** — 50 stanów USA i Dystrykt Kolumbii zawierają wspólną ugodę z Uber: **148 mln USD** (za breach notification failures; obejmuje także sprawy D04, D05).
 
 **20 sierpnia 2020** — **DOJ składa zarzuty karne** przeciw Sullivan: **obstruction of justice** (utrudnianie śledztwa FTC) + **misprision of felony** (ukrywanie wiedzy o popełnionym przestępstwie federalnym).
 
@@ -112,7 +112,7 @@ Plan Sullivana:
 
 **4 maja 2023** — sędzia **William H. Orrick** wydaje wyrok: **3 lata probacji** (zamiast 15 miesięcy więzienia, które proponowali prokuratorzy) + **50 000 USD kary** + **200 godzin prac społecznych**. Obronie: niespodziewanie lekki wyrok.
 
-**13 marca 2025** — **9th Circuit Court of Appeals** (sędzia **Mary McKeown**) **jednogłośnie** potwierdza wyrok: *"even if Sullivan believed the hackers were unauthorized... he could not reasonably believe that treating the hack as a bug bounty and having the hackers sign NDAs cleansed the illegal conduct."*
+**13 marca 2025** — **9th Circuit Court of Appeals** (sędzia **M. Margaret McKeown** (Mary Margaret), Senior United States Circuit Judge, 9th Circuit, status senior od 15 września 2022; wyrok wydał jednogłośny panel trójosobowy: McKeown autorka opinii + Anthony D. Johnstone + Ana de Alba) **jednogłośnie** potwierdza wyrok: „even if Sullivan believed the hackers were unauthorized... he could not reasonably believe that treating the hack as a bug bounty and having the hackers sign NDAs cleansed the illegal conduct."
 
 **Precedens:** D06 jest **pierwszym w historii** skazaniem CISO za karne mishandling breach. Stała się **kanoniczną sprawą** w cybersecurity law — każdy podręcznik corporate security compliance zawiera teraz case study *U.S. v. Sullivan*. **SEC Cybersecurity Disclosure Rules (2023)** — bezpośrednio inspirowane sprawą.
 
@@ -134,14 +134,14 @@ Plan Sullivana:
 - **Jesień 2017** — Tony West (nowy CLO) i zewnętrzna kancelaria odkrywają historię.
 - **21 listopada 2017** — Khosrowshahi **publicznie ujawnia** wyciek. Sullivan **zwolniony**.
 - **Kwiecień 2018** — FTC drugi ugoda z regulatorem (obejmuje D04, D05, D06).
-- **Wrzesień 2018** — 50 stanów USA: **148 mln USD** ugoda.
-- **2019** — hakerzy Glover i Mereacre skazani za swoje czyny (nie Sullivana).
+- **26 września 2018** — 50 stanów USA i Dystrykt Kolumbii: **148 mln USD** ugoda.
+- **Październik 2019** — hakerzy Brandon Charles Glover (Floryda, 26 lat) i Vasile Mereacre (Toronto, Kanada, 23 lata) przyznali się do winy za swoje czyny (nie Sullivana).
 - **20 sierpnia 2020** — DOJ składa zarzuty karne przeciw Sullivan.
 - **5 września 2022** — początek procesu Sullivan w N.D. California.
 - **5 października 2022** — **ława przysięgłych skazuje** Sullivana jednomyślnie na oba zarzuty.
 - **4 maja 2023** — **wyrok Sullivana**: 3 lata probacji + 50 000 USD + 200 godzin prac społecznych. Sędzia William H. Orrick.
 - **Czerwiec 2023** — Sullivan apeluje.
-- **13 marca 2025** — **9th Circuit Court of Appeals** potwierdza wyrok jednogłośnie. Sędzia Mary McKeown (Clinton appointee) autorka opinii.
+- **13 marca 2025** — **9th Circuit Court of Appeals** potwierdza wyrok jednogłośnie. Sędzia M. Margaret McKeown (Mary Margaret), Senior United States Circuit Judge, 9th Circuit (status senior od 15 września 2022; Clinton appointee), autorka opinii. Jednogłośny panel trójosobowy: McKeown + Anthony D. Johnstone + Ana de Alba.
 
 ---
 
@@ -157,8 +157,8 @@ Glover i Mereacre używali automatycznych narzędzi do skanowania publicznych re
 
 **Krok 3: Włamanie do S3.**
 Używając kluczy, hakerzy pobrali **pełną bazę klientów Uber z Amazon S3**:
-- 57 mln kont — imię, email, telefon
-- 600 000 amerykańskich kierowców — numery prawa jazdy
+- 57 mln kont łącznie: ~50 mln pasażerów i ~7 mln kierowców — imię, email, telefon
+- Dodatkowo ~600 000 amerykańskich kierowców miało ujawnione numery prawa jazdy (podzbiór 7 mln)
 - **Nie zostały skradzione**: numery kart kredytowych, historia podróży (w tych plikach)
 
 **Krok 4: Żądanie okupu.**
@@ -226,7 +226,7 @@ Khosrowshahi ogłosił:
 
 ### Uber
 
-- **Joe Sullivan** — CSO 2015–2017. Wcześniej CSO Facebook (2008–2015), federalny prokurator (2000s).
+- **Joe Sullivan** — Associate General Counsel Facebook (2008), CSO Facebook (styczeń 2010 – kwiecień 2015), CSO Uber (wiosna 2015 – listopad 2017), CSO Cloudflare (maj 2018 – lipiec 2022). Wcześniej federalny prokurator (2000s).
 - **Travis Kalanick** — CEO, autoryzował plan Sullivana.
 - **Dara Khosrowshahi** — CEO od sierpnia 2017, ujawnił sprawę.
 - **Tony West** — Chief Legal Officer od 2017, odkrył.
@@ -235,9 +235,9 @@ Khosrowshahi ogłosił:
 
 ### Hakerzy
 
-- **Brandon Charles Glover** — 26 lat, Floryda.
-- **Vasile Mereacre** — 23 lata, Toronto, Kanada.
-- Obaj skazani 2019 za ataki na LinkedIn i innych (nie Uber breach konkretnie).
+- **Brandon Charles Glover** — Floryda, 26 lat w 2019.
+- **Vasile Mereacre** — Toronto, Kanada, 23 lata w 2019.
+- Obaj przyznali się do winy w październiku 2019 (za ataki na LinkedIn i innych, nie Uber breach konkretnie).
 
 ### Prokuratorzy
 
@@ -247,7 +247,7 @@ Khosrowshahi ogłosił:
 ### Sędziowie
 
 - **William H. Orrick** — United States District Judge, N.D. California. Nominowany przez Obama 2013.
-- **Mary McKeown** — Senior U.S. Circuit Judge, 9th Circuit. Nominowana przez Clinton.
+- **M. Margaret McKeown (Mary Margaret)** — Senior United States Circuit Judge, 9th Circuit (status senior od 15 września 2022). Nominowana przez Clinton. Autorka opinii w jednogłośnym panelu trójosobowym (z Anthony D. Johnstone i Ana de Alba).
 
 ### Obrońcy Sullivana
 
@@ -298,7 +298,7 @@ Khosrowshahi ogłosił:
 | Listopad 2016 – 2017 | Ukrywanie |
 | 21 listopada 2017 | Publiczne ujawnienie |
 | Kwiecień 2018 | FTC drugi ugoda z regulatorem |
-| Wrzesień 2018 | 148 mln USD ugoda |
+| 26 września 2018 | 148 mln USD ugoda |
 | 20 sierpnia 2020 | Zarzuty karne Sullivan |
 | 5 października 2022 | **Skazanie jury** |
 | 4 maja 2023 | Wyrok (probacja) |
@@ -317,7 +317,7 @@ Khosrowshahi ogłosił:
 
 | Data | Organ | Kwota | Jurysdykcja | Podstawa |
 |------|-------|-------|-------------|----------|
-| Wrzesień 2018 | 50 stanów USA | **148 000 000 USD** | USA stanowe | Breach notification |
+| 26 września 2018 | 50 stanów USA i Dystrykt Kolumbii | **148 000 000 USD** | USA stanowe | Breach notification |
 | 4 maja 2023 | Sąd federalny | 50 000 USD + 3 lata probacji + 200h prac społecznych | USA federalne | Obstruction + misprision |
 
 **Sullivan miał groźbę do 8 lat więzienia**. Dostał probację — prokuratorzy protestowali. Sędzia Orrick argumentował: "message sent" bez "ruining a life".
@@ -403,9 +403,9 @@ Sprawa pokazuje szerszy trend: **dane klientów nie są dobrze chronione** przez
 
 - **"We can't let this get out"** — cytat Sullivana, który stał się **najsłynniejszym zdaniem w cybersecurity law**. Powtarzany w setkach prezentacji, szkoleń, wykładów akademickich.
 - **10 dni po zeznaniu FTC** — timing jest kluczowy. Sullivan zeznawał 4 listopada 2016 pod przysięgą o 2014 breach. 14 listopada 2016 otrzymał wiadomość o nowym breach. **Dosłownie 10 dni**. To robi sprawę **znacznie gorszą** — Sullivan aktywnie wiedział, jakie są oczekiwania prawne, i świadomie je obszedł.
-- **Joe Sullivan — karierа paradoks** — były **federalny prokurator** (wczesne lata 2000), potem **CSO Facebook** (2008–2015), potem **CSO Uber** (2015–2017), potem **CSO Cloudflare** (2018–2022, do wszczęcia procesu). Dzień, gdy **federalny prokurator** stał się **pierwszym skazanym CISO**.
+- **Joe Sullivan — karierа paradoks** — były **federalny prokurator** (wczesne lata 2000), potem **Associate General Counsel Facebook** (2008), **CSO Facebook** (styczeń 2010 – kwiecień 2015), **CSO Uber** (wiosna 2015 – listopad 2017), **CSO Cloudflare** (maj 2018 – lipiec 2022). Dzień, gdy **federalny prokurator** stał się **pierwszym skazanym CISO**.
 - **Sędzia Orrick's leniency** — prokuratorzy prosili 15 miesięcy więzienia. Orrick dał **probację + prace społeczne**. Argument: Sullivan nie ukradł pieniędzy, nie skorzystał osobiście. Prokuratorzy protestowali. Obrona: "fair".
-- **9th Circuit potwierdzenie (2025)** — sędzia Mary McKeown, Bill Clinton appointee, autor opinii. Cytat: *"even if Sullivan believed the hackers were unauthorized within the meaning of the Computer Fraud and Abuse Act, he could not reasonably believe that treating the hack as a bug bounty and having the hackers sign NDAs cleansed the illegal conduct."*
+- **9th Circuit potwierdzenie (2025)** — sędzia M. Margaret McKeown (Mary Margaret), Bill Clinton appointee, Senior United States Circuit Judge (status senior od 15 września 2022), autorka opinii w jednogłośnym panelu trójosobowym (z Anthony D. Johnstone i Ana de Alba). Cytat: „even if Sullivan believed the hackers were unauthorized within the meaning of the Computer Fraud and Abuse Act, he could not reasonably believe that treating the hack as a bug bounty and having the hackers sign NDAs cleansed the illegal conduct."
 - **HackerOne embarrassment** — platforma bug bounty była świadomym uczestnikiem (choć niewinnym) w planie Sullivana. Po skandalu HackerOne wprowadził **stricter review** wypłat, szczególnie powyżej 10 000 USD. Obecnie wypłaty 100 000+ USD wymagają **external legal review**.
 - **Yahoo parallel** — wcześniej (2016) Yahoo ujawniło wyciek 500 mln kont z 2014 (2 lata ukrywania). **Marissa Mayer** (CEO Yahoo) utraciła 12 mln USD premii. Ale **nie było criminal charges**. Po Sullivan: **criminal charges są opcją**.
 - **Bug bounty etyka** — przed Sullivan społeczność bug bounty (HackerOne, Bugcrowd, YesWeHack) miała silną kulturę "płać za lukę". Po Sullivan: **jeśli znalezisko zostało już wyexploitowane**, to nie jest bug bounty, to **extortion**.
@@ -426,7 +426,7 @@ Sprawa pokazuje szerszy trend: **dane klientów nie są dobrze chronione** przez
 
 2. Department of Justice, "Former Chief Security Officer Of Uber Sentenced To Three Years' Probation For Covering Up Data Breach Involving Millions Of Uber User Records", 4 maja 2023. URL: https://www.justice.gov/usao-ndca/pr/former-chief-security-officer-uber-sentenced-three-years-probation-covering-data (dostęp: 2026-04-17)
 
-3. United States v. Sullivan, 9th Circuit Court of Appeals, opinion by Senior Judge Mary McKeown, 13 marca 2025.
+3. United States v. Sullivan, 9th Circuit Court of Appeals, opinion by Senior Judge M. Margaret McKeown (panel: McKeown, Anthony D. Johnstone, Ana de Alba), 13 marca 2025.
 
 4. Dara Khosrowshahi, "2016 Data Security Incident", Uber blog, 21 listopada 2017.
 
@@ -434,7 +434,7 @@ Sprawa pokazuje szerszy trend: **dane klientów nie są dobrze chronione** przez
 
 6. Federal Trade Commission, "In the Matter of Uber Technologies Inc.", File No. 152-3054, kwiecień 2018.
 
-7. 50 states multi-state settlement, wrzesień 2018.
+7. 50 states + DC multi-state settlement, 26 września 2018 (NY AG Underwood press release).
 
 8. *Darknet Diaries* podcast episode 138, Jack Rhysider.
 

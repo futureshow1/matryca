@@ -21,8 +21,8 @@ legal_basis:
 fines:
 - amount: 95000000
   currency: USD
-  authority: '*Lopez v. Apple*'
-  date: 2024-01
+  authority: '*Lopez v. Apple* (4:19-cv-04577-JSW, N.D. Cal.)'
+  date: 2025-10
   category: class_action_settlement
   status: paid
 whistleblowers:
@@ -61,8 +61,8 @@ years_active:
 
 > **Kategoria:** Voice assistants / podsłuchiwanie / sygnalista / "Privacy" branding Apple
 > **Firma/firmy:** Apple (kontraktorzy: GlobeTech w Cork, Irlandia)
-> **Lata:** 2014–2019 (praktyka), 26 lipca 2019 (ujawnienie), styczeń 2024 (ugoda)
-> **Status:** Zakończone — program zawieszony; ugoda 95 mln USD (Lopez v. Apple)
+> **Lata:** 2014–2019 (praktyka), 26 lipca 2019 (ujawnienie), początek stycznia 2025 (wstępna ugoda), 16 października 2025 (zatwierdzenie ugody)
+> **Status:** Zakończone — program zawieszony; ugoda 95 mln USD (Lopez v. Apple, 4:19-cv-04577-JSW)
 > **ID karty:** C02
 
 ---
@@ -79,7 +79,7 @@ years_active:
 | Podstawa prawna | California Invasion of Privacy Act (CIPA), Federal Wiretap Act; w UE hipotetycznie RODO art. 5, 6, 9 |
 | Sygnalista/odkrywca | **Thomas Le Bonniec** (były kontraktor GlobeTech); dziennikarz **Alex Hern** (*The Guardian*) |
 | Liczba poszkodowanych | Dziesiątki/setki milionów użytkowników Siri (od 2014); kontraktorzy słyszeli miliony nagrań |
-| Status (na dziś) | Program zewnętrzny zakończony 2019; od iOS 13.2 dobrowolne włączenie; ugoda 2024 |
+| Status (na dziś) | Program zewnętrzny zakończony 2019; od iOS 13.2 dobrowolne włączenie; ugoda zatwierdzona 16 października 2025, pierwsze wypłaty 23 stycznia 2026 |
 
 ---
 
@@ -98,9 +98,9 @@ W oświadczeniu Le Bonniec wymienił konkretne kategorie nagrań, które osobiś
 - **Krytyczne wypowiedzi o Apple**
 - **Operacje chirurgiczne** (Apple Watch chirurga aktywowany podczas zabiegu)
 
-Apple **natychmiast zawiesił program** (2 sierpnia 2019), Tim Cook **publicznie przeprosił**, wprowadził **dobrowolne włączenie w iOS 13.2** (28 sierpnia 2019). **Od 2020** nagrania Siri są słuchane tylko przez **pracowników wewnętrznych Apple** (nie kontraktorów) i tylko **za wyraźną zgodą użytkownika** (*Settings → Privacy → Analytics & Improvements → Improve Siri & Dictation*).
+Apple **natychmiast zawiesił program** (2 sierpnia 2019), Tim Cook **publicznie przeprosił**, zapowiedział **dobrowolne włączenie** (Apple Newsroom, 28 sierpnia 2019), a publicznie wdrożył je w **iOS 13.2 wydanym 28 października 2019**. **Od 2020** nagrania Siri są słuchane tylko przez **pracowników wewnętrznych Apple** (nie kontraktorów) i tylko **za wyraźną zgodą użytkownika** (*Settings → Privacy → Analytics & Improvements → Improve Siri & Dictation*).
 
-**Class action USA: *Lopez et al. v. Apple Inc.* (N.D. Cal.)** — ugoda **95 mln USD** sfinalizowana **styczeń 2024**. Do 20 USD per użytkownik, który złożył claim. Apple **nie przyznał winy**.
+**Class action USA: *Lopez et al. v. Apple Inc.* (4:19-cv-04577-JSW, N.D. Cal.)** — **początek stycznia 2025** strony zgłosiły **wstępną ugodę 95 mln USD**; **16 października 2025** sędzia **Jeffrey S. White** ostatecznie ją zatwierdził; **23 stycznia 2026** ruszyły **pierwsze wypłaty**. Do 20 USD per użytkownik, który złożył claim. Apple **nie przyznał winy**.
 
 **W UE**: mimo listu Le Bonnieca CNIL (Francja) i irlandzki DPC **nie nałożyli kar** — argument: "Apple zmienił praktykę, brak podstawy do kary". To **bardzo słaba** egzekucja RODO, krytykowana przez NOYB. W Niemczech Hamburg Commissioner (Johannes Caspar) otworzył postępowanie, ale nie doprowadził do kary przed odejściem w 2021.
 
@@ -117,13 +117,15 @@ Sprawa jest istotna z trzech powodów: (1) **podważenie marketingu Apple "Priva
 - **Lipiec 2019** — **Thomas Le Bonniec** kończy pracę w GlobeTech; kontaktuje się z *The Guardian*.
 - **26 lipca 2019** — Alex Hern, "Apple contractors 'regularly hear confidential details' on Siri recordings", *The Guardian*.
 - **2 sierpnia 2019** — Apple publicznie **zawiesza program** globalnie. Oficjalne oświadczenie.
-- **28 sierpnia 2019** — **iOS 13.2** — **dobrowolne włączenie** dla Siri Grading. Domyślnie wyłączone.
+- **28 sierpnia 2019** — Apple Newsroom zapowiada reformy: **opt-in dla Siri Grading**, tylko pracownicy wewnętrzni, automatyczne usuwanie przypadkowych aktywacji.
+- **28 października 2019** — **iOS 13.2** wydane publicznie z dobrowolnym włączeniem Siri Grading. Domyślnie wyłączone.
 - **Koniec 2019** — Apple zwalnia kontraktorów GlobeTech (300+ osób).
 - **20 maja 2020** — Le Bonniec **publicznie się ujawnia** — list do europejskich DPA. *Politico Europe* publikuje.
-- **2020** — pozwy class action USA. Konsolidacja jako *Lopez et al. v. Apple Inc.*
-- **2021–2023** — negocjacje ugodowe.
-- **Styczeń 2024** — **ugoda 95 mln USD**.
-- **Sierpień 2024** — sąd zatwierdza ugodę.
+- **2020** — pozwy class action USA. Konsolidacja jako *Lopez et al. v. Apple Inc.* (sygnatura **4:19-cv-04577-JSW**).
+- **2021–2024** — negocjacje ugodowe.
+- **Początek stycznia 2025** — **wstępna ugoda 95 mln USD** ogłoszona przez strony.
+- **16 października 2025** — sędzia **Jeffrey S. White** (N.D. Cal.) **zatwierdza ugodę**.
+- **23 stycznia 2026** — **pierwsze wypłaty** dla członków grupy.
 
 ---
 
@@ -262,11 +264,11 @@ Po ujawnieniu Le Bonniec zyskał wsparcie **NOYB (Max Schrems)** i stał się **
 3. **Tylko pracownicy Apple** (nie kontraktorzy) będą słuchać nagrań.
 4. **Przypadkowe aktywacje** będą **usuwane** automatycznie.
 
-**Etap 4: wdrożenie (iOS 13.2, październik 2019).**
+**Etap 4: wdrożenie (iOS 13.2, wydanie publiczne 28 października 2019).**
 - Ustawienie: *Settings → Privacy → Analytics & Improvements → Improve Siri & Dictation* — **domyślnie wyłączone**.
-- Przycisk "Delete Siri & Dictation History" — użytkownicy mogą usunąć swoje nagrania.
+- Przycisk „Delete Siri & Dictation History" — użytkownicy mogą usunąć swoje nagrania.
 
-**Etap 5: zapłata (2024).** 95 mln USD ugody w pozew zbiorowy.
+**Etap 5: zapłata (2025–2026).** Ugoda 95 mln USD w *Lopez v. Apple* (4:19-cv-04577-JSW): wstępna w styczniu 2025, zatwierdzona 16 października 2025 przez sędziego Jeffreya S. White'a, pierwsze wypłaty 23 stycznia 2026.
 
 **Pytania bez odpowiedzi:**
 - Co Apple zrobił z **miliardami nagrań zebranymi przed 2019**? Oficjalnie: usunięte w ramach programu resetu. Niezależna weryfikacja: brak.
@@ -311,10 +313,13 @@ Sądy amerykańskie przyjęły kontra-argument. W UE **słabsze wyegzekwowanie**
 |------|------|
 | 26 lipca 2019 | Guardian publikacja |
 | 2 sierpnia 2019 | Apple zawiesza program |
-| 28 sierpnia 2019 | Reformy iOS 13.2 |
+| 28 sierpnia 2019 | Apple Newsroom zapowiada reformy |
+| 28 października 2019 | iOS 13.2 wydany publicznie |
 | 20 maja 2020 | List Le Bonnieca do europejskich DPA |
-| 2020 | Pozwy USA |
-| Styczeń 2024 | Ugoda 95 mln USD |
+| 2020 | Pozwy USA (4:19-cv-04577-JSW) |
+| Początek stycznia 2025 | Wstępna ugoda 95 mln USD |
+| 16 października 2025 | Sędzia Jeffrey S. White zatwierdza ugodę |
+| 23 stycznia 2026 | Pierwsze wypłaty |
 
 ### Orzecznictwo powiązane
 
@@ -329,7 +334,7 @@ Sądy amerykańskie przyjęły kontra-argument. W UE **słabsze wyegzekwowanie**
 
 | Data | Organ | Kwota | Jurysdykcja | Podstawa |
 |------|-------|-------|-------------|----------|
-| Styczeń 2024 | *Lopez v. Apple* | 95 000 000 USD | USA federalne (N.D. Cal.) | CIPA, Wiretap Act |
+| 16 października 2025 (zatwierdzenie); pierwsze wypłaty 23 stycznia 2026 | *Lopez v. Apple* (4:19-cv-04577-JSW; sędzia Jeffrey S. White) | 95 000 000 USD | USA federalne (N.D. Cal.) | CIPA, Wiretap Act |
 
 **Łącznie: 95 mln USD** — wyłącznie w USA. **Żadna kara regulacyjna w UE**.
 
@@ -364,7 +369,7 @@ Sądy amerykańskie przyjęły kontra-argument. W UE **słabsze wyegzekwowanie**
 
 | Sprawa | Sąd | Stan | Wartość | Poszkodowani |
 |--------|-----|------|---------|--------------|
-| *Lopez et al. v. Apple Inc.* | N.D. Cal. | Ugoda 2024 | 95 mln USD | ~100 mln użytkowników Siri USA |
+| *Lopez et al. v. Apple Inc.* (4:19-cv-04577-JSW) | N.D. Cal. (sędzia Jeffrey S. White) | Wstępna ugoda I.2025; zatwierdzona 16 X 2025; wypłaty od 23 I 2026 | 95 mln USD | ~100 mln użytkowników Siri USA |
 | *In re Apple Inc. Siri Litigation* | N.D. Cal. | Skonsolidowane | Część powyższej | — |
 
 ---
@@ -471,7 +476,7 @@ Jeśli pracujesz w zawodzie chronionym tajemnicą (art. 180 k.p.k., art. 6 uokik
 - **Rekord sprzedaży głośników 2019**: mimo skandali, **sprzedaż smart speakerów wzrosła o 30%** w 2019. Konsumenci **nie przejmowali się** prywatnością tak jak powinni. To wskaźnik, że PR-skandaly Big Tech **nie zmieniają fundamentalnie** wyborów konsumenckich.
 - **Polska — mało danych**: w Polsce użytkownicy Siri nigdy nie otrzymali formalnego powiadomienia o tym, że ich nagrania mogły być słuchane. UODO nie wszczął postępowania. Obywatele polscy są wyłączeni z pozew zbiorowy USA.
 - **Siri w Polsce** — od iOS 13 (2019) Siri **obsługuje polski**. Ale **polskie nagrania** trafiały do kontraktorów **znających polski** — głównie w Polsce (wschodnia Europa była hubem dla języków słowiańskich). Konkretna firma: nieujawniona.
-- ***Lopez v. Apple*** — ugoda 95 mln USD. Dla Apple (firma warta 3 bln USD): **0,003% kapitalizacji**. Praktycznie niezauważalne finansowo, ale symbolicznie ważne.
+- ***Lopez v. Apple*** (4:19-cv-04577-JSW) — ugoda 95 mln USD: wstępna w styczniu 2025, zatwierdzona 16 października 2025 przez sędziego Jeffreya S. White'a, pierwsze wypłaty 23 stycznia 2026. Dla Apple (firma warta 3 bln USD): **0,003% kapitalizacji**. Praktycznie niezauważalne finansowo, ale symbolicznie ważne.
 
 ---
 
@@ -483,7 +488,9 @@ Jeśli pracujesz w zawodzie chronionym tajemnicą (art. 180 k.p.k., art. 6 uokik
 
 3. Thomas Le Bonniec, "Open letter to European data protection authorities", 20 maja 2020. Publikacja: *Politico Europe*, *The Guardian*.
 
-4. *Lopez et al. v. Apple Inc.*, N.D. Cal. — dokumenty PACER.
+4. *Lopez et al. v. Apple Inc.*, sygnatura **4:19-cv-04577-JSW**, N.D. Cal., sędzia Jeffrey S. White — dokumenty PACER; relacje Courthouse News (wstępna ugoda I.2025, zatwierdzenie 16 X 2025, pierwsze wypłaty 23 I 2026).
+
+4a. CNBC, „Apple releases iOS 13.2 with new Siri privacy controls", **28 października 2019** — data publicznego wydania iOS 13.2 (odróżnienie od zapowiedzi Apple Newsroom z 28 sierpnia 2019).
 
 5. Matt Day et al., "Amazon Workers Are Listening to What You Tell Alexa", *Bloomberg*, 10 kwietnia 2019 — paralelna sprawa.
 

@@ -320,7 +320,7 @@ Zuckerberg became the subject of memes on account of:
 
 | Date | Authority / Party | Amount | Jurisdiction | Basis |
 |------|---------|-------|-------------|----------|
-| 10/25/2018 | ICO UK | 500,000 GBP | UK | DPA 1998 |
+| 10/24/2018 | ICO UK | 500,000 GBP | UK | DPA 1998 |
 | 07/24/2019 | FTC | $5,000,000,000 | US | FTC Act sec. 5 + 2012 Consent Order |
 | 07/24/2019 | SEC | $100,000,000 | US | Securities Act, disclosure |
 | 12/06/2019 | FTC (Nix) | ban + no monetary amount | US | FTC Act |

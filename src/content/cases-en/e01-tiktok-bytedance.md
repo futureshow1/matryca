@@ -71,7 +71,7 @@ years_active:
 | Total penalty | None (DOJ investigation ongoing; no formalized charges) |
 | Currency | — |
 | Legal basis | 18 USC § 2510 (Wiretap Act), 18 USC § 1030 (CFAA); potential foreign banking |
-| Whistleblower/discoverer | **Emily Baker-White** (*Forbes*, previously *BuzzFeed News*), **Cristina Criddle** (*Financial Times*); internal memo from GC Erich Anderson |
+| Whistleblower/discoverer | **Emily Baker-White** (*Forbes*, previously *BuzzFeed News*), **Cristina Criddle** (*Financial Times*); internal memo from GC Erich Andersen |
 | Number of victims | At least **4 journalists**: Emily Baker-White, Cristina Criddle, Katharine Schwab, Richard Nieva — plus their contacts |
 | Status (as of today) | DOJ Eastern District of Virginia investigation ongoing; 4 employees fired |
 
@@ -83,7 +83,7 @@ years_active:
 
 **The ByteDance employees' method**: pulling **IP addresses, location data, and usage timestamps** from the journalists' TikTok apps. Then **cross-referencing** them with the IP addresses of ByteDance employees — the goal being to identify which employee had physically met with a journalist in the same city at the same time = a potential source.
 
-The practice was revealed by an internal memo from **Erich Anderson** (General Counsel of ByteDance) sent to all employees. The memo leaked to *Forbes*. **Rubo Liang** (CEO of ByteDance, China), in an email to employees: *"The public trust that we have spent huge efforts building is going to be significantly undermined by the misconduct of a few individuals."* **4 employees were fired**.
+The practice was revealed by an internal memo from **Erich Andersen** (General Counsel of ByteDance) sent to all employees. The memo leaked to *Forbes*. **Rubo Liang** (CEO of ByteDance, China), in an email to employees: *"The public trust that we have spent huge efforts building is going to be significantly undermined by the misconduct of a few individuals."* **4 employees were fired**.
 
 The scandal broke at a critical moment:
 1. TikTok was negotiating with CFIUS (Committee on Foreign Investment in the U.S.) on **"Project Texas"** — a $1.5 billion plan under which all American user data would be hosted by **Oracle** and inaccessible to ByteDance employees in China.
@@ -98,16 +98,16 @@ Case E01 shows that **employee access to platform data can be used to surveil jo
 
 ## Timeline
 
-- **September 2012** — Zhang Yiming founds **ByteDance** in Beijing.
+- **March 2012** — Zhang Yiming and Liang Rubo found **ByteDance** in Beijing; **August 2012** — **Toutiao** launch.
 - **September 2016** — ByteDance launches **Douyin** in China.
-- **August 2018** — ByteDance launches **TikTok** globally after acquiring **Musical.ly** for $1 billion.
+- **August 2018** — ByteDance launches **TikTok** globally after acquiring **Musical.ly** in November 2017 for $800M – $1B; merged with TikTok August 2, 2018.
 - **2019–2022** — TikTok grows to **~1 billion users globally**.
 - **June 17, 2022** — ***BuzzFeed News*** (Emily Baker-White): "TikTok Data on American Users Repeatedly Accessed From China." The revelation that **ByteDance employees in China had access** to American user data despite official denials.
 - **August 2022** — further Baker-White articles about Chinese employees' access to US data.
 - **August 1, 2022** — *Financial Times* (Cristina Criddle): further disclosures about access practices.
 - **July–October 2022** — four ByteDance employees (2 US, 2 China) **deliberately access** the TikTok account data of Baker-White and Criddle, trying to identify sources.
 - **November 2022** — an internal ByteDance audit discovers the breach.
-- **December 22, 2022** — *Forbes* publishes: "TikTok Parent ByteDance Spied On Forbes Journalists." The GC Erich Anderson memo leaks.
+- **December 22, 2022** — *Forbes* publishes: "TikTok Parent ByteDance Spied On Forbes Journalists." The GC Erich Andersen memo leaks.
 - **December 22, 2022** — ByteDance publicly confirms, **fires 4 employees**.
 - **January 2023** — the **US Department of Justice (Eastern District of Virginia)** opens an investigation.
 - **March 2023** — ByteDance receives a federal subpoena.
@@ -161,9 +161,9 @@ In December 2022, Baker-White revealed that **she herself had been a target of s
 
 **Cristina Criddle** — *Financial Times*, tech correspondent. Published similar material about ByteDance. Also was a target.
 
-### Erich Anderson's internal memo
+### Erich Andersen's internal memo
 
-**Erich Anderson** — General Counsel of ByteDance. In November/December 2022 he circulated an internal memo describing the audit and the firing of the 4 employees. The memo was passed to *Forbes* by another anonymous source. Disclosed on December 22, 2022.
+**Erich Andersen** — General Counsel of ByteDance. In November/December 2022 he circulated an internal memo describing the audit and the firing of the 4 employees. The memo was passed to *Forbes* by another anonymous source. Disclosed on December 22, 2022.
 
 ### First publications
 
@@ -179,9 +179,11 @@ In December 2022, Baker-White revealed that **she herself had been a target of s
 ### ByteDance / TikTok
 
 - **Zhang Yiming** — founder of ByteDance (2012), CEO until 2021. Afterwards formally outside the company.
-- **Liang Rubo** (Rubo Liang) — CEO of ByteDance since 2021 (China). Author of the email to employees: *"I believe this situation will serve as a lesson to us all."*
+- **Liang Rubo** (Rubo Liang) — CEO of ByteDance since November 4, 2021 (after Zhang, announced from May 2021). Author of the email to employees: *"I believe this situation will serve as a lesson to us all."*
 - **Shou Chew** (Shou Zi Chew) — CEO of TikTok (a separate global entity). Testified before the US Congress in March 2023 and May 2024.
-- **Erich Anderson** — General Counsel of ByteDance.
+- **Erich Andersen** — General Counsel of ByteDance.
+- **Chris Lepitak** — Chief Internal Auditor ByteDance/TikTok, led the surveillance team, fired.
+- **Song Ye** — Head of Audit and Risk Control ByteDance, reporting directly to CEO Liang Rubo, resigned after scandal.
 
 ### Journalist victims
 
@@ -224,7 +226,7 @@ Official statement by **Jennifer Banks** (spokesperson): *"We have strongly cond
 
 **Stage 3: Project Texas intensification (2023–2024).** Oracle hosting, $1.5 billion spent, USDS (US Data Security) as a separate entity.
 
-**Stage 4: PAFACA and ban (April 2024 – January 2025).** TikTok loses its legal battle. On January 19, 2025, the app is temporarily shut down in the US.
+**Stage 4: PAFACA and ban (April 2024 – January 2025).** PAFACA gave ByteDance 270 days (+ possible 90-day extension). Divestiture deadline: January 19, 2025. TikTok loses its legal battle. On January 19, 2025, the app is temporarily shut down in the US.
 
 **Stage 5: USDS Joint Venture (January 22, 2026).** Oracle, Silver Lake, MGX at 15% each, ByteDance 19.9%, "qualified divestiture." Critics (House Select Committee on the CCP, Sen. Markey): **the algorithm is still in Beijing**, a license, not ownership.
 
@@ -345,6 +347,7 @@ If you use TikTok — **your location data, IP, and activity history are accessi
 ## Context
 
 - **"Can't let this get out"** — an echo of the 2016 Uber case (Joe Sullivan, D06). In both cases, the companies had an internal culture of concealment. The difference: Uber paid hackers; ByteDance surveilled journalists.
+- **Buffy the cat account** — ByteDance tracked Criddle via account of her cat Buffy (black-and-white Maine Coon, ~170 followers). Detail revealed by *Gizmodo* — showing how meticulously the surveillance team mapped the journalist's digital presence.
 - **Emily Baker-White** — in April 2022 she left *BuzzFeed News* for *Forbes*. A few months later she became **a target of surveillance** by the company she was writing about. Her career in tech accountability is a model of "journalism that matters." Pulitzer finalist 2023.
 - **Randall Lane (Forbes)**: *"This is a direct assault on the idea of a free press and its critical role in a functioning democracy."* — a statement that became a symbol of the media's fight against Big Tech.
 - **Chris Wray, FBI Director** — a month before the E01 disclosure, he issued a public warning about TikTok. The timing was critical — the Baker-White case confirmed his concerns.
@@ -366,7 +369,7 @@ If you use TikTok — **your location data, IP, and activity history are accessi
 
 2. Drew Harwell, Taylor Lorenz, "TikTok admits its workers accessed journalists' data; 4 fired," *Washington Post*, December 22, 2022.
 
-3. Memo from GC Erich Anderson, ByteDance, November/December 2022 (disclosed by *Forbes*).
+3. Memo from GC Erich Andersen, ByteDance, November/December 2022 (disclosed by *Forbes*).
 
 4. Emily Baker-White, "TikTok Data on American Users Repeatedly Accessed From China," *BuzzFeed News*, June 17, 2022.
 

@@ -21,8 +21,8 @@ legal_basis:
 fines:
 - amount: 95000000
   currency: USD
-  authority: '*Lopez v. Apple*'
-  date: 2024-01
+  authority: '*Lopez v. Apple* (4:19-cv-04577-JSW, N.D. Cal.)'
+  date: 2025-10
   category: class_action_settlement
   status: paid
 whistleblowers:
@@ -61,8 +61,8 @@ years_active:
 
 > **Category:** Voice assistants / eavesdropping / whistleblower / Apple "Privacy" branding
 > **Company/companies:** Apple (contractors: GlobeTech in Cork, Ireland)
-> **Years:** 2014–2019 (practice), July 26, 2019 (disclosure), January 2024 (settlement)
-> **Status:** Concluded — program suspended; $95 million settlement (Lopez v. Apple)
+> **Years:** 2014–2019 (practice), July 26, 2019 (disclosure), early January 2025 (preliminary settlement), October 16, 2025 (settlement approved)
+> **Status:** Concluded — program suspended; $95 million settlement (Lopez v. Apple, 4:19-cv-04577-JSW)
 > **Card ID:** C02
 
 ---
@@ -79,7 +79,7 @@ years_active:
 | Legal basis | California Invasion of Privacy Act (CIPA), Federal Wiretap Act; in the EU hypothetically GDPR art. 5, 6, 9 |
 | Whistleblower/discoverer | **Thomas Le Bonniec** (former GlobeTech contractor); journalist **Alex Hern** (*The Guardian*) |
 | Number of affected users | Tens/hundreds of millions of Siri users (since 2014); contractors heard millions of recordings |
-| Current status | External program ended 2019; opt-in since iOS 13.2; settlement 2024 |
+| Current status | External program ended 2019; opt-in since iOS 13.2; settlement approved October 16, 2025, first payments January 23, 2026 |
 
 ---
 
@@ -98,9 +98,9 @@ In his statement, Le Bonniec listed specific categories of recordings he had per
 - **Critical statements about Apple**
 - **Surgical procedures** (a surgeon's Apple Watch activated during an operation)
 
-Apple **immediately suspended the program** (August 2, 2019), Tim Cook **publicly apologized**, and the company introduced **opt-in in iOS 13.2** (August 28, 2019). **Since 2020**, Siri recordings are listened to only by **Apple's internal employees** (not contractors) and only **with the user's explicit consent** (*Settings → Privacy → Analytics & Improvements → Improve Siri & Dictation*).
+Apple **immediately suspended the program** (August 2, 2019), Tim Cook **publicly apologized**, and the company announced the opt-in reform via **Apple Newsroom on August 28, 2019**, with the public release in **iOS 13.2 on October 28, 2019**. **Since 2020**, Siri recordings are listened to only by **Apple's internal employees** (not contractors) and only **with the user's explicit consent** (*Settings → Privacy → Analytics & Improvements → Improve Siri & Dictation*).
 
-**US class action: *Lopez et al. v. Apple Inc.* (N.D. Cal.)** — a **$95 million** settlement was finalized in **January 2024**. Up to $20 per user who filed a claim. Apple **admitted no wrongdoing**.
+**US class action: *Lopez et al. v. Apple Inc.* (4:19-cv-04577-JSW, N.D. Cal.)** — in **early January 2025** the parties announced a **preliminary $95 million settlement**; on **October 16, 2025**, Judge **Jeffrey S. White** granted **final approval**; **first payments** began on **January 23, 2026**. Up to $20 per user who filed a claim. Apple **admitted no wrongdoing**.
 
 **In the EU**: despite Le Bonniec's letter, CNIL (France) and the Irish DPC **imposed no penalties** — the argument being "Apple changed the practice, no grounds for a fine." This represents **very weak** GDPR enforcement, criticized by NOYB. In Germany, Hamburg Commissioner Johannes Caspar opened a proceeding but did not lead to a fine before his departure in 2021.
 
@@ -117,13 +117,15 @@ The case matters for three reasons: (1) it **undermined Apple's "Privacy" market
 - **July 2019** — **Thomas Le Bonniec** finishes his work at GlobeTech and contacts *The Guardian*.
 - **July 26, 2019** — Alex Hern, "Apple contractors 'regularly hear confidential details' on Siri recordings," *The Guardian*.
 - **August 2, 2019** — Apple publicly **suspends the program** globally. Official statement.
-- **August 28, 2019** — **iOS 13.2** — **opt-in** for Siri Grading. Disabled by default.
+- **August 28, 2019** — Apple Newsroom announces the reforms: **opt-in for Siri Grading**, internal employees only, automatic deletion of accidental activations.
+- **October 28, 2019** — **iOS 13.2** released publicly, shipping the Siri Grading opt-in. Disabled by default.
 - **Late 2019** — Apple dismisses GlobeTech contractors (300+ people).
 - **May 20, 2020** — Le Bonniec **goes public** — letter to European DPAs. *Politico Europe* publishes the story.
-- **2020** — US class action suits. Consolidated as *Lopez et al. v. Apple Inc.*
-- **2021–2023** — settlement negotiations.
-- **January 2024** — **$95 million settlement**.
-- **August 2024** — court approves the settlement.
+- **2020** — US class action suits. Consolidated as *Lopez et al. v. Apple Inc.* (docket **4:19-cv-04577-JSW**).
+- **2021–2024** — settlement negotiations.
+- **Early January 2025** — **preliminary $95 million settlement** announced.
+- **October 16, 2025** — Judge **Jeffrey S. White** (N.D. Cal.) **approves the settlement**.
+- **January 23, 2026** — **first payments** to class members.
 
 ---
 
@@ -262,11 +264,11 @@ After going public, Le Bonniec gained the support of **NOYB (Max Schrems)** and 
 3. **Only Apple employees** (not contractors) will listen to recordings.
 4. **Accidental activations** will be **deleted** automatically.
 
-**Stage 4: rollout (iOS 13.2, October 2019).**
+**Stage 4: rollout (iOS 13.2, publicly released October 28, 2019).**
 - Setting: *Settings → Privacy → Analytics & Improvements → Improve Siri & Dictation* — **disabled by default**.
 - "Delete Siri & Dictation History" button — users can delete their recordings.
 
-**Stage 5: payment (2024).** $95 million class action settlement.
+**Stage 5: payment (2025–2026).** $95 million class action settlement in *Lopez v. Apple* (4:19-cv-04577-JSW): preliminary settlement in January 2025, final approval by Judge Jeffrey S. White on October 16, 2025, first payments on January 23, 2026.
 
 **Unanswered questions:**
 - What did Apple do with the **billions of recordings collected before 2019**? Officially: deleted as part of the reset program. Independent verification: none.
@@ -311,10 +313,13 @@ US courts accepted the counterargument. In the EU, **enforcement was weaker** (t
 |------|------|
 | July 26, 2019 | Guardian publication |
 | August 2, 2019 | Apple suspends the program |
-| August 28, 2019 | iOS 13.2 reforms |
+| August 28, 2019 | Apple Newsroom announces the reforms |
+| October 28, 2019 | iOS 13.2 publicly released |
 | May 20, 2020 | Le Bonniec's letter to European DPAs |
-| 2020 | US lawsuits |
-| January 2024 | $95 million settlement |
+| 2020 | US lawsuits (4:19-cv-04577-JSW) |
+| Early January 2025 | Preliminary $95 million settlement |
+| October 16, 2025 | Judge Jeffrey S. White approves the settlement |
+| January 23, 2026 | First payments |
 
 ### Related case law
 
@@ -329,7 +334,7 @@ US courts accepted the counterargument. In the EU, **enforcement was weaker** (t
 
 | Date | Authority | Amount | Jurisdiction | Basis |
 |------|-------|-------|-------------|----------|
-| January 2024 | *Lopez v. Apple* | $95,000,000 | US federal (N.D. Cal.) | CIPA, Wiretap Act |
+| October 16, 2025 (approval); first payments January 23, 2026 | *Lopez v. Apple* (4:19-cv-04577-JSW; Judge Jeffrey S. White) | $95,000,000 | US federal (N.D. Cal.) | CIPA, Wiretap Act |
 
 **Total: $95 million** — in the USA only. **No regulatory penalty in the EU.**
 
@@ -364,7 +369,7 @@ US courts accepted the counterargument. In the EU, **enforcement was weaker** (t
 
 | Case | Court | Status | Value | Affected |
 |--------|-----|------|---------|--------------|
-| *Lopez et al. v. Apple Inc.* | N.D. Cal. | Settlement 2024 | $95 million | ~100 million US Siri users |
+| *Lopez et al. v. Apple Inc.* (4:19-cv-04577-JSW) | N.D. Cal. (Judge Jeffrey S. White) | Preliminary settlement Jan 2025; approved Oct 16, 2025; payments from Jan 23, 2026 | $95 million | ~100 million US Siri users |
 | *In re Apple Inc. Siri Litigation* | N.D. Cal. | Consolidated | Part of the above | — |
 
 ---
@@ -471,7 +476,7 @@ If you work in a profession protected by professional privilege (art. 180 of the
 - **Record speaker sales in 2019**: despite the scandals, **smart speaker sales rose 30%** in 2019. Consumers **did not care** about privacy as much as they should have. This is an indicator that Big Tech PR scandals **do not fundamentally change** consumer choices.
 - **Poland — little data**: in Poland, Siri users never received formal notification that their recordings might have been listened to. UODO did not open a proceeding. Polish citizens are excluded from the US class action.
 - **Siri in Poland** — since iOS 13 (2019), Siri **supports Polish**. But **Polish recordings** were routed to contractors **who knew Polish** — mostly in Poland (Eastern Europe was a hub for Slavic languages). The specific firm: not disclosed.
-- ***Lopez v. Apple*** — a $95 million settlement. For Apple (a $3 trillion company): **0.003% of market cap**. Practically imperceptible financially, yet symbolically important.
+- ***Lopez v. Apple*** (4:19-cv-04577-JSW) — a $95 million settlement: preliminary in January 2025, granted final approval by Judge Jeffrey S. White on October 16, 2025, first payments on January 23, 2026. For Apple (a $3 trillion company): **0.003% of market cap**. Practically imperceptible financially, yet symbolically important.
 
 ---
 
@@ -483,7 +488,9 @@ If you work in a profession protected by professional privilege (art. 180 of the
 
 3. Thomas Le Bonniec, "Open letter to European data protection authorities," May 20, 2020. Published by: *Politico Europe*, *The Guardian*.
 
-4. *Lopez et al. v. Apple Inc.*, N.D. Cal. — PACER documents.
+4. *Lopez et al. v. Apple Inc.*, docket **4:19-cv-04577-JSW**, N.D. Cal., Judge Jeffrey S. White — PACER documents; Courthouse News coverage (preliminary settlement January 2025, final approval October 16, 2025, first payments January 23, 2026).
+
+4a. CNBC, "Apple releases iOS 13.2 with new Siri privacy controls," **October 28, 2019** — date of the public iOS 13.2 release (to distinguish from the Apple Newsroom announcement of August 28, 2019).
 
 5. Matt Day et al., "Amazon Workers Are Listening to What You Tell Alexa," *Bloomberg*, April 10, 2019 — parallel case.
 

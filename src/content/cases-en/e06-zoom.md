@@ -74,14 +74,14 @@ years_active:
 | Currency | — |
 | Legal basis | FTC Act § 5 (deceptive practices); NY Executive Law § 63(12); state consumer laws |
 | Whistleblower/discoverer | **Micah Lee, Yael Grauer** (*The Intercept*, March 2020); **Citizen Lab** (Ron Deibert, Toronto) |
-| Number of victims | **300 million daily users** at peak (April 2020) |
+| Number of victims | **300 million daily meeting participants** (NOT DAU) at peak (April 2020); Zoom retracted the original wording on April 30, 2020 and corrected the blog |
 | Status (today) | True E2E available since October 2020 (opt-in); FTC 20-year monitoring continues until 2040 |
 
 ---
 
 ## TL;DR
 
-**Zoom Video Communications** — founded in 2011 by **Eric Yuan** (former Cisco WebEx engineer). By **December 2019**, Zoom had **10 million daily users**. After the **outbreak of the COVID-19 pandemic** (March 2020), the scale exploded to **300 million daily users** (April 2020). All schools, universities, companies, governments, therapists, and lawyers migrated to Zoom overnight.
+**Zoom Video Communications** — founded in 2011 by **Eric Yuan** (former Cisco WebEx engineer). By **December 2019**, Zoom had **10 million daily meeting participants**. After the **outbreak of the COVID-19 pandemic** (March 2020), the scale exploded to **300 million daily meeting participants** (NOT DAU; April 2020). Zoom retracted the original wording "daily users" on April 30, 2020 and corrected the blog. All schools, universities, companies, governments, therapists, and lawyers migrated to Zoom overnight.
 
 At the same moment, a series of **explosive revelations** showed that Zoom **had been systematically lying** about security:
 
@@ -89,7 +89,7 @@ At the same moment, a series of **explosive revelations** showed that Zoom **had
 
 **Lie 2: "256-bit encryption."** Citizen Lab (Toronto), in April 2020, discovered that Zoom was **actually** using **AES-128** in **ECB** mode — a **known weak mode** that leaves patterns in encrypted data. **The 256-bit claim was false.**
 
-**Lie 3: "Secure cloud storage of recordings."** Zoom advertised that meeting recordings from paying customers were saved immediately to secure cloud. **Truth**: recordings were stored **unencrypted on Zoom servers for 60 days** before transfer to secure storage.
+**Lie 3: "Secure cloud storage of recordings."** Zoom advertised that meeting recordings from paying customers were saved immediately to secure cloud. **Truth**: the FTC indicated recordings could be stored **unencrypted for up to 60 days** before being moved to encrypted cloud storage.
 
 **Lie 4: "ZoomOpener on Mac" as a security feature.** Zoom installed a **hidden web server** on Macs — **ZoomOpener** — which **circumvented** Safari's security. Apple later had to release a **silent update** removing ZoomOpener from Macs.
 
@@ -120,16 +120,17 @@ Case E06 is a **model of "the pandemic as a crisis stress test"** — Zoom survi
 - **2011** — Eric Yuan founds Zoom Video Communications.
 - **2013** — Product launch of Zoom.
 - **2016** — Zoom begins publicly advertising **"end-to-end AES 256-bit encryption"** — **FALSE**.
-- **April 9, 2019** — researcher **Jonathan Leitschuh** publishes: **ZoomOpener** (hidden web server on Mac) circumvents Safari security. Apple releases a silent update.
-- **April 2019 Zoom IPO** — NASDAQ.
-- **December 2019** — **10 million daily Zoom users**.
+- **April 18, 2019** — Zoom IPO on NASDAQ under ticker "ZM" at $36/share, market cap $9.2B (after first session $15.9B at +72%).
+- **July 8, 2019** — Jonathan Leitschuh publishes ZoomOpener vulnerability writeup on Medium: **ZoomOpener** (hidden web server on Mac) circumvents Safari security. Apple releases a silent update.
+- **December 2019** — **10 million daily Zoom meeting participants**.
 - **January–February 2020** — COVID-19 spreads.
-- **March 2020** — global lockdowns. Zoom explodes: **200 million daily** by the end of March.
+- **March 2020** — global lockdowns. Zoom explodes: **200 million daily meeting participants** by the end of March.
 - **March 17, 2020** — zoom-bombing begins to be a mass problem (schools, churches, AA meetings).
 - **March 30, 2020** — ***The Intercept*** (Micah Lee, Yael Grauer): **"Zoom Meetings Aren't End-to-End Encrypted, Despite Misleading Marketing"**
 - **April 2, 2020** — **FBI issues a warning** about zoom-bombing.
 - **April 3, 2020** — **Citizen Lab** (University of Toronto) report: **AES-128-ECB**, servers in China, keys generated in Beijing. *Time Magazine* and *Washington Post* publish.
-- **April 2020** — **peak of 300 million daily users**.
+- **April 2020** — **peak of 300 million daily meeting participants** (NOT DAU).
+- **April 30, 2020** — Zoom retracts the original "daily users" wording and corrects the blog, clarifying "daily meeting participants".
 - **April 2020** — **NYC Department of Education bans Zoom** for schools. Elon Musk bans it at SpaceX. Germany's federal MFA bans it.
 - **April 9, 2020** — *Time*: **Chinese operatives** using Zoom to spy.
 - **April 1, 2020** — Eric Yuan public apology: *"We recognize we have fallen short of the community's — and our own — privacy and security expectations."*
@@ -157,7 +158,7 @@ Case E06 is a **model of "the pandemic as a crisis stress test"** — Zoom survi
 | **End-to-end encryption** | **Transport encryption** — Zoom held the keys |
 | **AES 256-bit** | **AES-128 in ECB mode** (weaker) |
 | **Keys only on user devices** | **Keys held by Zoom**, generated on servers |
-| **Encrypted recordings** | **Unencrypted on servers for 60 days** |
+| **Encrypted recordings** | FTC: **unencrypted for up to 60 days** before encrypted cloud storage |
 | **Globally secure** | **Routed through China** in some cases |
 
 ### Why "transport encryption" ≠ "E2E"
@@ -188,7 +189,7 @@ Citizen Lab (Ron Deibert, University of Toronto, April 2020) investigated Zoom's
 
 ### ZoomOpener — a backdoor on Mac
 
-**Jonathan Leitschuh** (April 2019) discovered:
+**Jonathan Leitschuh** (publication: July 8, 2019, Medium) discovered:
 - Zoom installed a **hidden web server** on macOS (ZoomOpener)
 - It allowed **one-click join** — but also **automatic camera activation** via a malicious link
 - **Uninstalling Zoom** did not remove ZoomOpener — it remained active
@@ -245,7 +246,7 @@ This was the **worst blow to Zoom's reputation**: not just technical lies, but *
 
 ### First publications
 
-- **April 9, 2019** — Jonathan Leitschuh, Medium: ZoomOpener
+- **July 8, 2019** — Jonathan Leitschuh, Medium: ZoomOpener
 - **March 30, 2020** — Micah Lee, Yael Grauer, *The Intercept*
 - **April 1, 2020** — Eric Yuan, Zoom blog: public apology
 - **April 3, 2020** — Citizen Lab report
@@ -489,12 +490,12 @@ Today (2026), Zoom is **significantly better**:
 - **Rohit Chopra dissent** (November 9, 2020) — the FTC Commissioner (Democrat) wrote a scathing dissent:
   > *"Today's settlement with Zoom is long on promises, but short on follow-through. Zoom is not required to offer redress, refunds, or even notice to its customers that material claims regarding the security of its services were false."*
   Chopra later became director of the CFPB (2021). Her dissent became a **template** for future FTC enforcement pushes under **Lina Khan** (FTC Chair 2021–2025).
-- **"Going from 10 million to 300 million daily users"** — **30x growth in 4 months**. Zoom's infrastructure **nearly collapsed**. Zoom moved workloads to **Amazon AWS, Oracle Cloud, Microsoft Azure** simultaneously in March–April 2020.
+- **"Going from 10 million to 300 million daily meeting participants"** — **30x growth in 4 months** (daily meeting participants, NOT DAU). Zoom's infrastructure **nearly collapsed**. Zoom moved workloads to **Amazon AWS, Oracle Cloud, Microsoft Azure** simultaneously in March–April 2020.
 - **Polish context** — Polish schools, universities, courts, and government offices **massively** used Zoom in 2020–2021. UODO **did not initiate** a separate proceeding, but the **Ministry of Digital Affairs** issued recommendations after April 2020. Polish schools partially switched to Google Meet and Microsoft Teams.
 - **"Singing Happy Birthday on Zoom" (April 2020) phenomenon** — a cultural phenomenon. **Birthdays on Zoom**, **weddings on Zoom** (New York legalized remote weddings), **funerals on Zoom**. Zoom became **the infrastructure of social life**. Effect: **no one could** back out, even after the revelations.
 - **Zoom-bombing and schools** — the most tragic incidents. In **New York**, elementary classes were disrupted by pornography. **Germany**, **United Kingdom** — swastikas in history lessons. **Israel, France** — antisemitic slurs. Schools quickly switched to **passwords + waiting rooms**.
 - **NYC Dept of Education bans Zoom** (April 4, 2020) — the world's largest school district (1.1 million students) banned Zoom and moved to Microsoft Teams. After Zoom's reforms — **unban** in May 2020.
-- **Zoom IPO valued at ~$10 billion** (April 2019). By **October 2020**, valued at **$160 billion**. Eric Yuan: **billionaire**. **2023**: Zoom's value dropped by over 80% from peak — pandemic over. A classic **pandemic stock bubble**.
+- **Zoom IPO** (April 18, 2019) — NASDAQ, ticker "ZM" at $36/share, market cap $9.2B (after first session $15.9B at +72%). By **October 2020**, valued at **$160 billion**. Eric Yuan: **billionaire**. **2023**: Zoom's value dropped by over 80% from peak — pandemic over. A classic **pandemic stock bubble**.
 - **Post-pandemic reckoning (2022–2024)** — companies return to offices, students to classrooms. Zoom **struggles** for relevance. Strategy: **Zoom AI Companion** (2023, generative AI), **Zoom Workplace** (rebrand 2024). Mixed success.
 - **E2E "opt-in not default"** — Zoom's E2E is **not default**. Business decision: default E2E disables key features (cloud recording, dial-in, live transcription). Critics: Zoom **chose convenience over security** for the masses. Apologists: **users have a choice**.
 - **Signal vs. Zoom** — Signal **grew** throughout the pandemic, offering **free group video** (up to 8 people, then 40). People who needed E2E migrated. Signal **doesn't have 300 million daily users** — but it has **reputation**. A classic **growth vs. quality tradeoff**.
@@ -516,7 +517,7 @@ Today (2026), Zoom is **significantly better**:
 
 5. Kate O'Flaherty, *Time Magazine*, "Chinese Operatives Used Zoom to Target Foreign Activists", April 2020.
 
-6. Jonathan Leitschuh, "Zoom Zero Day: 4+ Million Webcams & Maybe an RCE?", Medium, July 9, 2019.
+6. Jonathan Leitschuh, "Zoom Zero Day: 4+ Million Webcams & Maybe an RCE?", Medium, July 8, 2019.
 
 7. Letitia James, New York Attorney General, settlement press release, May 2020.
 

@@ -94,9 +94,9 @@ Sprawa stała się pierwszym wielkim testem etyki badań na ludziach w erze Big 
 - **26–27 czerwca 2014** — pierwsze wzmianki w blogach akademickich (James Grimmelmann, Katy Waldman w *Slate*).
 - **28 czerwca 2014** — **Robinson Meyer** publikuje w *The Atlantic* artykuł-viral: *"Everything We Know About Facebook's Secret Mood Manipulation Experiment"*. Sprawa eksploduje w mediach ogólnych.
 - **29 czerwca 2014** — Adam Kramer publikuje **publiczne przeprosiny** na Facebooku.
-- **2 lipca 2014** — Sheryl Sandberg (COO Facebook) w wywiadzie dla India Today: *"To była słaba komunikacja z naszej strony"*.
+- **2 lipca 2014** — Sheryl Sandberg (COO Facebook) w wywiadzie dla NDTV w Indiach (podczas wizyty w New Delhi): *„To była słaba komunikacja z naszej strony"*.
 - **3 lipca 2014** — **PNAS** publikuje "Editorial Expression of Concern" (editorial-in-chief Inder Verma); **UK ICO** wszczyna dochodzenie.
-- **Lipiec 2014** — **Maryland Attorney General Douglas Gansler** publicznie krytykuje badanie.
+- **23–24 września 2014** — **Douglas F. Gansler** (Maryland Attorney General) ogłasza analizę skarg prof. Jamesa Grimmelmanna dotyczących badania.
 - **Lipiec 2014** — Cornell University wydaje oświadczenie: Hancock "nie uzyskał dostępu do danych identyfikujących", więc nie potrzebował IRB.
 - **2014–2015** — szeroka debata akademicka; m.in. w *Nature* ("When is academic research ethical research?", 2014), w *PLOS ONE*.
 - **2015–2016** — Departament Zdrowia i Opieki Społecznej USA (HHS) konsultuje zmiany w Common Rule.
@@ -122,7 +122,7 @@ Sprawa stała się pierwszym wielkim testem etyki badań na ludziach w erze Big 
 3. **Klasyfikacja postów**: algorytm LIWC (Linguistic Inquiry and Word Count) oznaczał posty jako "pozytywne" lub "negatywne" na podstawie słownika emocjonalnego.
 4. Po tygodniu analizowano **posty samych uczestników** — czy stali się bardziej pozytywni/negatywni w swoich własnych wypowiedziach.
 
-**Wynik:** efekt został potwierdzony. Użytkownicy wystawieni na mniej pozytywnych postów znajomych sami pisali mniej pozytywnych postów (i więcej negatywnych), i vice versa. Efekt statystyczny był **mały** (Cohen's d ≈ 0,001 — co oznacza, że efekt jest praktycznie nieistotny na poziomie indywidualnym), ale **statystycznie znaczący** przy tak wielkiej próbie. Właśnie ta "małość efektu" była częścią kontrowersji — krytycy pytali, czy było warto manipulować emocjami 700 tys. osób dla tak marginalnego ustalenia.
+**Wynik:** efekt został potwierdzony. Użytkownicy wystawieni na mniej pozytywnych postów znajomych sami pisali mniej pozytywnych postów (i więcej negatywnych), i vice versa. Efekt statystyczny był **mały** (Cohen's d ≈ 0,001–0,02 w zależności od zmiennej; bardzo mały efekt, praktycznie nieistotny na poziomie indywidualnym), ale **statystycznie znaczący** przy tak wielkiej próbie. Właśnie ta "małość efektu" była częścią kontrowersji — krytycy pytali, czy było warto manipulować emocjami 700 tys. osób dla tak marginalnego ustalenia.
 
 ### Na czym polegał problem etyczny
 
@@ -203,8 +203,8 @@ Sekwencja:
 **Adam Kramer — publiczne przeprosiny (29 czerwca 2014)** na swoim profilu:
 *"Nasz cel nigdy nie był zdenerwowaniem kogokolwiek. Współczuję każdemu, komu to sprawiło niepokój. Patrząc wstecz, korzyści badania mogły nie uzasadniać całego tego niepokoju."*
 
-**Sheryl Sandberg (2 lipca 2014, India Today):**
-*"Faktem jest, że to badanie było częścią ongoing research, które firmy prowadzą, żeby testować różne produkty. To była słaba komunikacja z naszej strony."*
+**Sheryl Sandberg (2 lipca 2014, wywiad dla NDTV w Indiach, podczas wizyty w New Delhi):**
+*„Faktem jest, że to badanie było częścią ongoing research, które firmy prowadzą, żeby testować różne produkty. To była słaba komunikacja z naszej strony."*
 
 **Monika Bickert** (Facebook Head of Policy Management) — publicznie argumentowała, że Facebook **zawsze** A/B testuje: nowy design, nowe algorytmy, nowe funkcje. Badanie PNAS było "po prostu napisaniem o tym w artykule".
 
@@ -339,7 +339,7 @@ Sprawa "Emotional Contagion" ma bezpośrednią implikację dla mediacji rodzinny
 ## Ciekawostki
 
 - **Próba 689 003**, nie "milionów" — wiele popularnych opisów błędnie podaje miliony. Ale to i tak jedna z **największych prób społecznych w historii nauk społecznych**. Dla porównania, klasyczne Stanford Prison Experiment Zimbardo miało **24 uczestników**.
-- **"Mały efekt, duży PR"** — efekt statystyczny był nikły (Cohen's d ≈ 0,001 — **niemierzalny na poziomie indywidualnym**), ale społeczne oburzenie ogromne. Pokazało, że **nawet mała statystyczna manipulacja emocjonalna** przy masowej skali jest wystarczająca, żeby szokować.
+- **„Mały efekt, duży PR"** — efekt statystyczny był nikły (Cohen's d ≈ 0,001–0,02 w zależności od zmiennej; bardzo mały efekt, **praktycznie niemierzalny na poziomie indywidualnym**), ale społeczne oburzenie ogromne. Pokazało, że **nawet mała statystyczna manipulacja emocjonalna** przy masowej skali jest wystarczająca, żeby szokować.
 - **James Grimmelmann ironicznie pracował na Cornell**, tej samej uczelni co Hancock. Grimmelmann był **najostrzejszym krytykiem** badania — co zostało opisane przez *Harvard Law Review* jako "Cornell kicking Cornell".
 - **Jeffrey Hancock** po skandalu **nie stracił stanowiska**, przeniósł się później do Stanford. Tam prowadzi laboratorium badań nad zaufaniem online. Ironia: badacz zaufania uczestniczył w eksperymencie, który podważył zaufanie do platform.
 - **OkCupid 2014** — w reakcji na skandal FB, OkCupid opublikował post **"We Experiment On Human Beings!"** z dumą opisujący własne A/B testy (np. usuwanie zdjęć profilowych z części profili). Reakcja była łagodniejsza, bo OkCupid **sam się przyznał**. Lekcja PR: transparencja zawsze gra lepiej niż ukrywanie.
@@ -378,7 +378,9 @@ Sprawa "Emotional Contagion" ma bezpośrednią implikację dla mediacji rodzinny
 
 12. Vindu Goel, "Facebook Tinkers With Users' Emotions in News Feed Experiment, Stirring Outcry", *The New York Times*, 29 czerwca 2014. URL: https://www.nytimes.com/2014/06/30/technology/facebook-tinkers-with-users-emotions-in-news-feed-experiment-stirring-outcry.html (dostęp: 2026-04-17)
 
-13. Sheryl Sandberg, wywiad dla *India Today*, 2 lipca 2014.
+13. Sheryl Sandberg, wywiad dla *NDTV* w Indiach (podczas wizyty w New Delhi), 2 lipca 2014. Por. relacja *Washington Post*, 2 lipca 2014.
+
+14. *Washington Post*, relacja z 25 września 2014 nt. ogłoszenia przez Douglasa F. Ganslera (Maryland AG, 23–24 września 2014) analizy skarg prof. Jamesa Grimmelmanna w sprawie badania emotional contagion.
 
 ---
 
