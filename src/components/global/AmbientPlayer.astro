@@ -4,16 +4,16 @@
  *
  * Generates the soundtrack at runtime using the Web Audio API — no asset,
  * no licensing, no bundle weight. Character: low cinematic drone (sub-bass
- * pulse + detuned filtered pad + occasional tension swell). Loud enough to
- * register as "presence" but quiet enough to read over.
+ * pulse + detuned filtered pad + occasional tension swell).
  *
- * Browsers block autoplay-with-sound on first page load. We attempt anyway;
- * if blocked, the toggle appears highlighted and the first user click on
- * the page resumes the AudioContext + starts playback.
+ * Browser autoplay policy forbids audio without a user gesture. We mark the
+ * toggle as "needs-tap" on load and attach capture-phase listeners for the
+ * first interaction (pointer/key/touch/scroll/wheel). When that first
+ * interaction fires, we create the AudioContext INSIDE the gesture handler
+ * (the most reliable pattern, especially on iOS Safari) and start the drone.
  *
- * Honors `prefers-reduced-motion: no-preference` is irrelevant here (audio,
- * not animation). Audio is session-only — every fresh page load starts with
- * audio enabled. Mute is a per-session choice; refresh restores audio on.
+ * Audio is session-only — every fresh page load tries to start audio again.
+ * Mute is per-session; refresh restores the default-on behavior.
  */
 ---
 
@@ -65,6 +65,7 @@
     &.is-needs-tap {
       animation: ambient-glow 1.6s ease-in-out infinite;
       border-color: var(--accent);
+      color: var(--accent);
     }
   }
   .ambient-toggle__icon { font-size: 13px; }
@@ -75,7 +76,7 @@
   }
   @keyframes ambient-glow {
     0%, 100% { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); }
-    50%      { box-shadow: 0 0 0 6px rgba(163, 45, 45, 0.18); }
+    50%      { box-shadow: 0 0 0 8px rgba(163, 45, 45, 0.22); }
   }
 
   @media (max-width: 640px) {
@@ -89,291 +90,282 @@
 </style>
 
 <script>
-  // Run once on first load AND on every Astro view-transition swap
-  // (the toggle is data-transition-persist so its DOM stays alive,
-  // but we still need to re-bind listeners when only the body swaps).
-  function setupAmbientPlayer() {
+  // Ambient audio module. Single global instance, persists across Astro
+  // view-transitions because the toggle is data-transition-persist.
+  //
+  // State machine (only one is active at a time):
+  //   - 'idle'      : no AudioContext yet; waiting for first user gesture
+  //   - 'on'        : context running, drone audible
+  //   - 'off'       : user muted during session (or explainer paused us)
+  //
+  // The first user gesture (anywhere on the page) creates the context.
+  // This works across all browsers including iOS Safari, which is strict
+  // about requiring AudioContext creation inside a user gesture.
+  (function () {
     if ((window as any).__matrycaAmbientReady) return;
     (window as any).__matrycaAmbientReady = true;
 
-    const toggle = document.getElementById('ambient-toggle');
-    const icon = document.getElementById('ambient-icon');
-    const label = document.getElementById('ambient-label');
-    if (!toggle || !icon || !label) return;
-
-    type State = 'on' | 'off';
-    // Always start with audio on. Mute is per-session — refreshing the page
-    // restores the default. (Previous version persisted choice in localStorage,
-    // but the user wants audio on by default on every fresh visit.)
-    const stored: State = 'on';
+    let toggle: HTMLElement | null = null;
+    let icon: HTMLElement | null = null;
+    let label: HTMLElement | null = null;
 
     let ctx: AudioContext | null = null;
     let masterGain: GainNode | null = null;
-    let nodes: AudioNode[] = [];
-    let intervalId: number | null = null;
-    let running = false;
-    let intendedState: State = stored;
+    let swellTimer: number | null = null;
+    let state: 'idle' | 'on' | 'off' = 'idle';
+    let intendedOn = true;   // session default — user can flip via toggle
+    let suppressedByExplainer = false;
 
-    function setVisualState(s: 'on' | 'off' | 'needs-tap') {
-      toggle!.classList.toggle('is-on', s === 'on');
-      toggle!.classList.toggle('is-needs-tap', s === 'needs-tap');
-      icon!.textContent = s === 'on' ? '♫' : (s === 'needs-tap' ? '♪' : '♪');
-      label!.textContent = s === 'on' ? 'audio · on' : (s === 'needs-tap' ? 'tap audio' : 'audio · off');
+    function setVisual(s: 'on' | 'off' | 'needs-tap') {
+      if (!toggle || !icon || !label) return;
+      toggle.classList.toggle('is-on', s === 'on');
+      toggle.classList.toggle('is-needs-tap', s === 'needs-tap');
+      icon.textContent = s === 'on' ? '♫' : '♪';
+      label.textContent = s === 'on' ? 'audio · on' : (s === 'needs-tap' ? 'tap audio' : 'audio · off');
     }
 
-    function buildSoundscape() {
-      ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
-      masterGain = ctx.createGain();
-      masterGain.gain.value = 0;
-      masterGain.connect(ctx.destination);
-      // Slow fade-in
-      masterGain.gain.linearRampToValueAtTime(0.18, ctx.currentTime + 4);
+    function scheduleSwell() {
+      if (!ctx || !masterGain || state !== 'on') return;
+      const now = ctx.currentTime;
+      const swellOsc = ctx.createOscillator();
+      swellOsc.type = 'sawtooth';
+      swellOsc.frequency.setValueAtTime(220, now);
+      swellOsc.frequency.exponentialRampToValueAtTime(440, now + 5);
+      const swellFilter = ctx.createBiquadFilter();
+      swellFilter.type = 'bandpass';
+      swellFilter.frequency.value = 1200;
+      swellFilter.Q.value = 6;
+      const swellGain = ctx.createGain();
+      swellGain.gain.setValueAtTime(0, now);
+      swellGain.gain.linearRampToValueAtTime(0.06, now + 2.5);
+      swellGain.gain.linearRampToValueAtTime(0, now + 5);
+      swellOsc.connect(swellFilter).connect(swellGain).connect(masterGain);
+      swellOsc.start(now);
+      swellOsc.stop(now + 5.5);
+    }
 
-      // === Sub-bass pulse (heartbeat / tension floor) ===
-      const sub = ctx.createOscillator();
+    function startSwellTicker() {
+      if (swellTimer) clearTimeout(swellTimer);
+      const tick = () => {
+        if (state !== 'on') return;
+        scheduleSwell();
+        swellTimer = window.setTimeout(tick, 18000 + Math.random() * 14000);
+      };
+      swellTimer = window.setTimeout(tick, 6000);
+    }
+
+    function stopSwellTicker() {
+      if (swellTimer) { clearTimeout(swellTimer); swellTimer = null; }
+    }
+
+    function buildSoundscape(audioContext: AudioContext) {
+      // Master gain — starts at 0, ramped up by caller after connect.
+      const mg = audioContext.createGain();
+      mg.gain.value = 0;
+      mg.connect(audioContext.destination);
+
+      // Sub-bass pulse
+      const sub = audioContext.createOscillator();
       sub.type = 'sine';
-      sub.frequency.value = 38; // sub-bass hum
-      const subGain = ctx.createGain();
+      sub.frequency.value = 38;
+      const subGain = audioContext.createGain();
       subGain.gain.value = 0.4;
-      // LFO modulating sub volume → slow heartbeat
-      const subLfo = ctx.createOscillator();
+      const subLfo = audioContext.createOscillator();
       subLfo.frequency.value = 0.18;
-      const subLfoGain = ctx.createGain();
+      const subLfoGain = audioContext.createGain();
       subLfoGain.gain.value = 0.25;
       subLfo.connect(subLfoGain).connect(subGain.gain);
-      sub.connect(subGain).connect(masterGain);
+      sub.connect(subGain).connect(mg);
       sub.start();
       subLfo.start();
-      nodes.push(sub, subGain, subLfo, subLfoGain);
 
-      // === Detuned pad (cinematic strings) — three sawtooth oscillators slightly detuned ===
-      const padFreqs = [110, 110.7, 220.4]; // A2, slightly sharp A2, A3 sharp
-      const padFilter = ctx.createBiquadFilter();
+      // Detuned pad (cinematic strings)
+      const padFreqs = [110, 110.7, 220.4];
+      const padFilter = audioContext.createBiquadFilter();
       padFilter.type = 'lowpass';
       padFilter.frequency.value = 800;
       padFilter.Q.value = 4;
-      const padGain = ctx.createGain();
-      padGain.gain.value = 0.12;
-      padFilter.connect(padGain).connect(masterGain);
+      const padGain = audioContext.createGain();
+      padGain.gain.value = 0.18;
+      padFilter.connect(padGain).connect(mg);
 
-      padFreqs.forEach((f, i) => {
-        const osc = ctx!.createOscillator();
+      padFreqs.forEach((f) => {
+        const osc = audioContext.createOscillator();
         osc.type = 'sawtooth';
         osc.frequency.value = f;
-        const oscGain = ctx!.createGain();
+        const oscGain = audioContext.createGain();
         oscGain.gain.value = 0.5;
         osc.connect(oscGain).connect(padFilter);
         osc.start();
-        nodes.push(osc, oscGain);
       });
-      nodes.push(padFilter, padGain);
 
-      // === Slow filter sweep on pad — adds movement ===
-      const filterLfo = ctx.createOscillator();
+      // Slow filter sweep
+      const filterLfo = audioContext.createOscillator();
       filterLfo.frequency.value = 0.07;
-      const filterLfoGain = ctx.createGain();
+      const filterLfoGain = audioContext.createGain();
       filterLfoGain.gain.value = 400;
       filterLfo.connect(filterLfoGain).connect(padFilter.frequency);
       filterLfo.start();
-      nodes.push(filterLfo, filterLfoGain);
 
-      // === Tension swells — every 18-32s, a brief detuned wash ===
-      function scheduleSwell() {
-        if (!ctx || !running) return;
-        const now = ctx.currentTime;
-        const swellOsc = ctx.createOscillator();
-        swellOsc.type = 'sawtooth';
-        swellOsc.frequency.setValueAtTime(220, now);
-        swellOsc.frequency.exponentialRampToValueAtTime(440, now + 5);
-        const swellFilter = ctx.createBiquadFilter();
-        swellFilter.type = 'bandpass';
-        swellFilter.frequency.value = 1200;
-        swellFilter.Q.value = 6;
-        const swellGain = ctx.createGain();
-        swellGain.gain.setValueAtTime(0, now);
-        swellGain.gain.linearRampToValueAtTime(0.06, now + 2.5);
-        swellGain.gain.linearRampToValueAtTime(0, now + 5);
-        swellOsc.connect(swellFilter).connect(swellGain).connect(masterGain!);
-        swellOsc.start(now);
-        swellOsc.stop(now + 5.5);
-      }
-      // Random interval 18-32s
-      function tick() {
-        scheduleSwell();
-        intervalId = window.setTimeout(tick, 18000 + Math.random() * 14000);
-      }
-      intervalId = window.setTimeout(tick, 6000);
+      return mg;
     }
 
-    async function start() {
-      if (running) return;
+    // Race ctx.resume() against a timeout — some browsers leave the promise
+    // pending forever when autoplay is blocked. 500 ms is plenty for a real
+    // user gesture to resolve it, and short enough to flip to needs-tap.
+    async function resumeWithTimeout(audioContext: AudioContext): Promise<boolean> {
+      if (audioContext.state === 'running') return true;
       try {
-        if (!ctx) buildSoundscape();
-        if (ctx!.state === 'suspended') await ctx!.resume();
-        // Chrome resolves resume() even when autoplay is blocked — the
-        // context stays 'suspended'. Verify state before declaring success.
-        if (ctx!.state !== 'running') {
-          setVisualState('needs-tap');
-          return;
+        await Promise.race([
+          audioContext.resume(),
+          new Promise<void>((_, reject) => setTimeout(() => reject(new Error('resume timeout')), 500)),
+        ]);
+      } catch {
+        // Timeout or rejection — autoplay blocked
+      }
+      return audioContext.state === 'running';
+    }
+
+    /**
+     * Try to start audio. Called from:
+     *   - First user gesture handler (anywhere on the page)
+     *   - Toggle button click
+     *   - Explainer audio "off" message (restore after iframe music ends)
+     *
+     * Returns true if audio is now playing.
+     */
+    async function tryStart(): Promise<boolean> {
+      if (state === 'on') return true;
+      try {
+        if (!ctx) {
+          const Ctor = window.AudioContext || (window as any).webkitAudioContext;
+          if (!Ctor) {
+            setVisual('off');
+            return false;
+          }
+          ctx = new Ctor();
+          masterGain = buildSoundscape(ctx);
         }
-        running = true;
-        setVisualState('on');
-      } catch (e) {
-        setVisualState('needs-tap');
+        const ok = await resumeWithTimeout(ctx);
+        if (!ok || !masterGain) {
+          setVisual('needs-tap');
+          return false;
+        }
+        // (Re)establish path to destination — stop() disconnects it.
+        try { masterGain.connect(ctx.destination); } catch {}
+        const t = ctx.currentTime;
+        masterGain.gain.cancelScheduledValues(t);
+        // Read current automation value (works even mid-ramp because we just
+        // cancelled). Fallback to 0 if value getter is misleading.
+        const cur = (masterGain.gain.value || 0);
+        masterGain.gain.setValueAtTime(cur, t);
+        masterGain.gain.linearRampToValueAtTime(0.22, t + 2.5);
+        state = 'on';
+        setVisual('on');
+        startSwellTicker();
+        return true;
+      } catch {
+        setVisual('needs-tap');
+        return false;
       }
     }
 
     function stop() {
-      running = false;
-      if (intervalId) { clearTimeout(intervalId); intervalId = null; }
-      // Hard cut: disconnect masterGain from destination. This is synchronous
-      // and atomic — no audio path can flow through a disconnected node, so
-      // we don't depend on fade-out automation or AudioContext suspend timing.
-      // (Previous attempts using setTargetAtTime + setTimeout suspend kept
-      //  failing intermittently — Web Audio's gain readback is unreliable
-      //  during scheduled ramps, and the suspend race window let oscillators
-      //  keep producing audible output in some browsers.)
-      if (masterGain) {
-        try { masterGain.disconnect(); } catch {}
-      }
-      if (ctx && ctx.state === 'running') {
-        ctx.suspend().catch(() => {});
-      }
-      setVisualState('off');
+      state = 'off';
+      stopSwellTicker();
+      // Hard-cut: disconnect masterGain from destination. Synchronous, atomic.
+      if (masterGain) { try { masterGain.disconnect(); } catch {} }
+      if (ctx && ctx.state === 'running') { ctx.suspend().catch(() => {}); }
+      setVisual('off');
     }
 
-    toggle!.addEventListener('click', () => {
-      if (!running) {
-        intendedState = 'on';
-        if (ctx && masterGain) {
-          // Already initialized — resume context, re-establish audio path, fade up.
-          // stop() disconnected masterGain from destination so we MUST reconnect.
-          ctx.resume().then(() => {
-            const t = ctx!.currentTime;
-            try { masterGain!.connect(ctx!.destination); } catch {}
-            // Reset gain to 0 explicitly, then ramp up via setTargetAtTime.
-            masterGain!.gain.cancelScheduledValues(t);
-            masterGain!.gain.setValueAtTime(0, t);
-            masterGain!.gain.setTargetAtTime(0.18, t, 0.6);
-            running = true;
-            // Restart swell ticker
-            const tickFn = () => {
-              if (!running) return;
-              const now = ctx!.currentTime;
-              const swellOsc = ctx!.createOscillator();
-              swellOsc.type = 'sawtooth';
-              swellOsc.frequency.setValueAtTime(220, now);
-              swellOsc.frequency.exponentialRampToValueAtTime(440, now + 5);
-              const swellFilter = ctx!.createBiquadFilter();
-              swellFilter.type = 'bandpass';
-              swellFilter.frequency.value = 1200;
-              swellFilter.Q.value = 6;
-              const swellGain = ctx!.createGain();
-              swellGain.gain.setValueAtTime(0, now);
-              swellGain.gain.linearRampToValueAtTime(0.06, now + 2.5);
-              swellGain.gain.linearRampToValueAtTime(0, now + 5);
-              swellOsc.connect(swellFilter).connect(swellGain).connect(masterGain!);
-              swellOsc.start(now);
-              swellOsc.stop(now + 5.5);
-              intervalId = window.setTimeout(tickFn, 18000 + Math.random() * 14000);
-            };
-            intervalId = window.setTimeout(tickFn, 6000);
-            setVisualState('on');
-          });
-        } else {
-          start();
+    // === First-interaction handler (autoplay fallback) ===
+    // Fires on the first pointer/key/touch/scroll/wheel event anywhere on
+    // the page, capture phase, so it beats page handlers (e.g. link clicks).
+    // Once fired, the listeners self-remove.
+    function installFirstInteractionHandler() {
+      const onFirstInteract = (_e: Event) => {
+        cleanup();
+        if (intendedOn && state !== 'on') {
+          // Fire-and-forget; tryStart() handles its own state updates
+          tryStart();
         }
-      } else {
-        intendedState = 'off';
-        stop();
+      };
+      const opts: AddEventListenerOptions = { once: true, capture: true, passive: true };
+      const evs = ['pointerdown', 'keydown', 'touchstart', 'scroll', 'wheel', 'mousedown'];
+      function cleanup() {
+        for (const ev of evs) {
+          document.removeEventListener(ev, onFirstInteract, true);
+        }
       }
-    });
+      for (const ev of evs) {
+        document.addEventListener(ev, onFirstInteract, opts);
+      }
+    }
 
-    // === Listen for explainer-music events from iframe ===
-    // When an animation iframe starts its dramatic soundtrack, mute the
-    // ambient drone. When it stops (or unmounts), restore the user's choice.
-    let suppressedByExplainer = false;
+    // === Toggle button click ===
+    function installToggleHandler(btn: HTMLElement) {
+      btn.addEventListener('click', () => {
+        if (state === 'on') {
+          intendedOn = false;
+          stop();
+        } else {
+          intendedOn = true;
+          // Click is itself a user gesture — tryStart will create/resume ctx
+          tryStart();
+        }
+      });
+    }
+
+    // === Explainer iframe messages ===
     window.addEventListener('message', (e: MessageEvent) => {
       if (!e.data || e.data.type !== 'matryca-explainer-audio') return;
       if (e.data.state === 'on') {
-        // Explainer music started — mute ambient if currently playing
-        if (running) {
+        // Explainer started — mute ambient if it's currently playing
+        if (state === 'on') {
           suppressedByExplainer = true;
           stop();
-          // Override visual state so user knows ambient is paused, not off
-          icon!.textContent = '♪';
-          label!.textContent = 'audio · paused';
-          toggle!.classList.remove('is-on');
+          // Override visual so user knows it's paused, not off
+          if (icon) icon.textContent = '♪';
+          if (label) label.textContent = 'audio · paused';
+          if (toggle) toggle.classList.remove('is-on');
         }
       } else if (e.data.state === 'off') {
-        // Explainer music stopped — restore ambient if user had it on
-        if (suppressedByExplainer && intendedState === 'on') {
+        // Explainer ended — restore ambient if user had it on
+        if (suppressedByExplainer && intendedOn) {
           suppressedByExplainer = false;
-          if (ctx && masterGain) {
-            ctx.resume().then(() => {
-              const t = ctx!.currentTime;
-              try { masterGain!.connect(ctx!.destination); } catch {}
-              masterGain!.gain.cancelScheduledValues(t);
-              masterGain!.gain.setValueAtTime(0, t);
-              masterGain!.gain.setTargetAtTime(0.18, t, 0.6);
-              running = true;
-              const tickFn = () => {
-                if (!running) return;
-                const now = ctx!.currentTime;
-                const swellOsc = ctx!.createOscillator();
-                swellOsc.type = 'sawtooth';
-                swellOsc.frequency.setValueAtTime(220, now);
-                swellOsc.frequency.exponentialRampToValueAtTime(440, now + 5);
-                const swellFilter = ctx!.createBiquadFilter();
-                swellFilter.type = 'bandpass';
-                swellFilter.frequency.value = 1200;
-                swellFilter.Q.value = 6;
-                const swellGain = ctx!.createGain();
-                swellGain.gain.setValueAtTime(0, now);
-                swellGain.gain.linearRampToValueAtTime(0.06, now + 2.5);
-                swellGain.gain.linearRampToValueAtTime(0, now + 5);
-                swellOsc.connect(swellFilter).connect(swellGain).connect(masterGain!);
-                swellOsc.start(now);
-                swellOsc.stop(now + 5.5);
-                intervalId = window.setTimeout(tickFn, 18000 + Math.random() * 14000);
-              };
-              intervalId = window.setTimeout(tickFn, 6000);
-              setVisualState('on');
-            });
-          } else {
-            start();
-          }
+          tryStart();
         }
       }
     });
 
-    // Try to autoplay if user wants it
-    if (intendedState === 'on') {
-      start().then(() => {
-        if (!running) {
-          // Autoplay blocked → set up first-interaction fallback.
-          // Capture phase fires before any page handler, so even a click
-          // on a link starts audio before navigation.
-          setVisualState('needs-tap');
-          const onFirstInteract = () => {
-            if (!running && intendedState === 'on') start();
-            document.removeEventListener('pointerdown', onFirstInteract, true);
-            document.removeEventListener('keydown', onFirstInteract, true);
-            document.removeEventListener('touchstart', onFirstInteract, true);
-            document.removeEventListener('scroll', onFirstInteract, true);
-          };
-          const opts: AddEventListenerOptions = { once: true, capture: true, passive: true };
-          document.addEventListener('pointerdown', onFirstInteract, opts);
-          document.addEventListener('keydown', onFirstInteract, opts);
-          document.addEventListener('touchstart', onFirstInteract, opts);
-          document.addEventListener('scroll', onFirstInteract, opts);
-        }
-      });
-    } else {
-      setVisualState('off');
-    }
-  }
+    // === Bootstrap (DOM-ready safe) ===
+    function bootstrap() {
+      toggle = document.getElementById('ambient-toggle');
+      icon = document.getElementById('ambient-icon');
+      label = document.getElementById('ambient-label');
+      if (!toggle || !icon || !label) return;
 
-  setupAmbientPlayer();
-  document.addEventListener('astro:page-load', setupAmbientPlayer);
+      installToggleHandler(toggle);
+
+      // Show optimistic "needs-tap" — most browsers will block autoplay anyway
+      setVisual('needs-tap');
+
+      // Try optimistic start. If browser allows (e.g. Media Engagement Index
+      // grants it, or user has interacted with the site already in this
+      // session), audio kicks in immediately. Otherwise needs-tap stays.
+      tryStart().then((ok) => {
+        if (!ok) installFirstInteractionHandler();
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', bootstrap);
+    } else {
+      bootstrap();
+    }
+    // Astro view-transitions: the toggle DOM is persisted, but the new page's
+    // script tag would re-execute. The guard at the top prevents that —
+    // bootstrap doesn't need to run again because closures are still alive.
+  })();
 </script>
