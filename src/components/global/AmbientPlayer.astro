@@ -210,10 +210,15 @@
       try {
         if (!ctx) buildSoundscape();
         if (ctx!.state === 'suspended') await ctx!.resume();
+        // Chrome resolves resume() even when autoplay is blocked — the
+        // context stays 'suspended'. Verify state before declaring success.
+        if (ctx!.state !== 'running') {
+          setVisualState('needs-tap');
+          return;
+        }
         running = true;
         setVisualState('on');
       } catch (e) {
-        // Autoplay blocked — ask for tap
         setVisualState('needs-tap');
       }
     }
@@ -346,15 +351,22 @@
     if (intendedState === 'on') {
       start().then(() => {
         if (!running) {
-          // Autoplay blocked → set up first-tap-anywhere fallback
+          // Autoplay blocked → set up first-interaction fallback.
+          // Capture phase fires before any page handler, so even a click
+          // on a link starts audio before navigation.
           setVisualState('needs-tap');
           const onFirstInteract = () => {
             if (!running && intendedState === 'on') start();
-            document.removeEventListener('pointerdown', onFirstInteract);
-            document.removeEventListener('keydown', onFirstInteract);
+            document.removeEventListener('pointerdown', onFirstInteract, true);
+            document.removeEventListener('keydown', onFirstInteract, true);
+            document.removeEventListener('touchstart', onFirstInteract, true);
+            document.removeEventListener('scroll', onFirstInteract, true);
           };
-          document.addEventListener('pointerdown', onFirstInteract, { once: true });
-          document.addEventListener('keydown', onFirstInteract, { once: true });
+          const opts: AddEventListenerOptions = { once: true, capture: true, passive: true };
+          document.addEventListener('pointerdown', onFirstInteract, opts);
+          document.addEventListener('keydown', onFirstInteract, opts);
+          document.addEventListener('touchstart', onFirstInteract, opts);
+          document.addEventListener('scroll', onFirstInteract, opts);
         }
       });
     } else {
