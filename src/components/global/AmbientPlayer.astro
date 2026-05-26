@@ -12,8 +12,8 @@
  * the page resumes the AudioContext + starts playback.
  *
  * Honors `prefers-reduced-motion: no-preference` is irrelevant here (audio,
- * not animation). We do persist the user's choice in localStorage:
- *   matryca-audio = 'on' | 'off'  (defaults to 'on')
+ * not animation). Audio is session-only — every fresh page load starts with
+ * audio enabled. Mute is a per-session choice; refresh restores audio on.
  */
 ---
 
@@ -102,7 +102,10 @@
     if (!toggle || !icon || !label) return;
 
     type State = 'on' | 'off';
-    const stored = (localStorage.getItem('matryca-audio') as State | null) || 'on';
+    // Always start with audio on. Mute is per-session — refreshing the page
+    // restores the default. (Previous version persisted choice in localStorage,
+    // but the user wants audio on by default on every fresh visit.)
+    const stored: State = 'on';
 
     let ctx: AudioContext | null = null;
     let masterGain: GainNode | null = null;
@@ -237,7 +240,6 @@
     toggle!.addEventListener('click', () => {
       if (!running) {
         intendedState = 'on';
-        localStorage.setItem('matryca-audio', 'on');
         if (ctx && masterGain) {
           // Already initialized — resume context, re-establish audio path, fade up.
           // stop() disconnected masterGain from destination so we MUST reconnect.
@@ -278,7 +280,6 @@
         }
       } else {
         intendedState = 'off';
-        localStorage.setItem('matryca-audio', 'off');
         stop();
       }
     });
