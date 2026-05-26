@@ -5,10 +5,10 @@ group: D
 group_label: Amazon, Uber
 title: Amazon Alexa
 year_revealed: 2019
-last_updated: '2026-04-17'
+last_updated: '2026-05-26'
 companies:
 - Amazon
-status: concluded
+status: ongoing_litigation
 jurisdictions:
 - US
 - UK
@@ -24,12 +24,6 @@ fines:
   authority: FTC
   date: 2023-05
   category: regulatory_fine
-  status: paid
-- amount: 95000000
-  currency: USD
-  authority: '*In re Amazon Alexa Privacy*'
-  date: 2024-10
-  category: class_action_settlement
   status: paid
 whistleblowers:
 - le-bonniec
@@ -69,8 +63,8 @@ years_active:
 
 > **Kategoria:** Smart speakers / always-on listening / weryfikacja przez ludzi / AI trenowanie
 > **Firma/firmy:** Amazon
-> **Lata:** 2014 (debiut Echo) – 2019 (ujawnienie weryfikacja przez ludzi) – 2024 (ugoda pozew zbiorowy)
-> **Status:** Zakończone ugody; praktyka zmieniona na rezygnacja; nagrania nadal zbierane
+> **Lata:** 2014 (debiut Echo) – 2019 (ujawnienie weryfikacja przez ludzi) – 2025 (certyfikacja klasy w pozwie zbiorowym)
+> **Status:** Pozew zbiorowy w toku (klasa certyfikowana 7.07.2025); FTC kara COPPA zapłacona; praktyka zmieniona na rezygnacja; nagrania nadal zbierane
 > **ID karty:** D02
 
 ---
@@ -82,12 +76,12 @@ years_active:
 | Kraj/region | Globalnie; ogniska postępowań: USA, Niemcy, UK |
 | Rok ujawnienia | 10 kwietnia 2019 (*Bloomberg*, Matt Day, Giles Turner, Natalia Drozdiak) |
 | Lata trwania praktyki | 2014–2019 (domyślne weryfikacja przez ludzi) |
-| Łączna kara | 95 000 000 USD (pozew zbiorowy 2024); brak kar regulacyjnych specyficznie za weryfikacja przez ludzi |
+| Łączna kara | 25 000 000 USD (FTC, COPPA, 2023); pozew zbiorowy *Garner v. Amazon.com, Inc.* w toku — brak ugody |
 | Waluta | USD |
-| Podstawa prawna | Stanowe prawa konsumenckie (Illinois BIPA, Washington BPA), ECPA, pozew zbiorowy |
+| Podstawa prawna | Stanowe prawa konsumenckie (Illinois BIPA, Washington BPA, Washington Privacy Act), ECPA, federalny Wiretap Act, pozew zbiorowy |
 | Sygnalista/odkrywca | Bloomberg (inside sources); później VICE i The Guardian z kolejnymi ujawnieniami |
 | Liczba poszkodowanych | ~100+ mln użytkowników Alexa globalnie |
-| Status (na dziś) | Amazon wprowadził rezygnacja; weryfikacja przez ludzi nadal istnieje; pozew zbiorowy rozliczony 2024 |
+| Status (na dziś) | Amazon wprowadził rezygnacja; weryfikacja przez ludzi nadal istnieje; pozew zbiorowy *Garner v. Amazon* — klasa certyfikowana 7.07.2025, brak ugody |
 
 ---
 
@@ -109,9 +103,9 @@ Po publikacji Amazon w **3 dni** wprowadził **rezygnacja**. Domyślnie nadal by
 
 **31 maja 2023** — FTC nałożyła na Amazon **25 mln USD kary** za naruszenia **COPPA** w związku z Alexa Kids → osobna sprawa, karta D03.
 
-**2022–2024** — class action ***In re Amazon Alexa Privacy Litigation*** w W.D. Washington. Powód wiodący **Jessica Garcia**, reprezentowana przez **Keller Rohrback L.L.P.**, reprezentował ~100 mln użytkowników Alexa. **23 października 2024** — ugoda na **95 000 000 USD**. Illinois residents — szczególne roszczenia pod **BIPA** (Biometric Information Privacy Act).
+**2021–w toku** — class action ***Garner v. Amazon.com, Inc.***, sygn. **2:21-cv-00750**, w **W.D. Wash.** (Sąd Okręgowy USA dla Zachodniego Dystryktu Waszyngtonu). Powódka wiodąca **Kaeli Garner**, reprezentowana m.in. przez **Labaton Keller Sucharow** i **Keller Rohrback L.L.P.**, działa w imieniu klasy obejmującej dziesiątki milionów użytkowników Echo. Powodowie zarzucają Amazon, że Echo nagrywało rozmowy także bez wywołania słowa kluczowego („wake word") oraz że nagrania były przechowywane i wykorzystywane bez prawidłowej zgody, naruszając m.in. federalny **Wiretap Act**, **ECPA**, **Washington Privacy Act**, **Illinois BIPA** oraz stanowe ustawy o podsłuchu. **7 lipca 2025** sędzia **Robert S. Lasnik** przyznał **certyfikację klasy** — kluczowy etap, który otwiera drogę do procesu. **Sprawa pozostaje w toku — nie zawarto ugody.**
 
-Sprawa D02 pokazuje, że **głosowe AI assistants były trenowane na prywatnych rozmowach** bez ujawnionej zgody — klasyczny wzorzec "użytkownik nie wie, że człowiek go słyszy". Praktyka dziś jest **rezygnacja** domyślnie, ale **nagrania głosowe nadal są zbierane** i analizowane (w większości automatycznie, ale część nadal przechodzi przez weryfikacja przez ludzi).
+Sprawa D02 pokazuje, że **głosowe AI assistants były trenowane na prywatnych rozmowach** bez ujawnionej zgody — klasyczny wzorzec „użytkownik nie wie, że człowiek go słyszy". Praktyka dziś jest **rezygnacja** domyślnie, ale **nagrania głosowe nadal są zbierane** i analizowane (w większości automatycznie, ale część nadal przechodzi przez weryfikacja przez ludzi).
 
 ---
 
@@ -126,8 +120,9 @@ Sprawa D02 pokazuje, że **głosowe AI assistants były trenowane na prywatnych 
 - **13 kwietnia 2019** — Amazon wprowadza rezygnacja dla **weryfikacja przez ludzi** (ale domyślnie włączone).
 - **Sierpień 2019** — **hamburski DPA Johannes Caspar** (ten sam od Google WiFi Street View) wszczyna postępowanie dot. Alexa w Niemczech.
 - **2020–2022** — szereg klas akcji w USA.
+- **9 czerwca 2021** — złożenie pozwu zbiorowego ***Garner v. Amazon.com, Inc.***, sygn. **2:21-cv-00750**, W.D. Wash. Powódka wiodąca **Kaeli Garner**.
 - **31 maja 2023** — **FTC kara 25 mln USD** za naruszenia COPPA (→ D03).
-- **23 października 2024** — **ugoda 95 mln USD** w *In re Amazon Alexa Privacy Litigation*.
+- **7 lipca 2025** — sędzia **Robert S. Lasnik** przyznaje **certyfikację klasy** w *Garner v. Amazon.com, Inc.* Sprawa wchodzi w fazę procesową — **brak ugody**.
 - **2025** — Amazon aktualizuje opcje domyślne: **"Don't save voice recordings"** jako nowa domyślna opcja dla nowych użytkowników.
 
 ---
@@ -245,8 +240,9 @@ Le Bonniec zgłosił do francuskiego CNIL w 2020.
 
 ### Klasy
 
-- **Jessica Garcia** — powód wiodący w *In re Amazon Alexa Privacy Litigation*.
-- **Keller Rohrback L.L.P.** — kancelaria klasy.
+- **Kaeli Garner** — powódka wiodąca w *Garner v. Amazon.com, Inc.*, sygn. 2:21-cv-00750, W.D. Wash.
+- **Robert S. Lasnik** — sędzia federalny W.D. Wash., 7 lipca 2025 przyznał certyfikację klasy.
+- **Labaton Keller Sucharow** oraz **Keller Rohrback L.L.P.** — kancelarie reprezentujące klasę.
 
 ---
 
@@ -266,9 +262,9 @@ Le Bonniec zgłosił do francuskiego CNIL w 2020.
 - Opcja **"Delete voice recordings after 3 months"** (auto-delete)
 - Opcja **"Delete what I just said"** (po komendzie)
 
-**Etap 5: klasowe ugody (2022–2024).**
-- Illinois BIPA class actions — osobne ugody
-- Główna: 95 mln USD ugoda 2024
+**Etap 5: postępowania klasowe (2021–w toku).**
+- *Garner v. Amazon.com, Inc.* — pozew zbiorowy w W.D. Wash., klasa certyfikowana 7.07.2025 — Amazon broni się procesowo, brak ugody
+- Illinois BIPA — odrębne roszczenia rezydentów Illinois (głos jako biometria)
 
 ---
 
@@ -295,8 +291,9 @@ Le Bonniec zgłosił do francuskiego CNIL w 2020.
 |------|------|
 | 10 kwietnia 2019 | Bloomberg publikacja |
 | 13 kwietnia 2019 | Rezygnacja wprowadzony |
+| 9 czerwca 2021 | Złożenie pozwu *Garner v. Amazon.com, Inc.*, sygn. 2:21-cv-00750, W.D. Wash. |
 | 31 maja 2023 | FTC kara COPPA 25 mln |
-| 23 października 2024 | Ugoda klasy 95 mln |
+| 7 lipca 2025 | Sędzia R. S. Lasnik przyznaje certyfikację klasy w *Garner v. Amazon* — brak ugody, sprawa w toku |
 
 ---
 
@@ -305,9 +302,9 @@ Le Bonniec zgłosił do francuskiego CNIL w 2020.
 | Data | Organ | Kwota | Jurysdykcja | Podstawa |
 |------|-------|-------|-------------|----------|
 | 31 maja 2023 | FTC | 25 000 000 USD | USA (COPPA) | → D03 |
-| 23 października 2024 | *In re Amazon Alexa Privacy* | 95 000 000 USD | USA klasa | BIPA, ECPA, state laws |
+| 7 lipca 2025 | *Garner v. Amazon.com, Inc.*, W.D. Wash. (sędzia R. S. Lasnik) | brak — sprawa w toku, klasa certyfikowana | USA klasa | Wiretap Act, ECPA, Washington Privacy Act, BIPA, stanowe ustawy o podsłuchu |
 
-**Łącznie: ~120 mln USD** (z COPPA osobną karą).
+**Łącznie zapłacone do dziś: 25 mln USD** (FTC, COPPA). Pozew *Garner v. Amazon* nadal w toku — żadna ugoda nie została zawarta.
 
 ---
 
@@ -335,7 +332,7 @@ Le Bonniec zgłosił do francuskiego CNIL w 2020.
 
 | Sprawa | Sąd | Stan | Wartość | Poszkodowani |
 |--------|-----|------|---------|--------------|
-| *In re Amazon Alexa Privacy Litigation* | W.D. Wash. | Ugoda 10.2024 | 95 000 000 USD | ~100 mln użytkowników |
+| *Garner v. Amazon.com, Inc.*, sygn. 2:21-cv-00750 | W.D. Wash. (sędzia Robert S. Lasnik) | Trwa — klasa certyfikowana 7.07.2025, brak ugody | brak (sprawa w toku) | dziesiątki milionów użytkowników Echo |
 
 ---
 
@@ -404,7 +401,7 @@ Jeśli masz Echo, Apple HomePod, Google Nest — **pamiętaj, że mikrofon jest 
 
 3. Federal Trade Commission, "FTC and DOJ Charge Amazon with Violating Children's Privacy Law by Keeping Kids' Alexa Voice Recordings Forever and Undermining Parents' Deletion Requests", 31 maja 2023.
 
-4. *In re Amazon Alexa Privacy Litigation*, W.D. Wash., Case No. 2:19-cv-00910.
+4. *Garner v. Amazon.com, Inc.*, W.D. Wash., sygn. 2:21-cv-00750 (sędzia Robert S. Lasnik). Postanowienie ws. certyfikacji klasy z 7 lipca 2025. Strona kancelarii Labaton Keller Sucharow: https://www.labaton.com/cases/garner-v-amazon-com-inc
 
 5. Amazon blog post, Rohit Prasad, "Alexa and Privacy", kwiecień 2019.
 
@@ -416,7 +413,7 @@ Jeśli masz Echo, Apple HomePod, Google Nest — **pamiętaj, że mikrofon jest 
 
 9. Illinois Biometric Information Privacy Act (740 ILCS 14).
 
-10. Keller Rohrback L.L.P., komunikaty prasowe o ugodzie, październik 2024.
+10. Labaton Keller Sucharow oraz Keller Rohrback L.L.P., komunikaty prasowe i materiały o pozwie *Garner v. Amazon.com, Inc.*, 2021–2025.
 
 11. Joseph Cox, Sam Biddle, "Facebook Contractors Transcribe Audio from Messenger", *Motherboard/Vice*, 13 sierpnia 2019.
 
@@ -430,5 +427,5 @@ Jeśli masz Echo, Apple HomePod, Google Nest — **pamiętaj, że mikrofon jest 
 
 ---
 
-*Ostatnia aktualizacja: 2026-04-17*
+*Ostatnia aktualizacja: 2026-05-26*
 *Karta w bazie: D02_amazon_alexa.md*

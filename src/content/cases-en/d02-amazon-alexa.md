@@ -5,10 +5,10 @@ group: D
 group_label: Amazon, Uber
 title: Amazon Alexa
 year_revealed: 2019
-last_updated: '2026-04-17'
+last_updated: '2026-05-26'
 companies:
 - Amazon
-status: concluded
+status: ongoing_litigation
 jurisdictions:
 - US
 - UK
@@ -24,12 +24,6 @@ fines:
   authority: FTC
   date: 2023-05
   category: regulatory_fine
-  status: paid
-- amount: 95000000
-  currency: USD
-  authority: '*In re Amazon Alexa Privacy*'
-  date: 2024-10
-  category: class_action_settlement
   status: paid
 whistleblowers:
 - le-bonniec
@@ -69,8 +63,8 @@ years_active:
 
 > **Category:** Smart speakers / always-on listening / human review / AI training
 > **Company/companies:** Amazon
-> **Years:** 2014 (Echo debut) – 2019 (human review disclosure) – 2024 (class action settlement)
-> **Status:** Settlements concluded; practice changed to opt-out; recordings still collected
+> **Years:** 2014 (Echo debut) – 2019 (human review disclosure) – 2025 (class certification in pending class action)
+> **Status:** Class action pending (class certified July 7, 2025); FTC COPPA fine paid; practice changed to opt-out; recordings still collected
 > **Card ID:** D02
 
 ---
@@ -82,12 +76,12 @@ years_active:
 | Country/region | Global; enforcement hotspots: US, Germany, UK |
 | Year disclosed | April 10, 2019 (*Bloomberg*, Matt Day, Giles Turner, Natalia Drozdiak) |
 | Years of practice | 2014–2019 (default human review) |
-| Total penalty | USD 95,000,000 (class action 2024); no regulatory fines specifically for human review |
+| Total penalty | USD 25,000,000 (FTC, COPPA, 2023); class action *Garner v. Amazon.com, Inc.* pending — no settlement reached |
 | Currency | USD |
-| Legal basis | State consumer laws (Illinois BIPA, Washington BPA), ECPA, class action |
+| Legal basis | State consumer laws (Illinois BIPA, Washington BPA, Washington Privacy Act), ECPA, federal Wiretap Act, class action |
 | Whistleblower/discoverer | Bloomberg (inside sources); later VICE and The Guardian with further revelations |
 | Number of affected | ~100+ million Alexa users globally |
-| Status (as of today) | Amazon introduced opt-out; human review still exists; class action settled 2024 |
+| Status (as of today) | Amazon introduced opt-out; human review still exists; class action *Garner v. Amazon* — class certified July 7, 2025, no settlement reached |
 
 ---
 
@@ -109,7 +103,7 @@ Within **3 days** of publication Amazon introduced **opt-out**. It was still **e
 
 **May 31, 2023** — the FTC imposed a **USD 25 million fine** on Amazon for **COPPA** violations related to Alexa Kids → separate case, card D03.
 
-**2022–2024** — the class action ***In re Amazon Alexa Privacy Litigation*** in W.D. Washington. Lead plaintiff **Jessica Garcia**, represented by **Keller Rohrback L.L.P.**, represented approximately 100 million Alexa users. **October 23, 2024** — a settlement of **USD 95,000,000**. Illinois residents — separate claims under **BIPA** (Biometric Information Privacy Act).
+**2021–pending** — the class action ***Garner v. Amazon.com, Inc.***, Case No. **2:21-cv-00750**, in the **U.S. District Court for the Western District of Washington (W.D. Wash.)**. Lead plaintiff **Kaeli Garner**, represented by **Labaton Keller Sucharow** and **Keller Rohrback L.L.P.** among others, brings the action on behalf of a class covering tens of millions of Echo users. Plaintiffs allege that Echo recorded conversations even without the "wake word" being triggered, and that recordings were stored and used without proper consent, violating, among others, the federal **Wiretap Act**, **ECPA**, the **Washington Privacy Act**, **Illinois BIPA**, and various state eavesdropping statutes. On **July 7, 2025**, Judge **Robert S. Lasnik** granted **class certification** — a key milestone that opens the path to trial. **The case remains pending — no settlement has been reached.**
 
 Case D02 shows that **voice AI assistants were trained on private conversations** without disclosed consent — a classic "the user doesn't know a human is listening" pattern. The practice today is **opt-out** by default, but **voice recordings are still collected** and analyzed (mostly automatically, but some still pass through human review).
 
@@ -126,8 +120,9 @@ Case D02 shows that **voice AI assistants were trained on private conversations*
 - **April 13, 2019** — Amazon introduces opt-out for **human review** (but enabled by default).
 - **August 2019** — **Hamburg DPA Johannes Caspar** (the same one from Google WiFi Street View) opens proceedings on Alexa in Germany.
 - **2020–2022** — a series of class actions in the US.
+- **June 9, 2021** — filing of the class action ***Garner v. Amazon.com, Inc.***, Case No. **2:21-cv-00750**, W.D. Wash. Lead plaintiff **Kaeli Garner**.
 - **May 31, 2023** — **FTC fine of USD 25 million** for COPPA violations (→ D03).
-- **October 23, 2024** — **USD 95 million settlement** in *In re Amazon Alexa Privacy Litigation*.
+- **July 7, 2025** — Judge **Robert S. Lasnik** grants **class certification** in *Garner v. Amazon.com, Inc.* The case moves toward trial — **no settlement has been reached**.
 - **2025** — Amazon updates default options: **"Don't save voice recordings"** as the new default for new users.
 
 ---
@@ -245,8 +240,9 @@ Le Bonniec reported to the French CNIL in 2020.
 
 ### Class
 
-- **Jessica Garcia** — lead plaintiff in *In re Amazon Alexa Privacy Litigation*.
-- **Keller Rohrback L.L.P.** — class action firm.
+- **Kaeli Garner** — lead plaintiff in *Garner v. Amazon.com, Inc.*, Case No. 2:21-cv-00750, W.D. Wash.
+- **Robert S. Lasnik** — federal judge, W.D. Wash., granted class certification on July 7, 2025.
+- **Labaton Keller Sucharow** and **Keller Rohrback L.L.P.** — law firms representing the class.
 
 ---
 
@@ -266,9 +262,9 @@ Le Bonniec reported to the French CNIL in 2020.
 - **"Delete voice recordings after 3 months"** option (auto-delete)
 - **"Delete what I just said"** option (by voice command)
 
-**Stage 5: class settlements (2022–2024).**
-- Illinois BIPA class actions — separate settlements
-- Main: USD 95 million settlement in 2024
+**Stage 5: class proceedings (2021–pending).**
+- *Garner v. Amazon.com, Inc.* — class action in W.D. Wash., class certified July 7, 2025 — Amazon is defending on the merits, no settlement
+- Illinois BIPA — separate claims by Illinois residents (voice as biometrics)
 
 ---
 
@@ -295,8 +291,9 @@ Le Bonniec reported to the French CNIL in 2020.
 |------|------|
 | April 10, 2019 | Bloomberg publication |
 | April 13, 2019 | Opt-out introduced |
+| June 9, 2021 | Filing of *Garner v. Amazon.com, Inc.*, Case No. 2:21-cv-00750, W.D. Wash. |
 | May 31, 2023 | FTC COPPA fine of USD 25 million |
-| October 23, 2024 | Class settlement of USD 95 million |
+| July 7, 2025 | Judge R. S. Lasnik grants class certification in *Garner v. Amazon* — no settlement, case pending |
 
 ---
 
@@ -305,9 +302,9 @@ Le Bonniec reported to the French CNIL in 2020.
 | Date | Authority | Amount | Jurisdiction | Basis |
 |------|-------|-------|-------------|----------|
 | May 31, 2023 | FTC | USD 25,000,000 | US (COPPA) | → D03 |
-| October 23, 2024 | *In re Amazon Alexa Privacy* | USD 95,000,000 | US class | BIPA, ECPA, state laws |
+| July 7, 2025 | *Garner v. Amazon.com, Inc.*, W.D. Wash. (Judge R. S. Lasnik) | none — case pending, class certified | US class | Wiretap Act, ECPA, Washington Privacy Act, BIPA, state eavesdropping statutes |
 
-**Total: ~USD 120 million** (with COPPA as a separate fine).
+**Total paid to date: USD 25 million** (FTC, COPPA). The *Garner v. Amazon* class action is still pending — no settlement has been reached.
 
 ---
 
@@ -335,7 +332,7 @@ Le Bonniec reported to the French CNIL in 2020.
 
 | Case | Court | Status | Value | Affected |
 |--------|-----|------|---------|--------------|
-| *In re Amazon Alexa Privacy Litigation* | W.D. Wash. | Settlement 10.2024 | USD 95,000,000 | ~100 million users |
+| *Garner v. Amazon.com, Inc.*, Case No. 2:21-cv-00750 | W.D. Wash. (Judge Robert S. Lasnik) | Pending — class certified July 7, 2025, no settlement | none (case pending) | tens of millions of Echo users |
 
 ---
 
@@ -404,7 +401,7 @@ If you own an Echo, Apple HomePod, or Google Nest, **remember that the microphon
 
 3. Federal Trade Commission, "FTC and DOJ Charge Amazon with Violating Children's Privacy Law by Keeping Kids' Alexa Voice Recordings Forever and Undermining Parents' Deletion Requests," May 31, 2023.
 
-4. *In re Amazon Alexa Privacy Litigation*, W.D. Wash., Case No. 2:19-cv-00910.
+4. *Garner v. Amazon.com, Inc.*, W.D. Wash., Case No. 2:21-cv-00750 (Judge Robert S. Lasnik). Class certification order of July 7, 2025. Labaton Keller Sucharow case page: https://www.labaton.com/cases/garner-v-amazon-com-inc
 
 5. Amazon blog post, Rohit Prasad, "Alexa and Privacy," April 2019.
 
@@ -416,7 +413,7 @@ If you own an Echo, Apple HomePod, or Google Nest, **remember that the microphon
 
 9. Illinois Biometric Information Privacy Act (740 ILCS 14).
 
-10. Keller Rohrback L.L.P., press releases on the settlement, October 2024.
+10. Labaton Keller Sucharow and Keller Rohrback L.L.P., press releases and case materials on *Garner v. Amazon.com, Inc.*, 2021–2025.
 
 11. Joseph Cox, Sam Biddle, "Facebook Contractors Transcribe Audio from Messenger," *Motherboard/Vice*, August 13, 2019.
 
@@ -430,5 +427,5 @@ If you own an Echo, Apple HomePod, or Google Nest, **remember that the microphon
 
 ---
 
-*Last updated: 2026-04-17*
+*Last updated: 2026-05-26*
 *Card in database: D02_amazon_alexa.md*

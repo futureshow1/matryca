@@ -19,8 +19,8 @@ legal_basis:
 fines:
 - amount: 7500000
   currency: USD
-  authority: '*Matal v. Google* class action'
-  date: 2020-07
+  authority: '*In re Google Plus Profile Litigation* (5:18-cv-06164-EJD) class action'
+  date: 2021-01
   category: class_action_settlement
   status: paid
 whistleblowers: []
@@ -85,7 +85,7 @@ years_active:
 
 In an internal Google memo from March 2018 (obtained by the *WSJ*), the legal team argued for **non-disclosure**: *"doing so would cause reputational damage greater than the benefits"* and — most damningly — ***"we don't want comparisons with Cambridge Analytica"***. That sentence became a symbol. On the same day the *WSJ* article appeared, Google announced **the shutdown of the consumer version of Google+** within 10 months. A month later, in November 2018, Google detected **a second, larger bug** — affecting **52.5 million users over 6 days** — and this time **disclosed it immediately**, accelerating the Google+ shutdown to **April 2, 2019** (a year earlier than planned).
 
-The *Matal v. Google* class action (N.D. Cal.) ended in 2020 with a settlement of **USD 7.5 million**. The SEC opened and closed without charges (SOX was not deemed to have been violated). Ireland's DPC determined that the bug "did not pose sufficient risk of harm" to require GDPR notification (**pre-Schrems II era** — weaker enforcement). For Big Tech practice, the case left one key trace: **internal documents saying "we don't want comparisons with Cambridge Analytica" became court evidence** in many later cases. The lesson was: **concealing leaks costs more than disclosing them**.
+The *In re Google Plus Profile Litigation*, Case No. 5:18-cv-06164-EJD (VKD), N.D. Cal. class action (lead plaintiffs: Matthew Matic, Zak Harris, Charles Olson, Eileen M. Pinkowski) ended in 2020 with a settlement of **USD 7.5 million**. The SEC opened and closed without charges (SOX was not deemed to have been violated). Ireland's DPC determined that the bug "did not pose sufficient risk of harm" to require GDPR notification (**pre-Schrems II era** — weaker enforcement). For Big Tech practice, the case left one key trace: **internal documents saying "we don't want comparisons with Cambridge Analytica" became court evidence** in many later cases. The lesson was: **concealing leaks costs more than disclosing them**.
 
 Google+ was a product that **never took off** — in court documents, Google admitted that **90% of Google+ sessions lasted less than 5 seconds** (users passed through G+ unwittingly from Gmail). The case became a model of "preemptive shutdown" — if a product has a flaw and no one uses it, it is easier to shut it down than to fix it.
 
@@ -95,7 +95,7 @@ Google+ was a product that **never took off** — in court documents, Google adm
 
 - **June 28, 2011** — Google launches **Google+** as a competitor to Facebook. Users were forced to use G+ through integration with Gmail, YouTube, and Google Search.
 - **2012–2014** — G+ quickly reaches hundreds of millions of registered accounts, but **activity is low**. Critics call it a "ghost town."
-- **2014** — Google **drops G+ integration with YouTube** (reversing the strategy of Vic Gundotra — the social VP who left).
+- **2014** — Google **drops G+ integration with YouTube** (reversing the strategy of Vic Gundotra — VP Engineering responsible for Google+, who left Google in April 2014).
 - **2015** — the first Google+ People API bug becomes active. Third-party app developers pull non-public profile data of users.
 - **March 2018** — as part of the **Project Strobe audit** (launched after Cambridge Analytica), Google discovers the bug. The engineering team patches it. The legal team debates disclosure. Internal memo: do not disclose.
 - **March–October 2018** — Google **sits on the information for 7 months**.
@@ -104,8 +104,9 @@ Google+ was a product that **never took off** — in court documents, Google adm
 - **December 11, 2018** — Sundar Pichai testifies before the **House Judiciary Committee**. He is not questioned in detail about Google+ (the focus was on China and Project Dragonfly — case B06).
 - **December 10, 2018** — Google announces **the acceleration of the G+ shutdown** to April 2, 2019.
 - **April 2, 2019** — consumer Google+ is **formally shut down**. Users can download their data via Google Takeout.
-- **2019–2020** — *Matal v. Google* class action (N.D. Cal.).
-- **July 27, 2020** — settlement of **USD 7.5 million** (approximately USD 5–12 per user who filed a claim).
+- **2019–2020** — *In re Google Plus Profile Litigation*, Case No. 5:18-cv-06164-EJD (VKD), N.D. Cal. class action (lead plaintiffs: Matthew Matic, Zak Harris, Charles Olson, Eileen M. Pinkowski).
+- **June 2020** — preliminary settlement of **USD 7.5 million** (approximately USD 5–12 per user who filed a claim).
+- **January 2021** — final approval of the settlement by the court.
 - **July 2, 2023** — Google also shuts down **Currents** (the G+ successor for G Suite/Workspace). No Google corporate social network has survived.
 
 ---
@@ -190,7 +191,7 @@ The *WSJ* verified the findings over several weeks, consulting with external sec
 
 ### Lawyers
 
-- **Matal** — lead plaintiff in the *Matal v. Google* class action (N.D. Cal.).
+- **Matthew Matic, Zak Harris, Charles Olson, Eileen M. Pinkowski** — lead plaintiffs in the *In re Google Plus Profile Litigation*, Case No. 5:18-cv-06164-EJD (VKD), N.D. Cal. class action.
 - **Kaplan Fox & Kilsheimer LLP** — firm representing the class.
 
 ---
@@ -199,7 +200,7 @@ The *WSJ* verified the findings over several weeks, consulting with external sec
 
 ### Google
 
-**Stage 1: concealment (March–October 2018).** Seven months of silence.
+**Stage 1: concealment (March–October 2018).** Seven months of silence. (Vic Gundotra, VP Engineering responsible for Google+, had left Google in April 2014 — strategically the product was already orphaned before the bug was detected.)
 
 **Stage 2: forced response (October 8, 2018).** On the same day as the *WSJ* publication, Google publishes the Project Strobe blog with **three things at once**:
 1. Admission of the first bug
@@ -222,7 +223,7 @@ Official narrative: *"We want to keep our focus on our enterprise efforts [for G
 ### Jurisdictions
 
 1. **US federal** — SEC (closed), FTC (did not open)
-2. **US class** — *Matal v. Google*, N.D. Cal.
+2. **US class** — *In re Google Plus Profile Litigation*, Case No. 5:18-cv-06164-EJD (VKD), N.D. Cal.
 3. **EU** — DPC Ireland, UK ICO (no penalties)
 
 ### Legal basis
@@ -240,7 +241,8 @@ Official narrative: *"We want to keep our focus on our enterprise efforts [for G
 | October 8, 2018 | Disclosure, announcement of G+ shutdown |
 | 2018–2019 | Regulatory investigations |
 | April 2, 2019 | Consumer G+ shutdown |
-| July 27, 2020 | Class action settlement of USD 7.5 million |
+| June 2020 | Preliminary class action settlement of USD 7.5 million |
+| January 2021 | Final approval of the settlement |
 
 ### Related case law
 
@@ -254,7 +256,7 @@ Official narrative: *"We want to keep our focus on our enterprise efforts [for G
 
 | Date | Body | Amount | Jurisdiction | Basis |
 |------|-------|-------|-------------|----------|
-| July 27, 2020 | *Matal v. Google* class action | USD 7,500,000 | USA (N.D. Cal.) | State consumer protection |
+| June 2020 (preliminary) / January 2021 (final approval) | *In re Google Plus Profile Litigation* class action | USD 7,500,000 | USA (N.D. Cal.) | State consumer protection |
 
 **Total: USD 7.5 million** — approximately 15 cents per leaked profile (on average). This shows that **US civil class actions poorly compensate for privacy**.
 
@@ -284,7 +286,7 @@ Official narrative: *"We want to keep our focus on our enterprise efforts [for G
 
 | Case | Court | Status | Value | Affected |
 |--------|-----|------|---------|--------------|
-| *Matal v. Google* | N.D. Cal. | Settled 2020 | USD 7,500,000 | ~500,000 + 52.5 million G+ users |
+| *In re Google Plus Profile Litigation* (5:18-cv-06164-EJD) | N.D. Cal. | Preliminary settlement June 2020 / final approval January 2021 | USD 7,500,000 | ~500,000 + 52.5 million G+ users |
 
 Claim filings: about 1 million people filed claim forms. Payout per person: **USD 5–12**.
 
@@ -358,7 +360,7 @@ If you are a data administrator (law firm, foundation, company):
 
 3. Google blog, "Expediting changes to Google+," December 10, 2018 — announcement of the second bug and acceleration of the shutdown.
 
-4. *Matal et al. v. Google LLC*, N.D. Cal., Case No. 5:18-cv-06164 — PACER documents.
+4. *In re Google Plus Profile Litigation*, N.D. Cal., Case No. 5:18-cv-06164-EJD (VKD) — PACER documents; lead plaintiffs: Matthew Matic, Zak Harris, Charles Olson, Eileen M. Pinkowski (sources: casemine, Bloomberg Law).
 
 5. SEC Cybersecurity Disclosure Rules, July 26, 2023. URL: https://www.sec.gov/news/press-release/2023-139 (accessed: 2026-04-17)
 

@@ -101,7 +101,7 @@ In **February 2012**, **Jonathan Mayer**, a PhD candidate at Stanford Law School
 
 The case triggered **a cascade of reforms on Apple's side**. Safari gradually introduced ever more robust mechanisms: **Intelligent Tracking Prevention (ITP)** in 2017, **Full Third-Party Cookie Blocking** in 2020, **App Tracking Transparency (ATT)** in iOS 14.5 (2021). These changes cost Google and Meta **billions of dollars** in advertising revenue — in 2022, Meta alone announced a revenue decline of **~$10 billion per year** solely due to ATT. This shows how a single case with a **$22.5 million penalty** can initiate structural changes at a scale of tens of billions.
 
-After the discovery, Mayer built a career as a regulator: **Chief Technologist of the FCC 2014–2015, Chief Technologist of the FTC 2019–2021**. Ashkan Soltani became **Executive Director of the California Privacy Protection Agency (CPPA)** — the most powerful privacy regulator in the US.
+After the discovery, Mayer built a career as a regulator: **Chief Technologist of the FCC Enforcement Bureau, November 2015 – March 2017; 2024–2025 Chief Science and Technology Adviser and Chief AI Officer at DOJ**. Ashkan Soltani became **Executive Director of the CPPA from October 4, 2021 (selected September 27, 2021). In November 2024 the CPPA announced his departure; Tom Kemp took over as successor from March 2025** — the most powerful privacy regulator in the US.
 
 ---
 
@@ -115,7 +115,8 @@ After the discovery, Mayer built a career as a regulator: **Chief Technologist o
 - **February 17, 2012** — the *Wall Street Journal* (Julia Angwin, Jennifer Valentino-DeVries) publishes "*Google's iPhone Tracking*". In parallel, Mayer publishes a technical report at Stanford CIS.
 - **February 17, 2012** — Google, **the same day**, announces it will stop the practice. Official statement: *"We used known Safari functionality to provide features that signed-in Google users had enabled."*
 - **March 2012** — the FTC opens an investigation for violating the 2011 Consent Decree.
-- **August 17, 2012** — **FTC: $22.5 million penalty** — **a record in FTC history at the time**.
+- **August 9, 2012** — FTC announces the settlement (complaint filed August 8); **FTC: $22.5 million penalty** — **a record in FTC history at the time**.
+- **November 16, 2012** — the N.D. Cal. court approves the consent decree.
 - **November 2012** — the 37-state attorneys general action begins; coordination.
 - **November 18, 2013** — **37-state settlement: $17 million**. Google is required to educate consumers and maintain compliance.
 - **2015** — the UK Court of Appeal in **Vidal-Hall v Google**: non-pecuniary damage (distress) may be grounds for a DPA 1998 claim. Green light for a class action.
@@ -179,9 +180,9 @@ When a user visited a page with a DoubleClick ad:
 
 ### Who is Jonathan Mayer
 
-**Jonathan Mayer** (b. 1984) — an American computer scientist and lawyer specializing in digital privacy. Education: **Princeton** (BA Computer Science), **Stanford Law School** (JD), **Stanford CS** (PhD). From 2011 to 2013 he was a **PhD candidate at Stanford** running the **Web Privacy Census** project — the automated scanning of **millions of sites** for trackers. His methodology (OpenWPM, FourthParty) became the standard in web privacy research.
+**Jonathan Mayer** (year of birth not publicly disclosed) — an American computer scientist and lawyer specializing in digital privacy. Education: **Princeton** (BA Computer Science), **Stanford Law School** (JD), **Stanford CS** (PhD). From 2011 to 2013 he was a **PhD candidate at Stanford** running the **Web Privacy Census** project — the automated scanning of **millions of sites** for trackers. His methodology (OpenWPM, FourthParty) became the standard in web privacy research.
 
-After revealing the Safari Workaround: **Chief Technologist of the FCC** (2014–2015) under Tom Wheeler, then **Chief Technologist of the FTC** (2019–2021). He is currently an **assistant professor** at Princeton.
+After revealing the Safari Workaround: **Chief Technologist of the FCC Enforcement Bureau** (November 2015 – March 2017), then in 2024–2025 **Chief Science and Technology Adviser and Chief AI Officer at DOJ**. He is currently an **assistant professor** at Princeton.
 
 Additional accomplishments:
 - Co-author of the **Do Not Track (DNT)** standard (2010–2011)
@@ -207,7 +208,7 @@ Mayer contacted **Julia Angwin** of the *Wall Street Journal*, who was running t
 ### Discoverers
 
 - **Jonathan Mayer** — described above.
-- **Ashkan Soltani** — independent security and privacy researcher, former Google employee, later **Chief Technologist of the FTC** (succeeding Mayer), currently (as of 2022) **Executive Director of the California Privacy Protection Agency (CPPA)** — the most important privacy regulator in the US. The CPPA enforces the CCPA and CPRA.
+- **Ashkan Soltani** — independent security and privacy researcher, former Google employee, later **Chief Technologist of the FTC**, **Executive Director of the California Privacy Protection Agency (CPPA) from October 4, 2021 (selected September 27, 2021)**. In November 2024 the CPPA announced his departure; **Tom Kemp took over as successor from March 2025**. The CPPA — the most important privacy regulator in the US — enforces the CCPA and CPRA.
 - **Julia Angwin** — a privacy journalist. Founder of **The Markup** (2019), editor at ProPublica (2014–2018), author of the books **"Dragnet Nation"** (2014) and **"Stealing MySpace"** (2009). Sued and harassed by a pesticide dealer in 2012 over an article about the pesticide DBCP; she refused to settle. Pulitzer nominee.
 - **Jennifer Valentino-DeVries** — formerly WSJ, today *NYT*; specializes in investigative digital analytics.
 
@@ -274,7 +275,7 @@ Mayer contacted **Julia Angwin** of the *Wall Street Journal*, who was running t
 |------|-------|
 | February 17, 2012 | Publication; Google stops the practice |
 | March 2012 | FTC opens investigation |
-| August 17, 2012 | FTC penalty $22.5M |
+| August 9, 2012 | FTC penalty $22.5M (consent decree approved November 16, 2012) |
 | November 18, 2013 | 37-state settlement $17M |
 | 2015–2017 | Lloyd v. Google in lower UK courts |
 | November 10, 2021 | Lloyd v. Google UKSC — lawsuit rejected |
@@ -291,7 +292,7 @@ Mayer contacted **Julia Angwin** of the *Wall Street Journal*, who was running t
 
 | Date | Authority | Amount | Jurisdiction | Basis |
 |------|-----------|--------|--------------|-------|
-| August 17, 2012 | FTC | $22,500,000 USD | US federal | FTC Consent Decree 2011 |
+| August 9, 2012 | FTC | $22,500,000 USD | US federal | FTC Consent Decree 2011 |
 | November 18, 2013 | 37 US states | $17,000,000 USD | US states | Consumer protection law |
 | 2017–2021 | UK courts | 0 | UK | Lloyd rejected |
 
@@ -377,9 +378,9 @@ If you **run a website for a law firm, foundation, or company**:
 
 ## Context
 
-- **Jonathan Mayer** — the discoverer of the Safari Workaround — later became **Chief Technologist of the FCC** (2014–2015) and **Chief Technologist of the FTC** (2019–2021). A classic case of "switching sides": researcher → regulator → researcher. A rare pattern in the privacy world.
+- **Jonathan Mayer** — the discoverer of the Safari Workaround — later became **Chief Technologist of the FCC Enforcement Bureau** (November 2015 – March 2017), and in 2024–2025 **Chief Science and Technology Adviser and Chief AI Officer at DOJ**. A classic case of "switching sides": researcher → regulator → researcher. A rare pattern in the privacy world.
 - **"Do Not Track" (DNT)** — a standard that Mayer co-authored (2010–2011). Google **never implemented** respect for DNT in its ads. One of the reasons Mayer took up the publication: *"If Google doesn't respect DNT, it's interesting how it respects other privacy settings..."*.
-- **Ashkan Soltani → California** — in 2022 he became the head of the **CPPA (California Privacy Protection Agency)**, the strongest privacy regulator in the US. The CPPA enforces the CCPA and CPRA. Soltani started out as an independent researcher, worked with WSJ on the Safari Workaround, then joined the FTC, then the CPPA. Today he leads enforcement of laws enacted partly in response to practices like the Safari Workaround.
+- **Ashkan Soltani → California** — he became Executive Director of the **CPPA (California Privacy Protection Agency)** from October 4, 2021 (selected September 27, 2021), the strongest privacy regulator in the US. The CPPA enforces the CCPA and CPRA. Soltani started out as an independent researcher, worked with WSJ on the Safari Workaround, then joined the FTC, then the CPPA. In November 2024 the CPPA announced his departure; **Tom Kemp took over as successor from March 2025**.
 - **Internet Explorer was also affected** — shortly after the WSJ, Microsoft announced that Google was using analogous techniques in IE (a trick with the **P3P Policy tag**, used improperly). Google confirmed it ("P3P is outdated, we didn't take it seriously"), but it triggered additional negative PR.
 - **The $22.5M FTC penalty was an FTC record in 2012** — today, after the $5 billion Cambridge Analytica penalty, it looks nominal. But in 2012 it was **the agency's greatest achievement**.
 - **Google's stock rose after the penalty** — investors interpreted $22.5M as **one day's revenue** for Google (which in 2012 was about $37 billion a year, or ~$100 million a day).

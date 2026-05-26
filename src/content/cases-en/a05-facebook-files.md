@@ -90,7 +90,7 @@ years_active:
 
 Six major threads: (1) **Instagram worsens the mental health of teenage girls** — 32% of girls with body image issues named Instagram as an aggravator; 13.5% of girls with suicidal thoughts pointed to it as a source; one internal memo: *"We are a tank of toxicity"*; (2) **the MSI algorithm**, introduced in 2018 under the banner of "meaningful social interactions," systematically **promoted polarizing content** — political parties in Europe (including in Poland) complained that the platform was forcing them to radicalize their rhetoric to reach voters; (3) **XCheck / Cross-Check** — a program exempting **5.8 million VIPs** (politicians, celebrities, influencers) from baseline moderation; (4) **87% of moderation resources** devoted to the US (10% of the user base), with minimal coverage for Myanmar, Ethiopia, India — where the platform was used to coordinate ethnic cleansings; (5) **manipulation by governments and cartels** — Saudi Arabia, Vietnam, Azerbaijan, Mexican cartels, human trafficking; (6) the **"Aspire" strategy** targeting children under 13 so Meta wouldn't "lose the next generation to TikTok."
 
-The case became the **primary political engine behind the EU's DSA (Digital Services Act)**, adopted in 2022 and coming into force in 2024. In the US — in 2023 **41 states** filed lawsuits against Meta over harm to children; in March 2026 the **verdict in New Mexico v. Meta** awarded the state **$375 million**. Haugen has been recognized as one of the most influential whistleblowers of the past decade, alongside Edward Snowden and Chelsea Manning.
+The case became the **primary political engine behind the EU's DSA (Digital Services Act)**, adopted in 2022 and coming into force in 2024. In the US — in 2023 **41 states** filed lawsuits against Meta over harm to children; in March 2026 the **jury verdict in New Mexico v. Meta** awarded the state **$375 million** (Meta has announced an appeal). Haugen has been recognized as one of the most influential whistleblowers of the past decade, alongside Edward Snowden and Chelsea Manning.
 
 ---
 
@@ -103,7 +103,8 @@ The case became the **primary political engine behind the EU's DSA (Digital Serv
 - **Summer 2020 – December 2020** — after the presidential election, Meta **scales back and dissolves the Civic Integrity team**.
 - **May 2021** — Haugen decides to leave. Before departing, she **copies thousands of internal documents** — research reports, memos, slides, A/B experiment data.
 - **June–July 2021** — Haugen contacts the *Wall Street Journal* and lawyers at Whistleblower Aid.
-- **September 13, 2021** — *WSJ* publishes the first article in "The Facebook Files" series: "Facebook Knows Instagram Is Toxic for Teen Girls."
+- **September 13, 2021** — *WSJ* launches "The Facebook Files" series with an article on XCheck/Cross-Check.
+- **September 14, 2021** — *WSJ* publishes "Facebook Knows Instagram Is Toxic for Teen Girls, Company Documents Show" (authors: Georgia Wells, Jeff Horwitz, Deepa Seetharaman).
 - **September 30, 2021** — Senator **Marsha Blackburn** calls Facebook in for a hearing on children.
 - **October 3, 2021** — Haugen appears on ***60 Minutes*** (CBS) with her face revealed. Host: **Scott Pelley**.
 - **October 5, 2021** — Haugen testifies before the **Senate Commerce Subcommittee on Consumer Protection**.
@@ -115,10 +116,10 @@ The case became the **primary political engine behind the EU's DSA (Digital Serv
 - **October 19, 2022** — DSA enters into force (VLOP obligations from August 2023).
 - **2023** — the **UK Online Safety Act** is enacted.
 - **October 2023** — **41 state attorneys general** file lawsuits against Meta over the mental health of teenagers.
-- **March 2024** — Haugen founds the **Beyond the Screen** think tank focused on AI safety.
+- **June/September 2022** — Haugen founds **Beyond the Screen** — a non-profit organization focused on social media safety (Social Media for the Common Good).
 - **May 2023** — Jeff Horwitz's book **"Broken Code: Inside Facebook and the Fight to Expose Its Harmful Secrets"**.
 - **2023** — Haugen's memoir **"The Power of One"** (Little, Brown).
-- **March 2026** — verdict in **New Mexico v. Meta**: **$375 million** in damages for harm to children (Meta has announced an appeal).
+- **March 2026** — jury verdict in **New Mexico v. Meta**: **$375 million** in damages for harm to children; Meta has announced an appeal.
 
 ---
 
@@ -151,7 +152,7 @@ Previous Meta scandals concerned **what the company let others do** (Cambridge A
 
 ### Who is Frances Haugen
 
-**Frances Haugen** (b. 1984, Iowa) — American software engineer and product manager. Education: **Olin College of Engineering** (BS in Electrical and Computer Engineering), **Harvard Business School** (MBA). Professional experience: Google, Pinterest, Hinge, Yelp — a specialist in **recommendation algorithms**. At Meta she worked **2019–2021** on the **Civic Integrity** team. Diagnosed with **celiac disease** (previously seriously ill, near death in 2014), which shaped her approach to "systemic causes" within organizations.
+**Frances Haugen** (b. 1983, Iowa City, Iowa) — American software engineer and product manager. Education: **Olin College of Engineering** (BS in Electrical and Computer Engineering), **Harvard Business School** (MBA). Professional experience: Google, Pinterest, Hinge, Yelp — a specialist in **recommendation algorithms**. At Meta she worked **2019–2021** on the **Civic Integrity** team. Diagnosed with **celiac disease** and with neuropathy following blood clots in 2014 (she was near death at the time), which shaped her approach to "systemic causes" within organizations.
 
 ### How the disclosure came about
 
@@ -161,9 +162,9 @@ A key step was **filing 8 separate complaints with the SEC** — each covering a
 
 ### First publications
 
-- **September 13, 2021** — Jeff Horwitz, "Facebook Knows Instagram Is Toxic for Teen Girls, Company Documents Show," *The Wall Street Journal*
-- **September 14, 2021** — Deepa Seetharaman, "Facebook Tried to Make Its Platform a Healthier Place. It Got Angrier Instead," *WSJ*
-- **September 15, 2021** — further articles in the series on XCheck
+- **September 13, 2021** — first article in "The Facebook Files" series — on the XCheck/Cross-Check program, *The Wall Street Journal*
+- **September 14, 2021** — Georgia Wells, Jeff Horwitz, Deepa Seetharaman, "Facebook Knows Instagram Is Toxic for Teen Girls, Company Documents Show," *WSJ*
+- **September 15, 2021** — Deepa Seetharaman, "Facebook Tried to Make Its Platform a Healthier Place. It Got Angrier Instead," *WSJ*
 - **October 3, 2021** — *60 Minutes* / CBS, Scott Pelley's interview with Haugen
 - **October 25, 2021** — publication of the Facebook Papers by the 17-newsroom consortium
 
@@ -173,7 +174,7 @@ A key step was **filing 8 separate complaints with the SEC** — each covering a
 
 ### Whistleblower
 
-- **Frances Haugen** (b. 1984) — described above. After the disclosure: founded **Beyond the Screen** (2024), an AI safety think tank; appeared before 20+ parliaments; wrote the memoir **"The Power of One"** (2023). She signed no confidentiality agreement with Meta on leaving — which enabled public work with the documents.
+- **Frances Haugen** (b. 1983) — described above. After the disclosure: founded **Beyond the Screen** (2022), a non-profit organization focused on social media safety; appeared before 20+ parliaments; wrote the memoir **"The Power of One"** (2023). She signed no confidentiality agreement with Meta on leaving — which enabled public work with the documents.
 
 ### Investigative journalists
 
@@ -249,7 +250,7 @@ Unanswered questions:
 | April 2022 | DSA adopted |
 | August 2023 | DSA takes effect for VLOPs |
 | October 2023 | 41 AGs v. Meta (State of New Mexico, among others) |
-| March 2025 | Initial verdict in NM v. Meta — $375 million (reduced on appeal in 03.2025, but upheld overall) |
+| March 2026 | Jury verdict in NM v. Meta — $375 million; Meta has announced an appeal |
 | 2024–present | European Commission conducts DSA investigations of Meta |
 
 ### Related case law
@@ -356,7 +357,6 @@ The Facebook Files documents show that **family, neighbor, and partner conflicts
 
 ## Context
 
-- **Frances Haugen has dyslexia.** In interviews, she says her dyslexia helped her **understand document patterns differently** — visually rather than linearly. She found connections between distant documents that others didn't see.
 - **Comparison with Edward Snowden**: both initially shared a PR office (legal representation by Ben Wizner of the ACLU for Snowden, Whistleblower Aid for Haugen). Both waited months between copying documents and revealing their identities.
 - **Jon Stewart** in 2021–2022 hosted *"The Problem with Jon Stewart"* on Apple TV+, where he devoted a series of episodes to the Facebook Files. He was one of the most important channels for popularizing the story with an older audience.
 - **Polish context**: *Gazeta Wyborcza* and *Rzeczpospolita* were part of the 17-newsroom consortium. They published material showing that **the Polish political scene appeared as an example in Meta's internal documents**, as a case study of polarization promoted by the algorithm. One European party complained to Meta in a quote (anonymized in the documents): *"Your algorithm forced us to adopt a more extreme position than we had planned. If we don't, our posts die."*

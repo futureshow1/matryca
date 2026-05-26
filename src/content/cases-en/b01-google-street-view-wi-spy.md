@@ -50,13 +50,13 @@ fines:
 - amount: 7000000
   currency: USD
   authority: 38 US states
-  date: 2013-03
+  date: '2013-03-12'
   category: state_attorney_general
   status: paid
 - amount: 145000
   currency: EUR
   authority: Hamburg DPA
-  date: '2013'
+  date: '2013-04-22'
   category: regulatory_fine
   status: paid
 - amount: 0
@@ -68,7 +68,7 @@ fines:
 - amount: 13000000
   currency: USD
   authority: '*Joffe v. Google*'
-  date: '2019'
+  date: '2019-07-22'
   category: class_action_settlement
   status: paid
 whistleblowers: []
@@ -130,9 +130,9 @@ In **May 2010**, Google **publicly admitted** that its **Street View** cars, bet
 
 The case broke after an audit by **Germany's Bundesnetzagentur** (the telecommunications regulator) in April–May 2010, when **Johannes Caspar** — Hamburg's Commissioner for Data Protection — pressured Google into disclosing the scope of the collection. Google first denied the allegations, then **publicly admitted them on May 14, 2010**, blaming the incident on a **"rogue engineer"** (later identified by the FTC as **Marius Milner**) and an **"error in experimental code"** that had supposedly made it into production software by mistake. The explanation was widely rejected — **Marius Milner was well known in the cybersecurity community as the author of NetStumbler**, the most popular **wardriving** application (driving around a city looking for Wi-Fi networks). Google hired him to do exactly what he did, then feigned surprise afterward.
 
-Proceedings unfolded in dozens of countries. The total came to approximately **30 million EUR/USD in fines and settlements**. The largest: the **7 million USD settlement with 38 US states** (March 2013), the **13 million USD class action settlement in Joffe v. Google** (2019), **900,000 EUR in Spain**, and **145,000 EUR in Germany**. In South Korea, **in November 2011 police raided Google's Seoul office** — the first instance of law enforcement physically entering a local Google office. In the US, the FTC closed the case without penalty (arguing it lacked jurisdiction under the Wiretap Act), while the FCC imposed a symbolic fine of **25,000 USD for refusing to cooperate** with the investigation.
+Proceedings unfolded in dozens of countries. The total came to approximately **30 million EUR/USD in fines and settlements**. The largest: the **7 million USD settlement with 38 US states** (March 12, 2013), the **13 million USD class action settlement in Joffe v. Google** (July 22, 2019, entirely cy pres), **900,000 EUR in Spain**, and **145,000 EUR in Germany**. In South Korea, **on August 10, 2010 police raided Google's Seoul office**, seizing 79 hard drives — the first instance of law enforcement physically entering a local Google office. In the US, the FTC closed the case without penalty (arguing it lacked jurisdiction under the Wiretap Act), while the FCC imposed a symbolic fine of **25,000 USD for refusing to cooperate** with the investigation.
 
-The key legal precedent: **Joffe v. Google (9th Circuit, 2013)** — Judge Alex Kozinski ruled that an **open Wi-Fi network is NOT "publicly accessible"** within the meaning of the Wiretap Act simply because it is technically unencrypted. This shaped American network privacy jurisprudence for an entire decade.
+The key legal precedent: **Joffe v. Google (9th Circuit, 2013)** — panel: A. Wallace Tashima, **Jay S. Bybee**, William H. Stafford Jr.; opinion authored by **Jay S. Bybee**. The court ruled that an **open Wi-Fi network is NOT "publicly accessible"** within the meaning of the Wiretap Act simply because it is technically unencrypted. This shaped American network privacy jurisprudence for an entire decade.
 
 ---
 
@@ -149,14 +149,14 @@ The key legal precedent: **Joffe v. Google (9th Circuit, 2013)** — Judge Alex 
 - **November 2010** — UK ICO **reopens** the investigation after new evidence emerges.
 - **March 2011** — France (CNIL): **100,000 EUR** fine.
 - **March 2011** — Spain (AEPD): **900,000 EUR** fine.
-- **November 2011** — **South Korea: police raid Google's Seoul office**. The first such incident anywhere in the world.
+- **August 10, 2010** — **South Korea: police raid Google's Seoul office**, seizing 79 hard drives. The first such incident anywhere in the world.
 - **April 2012** — US FCC: **25,000 USD** fine for refusing to cooperate (symbolic); **the FTC closes** the case without penalty.
 - **June 2012** — FCC report: Google's practice "was both pervasive and deliberate."
-- **September 10, 2013** — the **9th Circuit Court of Appeals** (Judge Alex Kozinski) in *Joffe v. Google*: the Wiretap Act **does apply**; an open Wi-Fi network is not publicly accessible within the meaning of the statute.
-- **March 2013** — **settlement with 38 US states: 7,000,000 USD** plus mandatory privacy training programs for Google employees.
-- **2013** — Germany (Hamburg): **145,000 EUR**.
+- **March 12, 2013** — **settlement with 38 US states: 7,000,000 USD** plus mandatory privacy training programs for Google employees.
+- **April 22, 2013** — Hamburg DPA (Johannes Caspar) imposes a **145,000 EUR** fine.
+- **September 10, 2013** — the **9th Circuit Court of Appeals** (panel: A. Wallace Tashima, **Jay S. Bybee**, William H. Stafford Jr.; opinion authored by **Jay S. Bybee**) in *Joffe v. Google*: the Wiretap Act **does apply**; an open Wi-Fi network is not publicly accessible within the meaning of the statute.
 - **2014** — UK ICO formally closes the case without a fine.
-- **2019** — *Joffe v. Google*: class action settlement — **13,000,000 USD**.
+- **July 22, 2019** — *Joffe v. Google*: class action settlement — **13,000,000 USD** awarded as **cy pres** (9 privacy organizations); the class received NO individual payouts. Appeal upheld by the 9th Circuit in December 2021.
 - **2023** — Google resumes Street View mapping in Germany after a 12-year hiatus.
 
 ---
@@ -248,7 +248,7 @@ Google initially denied it. Caspar pushed back. On May 14, 2010, following an in
 ### Lawyers
 
 - **Benjamin Joffe** — lead plaintiff in the *Joffe v. Google* class action (N.D. California).
-- **Judge Alex Kozinski** (9th Circuit) — author of the landmark 2013 opinion.
+- **Judge Jay S. Bybee** (9th Circuit) — author of the landmark September 10, 2013 opinion (panel: A. Wallace Tashima, Jay S. Bybee, William H. Stafford Jr.).
 
 ---
 
@@ -298,10 +298,12 @@ Investigations in: the US (FCC, FTC, 38 states), Germany, France, the UK, Italy,
 | April 2010 | Bundesnetzagentur opens its audit |
 | May 14, 2010 | Google admits the practice |
 | May 2010 | Cascade of investigations across 30+ countries |
+| August 10, 2010 | South Korean police raid Google's Seoul office |
 | March 2011 | First fines (FR, ES) |
-| March 2013 | 38-state US settlement: 7 million USD |
-| September 2013 | 9th Circuit ruling in *Joffe v. Google* |
-| 2019 | Class action settlement of 13 million USD |
+| March 12, 2013 | 38-state US settlement: 7 million USD |
+| April 22, 2013 | Hamburg DPA: 145,000 EUR |
+| September 10, 2013 | 9th Circuit ruling in *Joffe v. Google* (opinion: Bybee) |
+| July 22, 2019 | Class action settlement of 13 million USD (cy pres) |
 
 ### Related case law
 
@@ -319,10 +321,10 @@ Investigations in: the US (FCC, FTC, 38 states), Germany, France, the UK, Italy,
 | March 2011 | AEPD | 900,000 EUR | Spain | LOPD |
 | April 2012 | FCC | 25,000 USD | US federal | Refusal to cooperate |
 | April 2012 | FTC | 0 | US federal | Closed |
-| March 2013 | 38 US states | 7,000,000 USD | US state | Consumer protection law |
-| 2013 | Hamburg DPA | 145,000 EUR | Germany | BDSG |
+| March 12, 2013 | 38 US states | 7,000,000 USD | US state | Consumer protection law |
+| April 22, 2013 | Hamburg DPA | 145,000 EUR | Germany | BDSG |
 | 2014 | UK ICO | 0 | UK | "No substantial harm" |
-| 2019 | *Joffe v. Google* | 13,000,000 USD | US federal | Wiretap Act |
+| July 22, 2019 | *Joffe v. Google* | 13,000,000 USD (cy pres) | US federal | Wiretap Act |
 
 **Total: ~30 million EUR/USD** plus tens of millions in compliance and audit costs.
 
@@ -359,7 +361,7 @@ Investigations in: the US (FCC, FTC, 38 states), Germany, France, the UK, Italy,
 
 | Case | Court | Status | Value | Affected parties |
 |--------|-----|------|---------|--------------|
-| *Joffe v. Google Inc.* | N.D. Cal. / 9th Cir. | Settled 2019 | 13,000,000 USD | Users of open Wi-Fi networks in the US |
+| *Joffe v. Google Inc.* | N.D. Cal. / 9th Cir. | Settled July 22, 2019; appeal upheld by 9th Cir. December 2021 | 13,000,000 USD (cy pres to 9 privacy organizations; no individual class payouts) | Users of open Wi-Fi networks in the US |
 
 ---
 
@@ -412,7 +414,7 @@ If you run a law firm, a foundation, or a business and your clients or staff use
 
 - **Marius Milner — the "rogue engineer"** was well known in the cybersec community as the author of **NetStumbler** (2001), one of the most popular applications for **wardriving** (driving a car around a city to scan for Wi-Fi). Google hired him to work on the Wi-Fi positioning project — and then feigned surprise that he had written code collecting more than was declared. The FTC, bluntly: *"The 'rogue engineer' story does not hold up."*
 - **Alan Eustace**, Google's SVP and the author of the blog post that broke the scandal, left Google in 2014 and became **the highest-jumping skydiver in history** — he fell from a stratospheric balloon at an altitude of **41,419 meters** (October 24, 2014). Record broken.
-- **South Korea, November 2011** — the world's first **police raid on a Google office**, at its local branch in Seoul. Ten investigators were dispatched; servers were seized.
+- **South Korea, August 10, 2010** — the world's first **police raid on a Google office**, at its local branch in Seoul. Police seized 79 hard drives.
 - **The FCC's 25,000 USD fine for refusing to cooperate** — Google was sanctioned **not for collecting the data**, but for **refusing to hand over documents to the FCC** during its investigation. The sum was laughably small, but it signaled to the regulator: "we won't help you with your investigation." That cost Google later when other countries calculated their own penalties.
 - **The UK ICO closed the case in 2010** on grounds of "no substantial harm." After three years of criticism and new evidence (including banking login credentials), it **reopened**, but ultimately still **imposed no fine**. The ICO's 2014 document contains the sentence: *"the data included banking login credentials of a small number of UK residents"* — and yet no penalty followed.
 - **Germany blocked Street View mapping** in 2011. For **12 years**, most German cities remained stuck in Google Street View at their 2010 state. Only in **2023** did Google resume mapping. For Google Maps users in Germany, street-level views from 2010 are a common sight.
@@ -438,7 +440,7 @@ If you run a law firm, a foundation, or a business and your clients or staff use
 
 6. Hamburger Beauftragte für Datenschutz, multiple communications 2010–2013. URL: https://datenschutz-hamburg.de (accessed: 2026-04-17)
 
-7. *Joffe v. Google, Inc.*, 729 F.3d 1262 (9th Cir. 2013). URL: https://caselaw.findlaw.com/court/us-9th-circuit/1643949.html (accessed: 2026-04-17)
+7. *Joffe v. Google, Inc.*, 729 F.3d 1262 (9th Cir. 2013). Panel: A. Wallace Tashima, Jay S. Bybee, William H. Stafford Jr.; opinion authored by Bybee. Official PDF: https://cdn.ca9.uscourts.gov/datastore/general/2013/09/11/11-17483_opinion.pdf ; alternative URL: https://caselaw.findlaw.com/court/us-9th-circuit/1643949.html (accessed: 2026-04-17)
 
 8. UK Information Commissioner's Office, "Findings on Google Street View cars," November 2010; November 2014 (follow-up).
 
@@ -446,9 +448,9 @@ If you run a law firm, a foundation, or a business and your clients or staff use
 
 10. AEPD (Agencia Española de Protección de Datos), communication 2011.
 
-11. Korea Communications Commission, 2011 report on the results of the search of Google's offices.
+11. Korea Communications Commission, 2011 report on the results of the search of Google's offices. See also Jurist, "South Korea police announce Google violated privacy laws by collecting private data" (account of the August 10, 2010 raid on the Seoul office and the seizure of 79 hard drives): https://www.jurist.org/news/2011/01/south-korea-police-announce-google-violated-privacy-laws-by-collecting-private-data/ (accessed: 2026-04-17)
 
-12. Benjamin Joffe et al. v. Google Inc., Class Action Complaint, N.D. Cal. 2010 — court documents via PACER.
+12. Benjamin Joffe et al. v. Google Inc., Class Action Complaint, N.D. Cal. 2010 — court documents via PACER. CNN, "Google to pay $13 million in Street View privacy settlement" (July 22, 2019) — details of the 13 million USD cy pres settlement to 9 privacy organizations, with no individual payouts to the class; appeal upheld by the 9th Circuit in December 2021.
 
 13. Adam Tanner, "What Google's Wi-Spy Scandal Reveals," *Forbes*, May 2010.
 

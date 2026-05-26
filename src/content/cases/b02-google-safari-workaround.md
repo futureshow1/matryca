@@ -101,7 +101,7 @@ W **lutym 2012** **Jonathan Mayer**, doktorant Stanford Law School i Stanford CS
 
 Sprawa wywołała **lawinę reform po stronie Apple**. Safari stopniowo wprowadzała coraz silniejsze mechanizmy: **Intelligent Tracking Prevention (ITP)** w 2017, **Full Third-Party Cookie Blocking** w 2020, **App Tracking Transparency (ATT)** w iOS 14.5 (2021). Te zmiany kosztowały Google i Meta **miliardy dolarów** w przychodach reklamowych — szczególnie Meta w 2022 ogłosił spadek przychodów o **~10 mld USD rocznie** wyłącznie z powodu ATT. Pokazuje to, jak pojedyncza sprawa o **22,5 mln USD kary** może zainicjować strukturalne zmiany o skali dziesiątek miliardów.
 
-Mayer po odkryciu zrobił karierę jako regulator: **Chief Technologist FCC 2014–2015, Chief Technologist FTC 2019–2021**. Ashkan Soltani został **dyrektorem California Privacy Protection Agency (CPPA)** — najsilniejszego regulatora prywatności w USA.
+Mayer po odkryciu zrobił karierę jako regulator: **Chief Technologist of the FCC Enforcement Bureau, listopad 2015 – marzec 2017; w latach 2024–2025 Chief Science and Technology Adviser oraz Chief AI Officer w DOJ**. Ashkan Soltani został **Executive Director CPPA od 4 października 2021 (selekcja 27.09.2021). W listopadzie 2024 CPPA ogłosiła odejście; Tom Kemp jako następca od marca 2025** — najsilniejszego regulatora prywatności w USA.
 
 ---
 
@@ -115,7 +115,8 @@ Mayer po odkryciu zrobił karierę jako regulator: **Chief Technologist FCC 2014
 - **17 lutego 2012** — *Wall Street Journal* (Julia Angwin, Jennifer Valentino-DeVries) publikuje: "*Google's iPhone Tracking*". Równolegle Mayer publikuje techniczny raport na Stanford CIS.
 - **17 lutego 2012** — Google **tego samego dnia** ogłasza zaprzestanie praktyki. Oficjalny komunikat: *"We used known Safari functionality to provide features that signed-in Google users had enabled."*
 - **Marzec 2012** — FTC wszczyna śledztwo za naruszenie Consent Decree 2011.
-- **17 sierpnia 2012** — **FTC: kara 22,5 mln USD** — **rekordowa w historii FTC w tamtym czasie**.
+- **9 sierpnia 2012** — FTC ogłasza ugodę (complaint złożona 8.08); **FTC: kara 22,5 mln USD** — **rekordowa w historii FTC w tamtym czasie**.
+- **16 listopada 2012** — N.D. Cal. zatwierdza consent decree.
 - **Listopad 2012** — akcja 37 AG stanowych zaczyna się; koordynacja.
 - **18 listopada 2013** — **ugoda 37 stanów USA: 17 mln USD**. Google zobowiązane do edukacji konsumentów i utrzymania zgodności.
 - **2015** — Court of Appeal UK w sprawie **Vidal-Hall v Google**: szkoda niemajątkowa (distress) może być podstawą pozwu DPA 1998. Zielone światło dla pozew zbiorowy.
@@ -179,9 +180,9 @@ Gdy użytkownik odwiedzał stronę z reklamą DoubleClick:
 
 ### Kim jest Jonathan Mayer
 
-**Jonathan Mayer** (ur. 1984) — amerykański informatyk i prawnik specjalizujący się w prywatności cyfrowej. Wykształcenie: **Princeton** (BA Computer Science), **Stanford Law School** (JD), **Stanford CS** (PhD). W latach 2011–2013 był **doktorantem Stanford** prowadzącym projekt **Web Privacy Census** — automatyczne skanowanie **milionów stron** pod kątem trackerów. Jego metodologia (OpenWPM, FourthParty) stała się standardem w badaniach prywatności webowej.
+**Jonathan Mayer** (rok urodzenia nieujawniony publicznie) — amerykański informatyk i prawnik specjalizujący się w prywatności cyfrowej. Wykształcenie: **Princeton** (BA Computer Science), **Stanford Law School** (JD), **Stanford CS** (PhD). W latach 2011–2013 był **doktorantem Stanford** prowadzącym projekt **Web Privacy Census** — automatyczne skanowanie **milionów stron** pod kątem trackerów. Jego metodologia (OpenWPM, FourthParty) stała się standardem w badaniach prywatności webowej.
 
-Po ujawnieniu Safari Obejście: **Chief Technologist FCC** (2014–2015) za kadencji Toma Wheelera, następnie **Chief Technologist FTC** (2019–2021). Obecnie **assistant professor** na Princeton.
+Po ujawnieniu Safari Obejście: **Chief Technologist of the FCC Enforcement Bureau** (listopad 2015 – marzec 2017), następnie w latach 2024–2025 **Chief Science and Technology Adviser oraz Chief AI Officer w DOJ**. Obecnie **assistant professor** na Princeton.
 
 Dodatkowe osiągnięcia:
 - Współautor standardu **Do Not Track (DNT)** (2010–2011)
@@ -207,7 +208,7 @@ Mayer skontaktował się z **Julią Angwin** z *Wall Street Journal*, która pro
 ### Odkrywcy
 
 - **Jonathan Mayer** — opisany wyżej.
-- **Ashkan Soltani** — niezależny badacz bezpieczeństwa i prywatności, były pracownik Google, później **Chief Technologist FTC** (po Mayerze), obecnie (od 2022) **Executive Director California Privacy Protection Agency (CPPA)** — najważniejszego regulatora prywatności w USA. CPPA egzekwuje CCPA i CPRA.
+- **Ashkan Soltani** — niezależny badacz bezpieczeństwa i prywatności, były pracownik Google, później **Chief Technologist FTC**, **Executive Director California Privacy Protection Agency (CPPA)** od 4 października 2021 (selekcja 27.09.2021). W listopadzie 2024 CPPA ogłosiła jego odejście; **Tom Kemp jako następca od marca 2025**. CPPA — najważniejszy regulator prywatności w USA — egzekwuje CCPA i CPRA.
 - **Julia Angwin** — dziennikarka prywatności. Założycielka **The Markup** (2019), redaktorka ProPublica (2014–2018), autorka książek **"Dragnet Nation"** (2014) i **"Stealing MySpace"** (2009). Pozwana i nękana przez dilera pestycydów w 2012 za artykuł o pestycydach DBCP; odmówiła ugody. Nominowana do Pulitzera.
 - **Jennifer Valentino-DeVries** — była WSJ, dziś *NYT*; specjalizuje się w inwestygatywnej analityce cyfrowej.
 
@@ -274,7 +275,7 @@ Mayer skontaktował się z **Julią Angwin** z *Wall Street Journal*, która pro
 |------|------|
 | 17 lutego 2012 | Publikacja; Google zaprzestaje praktyki |
 | Marzec 2012 | FTC rozpoczyna śledztwo |
-| 17 sierpnia 2012 | Kara FTC 22,5 mln USD |
+| 9 sierpnia 2012 | Kara FTC 22,5 mln USD (consent decree zatwierdzony 16.11.2012) |
 | 18 listopada 2013 | Ugoda 37 stanów 17 mln USD |
 | 2015–2017 | Lloyd v. Google w sądach niższych UK |
 | 10 listopada 2021 | Lloyd v. Google UKSC — pozew odrzucony |
@@ -291,7 +292,7 @@ Mayer skontaktował się z **Julią Angwin** z *Wall Street Journal*, która pro
 
 | Data | Organ | Kwota | Jurysdykcja | Podstawa |
 |------|-------|-------|-------------|----------|
-| 17 sierpnia 2012 | FTC | 22 500 000 USD | USA federalne | FTC Consent Decree 2011 |
+| 9 sierpnia 2012 | FTC | 22 500 000 USD | USA federalne | FTC Consent Decree 2011 |
 | 18 listopada 2013 | 37 stanów USA | 17 000 000 USD | USA stanowe | Prawo konsumenckie |
 | 2017–2021 | UK courts | 0 | UK | Lloyd odrzucony |
 
@@ -377,9 +378,9 @@ Jeśli **prowadzisz stronę internetową kancelarii, fundacji, firmy**:
 
 ## Ciekawostki
 
-- **Jonathan Mayer** — odkrywca Safari Obejście — został później **Chief Technologist FCC** (2014–2015) i **Chief Technologist FTC** (2019–2021). Klasyczny przypadek "zmiany strony": badacz → regulator → badacz. Rzadki wzorzec w świecie prywatności.
+- **Jonathan Mayer** — odkrywca Safari Obejście — został później **Chief Technologist of the FCC Enforcement Bureau** (listopad 2015 – marzec 2017), a w latach 2024–2025 **Chief Science and Technology Adviser oraz Chief AI Officer w DOJ**. Klasyczny przypadek „zmiany strony": badacz → regulator → badacz. Rzadki wzorzec w świecie prywatności.
 - **"Do Not Track" (DNT)** — standard, którego Mayer był współautorem (2010–2011). Google **nigdy nie zaimplementował** respektowania DNT w reklamach. Jeden z powodów, dla których Mayer zajął się publikacją: *"Jeśli Google nie respektuje DNT, to ciekawe jak respektuje inne ustawienia prywatności..."*.
-- **Ashkan Soltani → California** — został w 2022 szefem **CPPA (California Privacy Protection Agency)**, najsilniejszego regulatora prywatności w USA. CPPA egzekwuje CCPA i CPRA. Soltani zaczynał jako niezależny badacz, pracował z WSJ na Safari Obejście, potem FTC, potem CPPA. Dziś kieruje egzekwowaniem prawa, które uchwalono częściowo w odpowiedzi na praktyki jak Safari Obejście.
+- **Ashkan Soltani → California** — został Executive Director **CPPA (California Privacy Protection Agency)** od 4 października 2021 (selekcja 27.09.2021), najsilniejszego regulatora prywatności w USA. CPPA egzekwuje CCPA i CPRA. Soltani zaczynał jako niezależny badacz, pracował z WSJ na Safari Obejście, potem FTC, potem CPPA. W listopadzie 2024 CPPA ogłosiła jego odejście; **Tom Kemp objął funkcję następcy od marca 2025**.
 - **Internet Explorer też dotknięty** — Microsoft wkrótce po WSJ ogłosił, że Google używa analogicznych technik w IE (trick z **P3P Policy tag**, używany w sposób niewłaściwy). Google potwierdził ("P3P jest przestarzały, nie traktowaliśmy go serio"), ale wywołało to dodatkowe PR negative.
 - **FTC 22,5 mln USD to rekord FTC w 2012** — dziś, po karze 5 mld za Cambridge Analytica, wygląda nominalnie. Ale w 2012 to było **największe osiągnięcie agencji**.
 - **Akcje Google wzrosły po karze** — inwestorzy zinterpretowali 22,5 mln jako **jednodniowy przychód** Google (który w 2012 wynosił ok. 37 mld USD rocznie, czyli ~100 mln dziennie).

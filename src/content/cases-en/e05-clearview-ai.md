@@ -104,17 +104,17 @@ years_active:
 | Currency | EUR |
 | Legal basis | GDPR arts. 5, 6, 9 (biometrics = special category); ECHR art. 8; UK DPA; Illinois BIPA; COPPA |
 | Whistleblower/discoverer | **Kashmir Hill** (*NYT*); earlier: anonymous programmer; ACLU; Privacy International |
-| Number of affected | **60B+ photos** from social media profiles — **billions of people** globally |
+| Number of affected | **~30B** per Dutch DPA (09/2024); **>40B** per Biometric Update (11/2023); **>60B** per ICE/CBP materials (2025–2026) — **billions of people** globally |
 | Status (as of today) | Clearview ignores EU fines; contracts with ICE, CBP 2025–2026; noyb criminal complaint in Austria 10/2025 |
 
 ---
 
 ## TL;DR
 
-**Clearview AI** — founded in 2017 in New York by **Hoan Ton-That** (Australian-Vietnamese programmer) and **Richard Schwartz** (political operative for Rudy Giuliani). Business model: **scrape public photos from the internet** (Facebook, Instagram, LinkedIn, YouTube, personal blogs) and build **the world's largest facial recognition database**. Sell access to **law enforcement**.
+**Clearview AI** — founded in 2017 in New York by **Hoan Ton-That** (Australian-Vietnamese programmer) and **Richard Schwartz** (former aide to Rudy Giuliani when he was Mayor of New York City 1994–2001). Business model: **scrape public photos from the internet** (Facebook, Instagram, LinkedIn, YouTube, personal blogs) and build **the world's largest facial recognition database**. Sell access to **law enforcement**.
 
 **January 18, 2020** — ***Kashmir Hill*** in *The New York Times* published a landmark article: **"The Secretive Company That Might End Privacy as We Know It"**. Revelations:
-- Clearview had **3B+ photos** at that time (today: **60B+**).
+- Clearview had **3B+ photos** at that time (today: **~30B** per Dutch DPA (09/2024); **>40B** per Biometric Update (11/2023); **>60B** per ICE/CBP materials (2025–2026)).
 - Over **600 law enforcement agencies** in the US used the app, including **FBI, DHS, ICE, state police**.
 - **2,200 organizations in 27 countries** had accounts (per a 2020 leak).
 - Price: several thousand USD per month for a subscription.
@@ -125,7 +125,7 @@ years_active:
 2. **Biometrics** — a face = biometric data = **special category** under GDPR art. 9 (requires **explicit consent**).
 3. **Surveillance infrastructure** — sales to law enforcement = building a **global face recognition surveillance state**.
 4. **Lack of transparency** — users do not know they are in the database.
-5. **Incorrect matches** — false positives lead to **wrongful arrests** (documented cases: Robert Williams, Detroit, 2020).
+5. **Incorrect matches** — false positives lead to **wrongful arrests** (documented cases: Robert Williams — arrested January 9, 2020 in Farmington Hills by Detroit Police; technology: DataWorks Plus, not Clearview AI; settlement with DPD: summer 2024).
 
 **European response (2021–2024) — a series of GDPR fines:**
 - **France (CNIL)**: **EUR 20M** (2022)
@@ -149,22 +149,22 @@ Case E05 is a **textbook example of "regulatory arbitrage"** — a company headq
 
 ## Timeline
 
-- **2017** — **Hoan Ton-That** and **Richard Schwartz** found Clearview AI in New York. Initial investors: **Peter Thiel** (USD 8.4M).
+- **2017** — **Hoan Ton-That** and **Richard Schwartz** found Clearview AI in New York. Initial investors: **Peter Thiel** — $200,000 first angel investment in 2017. Total first round of Clearview AI: $8.4M (Kirenaga Partners + Thiel, of which Thiel himself contributed $200k).
 - **2017–2019** — Clearview builds the photo database. Initial scale: ~3B. Sales to US law enforcement.
 - **January 18, 2020** — ***Kashmir Hill*** in *NYT*: "The Secretive Company That Might End Privacy as We Know It"
 - **February 2020** — **data leak** at Clearview: it is revealed that **2,200 organizations in 27 countries** had accounts.
 - **2020** — Canada's **OPC** (Office of the Privacy Commissioner) deems Clearview illegal, recommends cessation.
 - **January 2021** — Italy (Garante) opens proceedings.
 - **May 2022** — UK ICO fine **GBP 7.5M**; ban on further processing of UK residents' data.
-- **October 2022** — CNIL (France) fine **EUR 20M**.
-- **February 2022** — Garante (Italy) fine **EUR 20M**.
-- **July 2022** — HDPA (Greece) fine **EUR 20M**.
+- **October 17, 2022** — CNIL (France) fine **EUR 20M**.
+- **February 10, 2022** — Garante (Italy) fine **EUR 20M**.
+- **July 13, 2022** — HDPA (Greece) fine **EUR 20M**.
 - **Austria DSB** — 2021: breach acknowledged, no fine.
 - **October 2023** — UK First-Tier Tribunal **overturns** the ICO fine (argument: scraping outside UK GDPR jurisdiction).
 - **2023–2024** — Clearview **continues** operations despite fines.
-- **September 2024** — Dutch DPA (AP) fine **EUR 30.5M** + threat of EUR 5.1M + personal liability.
-- **December 2024** — **Hoan Ton-That** steps down as CEO.
-- **February 19, 2025** — new CEOs: **Hal Lambert** and **Richard Swartz**.
+- **September 3, 2024** — Dutch DPA (AP) fine **EUR 30.5M** + threat of EUR 5.1M + personal liability.
+- **December 2024** — **Hoan Ton-That** transitions from CEO to President.
+- **February 19, 2025** — Ton-That resigns entirely from the executive; new CEOs: **Hal Lambert** and **Richard Schwartz**.
 - **October 7, 2025** — UK Upper Tribunal **reinstates** ICO jurisdiction (GDPR applies).
 - **October 2025** — **noyb** files a **criminal complaint** in Austria.
 - **September 2025** — Clearview **USD 9.2M contract with ICE** (USA).
@@ -197,7 +197,7 @@ Clearview uses **web crawlers** (bots) to search:
 A **detection** algorithm locates faces. Each face → **face embedding** (a numerical vector describing facial features). Typically 128 or 512 dimensions.
 
 **Stage 3: the database.**
-- **60B+ embeddings** (per Clearview's marketing materials 2025)
+- **~30B** per Dutch DPA (09/2024); **>40B** per Biometric Update (11/2023); **>60B** per ICE/CBP materials (2025–2026)
 - Each embedding linked to:
   - Source URL
   - Page name
@@ -219,7 +219,7 @@ Clearview: **none of these grounds**. Facebook/Instagram users **did not consent
 **GDPR art. 5**:
 - **Fairness principle** — covert scraping = unfair
 - **Transparency** — individuals were never informed
-- **Minimization** — 60B photos ≠ minimal
+- **Minimization** — tens of billions of photos ≠ minimal
 - **Storage limitation** — indefinite
 
 **GDPR art. 6** — no valid legal basis.
@@ -229,7 +229,7 @@ Clearview: **none of these grounds**. Facebook/Instagram users **did not consent
 ### Why it is dangerous
 
 **1. False positives → wrongful arrests.**
-- **Robert Williams** (Detroit, 2020) — an African American man, 30 hours in custody for a theft he did not commit. Source: face recognition mismatch. Not Clearview, but **the same technology**.
+- **Robert Williams** — arrested January 9, 2020 in Farmington Hills by Detroit Police; an African American man, 30 hours in custody for a theft he did not commit. Technology: **DataWorks Plus** (not Clearview AI), but **the same class of technology**. Settlement with DPD: summer 2024.
 - **Randal Reid** (Louisiana, 2022) — similar case.
 - **Nijeer Parks** (New Jersey, 2019) — similar.
 - All victims: **Black men**. Face recognition algorithms are **systematically worse** for people other than white men.
@@ -274,14 +274,14 @@ Hill received an **anonymous tip** in 2019: a company exists that sells face rec
 
 ### Clearview
 
-- **Hoan Ton-That** — founder, CEO until December 2024. Australian-Vietnamese programmer. Previously built iOS apps (popular in Australia). Controversial ties to **Charles C. Johnson**, a right-wing activist.
-- **Richard Schwartz** — co-founder. Former adviser to Rudy Giuliani (NY mayor 1994–2001). Political connections.
-- **Charles C. Johnson** — first co-founder, later withdrew. Controversial right-wing activist.
-- **Hal Lambert, Richard Swartz** — CEOs from February 2025.
+- **Hoan Ton-That** — founder, CEO until December 2024 (then transitioned to President); on February 19, 2025 resigned entirely from the executive. Australian-Vietnamese programmer. Previously built iOS apps (popular in Australia). Controversial ties to **Charles C. Johnson**, a right-wing activist.
+- **Richard Schwartz** — co-founder. Former aide to Rudy Giuliani when he was Mayor of New York City (1994–2001). Political connections.
+- **Charles C. Johnson** — co-founder of SmartCheckr (2017); SmartCheckr assets transferred to Clearview AI; Johnson's share (1/3 in SmartCheckr) converted to 10% in Clearview AI. Later withdrew. Controversial right-wing activist.
+- **Hal Lambert, Richard Schwartz** — CEOs from February 2025.
 
 ### Investors
 
-- **Peter Thiel** — USD 8.4M first round, 2017. Thiel is also at Palantir, has right-wing connections.
+- **Peter Thiel** — $200,000 first angel investment in 2017. Total first round of Clearview AI: $8.4M (Kirenaga Partners + Thiel, of which Thiel himself contributed $200k). Thiel is also at Palantir, has right-wing connections.
 - **Kirenaga Partners** — venture capital.
 - **Board Advisory**: **Raymond Kelly** (former NYPD Commissioner), **Richard A. Clarke** (former White House counterterrorism), **Rudy Washington**, **Floyd Abrams** (constitutional lawyer), **Lee S. Wolosky**, **Owen West**.
 
@@ -302,7 +302,7 @@ Hill received an **anonymous tip** in 2019: a company exists that sells face rec
 
 ### False positive victims
 
-- **Robert Williams** (Detroit).
+- **Robert Williams** — arrested January 9, 2020 in Farmington Hills by Detroit Police. Technology: DataWorks Plus (not Clearview AI). Settlement with DPD: summer 2024.
 - **Randal Reid** (Louisiana).
 - **Nijeer Parks** (New Jersey).
 - (Non-Clearview, but the same technology.)
@@ -354,10 +354,10 @@ Ton-That: *"We don't have a place of business in the Netherlands or the EU. We a
 |------|------|
 | January 18, 2020 | NYT exposé |
 | May 2022 | ICO UK GBP 7.5M (later overturned, reinstated 2025) |
-| October 2022 | CNIL EUR 20M |
-| February 2022 | Garante EUR 20M |
-| July 2022 | HDPA EUR 20M |
-| September 2024 | AP EUR 30.5M |
+| October 17, 2022 | CNIL EUR 20M |
+| February 10, 2022 | Garante EUR 20M |
+| July 13, 2022 | HDPA EUR 20M |
+| September 3, 2024 | AP EUR 30.5M |
 | October 7, 2025 | UK Upper Tribunal reinstates jurisdiction |
 | October 2025 | noyb criminal complaint Austria |
 | September 2025 | ICE USD 9.2M |
@@ -375,11 +375,11 @@ Ton-That: *"We don't have a place of business in the Netherlands or the EU. We a
 
 | Date | Authority | Amount | Jurisdiction | Status |
 |------|-------|-------|-------------|--------|
-| February 2022 | Garante (IT) | EUR 20,000,000 | Italy | Unpaid |
-| July 2022 | HDPA (GR) | EUR 20,000,000 | Greece | Unpaid |
-| October 2022 | CNIL (FR) | EUR 20,000,000 | France | Unpaid |
+| February 10, 2022 | Garante (IT) | EUR 20,000,000 | Italy | Unpaid |
+| July 13, 2022 | HDPA (GR) | EUR 20,000,000 | Greece | Unpaid |
+| October 17, 2022 | CNIL (FR) | EUR 20,000,000 | France | Unpaid |
 | May 2022 | ICO (UK) | GBP 7,500,000 | UK | Overturned 2023, reinstated 2025 |
-| September 2024 | AP (NL) | EUR 30,500,000 | Netherlands | Unpaid; threat of +EUR 5.1M |
+| September 3, 2024 | AP (NL) | EUR 30,500,000 | Netherlands | Unpaid; threat of +EUR 5.1M |
 
 **Total: ~EUR 100M in fines, mostly unpaid.**
 
@@ -422,7 +422,7 @@ ACLU US settlement (2022): restrictions on sales to private companies. Federal g
 
 ### What does this mean for me?
 
-If you have ever publicly posted a photo of your face (Facebook, Instagram, LinkedIn, blog, newspaper) — **you are probably in the Clearview database**. If you have ever ended up in the background of someone else's photo in a public place (concerts, demonstrations, weddings) — you too. **60 billion photos** = **everyone who has a photo online**.
+If you have ever publicly posted a photo of your face (Facebook, Instagram, LinkedIn, blog, newspaper) — **you are probably in the Clearview database**. If you have ever ended up in the background of someone else's photo in a public place (concerts, demonstrations, weddings) — you too. **Tens of billions of photos** (~30B per Dutch DPA 09/2024; >60B per ICE/CBP materials 2025–2026) = **everyone who has a photo online**.
 
 American police forces use Clearview in everyday cases. If you **ever travel to the US**, CBP may **recognize your face** from Instagram and know who you are before you open your mouth.
 
@@ -489,9 +489,9 @@ American police forces use Clearview in everyday cases. If you **ever travel to 
 ## Context
 
 - **Hoan Ton-That** — Clearview's founder — before Clearview built a **"Trump Dating"** app (2017) and other controversial projects. Critics: **a CEO with a problematic history** building **global AI surveillance**.
-- **Peter Thiel** — one of the first investors (USD 8.4M). Thiel is also a co-founder of **Palantir** (software for the CIA, ICE). **A pattern**: Thiel invests in companies that serve as interfaces between tech and the surveillance state.
+- **Peter Thiel** — first angel investment of $200,000 in 2017. The total first round of Clearview AI was $8.4M (Kirenaga Partners + Thiel, of which Thiel himself contributed $200k). Thiel is also a co-founder of **Palantir** (software for the CIA, ICE). **A pattern**: Thiel invests in companies that serve as interfaces between tech and the surveillance state.
 - **Kashmir Hill's "Your Face Belongs to Us" (2023)** — a book regarded as one of the most important works of tech journalism of the last decade. A showcase of how **a single anonymous message** led to a global debate.
-- **60B photos** — for scale: **8 times more** than all people on Earth. Clearview has **many times more photos than there are people in the world** — most individuals have **many** photos in the database.
+- **Tens of billions of photos** — estimates vary by source: **~30B** per Dutch DPA (09/2024); **>40B** per Biometric Update (11/2023); **>60B** per ICE/CBP materials (2025–2026). For scale: **several times more** than all people on Earth. Clearview has **many times more photos than there are people in the world** — most individuals have **many** photos in the database.
 - **"2,200 organizations in 27 countries"** — the 2020 leak showed that Clearview was used not only by US police, but by:
   - **Macy's, Walmart, Kohl's** (retail — to identify "shoplifters")
   - **Las Vegas Sands** (casinos)

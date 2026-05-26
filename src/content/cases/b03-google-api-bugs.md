@@ -19,8 +19,8 @@ legal_basis:
 fines:
 - amount: 7500000
   currency: USD
-  authority: '*Matal v. Google* class action'
-  date: 2020-07
+  authority: '*In re Google Plus Profile Litigation* (5:18-cv-06164-EJD) class action'
+  date: 2021-01
   category: class_action_settlement
   status: paid
 whistleblowers: []
@@ -85,7 +85,7 @@ years_active:
 
 W wewnętrznym memo Google z marca 2018 (zdobytym przez *WSJ*) zespół prawny argumentował za **niepublikowaniem**: *"spowoduje to reputacyjne szkody większe niż korzyści"* i — najbardziej obciążająco — ***"nie chcemy porównań z Cambridge Analytica"***. To zdanie stało się symbolem. Tego samego dnia, w którym ukazał się artykuł *WSJ*, Google ogłosił **zamknięcie konsumenckiej wersji Google+** w ciągu 10 miesięcy. Miesiąc później, w listopadzie 2018, Google wykrył **drugi, większy bug** — dotykający **52,5 mln użytkowników przez 6 dni** — i tym razem **ujawnił natychmiast**, przyspieszając zamknięcie Google+ do **2 kwietnia 2019** (rok wcześniej niż planowano).
 
-Pozew zbiorowy *Matal v. Google* (N.D. Cal.) zakończył się w 2020 ugodą **7,5 mln USD**. SEC wszczęła i zamknęła bez zarzutów (SOX nie został uznany za naruszony). Irlandzki DPC uznał, że bug "nie stanowi wystarczającego ryzyka szkody" by wymagać powiadomienia RODO (**pre-Schrems II era** — słabsza egzekucja). Dla praktyki Big Tech sprawa zostawiła jeden kluczowy ślad: **wewnętrzne dokumenty "nie chcemy porównań z Cambridge Analytica" stały się dowodem sądowym** w wielu późniejszych sprawach. To była lekcja: **ukrywanie wycieków kosztuje więcej niż ich ujawnienie**.
+Pozew zbiorowy *In re Google Plus Profile Litigation*, Case No. 5:18-cv-06164-EJD (VKD), N.D. Cal. (powodowie wiodący: Matthew Matic, Zak Harris, Charles Olson, Eileen M. Pinkowski) zakończył się w 2020 ugodą **7,5 mln USD**. SEC wszczęła i zamknęła bez zarzutów (SOX nie został uznany za naruszony). Irlandzki DPC uznał, że bug "nie stanowi wystarczającego ryzyka szkody" by wymagać powiadomienia RODO (**pre-Schrems II era** — słabsza egzekucja). Dla praktyki Big Tech sprawa zostawiła jeden kluczowy ślad: **wewnętrzne dokumenty "nie chcemy porównań z Cambridge Analytica" stały się dowodem sądowym** w wielu późniejszych sprawach. To była lekcja: **ukrywanie wycieków kosztuje więcej niż ich ujawnienie**.
 
 Google+ był produktem, który **nigdy nie wystartował** — w dokumentach sądowych Google przyznał, że **90% sesji Google+ trwało poniżej 5 sekund** (użytkownicy przechodzili przez G+ nieświadomie z Gmaila). Sprawa stała się modelem "preemptive shutdown" — jeśli produkt ma lukę i nikt go nie używa, łatwiej zamknąć niż naprawić.
 
@@ -95,7 +95,7 @@ Google+ był produktem, który **nigdy nie wystartował** — w dokumentach sąd
 
 - **28 czerwca 2011** — Google uruchamia **Google+** jako konkurencja dla Facebooka. Użytkowników zmuszano do korzystania z G+ przez integrację z Gmailem, YouTube, Google Search.
 - **2012–2014** — G+ szybko osiąga setki milionów zarejestrowanych kont, ale **aktywność jest niska**. Krytycy nazywają go "miasto duchów".
-- **2014** — Google **rezygnuje z integracji G+ z YouTube** (odwrócenie strategii Very Peenya — wiceprezesa społecznościowego, który odszedł).
+- **2014** — Google **rezygnuje z integracji G+ z YouTube** (odwrócenie strategii Vica Gundotry — VP Engineering odpowiedzialnego za Google+, który odszedł z Google w kwietniu 2014).
 - **2015** — pierwszy bug API Google+ People zaczyna być aktywny. Deweloperzy aplikacji pobierają niepubliczne dane profilu użytkowników.
 - **Marzec 2018** — w ramach **audytu Project Strobe** (uruchomionego po Cambridge Analytica) Google odkrywa bug. Zespół inżynierski załata go. Zespół prawny debatuje nad ujawnieniem. Wewnętrzne memo: nie ujawniać.
 - **Marzec–październik 2018** — Google **siedzi na informacji 7 miesięcy**.
@@ -104,8 +104,9 @@ Google+ był produktem, który **nigdy nie wystartował** — w dokumentach sąd
 - **11 grudnia 2018** — Sundar Pichai zeznaje przed **House Judiciary Committee**. Nie jest szczegółowo pytany o Google+ (fokus był na Chinach i Project Dragonfly — sprawa B06).
 - **10 grudnia 2018** — Google ogłasza **przyspieszenie zamknięcia G+** do 2 kwietnia 2019.
 - **2 kwietnia 2019** — Google+ consumer **formalnie zamknięty**. Użytkownicy mogą pobrać swoje dane przez Google Takeout.
-- **2019–2020** — klasowy pozew *Matal v. Google* (N.D. Cal.).
-- **27 lipca 2020** — ugoda **7,5 mln USD** (ok. 5–12 USD za użytkownika, który zgłosił roszczenie).
+- **2019–2020** — klasowy pozew *In re Google Plus Profile Litigation*, Case No. 5:18-cv-06164-EJD (VKD), N.D. Cal. (powodowie wiodący: Matthew Matic, Zak Harris, Charles Olson, Eileen M. Pinkowski).
+- **Czerwiec 2020** — wstępna ugoda **7,5 mln USD** (ok. 5–12 USD za użytkownika, który zgłosił roszczenie).
+- **Styczeń 2021** — final approval ugody przez sąd.
 - **2 lipca 2023** — Google zamyka również **Currents** (następca G+ dla G Suite/Workspace). Żadna korporacyjna sieć społecznościowa Google nie przetrwała.
 
 ---
@@ -190,7 +191,7 @@ Ostatni argument — **ujawniający stan umysłu zespołu prawnego Google** — 
 
 ### Prawnicy
 
-- **Matal** — powód wiodący w class action *Matal v. Google* (N.D. Cal.).
+- **Matthew Matic, Zak Harris, Charles Olson, Eileen M. Pinkowski** — powodowie wiodący w class action *In re Google Plus Profile Litigation*, Case No. 5:18-cv-06164-EJD (VKD), N.D. Cal.
 - **Kaplan Fox & Kilsheimer LLP** — kancelaria reprezentująca klasę.
 
 ---
@@ -199,7 +200,7 @@ Ostatni argument — **ujawniający stan umysłu zespołu prawnego Google** — 
 
 ### Google
 
-**Etap 1: ukrywanie (marzec–październik 2018).** 7 miesięcy ciszy.
+**Etap 1: ukrywanie (marzec–październik 2018).** 7 miesięcy ciszy. (Vic Gundotra, VP Engineering odpowiedzialny za Google+, odszedł z Google w kwietniu 2014 — strategicznie produkt był już osierocony przed wykryciem bugu.)
 
 **Etap 2: wymuszona reakcja (8 października 2018).** Tego samego dnia co publikacja *WSJ* Google publikuje blog Project Strobe z **trzema rzeczami naraz**:
 1. Przyznanie się do pierwszego bugu
@@ -222,7 +223,7 @@ Oficjalna narracja: *"We want to keep our focus on our enterprise efforts [for G
 ### Jurysdykcje
 
 1. **USA federalne** — SEC (umorzone), FTC (nie wszczęła)
-2. **USA klasa** — *Matal v. Google*, N.D. Cal.
+2. **USA klasa** — *In re Google Plus Profile Litigation*, Case No. 5:18-cv-06164-EJD (VKD), N.D. Cal.
 3. **UE** — DPC Irlandia, UK ICO (bez kar)
 
 ### Podstawa prawna
@@ -240,7 +241,8 @@ Oficjalna narracja: *"We want to keep our focus on our enterprise efforts [for G
 | 8 października 2018 | Ujawnienie, ogłoszenie zamknięcia G+ |
 | 2018–2019 | Dochodzenia regulacyjne |
 | 2 kwietnia 2019 | Zamknięcie G+ consumer |
-| 27 lipca 2020 | Ugoda pozew zbiorowy 7,5 mln USD |
+| Czerwiec 2020 | Wstępna ugoda pozew zbiorowy 7,5 mln USD |
+| Styczeń 2021 | Final approval ugody |
 
 ### Orzecznictwo powiązane
 
@@ -254,7 +256,7 @@ Oficjalna narracja: *"We want to keep our focus on our enterprise efforts [for G
 
 | Data | Organ | Kwota | Jurysdykcja | Podstawa |
 |------|-------|-------|-------------|----------|
-| 27 lipca 2020 | *Matal v. Google* class action | 7 500 000 USD | USA (N.D. Cal.) | State consumer protection |
+| Czerwiec 2020 (wstępna) / styczeń 2021 (final approval) | *In re Google Plus Profile Litigation* class action | 7 500 000 USD | USA (N.D. Cal.) | State consumer protection |
 
 **Łącznie: 7,5 mln USD** — ok. 15 centów na wyciekły profil (średnio). Pokazuje, że **cywilne pozwy klasowe USA słabo kompensują prywatność**.
 
@@ -284,7 +286,7 @@ Oficjalna narracja: *"We want to keep our focus on our enterprise efforts [for G
 
 | Sprawa | Sąd | Stan | Wartość | Poszkodowani |
 |--------|-----|------|---------|--------------|
-| *Matal v. Google* | N.D. Cal. | Ugoda 2020 | 7 500 000 USD | ~500 000 + 52,5 mln użytkowników G+ |
+| *In re Google Plus Profile Litigation* (5:18-cv-06164-EJD) | N.D. Cal. | Ugoda wstępna VI 2020 / final approval I 2021 | 7 500 000 USD | ~500 000 + 52,5 mln użytkowników G+ |
 
 Zgłoszenia roszczeń: ok. 1 mln osób złożyło formularz claim. Wypłata per person: **5–12 USD**.
 
@@ -358,7 +360,7 @@ Jeśli jesteś administratorem danych (kancelaria prawna, fundacja, firma):
 
 3. Google blog, "Expediting changes to Google+", 10 grudnia 2018 — ogłoszenie drugiego bugu i przyspieszenie zamknięcia.
 
-4. *Matal et al. v. Google LLC*, N.D. Cal., Case No. 5:18-cv-06164 — dokumenty PACER.
+4. *In re Google Plus Profile Litigation*, N.D. Cal., Case No. 5:18-cv-06164-EJD (VKD) — dokumenty PACER; powodowie wiodący: Matthew Matic, Zak Harris, Charles Olson, Eileen M. Pinkowski (źródła: casemine, Bloomberg Law).
 
 5. SEC Cybersecurity Disclosure Rules, 26 lipca 2023. URL: https://www.sec.gov/news/press-release/2023-139 (dostęp: 2026-04-17)
 

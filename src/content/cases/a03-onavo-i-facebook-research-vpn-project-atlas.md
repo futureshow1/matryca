@@ -73,7 +73,7 @@ years_active:
 | Waluta | AUD; niemal wyłącznie reputacja + strategiczne |
 | Podstawa prawna | Apple Developer Terms, Apple Enterprise Program, COPPA (dzieci USA), australijski Privacy Act |
 | Sygnalista/odkrywca | Josh Constine (*TechCrunch*), Will Strafach (analiza bezpieczeństwa) |
-| Liczba poszkodowanych | Onavo: dziesiątki mln (ok. 33 mln na piku); Research VPN: ok. 1 mln, w tym 5% nastolatków |
+| Liczba poszkodowanych | Onavo: dziesiątki milionów (brak oficjalnego potwierdzenia szczytu); Research VPN: ok. 1 mln, w tym 5% nastolatków |
 | Status (na dziś) | Zakończone, wszystkie aplikacje wyłączone |
 
 ---
@@ -90,7 +90,7 @@ Sprawę ujawnił **Josh Constine z TechCrunch 29 stycznia 2019**, z analizą tec
 
 ## Oś czasu
 
-- **Październik 2013** — Facebook kupuje **Onavo** (izraelska firma założona przez Guya Rosena i Romana Khavronenko w 2010) za ok. 120–200 mln USD. Onavo staje się podstawą działu mobile analytics Meta.
+- **Październik 2013** — Facebook kupuje **Onavo** (izraelska firma założona przez Guya Rosena i Roia Tigera (CTO) w 2010) za ok. 120–200 mln USD. Onavo staje się podstawą działu mobile analytics Meta.
 - **2013–2018** — Onavo Protect działa jako **"darmowy VPN"**, w rzeczywistości służąc Meta jako sonda rynkowa.
 - **Luty 2014** — Facebook kupuje **WhatsApp za 19 mld USD**. Dane z Onavo kluczowe w decyzji o wydaniu tak olbrzymiej kwoty.
 - **2016** — Facebook uruchamia drugi, **bardziej agresywny** program — **Facebook Research VPN**, wewnętrznie znany jako **Project Kodiak**, potem **Project Atlas**.
@@ -98,7 +98,7 @@ Sprawę ujawnił **Josh Constine z TechCrunch 29 stycznia 2019**, z analizą tec
 - **Czerwiec 2018** — Apple na WWDC ogłasza **nowe zasady dot. VPN-ów w App Store**: zakaz zbierania danych o aktywności na innych aplikacjach. To celuje bezpośrednio w Onavo.
 - **27 czerwca 2018** — Facebook **odnawia swój Enterprise Developer Certificate** — kluczowa decyzja, pozwalająca kontynuować dystrybucję Research VPN poza App Store.
 - **Sierpień 2018** — Apple usuwa Onavo Protect z iOS App Store. Facebook pozostawia Onavo na Android.
-- **Wcześniej (2018)** — dziennikarze BuzzFeed (**Ryan Mac, Charlie Warzel**) ujawniają wewnętrzne dokumenty Meta pokazujące, że Onavo umożliwiło poznanie, iż WhatsApp wysyła 2× więcej wiadomości niż Messenger.
+- **ok. 2017–2018** — dziennikarze BuzzFeed (**Ryan Mac, Charlie Warzel**) ujawniają wewnętrzne dokumenty Meta pokazujące, że Onavo umożliwiło poznanie, iż WhatsApp wysyła 2× więcej wiadomości niż Messenger.
 - **29 stycznia 2019, poranek USA** — **Josh Constine publikuje w TechCrunch**: "Facebook pays teens to install VPN that spies on them". Publikacja oparta na analizach **Willa Strafacha** (Guardian Mobile Firewall).
 - **29 stycznia 2019, 7 godzin później** — Facebook **ogłasza zakończenie iOS Research app**.
 - **30 stycznia 2019** — Apple **unieważnia Enterprise Certificate Facebooka**. Wszystkie wewnętrzne aplikacje Facebooka na iOS przestają działać. Ogłoszenie Apple: *"Zaprojektowaliśmy Enterprise Developer Program wyłącznie do wewnętrznej dystrybucji aplikacji w organizacji. Facebook używał członkostwa do dystrybucji aplikacji zbierającej dane do konsumentów, co jest oczywistym naruszeniem umowy z Apple."*
@@ -108,7 +108,7 @@ Sprawę ujawnił **Josh Constine z TechCrunch 29 stycznia 2019**, z analizą tec
 - **21 lutego 2019** — Facebook ogłasza **zamknięcie Onavo** zarówno na iOS (już zamknięte), jak i na Androidzie; natychmiastowe zaprzestanie zbierania danych.
 - **Marzec 2019** — Senator **Mark Warner** wzywa Meta do wsparcia ustawodawstwa wymagającego świadomej zgody dla programów badań rynku. Senator **Richard Blumenthal**: *"Podsłuch nastolatków to nie badanie — to nie może być dozwolone."*
 - **2020** — australijski ACCC (Australian Competition & Consumer Commission) rozpoczyna postępowanie przeciwko Meta za Onavo.
-- **Czerwiec 2023** — **Federal Court of Australia** nakłada karę **20 mln AUD** (ok. 13 mln USD/12,5 mln EUR) na Meta za **wprowadzający w błąd marketing Onavo**.
+- **26 lipca 2023** — **Federal Court of Australia**: 20 mln AUD (Facebook Israel Ltd + Onavo Inc., po 10 mln AUD każda) + 400 000 AUD kosztów prawnych na Meta za **wprowadzający w błąd marketing Onavo**.
 
 ---
 
@@ -262,8 +262,8 @@ Oświadczenie rzecznika Apple: *"Zaprojektowaliśmy Enterprise Developer Program
 ### Australia — ACCC
 
 - **2020** — ACCC składa pozew przeciwko Meta i Onavo w Federal Court of Australia
-- **Czerwiec 2023** — orzeczenie: Meta naruszyła australijskie prawo konsumenckie, wprowadzając w błąd co do charakteru Onavo Protect
-- **Kara:** **20 mln AUD** (ok. 13 mln USD / 12,5 mln EUR)
+- **26 lipca 2023** — orzeczenie: Meta naruszyła australijskie prawo konsumenckie, wprowadzając w błąd co do charakteru Onavo Protect
+- **Kara:** **20 mln AUD** (Facebook Israel Ltd + Onavo Inc., po 10 mln AUD każda) + 400 000 AUD kosztów prawnych
 
 Cytat z wyroku: Meta **"fałszywie lub wprowadzająco reprezentowała"**, że Onavo Protect chroni prywatność użytkowników, podczas gdy faktycznie zbierała szeroki zakres danych na rzecz Facebooka.
 
@@ -279,7 +279,7 @@ Cytat z wyroku: Meta **"fałszywie lub wprowadzająco reprezentowała"**, że On
 |------|-------|-------|-------------|----------|
 | 30.01.2019 | Apple (bez kary finansowej) | Unieważnienie Enterprise Certificate | USA | Apple Developer Agreement |
 | 21.02.2019 | — (zamknięcie z własnej inicjatywy) | — | Globalnie | Presja publiczna |
-| 06.2023 | Federal Court of Australia (ACCC) | 20 mln AUD | Australia | Australian Consumer Law, Privacy Act |
+| 26.07.2023 | Federal Court of Australia (ACCC) | 20 mln AUD (FB Israel + Onavo Inc., po 10 mln AUD) + 400 000 AUD kosztów | Australia | Australian Consumer Law, Privacy Act |
 
 ---
 

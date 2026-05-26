@@ -50,13 +50,13 @@ fines:
 - amount: 7000000
   currency: USD
   authority: 38 stanów USA
-  date: 2013-03
+  date: '2013-03-12'
   category: state_attorney_general
   status: paid
 - amount: 145000
   currency: EUR
   authority: Hamburg DPA
-  date: '2013'
+  date: '2013-04-22'
   category: regulatory_fine
   status: paid
 - amount: 0
@@ -68,7 +68,7 @@ fines:
 - amount: 13000000
   currency: USD
   authority: '*Joffe v. Google*'
-  date: '2019'
+  date: '2019-07-22'
   category: class_action_settlement
   status: paid
 whistleblowers: []
@@ -130,9 +130,9 @@ W **maju 2010** Google **publicznie przyznał**, że samochody programu **Street
 
 Sprawa wybuchła po audycie **niemieckiego Bundesnetzagentur** (regulatora telekomunikacji) w kwietniu–maju 2010, gdy **Johannes Caspar** — Hamburski Komisarz Ochrony Danych — wymusił na Google ujawnienie skali zbioru. Google najpierw zaprzeczał, potem **publicznie przyznał 14 maja 2010**, tłumacząc sprawę **"pojedynczym inżynierem"** (którego FTC później zidentyfikowała jako **Mariusa Milnera**) i **"błędem w eksperymentalnym kodzie"**, który rzekomo znalazł się w produkcyjnym oprogramowaniu przez pomyłkę. Tłumaczenie powszechnie odrzucono — **Marius Milner był w środowisku cybersec znany jako autor NetStumbler**, najpopularniejszej aplikacji do **wardrivingu** (jazdy po mieście w poszukiwaniu Wi-Fi). Google zatrudnił go dokładnie po to, żeby robił to, co robił, i potem udawał zdziwienie.
 
-Postępowania toczyły się w dziesiątkach krajów. Łącznie ok. **30 mln EUR/USD kar i ugód**. Największe: **7 mln USD ugoda 38 stanów USA** (marzec 2013), **13 mln USD ugoda pozwu zbiorowego Joffe v. Google** (2019), **900 000 EUR w Hiszpanii**, **145 000 EUR w Niemczech**. W Korei Południowej **listopad 2011 policja przeszukała biuro Google w Seulu** — pierwszy raz fizycznej interwencji organów ścigania w lokalne biuro Google. W USA FTC umorzyła sprawę bez kary (argumentując brak jurysdykcji nad Wiretap Act), FCC wymierzyła symboliczną karę **25 000 USD za odmowę współpracy** z dochodzeniem.
+Postępowania toczyły się w dziesiątkach krajów. Łącznie ok. **30 mln EUR/USD kar i ugód**. Największe: **7 mln USD ugoda 38 stanów USA** (12 marca 2013), **13 mln USD ugoda pozwu zbiorowego Joffe v. Google** (22 lipca 2019, w całości na cy pres), **900 000 EUR w Hiszpanii**, **145 000 EUR w Niemczech**. W Korei Południowej **10 sierpnia 2010 policja przeszukała biuro Google w Seulu**, zajmując 79 dysków — pierwszy raz fizycznej interwencji organów ścigania w lokalne biuro Google. W USA FTC umorzyła sprawę bez kary (argumentując brak jurysdykcji nad Wiretap Act), FCC wymierzyła symboliczną karę **25 000 USD za odmowę współpracy** z dochodzeniem.
 
-Kluczowy precedens prawny: **Joffe v. Google (9th Circuit, 2013)** — sędzia Alex Kozinski orzekł, że **otwarta sieć Wi-Fi NIE jest "publicznie dostępna"** w rozumieniu Wiretap Act tylko dlatego, że jest technicznie niezaszyfrowana. To ukształtowało amerykańską jurysprudencję ochrony prywatności sieciowej na całą dekadę.
+Kluczowy precedens prawny: **Joffe v. Google (9th Circuit, 2013)** — panel: A. Wallace Tashima, **Jay S. Bybee**, William H. Stafford Jr.; opinię napisał **Jay S. Bybee**. Sąd orzekł, że **otwarta sieć Wi-Fi NIE jest „publicznie dostępna"** w rozumieniu Wiretap Act tylko dlatego, że jest technicznie niezaszyfrowana. To ukształtowało amerykańską jurysprudencję ochrony prywatności sieciowej na całą dekadę.
 
 ---
 
@@ -149,14 +149,14 @@ Kluczowy precedens prawny: **Joffe v. Google (9th Circuit, 2013)** — sędzia A
 - **Listopad 2010** — UK ICO **wznawia** dochodzenie po nowych dowodach.
 - **Marzec 2011** — Francja (CNIL): kara **100 000 EUR**.
 - **Marzec 2011** — Hiszpania (AEPD): kara **900 000 EUR**.
-- **Listopad 2011** — **Korea Południowa: policja przeszukuje biuro Google w Seulu**. Pierwszy taki przypadek na świecie.
+- **10 sierpnia 2010** — **Korea Południowa: policja przeszukuje biuro Google w Seulu**, zajmując 79 dysków twardych. Pierwszy taki przypadek na świecie.
 - **Kwiecień 2012** — FCC USA: kara **25 000 USD za odmowę współpracy** (symboliczna); **FTC umarza** bez kary.
 - **Czerwiec 2012** — raport FCC: praktyka Google "była przewlekła i celowa".
-- **10 września 2013** — **9th Circuit Court of Appeals** (sędzia Alex Kozinski) w *Joffe v. Google*: Wiretap Act **ma zastosowanie**, otwarta sieć Wi-Fi nie jest publicznie dostępna w rozumieniu ustawy.
-- **Marzec 2013** — **ugoda 38 stanów USA: 7 000 000 USD** + obowiązkowe programy szkoleniowe ochrony prywatności pracowników Google.
-- **2013** — Niemcy (Hamburg): **145 000 EUR**.
+- **12 marca 2013** — **ugoda 38 stanów USA: 7 000 000 USD** + obowiązkowe programy szkoleniowe ochrony prywatności pracowników Google.
+- **22 kwietnia 2013** — Hamburg DPA (Johannes Caspar) nakłada karę **145 000 EUR**.
+- **10 września 2013** — **9th Circuit Court of Appeals** (panel: A. Wallace Tashima, **Jay S. Bybee**, William H. Stafford Jr.; opinię napisał **Jay S. Bybee**) w *Joffe v. Google*: Wiretap Act **ma zastosowanie**, otwarta sieć Wi-Fi nie jest publicznie dostępna w rozumieniu ustawy.
 - **2014** — UK ICO ostatecznie zamyka sprawę bez kary.
-- **2019** — *Joffe v. Google*: ugoda pozwu zbiorowego — **13 000 000 USD**.
+- **22 lipca 2019** — *Joffe v. Google*: ugoda pozwu zbiorowego — **13 000 000 USD** na **cy pres** (9 organizacji prywatności); klasa NIE otrzymała indywidualnych wypłat. Apelacja podtrzymana przez 9th Circuit w grudniu 2021.
 - **2023** — Google wznawia mapowanie Street View w Niemczech po 12-letniej przerwie.
 
 ---
@@ -248,7 +248,7 @@ Google początkowo zaprzeczał. Caspar naciskał. 14 maja 2010 Google, po wewnę
 ### Prawnicy
 
 - **Benjamin Joffe** — główny powód w pozwie zbiorowym *Joffe v. Google* (ND California).
-- **Sędzia Alex Kozinski** (9th Circuit) — autor przełomowego wyroku 2013.
+- **Sędzia Jay S. Bybee** (9th Circuit) — autor opinii w przełomowym wyroku z 10 września 2013 (panel: A. Wallace Tashima, Jay S. Bybee, William H. Stafford Jr.).
 
 ---
 
@@ -298,10 +298,12 @@ Pytania bez odpowiedzi:
 | Kwiecień 2010 | Bundesnetzagentur rozpoczyna audyt |
 | 14 maja 2010 | Google przyznaje się |
 | Maj 2010 | Kaskada śledztw w 30+ krajach |
+| 10 sierpnia 2010 | Policja KR przeszukuje biuro Google w Seulu |
 | Marzec 2011 | Pierwsze kary (FR, ES) |
-| Marzec 2013 | Ugoda 38 stanów USA: 7 mln USD |
-| Wrzesień 2013 | Wyrok 9th Circuit w *Joffe v. Google* |
-| 2019 | Ugoda pozew zbiorowy 13 mln USD |
+| 12 marca 2013 | Ugoda 38 stanów USA: 7 mln USD |
+| 22 kwietnia 2013 | Hamburg DPA: 145 000 EUR |
+| 10 września 2013 | Wyrok 9th Circuit w *Joffe v. Google* (opinia: Bybee) |
+| 22 lipca 2019 | Ugoda pozwu zbiorowego 13 mln USD (cy pres) |
 
 ### Orzecznictwo powiązane
 
@@ -319,10 +321,10 @@ Pytania bez odpowiedzi:
 | Marzec 2011 | AEPD | 900 000 EUR | Hiszpania | LOPD |
 | Kwiecień 2012 | FCC | 25 000 USD | USA federalne | Odmowa współpracy |
 | Kwiecień 2012 | FTC | 0 | USA federalne | Umorzone |
-| Marzec 2013 | 38 stanów USA | 7 000 000 USD | USA stanowe | Prawo konsumenckie |
-| 2013 | Hamburg DPA | 145 000 EUR | Niemcy | BDSG |
-| 2014 | UK ICO | 0 | UK | "Brak istotnej szkody" |
-| 2019 | *Joffe v. Google* | 13 000 000 USD | USA federalne | Wiretap Act |
+| 12 marca 2013 | 38 stanów USA | 7 000 000 USD | USA stanowe | Prawo konsumenckie |
+| 22 kwietnia 2013 | Hamburg DPA | 145 000 EUR | Niemcy | BDSG |
+| 2014 | UK ICO | 0 | UK | „Brak istotnej szkody" |
+| 22 lipca 2019 | *Joffe v. Google* | 13 000 000 USD (cy pres) | USA federalne | Wiretap Act |
 
 **Łącznie: ~30 mln EUR/USD** + dziesiątki milionów w kosztach zgodności i audytów.
 
@@ -359,7 +361,7 @@ Pytania bez odpowiedzi:
 
 | Sprawa | Sąd | Stan | Wartość | Poszkodowani |
 |--------|-----|------|---------|--------------|
-| *Joffe v. Google Inc.* | N.D. Cal. / 9th Cir. | Ugoda 2019 | 13 000 000 USD | Użytkownicy otwartych Wi-Fi USA |
+| *Joffe v. Google Inc.* | N.D. Cal. / 9th Cir. | Ugoda 22.07.2019; apelacja podtrzymana 9th Cir. XII.2021 | 13 000 000 USD (cy pres, 9 organizacji prywatności; klasa bez wypłat indywidualnych) | Użytkownicy otwartych Wi-Fi USA |
 
 ---
 
@@ -412,7 +414,7 @@ Jeśli prowadzisz kancelarię, fundację lub firmę i klienci/pracownicy korzyst
 
 - **Marius Milner — "rogue engineer"** był w środowisku cybersec znany jako autor **NetStumbler** (2001), jednej z najpopularniejszych aplikacji do **wardrivingu** (jazdy samochodem po mieście w celu skanowania Wi-Fi). Google zatrudnił go, żeby pracował nad projektem Wi-Fi positioning — a potem udawał zaskoczenie, że napisał kod zbierający więcej niż deklarowano. FTC otwarcie: *"The 'rogue engineer' story does not hold up."*
 - **Alan Eustace**, SVP Google i autor bloga ujawniającego sprawę, w 2014 opuścił Google i został **najwyżej skaczącym spadochroniarzem w historii** — spadł z balonu stratosferycznego z wysokości **41,419 metra** (24 października 2014). Rekord pobity.
-- **Korea Południowa, listopad 2011** — pierwsze na świecie **policyjne przeszukanie biura Google** w lokalnym oddziale (Seul). Wysłano 10 śledczych, zajęto serwery.
+- **Korea Południowa, 10 sierpnia 2010** — pierwsze na świecie **policyjne przeszukanie biura Google** w lokalnym oddziale (Seul). Policja zajęła 79 dysków twardych.
 - **FCC 25 000 USD za odmowę współpracy** — Google został ukarany **nie za zbieranie danych**, tylko za **odmawianie przekazania dokumentów FCC** w trakcie śledztwa. Kwota śmiesznie mała, ale sygnalizowała regulatorowi: "nie pomogę wam w dochodzeniu". To kosztowało później przy kalkulacji kar w innych krajach.
 - **UK ICO w 2010 umorzył sprawę** argumentując "brak istotnej szkody". Po trzech latach krytyki i nowych dowodach (m.in. danych logowania bankowego) **wznowił**, ale ostatecznie i tak **nie nałożył kary**. W dokumencie ICO z 2014 pojawia się zdanie: *"the data included banking login credentials of a small number of UK residents"* — ale mimo tego nie było kary.
 - **Niemcy zablokowały mapowanie Street View** w 2011. Przez **12 lat** większość niemieckich miast była w Google Street View na poziomie 2010. Dopiero **2023** Google wznowił mapowanie. Dla użytkowników Google Maps w Niemczech: widok ulic z 2010 roku to zjawisko powszechne.
@@ -438,7 +440,7 @@ Jeśli prowadzisz kancelarię, fundację lub firmę i klienci/pracownicy korzyst
 
 6. Hamburger Beauftragte für Datenschutz, liczne komunikaty 2010–2013. URL: https://datenschutz-hamburg.de (dostęp: 2026-04-17)
 
-7. *Joffe v. Google, Inc.*, 729 F.3d 1262 (9th Cir. 2013). URL: https://caselaw.findlaw.com/court/us-9th-circuit/1643949.html (dostęp: 2026-04-17)
+7. *Joffe v. Google, Inc.*, 729 F.3d 1262 (9th Cir. 2013). Panel: A. Wallace Tashima, Jay S. Bybee, William H. Stafford Jr.; opinia: Bybee. URL oficjalny PDF: https://cdn.ca9.uscourts.gov/datastore/general/2013/09/11/11-17483_opinion.pdf ; URL alternatywny: https://caselaw.findlaw.com/court/us-9th-circuit/1643949.html (dostęp: 2026-04-17)
 
 8. UK Information Commissioner's Office, "Findings on Google Street View cars", listopad 2010; listopad 2014 (follow-up).
 
@@ -446,9 +448,9 @@ Jeśli prowadzisz kancelarię, fundację lub firmę i klienci/pracownicy korzyst
 
 10. AEPD (Agencia Española de Protección de Datos), komunikat 2011.
 
-11. Korea Communications Commission, raport z 2011 dotyczący wyników przeszukania biur Google.
+11. Korea Communications Commission, raport z 2011 dotyczący wyników przeszukania biur Google. Por. Jurist, "South Korea police announce Google violated privacy laws by collecting private data" (relacja z przeszukania biura w Seulu 10 sierpnia 2010 i zajęcia 79 dysków): https://www.jurist.org/news/2011/01/south-korea-police-announce-google-violated-privacy-laws-by-collecting-private-data/ (dostęp: 2026-04-17)
 
-12. Benjamin Joffe et al. v. Google Inc., Class Action Complaint, N.D. Cal. 2010 — dokumenty sądowe przez PACER.
+12. Benjamin Joffe et al. v. Google Inc., Class Action Complaint, N.D. Cal. 2010 — dokumenty sądowe przez PACER. CNN, "Google to pay $13 million in Street View privacy settlement" (22 lipca 2019) — szczegóły ugody 13 mln USD na cy pres dla 9 organizacji prywatności, klasa bez wypłat indywidualnych; apelacja podtrzymana 9th Circuit w grudniu 2021.
 
 13. Adam Tanner, "What Google's Wi-Spy Scandal Reveals", *Forbes*, maj 2010.
 
