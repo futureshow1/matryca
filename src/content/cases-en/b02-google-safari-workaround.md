@@ -58,7 +58,7 @@ priority: STANDARD
 card_complete: true
 word_count: 3650
 explainer:
-  src: /animations/b02-google-safari-obejście.html
+  src: /animations/b02-google-safari-workaround.html
   duration: '60s'
   title: Safari Workaround — how Google bypassed Apple's block
 subtitle: Circumventing the default privacy settings of iPhones
